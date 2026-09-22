@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI sample management and human face data manipulation.
+                * AI sample management, face data manipulation.
                 */
                 class AiSampleFaceOperation : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
-                     * @return Type <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
+                     * 获取<p>Operation type. Available values: add, delete, reset. The reset operation will clear the existing face data of the person and add the face data specified by FaceContents.</p>
+                     * @return Type <p>Operation type. Available values: add, delete, reset. The reset operation will clear the existing face data of the person and add the face data specified by FaceContents.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
-                     * @param _type <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
+                     * 设置<p>Operation type. Available values: add, delete, reset. The reset operation will clear the existing face data of the person and add the face data specified by FaceContents.</p>
+                     * @param _type <p>Operation type. Available values: add, delete, reset. The reset operation will clear the existing face data of the person and add the face data specified by FaceContents.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Face ID collection. This field is required when Type is delete.</p>
-                     * @return FaceIds <p>Face ID collection. This field is required when Type is delete.</p>
+                     * 获取<p>Human face ID set. This field is required when Type is delete.</p>
+                     * @return FaceIds <p>Human face ID set. This field is required when Type is delete.</p>
                      * 
                      */
                     std::vector<std::string> GetFaceIds() const;
 
                     /**
-                     * 设置<p>Face ID collection. This field is required when Type is delete.</p>
-                     * @param _faceIds <p>Face ID collection. This field is required when Type is delete.</p>
+                     * 设置<p>Human face ID set. This field is required when Type is delete.</p>
+                     * @param _faceIds <p>Human face ID set. This field is required when Type is delete.</p>
                      * 
                      */
                     void SetFaceIds(const std::vector<std::string>& _faceIds);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FaceIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
-                     * @return FaceContents <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
+                     * 获取<p>Collection of strings after the face image is <a href="https://tools.ietf.org/html/rfc4648">Base64</a>-encoded. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset.</li><li>Array length limit: 5 images.</li>Note: The image must be a relatively clear photo of a single person's front face, with pixels not less than 200*200.
+                     * @return FaceContents <p>Collection of strings after the face image is <a href="https://tools.ietf.org/html/rfc4648">Base64</a>-encoded. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset.</li><li>Array length limit: 5 images.</li>Note: The image must be a relatively clear photo of a single person's front face, with pixels not less than 200*200.
                      * 
                      */
                     std::vector<std::string> GetFaceContents() const;
 
                     /**
-                     * 设置<p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
-                     * @param _faceContents <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
+                     * 设置<p>Collection of strings after the face image is <a href="https://tools.ietf.org/html/rfc4648">Base64</a>-encoded. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset.</li><li>Array length limit: 5 images.</li>Note: The image must be a relatively clear photo of a single person's front face, with pixels not less than 200*200.
+                     * @param _faceContents <p>Collection of strings after the face image is <a href="https://tools.ietf.org/html/rfc4648">Base64</a>-encoded. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset.</li><li>Array length limit: 5 images.</li>Note: The image must be a relatively clear photo of a single person's front face, with pixels not less than 200*200.
                      * 
                      */
                     void SetFaceContents(const std::vector<std::string>& _faceContents);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
+                     * <p>Operation type. Available values: add, delete, reset. The reset operation will clear the existing face data of the person and add the face data specified by FaceContents.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Face ID collection. This field is required when Type is delete.</p>
+                     * <p>Human face ID set. This field is required when Type is delete.</p>
                      */
                     std::vector<std::string> m_faceIds;
                     bool m_faceIdsHasBeenSet;
 
                     /**
-                     * <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
+                     * <p>Collection of strings after the face image is <a href="https://tools.ietf.org/html/rfc4648">Base64</a>-encoded. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset.</li><li>Array length limit: 5 images.</li>Note: The image must be a relatively clear photo of a single person's front face, with pixels not less than 200*200.
                      */
                     std::vector<std::string> m_faceContents;
                     bool m_faceContentsHasBeenSet;

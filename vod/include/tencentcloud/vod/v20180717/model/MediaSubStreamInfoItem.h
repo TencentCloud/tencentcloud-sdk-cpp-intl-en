@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Substream information for adaptive bitrate streaming.
+                * Substream info of transcoding to adaptive bitstream.
                 */
                 class MediaSubStreamInfoItem : public AbstractModel
                 {
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Substream video screen height in px.
-                     * @return Height Substream video screen height in px.
+                     * 获取Video image height when the substream is a video stream. Measurement unit: px.
+                     * @return Height Video image height when the substream is a video stream. Measurement unit: px.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Substream video screen height in px.
-                     * @param _height Substream video screen height in px.
+                     * 设置Video image height when the substream is a video stream. Measurement unit: px.
+                     * @param _height Video image height when the substream is a video stream. Measurement unit: px.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -118,18 +118,18 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Substream media file size in bytes.
+                     * 获取Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
-                     * @return Size Substream media file size in bytes.
+                     * @return Size Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
                      * 
                      */
                     uint64_t GetSize() const;
 
                     /**
-                     * 设置Substream media file size in bytes.
+                     * 设置Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
-                     * @param _size Substream media file size in bytes.
+                     * @param _size Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
                      * 
                      */
@@ -159,13 +159,13 @@ namespace TencentCloud
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Substream video screen height in px.
+                     * Video image height when the substream is a video stream. Measurement unit: px.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Substream media file size in bytes.
+                     * Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
                      */
                     uint64_t m_size;

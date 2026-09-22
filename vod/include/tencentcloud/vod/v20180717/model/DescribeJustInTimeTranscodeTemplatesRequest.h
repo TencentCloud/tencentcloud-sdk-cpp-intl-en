@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template name filter condition. The array can contain up to 100 template names.
-                     * @return Names Template name filter condition. The array can contain up to 100 template names.
+                     * 获取Template name filter condition, with an array length limit of 100.
+                     * @return Names Template name filter condition, with an array length limit of 100.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Template name filter condition. The array can contain up to 100 template names.
-                     * @param _names Template name filter condition. The array can contain up to 100 template names.
+                     * 设置Template name filter condition, with an array length limit of 100.
+                     * @param _names Template name filter condition, with an array length limit of 100.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -158,13 +158,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template name filter condition. The array can contain up to 100 template names.
+                     * Template name filter condition, with an array length limit of 100.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

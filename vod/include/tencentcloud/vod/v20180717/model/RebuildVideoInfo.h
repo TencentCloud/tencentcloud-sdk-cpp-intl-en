@@ -46,7 +46,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio-visual quality revival video control info.
+                * Audio-visual quality revival video control information.
                 */
                 class RebuildVideoInfo : public AbstractModel
                 {

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return StartTime Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @return StartTime Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _startTime Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @param _startTime Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -143,7 +143,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -151,7 +151,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -159,7 +159,7 @@ Default value: TotalStorage.
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -167,7 +167,7 @@ Default value: TotalStorage.
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -180,7 +180,7 @@ Default value: TotalStorage.
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -188,7 +188,7 @@ Default value: TotalStorage.
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -196,7 +196,7 @@ Default value: TotalStorage.
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -204,7 +204,7 @@ Default value: TotalStorage.
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.
@@ -255,7 +255,7 @@ Default value: Chinese Mainland.
                 private:
 
                     /**
-                     * Start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * Start time in ISO 8601 format. For more information, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -267,7 +267,7 @@ Default value: Chinese Mainland.
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -286,7 +286,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>TotalStorage: total stored amount, the sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
 <li>StandardStorage: standard storage.</li>
 <li>InfrequentStorage: infrequent storage.</li>
-<li>ArchiveStorage: archive storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
 <li>DeepArchiveStorage: DEEP_ARCHIVE.</li>
 <li>DeletedInfrequentStorage: Early deletion amount for infrequent storage.</li>
 <li>DeletedArchiveStorage: early deletion amount for archive.</li>
@@ -294,7 +294,7 @@ The granularity is determined by the time span by default. If the time span is l
 <li>ArchiveStandardRetrieval: Archive standard retrieval amount.</li>
 <li>ArchiveExpeditedRetrieval: Archive quick retrieval volume.</li>
 <li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval volume.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount.</li>
 <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
 <li>InfrequentRetrieval: Infrequent storage retrieval volume.</li>
 Default value: TotalStorage.

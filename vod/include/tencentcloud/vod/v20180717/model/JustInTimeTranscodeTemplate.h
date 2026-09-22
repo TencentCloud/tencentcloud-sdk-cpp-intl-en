@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Just in time transcoding template details.
+                * Details of the just in time transcoding template.
                 */
                 class JustInTimeTranscodeTemplate : public AbstractModel
                 {

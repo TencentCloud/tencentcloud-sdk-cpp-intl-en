@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Path cache follows the origin site configuration.
+                * Path cache follows the origin server configuration.
                 */
                 class CacheConfigFollowOrigin : public AbstractModel
                 {

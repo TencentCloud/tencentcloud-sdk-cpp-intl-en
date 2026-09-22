@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
-                     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+                     * 获取<p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+                     * @return ErrCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置<p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
-                     * @param _errCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+                     * 设置<p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+                     * @param _errCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input information for a video dubbing task.</p>
-                     * @return Input <p>Input information for a video dubbing task.</p>
+                     * 获取<p>Video dubbing task input information.</p>
+                     * @return Input <p>Video dubbing task input information.</p>
                      * 
                      */
                     VideoDubbingAsyncInput GetInput() const;
 
                     /**
-                     * 设置<p>Input information for a video dubbing task.</p>
-                     * @param _input <p>Input information for a video dubbing task.</p>
+                     * 设置<p>Video dubbing task input information.</p>
+                     * @param _input <p>Video dubbing task input information.</p>
                      * 
                      */
                     void SetInput(const VideoDubbingAsyncInput& _input);
@@ -273,7 +273,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+                     * <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -291,7 +291,7 @@ namespace TencentCloud
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * <p>Input information for a video dubbing task.</p>
+                     * <p>Video dubbing task input information.</p>
                      */
                     VideoDubbingAsyncInput m_input;
                     bool m_inputHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>FileId that needs image processing. It cannot be used with Url.</p>
-                     * @return FileId <p>FileId that needs image processing. It cannot be used with Url.</p>
+                     * 获取<p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
+                     * @return FileId <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>FileId that needs image processing. It cannot be used with Url.</p>
-                     * @param _fileId <p>FileId that needs image processing. It cannot be used with Url.</p>
+                     * 设置<p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
+                     * @param _fileId <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
-                     * @return Url <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+                     * 获取<p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
+                     * @return Url <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
-                     * @param _url <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+                     * 设置<p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
+                     * @param _url <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
-                     * @return Base64 <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+                     * 获取<p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+                     * @return Base64 <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
                      * 
                      */
                     std::string GetBase64() const;
 
                     /**
-                     * 设置<p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
-                     * @param _base64 <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+                     * 设置<p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+                     * @param _base64 <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
                      * 
                      */
                     void SetBase64(const std::string& _base64);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool ImageTaskInputHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output media file configuration for image processing tasks.</p>
-                     * @return OutputConfig <p>Output media file configuration for image processing tasks.</p>
+                     * 获取<p>Configuration of the output media file for an image processing task.</p>
+                     * @return OutputConfig <p>Configuration of the output media file for an image processing task.</p>
                      * 
                      */
                     ProcessImageAsyncOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output media file configuration for image processing tasks.</p>
-                     * @param _outputConfig <p>Output media file configuration for image processing tasks.</p>
+                     * 设置<p>Configuration of the output media file for an image processing task.</p>
+                     * @param _outputConfig <p>Configuration of the output media file for an image processing task.</p>
                      * 
                      */
                     void SetOutputConfig(const ProcessImageAsyncOutputConfig& _outputConfig);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
-                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * 获取<p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * @return TasksPriority <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
-                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * 设置<p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * @param _tasksPriority <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reserved field, used for special purpose.</p>
-                     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
+                     * 获取<p>Reserved field, used for special purposes.</p>
+                     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置<p>Reserved field, used for special purpose.</p>
-                     * @param _extInfo <p>Reserved field, used for special purpose.</p>
+                     * 设置<p>Reserved field, used for special purposes.</p>
+                     * @param _extInfo <p>Reserved field, used for special purposes.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -257,25 +257,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>FileId that needs image processing. It cannot be used with Url.</p>
+                     * <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+                     * <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+                     * <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
                      */
                     std::string m_base64;
                     bool m_base64HasBeenSet;
@@ -287,7 +287,7 @@ namespace TencentCloud
                     bool m_imageTaskInputHasBeenSet;
 
                     /**
-                     * <p>Output media file configuration for image processing tasks.</p>
+                     * <p>Configuration of the output media file for an image processing task.</p>
                      */
                     ProcessImageAsyncOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
@@ -305,13 +305,13 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * <p>Reserved field, used for special purpose.</p>
+                     * <p>Reserved field, used for special purposes.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

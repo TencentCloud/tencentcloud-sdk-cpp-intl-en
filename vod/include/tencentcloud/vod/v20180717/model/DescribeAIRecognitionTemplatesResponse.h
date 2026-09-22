@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of audio/video content recognition template details.
-                     * @return AIRecognitionTemplateSet List of audio/video content recognition template details.
+                     * 获取Audio/video content recognition template detail list.
+                     * @return AIRecognitionTemplateSet Audio/video content recognition template detail list.
                      * 
                      */
                     std::vector<AIRecognitionTemplateItem> GetAIRecognitionTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of audio/video content recognition template details.
+                     * Audio/video content recognition template detail list.
                      */
                     std::vector<AIRecognitionTemplateItem> m_aIRecognitionTemplateSet;
                     bool m_aIRecognitionTemplateSetHasBeenSet;

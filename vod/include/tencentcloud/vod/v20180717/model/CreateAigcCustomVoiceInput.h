@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Callback input information for creating a custom timbre.
+                * Create custom voice type callback input information.
                 */
                 class CreateAigcCustomVoiceInput : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VoiceUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Historic works ID, which can provide audio material by referring to historic works.</p>
-                     * @return VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+                     * 获取<p>Historic work ID, which can provide audio material by referring to historic works.</p>
+                     * @return VideoId <p>Historic work ID, which can provide audio material by referring to historic works.</p>
                      * 
                      */
                     std::string GetVideoId() const;
 
                     /**
-                     * 设置<p>Historic works ID, which can provide audio material by referring to historic works.</p>
-                     * @param _videoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+                     * 设置<p>Historic work ID, which can provide audio material by referring to historic works.</p>
+                     * @param _videoId <p>Historic work ID, which can provide audio material by referring to historic works.</p>
                      * 
                      */
                     void SetVideoId(const std::string& _videoId);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_voiceUrlHasBeenSet;
 
                     /**
-                     * <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+                     * <p>Historic work ID, which can provide audio material by referring to historic works.</p>
                      */
                     std::string m_videoId;
                     bool m_videoIdHasBeenSet;

@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+                     * 获取<p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+                     * 设置<p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
-                     * @return Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+                     * 获取<p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
+                     * @return Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
                      * 
                      */
                     LLMComprehendSummary GetSummary() const;
 
                     /**
-                     * 设置<p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
-                     * @param _summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+                     * 设置<p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
+                     * @param _summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
                      * 
                      */
                     void SetSummary(const LLMComprehendSummary& _summary);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text transcribing and parsing configuration</p>
-                     * @return Asr <p>Text transcribing and parsing configuration</p>
+                     * 获取<p>Text transcription parsing configuration</p>
+                     * @return Asr <p>Text transcription parsing configuration</p>
                      * 
                      */
                     LLMComprehendAsr GetAsr() const;
 
                     /**
-                     * 设置<p>Text transcribing and parsing configuration</p>
-                     * @param _asr <p>Text transcribing and parsing configuration</p>
+                     * 设置<p>Text transcription parsing configuration</p>
+                     * @param _asr <p>Text transcription parsing configuration</p>
                      * 
                      */
                     void SetAsr(const LLMComprehendAsr& _asr);
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_levelHasBeenSet;
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+                     * <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -219,13 +219,13 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+                     * <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
                      */
                     LLMComprehendSummary m_summary;
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * <p>Text transcribing and parsing configuration</p>
+                     * <p>Text transcription parsing configuration</p>
                      */
                     LLMComprehendAsr m_asr;
                     bool m_asrHasBeenSet;

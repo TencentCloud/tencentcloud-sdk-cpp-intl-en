@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of the timbre cloning task.
+                * Timbre clone task output.
                 */
                 class CloneVoiceAsyncOutput : public AbstractModel
                 {

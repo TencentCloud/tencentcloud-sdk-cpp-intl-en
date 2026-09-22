@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of an AIGC image generation task.
+                * Input of the AIGC image generation task.
                 */
                 class AigcImageTaskInput : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
-                     * @return Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * 获取<p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
+                     * @return Prompt <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
-                     * @param _prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * 设置<p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
+                     * @param _prompt <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Prompt to prevent the model from image generation.</p>
-                     * @return NegativePrompt <p>Prompt to prevent the model from image generation.</p>
+                     * 获取<p>Prompt content to prevent the model from generating images.</p>
+                     * @return NegativePrompt <p>Prompt content to prevent the model from generating images.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置<p>Prompt to prevent the model from image generation.</p>
-                     * @param _negativePrompt <p>Prompt to prevent the model from image generation.</p>
+                     * 设置<p>Prompt content to prevent the model from generating images.</p>
+                     * @param _negativePrompt <p>Prompt content to prevent the model from generating images.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -300,13 +300,13 @@ namespace TencentCloud
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>Prompt to prevent the model from image generation.</p>
+                     * <p>Prompt content to prevent the model from generating images.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type for tasks involving inappropriate information in audio/video moderation
+                * Task result type for inappropriate content involved in audio/video moderation
                 */
                 class AiReviewTaskPoliticalResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input for tasks involving inappropriate information in audio/video moderation.
-                     * @return Input Task input for tasks involving inappropriate information in audio/video moderation.
+                     * 获取Task input for inappropriate content involved in audio/video moderation.
+                     * @return Input Task input for inappropriate content involved in audio/video moderation.
                      * 
                      */
                     AiReviewPoliticalTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input for tasks involving inappropriate information in audio/video moderation.
-                     * @param _input Task input for tasks involving inappropriate information in audio/video moderation.
+                     * 设置Task input for inappropriate content involved in audio/video moderation.
+                     * @param _input Task input for inappropriate content involved in audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewPoliticalTaskInput& _input);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input for tasks involving inappropriate information in audio/video moderation.
+                     * Task input for inappropriate content involved in audio/video moderation.
                      */
                     AiReviewPoliticalTaskInput m_input;
                     bool m_inputHasBeenSet;

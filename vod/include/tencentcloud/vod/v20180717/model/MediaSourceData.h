@@ -51,14 +51,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Media file source category:
-<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Record: comes from recording, for example, live recording and live streaming time shift recording.</li>
 <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
 <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
 <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
 <li>WebPageRecord: comes from panoramic recording.</li>
 <li>Unknown: Unknown source.</li>
                      * @return SourceType Media file source category:
-<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Record: comes from recording, for example, live recording and live streaming time shift recording.</li>
 <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
 <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
 <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
@@ -70,14 +70,14 @@ namespace TencentCloud
 
                     /**
                      * 设置Media file source category:
-<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Record: comes from recording, for example, live recording and live streaming time shift recording.</li>
 <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
 <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
 <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
 <li>WebPageRecord: comes from panoramic recording.</li>
 <li>Unknown: Unknown source.</li>
                      * @param _sourceType Media file source category:
-<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Record: comes from recording, for example, live recording and live streaming time shift recording.</li>
 <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
 <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
 <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Field passed through when a user creates a file.
-                     * @return SourceContext Field passed through when a user creates a file.
+                     * 获取Field passed through when the user creates a file.
+                     * @return SourceContext Field passed through when the user creates a file.
                      * 
                      */
                     std::string GetSourceContext() const;
 
                     /**
-                     * 设置Field passed through when a user creates a file.
-                     * @param _sourceContext Field passed through when a user creates a file.
+                     * 设置Field passed through when the user creates a file.
+                     * @param _sourceContext Field passed through when the user creates a file.
                      * 
                      */
                     void SetSourceContext(const std::string& _sourceContext);
@@ -182,7 +182,7 @@ namespace TencentCloud
 
                     /**
                      * Media file source category:
-<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Record: comes from recording, for example, live recording and live streaming time shift recording.</li>
 <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
 <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
 <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * Field passed through when a user creates a file.
+                     * Field passed through when the user creates a file.
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;

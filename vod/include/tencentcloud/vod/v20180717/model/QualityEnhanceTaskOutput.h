@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File type, for example, mp4, flv.
-                     * @return FileType File type, for example, mp4, flv.
+                     * 获取File type, for example, mp4 or flv.
+                     * @return FileType File type, for example, mp4 or flv.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置File type, for example, mp4, flv.
-                     * @param _fileType File type, for example, mp4, flv.
+                     * 设置File type, for example, mp4 or flv.
+                     * @param _fileType File type, for example, mp4 or flv.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _expireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _expireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -179,7 +179,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File type, for example, mp4, flv.
+                     * File type, for example, mp4 or flv.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
@@ -210,7 +210,7 @@ namespace TencentCloud
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

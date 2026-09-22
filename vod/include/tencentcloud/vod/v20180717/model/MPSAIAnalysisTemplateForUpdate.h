@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Unique identifier of the video analysis template.</p>
-                     * @return Definition <p>Unique identifier of the video analysis template.</p>
+                     * 获取<p>Unique identifier of the video content analysis template.</p>
+                     * @return Definition <p>Unique identifier of the video content analysis template.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>Unique identifier of the video analysis template.</p>
-                     * @param _definition <p>Unique identifier of the video analysis template.</p>
+                     * 设置<p>Unique identifier of the video content analysis template.</p>
+                     * @param _definition <p>Unique identifier of the video content analysis template.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Video analysis template name, with a length limit of 64 characters.</p>
-                     * @return Name <p>Video analysis template name, with a length limit of 64 characters.</p>
+                     * 获取<p>Video analysis template name. Length limit: 64 characters.</p>
+                     * @return Name <p>Video analysis template name. Length limit: 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Video analysis template name, with a length limit of 64 characters.</p>
-                     * @param _name <p>Video analysis template name, with a length limit of 64 characters.</p>
+                     * 设置<p>Video analysis template name. Length limit: 64 characters.</p>
+                     * @param _name <p>Video analysis template name. Length limit: 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>Intelligent tag task control parameters.</p>
-                     * @return TagConfigure <p>Intelligent tag task control parameters.</p>
+                     * 获取<p>Control parameters for the intelligent tag task.</p>
+                     * @return TagConfigure <p>Control parameters for the intelligent tag task.</p>
                      * 
                      */
                     MPSAIAnalysisConfigureInfo GetTagConfigure() const;
 
                     /**
-                     * 设置<p>Intelligent tag task control parameters.</p>
-                     * @param _tagConfigure <p>Intelligent tag task control parameters.</p>
+                     * 设置<p>Control parameters for the intelligent tag task.</p>
+                     * @param _tagConfigure <p>Control parameters for the intelligent tag task.</p>
                      * 
                      */
                     void SetTagConfigure(const MPSAIAnalysisConfigureInfo& _tagConfigure);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool FrameTagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>Intelligent splitting task control parameters.</p>
-                     * @return SplitConfigure <p>Intelligent splitting task control parameters.</p>
+                     * 获取<p>Intelligent splitting task control parameter.</p>
+                     * @return SplitConfigure <p>Intelligent splitting task control parameter.</p>
                      * 
                      */
                     MPSAIAnalysisConfigureInfo GetSplitConfigure() const;
 
                     /**
-                     * 设置<p>Intelligent splitting task control parameters.</p>
-                     * @param _splitConfigure <p>Intelligent splitting task control parameters.</p>
+                     * 设置<p>Intelligent splitting task control parameter.</p>
+                     * @param _splitConfigure <p>Intelligent splitting task control parameter.</p>
                      * 
                      */
                     void SetSplitConfigure(const MPSAIAnalysisConfigureInfo& _splitConfigure);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool HighlightConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>Control parameter for the intelligent opening and closing credits task.</p>
-                     * @return OpeningAndEndingConfigure <p>Control parameter for the intelligent opening and closing credits task.</p>
+                     * 获取<p>Control parameters for the intelligent opening and ending sequences task.</p>
+                     * @return OpeningAndEndingConfigure <p>Control parameters for the intelligent opening and ending sequences task.</p>
                      * 
                      */
                     MPSAIAnalysisConfigureInfo GetOpeningAndEndingConfigure() const;
 
                     /**
-                     * 设置<p>Control parameter for the intelligent opening and closing credits task.</p>
-                     * @param _openingAndEndingConfigure <p>Control parameter for the intelligent opening and closing credits task.</p>
+                     * 设置<p>Control parameters for the intelligent opening and ending sequences task.</p>
+                     * @param _openingAndEndingConfigure <p>Control parameters for the intelligent opening and ending sequences task.</p>
                      * 
                      */
                     void SetOpeningAndEndingConfigure(const MPSAIAnalysisConfigureInfo& _openingAndEndingConfigure);
@@ -260,13 +260,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Unique identifier of the video analysis template.</p>
+                     * <p>Unique identifier of the video content analysis template.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Video analysis template name, with a length limit of 64 characters.</p>
+                     * <p>Video analysis template name. Length limit: 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -284,7 +284,7 @@ namespace TencentCloud
                     bool m_classificationConfigureHasBeenSet;
 
                     /**
-                     * <p>Intelligent tag task control parameters.</p>
+                     * <p>Control parameters for the intelligent tag task.</p>
                      */
                     MPSAIAnalysisConfigureInfo m_tagConfigure;
                     bool m_tagConfigureHasBeenSet;
@@ -302,7 +302,7 @@ namespace TencentCloud
                     bool m_frameTagConfigureHasBeenSet;
 
                     /**
-                     * <p>Intelligent splitting task control parameters.</p>
+                     * <p>Intelligent splitting task control parameter.</p>
                      */
                     MPSAIAnalysisConfigureInfo m_splitConfigure;
                     bool m_splitConfigureHasBeenSet;
@@ -314,7 +314,7 @@ namespace TencentCloud
                     bool m_highlightConfigureHasBeenSet;
 
                     /**
-                     * <p>Control parameter for the intelligent opening and closing credits task.</p>
+                     * <p>Control parameters for the intelligent opening and ending sequences task.</p>
                      */
                     MPSAIAnalysisConfigureInfo m_openingAndEndingConfigure;
                     bool m_openingAndEndingConfigureHasBeenSet;

@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取**VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
-                     * @return SubAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+                     * 获取**VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+                     * @return SubAppId **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置**VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
-                     * @param _subAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+                     * 设置**VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+                     * @param _subAppId **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SceneInfoHasBeenSet() const;
 
                     /**
-                     * 获取Output media file configuration for scenario-based video tasks.
-                     * @return OutputConfig Output media file configuration for scenario-based video tasks.
+                     * 获取Output media file configuration for a scenario-based video task.
+                     * @return OutputConfig Output media file configuration for a scenario-based video task.
                      * 
                      */
                     SceneAigcVideoOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Output media file configuration for scenario-based video tasks.
-                     * @param _outputConfig Output media file configuration for scenario-based video tasks.
+                     * 设置Output media file configuration for a scenario-based video task.
+                     * @param _outputConfig Output media file configuration for a scenario-based video task.
                      * 
                      */
                     void SetOutputConfig(const SceneAigcVideoOutputConfig& _outputConfig);
@@ -138,15 +138,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -159,15 +159,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
-                     * @return SessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+                     * 获取Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+                     * @return SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
-                     * @param _sessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+                     * 设置Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+                     * @param _sessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * 获取Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * @return TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
-                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * 设置Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * @param _tasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -245,7 +245,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+                     * **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -257,7 +257,7 @@ namespace TencentCloud
                     bool m_sceneInfoHasBeenSet;
 
                     /**
-                     * Output media file configuration for scenario-based video tasks.
+                     * Output media file configuration for a scenario-based video task.
                      */
                     SceneAigcVideoOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
@@ -271,19 +271,19 @@ namespace TencentCloud
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+                     * Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

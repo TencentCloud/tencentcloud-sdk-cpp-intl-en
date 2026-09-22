@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Aigc-generated text detailed data
+                * Aigc-generated detailed data
                 */
                 class AigcTextDetailData : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取<p>Gateway layer request ID</p>
-                     * @return ReqId <p>Gateway layer request ID</p>
+                     * 获取<p>Gateway layer request ID.</p>
+                     * @return ReqId <p>Gateway layer request ID.</p>
                      * 
                      */
                     std::string GetReqId() const;
 
                     /**
-                     * 设置<p>Gateway layer request ID</p>
-                     * @param _reqId <p>Gateway layer request ID</p>
+                     * 设置<p>Gateway layer request ID.</p>
+                     * @param _reqId <p>Gateway layer request ID.</p>
                      * 
                      */
                     void SetReqId(const std::string& _reqId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ChatIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>HTTP status code returned to client</p>
-                     * @return StatusCode <p>HTTP status code returned to client</p>
+                     * 获取<p>HTTP status code returned to the client</p>
+                     * @return StatusCode <p>HTTP status code returned to the client</p>
                      * 
                      */
                     uint64_t GetStatusCode() const;
 
                     /**
-                     * 设置<p>HTTP status code returned to client</p>
-                     * @param _statusCode <p>HTTP status code returned to client</p>
+                     * 设置<p>HTTP status code returned to the client</p>
+                     * @param _statusCode <p>HTTP status code returned to the client</p>
                      * 
                      */
                     void SetStatusCode(const uint64_t& _statusCode);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool OutputTokensHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of tokens that hit the prompt cache</p>
-                     * @return CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
+                     * 获取<p>Number of tokens for cache hits in prompt cache</p>
+                     * @return CacheInputTokens <p>Number of tokens for cache hits in prompt cache</p>
                      * 
                      */
                     int64_t GetCacheInputTokens() const;
 
                     /**
-                     * 设置<p>Number of tokens that hit the prompt cache</p>
-                     * @param _cacheInputTokens <p>Number of tokens that hit the prompt cache</p>
+                     * 设置<p>Number of tokens for cache hits in prompt cache</p>
+                     * @param _cacheInputTokens <p>Number of tokens for cache hits in prompt cache</p>
                      * 
                      */
                     void SetCacheInputTokens(const int64_t& _cacheInputTokens);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool TotalTokensHasBeenSet() const;
 
                     /**
-                     * 获取<p>tokens/second in the generation stage</p>
-                     * @return TPS <p>tokens/second in the generation stage</p>
+                     * 获取<p>tokens per second in the generation stage</p>
+                     * @return TPS <p>tokens per second in the generation stage</p>
                      * 
                      */
                     double GetTPS() const;
 
                     /**
-                     * 设置<p>tokens/second in the generation stage</p>
-                     * @param _tPS <p>tokens/second in the generation stage</p>
+                     * 设置<p>tokens per second in the generation stage</p>
+                     * @param _tPS <p>tokens per second in the generation stage</p>
                      * 
                      */
                     void SetTPS(const double& _tPS);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool TPSHasBeenSet() const;
 
                     /**
-                     * 获取<p>Time To First Token</p><p>Unit: seconds</p>
-                     * @return TTFT <p>Time To First Token</p><p>Unit: seconds</p>
+                     * 获取<p>Time To First Token</p><p>Unit: second</p>
+                     * @return TTFT <p>Time To First Token</p><p>Unit: second</p>
                      * 
                      */
                     double GetTTFT() const;
 
                     /**
-                     * 设置<p>Time To First Token</p><p>Unit: seconds</p>
-                     * @param _tTFT <p>Time To First Token</p><p>Unit: seconds</p>
+                     * 设置<p>Time To First Token</p><p>Unit: second</p>
+                     * @param _tTFT <p>Time To First Token</p><p>Unit: second</p>
                      * 
                      */
                     void SetTTFT(const double& _tTFT);
@@ -391,7 +391,7 @@ namespace TencentCloud
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * <p>Gateway layer request ID</p>
+                     * <p>Gateway layer request ID.</p>
                      */
                     std::string m_reqId;
                     bool m_reqIdHasBeenSet;
@@ -403,7 +403,7 @@ namespace TencentCloud
                     bool m_chatIdHasBeenSet;
 
                     /**
-                     * <p>HTTP status code returned to client</p>
+                     * <p>HTTP status code returned to the client</p>
                      */
                     uint64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
@@ -445,7 +445,7 @@ namespace TencentCloud
                     bool m_outputTokensHasBeenSet;
 
                     /**
-                     * <p>Number of tokens that hit the prompt cache</p>
+                     * <p>Number of tokens for cache hits in prompt cache</p>
                      */
                     int64_t m_cacheInputTokens;
                     bool m_cacheInputTokensHasBeenSet;
@@ -457,13 +457,13 @@ namespace TencentCloud
                     bool m_totalTokensHasBeenSet;
 
                     /**
-                     * <p>tokens/second in the generation stage</p>
+                     * <p>tokens per second in the generation stage</p>
                      */
                     double m_tPS;
                     bool m_tPSHasBeenSet;
 
                     /**
-                     * <p>Time To First Token</p><p>Unit: seconds</p>
+                     * <p>Time To First Token</p><p>Unit: second</p>
                      */
                     double m_tTFT;
                     bool m_tTFTHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type for tasks involving offensive content in Asr text in audio/video moderation
+                * Task result type of Asr text involving offensive content in audio/video moderation.
                 */
                 class AiReviewTaskPornAsrResult : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @param _errCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 设置Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input for tasks involving offensive content in Asr text in audio/video moderation.
-                     * @return Input Task input for tasks involving offensive content in Asr text in audio/video moderation.
+                     * 获取Task input for offensive content involved in Asr text in audio/video moderation.
+                     * @return Input Task input for offensive content involved in Asr text in audio/video moderation.
                      * 
                      */
                     AiReviewPornAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input for tasks involving offensive content in Asr text in audio/video moderation.
-                     * @param _input Task input for tasks involving offensive content in Asr text in audio/video moderation.
+                     * 设置Task input for offensive content involved in Asr text in audio/video moderation.
+                     * @param _input Task input for offensive content involved in Asr text in audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewPornAsrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Task output for tasks involving offensive content in Asr text in audio/video moderation.
-                     * @return Output Task output for tasks involving offensive content in Asr text in audio/video moderation.
+                     * 获取Task output of Asr text involving offensive content in audio/video moderation.
+                     * @return Output Task output of Asr text involving offensive content in audio/video moderation.
                      * 
                      */
                     AiReviewPornAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Task output for tasks involving offensive content in Asr text in audio/video moderation.
-                     * @param _output Task output for tasks involving offensive content in Asr text in audio/video moderation.
+                     * 设置Task output of Asr text involving offensive content in audio/video moderation.
+                     * @param _output Task output of Asr text involving offensive content in audio/video moderation.
                      * 
                      */
                     void SetOutput(const AiReviewPornAsrTaskOutput& _output);
@@ -204,7 +204,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
@@ -222,13 +222,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input for tasks involving offensive content in Asr text in audio/video moderation.
+                     * Task input for offensive content involved in Asr text in audio/video moderation.
                      */
                     AiReviewPornAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Task output for tasks involving offensive content in Asr text in audio/video moderation.
+                     * Task output of Asr text involving offensive content in audio/video moderation.
                      */
                     AiReviewPornAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

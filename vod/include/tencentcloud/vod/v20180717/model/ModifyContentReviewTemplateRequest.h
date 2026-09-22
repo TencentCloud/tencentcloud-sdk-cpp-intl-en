@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the content review template.
-                     * @return Definition Unique identifier of the content review template.
+                     * 获取Unique identifier of a content review template.
+                     * @return Definition Unique identifier of a content review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the content review template.
-                     * @param _definition Unique identifier of the content review template.
+                     * 设置Unique identifier of a content review template.
+                     * @param _definition Unique identifier of a content review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Content review template name, with a length limit of 64 characters.
-                     * @return Name Content review template name, with a length limit of 64 characters.
+                     * 获取Content review template name. The length cannot exceed 64 characters.
+                     * @return Name Content review template name. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Content review template name, with a length limit of 64 characters.
-                     * @param _name Content review template name, with a length limit of 64 characters.
+                     * 设置Content review template name. The length cannot exceed 64 characters.
+                     * @param _name Content review template name. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -195,10 +195,10 @@ namespace TencentCloud
                     bool PoliticalConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Prohibited control parameters. Restricted content includes:
+                     * 获取Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
-                     * @return ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+                     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
                      * 
@@ -206,10 +206,10 @@ namespace TencentCloud
                     ProhibitedConfigureInfoForUpdate GetProhibitedConfigure() const;
 
                     /**
-                     * 设置Prohibited control parameters. Restricted content includes:
+                     * 设置Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
-                     * @param _prohibitedConfigure Prohibited control parameters. Restricted content includes:
+                     * @param _prohibitedConfigure Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
                      * 
@@ -268,10 +268,10 @@ namespace TencentCloud
                     /**
                      * 获取Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      * @return ReviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      * 
                      */
                     std::string GetReviewWallSwitch() const;
@@ -279,10 +279,10 @@ namespace TencentCloud
                     /**
                      * 设置Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      * @param _reviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      * 
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
@@ -297,19 +297,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the content review template.
+                     * Unique identifier of a content review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Content review template name, with a length limit of 64 characters.
+                     * Content review template name. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -339,7 +339,7 @@ namespace TencentCloud
                     bool m_politicalConfigureHasBeenSet;
 
                     /**
-                     * Prohibited control parameters. Restricted content includes:
+                     * Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
                      */
@@ -361,7 +361,7 @@ namespace TencentCloud
                     /**
                      * Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
                      */
                     std::string m_reviewWallSwitch;
                     bool m_reviewWallSwitchHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of the large model parsing template.
+                * Large model parsing template detail.
                 */
                 class LLMComprehendTemplateItem : public AbstractModel
                 {
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text transcribing and parsing configuration</p>
-                     * @return Asr <p>Text transcribing and parsing configuration</p>
+                     * 获取<p>Text transcription parsing configuration</p>
+                     * @return Asr <p>Text transcription parsing configuration</p>
                      * 
                      */
                     LLMComprehendAsr GetAsr() const;
 
                     /**
-                     * 设置<p>Text transcribing and parsing configuration</p>
-                     * @param _asr <p>Text transcribing and parsing configuration</p>
+                     * 设置<p>Text transcription parsing configuration</p>
+                     * @param _asr <p>Text transcription parsing configuration</p>
                      * 
                      */
                     void SetAsr(const LLMComprehendAsr& _asr);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置<p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _updateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _updateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * <p>Text transcribing and parsing configuration</p>
+                     * <p>Text transcription parsing configuration</p>
                      */
                     LLMComprehendAsr m_asr;
                     bool m_asrHasBeenSet;
@@ -316,7 +316,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

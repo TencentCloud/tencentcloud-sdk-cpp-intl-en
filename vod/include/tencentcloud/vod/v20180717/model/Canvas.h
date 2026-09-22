@@ -80,18 +80,18 @@ Default value: Black.
                     bool ColorHasBeenSet() const;
 
                     /**
-                     * 获取Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+                     * 获取Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
-                     * @return Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+                     * @return Width Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+                     * 设置Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
-                     * @param _width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+                     * @param _width Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
                      * 
                      */
@@ -141,7 +141,7 @@ Default value: Black.
                     bool m_colorHasBeenSet;
 
                     /**
-                     * Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+                     * Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
                      */
                     int64_t m_width;

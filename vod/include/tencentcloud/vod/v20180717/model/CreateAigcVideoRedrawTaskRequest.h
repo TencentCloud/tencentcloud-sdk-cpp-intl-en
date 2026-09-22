@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-                     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-                     * @param _subAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
-                     * @return FileInfo <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+                     * 获取<p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
+                     * @return FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
                      * 
                      */
                     AigcVideoRedrawTaskInputFileInfo GetFileInfo() const;
 
                     /**
-                     * 设置<p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
-                     * @param _fileInfo <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+                     * 设置<p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
+                     * @param _fileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
                      * 
                      */
                     void SetFileInfo(const AigcVideoRedrawTaskInputFileInfo& _fileInfo);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool FileInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task parameter information for AIGC video conversion.</p>
-                     * @return TaskInfo <p>Task parameter information for AIGC video conversion.</p>
+                     * 获取<p>AIGC video redrawing task parameter information.</p>
+                     * @return TaskInfo <p>AIGC video redrawing task parameter information.</p>
                      * 
                      */
                     AigcVideoRedrawTaskInfo GetTaskInfo() const;
 
                     /**
-                     * 设置<p>Task parameter information for AIGC video conversion.</p>
-                     * @param _taskInfo <p>Task parameter information for AIGC video conversion.</p>
+                     * 设置<p>AIGC video redrawing task parameter information.</p>
+                     * @param _taskInfo <p>AIGC video redrawing task parameter information.</p>
                      * 
                      */
                     void SetTaskInfo(const AigcVideoRedrawTaskInfo& _taskInfo);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool TaskInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output media file configuration for an AIGC video conversion task.</p>
-                     * @return OutputConfig <p>Output media file configuration for an AIGC video conversion task.</p>
+                     * 获取<p>Configuration of the output media file for an AIGC video conversion task.</p>
+                     * @return OutputConfig <p>Configuration of the output media file for an AIGC video conversion task.</p>
                      * 
                      */
                     AigcVideoRedrawOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output media file configuration for an AIGC video conversion task.</p>
-                     * @param _outputConfig <p>Output media file configuration for an AIGC video conversion task.</p>
+                     * 设置<p>Configuration of the output media file for an AIGC video conversion task.</p>
+                     * @param _outputConfig <p>Configuration of the output media file for an AIGC video conversion task.</p>
                      * 
                      */
                     void SetOutputConfig(const AigcVideoRedrawOutputConfig& _outputConfig);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-                     * @return TasksPriority <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置<p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-                     * @param _tasksPriority <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reserved field, used for special purposes.</p>
-                     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
+                     * 获取<p>Reserved field, used for special purpose.</p>
+                     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置<p>Reserved field, used for special purposes.</p>
-                     * @param _extInfo <p>Reserved field, used for special purposes.</p>
+                     * 设置<p>Reserved field, used for special purpose.</p>
+                     * @param _extInfo <p>Reserved field, used for special purpose.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -216,25 +216,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+                     * <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
                      */
                     AigcVideoRedrawTaskInputFileInfo m_fileInfo;
                     bool m_fileInfoHasBeenSet;
 
                     /**
-                     * <p>Task parameter information for AIGC video conversion.</p>
+                     * <p>AIGC video redrawing task parameter information.</p>
                      */
                     AigcVideoRedrawTaskInfo m_taskInfo;
                     bool m_taskInfoHasBeenSet;
 
                     /**
-                     * <p>Output media file configuration for an AIGC video conversion task.</p>
+                     * <p>Configuration of the output media file for an AIGC video conversion task.</p>
                      */
                     AigcVideoRedrawOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
@@ -252,13 +252,13 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * <p>Reserved field, used for special purposes.</p>
+                     * <p>Reserved field, used for special purpose.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

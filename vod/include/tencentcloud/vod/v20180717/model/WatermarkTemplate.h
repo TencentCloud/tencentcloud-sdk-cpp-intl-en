@@ -142,23 +142,23 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Horizontal position of the watermark image origin point from the video origin point.
+                     * 获取Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
-                     * @return XPos Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
+                     * @return XPos Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
                      * 
                      */
                     std::string GetXPos() const;
 
                     /**
-                     * 设置Horizontal position of the watermark image origin point from the video origin point.
+                     * 设置Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
-                     * @param _xPos Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
+                     * @param _xPos Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
                      * 
                      */
                     void SetXPos(const std::string& _xPos);
@@ -171,23 +171,23 @@ namespace TencentCloud
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
-                     * @return YPos Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * 获取Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * @return YPos Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
-                     * @param _yPos Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * 设置Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * @param _yPos Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool SvgTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -309,12 +309,12 @@ namespace TencentCloud
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
                      * @return CoordinateOrigin Origin position. Valid values:
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
                      * 
                      */
                     std::string GetCoordinateOrigin() const;
@@ -324,12 +324,12 @@ namespace TencentCloud
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
                      * @param _coordinateOrigin Origin position. Valid values:
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
                      * 
                      */
                     void SetCoordinateOrigin(const std::string& _coordinateOrigin);
@@ -370,17 +370,17 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Horizontal position of the watermark image origin point from the video origin point.
+                     * Horizontal position of the watermark image origin point relative to the video origin point.
 <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+<li>If a string ends with px, it means the watermark Left is at the position of the specified pixel of the video width. For example, 100px means Left is 100 pixels.</li>
                      */
                     std::string m_xPos;
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * Vertical position of the watermark image origin point from the video origin point.
-<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * Vertical position of the watermark image origin point relative to the video image origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a position at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the position specified in pixels from the video height. For example, 100px means the Top is 100 pixels.</li>
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;
@@ -404,7 +404,7 @@ namespace TencentCloud
                     bool m_svgTemplateHasBeenSet;
 
                     /**
-                     * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -420,7 +420,7 @@ namespace TencentCloud
 <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
 <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
-<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the lower-right of the image or text.;</li>
                      */
                     std::string m_coordinateOrigin;
                     bool m_coordinateOriginHasBeenSet;

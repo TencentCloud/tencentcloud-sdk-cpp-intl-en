@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edit video file information of on-demand video
+                * Edit information of VOD video files
                 */
                 class EditMediaFileInfo : public AbstractModel
                 {

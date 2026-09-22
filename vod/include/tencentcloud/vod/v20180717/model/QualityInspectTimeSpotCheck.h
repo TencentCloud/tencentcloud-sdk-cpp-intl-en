@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio and video quality detection time spot check policy.
+                * Audio and video quality inspection spot check policy.
                 */
                 class QualityInspectTimeSpotCheck : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CheckDurationHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
-                     * @return CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * 获取<p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * @return CheckInterval <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
                      * 
                      */
                     int64_t GetCheckInterval() const;
 
                     /**
-                     * 设置<p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
-                     * @param _checkInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * 设置<p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * @param _checkInterval <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
                      * 
                      */
                     void SetCheckInterval(const int64_t& _checkInterval);
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_checkDurationHasBeenSet;
 
                     /**
-                     * <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
                      */
                     int64_t m_checkInterval;
                     bool m_checkIntervalHasBeenSet;

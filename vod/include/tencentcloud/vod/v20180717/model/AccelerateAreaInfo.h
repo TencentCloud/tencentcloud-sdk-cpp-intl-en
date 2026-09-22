@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Regional acceleration information of the domain.
+                * Region acceleration information of the domain
                 */
                 class AccelerateAreaInfo : public AbstractModel
                 {

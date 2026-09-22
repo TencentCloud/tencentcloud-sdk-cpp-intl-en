@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video quality detection template detail list.
-                     * @return QualityInspectTemplateSet Audio and video quality detection template detail list.
+                     * 获取Audio and video quality detection template details list.
+                     * @return QualityInspectTemplateSet Audio and video quality detection template details list.
                      * 
                      */
                     std::vector<QualityInspectTemplateItem> GetQualityInspectTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Audio and video quality detection template detail list.
+                     * Audio and video quality detection template details list.
                      */
                     std::vector<QualityInspectTemplateItem> m_qualityInspectTemplateSet;
                     bool m_qualityInspectTemplateSetHasBeenSet;

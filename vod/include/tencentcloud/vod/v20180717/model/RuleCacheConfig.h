@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool NoCacheHasBeenSet() const;
 
                     /**
-                     * 获取Follow the origin server configuration.
-                     * @return FollowOrigin Follow the origin server configuration.
+                     * 获取Follow the origin site configuration.
+                     * @return FollowOrigin Follow the origin site configuration.
                      * 
                      */
                     CacheConfigFollowOrigin GetFollowOrigin() const;
 
                     /**
-                     * 设置Follow the origin server configuration.
-                     * @param _followOrigin Follow the origin server configuration.
+                     * 设置Follow the origin site configuration.
+                     * @param _followOrigin Follow the origin site configuration.
                      * 
                      */
                     void SetFollowOrigin(const CacheConfigFollowOrigin& _followOrigin);
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_noCacheHasBeenSet;
 
                     /**
-                     * Follow the origin server configuration.
+                     * Follow the origin site configuration.
                      */
                     CacheConfigFollowOrigin m_followOrigin;
                     bool m_followOriginHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool TargetAudioInfoHasBeenSet() const;
 
                     /**
-                     * 获取Output file container format. Available values: mp4, flv, and hls.
-                     * @return Container Output file container format. Available values: mp4, flv, and hls.
+                     * 获取Output file container format. Available values: mp4, flv, hls.
+                     * @return Container Output file container format. Available values: mp4, flv, hls.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Output file container format. Available values: mp4, flv, and hls.
-                     * @param _container Output file container format. Available values: mp4, flv, and hls.
+                     * 设置Output file container format. Available values: mp4, flv, hls.
+                     * @param _container Output file container format. Available values: mp4, flv, hls.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -302,7 +302,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -344,7 +344,7 @@ namespace TencentCloud
                     bool m_targetAudioInfoHasBeenSet;
 
                     /**
-                     * Output file container format. Available values: mp4, flv, and hls.
+                     * Output file container format. Available values: mp4, flv, hls.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;

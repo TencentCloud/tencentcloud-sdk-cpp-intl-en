@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Screenshot taking at specified time points task input parameter type
+                * Task input parameter type for screenshot taking at specified time points for a video.
                 */
                 class SnapshotByTimeOffsetTaskInput : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ExtTimeOffsetSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
-                     * @return TimeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * 获取<p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * @return TimeOffsetSet <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
                      * 
                      */
                     std::vector<double> GetTimeOffsetSet() const;
 
                     /**
-                     * 设置<p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
-                     * @param _timeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * 设置<p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * @param _timeOffsetSet <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
                      * 
                      */
                     void SetTimeOffsetSet(const std::vector<double>& _timeOffsetSet);
@@ -146,7 +146,7 @@ namespace TencentCloud
                     bool m_extTimeOffsetSetHasBeenSet;
 
                     /**
-                     * <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+                     * <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
                      */
                     std::vector<double> m_timeOffsetSet;
                     bool m_timeOffsetSetHasBeenSet;

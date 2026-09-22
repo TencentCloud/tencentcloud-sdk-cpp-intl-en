@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取User agent list.
-                     * @return UserAgents User agent list.
+                     * 获取UserAgent list.
+                     * @return UserAgents UserAgent list.
                      * 
                      */
                     std::vector<std::string> GetUserAgents() const;
 
                     /**
-                     * 设置User agent list.
-                     * @param _userAgents User agent list.
+                     * 设置UserAgent list.
+                     * @param _userAgents UserAgent list.
                      * 
                      */
                     void SetUserAgents(const std::vector<std::string>& _userAgents);
@@ -171,7 +171,7 @@ namespace TencentCloud
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * User agent list.
+                     * UserAgent list.
                      */
                     std::vector<std::string> m_userAgents;
                     bool m_userAgentsHasBeenSet;

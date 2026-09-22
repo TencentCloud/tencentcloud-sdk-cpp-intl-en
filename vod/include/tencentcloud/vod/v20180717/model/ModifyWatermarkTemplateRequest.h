@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Watermark template name, with a length limit of 64 characters.
-                     * @return Name Watermark template name, with a length limit of 64 characters.
+                     * 获取Watermark template name. The length cannot exceed 64 characters.
+                     * @return Name Watermark template name. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Watermark template name, with a length limit of 64 characters.
-                     * @param _name Watermark template name, with a length limit of 64 characters.
+                     * 设置Watermark template name. The length cannot exceed 64 characters.
+                     * @param _name Watermark template name. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -167,10 +167,10 @@ namespace TencentCloud
                     bool CoordinateOriginHasBeenSet() const;
 
                     /**
-                     * 获取The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+                     * 获取Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
-                     * @return XPos The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+                     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
                      * 
@@ -178,10 +178,10 @@ namespace TencentCloud
                     std::string GetXPos() const;
 
                     /**
-                     * 设置The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+                     * 设置Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
-                     * @param _xPos The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+                     * @param _xPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
                      * 
@@ -302,7 +302,7 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Watermark template name, with a length limit of 64 characters.
+                     * Watermark template name. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -324,7 +324,7 @@ namespace TencentCloud
                     bool m_coordinateOriginHasBeenSet;
 
                     /**
-                     * The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+                     * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
                      */

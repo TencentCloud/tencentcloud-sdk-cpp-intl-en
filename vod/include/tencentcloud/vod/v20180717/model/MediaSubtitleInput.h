@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subtitle name. The length cannot exceed 64 characters.
-                     * @return Name Subtitle name. The length cannot exceed 64 characters.
+                     * 获取Subtitle name. Length limit: 64 characters.
+                     * @return Name Subtitle name. Length limit: 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Subtitle name. The length cannot exceed 64 characters.
-                     * @param _name Subtitle name. The length cannot exceed 64 characters.
+                     * 设置Subtitle name. Length limit: 64 characters.
+                     * @param _name Subtitle name. Length limit: 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -191,15 +191,15 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
-                     * @return Id Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+                     * 获取Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+                     * @return Id Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
-                     * @param _id Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+                     * 设置Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+                     * @param _id Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -214,7 +214,7 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
                 private:
 
                     /**
-                     * Subtitle name. The length cannot exceed 64 characters.
+                     * Subtitle name. Length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -253,7 +253,7 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+                     * Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

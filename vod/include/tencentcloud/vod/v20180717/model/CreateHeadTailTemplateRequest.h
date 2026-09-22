@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Opening candidate list. Fill in the FileId of the video. During transcoding, the opening scene with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front take precedence. A maximum of 5 opening candidates is supported.
-                     * @return HeadCandidateSet Opening candidate list. Fill in the FileId of the video. During transcoding, the opening scene with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front take precedence. A maximum of 5 opening candidates is supported.
+                     * 获取Opening candidate list. Fill in the FileId of the video. During transcoding, the opening with the aspect ratio closest to the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 title candidates.
+                     * @return HeadCandidateSet Opening candidate list. Fill in the FileId of the video. During transcoding, the opening with the aspect ratio closest to the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 title candidates.
                      * 
                      */
                     std::vector<std::string> GetHeadCandidateSet() const;
 
                     /**
-                     * 设置Opening candidate list. Fill in the FileId of the video. During transcoding, the opening scene with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front take precedence. A maximum of 5 opening candidates is supported.
-                     * @param _headCandidateSet Opening candidate list. Fill in the FileId of the video. During transcoding, the opening scene with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front take precedence. A maximum of 5 opening candidates is supported.
+                     * 设置Opening candidate list. Fill in the FileId of the video. During transcoding, the opening with the aspect ratio closest to the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 title candidates.
+                     * @param _headCandidateSet Opening candidate list. Fill in the FileId of the video. During transcoding, the opening with the aspect ratio closest to the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 title candidates.
                      * 
                      */
                     void SetHeadCandidateSet(const std::vector<std::string>& _headCandidateSet);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool HeadCandidateSetHasBeenSet() const;
 
                     /**
-                     * 获取Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front are prioritized. A maximum of 5 ending candidates is supported.
-                     * @return TailCandidateSet Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front are prioritized. A maximum of 5 ending candidates is supported.
+                     * 获取Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to that of the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 candidate endings.
+                     * @return TailCandidateSet Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to that of the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 candidate endings.
                      * 
                      */
                     std::vector<std::string> GetTailCandidateSet() const;
 
                     /**
-                     * 设置Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front are prioritized. A maximum of 5 ending candidates is supported.
-                     * @param _tailCandidateSet Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front are prioritized. A maximum of 5 ending candidates is supported.
+                     * 设置Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to that of the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 candidate endings.
+                     * @param _tailCandidateSet Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to that of the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 candidate endings.
                      * 
                      */
                     void SetTailCandidateSet(const std::vector<std::string>& _tailCandidateSet);
@@ -148,34 +148,34 @@ namespace TencentCloud
                     bool TailCandidateSetHasBeenSet() const;
 
                     /**
-                     * 获取Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
+                     * 获取Filling method. When the width and height parameters in the video stream configuration are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
 <li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
-<li> black: Fill with black. Maintain the video aspect ratio, and fill the remaining edges with black.</li>
+<li> white: leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> black: black edges. The video aspect ratio remains unchanged, and the remaining edges are filled with black.</li>
 Default value: stretch.
-                     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
+                     * @return FillType Filling method. When the width and height parameters in the video stream configuration are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
 <li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
-<li> black: Fill with black. Maintain the video aspect ratio, and fill the remaining edges with black.</li>
+<li> white: leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> black: black edges. The video aspect ratio remains unchanged, and the remaining edges are filled with black.</li>
 Default value: stretch.
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
+                     * 设置Filling method. When the width and height parameters in the video stream configuration are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
 <li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
-<li> black: Fill with black. Maintain the video aspect ratio, and fill the remaining edges with black.</li>
+<li> white: leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> black: black edges. The video aspect ratio remains unchanged, and the remaining edges are filled with black.</li>
 Default value: stretch.
-                     * @param _fillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
+                     * @param _fillType Filling method. When the width and height parameters in the video stream configuration are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
 <li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
-<li> black: Fill with black. Maintain the video aspect ratio, and fill the remaining edges with black.</li>
+<li> white: leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> black: black edges. The video aspect ratio remains unchanged, and the remaining edges are filled with black.</li>
 Default value: stretch.
                      * 
                      */
@@ -209,23 +209,23 @@ Default value: stretch.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Opening candidate list. Fill in the FileId of the video. During transcoding, the opening scene with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front take precedence. A maximum of 5 opening candidates is supported.
+                     * Opening candidate list. Fill in the FileId of the video. During transcoding, the opening with the aspect ratio closest to the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 title candidates.
                      */
                     std::vector<std::string> m_headCandidateSet;
                     bool m_headCandidateSetHasBeenSet;
 
                     /**
-                     * Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front are prioritized. A maximum of 5 ending candidates is supported.
+                     * Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to that of the main content is automatically selected (if the aspect ratios are identical, candidates positioned towards the front take precedence). Supports up to 5 candidate endings.
                      */
                     std::vector<std::string> m_tailCandidateSet;
                     bool m_tailCandidateSetHasBeenSet;
 
                     /**
-                     * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
+                     * Filling method. When the width and height parameters in the video stream configuration are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
 <li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
-<li> black: Fill with black. Maintain the video aspect ratio, and fill the remaining edges with black.</li>
+<li> white: leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> black: black edges. The video aspect ratio remains unchanged, and the remaining edges are filled with black.</li>
 Default value: stretch.
                      */
                     std::string m_fillType;

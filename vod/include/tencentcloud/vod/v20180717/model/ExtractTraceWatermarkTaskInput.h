@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input for extracting traceability watermark
+                * Extraction traceability watermark input
                 */
                 class ExtractTraceWatermarkTaskInput : public AbstractModel
                 {

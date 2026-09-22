@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video editing task info
+                * Edit video task information.
                 */
                 class EditMediaTask : public AbstractModel
                 {
@@ -71,10 +71,10 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task stream status. Valid values:
+                     * 获取Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-                     * @return Status Task stream status. Valid values:
+                     * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      * 
@@ -82,10 +82,10 @@ namespace TencentCloud
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task stream status. Valid values:
+                     * 设置Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-                     * @param _status Task stream status. Valid values:
+                     * @param _status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      * 
@@ -101,12 +101,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      * @return ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      * 
                      */
@@ -114,12 +114,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      * @param _errCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      * 
                      */
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @param _errCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 设置Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of a video editing task.
-                     * @return Input Input of a video editing task.
+                     * 获取Input for a video editing task.
+                     * @return Input Input for a video editing task.
                      * 
                      */
                     EditMediaTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of a video editing task.
-                     * @param _input Input of a video editing task.
+                     * 设置Input for a video editing task.
+                     * @param _input Input for a video editing task.
                      * 
                      */
                     void SetInput(const EditMediaTaskInput& _input);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Meta information of the output video.
-                     * @return MetaData Meta information of the output video.
+                     * 获取Metadata of the output video.
+                     * @return MetaData Metadata of the output video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Meta information of the output video.
-                     * @param _metaData Meta information of the output video.
+                     * 设置Metadata of the output video.
+                     * @param _metaData Metadata of the output video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
-                     * @return ProcedureTaskId Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+                     * 获取Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
+                     * @return ProcedureTaskId Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
                      * 
                      */
                     std::string GetProcedureTaskId() const;
 
                     /**
-                     * 设置Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
-                     * @param _procedureTaskId Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+                     * 设置Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
+                     * @param _procedureTaskId Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
                      * 
                      */
                     void SetProcedureTaskId(const std::string& _procedureTaskId);
@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool ProcedureTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
-                     * @return ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
+                     * 获取Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+                     * @return ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
                      * 
                      */
                     std::string GetReviewAudioVideoTaskId() const;
 
                     /**
-                     * 设置Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
-                     * @param _reviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
+                     * 设置Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+                     * @param _reviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
                      * 
                      */
                     void SetReviewAudioVideoTaskId(const std::string& _reviewAudioVideoTaskId);
@@ -301,15 +301,15 @@ namespace TencentCloud
                     bool ReviewAudioVideoTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -351,7 +351,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task stream status. Valid values:
+                     * Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      */
@@ -360,15 +360,15 @@ namespace TencentCloud
 
                     /**
                      * Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
@@ -386,7 +386,7 @@ namespace TencentCloud
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of a video editing task.
+                     * Input for a video editing task.
                      */
                     EditMediaTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -398,25 +398,25 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Meta information of the output video.
+                     * Metadata of the output video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+                     * Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
                      */
                     std::string m_procedureTaskId;
                     bool m_procedureTaskIdHasBeenSet;
 
                     /**
-                     * Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
+                     * Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
                      */
                     std::string m_reviewAudioVideoTaskId;
                     bool m_reviewAudioVideoTaskIdHasBeenSet;
 
                     /**
-                     * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

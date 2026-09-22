@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extra resource path.</p>
-                     * @return ResourcePath <p>Extra resource path.</p>
+                     * 获取<p>Attach a resource path.</p>
+                     * @return ResourcePath <p>Attach a resource path.</p>
                      * 
                      */
                     std::string GetResourcePath() const;
 
                     /**
-                     * 设置<p>Extra resource path.</p>
-                     * @param _resourcePath <p>Extra resource path.</p>
+                     * 设置<p>Attach a resource path.</p>
+                     * @param _resourcePath <p>Attach a resource path.</p>
                      * 
                      */
                     void SetResourcePath(const std::string& _resourcePath);
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_valueHasBeenSet;
 
                     /**
-                     * <p>Extra resource path.</p>
+                     * <p>Attach a resource path.</p>
                      */
                     std::string m_resourcePath;
                     bool m_resourcePathHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output file information for an image asynchronous processing task.
-                     * @return FileInfo Output file information for an image asynchronous processing task.
+                     * 获取Output file information for an asynchronous image processing task.
+                     * @return FileInfo Output file information for an asynchronous image processing task.
                      * 
                      */
                     ProcessImageAsyncOutputFileInfo GetFileInfo() const;
 
                     /**
-                     * 设置Output file information for an image asynchronous processing task.
-                     * @param _fileInfo Output file information for an image asynchronous processing task.
+                     * 设置Output file information for an asynchronous image processing task.
+                     * @param _fileInfo Output file information for an asynchronous image processing task.
                      * 
                      */
                     void SetFileInfo(const ProcessImageAsyncOutputFileInfo& _fileInfo);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Output file information for an image asynchronous processing task.
+                     * Output file information for an asynchronous image processing task.
                      */
                     ProcessImageAsyncOutputFileInfo m_fileInfo;
                     bool m_fileInfoHasBeenSet;

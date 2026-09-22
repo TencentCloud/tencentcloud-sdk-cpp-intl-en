@@ -99,15 +99,15 @@ namespace TencentCloud
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
-                     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * 获取Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
                      * 
                      */
                     ReduceMediaBitrateAdaptiveDynamicStreamingResult GetAdaptiveDynamicStreamingTask() const;
 
                     /**
-                     * 设置Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
-                     * @param _adaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * 设置Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * @param _adaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
                      * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const ReduceMediaBitrateAdaptiveDynamicStreamingResult& _adaptiveDynamicStreamingTask);
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
                      */
                     ReduceMediaBitrateAdaptiveDynamicStreamingResult m_adaptiveDynamicStreamingTask;
                     bool m_adaptiveDynamicStreamingTaskHasBeenSet;

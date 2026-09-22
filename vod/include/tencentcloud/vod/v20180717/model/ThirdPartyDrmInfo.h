@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DrmTypesHasBeenSet() const;
 
                     /**
-                     * 获取<p>External DRM vendor information.</p>
-                     * @return SPEKEDrm <p>External DRM vendor information.</p>
+                     * 获取<p>Third-party DRM vendor information.</p>
+                     * @return SPEKEDrm <p>Third-party DRM vendor information.</p>
                      * 
                      */
                     SPEKEDrm GetSPEKEDrm() const;
 
                     /**
-                     * 设置<p>External DRM vendor information.</p>
-                     * @param _sPEKEDrm <p>External DRM vendor information.</p>
+                     * 设置<p>Third-party DRM vendor information.</p>
+                     * @param _sPEKEDrm <p>Third-party DRM vendor information.</p>
                      * 
                      */
                     void SetSPEKEDrm(const SPEKEDrm& _sPEKEDrm);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_drmTypesHasBeenSet;
 
                     /**
-                     * <p>External DRM vendor information.</p>
+                     * <p>Third-party DRM vendor information.</p>
                      */
                     SPEKEDrm m_sPEKEDrm;
                     bool m_sPEKEDrmHasBeenSet;

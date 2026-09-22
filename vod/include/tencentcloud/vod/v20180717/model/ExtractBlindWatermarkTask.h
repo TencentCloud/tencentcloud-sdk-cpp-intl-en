@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Extraction task info of digital watermarking on videos
+                * Extraction task information of video digital watermark
                 */
                 class ExtractBlindWatermarkTask : public AbstractModel
                 {
@@ -103,15 +103,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. `0` indicates success. Other values indicate failure.
-                     * @return ErrCode Error code. `0` indicates success. Other values indicate failure.
+                     * 获取Error code. `0`: Success. Other values: Failure.
+                     * @return ErrCode Error code. `0`: Success. Other values: Failure.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. `0` indicates success. Other values indicate failure.
-                     * @param _errCode Error code. `0` indicates success. Other values indicate failure.
+                     * 设置Error code. `0`: Success. Other values: Failure.
+                     * @param _errCode Error code. `0`: Success. Other values: Failure.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -145,15 +145,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input information of the file for digital watermark extraction.
-                     * @return InputInfo Input information of the file for digital watermark extraction.
+                     * 获取File input information for digital watermark extraction.
+                     * @return InputInfo File input information for digital watermark extraction.
                      * 
                      */
                     ExtractBlindWatermarkInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置Input information of the file for digital watermark extraction.
-                     * @param _inputInfo Input information of the file for digital watermark extraction.
+                     * 设置File input information for digital watermark extraction.
+                     * @param _inputInfo File input information for digital watermark extraction.
                      * 
                      */
                     void SetInputInfo(const ExtractBlindWatermarkInputInfo& _inputInfo);
@@ -166,15 +166,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
-                     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * 获取Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * @return Type Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
-                     * @param _type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * 设置Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * @param _type Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -187,15 +187,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
-                     * @return IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+                     * 获取Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
+                     * @return IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
                      * 
                      */
                     bool GetIsDetected() const;
 
                     /**
-                     * 设置Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
-                     * @param _isDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+                     * 设置Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
+                     * @param _isDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
                      * 
                      */
                     void SetIsDetected(const bool& _isDetected);
@@ -229,15 +229,15 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
-                     * @return ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+                     * 获取Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
+                     * @return ResultUV Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
                      * 
                      */
                     std::string GetResultUV() const;
 
                     /**
-                     * 设置Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
-                     * @param _resultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+                     * 设置Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
+                     * @param _resultUV Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
                      * 
                      */
                     void SetResultUV(const std::string& _resultUV);
@@ -330,7 +330,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. `0` indicates success. Other values indicate failure.
+                     * Error code. `0`: Success. Other values: Failure.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -342,19 +342,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input information of the file for digital watermark extraction.
+                     * File input information for digital watermark extraction.
                      */
                     ExtractBlindWatermarkInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+                     * Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
                      */
                     bool m_isDetected;
                     bool m_isDetectedHasBeenSet;
@@ -366,7 +366,7 @@ namespace TencentCloud
                     bool m_resultHasBeenSet;
 
                     /**
-                     * Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+                     * Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
                      */
                     std::string m_resultUV;
                     bool m_resultUVHasBeenSet;

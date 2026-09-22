@@ -70,10 +70,10 @@ namespace TencentCloud
                     /**
                      * 获取Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
                      * @return ErrCode Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
@@ -81,10 +81,10 @@ namespace TencentCloud
                     /**
                      * 设置Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
                      * @param _errCode Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -128,7 +128,7 @@ namespace TencentCloud
                     /**
                      * Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

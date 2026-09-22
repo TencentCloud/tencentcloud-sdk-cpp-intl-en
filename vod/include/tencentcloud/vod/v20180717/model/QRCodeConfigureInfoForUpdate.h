@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video frame QR code detection switch. Available values:
+                     * 获取QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @return Switch Video frame QR code detection switch. Available values:
+<li>OFF: disabled</li>
+                     * @return Switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Video frame QR code detection switch. Available values:
+                     * 设置QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @param _switch Video frame QR code detection switch. Available values:
+<li>OFF: disabled</li>
+                     * @param _switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video frame QR code detection switch. Available values:
+                     * QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

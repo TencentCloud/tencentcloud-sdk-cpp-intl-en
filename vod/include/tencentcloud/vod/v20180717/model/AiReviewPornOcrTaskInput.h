@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID for authenticating offensive content.
-                     * @return Definition Template ID for authenticating offensive content.
+                     * 获取Template ID for authenticating templates that involve offensive content.
+                     * @return Definition Template ID for authenticating templates that involve offensive content.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Template ID for authenticating offensive content.
-                     * @param _definition Template ID for authenticating offensive content.
+                     * 设置Template ID for authenticating templates that involve offensive content.
+                     * @param _definition Template ID for authenticating templates that involve offensive content.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID for authenticating offensive content.
+                     * Template ID for authenticating templates that involve offensive content.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

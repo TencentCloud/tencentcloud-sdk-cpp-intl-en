@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context identifier, used to pass through user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
-                     * @return SessionContext Source context identifier, used to pass through user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * 获取Identify source context, used to pass through user request information. This field value will be returned in ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * @return SessionContext Identify source context, used to pass through user request information. This field value will be returned in ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context identifier, used to pass through user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
-                     * @param _sessionContext Source context identifier, used to pass through user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * 设置Identify source context, used to pass through user request information. This field value will be returned in ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * @param _sessionContext Identify source context, used to pass through user request information. This field value will be returned in ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-                     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 获取Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+                     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-                     * @param _sessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 设置Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+                     * @param _sessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field, used for special purpose.
-                     * @return ExtInfo Reserved field, used for special purpose.
+                     * 获取Reserved field, used for special purposes.
+                     * @return ExtInfo Reserved field, used for special purposes.
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field, used for special purpose.
-                     * @param _extInfo Reserved field, used for special purpose.
+                     * 设置Reserved field, used for special purposes.
+                     * @param _extInfo Reserved field, used for special purposes.
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -177,19 +177,19 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Source context identifier, used to pass through user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * Identify source context, used to pass through user request information. This field value will be returned in ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * Reserved field, used for special purpose.
+                     * Reserved field, used for special purposes.
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

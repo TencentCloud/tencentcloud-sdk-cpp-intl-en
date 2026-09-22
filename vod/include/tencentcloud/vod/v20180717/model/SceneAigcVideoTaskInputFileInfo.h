@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input file info of a scenario-based AIGC image generation task
+                * Input file information of the scenario-based AIGC image task.
                 */
                 class SceneAigcVideoTaskInputFileInfo : public AbstractModel
                 {
@@ -68,26 +68,26 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+                     * 获取Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
-                     * @return FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+                     * @return FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+                     * 设置Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
-                     * @param _fileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+                     * @param _fileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      * 
                      */
@@ -103,11 +103,11 @@ Description:
                     /**
                      * 获取Accessible file URL. This parameter is valid when Type is Url.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      * @return Url Accessible file URL. This parameter is valid when Type is Url.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      * 
                      */
@@ -116,11 +116,11 @@ Description:
                     /**
                      * 设置Accessible file URL. This parameter is valid when Type is Url.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      * @param _url Accessible file URL. This parameter is valid when Type is Url.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      * 
                      */
@@ -142,9 +142,9 @@ Description:
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. This field can be obtained in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+                     * Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      */
                     std::string m_fileId;
@@ -153,7 +153,7 @@ Description:
                     /**
                      * Accessible file URL. This parameter is valid when Type is Url.
 Description:
-1. An image less than 7 MB is recommended;
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
                      */
                     std::string m_url;

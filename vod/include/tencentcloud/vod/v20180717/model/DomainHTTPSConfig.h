@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTPS configuration information of the domain name
+                * HTTPS configuration info of the domain name
                 */
                 class DomainHTTPSConfig : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CertExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Certificate ID in the Tencent Cloud SSL product.</p>
-                     * @return CloudCertId <p>Certificate ID in the Tencent Cloud SSL product.</p>
+                     * 获取<p>Certificate ID in Tencent Cloud SSL product.</p>
+                     * @return CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
                      * 
                      */
                     std::string GetCloudCertId() const;
 
                     /**
-                     * 设置<p>Certificate ID in the Tencent Cloud SSL product.</p>
-                     * @param _cloudCertId <p>Certificate ID in the Tencent Cloud SSL product.</p>
+                     * 设置<p>Certificate ID in Tencent Cloud SSL product.</p>
+                     * @param _cloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
                      * 
                      */
                     void SetCloudCertId(const std::string& _cloudCertId);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_certExpireTimeHasBeenSet;
 
                     /**
-                     * <p>Certificate ID in the Tencent Cloud SSL product.</p>
+                     * <p>Certificate ID in Tencent Cloud SSL product.</p>
                      */
                     std::string m_cloudCertId;
                     bool m_cloudCertIdHasBeenSet;

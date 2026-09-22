@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task input parameter type for generating a sprite sheet from a video
+                * Task input parameter type of sprite sheet capture in a video
                 */
                 class ImageSpriteTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sprite screenshot template ID.
-                     * @return Definition Sprite screenshot template ID.
+                     * 获取Image sprite template ID.
+                     * @return Definition Image sprite template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Sprite screenshot template ID.
-                     * @param _definition Sprite screenshot template ID.
+                     * 设置Image sprite template ID.
+                     * @param _definition Image sprite template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sprite screenshot template ID.
+                     * Image sprite template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

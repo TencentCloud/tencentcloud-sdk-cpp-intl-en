@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type for importing a task flow template into the Intelligent Media Assets knowledge base.
+                * Input parameter type for importing an intelligent media assets knowledge base in a task flow template.
                 */
                 class ImportMediaKnowledgeTaskInput : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
-                     * @return KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+                     * 获取<p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
+                     * @return KnowledgeBaseIds <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
                      * 
                      */
                     std::vector<std::string> GetKnowledgeBaseIds() const;
 
                     /**
-                     * 设置<p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
-                     * @param _knowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+                     * 设置<p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
+                     * @param _knowledgeBaseIds <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
                      * 
                      */
                     void SetKnowledgeBaseIds(const std::vector<std::string>& _knowledgeBaseIds);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+                     * <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
                      */
                     std::vector<std::string> m_knowledgeBaseIds;
                     bool m_knowledgeBaseIdsHasBeenSet;

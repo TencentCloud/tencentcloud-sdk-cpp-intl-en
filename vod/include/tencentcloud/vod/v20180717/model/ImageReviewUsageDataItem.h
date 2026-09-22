@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image moderation stats.
+                * Image moderation count statistics.
                 */
                 class ImageReviewUsageDataItem : public AbstractModel
                 {

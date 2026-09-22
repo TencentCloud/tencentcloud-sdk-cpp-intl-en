@@ -43,20 +43,20 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * 获取List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
-                     * @return Labels List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * @return Labels List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
                      * 
@@ -64,20 +64,20 @@ namespace TencentCloud
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * 设置List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
-                     * @param _labels List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * @param _labels List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
                      * 
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Review template name. The length cannot exceed 64 characters.
-                     * @return Name Review template name. The length cannot exceed 64 characters.
+                     * 获取Review template name. Length limit: 64 characters.
+                     * @return Name Review template name. Length limit: 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Review template name. The length cannot exceed 64 characters.
-                     * @param _name Review template name. The length cannot exceed 64 characters.
+                     * 设置Review template name. Length limit: 64 characters.
+                     * @param _name Review template name. Length limit: 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Review template description information, with a length limit of 256 characters.
-                     * @return Comment Review template description information, with a length limit of 256 characters.
+                     * 获取Review template description information. Length limit: 256 characters.
+                     * @return Comment Review template description information. Length limit: 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Review template description information, with a length limit of 256 characters.
-                     * @param _comment Review template description information, with a length limit of 256 characters.
+                     * 设置Review template description information. Length limit: 256 characters.
+                     * @param _comment Review template description information. Length limit: 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -157,12 +157,12 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of rule violation tags to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * List of violation labels to return. Available values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal activities;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
                      */
@@ -170,19 +170,19 @@ namespace TencentCloud
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Review template name. The length cannot exceed 64 characters.
+                     * Review template name. Length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Review template description information, with a length limit of 256 characters.
+                     * Review template description information. Length limit: 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

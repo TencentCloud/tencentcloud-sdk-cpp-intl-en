@@ -76,18 +76,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+                     * 获取Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-                     * @return LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+                     * @return LabelSet Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+                     * 设置Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-                     * @param _labelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+                     * @param _labelSet Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
@@ -111,7 +111,7 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+                     * Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      */
                     std::vector<std::string> m_labelSet;

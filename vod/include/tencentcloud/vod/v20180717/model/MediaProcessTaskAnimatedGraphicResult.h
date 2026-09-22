@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of the animated image task.
-                     * @return Input Input of the animated image task.
+                     * 获取Input of the rotating image task.
+                     * @return Input Input of the rotating image task.
                      * 
                      */
                     AnimatedGraphicTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of the animated image task.
-                     * @param _input Input of the animated image task.
+                     * 设置Input of the rotating image task.
+                     * @param _input Input of the rotating image task.
                      * 
                      */
                     void SetInput(const AnimatedGraphicTaskInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the rotating image task. Value range: 0-100.
-                     * @return Progress Progress of the rotating image task. Value range: 0-100.
+                     * 获取Rotating image task progress, value ranges from 0 to 100.
+                     * @return Progress Rotating image task progress, value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the rotating image task. Value range: 0-100.
-                     * @param _progress Progress of the rotating image task. Value range: 0-100.
+                     * 设置Rotating image task progress, value ranges from 0 to 100.
+                     * @param _progress Rotating image task progress, value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of the animated image task.
+                     * Input of the rotating image task.
                      */
                     AnimatedGraphicTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -276,13 +276,13 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Progress of the rotating image task. Value range: 0-100.
+                     * Rotating image task progress, value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;

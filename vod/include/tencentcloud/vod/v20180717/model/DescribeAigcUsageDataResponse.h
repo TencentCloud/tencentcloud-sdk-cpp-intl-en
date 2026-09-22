@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool AigcUsageDataSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text generation detailed log</p>
-                     * @return AigcTextDetails <p>Text generation detailed log</p>
+                     * 获取<p>Detailed log for text generation</p>
+                     * @return AigcTextDetails <p>Detailed log for text generation</p>
                      * 
                      */
                     AigcTextDetail GetAigcTextDetails() const;
@@ -82,7 +82,7 @@ namespace TencentCloud
                     bool m_aigcUsageDataSetHasBeenSet;
 
                     /**
-                     * <p>Text generation detailed log</p>
+                     * <p>Detailed log for text generation</p>
                      */
                     AigcTextDetail m_aigcTextDetails;
                     bool m_aigcTextDetailsHasBeenSet;

@@ -58,14 +58,14 @@ namespace TencentCloud
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -79,14 +79,14 @@ namespace TencentCloud
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -105,14 +105,14 @@ namespace TencentCloud
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -126,14 +126,14 @@ namespace TencentCloud
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status. It can be PROCESSING, SUCCESS, or FAIL.
-                     * @return Status Task status. It can be PROCESSING, SUCCESS, or FAIL.
+                     * 获取Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. It can be PROCESSING, SUCCESS, or FAIL.
-                     * @param _status Task status. It can be PROCESSING, SUCCESS, or FAIL.
+                     * 设置Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
-                     * @return Input MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+                     * 获取Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
+                     * @return Input Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
-                     * @param _input MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+                     * 设置Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
+                     * @param _input Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of MPS video processing task.
-                     * @return Output Output of MPS video processing task.
+                     * 获取Output of the MPS video processing task.
+                     * @return Output Output of the MPS video processing task.
                      * 
                      */
                     MPSTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of MPS video processing task.
-                     * @param _output Output of MPS video processing task.
+                     * 设置Output of the MPS video processing task.
+                     * @param _output Output of the MPS video processing task.
                      * 
                      */
                     void SetOutput(const MPSTaskOutput& _output);
@@ -266,14 +266,14 @@ namespace TencentCloud
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -282,7 +282,7 @@ namespace TencentCloud
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task status. It can be PROCESSING, SUCCESS, or FAIL.
+                     * Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -300,13 +300,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+                     * Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of MPS video processing task.
+                     * Output of the MPS video processing task.
                      */
                     MPSTaskOutput m_output;
                     bool m_outputHasBeenSet;

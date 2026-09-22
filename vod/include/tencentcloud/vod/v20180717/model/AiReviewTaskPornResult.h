@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type of offensive content involved in audio/video moderation
+                * Task result type for offensive content involved in audio/video moderation
                 */
                 class AiReviewTaskPornResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input of offensive content involved in audio/video moderation.
-                     * @return Input Task input of offensive content involved in audio/video moderation.
+                     * 获取Task input for offensive content involved in audio/video moderation.
+                     * @return Input Task input for offensive content involved in audio/video moderation.
                      * 
                      */
                     AiReviewPornTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input of offensive content involved in audio/video moderation.
-                     * @param _input Task input of offensive content involved in audio/video moderation.
+                     * 设置Task input for offensive content involved in audio/video moderation.
+                     * @param _input Task input for offensive content involved in audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewPornTaskInput& _input);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input of offensive content involved in audio/video moderation.
+                     * Task input for offensive content involved in audio/video moderation.
                      */
                     AiReviewPornTaskInput m_input;
                     bool m_inputHasBeenSet;

@@ -79,15 +79,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -249,15 +249,15 @@ Default value: 0px.
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取Image watermark template. This field is required when Type is image and invalid when Type is text.
-                     * @return ImageTemplate Image watermark template. This field is required when Type is image and invalid when Type is text.
+                     * 获取Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
+                     * @return ImageTemplate Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
                      * 
                      */
                     ImageWatermarkInput GetImageTemplate() const;
 
                     /**
-                     * 设置Image watermark template. This field is required when Type is image and invalid when Type is text.
-                     * @param _imageTemplate Image watermark template. This field is required when Type is image and invalid when Type is text.
+                     * 设置Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
+                     * @param _imageTemplate Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
                      * 
                      */
                     void SetImageTemplate(const ImageWatermarkInput& _imageTemplate);
@@ -323,7 +323,7 @@ Default value: 0px.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -370,7 +370,7 @@ Default value: 0px.
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * Image watermark template. This field is required when Type is image and invalid when Type is text.
+                     * Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
                      */
                     ImageWatermarkInput m_imageTemplate;
                     bool m_imageTemplateHasBeenSet;

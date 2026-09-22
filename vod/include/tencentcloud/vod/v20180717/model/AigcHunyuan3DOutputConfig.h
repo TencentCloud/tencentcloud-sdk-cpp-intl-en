@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration of the output media file for an AIGC Hunyuan 3D task.
+                * Configuration of the output media file of an AIGC Hunyuan 3D task.
                 */
                 class AigcHunyuan3DOutputConfig : public AbstractModel
                 {

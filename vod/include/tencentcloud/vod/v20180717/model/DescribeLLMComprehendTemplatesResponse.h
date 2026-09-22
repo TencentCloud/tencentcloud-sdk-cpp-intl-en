@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Large model parsing template detail list.</p>
-                     * @return LLMComprehendTemplateSet <p>Large model parsing template detail list.</p>
+                     * 获取<p>Large model parsing template details list.</p>
+                     * @return LLMComprehendTemplateSet <p>Large model parsing template details list.</p>
                      * 
                      */
                     std::vector<LLMComprehendTemplateItem> GetLLMComprehendTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Large model parsing template detail list.</p>
+                     * <p>Large model parsing template details list.</p>
                      */
                     std::vector<LLMComprehendTemplateItem> m_lLMComprehendTemplateSet;
                     bool m_lLMComprehendTemplateSetHasBeenSet;

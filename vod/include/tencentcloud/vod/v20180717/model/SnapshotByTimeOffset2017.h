@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot time, in milliseconds.
-                     * @return TimeOffset Screenshot time, in milliseconds.
+                     * 获取Screenshot time, in ms.
+                     * @return TimeOffset Screenshot time, in ms.
                      * 
                      */
                     uint64_t GetTimeOffset() const;
 
                     /**
-                     * 设置Screenshot time, in milliseconds.
-                     * @param _timeOffset Screenshot time, in milliseconds.
+                     * 设置Screenshot time, in ms.
+                     * @param _timeOffset Screenshot time, in ms.
                      * 
                      */
                     void SetTimeOffset(const uint64_t& _timeOffset);
@@ -128,7 +128,7 @@ namespace TencentCloud
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Screenshot time, in milliseconds.
+                     * Screenshot time, in ms.
                      */
                     uint64_t m_timeOffset;
                     bool m_timeOffsetHasBeenSet;

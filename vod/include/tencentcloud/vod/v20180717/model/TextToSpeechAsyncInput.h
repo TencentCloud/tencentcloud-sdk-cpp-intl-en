@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech synthesis task input.
+                * Input of the speech synthesis task.
                 */
                 class TextToSpeechAsyncInput : public AbstractModel
                 {

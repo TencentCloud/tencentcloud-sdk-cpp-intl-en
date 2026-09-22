@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Animated image result information of a VOD file
+                * VOD file video motion graphic result information
                 */
                 class MediaAnimatedGraphicsInfo : public AbstractModel
                 {

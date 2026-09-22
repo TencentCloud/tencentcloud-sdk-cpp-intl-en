@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * An issue detected by the LLM large model for audio and video quality detection.
+                * Issue detected by the LLM in audio and video quality detection.
                 */
                 class QualityInspectLLMDetectionIssue : public AbstractModel
                 {

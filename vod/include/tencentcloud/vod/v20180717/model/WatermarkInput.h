@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+                     * 获取Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
-                     * @return TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+                     * @return TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
                      * 
                      */
                     std::string GetTextContent() const;
 
                     /**
-                     * 设置Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+                     * 设置Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
-                     * @param _textContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+                     * @param _textContent Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
                      * 
                      */
@@ -93,19 +93,19 @@ Text watermarks do not support watermarking screenshots.
                     bool TextContentHasBeenSet() const;
 
                     /**
-                     * 获取SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
-                     * @return SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+                     * 获取SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
+                     * @return SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
                      * 
                      */
                     std::string GetSvgContent() const;
 
                     /**
-                     * 设置SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
-                     * @param _svgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+                     * 设置SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
+                     * @param _svgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
                      * 
                      */
                     void SetSvgContent(const std::string& _svgContent);
@@ -192,15 +192,15 @@ SVG watermark does not support screenshot watermarking.
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+                     * Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
                      */
                     std::string m_textContent;
                     bool m_textContentHasBeenSet;
 
                     /**
-                     * SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+                     * SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
                      */
                     std::string m_svgContent;
                     bool m_svgContentHasBeenSet;

@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
                      * @return Switch Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
                      * @param _switch Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -111,11 +111,11 @@ Default value: normal.
                     /**
                      * 获取Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
                      * @return Track Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
                      * 
                      */
@@ -124,11 +124,11 @@ Default value: vocal.
                     /**
                      * 设置Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
                      * @param _track Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
                      * 
                      */
@@ -146,7 +146,7 @@ Default value: vocal.
                     /**
                      * Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -163,7 +163,7 @@ Default value: normal.
                     /**
                      * Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
                      */
                     std::string m_track;

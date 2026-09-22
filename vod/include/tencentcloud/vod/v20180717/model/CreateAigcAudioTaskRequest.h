@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
-                     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * 获取<p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
+                     * @return SubAppId <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
-                     * @param _subAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * 设置<p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
+                     * @param _subAppId <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
-                     * @return SceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+                     * 获取<p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
+                     * @return SceneType <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置<p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
-                     * @param _sceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+                     * 设置<p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
+                     * @param _sceneType <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Video information for reference.</p>
-                     * @return VideoInfos <p>Video information for reference.</p>
+                     * 获取<p>Reference video information.</p>
+                     * @return VideoInfos <p>Reference video information.</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceVideoInfo> GetVideoInfos() const;
 
                     /**
-                     * 设置<p>Video information for reference.</p>
-                     * @param _videoInfos <p>Video information for reference.</p>
+                     * 设置<p>Reference video information.</p>
+                     * @param _videoInfos <p>Reference video information.</p>
                      * 
                      */
                     void SetVideoInfos(const std::vector<AigcAudioReferenceVideoInfo>& _videoInfos);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output parameter</p>
-                     * @return OutputConfig <p>Output parameter</p>
+                     * 获取<p>Output parameters</p>
+                     * @return OutputConfig <p>Output parameters</p>
                      * 
                      */
                     AigcAudioOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output parameter</p>
-                     * @param _outputConfig <p>Output parameter</p>
+                     * 设置<p>Output parameters</p>
+                     * @param _outputConfig <p>Output parameters</p>
                      * 
                      */
                     void SetOutputConfig(const AigcAudioOutputConfig& _outputConfig);
@@ -237,7 +237,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -255,7 +255,7 @@ namespace TencentCloud
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+                     * <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
@@ -267,7 +267,7 @@ namespace TencentCloud
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>Video information for reference.</p>
+                     * <p>Reference video information.</p>
                      */
                     std::vector<AigcAudioReferenceVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;
@@ -279,7 +279,7 @@ namespace TencentCloud
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * <p>Output parameter</p>
+                     * <p>Output parameters</p>
                      */
                     AigcAudioOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

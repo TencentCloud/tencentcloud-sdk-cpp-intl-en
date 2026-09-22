@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取List of violation labels that need to return.
-                     * @return Labels List of violation labels that need to return.
+                     * 获取List of violation labels to return.
+                     * @return Labels List of violation labels to return.
                      * 
                      */
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置List of violation labels that need to return.
-                     * @param _labels List of violation labels that need to return.
+                     * 设置List of violation labels to return.
+                     * @param _labels List of violation labels to return.
                      * 
                      */
                     void SetLabels(const std::vector<std::string>& _labels);
@@ -230,7 +230,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * List of violation labels that need to return.
+                     * List of violation labels to return.
                      */
                     std::vector<std::string> m_labels;
                     bool m_labelsHasBeenSet;

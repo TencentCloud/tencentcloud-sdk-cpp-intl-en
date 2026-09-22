@@ -103,10 +103,10 @@ FINISH: completed.
                     /**
                      * 获取Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
                      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
@@ -114,10 +114,10 @@ FINISH: completed.
                     /**
                      * 设置Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
                      * @param _errCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -151,15 +151,15 @@ FINISH: completed.
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Video file ID for publishing.
-                     * @return FileId Video file ID for publishing.
+                     * 获取Video file ID to publish.
+                     * @return FileId Video file ID to publish.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Video file ID for publishing.
-                     * @param _fileId Video file ID for publishing.
+                     * 设置Video file ID to publish.
+                     * @param _fileId Video file ID to publish.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -216,12 +216,12 @@ FINISH: completed.
                     /**
                      * 获取WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
                      * @return WechatStatus WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
                      * 
@@ -231,12 +231,12 @@ FINISH: completed.
                     /**
                      * 设置WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
                      * @param _wechatStatus WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
                      * 
@@ -312,7 +312,7 @@ FINISH: completed.
                     /**
                      * Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -324,7 +324,7 @@ FINISH: completed.
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Video file ID for publishing.
+                     * Video file ID to publish.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
@@ -344,7 +344,7 @@ FINISH: completed.
                     /**
                      * WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
                      */

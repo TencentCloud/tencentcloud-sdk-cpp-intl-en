@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scenario-based information of an AIGC video task.
+                * Information of scenario-based AIGC video tasks.
                 */
                 class SceneAigcVideoTaskInput : public AbstractModel
                 {
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of the output media file for the scenario-based image generation task.
-                     * @return OutputConfig Configuration of the output media file for the scenario-based image generation task.
+                     * 获取Output media file configuration for scenario-based image generation tasks.
+                     * @return OutputConfig Output media file configuration for scenario-based image generation tasks.
                      * 
                      */
                     SceneAigcVideoOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Configuration of the output media file for the scenario-based image generation task.
-                     * @param _outputConfig Configuration of the output media file for the scenario-based image generation task.
+                     * 设置Output media file configuration for scenario-based image generation tasks.
+                     * @param _outputConfig Output media file configuration for scenario-based image generation tasks.
                      * 
                      */
                     void SetOutputConfig(const SceneAigcVideoOutputConfig& _outputConfig);
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * Configuration of the output media file for the scenario-based image generation task.
+                     * Output media file configuration for scenario-based image generation tasks.
                      */
                     SceneAigcVideoOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

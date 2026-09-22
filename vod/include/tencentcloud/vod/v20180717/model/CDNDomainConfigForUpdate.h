@@ -434,15 +434,15 @@ namespace TencentCloud
                     bool OssPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Authentication configuration for origin-pull from Huawei Cloud Object Storage.
-                     * @return HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+                     * 获取Huawei Cloud object storage origin-pull authentication configuration.
+                     * @return HwPrivateAccess Huawei Cloud object storage origin-pull authentication configuration.
                      * 
                      */
                     HwPrivateAccess GetHwPrivateAccess() const;
 
                     /**
-                     * 设置Authentication configuration for origin-pull from Huawei Cloud Object Storage.
-                     * @param _hwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+                     * 设置Huawei Cloud object storage origin-pull authentication configuration.
+                     * @param _hwPrivateAccess Huawei Cloud object storage origin-pull authentication configuration.
                      * 
                      */
                     void SetHwPrivateAccess(const HwPrivateAccess& _hwPrivateAccess);
@@ -583,7 +583,7 @@ namespace TencentCloud
                     bool m_ossPrivateAccessHasBeenSet;
 
                     /**
-                     * Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+                     * Huawei Cloud object storage origin-pull authentication configuration.
                      */
                     HwPrivateAccess m_hwPrivateAccess;
                     bool m_hwPrivateAccessHasBeenSet;

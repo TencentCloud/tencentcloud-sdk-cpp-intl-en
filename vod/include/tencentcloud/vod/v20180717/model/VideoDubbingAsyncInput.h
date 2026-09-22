@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target language of the video. Default: en.</p>
-                     * @return DstLanguage <p>Target language of the video. Default: en.</p>
+                     * 获取<p>Target language of the video. Default: en</p>
+                     * @return DstLanguage <p>Target language of the video. Default: en</p>
                      * 
                      */
                     std::string GetDstLanguage() const;
 
                     /**
-                     * 设置<p>Target language of the video. Default: en.</p>
-                     * @param _dstLanguage <p>Target language of the video. Default: en.</p>
+                     * 设置<p>Target language of the video. Default: en</p>
+                     * @param _dstLanguage <p>Target language of the video. Default: en</p>
                      * 
                      */
                     void SetDstLanguage(const std::string& _dstLanguage);
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_srcLanguageHasBeenSet;
 
                     /**
-                     * <p>Target language of the video. Default: en.</p>
+                     * <p>Target language of the video. Default: en</p>
                      */
                     std::string m_dstLanguage;
                     bool m_dstLanguageHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Aws S3 origin-pull authentication
+                * Authentication for Aws S3 origin-pull.
                 */
                 class AwsPrivateAccess : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch for Aws S3 origin-pull authentication configuration. Valid values:
+                     * 获取Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Switch for Aws S3 origin-pull authentication configuration. Valid values:
+                     * @return Switch Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch for Aws S3 origin-pull authentication configuration. Valid values:
+                     * 设置Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Switch for Aws S3 origin-pull authentication configuration. Valid values:
+                     * @param _switch Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -162,7 +162,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch for Aws S3 origin-pull authentication configuration. Valid values:
+                     * Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

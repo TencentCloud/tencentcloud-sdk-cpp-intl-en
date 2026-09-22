@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of the timbre clone task.
+                * Input for a voice cloning task.
                 */
                 class CloneVoiceAsyncInput : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input audio fileId</p>
-                     * @return AudioFileId <p>Input audio fileId</p>
+                     * 获取<p>fileId of the input audio</p>
+                     * @return AudioFileId <p>fileId of the input audio</p>
                      * 
                      */
                     std::string GetAudioFileId() const;
 
                     /**
-                     * 设置<p>Input audio fileId</p>
-                     * @param _audioFileId <p>Input audio fileId</p>
+                     * 设置<p>fileId of the input audio</p>
+                     * @param _audioFileId <p>fileId of the input audio</p>
                      * 
                      */
                     void SetAudioFileId(const std::string& _audioFileId);
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * <p>Input audio fileId</p>
+                     * <p>fileId of the input audio</p>
                      */
                     std::string m_audioFileId;
                     bool m_audioFileIdHasBeenSet;

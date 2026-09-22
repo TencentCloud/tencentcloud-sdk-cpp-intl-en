@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended error code. A null string indicates success, while other values indicate failure.</p>
-                     * @return ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * 获取<p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+                     * @return ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置<p>Extended error code. A null string indicates success, while other values indicate failure.</p>
-                     * @param _errCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * 设置<p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+                     * @param _errCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -258,7 +258,7 @@ namespace TencentCloud
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;

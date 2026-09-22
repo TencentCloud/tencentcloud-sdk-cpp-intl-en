@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Text keyword recognition result.
+                * Keyword recognition result of the text.
                 */
                 class AiRecognitionTaskOcrWordsResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Text keyword recognition task input information.
-                     * @return Input Text keyword recognition task input information.
+                     * 获取Text keyword recognition task input.
+                     * @return Input Text keyword recognition task input.
                      * 
                      */
                     AiRecognitionTaskOcrWordsResultInput GetInput() const;
 
                     /**
-                     * 设置Text keyword recognition task input information.
-                     * @param _input Text keyword recognition task input information.
+                     * 设置Text keyword recognition task input.
+                     * @param _input Text keyword recognition task input.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskOcrWordsResultInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the text keyword recognition task. Value range: 0-100.
-                     * @return Progress Progress of the text keyword recognition task. Value range: 0-100.
+                     * 获取Progress of the text keyword recognition task. Value range: [0-100].
+                     * @return Progress Progress of the text keyword recognition task. Value range: [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the text keyword recognition task. Value range: 0-100.
-                     * @param _progress Progress of the text keyword recognition task. Value range: 0-100.
+                     * 设置Progress of the text keyword recognition task. Value range: [0-100].
+                     * @param _progress Progress of the text keyword recognition task. Value range: [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Text keyword recognition task input information.
+                     * Text keyword recognition task input.
                      */
                     AiRecognitionTaskOcrWordsResultInput m_input;
                     bool m_inputHasBeenSet;
@@ -276,13 +276,13 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Progress of the text keyword recognition task. Value range: 0-100.
+                     * Progress of the text keyword recognition task. Value range: [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;

@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
-                     * @return StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+                     * 获取Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * @return StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
-                     * @param _startTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+                     * 设置Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * @param _startTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -392,15 +392,15 @@ namespace TencentCloud
                     bool ArtifactRepairInfoHasBeenSet() const;
 
                     /**
-                     * 获取Output target parameters for audio-visual quality rebirth.
-                     * @return TargetInfo Output target parameters for audio-visual quality rebirth.
+                     * 获取Audio-visual quality rebirth output target parameters.
+                     * @return TargetInfo Audio-visual quality rebirth output target parameters.
                      * 
                      */
                     RebuildMediaTargetInfo GetTargetInfo() const;
 
                     /**
-                     * 设置Output target parameters for audio-visual quality rebirth.
-                     * @param _targetInfo Output target parameters for audio-visual quality rebirth.
+                     * 设置Audio-visual quality rebirth output target parameters.
+                     * @param _targetInfo Audio-visual quality rebirth output target parameters.
                      * 
                      */
                     void SetTargetInfo(const RebuildMediaTargetInfo& _targetInfo);
@@ -413,15 +413,15 @@ namespace TencentCloud
                     bool TargetInfoHasBeenSet() const;
 
                     /**
-                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -455,15 +455,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+                     * 获取Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * @return TasksPriority Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
-                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+                     * 设置Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * @param _tasksPriority Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -505,13 +505,13 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+                     * Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
@@ -595,13 +595,13 @@ namespace TencentCloud
                     bool m_artifactRepairInfoHasBeenSet;
 
                     /**
-                     * Output target parameters for audio-visual quality rebirth.
+                     * Audio-visual quality rebirth output target parameters.
                      */
                     RebuildMediaTargetInfo m_targetInfo;
                     bool m_targetInfoHasBeenSet;
 
                     /**
-                     * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
@@ -613,7 +613,7 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+                     * Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

@@ -56,15 +56,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a video content recognition template.
-                     * @return Definition Unique ID of a video content recognition template.
+                     * 获取Unique ID of the video content recognition template.
+                     * @return Definition Unique ID of the video content recognition template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a video content recognition template.
-                     * @param _definition Unique ID of a video content recognition template.
+                     * 设置Unique ID of the video content recognition template.
+                     * @param _definition Unique ID of the video content recognition template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -120,10 +120,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * @return Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * 
                      */
@@ -131,10 +131,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * @param _type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * 
                      */
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Head and tail recognition control parameter.
-                     * @return HeadTailConfigure Head and tail recognition control parameter.
+                     * 获取Head and tail recognition control parameters.
+                     * @return HeadTailConfigure Head and tail recognition control parameters.
                      * 
                      */
                     HeadTailConfigureInfo GetHeadTailConfigure() const;
 
                     /**
-                     * 设置Head and tail recognition control parameter.
-                     * @param _headTailConfigure Head and tail recognition control parameter.
+                     * 设置Head and tail recognition control parameters.
+                     * @param _headTailConfigure Head and tail recognition control parameters.
                      * 
                      */
                     void SetHeadTailConfigure(const HeadTailConfigureInfo& _headTailConfigure);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool FaceConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Text Full-text Recognition Control Parameters.
-                     * @return OcrFullTextConfigure Text Full-text Recognition Control Parameters.
+                     * 获取Text full-text recognition control parameters.
+                     * @return OcrFullTextConfigure Text full-text recognition control parameters.
                      * 
                      */
                     OcrFullTextConfigureInfo GetOcrFullTextConfigure() const;
 
                     /**
-                     * 设置Text Full-text Recognition Control Parameters.
-                     * @param _ocrFullTextConfigure Text Full-text Recognition Control Parameters.
+                     * 设置Text full-text recognition control parameters.
+                     * @param _ocrFullTextConfigure Text full-text recognition control parameters.
                      * 
                      */
                     void SetOcrFullTextConfigure(const OcrFullTextConfigureInfo& _ocrFullTextConfigure);
@@ -254,18 +254,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
                      * @return AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
                      * 
                      */
                     AsrFullTextConfigureInfo GetAsrFullTextConfigure() const;
 
                     /**
                      * 设置Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
                      * @param _asrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
                      * 
                      */
                     void SetAsrFullTextConfigure(const AsrFullTextConfigureInfo& _asrFullTextConfigure);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Voice translation recognition control parameters.
-                     * @return AsrTranslateConfigure Voice translation recognition control parameters.
+                     * 获取Speech translation recognition control parameters.
+                     * @return AsrTranslateConfigure Speech translation recognition control parameters.
                      * 
                      */
                     AsrTranslateConfigureInfo GetAsrTranslateConfigure() const;
 
                     /**
-                     * 设置Voice translation recognition control parameters.
-                     * @param _asrTranslateConfigure Voice translation recognition control parameters.
+                     * 设置Speech translation recognition control parameters.
+                     * @param _asrTranslateConfigure Speech translation recognition control parameters.
                      * 
                      */
                     void SetAsrTranslateConfigure(const AsrTranslateConfigureInfo& _asrTranslateConfigure);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool AsrTranslateConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Object recognition control parameter.
-                     * @return ObjectConfigure Object recognition control parameter.
+                     * 获取Object recognition control parameters.
+                     * @return ObjectConfigure Object recognition control parameters.
                      * 
                      */
                     ObjectConfigureInfo GetObjectConfigure() const;
 
                     /**
-                     * 设置Object recognition control parameter.
-                     * @param _objectConfigure Object recognition control parameter.
+                     * 设置Object recognition control parameters.
+                     * @param _objectConfigure Object recognition control parameters.
                      * 
                      */
                     void SetObjectConfigure(const ObjectConfigureInfo& _objectConfigure);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool ObjectConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot interval. Measurement unit: second.
-                     * @return ScreenshotInterval Screenshot interval. Measurement unit: second.
+                     * 获取Screenshot time interval in seconds.
+                     * @return ScreenshotInterval Screenshot time interval in seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Screenshot interval. Measurement unit: second.
-                     * @param _screenshotInterval Screenshot interval. Measurement unit: second.
+                     * 设置Screenshot time interval in seconds.
+                     * @param _screenshotInterval Screenshot time interval in seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -406,7 +406,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a video content recognition template.
+                     * Unique ID of the video content recognition template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -425,14 +425,14 @@ namespace TencentCloud
 
                     /**
                      * Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Head and tail recognition control parameter.
+                     * Head and tail recognition control parameters.
                      */
                     HeadTailConfigureInfo m_headTailConfigure;
                     bool m_headTailConfigureHasBeenSet;
@@ -450,7 +450,7 @@ namespace TencentCloud
                     bool m_faceConfigureHasBeenSet;
 
                     /**
-                     * Text Full-text Recognition Control Parameters.
+                     * Text full-text recognition control parameters.
                      */
                     OcrFullTextConfigureInfo m_ocrFullTextConfigure;
                     bool m_ocrFullTextConfigureHasBeenSet;
@@ -463,7 +463,7 @@ namespace TencentCloud
 
                     /**
                      * Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
                      */
                     AsrFullTextConfigureInfo m_asrFullTextConfigure;
                     bool m_asrFullTextConfigureHasBeenSet;
@@ -475,19 +475,19 @@ namespace TencentCloud
                     bool m_asrWordsConfigureHasBeenSet;
 
                     /**
-                     * Voice translation recognition control parameters.
+                     * Speech translation recognition control parameters.
                      */
                     AsrTranslateConfigureInfo m_asrTranslateConfigure;
                     bool m_asrTranslateConfigureHasBeenSet;
 
                     /**
-                     * Object recognition control parameter.
+                     * Object recognition control parameters.
                      */
                     ObjectConfigureInfo m_objectConfigure;
                     bool m_objectConfigureHasBeenSet;
 
                     /**
-                     * Screenshot interval. Measurement unit: second.
+                     * Screenshot time interval in seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;

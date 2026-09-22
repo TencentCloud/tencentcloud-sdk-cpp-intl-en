@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task input parameter type for tasks involving unsafe information in audio/video moderation
+                * Task input parameter type for unsafe information involved in audio/video moderation
                 */
                 class AiReviewTerrorismTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID for authentication that involves unsafe information.
-                     * @return Definition Template ID for authentication that involves unsafe information.
+                     * 获取Template ID for authentication involving unsafe information.
+                     * @return Definition Template ID for authentication involving unsafe information.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Template ID for authentication that involves unsafe information.
-                     * @param _definition Template ID for authentication that involves unsafe information.
+                     * 设置Template ID for authentication involving unsafe information.
+                     * @param _definition Template ID for authentication involving unsafe information.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID for authentication that involves unsafe information.
+                     * Template ID for authentication involving unsafe information.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the adaptive bitrate streaming task. Value range: 0-100.
-                     * @return Progress Progress of the adaptive bitrate streaming task. Value range: 0-100.
+                     * 获取Adaptive bitrate streaming task progress, value ranges from 0 to 100.
+                     * @return Progress Adaptive bitrate streaming task progress, value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the adaptive bitrate streaming task. Value range: 0-100.
-                     * @param _progress Progress of the adaptive bitrate streaming task. Value range: 0-100.
+                     * 设置Adaptive bitrate streaming task progress, value ranges from 0 to 100.
+                     * @param _progress Adaptive bitrate streaming task progress, value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of the video to adaptive streaming task.
-                     * @return Input Input of the video to adaptive streaming task.
+                     * 获取Input for a video to adaptive streaming task.
+                     * @return Input Input for a video to adaptive streaming task.
                      * 
                      */
                     AdaptiveDynamicStreamingTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of the video to adaptive streaming task.
-                     * @param _input Input of the video to adaptive streaming task.
+                     * 设置Input for a video to adaptive streaming task.
+                     * @param _input Input for a video to adaptive streaming task.
                      * 
                      */
                     void SetInput(const AdaptiveDynamicStreamingTaskInput& _input);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -264,13 +264,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Progress of the adaptive bitrate streaming task. Value range: 0-100.
+                     * Adaptive bitrate streaming task progress, value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of the video to adaptive streaming task.
+                     * Input for a video to adaptive streaming task.
                      */
                     AdaptiveDynamicStreamingTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -282,7 +282,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;

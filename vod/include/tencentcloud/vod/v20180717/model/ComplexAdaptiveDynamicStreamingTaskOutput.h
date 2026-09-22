@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output result of an adaptive bitrate streaming task.
+                * Output result of the adaptive bitrate streaming task.
                 */
                 class ComplexAdaptiveDynamicStreamingTaskOutput : public AbstractModel
                 {
@@ -68,10 +68,10 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Adaptive bitrate stream packaging format. Available values:
+                     * 获取Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-                     * @return Format Adaptive bitrate stream packaging format. Available values:
+                     * @return Format Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
                      * 
@@ -79,10 +79,10 @@ namespace TencentCloud
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Adaptive bitrate stream packaging format. Available values:
+                     * 设置Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-                     * @param _format Adaptive bitrate stream packaging format. Available values:
+                     * @param _format Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
                      * 
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Adaptive bitrate stream packaging format. Available values:
+                     * Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
                      */

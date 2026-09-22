@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Extended parameters for async image processing.
-                     * @return ExtendedParameter Extended parameters for async image processing.
+                     * 获取Extended parameters for asynchronous image processing.
+                     * @return ExtendedParameter Extended parameters for asynchronous image processing.
                      * 
                      */
                     ProcessImageAsyncInputExtendedParameter GetExtendedParameter() const;
 
                     /**
-                     * 设置Extended parameters for async image processing.
-                     * @param _extendedParameter Extended parameters for async image processing.
+                     * 设置Extended parameters for asynchronous image processing.
+                     * @param _extendedParameter Extended parameters for asynchronous image processing.
                      * 
                      */
                     void SetExtendedParameter(const ProcessImageAsyncInputExtendedParameter& _extendedParameter);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Extended parameters for async image processing.
+                     * Extended parameters for asynchronous image processing.
                      */
                     ProcessImageAsyncInputExtendedParameter m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;

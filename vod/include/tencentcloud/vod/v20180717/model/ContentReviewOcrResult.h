@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
-                     * @return Confidence <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+                     * 获取<p>Score of Ocr text identification result. Value range: 0-100.</p>
+                     * @return Confidence <p>Score of Ocr text identification result. Value range: 0-100.</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置<p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
-                     * @param _confidence <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+                     * 设置<p>Score of Ocr text identification result. Value range: 0-100.</p>
+                     * @param _confidence <p>Score of Ocr text identification result. Value range: 0-100.</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool KeywordSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
-                     * @return AreaCoordSet <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+                     * 获取<p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
+                     * @return AreaCoordSet <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置<p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
-                     * @param _areaCoordSet <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+                     * 设置<p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
+                     * @param _areaCoordSet <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+                     * <p>Score of Ocr text identification result. Value range: 0-100.</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_keywordSetHasBeenSet;
 
                     /**
-                     * <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+                     * <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

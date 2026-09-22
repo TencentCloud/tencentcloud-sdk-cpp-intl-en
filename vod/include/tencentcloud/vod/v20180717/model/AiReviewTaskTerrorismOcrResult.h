@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type for unsafe information in Ocr text identification during audio and video moderation
+                * Task result type of Ocr text identification involving unsafe content in audio/video moderation
                 */
                 class AiReviewTaskTerrorismOcrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input for audio/video moderation where Ocr text involves unsafe information.
-                     * @return Input Task input for audio/video moderation where Ocr text involves unsafe information.
+                     * 获取Task input of Ocr text involving unsafe information in audio/video moderation.
+                     * @return Input Task input of Ocr text involving unsafe information in audio/video moderation.
                      * 
                      */
                     AiReviewTerrorismOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input for audio/video moderation where Ocr text involves unsafe information.
-                     * @param _input Task input for audio/video moderation where Ocr text involves unsafe information.
+                     * 设置Task input of Ocr text involving unsafe information in audio/video moderation.
+                     * @param _input Task input of Ocr text involving unsafe information in audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewTerrorismOcrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Task output of audio/video moderation involving unsafe information in Ocr text.
-                     * @return Output Task output of audio/video moderation involving unsafe information in Ocr text.
+                     * 获取Task output of Ocr text involving unsafe information in video moderation.
+                     * @return Output Task output of Ocr text involving unsafe information in video moderation.
                      * 
                      */
                     AiReviewTerrorismOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Task output of audio/video moderation involving unsafe information in Ocr text.
-                     * @param _output Task output of audio/video moderation involving unsafe information in Ocr text.
+                     * 设置Task output of Ocr text involving unsafe information in video moderation.
+                     * @param _output Task output of Ocr text involving unsafe information in video moderation.
                      * 
                      */
                     void SetOutput(const AiReviewTerrorismOcrTaskOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
-                     * @return Progress Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+                     * 获取Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
+                     * @return Progress Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
-                     * @param _progress Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+                     * 设置Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
+                     * @param _progress Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -222,19 +222,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input for audio/video moderation where Ocr text involves unsafe information.
+                     * Task input of Ocr text involving unsafe information in audio/video moderation.
                      */
                     AiReviewTerrorismOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Task output of audio/video moderation involving unsafe information in Ocr text.
+                     * Task output of Ocr text involving unsafe information in video moderation.
                      */
                     AiReviewTerrorismOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+                     * Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

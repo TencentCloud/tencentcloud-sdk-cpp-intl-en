@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task summary information
+                * Task summary information.
                 */
                 class TaskSimpleInfo : public AbstractModel
                 {
@@ -120,9 +120,9 @@ namespace TencentCloud
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
                      * @return TaskType Task type. Value:
 <li>Procedure: video processing task;</li>
@@ -134,9 +134,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
                      * 
                      */
@@ -153,9 +153,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
                      * @param _taskType Task type. Value:
 <li>Procedure: video processing task;</li>
@@ -167,9 +167,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
                      * 
                      */
@@ -183,15 +183,15 @@ Task types compatible with the 2017 version:
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -246,15 +246,15 @@ Task types compatible with the 2017 version:
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
-                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+                     * 获取Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
+                     * @return SessionId Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
-                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+                     * 设置Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
+                     * @param _sessionId Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -318,16 +318,16 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -345,7 +345,7 @@ Task types compatible with the 2017 version:
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+                     * Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

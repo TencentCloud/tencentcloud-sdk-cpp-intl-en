@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -149,12 +149,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
                      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
                      * 
                      */
@@ -162,12 +162,12 @@ Default value: open.
 
                     /**
                      * 设置Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
                      * @param _resolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
                      * 
                      */
@@ -212,10 +212,10 @@ Default value: open.
                     /**
                      * 获取Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
                      * @return SampleInterval Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
                      * 
                      */
                     uint64_t GetSampleInterval() const;
@@ -223,10 +223,10 @@ Default value: open.
                     /**
                      * 设置Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
                      * @param _sampleInterval Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
                      * 
                      */
                     void SetSampleInterval(const uint64_t& _sampleInterval);
@@ -281,15 +281,15 @@ Default value: open.
                     bool ColumnCountHasBeenSet() const;
 
                     /**
-                     * 获取Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
-                     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+                     * 获取Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+                     * @return FillType Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
-                     * @param _fillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+                     * 设置Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+                     * @param _fillType Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -323,11 +323,11 @@ Default value: open.
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Image format. Valid values:
+                     * 获取Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
-                     * @return Format Image format. Valid values:
+                     * @return Format Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
@@ -336,11 +336,11 @@ Default value: open.
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Image format. Valid values:
+                     * 设置Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
-                     * @param _format Image format. Valid values:
+                     * @param _format Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
@@ -364,7 +364,7 @@ Default value: open.
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -389,8 +389,8 @@ Default value: open.
 
                     /**
                      * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
                      */
                     std::string m_resolutionAdaptive;
@@ -407,7 +407,7 @@ Default value: open.
                     /**
                      * Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
                      */
                     uint64_t m_sampleInterval;
                     bool m_sampleIntervalHasBeenSet;
@@ -425,7 +425,7 @@ Default value: open.
                     bool m_columnCountHasBeenSet;
 
                     /**
-                     * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+                     * Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
@@ -437,7 +437,7 @@ Default value: open.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Image format. Valid values:
+                     * Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>

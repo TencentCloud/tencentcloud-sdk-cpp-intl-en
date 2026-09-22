@@ -104,15 +104,15 @@ namespace TencentCloud
                     bool ScaleHasBeenSet() const;
 
                     /**
-                     * 获取Image cropping. Valid only when Type is CenterCut.
-                     * @return CenterCut Image cropping. Valid only when Type is CenterCut.
+                     * 获取Image crop processing. Valid only when Type is CenterCut.
+                     * @return CenterCut Image crop processing. Valid only when Type is CenterCut.
                      * 
                      */
                     ImageCenterCut GetCenterCut() const;
 
                     /**
-                     * 设置Image cropping. Valid only when Type is CenterCut.
-                     * @param _centerCut Image cropping. Valid only when Type is CenterCut.
+                     * 设置Image crop processing. Valid only when Type is CenterCut.
+                     * @param _centerCut Image crop processing. Valid only when Type is CenterCut.
                      * 
                      */
                     void SetCenterCut(const ImageCenterCut& _centerCut);
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_scaleHasBeenSet;
 
                     /**
-                     * Image cropping. Valid only when Type is CenterCut.
+                     * Image crop processing. Valid only when Type is CenterCut.
                      */
                     ImageCenterCut m_centerCut;
                     bool m_centerCutHasBeenSet;

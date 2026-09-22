@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output media file information of the video processing task
+                * Information of the output media file of a video processing task
                 */
                 class TaskOutputMediaInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Basic information of the generated media file after pull conversion is completed.
-                     * @return MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
+                     * 获取Basic information of the media file generated after pull conversion.
+                     * @return MediaBasicInfo Basic information of the media file generated after pull conversion.
                      * 
                      */
                     MediaBasicInfo GetMediaBasicInfo() const;
 
                     /**
-                     * 设置Basic information of the generated media file after pull conversion is completed.
-                     * @param _mediaBasicInfo Basic information of the generated media file after pull conversion is completed.
+                     * 设置Basic information of the media file generated after pull conversion.
+                     * @param _mediaBasicInfo Basic information of the media file generated after pull conversion.
                      * 
                      */
                     void SetMediaBasicInfo(const MediaBasicInfo& _mediaBasicInfo);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Basic information of the generated media file after pull conversion is completed.
+                     * Basic information of the media file generated after pull conversion.
                      */
                     MediaBasicInfo m_mediaBasicInfo;
                     bool m_mediaBasicInfoHasBeenSet;

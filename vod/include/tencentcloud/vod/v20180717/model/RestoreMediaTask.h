@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OriginalStorageClassHasBeenSet() const;
 
                     /**
-                     * 获取Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
-                     * @return TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+                     * 获取Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
+                     * @return TargetStorageClass Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
                      * 
                      */
                     std::string GetTargetStorageClass() const;
 
                     /**
-                     * 设置Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
-                     * @param _targetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+                     * 设置Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
+                     * @param _targetStorageClass Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
                      * 
                      */
                     void SetTargetStorageClass(const std::string& _targetStorageClass);
@@ -220,7 +220,7 @@ namespace TencentCloud
                     bool m_originalStorageClassHasBeenSet;
 
                     /**
-                     * Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+                     * Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
                      */
                     std::string m_targetStorageClass;
                     bool m_targetStorageClassHasBeenSet;

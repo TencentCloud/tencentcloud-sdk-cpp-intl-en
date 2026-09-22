@@ -49,11 +49,11 @@ namespace TencentCloud
                     /**
                      * 获取Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * @return Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * 
                      */
@@ -62,11 +62,11 @@ Default value: ON.
                     /**
                      * 设置Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * @param _switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * 
                      */
@@ -117,7 +117,7 @@ Default value: weak.
                     /**
                      * Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      */
                     std::string m_switch;

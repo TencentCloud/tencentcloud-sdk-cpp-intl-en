@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the review template.
-                     * @return Definition Unique identifier of the review template.
+                     * 获取Review template unique identifier.
+                     * @return Definition Review template unique identifier.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the review template.
-                     * @param _definition Unique identifier of the review template.
+                     * 设置Review template unique identifier.
+                     * @param _definition Review template unique identifier.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -127,22 +127,22 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * 获取List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
 Note: Leaving it blank means it does not update.
-                     * @return Labels List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * @return Labels List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
@@ -152,22 +152,22 @@ Note: Leaving it blank means it does not update.
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * 设置List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
 Note: Leaving it blank means it does not update.
-                     * @param _labels List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * @param _labels List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
@@ -186,13 +186,13 @@ Note: Leaving it blank means it does not update.
                 private:
 
                     /**
-                     * Unique identifier of the review template.
+                     * Review template unique identifier.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -210,12 +210,12 @@ Note: Leaving it blank means it does not update.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+                     * List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 

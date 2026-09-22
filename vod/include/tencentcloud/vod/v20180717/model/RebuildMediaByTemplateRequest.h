@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
-                     * @return StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * 获取Start offset time, in seconds. If not filled, the video is cut from the beginning.
+                     * @return StartTimeOffset Start offset time, in seconds. If not filled, the video is cut from the beginning.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
-                     * @param _startTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * 设置Start offset time, in seconds. If not filled, the video is cut from the beginning.
+                     * @param _startTimeOffset Start offset time, in seconds. If not filled, the video is cut from the beginning.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -268,13 +268,13 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+                     * Start offset time, in seconds. If not filled, the video is cut from the beginning.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;

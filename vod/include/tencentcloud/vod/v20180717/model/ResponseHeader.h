@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom response header configuration, disabled by default
+                * Custom response header configuration, disabled by default.
                 */
                 class ResponseHeader : public AbstractModel
                 {

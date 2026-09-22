@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent tag task control parameters
+                * Intelligent Tag Task Control Parameters
                 */
                 class TagConfigureInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task;</li>
-<li>OFF: Disable the intelligent tag task.</li>
-                     * @return Switch Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task;</li>
-<li>OFF: Disable the intelligent tag task.</li>
+                     * 获取Intelligent tag task switch. Available values:
+<li>ON: enable intelligent tag task</li>
+<li>OFF: disables the intelligent tag task.</li>
+                     * @return Switch Intelligent tag task switch. Available values:
+<li>ON: enable intelligent tag task</li>
+<li>OFF: disables the intelligent tag task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task;</li>
-<li>OFF: Disable the intelligent tag task.</li>
-                     * @param _switch Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task;</li>
-<li>OFF: Disable the intelligent tag task.</li>
+                     * 设置Intelligent tag task switch. Available values:
+<li>ON: enable intelligent tag task</li>
+<li>OFF: disables the intelligent tag task.</li>
+                     * @param _switch Intelligent tag task switch. Available values:
+<li>ON: enable intelligent tag task</li>
+<li>OFF: disables the intelligent tag task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Intelligent tag task switch. Valid values:
-<li>ON: enable intelligent tag task;</li>
-<li>OFF: Disable the intelligent tag task.</li>
+                     * Intelligent tag task switch. Available values:
+<li>ON: enable intelligent tag task</li>
+<li>OFF: disables the intelligent tag task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for text prohibition tasks.
+                * Text prohibition task control parameter
                 */
                 class ProhibitedOcrReviewTemplateInfo : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
                      * @return Switch Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
                      * @param _switch Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -121,8 +121,8 @@ namespace TencentCloud
 
                     /**
                      * Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -134,7 +134,7 @@ namespace TencentCloud
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

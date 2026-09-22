@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -223,15 +223,15 @@ namespace TencentCloud
                     bool JitterConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
-                     * @return BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+                     * 获取<p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+                     * @return BlurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
                      * 
                      */
                     BlurConfigureInfoForUpdate GetBlurConfigure() const;
 
                     /**
-                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
-                     * @param _blurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+                     * 设置<p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+                     * @param _blurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
                      * 
                      */
                     void SetBlurConfigure(const BlurConfigureInfoForUpdate& _blurConfigure);
@@ -286,15 +286,15 @@ namespace TencentCloud
                     bool CrashScreenConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
-                     * @return BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+                     * 获取<p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
+                     * @return BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
                      * 
                      */
                     BlackWhiteEdgeConfigureInfoForUpdate GetBlackWhiteEdgeConfigure() const;
 
                     /**
-                     * 设置<p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
-                     * @param _blackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+                     * 设置<p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
+                     * @param _blackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
                      * 
                      */
                     void SetBlackWhiteEdgeConfigure(const BlackWhiteEdgeConfigureInfoForUpdate& _blackWhiteEdgeConfigure);
@@ -328,15 +328,15 @@ namespace TencentCloud
                     bool NoiseConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
-                     * @return MosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
+                     * @return MosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
                      * 
                      */
                     MosaicConfigureInfoForUpdate GetMosaicConfigure() const;
 
                     /**
-                     * 设置<p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
-                     * @param _mosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
+                     * @param _mosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
                      * 
                      */
                     void SetMosaicConfigure(const MosaicConfigureInfoForUpdate& _mosaicConfigure);
@@ -370,15 +370,15 @@ namespace TencentCloud
                     bool QRCodeConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
-                     * @return VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * 获取<p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * @return VoiceConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
                      * 
                      */
                     VoiceConfigureInfoForUpdate GetVoiceConfigure() const;
 
                     /**
-                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
-                     * @param _voiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * 设置<p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * @param _voiceConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
                      * 
                      */
                     void SetVoiceConfigure(const VoiceConfigureInfoForUpdate& _voiceConfigure);
@@ -420,7 +420,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -462,7 +462,7 @@ namespace TencentCloud
                     bool m_jitterConfigureHasBeenSet;
 
                     /**
-                     * <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+                     * <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
                      */
                     BlurConfigureInfoForUpdate m_blurConfigure;
                     bool m_blurConfigureHasBeenSet;
@@ -480,7 +480,7 @@ namespace TencentCloud
                     bool m_crashScreenConfigureHasBeenSet;
 
                     /**
-                     * <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+                     * <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
                      */
                     BlackWhiteEdgeConfigureInfoForUpdate m_blackWhiteEdgeConfigure;
                     bool m_blackWhiteEdgeConfigureHasBeenSet;
@@ -492,7 +492,7 @@ namespace TencentCloud
                     bool m_noiseConfigureHasBeenSet;
 
                     /**
-                     * <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+                     * <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
                      */
                     MosaicConfigureInfoForUpdate m_mosaicConfigure;
                     bool m_mosaicConfigureHasBeenSet;
@@ -504,7 +504,7 @@ namespace TencentCloud
                     bool m_qRCodeConfigureHasBeenSet;
 
                     /**
-                     * <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
                      */
                     VoiceConfigureInfoForUpdate m_voiceConfigure;
                     bool m_voiceConfigureHasBeenSet;

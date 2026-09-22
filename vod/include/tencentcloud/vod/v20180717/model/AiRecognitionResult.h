@@ -109,19 +109,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
-                     * @return HeadTailTask Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
+                     * 获取Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
+                     * @return HeadTailTask Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
                      * 
                      */
                     AiRecognitionTaskHeadTailResult GetHeadTailTask() const;
 
                     /**
-                     * 设置Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
-                     * @param _headTailTask Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
+                     * 设置Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
+                     * @param _headTailTask Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
                      * 
                      */
                     void SetHeadTailTask(const AiRecognitionTaskHeadTailResult& _headTailTask);
@@ -135,18 +135,18 @@ Valid for HeadTailRecognition.
 
                     /**
                      * 获取Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
                      * @return SegmentTask Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
                      * 
                      */
                     AiRecognitionTaskSegmentResult GetSegmentTask() const;
 
                     /**
                      * 设置Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
                      * @param _segmentTask Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
                      * 
                      */
                     void SetSegmentTask(const AiRecognitionTaskSegmentResult& _segmentTask);
@@ -185,18 +185,18 @@ Valid for FaceRecognition.
 
                     /**
                      * 获取Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
                      * @return AsrWordsTask Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
                      * 
                      */
                     AiRecognitionTaskAsrWordsResult GetAsrWordsTask() const;
 
                     /**
                      * 设置Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
                      * @param _asrWordsTask Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
                      * 
                      */
                     void SetAsrWordsTask(const AiRecognitionTaskAsrWordsResult& _asrWordsTask);
@@ -210,18 +210,18 @@ Valid for AsrWordsRecognition.
 
                     /**
                      * 获取Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
                      * @return AsrFullTextTask Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
                      * 
                      */
                     AiRecognitionTaskAsrFullTextResult GetAsrFullTextTask() const;
 
                     /**
                      * 设置Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
                      * @param _asrFullTextTask Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
                      * 
                      */
                     void SetAsrFullTextTask(const AiRecognitionTaskAsrFullTextResult& _asrFullTextTask);
@@ -256,18 +256,18 @@ Valid when AsrFullTextRecognition is used.
 
                     /**
                      * 获取Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
                      * @return OcrWordsTask Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
                      * 
                      */
                     AiRecognitionTaskOcrWordsResult GetOcrWordsTask() const;
 
                     /**
                      * 设置Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
                      * @param _ocrWordsTask Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
                      * 
                      */
                     void SetOcrWordsTask(const AiRecognitionTaskOcrWordsResult& _ocrWordsTask);
@@ -281,18 +281,18 @@ Valid for OcrWordsRecognition.
 
                     /**
                      * 获取Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
                      * @return OcrFullTextTask Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
                      * 
                      */
                     AiRecognitionTaskOcrFullTextResult GetOcrFullTextTask() const;
 
                     /**
                      * 设置Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
                      * @param _ocrFullTextTask Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
                      * 
                      */
                     void SetOcrFullTextTask(const AiRecognitionTaskOcrFullTextResult& _ocrFullTextTask);
@@ -306,18 +306,18 @@ Valid when OcrFullTextRecognition is used.
 
                     /**
                      * 获取Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
                      * @return ObjectTask Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
                      * 
                      */
                     AiRecognitionTaskObjectResult GetObjectTask() const;
 
                     /**
                      * 设置Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
                      * @param _objectTask Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
                      * 
                      */
                     void SetObjectTask(const AiRecognitionTaskObjectResult& _objectTask);
@@ -346,15 +346,15 @@ Valid for ObjectRecognition.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
+                     * Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
                      */
                     AiRecognitionTaskHeadTailResult m_headTailTask;
                     bool m_headTailTaskHasBeenSet;
 
                     /**
                      * Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
                      */
                     AiRecognitionTaskSegmentResult m_segmentTask;
                     bool m_segmentTaskHasBeenSet;
@@ -368,14 +368,14 @@ Valid for FaceRecognition.
 
                     /**
                      * Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
                      */
                     AiRecognitionTaskAsrWordsResult m_asrWordsTask;
                     bool m_asrWordsTaskHasBeenSet;
 
                     /**
                      * Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
                      */
                     AiRecognitionTaskAsrFullTextResult m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;
@@ -388,21 +388,21 @@ Valid when AsrFullTextRecognition is used.
 
                     /**
                      * Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
                      */
                     AiRecognitionTaskOcrWordsResult m_ocrWordsTask;
                     bool m_ocrWordsTaskHasBeenSet;
 
                     /**
                      * Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
                      */
                     AiRecognitionTaskOcrFullTextResult m_ocrFullTextTask;
                     bool m_ocrFullTextTaskHasBeenSet;
 
                     /**
                      * Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
                      */
                     AiRecognitionTaskObjectResult m_objectTask;
                     bool m_objectTaskHasBeenSet;

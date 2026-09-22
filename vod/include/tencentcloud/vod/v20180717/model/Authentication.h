@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of timestamp hotlink protection mode A.
-                     * @return TypeA Configuration of timestamp hotlink protection mode A.
+                     * 获取Timestamp hotlink protection mode A configuration.
+                     * @return TypeA Timestamp hotlink protection mode A configuration.
                      * 
                      */
                     AuthenticationTypeA GetTypeA() const;
 
                     /**
-                     * 设置Configuration of timestamp hotlink protection mode A.
-                     * @param _typeA Configuration of timestamp hotlink protection mode A.
+                     * 设置Timestamp hotlink protection mode A configuration.
+                     * @param _typeA Timestamp hotlink protection mode A configuration.
                      * 
                      */
                     void SetTypeA(const AuthenticationTypeA& _typeA);
@@ -179,7 +179,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Configuration of timestamp hotlink protection mode A.
+                     * Timestamp hotlink protection mode A configuration.
                      */
                     AuthenticationTypeA m_typeA;
                     bool m_typeAHasBeenSet;

@@ -48,10 +48,10 @@ namespace TencentCloud
 
                     /**
                      * 获取[Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
                      * @return Status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
                      * 
                      */
@@ -59,10 +59,10 @@ namespace TencentCloud
 
                     /**
                      * 设置[Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
                      * @param _status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
                      * 
                      */
@@ -104,7 +104,7 @@ The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisib
 
                     /**
                      * [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
                      */
                     std::string m_status;

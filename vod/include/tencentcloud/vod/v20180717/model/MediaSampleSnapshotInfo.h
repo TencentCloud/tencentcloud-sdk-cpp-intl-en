@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
-                     * @return SampleSnapshotSet A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+                     * 获取A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
+                     * @return SampleSnapshotSet A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
                      * 
                      */
                     std::vector<MediaSampleSnapshotItem> GetSampleSnapshotSet() const;
 
                     /**
-                     * 设置A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
-                     * @param _sampleSnapshotSet A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+                     * 设置A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
+                     * @param _sampleSnapshotSet A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
                      * 
                      */
                     void SetSampleSnapshotSet(const std::vector<MediaSampleSnapshotItem>& _sampleSnapshotSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+                     * A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
                      */
                     std::vector<MediaSampleSnapshotItem> m_sampleSnapshotSet;
                     bool m_sampleSnapshotSetHasBeenSet;

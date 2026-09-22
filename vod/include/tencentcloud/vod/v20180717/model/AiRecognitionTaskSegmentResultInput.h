@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video splitting input.
+                * Input of video splitting.
                 */
                 class AiRecognitionTaskSegmentResultInput : public AbstractModel
                 {

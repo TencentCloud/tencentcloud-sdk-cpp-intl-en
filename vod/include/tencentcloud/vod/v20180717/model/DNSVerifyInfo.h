@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DNS resolution verification information
+                * DNS resolution verification info
                 */
                 class DNSVerifyInfo : public AbstractModel
                 {

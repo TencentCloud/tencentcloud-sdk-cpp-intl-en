@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
-                     * @return TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * 获取<p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * @return TimeSpotCheck <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
                      * 
                      */
                     QualityInspectTimeSpotCheck GetTimeSpotCheck() const;
 
                     /**
-                     * 设置<p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
-                     * @param _timeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * 设置<p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * @param _timeSpotCheck <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
                      * 
                      */
                     void SetTimeSpotCheck(const QualityInspectTimeSpotCheck& _timeSpotCheck);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_strategyTypeHasBeenSet;
 
                     /**
-                     * <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
                      */
                     QualityInspectTimeSpotCheck m_timeSpotCheck;
                     bool m_timeSpotCheckHasBeenSet;

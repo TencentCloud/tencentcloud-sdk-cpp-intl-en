@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle suppression module background settings for MPS
+                * MPS subtitle suppression module background settings
                 */
                 class MPSSubtitleBoardConfig : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubtitleBoardConfigSwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
-                     * @return BoardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+                     * 获取<p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+                     * @return BoardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
                      * 
                      */
                     int64_t GetBoardX() const;
 
                     /**
-                     * 设置<p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
-                     * @param _boardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+                     * 设置<p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+                     * @param _boardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
                      * 
                      */
                     void SetBoardX(const int64_t& _boardX);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool BoardYHasBeenSet() const;
 
                     /**
-                     * 获取<p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
-                     * @return BoardYUnit <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * 获取<p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
+                     * @return BoardYUnit <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
                      * 
                      */
                     int64_t GetBoardYUnit() const;
 
                     /**
-                     * 设置<p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
-                     * @param _boardYUnit <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * 设置<p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
+                     * @param _boardYUnit <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
                      * 
                      */
                     void SetBoardYUnit(const int64_t& _boardYUnit);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool BoardYUnitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
-                     * @return BoardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+                     * 获取<p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+                     * @return BoardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
                      * 
                      */
                     int64_t GetBoardWidth() const;
 
                     /**
-                     * 设置<p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
-                     * @param _boardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+                     * 设置<p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+                     * @param _boardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
                      * 
                      */
                     void SetBoardWidth(const int64_t& _boardWidth);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool BoardWidthUnitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
-                     * @return BoardHeight <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+                     * 获取<p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+                     * @return BoardHeight <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
                      * 
                      */
                     int64_t GetBoardHeight() const;
 
                     /**
-                     * 设置<p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
-                     * @param _boardHeight <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+                     * 设置<p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+                     * @param _boardHeight <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
                      * 
                      */
                     void SetBoardHeight(const int64_t& _boardHeight);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool BoardColorHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
-                     * @return BoardAlpha <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+                     * 获取<p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+                     * @return BoardAlpha <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
                      * 
                      */
                     double GetBoardAlpha() const;
 
                     /**
-                     * 设置<p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
-                     * @param _boardAlpha <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+                     * 设置<p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+                     * @param _boardAlpha <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
                      * 
                      */
                     void SetBoardAlpha(const double& _boardAlpha);
@@ -286,7 +286,7 @@ namespace TencentCloud
                     bool m_subtitleBoardConfigSwitchHasBeenSet;
 
                     /**
-                     * <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+                     * <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
                      */
                     int64_t m_boardX;
                     bool m_boardXHasBeenSet;
@@ -304,13 +304,13 @@ namespace TencentCloud
                     bool m_boardYHasBeenSet;
 
                     /**
-                     * <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
                      */
                     int64_t m_boardYUnit;
                     bool m_boardYUnitHasBeenSet;
 
                     /**
-                     * <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+                     * <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
                      */
                     int64_t m_boardWidth;
                     bool m_boardWidthHasBeenSet;
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_boardWidthUnitHasBeenSet;
 
                     /**
-                     * <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+                     * <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
                      */
                     int64_t m_boardHeight;
                     bool m_boardHeightHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_boardColorHasBeenSet;
 
                     /**
-                     * <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+                     * <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
                      */
                     double m_boardAlpha;
                     bool m_boardAlphaHasBeenSet;

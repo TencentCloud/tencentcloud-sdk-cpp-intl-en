@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
-                     * @return Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+                     * 获取Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
+                     * @return Id Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
-                     * @param _id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+                     * 设置Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
+                     * @param _id Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,10 +68,10 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+                     * 获取Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
-                     * @return Default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+                     * @return Default Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
                      * 
@@ -79,10 +79,10 @@ namespace TencentCloud
                     std::string GetDefault() const;
 
                     /**
-                     * 设置Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+                     * 设置Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
-                     * @param _default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+                     * @param _default Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
                      * 
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+                     * Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+                     * Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
                      */

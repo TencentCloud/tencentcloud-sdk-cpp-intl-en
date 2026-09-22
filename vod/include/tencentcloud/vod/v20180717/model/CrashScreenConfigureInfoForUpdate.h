@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for screen glitch detection in video footage.
+                * Control parameters for distortion detection in video footage.
                 */
                 class CrashScreenConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detection switch for video footage screen glitch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
-                     * @return Switch Detection switch for video footage screen glitch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+                     * 获取Screen glitch detection switch for video footage. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+                     * @return Switch Screen glitch detection switch for video footage. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Detection switch for video footage screen glitch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
-                     * @param _switch Detection switch for video footage screen glitch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+                     * 设置Screen glitch detection switch for video footage. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+                     * @param _switch Screen glitch detection switch for video footage. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Detection switch for video footage screen glitch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+                     * Screen glitch detection switch for video footage. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

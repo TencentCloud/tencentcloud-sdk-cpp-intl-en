@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HeadTailSetHasBeenSet() const;
 
                     /**
-                     * 获取Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
-                     * @return AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * 获取Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * @return AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
                      * 
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskAudioInput> GetAudioSet() const;
 
                     /**
-                     * 设置Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
-                     * @param _audioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * 设置Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * @param _audioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
                      * 
                      */
                     void SetAudioSet(const std::vector<ComplexAdaptiveDynamicStreamingTaskAudioInput>& _audioSet);
@@ -175,7 +175,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -199,7 +199,7 @@ namespace TencentCloud
                     bool m_headTailSetHasBeenSet;
 
                     /**
-                     * Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskAudioInput> m_audioSet;
                     bool m_audioSetHasBeenSet;

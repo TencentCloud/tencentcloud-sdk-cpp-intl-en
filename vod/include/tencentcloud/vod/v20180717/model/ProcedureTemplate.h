@@ -138,15 +138,15 @@ namespace TencentCloud
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
-                     * @return AiContentReviewTask <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * 获取<p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * @return AiContentReviewTask <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置<p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
-                     * @param _aiContentReviewTask <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * 设置<p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * @param _aiContentReviewTask <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameters for the AI content detect-type task.</p>
-                     * @return AiRecognitionTaskSet <p>Parameters for the AI content detect-type task.</p>
+                     * 获取<p>Parameters for the AI content recognition task.</p>
+                     * @return AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
                      * 
                      */
                     std::vector<AiRecognitionTaskInput> GetAiRecognitionTaskSet() const;
 
                     /**
-                     * 设置<p>Parameters for the AI content detect-type task.</p>
-                     * @param _aiRecognitionTaskSet <p>Parameters for the AI content detect-type task.</p>
+                     * 设置<p>Parameters for the AI content recognition task.</p>
+                     * @param _aiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
                      * 
                      */
                     void SetAiRecognitionTaskSet(const std::vector<AiRecognitionTaskInput>& _aiRecognitionTaskSet);
@@ -264,15 +264,15 @@ namespace TencentCloud
                     bool ReviewAudioVideoTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
-                     * @return ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+                     * 获取<p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+                     * @return ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
                      * 
                      */
                     std::vector<ImportMediaKnowledgeTaskInput> GetImportMediaKnowledgeTaskSet() const;
 
                     /**
-                     * 设置<p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
-                     * @param _importMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+                     * 设置<p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+                     * @param _importMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
                      * 
                      */
                     void SetImportMediaKnowledgeTaskSet(const std::vector<ImportMediaKnowledgeTaskInput>& _importMediaKnowledgeTaskSet);
@@ -285,15 +285,15 @@ namespace TencentCloud
                     bool ImportMediaKnowledgeTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return CreateTime <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _createTime <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _createTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -306,15 +306,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取<p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return UpdateTime <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _updateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置<p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _updateTime <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -353,7 +353,7 @@ namespace TencentCloud
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
@@ -365,7 +365,7 @@ namespace TencentCloud
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * <p>Parameters for the AI content detect-type task.</p>
+                     * <p>Parameters for the AI content recognition task.</p>
                      */
                     std::vector<AiRecognitionTaskInput> m_aiRecognitionTaskSet;
                     bool m_aiRecognitionTaskSetHasBeenSet;
@@ -389,19 +389,19 @@ namespace TencentCloud
                     bool m_reviewAudioVideoTaskHasBeenSet;
 
                     /**
-                     * <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+                     * <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
                      */
                     std::vector<ImportMediaKnowledgeTaskInput> m_importMediaKnowledgeTaskSet;
                     bool m_importMediaKnowledgeTaskSetHasBeenSet;
 
                     /**
-                     * <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

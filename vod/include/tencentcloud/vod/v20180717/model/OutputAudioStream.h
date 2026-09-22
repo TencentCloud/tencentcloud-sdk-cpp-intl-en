@@ -123,11 +123,11 @@ Default value: 16000.
                     /**
                      * 获取Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
                      * @return AudioChannel Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
                      * 
                      */
@@ -136,11 +136,11 @@ Default value: 2.
                     /**
                      * 设置Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
                      * @param _audioChannel Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
                      * 
                      */
@@ -154,18 +154,18 @@ Default value: 2.
                     bool AudioChannelHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+                     * 获取Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
-                     * @return Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+                     * @return Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+                     * 设置Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
-                     * @param _bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+                     * @param _bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
                      * 
                      */
@@ -203,14 +203,14 @@ Default value: 16000.
                     /**
                      * Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
 
                     /**
-                     * Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+                     * Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
                      */
                     int64_t m_bitrate;

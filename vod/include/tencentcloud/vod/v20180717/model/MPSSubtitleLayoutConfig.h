@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle suppression module column configuration in MPS
+                * Subtitle arrangement configuration for the MPS subtitle suppression module
                 */
                 class MPSSubtitleLayoutConfig : public AbstractModel
                 {

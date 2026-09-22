@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Ocr text prohibited task result type for audio/video moderation.
+                * Result type of prohibited task for Ocr text in audio/video moderation
                 */
                 class AiReviewTaskProhibitedOcrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for Ocr text moderation tasks in audio/video moderation.
-                     * @return Input Input for Ocr text moderation tasks in audio/video moderation.
+                     * 获取Input for prohibited task of Ocr text in audio/video moderation.
+                     * @return Input Input for prohibited task of Ocr text in audio/video moderation.
                      * 
                      */
                     AiReviewProhibitedOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for Ocr text moderation tasks in audio/video moderation.
-                     * @param _input Input for Ocr text moderation tasks in audio/video moderation.
+                     * 设置Input for prohibited task of Ocr text in audio/video moderation.
+                     * @param _input Input for prohibited task of Ocr text in audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewProhibitedOcrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of Ocr text moderation for prohibited tasks in audio/video moderation.
-                     * @return Output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+                     * 获取Output of the Ocr text moderation prohibited task in audio/video moderation.
+                     * @return Output Output of the Ocr text moderation prohibited task in audio/video moderation.
                      * 
                      */
                     AiReviewProhibitedOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of Ocr text moderation for prohibited tasks in audio/video moderation.
-                     * @param _output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+                     * 设置Output of the Ocr text moderation prohibited task in audio/video moderation.
+                     * @param _output Output of the Ocr text moderation prohibited task in audio/video moderation.
                      * 
                      */
                     void SetOutput(const AiReviewProhibitedOcrTaskOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
-                     * @return Progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+                     * 获取Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
+                     * @return Progress Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
-                     * @param _progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+                     * 设置Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
+                     * @param _progress Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -222,19 +222,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for Ocr text moderation tasks in audio/video moderation.
+                     * Input for prohibited task of Ocr text in audio/video moderation.
                      */
                     AiReviewProhibitedOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+                     * Output of the Ocr text moderation prohibited task in audio/video moderation.
                      */
                     AiReviewProhibitedOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+                     * Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

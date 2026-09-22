@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
-                     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * 获取<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+                     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
                      * 
                      */
                     std::string GetQuotaType() const;
 
                     /**
-                     * 设置<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
-                     * @param _quotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * 设置<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+                     * @param _quotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
                      * 
                      */
                     void SetQuotaType(const std::string& _quotaType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool QuotaTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
-                     * @return ApiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+                     * 获取<p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
+                     * @return ApiToken <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
                      * 
                      */
                     std::string GetApiToken() const;
 
                     /**
-                     * 设置<p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
-                     * @param _apiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+                     * 设置<p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
+                     * @param _apiToken <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
                      * 
                      */
                     void SetApiToken(const std::string& _apiToken);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
                      */
                     std::string m_quotaType;
                     bool m_quotaTypeHasBeenSet;
 
                     /**
-                     * <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+                     * <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;

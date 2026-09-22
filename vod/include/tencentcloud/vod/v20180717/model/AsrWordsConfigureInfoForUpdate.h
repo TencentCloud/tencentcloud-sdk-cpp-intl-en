@@ -48,10 +48,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
                      * @return Switch Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
                      * 
                      */
@@ -59,10 +59,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
                      * @param _switch Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
                      * 
                      */
@@ -76,18 +76,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+                     * 获取Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-                     * @return LabelSet Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+                     * @return LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+                     * 设置Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-                     * @param _labelSet Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+                     * @param _labelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
@@ -104,14 +104,14 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
 
                     /**
                      * Speech keyword recognition task switch. Available values:
-<li>ON: enable the speech keyword recognition task;</li>
+<li>ON: turn on the speech keyword recognition task;</li>
 <li>OFF: disables the speech keyword recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+                     * Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      */
                     std::vector<std::string> m_labelSet;

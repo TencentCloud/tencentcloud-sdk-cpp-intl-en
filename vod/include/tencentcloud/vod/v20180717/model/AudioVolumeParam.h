@@ -50,11 +50,11 @@ namespace TencentCloud
                      * 获取Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
                      * @return Mute Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
                      * 
                      */
                     int64_t GetMute() const;
@@ -63,11 +63,11 @@ The default value is 0.
                      * 设置Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
                      * @param _mute Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
                      * 
                      */
                     void SetMute(const int64_t& _mute);
@@ -81,30 +81,30 @@ The default value is 0.
 
                     /**
                      * 获取Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
                      * @return Gain Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
                      * 
                      */
                     double GetGain() const;
 
                     /**
                      * 设置Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
                      * @param _gain Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
                      * 
                      */
                     void SetGain(const double& _gain);
@@ -122,17 +122,17 @@ The default value is 0.
                      * Whether to mute. Value range: 0 or 1.
 <li>0 means unmuted.</li>
 <li>1 means mute.</li>
-The default value is 0.
+Default value: 0.
                      */
                     int64_t m_mute;
                     bool m_muteHasBeenSet;
 
                     /**
                      * Audio gain. Value range: 0-10.
-<li>A value greater than 1 means increasing the volume.</li>
+<li>A value greater than 1 means volume increase.</li>
 <li>Less than 1 means low volume.</li>
 <li>0 and 1: means do not change.</li>
-The default value is 0.
+Default value: 0.
                      */
                     double m_gain;
                     bool m_gainHasBeenSet;

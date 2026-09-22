@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
-                     * @return Type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+                     * 获取Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+                     * @return Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
-                     * @param _type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+                     * 设置Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+                     * @param _type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+                     * Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

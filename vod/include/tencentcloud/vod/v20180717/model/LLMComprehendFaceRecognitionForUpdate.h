@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
-                     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+                     * 获取<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
+                     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
-                     * @param _score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+                     * 设置<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
+                     * @param _score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
                      * 
                      */
                     void SetScore(const double& _score);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取<p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
-                     * @return DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+                     * 获取<p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+                     * @return DefaultLibraryLabelSet <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
                      * 
                      */
                     std::vector<std::string> GetDefaultLibraryLabelSet() const;
 
                     /**
-                     * 设置<p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
-                     * @param _defaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+                     * 设置<p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+                     * @param _defaultLibraryLabelSet <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
                      * 
                      */
                     void SetDefaultLibraryLabelSet(const std::vector<std::string>& _defaultLibraryLabelSet);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
-                     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+                     * 获取<p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
                      * 
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
-                     * 设置<p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
-                     * @param _userDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+                     * 设置<p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * @param _userDefineLibraryLabelSet <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
                      * 
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
@@ -160,19 +160,19 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+                     * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+                     * <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
                      */
                     std::vector<std::string> m_defaultLibraryLabelSet;
                     bool m_defaultLibraryLabelSetHasBeenSet;
 
                     /**
-                     * <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+                     * <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
                      */
                     std::vector<std::string> m_userDefineLibraryLabelSet;
                     bool m_userDefineLibraryLabelSetHasBeenSet;

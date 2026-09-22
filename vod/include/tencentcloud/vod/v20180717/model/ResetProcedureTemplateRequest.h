@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
-                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
-                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>AI intelligent content moderation event type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
-                     * @return AiContentReviewTask <p>AI intelligent content moderation event type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * 获取<p>Task parameter for AI intelligent content moderation type *. <br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * @return AiContentReviewTask <p>Task parameter for AI intelligent content moderation type *. <br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置<p>AI intelligent content moderation event type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
-                     * @param _aiContentReviewTask <p>AI intelligent content moderation event type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * 设置<p>Task parameter for AI intelligent content moderation type *. <br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * @param _aiContentReviewTask <p>Task parameter for AI intelligent content moderation type *. <br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameters for the AI content recognition task.</p>
-                     * @return AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
+                     * 获取<p>Parameters for the AI content recognition type task.</p>
+                     * @return AiRecognitionTaskSet <p>Parameters for the AI content recognition type task.</p>
                      * 
                      */
                     std::vector<AiRecognitionTaskInput> GetAiRecognitionTaskSet() const;
 
                     /**
-                     * 设置<p>Parameters for the AI content recognition task.</p>
-                     * @param _aiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
+                     * 设置<p>Parameters for the AI content recognition type task.</p>
+                     * @param _aiRecognitionTaskSet <p>Parameters for the AI content recognition type task.</p>
                      * 
                      */
                     void SetAiRecognitionTaskSet(const std::vector<AiRecognitionTaskInput>& _aiRecognitionTaskSet);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool AiRecognitionTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
-                     * @return AiRecognitionTask <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+                     * 获取<p>This parameter is not recommended. We recommend using AiRecognitionTaskSet.</p>
+                     * @return AiRecognitionTask <p>This parameter is not recommended. We recommend using AiRecognitionTaskSet.</p>
                      * @deprecated
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置<p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
-                     * @param _aiRecognitionTask <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+                     * 设置<p>This parameter is not recommended. We recommend using AiRecognitionTaskSet.</p>
+                     * @param _aiRecognitionTask <p>This parameter is not recommended. We recommend using AiRecognitionTaskSet.</p>
                      * @deprecated
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -267,7 +267,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -285,7 +285,7 @@ namespace TencentCloud
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * <p>AI intelligent content moderation event type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+                     * <p>Task parameter for AI intelligent content moderation type *. <br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
@@ -297,13 +297,13 @@ namespace TencentCloud
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * <p>Parameters for the AI content recognition task.</p>
+                     * <p>Parameters for the AI content recognition type task.</p>
                      */
                     std::vector<AiRecognitionTaskInput> m_aiRecognitionTaskSet;
                     bool m_aiRecognitionTaskSetHasBeenSet;
 
                     /**
-                     * <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+                     * <p>This parameter is not recommended. We recommend using AiRecognitionTaskSet.</p>
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;

@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
                      * @return Switch Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
                      * @param _switch Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,7 +80,7 @@ namespace TencentCloud
                     /**
                      * Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

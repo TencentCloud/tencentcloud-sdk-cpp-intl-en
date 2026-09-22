@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asynchronously fetch AIGC face information input.
+                * Asynchronously fetch AIGC human face information input.
                 */
                 class DescribeAigcFaceInfoAsyncInput : public AbstractModel
                 {

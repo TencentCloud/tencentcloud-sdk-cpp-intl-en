@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
-                     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+                     * 获取Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
+                     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
-                     * @param _type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+                     * 设置Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
+                     * @param _type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
-                     * @return SubAppId VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+                     * 获取VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
+                     * @return SubAppId VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
-                     * @param _subAppId VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+                     * 设置VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
+                     * @param _subAppId VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool ExtractBlindWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
-                     * @return SessionContext Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+                     * 获取Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * @return SessionContext Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
-                     * @param _sessionContext Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+                     * 设置Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * @param _sessionContext Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
-                     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+                     * 获取Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
-                     * @param _sessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+                     * 设置Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @param _sessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -194,7 +194,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+                     * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -206,7 +206,7 @@ namespace TencentCloud
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+                     * VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -218,13 +218,13 @@ namespace TencentCloud
                     bool m_extractBlindWatermarkConfigHasBeenSet;
 
                     /**
-                     * Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+                     * Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+                     * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

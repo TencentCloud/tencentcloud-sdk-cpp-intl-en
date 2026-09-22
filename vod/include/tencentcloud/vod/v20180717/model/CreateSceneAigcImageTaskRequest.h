@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取**VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
-                     * @return SubAppId **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+                     * 获取**VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
+                     * @return SubAppId **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置**VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
-                     * @param _subAppId **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+                     * 设置**VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
+                     * @param _subAppId **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -88,26 +88,26 @@ namespace TencentCloud
                     bool SceneInfoHasBeenSet() const;
 
                     /**
-                     * 获取Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+                     * 获取Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
-                     * @return FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+                     * @return FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
                      * 
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+                     * 设置Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
-                     * @param _fileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+                     * @param _fileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
                      * 
                      */
@@ -121,15 +121,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取Output media file configuration for scenario-based image generation tasks.
-                     * @return OutputConfig Output media file configuration for scenario-based image generation tasks.
+                     * 获取Configuration of the output media file for a scenario-based image generation task.
+                     * @return OutputConfig Configuration of the output media file for a scenario-based image generation task.
                      * 
                      */
                     SceneAigcImageOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Output media file configuration for scenario-based image generation tasks.
-                     * @param _outputConfig Output media file configuration for scenario-based image generation tasks.
+                     * 设置Configuration of the output media file for a scenario-based image generation task.
+                     * @param _outputConfig Configuration of the output media file for a scenario-based image generation task.
                      * 
                      */
                     void SetOutputConfig(const SceneAigcImageOutputConfig& _outputConfig);
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-                     * @return SessionId An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-                     * @param _sessionId An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
-                     * @return SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+                     * 获取Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
+                     * @return SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
-                     * @param _sessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+                     * 设置Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
+                     * @param _sessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -228,7 +228,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+                     * **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -240,28 +240,28 @@ namespace TencentCloud
                     bool m_sceneInfoHasBeenSet;
 
                     /**
-                     * Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+                     * Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * Output media file configuration for scenario-based image generation tasks.
+                     * Configuration of the output media file for a scenario-based image generation task.
                      */
                     SceneAigcImageOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+                     * Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

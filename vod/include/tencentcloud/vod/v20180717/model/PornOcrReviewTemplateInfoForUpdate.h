@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
                      * @return Switch Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
                      * @param _switch Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
-                     * @return BlockConfidence Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+                     * 获取Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+                     * @return BlockConfidence Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
-                     * @param _blockConfidence Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+                     * 设置Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+                     * @param _blockConfidence Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -122,13 +122,13 @@ namespace TencentCloud
                     /**
                      * Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+                     * Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;

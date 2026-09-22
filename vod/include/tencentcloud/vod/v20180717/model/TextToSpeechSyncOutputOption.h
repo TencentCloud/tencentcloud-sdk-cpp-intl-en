@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output parameter setting for synchronous text to speech
+                * Synchronous text to speech output parameter settings
                 */
                 class TextToSpeechSyncOutputOption : public AbstractModel
                 {

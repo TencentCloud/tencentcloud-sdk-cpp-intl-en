@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source type of the input video. Valid values: File and Stream.
-                     * @return InputType Source type of the input video. Valid values: File and Stream.
+                     * 获取Source type of the input video. Valid values: `File` and `Stream`.
+                     * @return InputType Source type of the input video. Valid values: `File` and `Stream`.
                      * 
                      */
                     std::string GetInputType() const;
 
                     /**
-                     * 设置Source type of the input video. Valid values: File and Stream.
-                     * @param _inputType Source type of the input video. Valid values: File and Stream.
+                     * 设置Source type of the input video. Valid values: `File` and `Stream`.
+                     * @param _inputType Source type of the input video. Valid values: `File` and `Stream`.
                      * 
                      */
                     void SetInputType(const std::string& _inputType);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool FileInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取Input stream information. This field has a value when InputType is Stream.
-                     * @return StreamInfoSet Input stream information. This field has a value when InputType is Stream.
+                     * 获取Input stream information. This field has a value when `InputType` is `Stream`.
+                     * @return StreamInfoSet Input stream information. This field has a value when `InputType` is `Stream`.
                      * 
                      */
                     std::vector<EditMediaStreamInfo> GetStreamInfoSet() const;
 
                     /**
-                     * 设置Input stream information. This field has a value when InputType is Stream.
-                     * @param _streamInfoSet Input stream information. This field has a value when InputType is Stream.
+                     * 设置Input stream information. This field has a value when `InputType` is `Stream`.
+                     * @param _streamInfoSet Input stream information. This field has a value when `InputType` is `Stream`.
                      * 
                      */
                     void SetStreamInfoSet(const std::vector<EditMediaStreamInfo>& _streamInfoSet);
@@ -114,7 +114,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source type of the input video. Valid values: File and Stream.
+                     * Source type of the input video. Valid values: `File` and `Stream`.
                      */
                     std::string m_inputType;
                     bool m_inputTypeHasBeenSet;
@@ -126,7 +126,7 @@ namespace TencentCloud
                     bool m_fileInfoSetHasBeenSet;
 
                     /**
-                     * Input stream information. This field has a value when InputType is Stream.
+                     * Input stream information. This field has a value when `InputType` is `Stream`.
                      */
                     std::vector<EditMediaStreamInfo> m_streamInfoSet;
                     bool m_streamInfoSetHasBeenSet;

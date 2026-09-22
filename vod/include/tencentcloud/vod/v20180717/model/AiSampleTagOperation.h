@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI sample management, tag operations.
+                * AI sample management, tag manipulation.
                 */
                 class AiSampleTagOperation : public AbstractModel
                 {

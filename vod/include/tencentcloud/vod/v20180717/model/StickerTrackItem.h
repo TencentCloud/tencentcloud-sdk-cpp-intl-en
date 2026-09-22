@@ -51,11 +51,11 @@ namespace TencentCloud
                      * 获取Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * @return SourceMedia Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     std::string GetSourceMedia() const;
@@ -64,11 +64,11 @@ Note: When using the download URL of another media file as the material source a
                      * 设置Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * @param _sourceMedia Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
@@ -81,15 +81,15 @@ Note: When using the download URL of another media file as the material source a
                     bool SourceMediaHasBeenSet() const;
 
                     /**
-                     * 获取Duration of the sticker in seconds.
-                     * @return Duration Duration of the sticker in seconds.
+                     * 获取Duration of the sticker, in seconds.
+                     * @return Duration Duration of the sticker, in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Duration of the sticker in seconds.
-                     * @param _duration Duration of the sticker in seconds.
+                     * 设置Duration of the sticker, in seconds.
+                     * @param _duration Duration of the sticker, in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -124,10 +124,10 @@ Note: When using the download URL of another media file as the material source a
 
                     /**
                      * 获取Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
                      * @return CoordinateOrigin Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
                      * 
                      */
@@ -135,10 +135,10 @@ Default: Center.
 
                     /**
                      * 设置Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
                      * @param _coordinateOrigin Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
                      * 
                      */
@@ -153,10 +153,10 @@ Default: Center.
 
                     /**
                      * 获取Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
                      * @return XPos Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
                      * 
                      */
@@ -164,10 +164,10 @@ Default value: 0px.
 
                     /**
                      * 设置Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
                      * @param _xPos Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
                      * 
                      */
@@ -182,11 +182,11 @@ Default value: 0px.
 
                     /**
                      * 获取Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      * @return YPos Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      * 
@@ -195,11 +195,11 @@ Default value: 0px.
 
                     /**
                      * 设置Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      * @param _yPos Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      * 
@@ -296,15 +296,15 @@ Default value: 0px.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Operation performed on the sticker, such as image rotation.
-                     * @return ImageOperations Operation performed on the sticker, such as image rotation.
+                     * 获取Operation performed on the texture, such as image rotation.
+                     * @return ImageOperations Operation performed on the texture, such as image rotation.
                      * 
                      */
                     std::vector<ImageTransform> GetImageOperations() const;
 
                     /**
-                     * 设置Operation performed on the sticker, such as image rotation.
-                     * @param _imageOperations Operation performed on the sticker, such as image rotation.
+                     * 设置Operation performed on the texture, such as image rotation.
+                     * @param _imageOperations Operation performed on the texture, such as image rotation.
                      * 
                      */
                     void SetImageOperations(const std::vector<ImageTransform>& _imageOperations);
@@ -322,13 +322,13 @@ Default value: 0px.
                      * Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      */
                     std::string m_sourceMedia;
                     bool m_sourceMediaHasBeenSet;
 
                     /**
-                     * Duration of the sticker in seconds.
+                     * Duration of the sticker, in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
@@ -341,7 +341,7 @@ Note: When using the download URL of another media file as the material source a
 
                     /**
                      * Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
                      */
                     std::string m_coordinateOrigin;
@@ -349,7 +349,7 @@ Default: Center.
 
                     /**
                      * Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
                      */
                     std::string m_xPos;
@@ -357,7 +357,7 @@ Default value: 0px.
 
                     /**
                      * Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      */
@@ -387,7 +387,7 @@ Default value: 0px.
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Operation performed on the sticker, such as image rotation.
+                     * Operation performed on the texture, such as image rotation.
                      */
                     std::vector<ImageTransform> m_imageOperations;
                     bool m_imageOperationsHasBeenSet;

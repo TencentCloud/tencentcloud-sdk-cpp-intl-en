@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File type, for example, mp4, flv.
-                     * @return FileType File type, for example, mp4, flv.
+                     * 获取File type, for example, mp4 and flv.
+                     * @return FileType File type, for example, mp4 and flv.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置File type, for example, mp4, flv.
-                     * @param _fileType File type, for example, mp4, flv.
+                     * 设置File type, for example, mp4 and flv.
+                     * @param _fileType File type, for example, mp4 and flv.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Output filename, up to 64 characters. By default, the system assigns the generated filename.
-                     * @return MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
+                     * 获取Output filename, up to 64 characters. By default, the system assigns a generated filename.
+                     * @return MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置Output filename, up to 64 characters. By default, the system assigns the generated filename.
-                     * @param _mediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
+                     * 设置Output filename, up to 64 characters. By default, the system assigns a generated filename.
+                     * @param _mediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -179,7 +179,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File type, for example, mp4, flv.
+                     * File type, for example, mp4 and flv.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
@@ -197,7 +197,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Output filename, up to 64 characters. By default, the system assigns the generated filename.
+                     * Output filename, up to 64 characters. By default, the system assigns a generated filename.
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;

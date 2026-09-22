@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle suppression template for MPS
+                * Subtitle suppression template in MPS
                 */
                 class MPSEmbedSubtitleTemplateForUpdate : public AbstractModel
                 {

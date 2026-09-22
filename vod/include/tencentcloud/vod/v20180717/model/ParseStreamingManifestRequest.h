@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Content of the index file to be parsed.</p>
-                     * @return MediaManifestContent <p>Content of the index file to be parsed.</p>
+                     * 获取<p>Index file content to be parsed.</p>
+                     * @return MediaManifestContent <p>Index file content to be parsed.</p>
                      * 
                      */
                     std::string GetMediaManifestContent() const;
 
                     /**
-                     * 设置<p>Content of the index file to be parsed.</p>
-                     * @param _mediaManifestContent <p>Content of the index file to be parsed.</p>
+                     * 设置<p>Index file content to be parsed.</p>
+                     * @param _mediaManifestContent <p>Index file content to be parsed.</p>
                      * 
                      */
                     void SetMediaManifestContent(const std::string& _mediaManifestContent);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Content of the index file to be parsed.</p>
+                     * <p>Index file content to be parsed.</p>
                      */
                     std::string m_mediaManifestContent;
                     bool m_mediaManifestContentHasBeenSet;

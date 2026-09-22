@@ -48,10 +48,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      * @return FontType Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      * 
                      */
@@ -59,10 +59,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      * @param _fontType Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      * 
                      */
@@ -154,7 +154,7 @@ Default value: 1.
 
                     /**
                      * Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      */
                     std::string m_fontType;

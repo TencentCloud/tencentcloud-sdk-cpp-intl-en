@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Custom subject list.</p>
-                     * @return InfoList <p>Custom subject list.</p>
+                     * 获取<p>Custom entity list.</p>
+                     * @return InfoList <p>Custom entity list.</p>
                      * 
                      */
                     std::vector<AdvancedElementInfo> GetInfoList() const;
 
                     /**
-                     * 设置<p>Custom subject list.</p>
-                     * @param _infoList <p>Custom subject list.</p>
+                     * 设置<p>Custom entity list.</p>
+                     * @param _infoList <p>Custom entity list.</p>
                      * 
                      */
                     void SetInfoList(const std::vector<AdvancedElementInfo>& _infoList);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Custom subject list.</p>
+                     * <p>Custom entity list.</p>
                      */
                     std::vector<AdvancedElementInfo> m_infoList;
                     bool m_infoListHasBeenSet;

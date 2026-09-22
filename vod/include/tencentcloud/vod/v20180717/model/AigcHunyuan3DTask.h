@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-                     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+                     * 获取<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+                     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-                     * @param _errCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+                     * 设置<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+                     * @param _errCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extension error code.</p>
-                     * @return ErrCodeExt <p>Extension error code.</p>
+                     * 获取<p>Expansion error code.</p>
+                     * @return ErrCodeExt <p>Expansion error code.</p>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置<p>Extension error code.</p>
-                     * @param _errCodeExt <p>Extension error code.</p>
+                     * 设置<p>Expansion error code.</p>
+                     * @param _errCodeExt <p>Expansion error code.</p>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -273,13 +273,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+                     * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * <p>Extension error code.</p>
+                     * <p>Expansion error code.</p>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;

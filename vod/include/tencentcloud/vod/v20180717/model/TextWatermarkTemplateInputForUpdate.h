@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Font type. Currently, two are supported:
+                     * 获取Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
-                     * @return FontType Font type. Currently, two are supported:
+                     * @return FontType Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetFontType() const;
 
                     /**
-                     * 设置Font type. Currently, two are supported:
+                     * 设置Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
-                     * @param _fontType Font type. Currently, two are supported:
+                     * @param _fontType Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      * 
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool FontSizeHasBeenSet() const;
 
                     /**
-                     * 获取Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-                     * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * 获取Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * @return FontColor Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
                      * 
                      */
                     std::string GetFontColor() const;
 
                     /**
-                     * 设置Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-                     * @param _fontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * 设置Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * @param _fontColor Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
                      * 
                      */
                     void SetFontColor(const std::string& _fontColor);
@@ -149,7 +149,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Font type. Currently, two are supported:
+                     * Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
                      */
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_fontSizeHasBeenSet;
 
                     /**
-                     * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;

@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Comprehensive enhancement control switch. Valid values:
 <li>ON: enable comprehensive enhancement;</li>
-<li>OFF: Disable comprehensive enhancement.</li>
+<li>OFF: disables comprehensive enhancement.</li>
                      * @return Switch Comprehensive enhancement control switch. Valid values:
 <li>ON: enable comprehensive enhancement;</li>
-<li>OFF: Disable comprehensive enhancement.</li>
+<li>OFF: disables comprehensive enhancement.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Comprehensive enhancement control switch. Valid values:
 <li>ON: enable comprehensive enhancement;</li>
-<li>OFF: Disable comprehensive enhancement.</li>
+<li>OFF: disables comprehensive enhancement.</li>
                      * @param _switch Comprehensive enhancement control switch. Valid values:
 <li>ON: enable comprehensive enhancement;</li>
-<li>OFF: Disable comprehensive enhancement.</li>
+<li>OFF: disables comprehensive enhancement.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,30 +76,30 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+                     * 获取Comprehensive enhancement type. Valid only when the comprehensive enhancement control switch is ON. Available values:
 <li>weak: light comprehensive enhancement;</li>
-<li>normal: normal comprehensive enhancement;</li>
-<li>strong: strong comprehensive enhancement.</li>
+<li>normal: Normal comprehensive enhancement;</li>
+<li>strong: Strong comprehensive enhancement.</li>
 Default value: weak.
-                     * @return Type Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+                     * @return Type Comprehensive enhancement type. Valid only when the comprehensive enhancement control switch is ON. Available values:
 <li>weak: light comprehensive enhancement;</li>
-<li>normal: normal comprehensive enhancement;</li>
-<li>strong: strong comprehensive enhancement.</li>
+<li>normal: Normal comprehensive enhancement;</li>
+<li>strong: Strong comprehensive enhancement.</li>
 Default value: weak.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+                     * 设置Comprehensive enhancement type. Valid only when the comprehensive enhancement control switch is ON. Available values:
 <li>weak: light comprehensive enhancement;</li>
-<li>normal: normal comprehensive enhancement;</li>
-<li>strong: strong comprehensive enhancement.</li>
+<li>normal: Normal comprehensive enhancement;</li>
+<li>strong: Strong comprehensive enhancement.</li>
 Default value: weak.
-                     * @param _type Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+                     * @param _type Comprehensive enhancement type. Valid only when the comprehensive enhancement control switch is ON. Available values:
 <li>weak: light comprehensive enhancement;</li>
-<li>normal: normal comprehensive enhancement;</li>
-<li>strong: strong comprehensive enhancement.</li>
+<li>normal: Normal comprehensive enhancement;</li>
+<li>strong: Strong comprehensive enhancement.</li>
 Default value: weak.
                      * 
                      */
@@ -117,16 +117,16 @@ Default value: weak.
                     /**
                      * Comprehensive enhancement control switch. Valid values:
 <li>ON: enable comprehensive enhancement;</li>
-<li>OFF: Disable comprehensive enhancement.</li>
+<li>OFF: disables comprehensive enhancement.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+                     * Comprehensive enhancement type. Valid only when the comprehensive enhancement control switch is ON. Available values:
 <li>weak: light comprehensive enhancement;</li>
-<li>normal: normal comprehensive enhancement;</li>
-<li>strong: strong comprehensive enhancement.</li>
+<li>normal: Normal comprehensive enhancement;</li>
+<li>strong: Strong comprehensive enhancement.</li>
 Default value: weak.
                      */
                     std::string m_type;

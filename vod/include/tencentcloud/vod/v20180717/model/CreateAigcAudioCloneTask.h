@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-                     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+                     * 获取<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+                     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-                     * @param _errCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+                     * 设置<p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+                     * @param _errCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
-                     * @return ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+                     * 获取<p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * @return ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置<p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
-                     * @param _errCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+                     * 设置<p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * @param _errCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output message of the AIGC audio clone task.</p>
-                     * @return Output <p>Output message of the AIGC audio clone task.</p>
+                     * 获取<p>Output information of the AIGC audio clone task.</p>
+                     * @return Output <p>Output information of the AIGC audio clone task.</p>
                      * 
                      */
                     CreateAigcAudioCloneOutput GetOutput() const;
 
                     /**
-                     * 设置<p>Output message of the AIGC audio clone task.</p>
-                     * @param _output <p>Output message of the AIGC audio clone task.</p>
+                     * 设置<p>Output information of the AIGC audio clone task.</p>
+                     * @param _output <p>Output information of the AIGC audio clone task.</p>
                      * 
                      */
                     void SetOutput(const CreateAigcAudioCloneOutput& _output);
@@ -273,13 +273,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+                     * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+                     * <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
@@ -303,7 +303,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * <p>Output message of the AIGC audio clone task.</p>
+                     * <p>Output information of the AIGC audio clone task.</p>
                      */
                     CreateAigcAudioCloneOutput m_output;
                     bool m_outputHasBeenSet;

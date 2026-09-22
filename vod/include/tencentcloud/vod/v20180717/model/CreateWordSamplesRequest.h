@@ -45,22 +45,22 @@ namespace TencentCloud
 
                     /**
                      * 获取<b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      * @return Usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      * 
                      */
@@ -68,22 +68,22 @@ namespace TencentCloud
 
                     /**
                      * 设置<b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      * @param _usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      * 
                      */
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool WordsHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -142,13 +142,13 @@ namespace TencentCloud
 
                     /**
                      * <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Perform content recognition through OCR.
+1. Recognition.Ocr: Recognize content through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
 <b>Can be abbreviated as:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      */
                     std::vector<std::string> m_usages;
@@ -161,7 +161,7 @@ namespace TencentCloud
                     bool m_wordsHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

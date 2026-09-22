@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Type of the intelligent cover result.
+                * Intelligent cover result type
                 */
                 class AiAnalysisTaskCoverResult : public AbstractModel
                 {
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the intelligent cover task. Value range: 0-100.
-                     * @return Progress Progress of the intelligent cover task. Value range: 0-100.
+                     * 获取Intelligent Cover Task progress, value ranges from 0 to 100.
+                     * @return Progress Intelligent Cover Task progress, value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the intelligent cover task. Value range: 0-100.
-                     * @param _progress Progress of the intelligent cover task. Value range: 0-100.
+                     * 设置Intelligent Cover Task progress, value ranges from 0 to 100.
+                     * @param _progress Intelligent Cover Task progress, value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -276,13 +276,13 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Progress of the intelligent cover task. Value range: 0-100.
+                     * Intelligent Cover Task progress, value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;

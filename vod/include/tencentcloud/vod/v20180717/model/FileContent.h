@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * File stored in VOD.
+                * Stored file in VOD.
                 */
                 class FileContent : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
-                     * @return LastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * 获取Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * @return LastModified Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
                      * 
                      */
                     std::string GetLastModified() const;
 
                     /**
-                     * 设置Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
-                     * @param _lastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * 设置Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * @param _lastModified Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
                      * 
                      */
                     void SetLastModified(const std::string& _lastModified);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LastModifiedHasBeenSet() const;
 
                     /**
-                     * 获取Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
-                     * @return ETag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+                     * 获取Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
+                     * @return ETag Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
                      * 
                      */
                     std::string GetETag() const;
 
                     /**
-                     * 设置Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
-                     * @param _eTag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+                     * 设置Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
+                     * @param _eTag Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
                      * 
                      */
                     void SetETag(const std::string& _eTag);
@@ -197,18 +197,18 @@ namespace TencentCloud
                      * 获取Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
                      * @return FileType Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
@@ -220,18 +220,18 @@ namespace TencentCloud
                      * 设置Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
                      * @param _fileType Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
@@ -301,13 +301,13 @@ Value only when FileType is SubtitleFiles.
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
                      */
                     std::string m_lastModified;
                     bool m_lastModifiedHasBeenSet;
 
                     /**
-                     * Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+                     * Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
                      */
                     std::string m_eTag;
                     bool m_eTagHasBeenSet;
@@ -340,9 +340,9 @@ Value only when FileType is SubtitleFiles.
                      * Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 

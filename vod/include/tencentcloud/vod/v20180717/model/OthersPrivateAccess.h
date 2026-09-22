@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Authentication for origin-pull from other vendors' object storage
+                * Origin-pull authentication for object storage from other vendors
                 */
                 class OthersPrivateAccess : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Authentication configuration switch for origin-pull from other vendors. Valid values:
+                     * 获取Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Authentication configuration switch for origin-pull from other vendors. Valid values:
+                     * @return Switch Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Authentication configuration switch for origin-pull from other vendors. Valid values:
+                     * 设置Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Authentication configuration switch for origin-pull from other vendors. Valid values:
+                     * @param _switch Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -162,7 +162,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Authentication configuration switch for origin-pull from other vendors. Valid values:
+                     * Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate streaming template ID with SimpleAES protection type.
-                     * @return SimpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
+                     * 获取Adaptive bitstreaming template ID with SimpleAES protection type.
+                     * @return SimpleAesDefinition Adaptive bitstreaming template ID with SimpleAES protection type.
                      * 
                      */
                     uint64_t GetSimpleAesDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming template ID with SimpleAES protection type.
-                     * @param _simpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
+                     * 设置Adaptive bitstreaming template ID with SimpleAES protection type.
+                     * @param _simpleAesDefinition Adaptive bitstreaming template ID with SimpleAES protection type.
                      * 
                      */
                     void SetSimpleAesDefinition(const uint64_t& _simpleAesDefinition);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool WidevineDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Adaptive bitstreaming template ID with FairPlay protection.
-                     * @return FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
+                     * 获取Adaptive bitrate streaming template ID with FairPlay protection type.
+                     * @return FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
                      * 
                      */
                     uint64_t GetFairPlayDefinition() const;
 
                     /**
-                     * 设置Adaptive bitstreaming template ID with FairPlay protection.
-                     * @param _fairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
+                     * 设置Adaptive bitrate streaming template ID with FairPlay protection type.
+                     * @param _fairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
                      * 
                      */
                     void SetFairPlayDefinition(const uint64_t& _fairPlayDefinition);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Adaptive bitrate streaming template ID with SimpleAES protection type.
+                     * Adaptive bitstreaming template ID with SimpleAES protection type.
                      */
                     uint64_t m_simpleAesDefinition;
                     bool m_simpleAesDefinitionHasBeenSet;
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_widevineDefinitionHasBeenSet;
 
                     /**
-                     * Adaptive bitstreaming template ID with FairPlay protection.
+                     * Adaptive bitrate streaming template ID with FairPlay protection type.
                      */
                     uint64_t m_fairPlayDefinition;
                     bool m_fairPlayDefinitionHasBeenSet;

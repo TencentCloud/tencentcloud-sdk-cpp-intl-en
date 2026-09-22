@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * UserAgent allowlist and blocklist configuration
+                * UserAgent blocklist and allowlist configuration
                 */
                 class UserAgentFilter : public AbstractModel
                 {
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取List of effective rules for the UserAgent blocklist and allowlist.
-                     * @return FilterRules List of effective rules for the UserAgent blocklist and allowlist.
+                     * 获取List of effective UserAgent blocklist/allowlist rules.
+                     * @return FilterRules List of effective UserAgent blocklist/allowlist rules.
                      * 
                      */
                     std::vector<UserAgentFilterRule> GetFilterRules() const;
 
                     /**
-                     * 设置List of effective rules for the UserAgent blocklist and allowlist.
-                     * @param _filterRules List of effective rules for the UserAgent blocklist and allowlist.
+                     * 设置List of effective UserAgent blocklist/allowlist rules.
+                     * @param _filterRules List of effective UserAgent blocklist/allowlist rules.
                      * 
                      */
                     void SetFilterRules(const std::vector<UserAgentFilterRule>& _filterRules);
@@ -108,7 +108,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * List of effective rules for the UserAgent blocklist and allowlist.
+                     * List of effective UserAgent blocklist/allowlist rules.
                      */
                     std::vector<UserAgentFilterRule> m_filterRules;
                     bool m_filterRulesHasBeenSet;

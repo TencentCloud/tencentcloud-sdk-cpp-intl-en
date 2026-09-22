@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,31 +64,31 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Application status. Valid values:
+                     * 获取App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
-                     * @return Status Application status. Valid values:
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
+                     * @return Status App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Application status. Valid values:
+                     * 设置App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
-                     * @param _status Application status. Valid values:
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
+                     * @param _status App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -103,17 +103,17 @@ If the current status is `Destoying`, you cannot enable it. You have to wait unt
                 private:
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Application status. Valid values:
+                     * App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

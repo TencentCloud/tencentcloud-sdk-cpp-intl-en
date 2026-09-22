@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
-                     * @return Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+                     * 获取<p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
+                     * @return Mode <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置<p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
-                     * @param _mode <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+                     * 设置<p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
+                     * @param _mode <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
-                     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+                     * 获取<p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+                     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
                      * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
-                     * 设置<p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
-                     * @param _storageRegion <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+                     * 设置<p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+                     * @param _storageRegion <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
                      * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>tag that this application should be bound to</p>
-                     * @return Tags <p>tag that this application should be bound to</p>
+                     * 获取<p>tag that should be bound to this application</p>
+                     * @return Tags <p>tag that should be bound to this application</p>
                      * 
                      */
                     std::vector<ResourceTag> GetTags() const;
 
                     /**
-                     * 设置<p>tag that this application should be bound to</p>
-                     * @param _tags <p>tag that this application should be bound to</p>
+                     * 设置<p>tag that should be bound to this application</p>
+                     * @param _tags <p>tag that should be bound to this application</p>
                      * 
                      */
                     void SetTags(const std::vector<ResourceTag>& _tags);
@@ -190,19 +190,19 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+                     * <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+                     * <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * <p>tag that this application should be bound to</p>
+                     * <p>tag that should be bound to this application</p>
                      */
                     std::vector<ResourceTag> m_tags;
                     bool m_tagsHasBeenSet;

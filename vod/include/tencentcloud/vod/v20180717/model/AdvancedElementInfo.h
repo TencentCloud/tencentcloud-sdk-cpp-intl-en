@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Entity ID.</p>
-                     * @return ElementId <p>Entity ID.</p>
+                     * 获取<p>Principal ID.</p>
+                     * @return ElementId <p>Principal ID.</p>
                      * 
                      */
                     std::string GetElementId() const;
 
                     /**
-                     * 设置<p>Entity ID.</p>
-                     * @param _elementId <p>Entity ID.</p>
+                     * 设置<p>Principal ID.</p>
+                     * @param _elementId <p>Principal ID.</p>
                      * 
                      */
                     void SetElementId(const std::string& _elementId);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Entity ID.</p>
+                     * <p>Principal ID.</p>
                      */
                     std::string m_elementId;
                     bool m_elementIdHasBeenSet;

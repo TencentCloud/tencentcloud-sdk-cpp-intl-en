@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Domain name push to CLS target list.
-                     * @return DomainCLSTargets Domain name push to CLS target list.
+                     * 获取Domain name push CLS target list.
+                     * @return DomainCLSTargets Domain name push CLS target list.
                      * 
                      */
                     std::vector<DomainCLSTargetInfo> GetDomainCLSTargets() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Domain name push to CLS target list.
+                     * Domain name push CLS target list.
                      */
                     std::vector<DomainCLSTargetInfo> m_domainCLSTargets;
                     bool m_domainCLSTargetsHasBeenSet;

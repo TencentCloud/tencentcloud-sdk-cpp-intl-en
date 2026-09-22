@@ -69,11 +69,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
                      * @return Suggestion Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
                      * 
@@ -82,11 +82,11 @@ namespace TencentCloud
 
                     /**
                      * 设置Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
                      * @param _suggestion Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
                      * 
@@ -101,32 +101,32 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+                     * 获取Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
-                     * @return TypeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+                     * @return TypeSet Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
                      * 
@@ -134,32 +134,32 @@ Label refers to prohibited tags. Value range:
                     std::vector<std::string> GetTypeSet() const;
 
                     /**
-                     * 设置Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+                     * 设置Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
-                     * @param _typeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+                     * @param _typeSet Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
                      * 
@@ -204,7 +204,7 @@ Label refers to prohibited tags. Value range:
 
                     /**
                      * Review result suggestion. Valid values:
-<li>pass: It is recommended to pass.</li>
+<li>pass: it is recommended to pass;</li>
 <li>review: suggest re-examination;</li>
 <li>block: suggest banning.</li>
                      */
@@ -212,18 +212,18 @@ Label refers to prohibited tags. Value range:
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
-Form indicates the prohibited form. Value range:
-<li>Image: people or icons on the screen;</li>
+                     * Moderation type. Valid when `Suggestion` is `review` or `block`. Format: `Form.Label`.
+Form refers to prohibited forms. Value range:
+<li>Image: people or icons in the image;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
-Label refers to prohibited tags. Value range:
+Label indicates prohibited tags. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: Violating laws or regulations;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
                      */

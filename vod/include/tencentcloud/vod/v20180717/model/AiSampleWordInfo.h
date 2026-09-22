@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取<p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
-                     * @return Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+                     * 获取<p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
+                     * @return Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置<p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
-                     * @param _tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+                     * 设置<p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
+                     * @param _tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+                     * <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取File type, for example, mp4 or mp3.
-                     * @return FileType File type, for example, mp4 or mp3.
+                     * 获取File type, such as mp4 and mp3.
+                     * @return FileType File type, such as mp4 and mp3.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置File type, for example, mp4 or mp3.
-                     * @param _fileType File type, for example, mp4 or mp3.
+                     * 设置File type, such as mp4 and mp3.
+                     * @param _fileType File type, such as mp4 and mp3.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Filename, which contains up to 64 characters.
-                     * @return MediaName Filename, which contains up to 64 characters.
+                     * 获取Filename. It can contain up to 64 characters.
+                     * @return MediaName Filename. It can contain up to 64 characters.
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置Filename, which contains up to 64 characters.
-                     * @param _mediaName Filename, which contains up to 64 characters.
+                     * 设置Filename. It can contain up to 64 characters.
+                     * @param _mediaName Filename. It can contain up to 64 characters.
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -161,7 +161,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * File type, for example, mp4 or mp3.
+                     * File type, such as mp4 and mp3.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
@@ -173,7 +173,7 @@ namespace TencentCloud
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * Filename, which contains up to 64 characters.
+                     * Filename. It can contain up to 64 characters.
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;

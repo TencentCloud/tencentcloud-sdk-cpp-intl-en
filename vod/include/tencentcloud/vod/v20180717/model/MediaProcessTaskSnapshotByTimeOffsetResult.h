@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Screenshot taking at specified time points task result type
+                * Task result type of screenshot taking at specified time points in a video
                 */
                 class MediaProcessTaskSnapshotByTimeOffsetResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input of the time point screenshot task for videos.
-                     * @return Input Task input of the time point screenshot task for videos.
+                     * 获取Task input of screenshot taking at specified time points in a video.
+                     * @return Input Task input of screenshot taking at specified time points in a video.
                      * 
                      */
                     SnapshotByTimeOffsetTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input of the time point screenshot task for videos.
-                     * @param _input Task input of the time point screenshot task for videos.
+                     * 设置Task input of screenshot taking at specified time points in a video.
+                     * @param _input Task input of screenshot taking at specified time points in a video.
                      * 
                      */
                     void SetInput(const SnapshotByTimeOffsetTaskInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress of screenshot taking at specified time points for video, in the range of [0,100].
-                     * @return Progress Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+                     * 获取Progress of the screenshot taking task at specified time points, in the range of [0,100].
+                     * @return Progress Progress of the screenshot taking task at specified time points, in the range of [0,100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress of screenshot taking at specified time points for video, in the range of [0,100].
-                     * @param _progress Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+                     * 设置Progress of the screenshot taking task at specified time points, in the range of [0,100].
+                     * @param _progress Progress of the screenshot taking task at specified time points, in the range of [0,100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _finishTime Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _finishTime Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input of the time point screenshot task for videos.
+                     * Task input of screenshot taking at specified time points in a video.
                      */
                     SnapshotByTimeOffsetTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -276,19 +276,19 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+                     * Progress of the screenshot taking task at specified time points, in the range of [0,100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

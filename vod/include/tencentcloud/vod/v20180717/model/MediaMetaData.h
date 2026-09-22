@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
-                     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+                     * 获取Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
-                     * @param _bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+                     * 设置Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * @param _bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Video duration, unit: seconds.
-                     * @return Duration Video duration, unit: seconds.
+                     * 获取Video duration, in seconds.
+                     * @return Duration Video duration, in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video duration, unit: seconds.
-                     * @param _duration Video duration, unit: seconds.
+                     * 设置Video duration, in seconds.
+                     * @param _duration Video duration, in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool AudioStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取Video duration, unit: seconds.
-                     * @return VideoDuration Video duration, unit: seconds.
+                     * 获取Video duration, in seconds.
+                     * @return VideoDuration Video duration, in seconds.
                      * 
                      */
                     double GetVideoDuration() const;
 
                     /**
-                     * 设置Video duration, unit: seconds.
-                     * @param _videoDuration Video duration, unit: seconds.
+                     * 设置Video duration, in seconds.
+                     * @param _videoDuration Video duration, in seconds.
                      * 
                      */
                     void SetVideoDuration(const double& _videoDuration);
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+                     * Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
@@ -337,7 +337,7 @@ namespace TencentCloud
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Video duration, unit: seconds.
+                     * Video duration, in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
@@ -361,7 +361,7 @@ namespace TencentCloud
                     bool m_audioStreamSetHasBeenSet;
 
                     /**
-                     * Video duration, unit: seconds.
+                     * Video duration, in seconds.
                      */
                     double m_videoDuration;
                     bool m_videoDurationHasBeenSet;

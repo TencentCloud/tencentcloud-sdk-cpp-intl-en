@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for mosaic detection in video footage.
+                * Control parameters for video frame mosaic detection.
                 */
                 class MosaicConfigureInfo : public AbstractModel
                 {

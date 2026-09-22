@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
                      * @return Switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
                      * @param _switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -112,8 +112,8 @@ Default value: loudNorm.
 
                     /**
                      * Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool IsTruncatedHasBeenSet() const;
 
                     /**
-                     * 获取The node will be returned only when response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. To continue requesting follow-up entries, import the value of this node as the marker parameter for the next request.
-                     * @return NextMarker The node will be returned only when response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. To continue requesting follow-up entries, import the value of this node as the marker parameter for the next request.
+                     * 获取This node will be returned only when the response entries are truncated (IsTruncated is true). The value of this node is the last object key in the current response entries. When you need to continue requesting subsequent entries, use the value of this node as the marker parameter for the next request.
+                     * @return NextMarker This node will be returned only when the response entries are truncated (IsTruncated is true). The value of this node is the last object key in the current response entries. When you need to continue requesting subsequent entries, use the value of this node as the marker parameter for the next request.
                      * 
                      */
                     std::string GetNextMarker() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool NextMarkerHasBeenSet() const;
 
                     /**
-                     * 获取The part between the prefix or from the beginning (if prefix is not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
-                     * @return CommonPrefixes The part between the prefix or from the beginning (if prefix is not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
+                     * 获取The same part from the prefix or from the beginning (if not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
+                     * @return CommonPrefixes The same part from the prefix or from the beginning (if not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
                      * 
                      */
                     std::vector<std::string> GetCommonPrefixes() const;
@@ -109,13 +109,13 @@ namespace TencentCloud
                     bool m_isTruncatedHasBeenSet;
 
                     /**
-                     * The node will be returned only when response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. To continue requesting follow-up entries, import the value of this node as the marker parameter for the next request.
+                     * This node will be returned only when the response entries are truncated (IsTruncated is true). The value of this node is the last object key in the current response entries. When you need to continue requesting subsequent entries, use the value of this node as the marker parameter for the next request.
                      */
                     std::string m_nextMarker;
                     bool m_nextMarkerHasBeenSet;
 
                     /**
-                     * The part between the prefix or from the beginning (if prefix is not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
+                     * The same part from the prefix or from the beginning (if not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
                      */
                     std::vector<std::string> m_commonPrefixes;
                     bool m_commonPrefixesHasBeenSet;

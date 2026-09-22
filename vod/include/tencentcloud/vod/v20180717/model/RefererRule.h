@@ -121,23 +121,23 @@ namespace TencentCloud
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取referer configuration type. Value:
+                     * 获取referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
-                     * @return RefererType referer configuration type. Value:
+<li>blocklist: Blocklist.</li>
+                     * @return RefererType referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      * 
                      */
                     std::string GetRefererType() const;
 
                     /**
-                     * 设置referer configuration type. Value:
+                     * 设置referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
-                     * @param _refererType referer configuration type. Value:
+<li>blocklist: Blocklist.</li>
+                     * @param _refererType referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      * 
                      */
                     void SetRefererType(const std::string& _refererType);
@@ -172,22 +172,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      * @return AllowEmpty Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      * 
                      */
                     bool GetAllowEmpty() const;
 
                     /**
                      * 设置Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      * @param _allowEmpty Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      * 
                      */
                     void SetAllowEmpty(const bool& _allowEmpty);
@@ -222,9 +222,9 @@ If the anti-hotlinking type is blocklist, true indicates to deny empty referers,
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * referer configuration type. Value:
+                     * referer configuration type. Valid values:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      */
                     std::string m_refererType;
                     bool m_refererTypeHasBeenSet;
@@ -237,8 +237,8 @@ If the anti-hotlinking type is blocklist, true indicates to deny empty referers,
 
                     /**
                      * Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
-If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      */
                     bool m_allowEmpty;
                     bool m_allowEmptyHasBeenSet;

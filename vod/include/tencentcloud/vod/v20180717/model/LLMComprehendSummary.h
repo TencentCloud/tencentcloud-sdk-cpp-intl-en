@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Segment summary task switch. Available values:
 - ON: Enable the segment summary task.
--OFF: disables segment summary.
+- OFF: disables segment summary.
                      * @return Switch Segment summary task switch. Available values:
 - ON: Enable the segment summary task.
--OFF: disables segment summary.
+- OFF: disables segment summary.
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Segment summary task switch. Available values:
 - ON: Enable the segment summary task.
--OFF: disables segment summary.
+- OFF: disables segment summary.
                      * @param _switch Segment summary task switch. Available values:
 - ON: Enable the segment summary task.
--OFF: disables segment summary.
+- OFF: disables segment summary.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Extended parameter. Its value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
-                     * @return ExtendedParameter Extended parameter. Its value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * 获取Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * @return ExtendedParameter Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      * 
                      */
                     std::string GetExtendedParameter() const;
 
                     /**
-                     * 设置Extended parameter. Its value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
-                     * @param _extendedParameter Extended parameter. Its value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * 设置Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * @param _extendedParameter Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
@@ -101,13 +101,13 @@ namespace TencentCloud
                     /**
                      * Segment summary task switch. Available values:
 - ON: Enable the segment summary task.
--OFF: disables segment summary.
+- OFF: disables segment summary.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Extended parameter. Its value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      */
                     std::string m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;

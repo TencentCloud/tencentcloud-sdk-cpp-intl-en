@@ -54,13 +54,13 @@ namespace TencentCloud
                     /**
                      * 获取Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
                      * @return Type Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
@@ -71,13 +71,13 @@ namespace TencentCloud
                     /**
                      * 设置Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
                      * @param _type Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool VideoItemHasBeenSet() const;
 
                     /**
-                     * 获取Audio clip. Valid when Type = Audio.
-                     * @return AudioItem Audio clip. Valid when Type = Audio.
+                     * 获取Audio clip. Valid when Type is Audio.
+                     * @return AudioItem Audio clip. Valid when Type is Audio.
                      * 
                      */
                     AudioTrackItem GetAudioItem() const;
 
                     /**
-                     * 设置Audio clip. Valid when Type = Audio.
-                     * @param _audioItem Audio clip. Valid when Type = Audio.
+                     * 设置Audio clip. Valid when Type is Audio.
+                     * @param _audioItem Audio clip. Valid when Type is Audio.
                      * 
                      */
                     void SetAudioItem(const AudioTrackItem& _audioItem);
@@ -177,19 +177,19 @@ namespace TencentCloud
                     bool TransitionItemHasBeenSet() const;
 
                     /**
-                     * 获取Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
-                     * @return EmptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+                     * 获取Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
+                     * @return EmptyItem Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
                      * 
                      */
                     EmptyTrackItem GetEmptyItem() const;
 
                     /**
-                     * 设置Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
-                     * @param _emptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+                     * 设置Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
+                     * @param _emptyItem Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
                      * 
                      */
                     void SetEmptyItem(const EmptyTrackItem& _emptyItem);
@@ -206,7 +206,7 @@ namespace TencentCloud
                     /**
                      * Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
@@ -221,7 +221,7 @@ namespace TencentCloud
                     bool m_videoItemHasBeenSet;
 
                     /**
-                     * Audio clip. Valid when Type = Audio.
+                     * Audio clip. Valid when Type is Audio.
                      */
                     AudioTrackItem m_audioItem;
                     bool m_audioItemHasBeenSet;
@@ -239,8 +239,8 @@ namespace TencentCloud
                     bool m_transitionItemHasBeenSet;
 
                     /**
-                     * Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+                     * Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
                      */
                     EmptyTrackItem m_emptyItem;
                     bool m_emptyItemHasBeenSet;

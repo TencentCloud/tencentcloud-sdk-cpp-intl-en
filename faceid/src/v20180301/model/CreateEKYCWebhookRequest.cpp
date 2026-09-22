@@ -24,7 +24,9 @@ using namespace std;
 
 CreateEKYCWebhookRequest::CreateEKYCWebhookRequest() :
     m_webhookNameHasBeenSet(false),
-    m_webhookURLHasBeenSet(false)
+    m_webhookURLHasBeenSet(false),
+    m_sceneHasBeenSet(false),
+    m_signatureKeyHasBeenSet(false)
 {
 }
 
@@ -49,6 +51,22 @@ string CreateEKYCWebhookRequest::ToJsonString() const
         string key = "WebhookURL";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_webhookURL.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sceneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scene";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scene.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_signatureKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SignatureKey";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_signatureKey.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -89,6 +107,38 @@ void CreateEKYCWebhookRequest::SetWebhookURL(const string& _webhookURL)
 bool CreateEKYCWebhookRequest::WebhookURLHasBeenSet() const
 {
     return m_webhookURLHasBeenSet;
+}
+
+string CreateEKYCWebhookRequest::GetScene() const
+{
+    return m_scene;
+}
+
+void CreateEKYCWebhookRequest::SetScene(const string& _scene)
+{
+    m_scene = _scene;
+    m_sceneHasBeenSet = true;
+}
+
+bool CreateEKYCWebhookRequest::SceneHasBeenSet() const
+{
+    return m_sceneHasBeenSet;
+}
+
+string CreateEKYCWebhookRequest::GetSignatureKey() const
+{
+    return m_signatureKey;
+}
+
+void CreateEKYCWebhookRequest::SetSignatureKey(const string& _signatureKey)
+{
+    m_signatureKey = _signatureKey;
+    m_signatureKeyHasBeenSet = true;
+}
+
+bool CreateEKYCWebhookRequest::SignatureKeyHasBeenSet() const
+{
+    return m_signatureKeyHasBeenSet;
 }
 
 

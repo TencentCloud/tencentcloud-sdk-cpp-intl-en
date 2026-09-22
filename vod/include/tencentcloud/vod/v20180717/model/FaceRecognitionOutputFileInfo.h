@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
-                     * @return FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+                     * 获取<p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
+                     * @return FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置<p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
-                     * @param _fileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+                     * 设置<p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
+                     * @param _fileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+                     * <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;

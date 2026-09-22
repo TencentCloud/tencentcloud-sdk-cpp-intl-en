@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool ReviewAudioVideoTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
-                     * @return ImportMediaKnowledgeTaskIdSet <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
+                     * 获取<p>Task ID of the ImportMediaKnowledge task type. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet.</p>
+                     * @return ImportMediaKnowledgeTaskIdSet <p>Task ID of the ImportMediaKnowledge task type. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet.</p>
                      * 
                      */
                     std::vector<std::string> GetImportMediaKnowledgeTaskIdSet() const;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_reviewAudioVideoTaskIdHasBeenSet;
 
                     /**
-                     * <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
+                     * <p>Task ID of the ImportMediaKnowledge task type. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet.</p>
                      */
                     std::vector<std::string> m_importMediaKnowledgeTaskIdSet;
                     bool m_importMediaKnowledgeTaskIdSetHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Segments suspected of involving offensive or unsafe content in audio/video moderation.
+                * Moderated segments involving offensive or unsafe content.
                 */
                 class MediaContentReviewSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time offset of the start of the suspected segment. Unit: second.
-                     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+                     * 获取Start time offset of a suspected segment, in seconds.
+                     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Time offset of the start of the suspected segment. Unit: second.
-                     * @param _startTimeOffset Time offset of the start of the suspected segment. Unit: second.
+                     * 设置Start time offset of a suspected segment, in seconds.
+                     * @param _startTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of the suspected segment, in seconds.
-                     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
+                     * 获取End time offset of a suspected segment, in seconds.
+                     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of the suspected segment, in seconds.
-                     * @param _endTimeOffset End time offset of the suspected segment, in seconds.
+                     * 设置End time offset of a suspected segment, in seconds.
+                     * @param _endTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -131,11 +131,11 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Result suggestions for identifying suspected segments involving offensive content. Value range:
+                     * 获取Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+                     * @return Suggestion Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -144,11 +144,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result suggestions for identifying suspected segments involving offensive content. Value range:
+                     * 设置Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+                     * @param _suggestion Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -164,18 +164,18 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * 获取Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * @return Url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * 设置Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @param _url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * @param _url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
@@ -189,15 +189,15 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取This field is deprecated. Please use PicUrlExpireTime.
-                     * @return PicUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
+                     * 获取Deprecated. Please use PicUrlExpireTime.
+                     * @return PicUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
                      * @deprecated
                      */
                     int64_t GetPicUrlExpireTimeStamp() const;
 
                     /**
-                     * 设置This field is deprecated. Please use PicUrlExpireTime.
-                     * @param _picUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
+                     * 设置Deprecated. Please use PicUrlExpireTime.
+                     * @param _picUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
                      * @deprecated
                      */
                     void SetPicUrlExpireTimeStamp(const int64_t& _picUrlExpireTimeStamp);
@@ -210,15 +210,15 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return PicUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _picUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -233,13 +233,13 @@ Images will be deleted after the PicUrlExpireTime time point).
                 private:
 
                     /**
-                     * Time offset of the start of the suspected segment. Unit: second.
+                     * Start time offset of a suspected segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of the suspected segment, in seconds.
+                     * End time offset of a suspected segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
@@ -257,7 +257,7 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Result suggestions for identifying suspected segments involving offensive content. Value range:
+                     * Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -266,20 +266,20 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * This field is deprecated. Please use PicUrlExpireTime.
+                     * Deprecated. Please use PicUrlExpireTime.
                      */
                     int64_t m_picUrlExpireTimeStamp;
                     bool m_picUrlExpireTimeStampHasBeenSet;
 
                     /**
-                     * Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

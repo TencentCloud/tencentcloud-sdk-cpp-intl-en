@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for the speech full-text recognition task
+                * Speech full-text recognition task control parameters
                 */
                 class AsrFullTextConfigureInfoForUpdate : public AbstractModel
                 {
@@ -98,11 +98,11 @@ namespace TencentCloud
                     bool SubtitleFormatsOperationHasBeenSet() const;
 
                     /**
-                     * 获取Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+                     * 获取Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
-                     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+                     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -111,11 +111,11 @@ namespace TencentCloud
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+                     * 设置Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
-                     * @param _subtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+                     * @param _subtitleFormat Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -168,15 +168,15 @@ namespace TencentCloud
                     bool SrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
-                     * @return SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+                     * 获取Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
                      * 
                      */
                     std::string GetSubtitleName() const;
 
                     /**
-                     * 设置Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
-                     * @param _subtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+                     * 设置Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * @param _subtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
                      * 
                      */
                     void SetSubtitleName(const std::string& _subtitleName);
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_subtitleFormatsOperationHasBeenSet;
 
                     /**
-                     * Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+                     * Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -224,7 +224,7 @@ namespace TencentCloud
                     bool m_srcLanguageHasBeenSet;
 
                     /**
-                     * Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+                     * Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
                      */
                     std::string m_subtitleName;
                     bool m_subtitleNameHasBeenSet;

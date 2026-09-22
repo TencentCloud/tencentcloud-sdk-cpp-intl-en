@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Task output of intelligent highlight.
-                     * @return Output Task output of intelligent highlight.
+                     * 获取Task output of the intelligent highlight.
+                     * @return Output Task output of the intelligent highlight.
                      * 
                      */
                     AiAnalysisTaskHighlightOutput GetOutput() const;
 
                     /**
-                     * 设置Task output of intelligent highlight.
-                     * @param _output Task output of intelligent highlight.
+                     * 设置Task output of the intelligent highlight.
+                     * @param _output Task output of the intelligent highlight.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskHighlightOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the intelligent highlight task. Value range: 0-100.
-                     * @return Progress Progress of the intelligent highlight task. Value range: 0-100.
+                     * 获取Intelligent highlight task progress. Value range: [0-100].
+                     * @return Progress Intelligent highlight task progress. Value range: [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the intelligent highlight task. Value range: 0-100.
-                     * @param _progress Progress of the intelligent highlight task. Value range: 0-100.
+                     * 设置Intelligent highlight task progress. Value range: [0-100].
+                     * @param _progress Intelligent highlight task progress. Value range: [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _finishTime Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _finishTime Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -270,25 +270,25 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Task output of intelligent highlight.
+                     * Task output of the intelligent highlight.
                      */
                     AiAnalysisTaskHighlightOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Progress of the intelligent highlight task. Value range: 0-100.
+                     * Intelligent highlight task progress. Value range: [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

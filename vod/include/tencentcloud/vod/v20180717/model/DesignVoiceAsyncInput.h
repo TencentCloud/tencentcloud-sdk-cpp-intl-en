@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of the timbre design task.
+                * Timbre design task input.
                 */
                 class DesignVoiceAsyncInput : public AbstractModel
                 {

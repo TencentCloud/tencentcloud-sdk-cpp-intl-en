@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rotation image task type
+                * Type of rotating image tasks
                 */
                 class AnimatedGraphicTaskInput : public AbstractModel
                 {
@@ -69,12 +69,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
                      * @return StartTimeOffset Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
                      * 
                      */
@@ -82,12 +82,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
                      * @param _startTimeOffset Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
                      * 
                      */
@@ -101,26 +101,26 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Termination time offset of the GIF in the video, in seconds.
+                     * 获取End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
-                     * @return EndTimeOffset Termination time offset of the GIF in the video, in seconds.
+                     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置Termination time offset of the GIF in the video, in seconds.
+                     * 设置End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
-                     * @param _endTimeOffset Termination time offset of the GIF in the video, in seconds.
+                     * @param _endTimeOffset End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
                      * 
                      */
@@ -143,17 +143,17 @@ namespace TencentCloud
 
                     /**
                      * Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the beginning of the video.</li>
-<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the starting position of the video.</li>
+<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * Termination time offset of the GIF in the video, in seconds.
+                     * End time offset of an animated image in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means to terminate at the nth second of the video;</li>
+<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
 <li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
                      */
                     double m_endTimeOffset;

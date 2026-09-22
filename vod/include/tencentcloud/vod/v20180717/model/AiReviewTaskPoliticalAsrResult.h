@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type for Asr text involving inappropriate information and rule violations in audio/video moderation
+                * Task result type for inappropriate information and rule violations involving Asr text in audio/video moderation
                 */
                 class AiReviewTaskPoliticalAsrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input for Asr text involving inappropriate information in audio/video moderation.
-                     * @return Input Task input for Asr text involving inappropriate information in audio/video moderation.
+                     * 获取Task input for inappropriate information involving Asr text in audio/video moderation.
+                     * @return Input Task input for inappropriate information involving Asr text in audio/video moderation.
                      * 
                      */
                     AiReviewPoliticalAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input for Asr text involving inappropriate information in audio/video moderation.
-                     * @param _input Task input for Asr text involving inappropriate information in audio/video moderation.
+                     * 设置Task input for inappropriate information involving Asr text in audio/video moderation.
+                     * @param _input Task input for inappropriate information involving Asr text in audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewPoliticalAsrTaskInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
-                     * @return Progress Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+                     * 获取Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+                     * @return Progress Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
-                     * @param _progress Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+                     * 设置Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+                     * @param _progress Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input for Asr text involving inappropriate information in audio/video moderation.
+                     * Task input for inappropriate information involving Asr text in audio/video moderation.
                      */
                     AiReviewPoliticalAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -234,7 +234,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+                     * Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

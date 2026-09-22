@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * File information of the AIGC human face input
+                * AIGC human face input file information
                 */
                 class AigcFaceInputFileInfo : public AbstractModel
                 {

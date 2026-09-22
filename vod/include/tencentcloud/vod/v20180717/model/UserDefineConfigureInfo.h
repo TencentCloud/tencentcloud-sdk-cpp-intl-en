@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User-customized control parameters for audio/video moderation tasks
+                * Control parameters of the user-defined audio/video moderation task
                 */
                 class UserDefineConfigureInfo : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter for user-defined character audio/video moderation.
-                     * @return FaceReviewInfo Control parameter for user-defined character audio/video moderation.
+                     * 获取Control parameter for video moderation of user-defined characters.
+                     * @return FaceReviewInfo Control parameter for video moderation of user-defined characters.
                      * 
                      */
                     UserDefineFaceReviewTemplateInfo GetFaceReviewInfo() const;
 
                     /**
-                     * 设置Control parameter for user-defined character audio/video moderation.
-                     * @param _faceReviewInfo Control parameter for user-defined character audio/video moderation.
+                     * 设置Control parameter for video moderation of user-defined characters.
+                     * @param _faceReviewInfo Control parameter for video moderation of user-defined characters.
                      * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfo& _faceReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取User-customized voice audio and video review control parameter.
-                     * @return AsrReviewInfo User-customized voice audio and video review control parameter.
+                     * 获取User-customized control parameters for voice audio and video moderation.
+                     * @return AsrReviewInfo User-customized control parameters for voice audio and video moderation.
                      * 
                      */
                     UserDefineAsrTextReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置User-customized voice audio and video review control parameter.
-                     * @param _asrReviewInfo User-customized voice audio and video review control parameter.
+                     * 设置User-customized control parameters for voice audio and video moderation.
+                     * @param _asrReviewInfo User-customized control parameters for voice audio and video moderation.
                      * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfo& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取User-customized text, audio, and video moderation control parameters.
-                     * @return OcrReviewInfo User-customized text, audio, and video moderation control parameters.
+                     * 获取User custom text audio/video moderation control parameter.
+                     * @return OcrReviewInfo User custom text audio/video moderation control parameter.
                      * 
                      */
                     UserDefineOcrTextReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置User-customized text, audio, and video moderation control parameters.
-                     * @param _ocrReviewInfo User-customized text, audio, and video moderation control parameters.
+                     * 设置User custom text audio/video moderation control parameter.
+                     * @param _ocrReviewInfo User custom text audio/video moderation control parameter.
                      * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfo& _ocrReviewInfo);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameter for user-defined character audio/video moderation.
+                     * Control parameter for video moderation of user-defined characters.
                      */
                     UserDefineFaceReviewTemplateInfo m_faceReviewInfo;
                     bool m_faceReviewInfoHasBeenSet;
 
                     /**
-                     * User-customized voice audio and video review control parameter.
+                     * User-customized control parameters for voice audio and video moderation.
                      */
                     UserDefineAsrTextReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * User-customized text, audio, and video moderation control parameters.
+                     * User custom text audio/video moderation control parameter.
                      */
                     UserDefineOcrTextReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

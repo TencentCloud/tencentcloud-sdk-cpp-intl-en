@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of an AIGC Hunyuan 3D task.
+                * Input of the AIGC Hunyuan 3D task.
                 */
                 class AigcHunyuan3DTaskInput : public AbstractModel
                 {
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool ImageInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
-                     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+                     * 获取<p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
+                     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
                      * 
                      */
                     std::vector<AigcHunyuan3DMultiViewImageInfo> GetMultiViewImageInfos() const;
 
                     /**
-                     * 设置<p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
-                     * @param _multiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+                     * 设置<p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
+                     * @param _multiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
                      * 
                      */
                     void SetMultiViewImageInfos(const std::vector<AigcHunyuan3DMultiViewImageInfo>& _multiViewImageInfos);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool MeshInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
-                     * @return EnablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * 获取<p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * @return EnablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
                      * 
                      */
                     std::string GetEnablePBR() const;
 
                     /**
-                     * 设置<p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
-                     * @param _enablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * 设置<p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * @param _enablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
                      * 
                      */
                     void SetEnablePBR(const std::string& _enablePBR);
@@ -198,15 +198,15 @@ namespace TencentCloud
                     bool FaceCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
-                     * @return KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * 获取<p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * @return KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
                      * 
                      */
                     std::string GetKeepUV() const;
 
                     /**
-                     * 设置<p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
-                     * @param _keepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * 设置<p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * @param _keepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
                      * 
                      */
                     void SetKeepUV(const std::string& _keepUV);
@@ -261,15 +261,15 @@ namespace TencentCloud
                     bool SeedHasBeenSet() const;
 
                     /**
-                     * 获取<p>Style control words.</p>
-                     * @return Style <p>Style control words.</p>
+                     * 获取<p>Style control word.</p>
+                     * @return Style <p>Style control word.</p>
                      * 
                      */
                     std::string GetStyle() const;
 
                     /**
-                     * 设置<p>Style control words.</p>
-                     * @param _style <p>Style control words.</p>
+                     * 设置<p>Style control word.</p>
+                     * @param _style <p>Style control word.</p>
                      * 
                      */
                     void SetStyle(const std::string& _style);
@@ -311,7 +311,7 @@ namespace TencentCloud
                     bool m_imageInfosHasBeenSet;
 
                     /**
-                     * <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+                     * <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
                      */
                     std::vector<AigcHunyuan3DMultiViewImageInfo> m_multiViewImageInfos;
                     bool m_multiViewImageInfosHasBeenSet;
@@ -335,7 +335,7 @@ namespace TencentCloud
                     bool m_meshInfosHasBeenSet;
 
                     /**
-                     * <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
                      */
                     std::string m_enablePBR;
                     bool m_enablePBRHasBeenSet;
@@ -347,7 +347,7 @@ namespace TencentCloud
                     bool m_faceCountHasBeenSet;
 
                     /**
-                     * <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
                      */
                     std::string m_keepUV;
                     bool m_keepUVHasBeenSet;
@@ -365,7 +365,7 @@ namespace TencentCloud
                     bool m_seedHasBeenSet;
 
                     /**
-                     * <p>Style control words.</p>
+                     * <p>Style control word.</p>
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;

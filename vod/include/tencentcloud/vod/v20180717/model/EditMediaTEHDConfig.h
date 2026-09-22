@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
-                     * @return Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+                     * 获取Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
+                     * @return Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
-                     * @param _type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+                     * 设置Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
+                     * @param _type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
-                     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+                     * 获取Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
+                     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
                      * 
                      */
                     uint64_t GetMaxVideoBitrate() const;
 
                     /**
-                     * 设置Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
-                     * @param _maxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+                     * 设置Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
+                     * @param _maxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
                      * 
                      */
                     void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
@@ -95,14 +95,14 @@ Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
                 private:
 
                     /**
-                     * Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+                     * Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+                     * Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
                      */
                     uint64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;

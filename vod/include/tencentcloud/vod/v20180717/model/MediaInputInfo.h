@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Source video information to process, including video name and custom video ID.
+                * Source video information to be processed, including video name and custom video ID.
                 */
                 class MediaInputInfo : public AbstractModel
                 {

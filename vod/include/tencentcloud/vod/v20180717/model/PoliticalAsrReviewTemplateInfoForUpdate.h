@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task control parameters for ASR-based recognition involving inappropriate information.
+                * Task control parameter for ASR-based recognition involving inappropriate information.
                 */
                 class PoliticalAsrReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task of ASR-based recognition involving inappropriate information;</li>
-<li>OFF: disables the task involving inappropriate information in ASR-based recognition.</li>
+<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
+<li>OFF: disables the task involving inappropriate content in ASR-based recognition.</li>
                      * @return Switch Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task of ASR-based recognition involving inappropriate information;</li>
-<li>OFF: disables the task involving inappropriate information in ASR-based recognition.</li>
+<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
+<li>OFF: disables the task involving inappropriate content in ASR-based recognition.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task of ASR-based recognition involving inappropriate information;</li>
-<li>OFF: disables the task involving inappropriate information in ASR-based recognition.</li>
+<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
+<li>OFF: disables the task involving inappropriate content in ASR-based recognition.</li>
                      * @param _switch Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task of ASR-based recognition involving inappropriate information;</li>
-<li>OFF: disables the task involving inappropriate information in ASR-based recognition.</li>
+<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
+<li>OFF: disables the task involving inappropriate content in ASR-based recognition.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining suspected violations. When the video moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.
-                     * @return BlockConfidence Threshold score for determining suspected violations. When the video moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.
+                     * 获取Threshold score for suspected violations. If the audio/video moderation score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+                     * @return BlockConfidence Threshold score for suspected violations. If the audio/video moderation score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining suspected violations. When the video moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.
-                     * @param _blockConfidence Threshold score for determining suspected violations. When the video moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.
+                     * 设置Threshold score for suspected violations. If the audio/video moderation score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+                     * @param _blockConfidence Threshold score for suspected violations. If the audio/video moderation score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+                     * 获取Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+                     * 设置Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -121,20 +121,20 @@ namespace TencentCloud
 
                     /**
                      * Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task of ASR-based recognition involving inappropriate information;</li>
-<li>OFF: disables the task involving inappropriate information in ASR-based recognition.</li>
+<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
+<li>OFF: disables the task involving inappropriate content in ASR-based recognition.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Threshold score for determining suspected violations. When the video moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.
+                     * Threshold score for suspected violations. If the audio/video moderation score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+                     * Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuotaTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
-                     * @return ApiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+                     * 获取<p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
+                     * @return ApiToken <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
                      * 
                      */
                     std::string GetApiToken() const;
 
                     /**
-                     * 设置<p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
-                     * @param _apiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+                     * 设置<p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
+                     * @param _apiToken <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
                      * 
                      */
                     void SetApiToken(const std::string& _apiToken);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ApiTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
-                     * @return QuotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+                     * 获取<p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
+                     * @return QuotaLimit <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
                      * 
                      */
                     uint64_t GetQuotaLimit() const;
 
                     /**
-                     * 设置<p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
-                     * @param _quotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+                     * 设置<p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
+                     * @param _quotaLimit <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
                      * 
                      */
                     void SetQuotaLimit(const uint64_t& _quotaLimit);
@@ -139,13 +139,13 @@ namespace TencentCloud
                     bool m_quotaTypeHasBeenSet;
 
                     /**
-                     * <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+                     * <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;
 
                     /**
-                     * <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+                     * <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
                      */
                     uint64_t m_quotaLimit;
                     bool m_quotaLimitHasBeenSet;

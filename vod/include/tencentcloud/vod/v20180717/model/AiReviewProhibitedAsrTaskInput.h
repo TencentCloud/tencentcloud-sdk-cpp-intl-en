@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type for Asr text prohibited information recognition in audio/video moderation tasks
+                * Input parameter type for prohibited information recognition in Asr text in audio/video moderation
                 */
                 class AiReviewProhibitedAsrTaskInput : public AbstractModel
                 {

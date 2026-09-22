@@ -101,15 +101,15 @@ The format of Type must be HLS format.
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取Program ID assigned by the system.
-                     * @return ItemId Program ID assigned by the system.
+                     * 获取Play program ID, assigned by the system.
+                     * @return ItemId Play program ID, assigned by the system.
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置Program ID assigned by the system.
-                     * @param _itemId Program ID assigned by the system.
+                     * 设置Play program ID, assigned by the system.
+                     * @param _itemId Play program ID, assigned by the system.
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -160,7 +160,7 @@ The format of Type must be HLS format.
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * Program ID assigned by the system.
+                     * Play program ID, assigned by the system.
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;

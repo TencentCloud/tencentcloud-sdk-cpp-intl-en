@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return Date Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return Date Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _date Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _date Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -68,24 +68,24 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取URL address of the playback statistics file. The content of the playback statistics file is:
+                     * 获取URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
 <li> host_name	Domain name.</li>
-                     * @return Url URL address of the playback statistics file. The content of the playback statistics file is:
+                     * @return Url URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
@@ -95,24 +95,24 @@ namespace TencentCloud
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL address of the playback statistics file. The content of the playback statistics file is:
+                     * 设置URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
 <li> host_name	Domain name.</li>
-                     * @param _url URL address of the playback statistics file. The content of the playback statistics file is:
+                     * @param _url URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>
@@ -131,19 +131,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Date of playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Date of the playback statistics in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * URL address of the playback statistics file. The content of the playback statistics file is:
+                     * URL address of the playback statistics file. The playback statistics file contains:
 <li> date: Playback date.</li>
 <li> file_id: Video file ID.</li>
 <li> ip_count: Number of client IPs after deduplication.</li>
 <li> flux: playback traffic volume, unit: byte.</li>
 <li> play_times: total number of plays.</li>
-<li> pc_play_times: Playback times on PC.</li>
+<li> pc_play_times: Number of plays on PC.</li>
 <li> mobile_play_times: Mobile playback count.</li>
 <li> iphone_play_times: Number of plays on iPhone.</li>
 <li> android_play_times: Number of plays on Android.</li>

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Source file information for video stitching (2017 version)
+                * Source file information for video stitching (2017)
                 */
                 class ConcatFileInfo2017 : public AbstractModel
                 {
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain names or IP addresses of source files for video splicing.
-                     * @return FileUrl Domain names or IP addresses of source files for video splicing.
+                     * 获取Addresses of the source files for video stitching.
+                     * @return FileUrl Addresses of the source files for video stitching.
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置Domain names or IP addresses of source files for video splicing.
-                     * @param _fileUrl Domain names or IP addresses of source files for video splicing.
+                     * 设置Addresses of the source files for video stitching.
+                     * @param _fileUrl Addresses of the source files for video stitching.
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -182,7 +182,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Domain names or IP addresses of source files for video splicing.
+                     * Addresses of the source files for video stitching.
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;

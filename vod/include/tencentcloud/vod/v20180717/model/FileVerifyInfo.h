@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * File validation information
+                * File verification information
                 */
                 class FileVerifyInfo : public AbstractModel
                 {

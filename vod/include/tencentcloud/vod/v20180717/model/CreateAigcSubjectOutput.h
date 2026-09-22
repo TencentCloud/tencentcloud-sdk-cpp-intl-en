@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Create principal output information.
+                * Create subject output information.
                 */
                 class CreateAigcSubjectOutput : public AbstractModel
                 {

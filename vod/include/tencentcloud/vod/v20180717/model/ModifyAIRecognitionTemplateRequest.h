@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio and video content recognition template unique identifier.
-                     * @return Definition Audio and video content recognition template unique identifier.
+                     * 获取Unique ID of the audio/video content recognition template.
+                     * @return Definition Unique ID of the audio/video content recognition template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Audio and video content recognition template unique identifier.
-                     * @param _definition Audio and video content recognition template unique identifier.
+                     * 设置Unique ID of the audio/video content recognition template.
+                     * @param _definition Unique ID of the audio/video content recognition template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Video content recognition template name. Length limit: 64 characters.
-                     * @return Name Video content recognition template name. Length limit: 64 characters.
+                     * 获取Audio/Video content recognition template name, with a length limit of 64 characters.
+                     * @return Name Audio/Video content recognition template name, with a length limit of 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Video content recognition template name. Length limit: 64 characters.
-                     * @param _name Video content recognition template name. Length limit: 64 characters.
+                     * 设置Audio/Video content recognition template name, with a length limit of 64 characters.
+                     * @param _name Audio/Video content recognition template name, with a length limit of 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for video opening and closing recognition.
-                     * @return HeadTailConfigure Control parameters for video opening and closing recognition.
+                     * 获取Video opening and closing recognition control parameter.
+                     * @return HeadTailConfigure Video opening and closing recognition control parameter.
                      * 
                      */
                     HeadTailConfigureInfoForUpdate GetHeadTailConfigure() const;
 
                     /**
-                     * 设置Control parameters for video opening and closing recognition.
-                     * @param _headTailConfigure Control parameters for video opening and closing recognition.
+                     * 设置Video opening and closing recognition control parameter.
+                     * @param _headTailConfigure Video opening and closing recognition control parameter.
                      * 
                      */
                     void SetHeadTailConfigure(const HeadTailConfigureInfoForUpdate& _headTailConfigure);
@@ -178,15 +178,15 @@ namespace TencentCloud
                     bool SegmentConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for face recognition.
-                     * @return FaceConfigure Control parameters for face recognition.
+                     * 获取Face recognition control parameter.
+                     * @return FaceConfigure Face recognition control parameter.
                      * 
                      */
                     FaceConfigureInfoForUpdate GetFaceConfigure() const;
 
                     /**
-                     * 设置Control parameters for face recognition.
-                     * @param _faceConfigure Control parameters for face recognition.
+                     * 设置Face recognition control parameter.
+                     * @param _faceConfigure Face recognition control parameter.
                      * 
                      */
                     void SetFaceConfigure(const FaceConfigureInfoForUpdate& _faceConfigure);
@@ -242,18 +242,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * @return AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * 
                      */
                     AsrFullTextConfigureInfoForUpdate GetAsrFullTextConfigure() const;
 
                     /**
                      * 设置Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * @param _asrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * 
                      */
                     void SetAsrFullTextConfigure(const AsrFullTextConfigureInfoForUpdate& _asrFullTextConfigure);
@@ -329,15 +329,15 @@ namespace TencentCloud
                     bool ObjectConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Frame interception interval in seconds. Minimum value: 0.5 seconds.
-                     * @return ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
+                     * 获取Frame interval in seconds, with a minimum value of 0.5 seconds.
+                     * @return ScreenshotInterval Frame interval in seconds, with a minimum value of 0.5 seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Frame interception interval in seconds. Minimum value: 0.5 seconds.
-                     * @param _screenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
+                     * 设置Frame interval in seconds, with a minimum value of 0.5 seconds.
+                     * @param _screenshotInterval Frame interval in seconds, with a minimum value of 0.5 seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -352,19 +352,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio and video content recognition template unique identifier.
+                     * Unique ID of the audio/video content recognition template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Video content recognition template name. Length limit: 64 characters.
+                     * Audio/Video content recognition template name, with a length limit of 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -376,7 +376,7 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Control parameters for video opening and closing recognition.
+                     * Video opening and closing recognition control parameter.
                      */
                     HeadTailConfigureInfoForUpdate m_headTailConfigure;
                     bool m_headTailConfigureHasBeenSet;
@@ -388,7 +388,7 @@ namespace TencentCloud
                     bool m_segmentConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for face recognition.
+                     * Face recognition control parameter.
                      */
                     FaceConfigureInfoForUpdate m_faceConfigure;
                     bool m_faceConfigureHasBeenSet;
@@ -407,7 +407,7 @@ namespace TencentCloud
 
                     /**
                      * Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      */
                     AsrFullTextConfigureInfoForUpdate m_asrFullTextConfigure;
                     bool m_asrFullTextConfigureHasBeenSet;
@@ -431,7 +431,7 @@ namespace TencentCloud
                     bool m_objectConfigureHasBeenSet;
 
                     /**
-                     * Frame interception interval in seconds. Minimum value: 0.5 seconds.
+                     * Frame interval in seconds, with a minimum value of 0.5 seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;

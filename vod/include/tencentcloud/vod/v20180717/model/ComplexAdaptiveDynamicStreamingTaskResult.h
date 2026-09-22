@@ -51,12 +51,12 @@ namespace TencentCloud
                     /**
                      * 获取Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
                      * @return Status Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -64,12 +64,12 @@ namespace TencentCloud
                     /**
                      * 设置Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
                      * @param _status Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -145,15 +145,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of an adaptive bitrate streaming task.
-                     * @return Input Input of an adaptive bitrate streaming task.
+                     * 获取Input of an adaptive bitrate task.
+                     * @return Input Input of an adaptive bitrate task.
                      * 
                      */
                     ComplexAdaptiveDynamicStreamingTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of an adaptive bitrate streaming task.
-                     * @param _input Input of an adaptive bitrate streaming task.
+                     * 设置Input of an adaptive bitrate task.
+                     * @param _input Input of an adaptive bitrate task.
                      * 
                      */
                     void SetInput(const ComplexAdaptiveDynamicStreamingTaskInput& _input);
@@ -191,8 +191,8 @@ namespace TencentCloud
                     /**
                      * Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -216,7 +216,7 @@ namespace TencentCloud
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of an adaptive bitrate streaming task.
+                     * Input of an adaptive bitrate task.
                      */
                     ComplexAdaptiveDynamicStreamingTaskInput m_input;
                     bool m_inputHasBeenSet;

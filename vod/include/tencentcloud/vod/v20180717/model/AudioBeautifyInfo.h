@@ -48,10 +48,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
                      * @return Switch Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
                      * 
                      */
@@ -59,10 +59,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
                      * @param _switch Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
                      * 
                      */
@@ -112,7 +112,7 @@ Default value: declick.
 
                     /**
                      * Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
                      */
                     std::string m_switch;

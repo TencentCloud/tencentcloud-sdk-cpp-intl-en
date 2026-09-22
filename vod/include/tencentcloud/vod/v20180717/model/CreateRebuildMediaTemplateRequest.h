@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output file container format. Available values: mp4, flv, hls.
-                     * @return Container Output file container format. Available values: mp4, flv, hls.
+                     * 获取Output file container format. Available values: mp4, flv, and hls.
+                     * @return Container Output file container format. Available values: mp4, flv, and hls.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Output file container format. Available values: mp4, flv, hls.
-                     * @param _container Output file container format. Available values: mp4, flv, hls.
+                     * 设置Output file container format. Available values: mp4, flv, and hls.
+                     * @param _container Output file container format. Available values: mp4, flv, and hls.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
-                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
-                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video quality rebirth template name.
-                     * @return Name Audio and video quality rebirth template name.
+                     * 获取Audio-visual quality rebirth template name.
+                     * @return Name Audio-visual quality rebirth template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Audio and video quality rebirth template name.
-                     * @param _name Audio and video quality rebirth template name.
+                     * 设置Audio-visual quality rebirth template name.
+                     * @param _name Audio-visual quality rebirth template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取Audio-visual quality revival audio control control information.
-                     * @return RebuildAudioInfo Audio-visual quality revival audio control control information.
+                     * 获取Audio-visual quality revival audio control information.
+                     * @return RebuildAudioInfo Audio-visual quality revival audio control information.
                      * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
-                     * 设置Audio-visual quality revival audio control control information.
-                     * @param _rebuildAudioInfo Audio-visual quality revival audio control control information.
+                     * 设置Audio-visual quality revival audio control information.
+                     * @param _rebuildAudioInfo Audio-visual quality revival audio control information.
                      * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
@@ -216,11 +216,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @return RemoveVideo Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -229,11 +229,11 @@ Default value: 0.
 
                     /**
                      * 设置Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @param _removeVideo Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -249,11 +249,11 @@ Default value: 0.
 
                     /**
                      * 获取Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @return RemoveAudio Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -262,11 +262,11 @@ Default value: 0.
 
                     /**
                      * 设置Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @param _removeAudio Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -283,19 +283,19 @@ Default value: 0.
                 private:
 
                     /**
-                     * Output file container format. Available values: mp4, flv, hls.
+                     * Output file container format. Available values: mp4, flv, and hls.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Audio and video quality rebirth template name.
+                     * Audio-visual quality rebirth template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -313,7 +313,7 @@ Default value: 0.
                     bool m_rebuildVideoInfoHasBeenSet;
 
                     /**
-                     * Audio-visual quality revival audio control control information.
+                     * Audio-visual quality revival audio control information.
                      */
                     RebuildAudioInfo m_rebuildAudioInfo;
                     bool m_rebuildAudioInfoHasBeenSet;
@@ -332,7 +332,7 @@ Default value: 0.
 
                     /**
                      * Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      */
@@ -341,7 +341,7 @@ Default value: 0.
 
                     /**
                      * Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
                      */

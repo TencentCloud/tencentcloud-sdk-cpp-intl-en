@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path cache no cache configuration toggle, Value:
+                     * 获取Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Path cache no cache configuration toggle, Value:
+                     * @return Switch Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Path cache no cache configuration toggle, Value:
+                     * 设置Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Path cache no cache configuration toggle, Value:
+                     * @param _switch Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -76,10 +76,10 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Always validate against the origin server. Value:
+                     * 获取Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Revalidate Always validate against the origin server. Value:
+                     * @return Revalidate Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -87,10 +87,10 @@ namespace TencentCloud
                     std::string GetRevalidate() const;
 
                     /**
-                     * 设置Always validate against the origin server. Value:
+                     * 设置Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _revalidate Always validate against the origin server. Value:
+                     * @param _revalidate Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -107,7 +107,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Path cache no cache configuration toggle, Value:
+                     * Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */
@@ -115,7 +115,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Always validate against the origin server. Value:
+                     * Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

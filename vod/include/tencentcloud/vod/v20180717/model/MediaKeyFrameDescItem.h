@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp content string, limited to 1–128 characters.
-                     * @return Content Timestamp content string, limited to 1–128 characters.
+                     * 获取Content string for marking points. Limited to 1-128 characters.
+                     * @return Content Content string for marking points. Limited to 1-128 characters.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Timestamp content string, limited to 1–128 characters.
-                     * @param _content Timestamp content string, limited to 1–128 characters.
+                     * 设置Content string for marking points. Limited to 1-128 characters.
+                     * @param _content Content string for marking points. Limited to 1-128 characters.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * Timestamp content string, limited to 1–128 characters.
+                     * Content string for marking points. Limited to 1-128 characters.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

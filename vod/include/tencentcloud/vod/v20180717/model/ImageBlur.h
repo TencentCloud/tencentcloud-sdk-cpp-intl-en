@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
-                     * @return Radius Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+                     * 获取Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
+                     * @return Radius Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
                      * 
                      */
                     int64_t GetRadius() const;
 
                     /**
-                     * 设置Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
-                     * @param _radius Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+                     * 设置Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
+                     * @param _radius Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
                      * 
                      */
                     void SetRadius(const int64_t& _radius);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool RadiusHasBeenSet() const;
 
                     /**
-                     * 获取Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
-                     * @return Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+                     * 获取Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
+                     * @return Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
                      * 
                      */
                     int64_t GetSigma() const;
 
                     /**
-                     * 设置Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
-                     * @param _sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+                     * 设置Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
+                     * @param _sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
                      * 
                      */
                     void SetSigma(const int64_t& _sigma);
@@ -123,13 +123,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+                     * Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
                      */
                     int64_t m_radius;
                     bool m_radiusHasBeenSet;
 
                     /**
-                     * Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+                     * Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
                      */
                     int64_t m_sigma;
                     bool m_sigmaHasBeenSet;

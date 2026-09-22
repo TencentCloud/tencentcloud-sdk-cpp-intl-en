@@ -78,10 +78,10 @@ namespace TencentCloud
                     /**
                      * 获取Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
                      * @return RedirectType Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
                      * 
                      */
                     std::string GetRedirectType() const;
@@ -89,10 +89,10 @@ namespace TencentCloud
                     /**
                      * 设置Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
                      * @param _redirectType Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
                      * 
                      */
                     void SetRedirectType(const std::string& _redirectType);
@@ -159,7 +159,7 @@ namespace TencentCloud
                     /**
                      * Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
                      */
                     std::string m_redirectType;
                     bool m_redirectTypeHasBeenSet;

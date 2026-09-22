@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Extract the configuration of a video transcoding digital watermarking task
+                * Extract the digital watermark task configuration for video transcoding
                 */
                 class ExtractBlindWatermarkTaskConfig : public AbstractModel
                 {

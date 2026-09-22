@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image asynchronous processing configuration.
+                * Asynchronous image processing configuration.
                 */
                 class ProcessImageAsyncTask : public AbstractModel
                 {

@@ -70,10 +70,10 @@ namespace TencentCloud
                     /**
                      * 获取Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
                      * @return Suggestion Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
@@ -81,10 +81,10 @@ namespace TencentCloud
                     /**
                      * 设置Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
                      * @param _suggestion Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -97,38 +97,38 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the most likely rule violation in the suspected segment. Value range:
+                     * 获取Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
-                     * @return Label Tag of the most likely rule violation in the suspected segment. Value range:
+                     * @return Label Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of the most likely rule violation in the suspected segment. Value range:
+                     * 设置Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
-                     * @param _label Tag of the most likely rule violation in the suspected segment. Value range:
+                     * @param _label Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
                      * 
                      */
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Rule violation subtag.
-                     * @return SubLabel Rule violation subtag.
+                     * 获取Rule-violating subtag.
+                     * @return SubLabel Rule-violating subtag.
                      * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
-                     * 设置Rule violation subtag.
-                     * @param _subLabel Rule violation subtag.
+                     * 设置Rule-violating subtag.
+                     * @param _subLabel Rule-violating subtag.
                      * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
@@ -163,23 +163,23 @@ namespace TencentCloud
                     bool SubLabelHasBeenSet() const;
 
                     /**
-                     * 获取Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
-                     * @return Form Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
+                     * 获取Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
+                     * @return Form Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
                      * 
                      */
                     std::string GetForm() const;
 
                     /**
-                     * 设置Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
-                     * @param _form Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
+                     * 设置Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
+                     * @param _form Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
                      * 
                      */
                     void SetForm(const std::string& _form);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool FormHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-                     * @return AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * 获取Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+                     * @return AreaCoordSet Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-                     * @param _areaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * 设置Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+                     * @param _areaCoordSet Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -265,39 +265,39 @@ namespace TencentCloud
                     /**
                      * Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of the most likely rule violation in the suspected segment. Value range:
+                     * Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Rule violation subtag.
+                     * Rule-violating subtag.
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
 
                     /**
-                     * Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
+                     * Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
                      */
                     std::string m_form;
                     bool m_formHasBeenSet;
 
                     /**
-                     * Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

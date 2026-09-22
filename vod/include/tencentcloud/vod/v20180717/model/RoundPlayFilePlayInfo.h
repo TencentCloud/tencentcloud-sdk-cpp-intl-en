@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Playlist program ID assigned by the system.
-                     * @return ItemId Playlist program ID assigned by the system.
+                     * 获取Playlist item ID, assigned by the system.
+                     * @return ItemId Playlist item ID, assigned by the system.
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置Playlist program ID assigned by the system.
-                     * @param _itemId Playlist program ID assigned by the system.
+                     * 设置Playlist item ID, assigned by the system.
+                     * @param _itemId Playlist item ID, assigned by the system.
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartPlayTimeHasBeenSet() const;
 
                     /**
-                     * 获取Playback duration, in seconds.
-                     * @return Duration Playback duration, in seconds.
+                     * 获取Playback duration in seconds.
+                     * @return Duration Playback duration in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Playback duration, in seconds.
-                     * @param _duration Playback duration, in seconds.
+                     * 设置Playback duration in seconds.
+                     * @param _duration Playback duration in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Playlist program ID assigned by the system.
+                     * Playlist item ID, assigned by the system.
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_startPlayTimeHasBeenSet;
 
                     /**
-                     * Playback duration, in seconds.
+                     * Playback duration in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;

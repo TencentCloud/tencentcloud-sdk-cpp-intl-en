@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter configuration for AI product image generation
+                * Parameter configuration for AI-generated product images
                 */
                 class ProductImageConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Prompt for image generation background. If this field is default, inspiration is generated automatically.
-                     * @return Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
+                     * 获取Prompt for generating the image background. If this field is default, inspiration is generated automatically.
+                     * @return Prompt Prompt for generating the image background. If this field is default, inspiration is generated automatically.
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置Prompt for image generation background. If this field is default, inspiration is generated automatically.
-                     * @param _prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
+                     * 设置Prompt for generating the image background. If this field is default, inspiration is generated automatically.
+                     * @param _prompt Prompt for generating the image background. If this field is default, inspiration is generated automatically.
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取Prompt content used to prevent the model from generating images.
-                     * @return NegativePrompt Prompt content used to prevent the model from generating images.
+                     * 获取Prompt used to prevent the model from image generation.
+                     * @return NegativePrompt Prompt used to prevent the model from image generation.
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置Prompt content used to prevent the model from generating images.
-                     * @param _negativePrompt Prompt content used to prevent the model from generating images.
+                     * 设置Prompt used to prevent the model from image generation.
+                     * @param _negativePrompt Prompt used to prevent the model from image generation.
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -154,13 +154,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Prompt for image generation background. If this field is default, inspiration is generated automatically.
+                     * Prompt for generating the image background. If this field is default, inspiration is generated automatically.
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * Prompt content used to prevent the model from generating images.
+                     * Prompt used to prevent the model from image generation.
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;

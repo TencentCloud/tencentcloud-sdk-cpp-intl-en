@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tag information. Query the application list with a specified tag.
-                     * @return Tags Tag information. Query the application list with a specified tag.
+                     * 获取Tag information. Query the application list of a specified tag.
+                     * @return Tags Tag information. Query the application list of a specified tag.
                      * 
                      */
                     std::vector<ResourceTag> GetTags() const;
 
                     /**
-                     * 设置Tag information. Query the application list with a specified tag.
-                     * @param _tags Tag information. Query the application list with a specified tag.
+                     * 设置Tag information. Query the application list of a specified tag.
+                     * @param _tags Tag information. Query the application list of a specified tag.
                      * 
                      */
                     void SetTags(const std::vector<ResourceTag>& _tags);
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tag information. Query the application list with a specified tag.
+                     * Tag information. Query the application list of a specified tag.
                      */
                     std::vector<ResourceTag> m_tags;
                     bool m_tagsHasBeenSet;

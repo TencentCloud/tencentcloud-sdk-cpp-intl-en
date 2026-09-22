@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent frame tagging task control parameter
+                * Intelligent frame-specific tagging task control parameter.
                 */
                 class FrameTagConfigureInfo : public AbstractModel
                 {
@@ -48,10 +48,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
                      * @return Switch Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
                      * 
                      */
@@ -59,10 +59,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
                      * @param _switch Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
                      * 
                      */
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-                     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * 获取Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+                     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-                     * @param _screenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * 设置Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -100,14 +100,14 @@ namespace TencentCloud
 
                     /**
                      * Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;

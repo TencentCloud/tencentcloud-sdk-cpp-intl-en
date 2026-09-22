@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TaskSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
-                     * @return ScrollToken <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+                     * 获取<p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+                     * @return ScrollToken <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
                      * 
                      */
                     std::string GetScrollToken() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_taskSetHasBeenSet;
 
                     /**
-                     * <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+                     * <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;

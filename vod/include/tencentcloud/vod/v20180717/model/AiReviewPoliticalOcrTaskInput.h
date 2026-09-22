@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task input parameter type for audio/video moderation where Ocr text involves inappropriate information
+                * Task input parameter type for Ocr text involving inappropriate information in audio/video moderation
                 */
                 class AiReviewPoliticalOcrTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID for authentication involving inappropriate information.
-                     * @return Definition Template ID for authentication involving inappropriate information.
+                     * 获取Template ID for authenticating content that involves inappropriate information.
+                     * @return Definition Template ID for authenticating content that involves inappropriate information.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Template ID for authentication involving inappropriate information.
-                     * @param _definition Template ID for authentication involving inappropriate information.
+                     * 设置Template ID for authenticating content that involves inappropriate information.
+                     * @param _definition Template ID for authenticating content that involves inappropriate information.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID for authentication involving inappropriate information.
+                     * Template ID for authenticating content that involves inappropriate information.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

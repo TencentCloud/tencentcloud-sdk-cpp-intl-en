@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio/video moderation task type
+                * Type of the audio/video moderation task
                 */
                 class AiContentReviewTaskInput : public AbstractModel
                 {

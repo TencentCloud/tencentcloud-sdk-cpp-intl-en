@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reserved field, used for special purposes.
-                     * @return ExtInfo Reserved field, used for special purposes.
+                     * 获取Reserved field, used for special purpose.
+                     * @return ExtInfo Reserved field, used for special purpose.
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field, used for special purposes.
-                     * @param _extInfo Reserved field, used for special purposes.
+                     * 设置Reserved field, used for special purpose.
+                     * @param _extInfo Reserved field, used for special purpose.
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Reserved field, used for special purposes.
+                     * Reserved field, used for special purpose.
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

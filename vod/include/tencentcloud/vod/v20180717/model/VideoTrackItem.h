@@ -50,26 +50,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * @return SourceMedia Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     std::string GetSourceMedia() const;
 
                     /**
                      * 设置Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * @param _sourceMedia Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
@@ -103,15 +103,15 @@ Note: When using the download URL of another media file as the material source a
                     bool SourceMediaStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
-                     * @return Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * 获取Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * @return Duration Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
-                     * @param _duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * 设置Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * @param _duration Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -126,10 +126,10 @@ Note: When using the download URL of another media file as the material source a
                     /**
                      * 获取Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
                      * @return TargetDuration Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
                      * 
                      */
                     double GetTargetDuration() const;
@@ -137,10 +137,10 @@ Note: When using the download URL of another media file as the material source a
                     /**
                      * 设置Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
                      * @param _targetDuration Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
                      * 
                      */
                     void SetTargetDuration(const double& _targetDuration);
@@ -182,12 +182,12 @@ Default value: Center.
                     bool CoordinateOriginHasBeenSet() const;
 
                     /**
-                     * 获取Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+                     * 获取Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-                     * @return XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+                     * @return XPos Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
                      * 
@@ -195,12 +195,12 @@ Default value: 0px.
                     std::string GetXPos() const;
 
                     /**
-                     * 设置Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+                     * 设置Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-                     * @param _xPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+                     * @param _xPos Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
                      * 
@@ -215,12 +215,12 @@ Default value: 0px.
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+                     * 获取Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
-                     * @return YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+                     * @return YPos Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      * 
@@ -228,12 +228,12 @@ Default value: 0px.
                     std::string GetYPos() const;
 
                     /**
-                     * 设置Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+                     * 设置Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
-                     * @param _yPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+                     * @param _yPos Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      * 
@@ -351,15 +351,15 @@ Default value: 0px.
                     bool AudioOperationsHasBeenSet() const;
 
                     /**
-                     * 获取Operation performed on the image, for example, image rotation.
-                     * @return ImageOperations Operation performed on the image, for example, image rotation.
+                     * 获取Operation performed on the image, such as image rotation.
+                     * @return ImageOperations Operation performed on the image, such as image rotation.
                      * 
                      */
                     std::vector<ImageTransform> GetImageOperations() const;
 
                     /**
-                     * 设置Operation performed on the image, for example, image rotation.
-                     * @param _imageOperations Operation performed on the image, for example, image rotation.
+                     * 设置Operation performed on the image, such as image rotation.
+                     * @param _imageOperations Operation performed on the image, such as image rotation.
                      * 
                      */
                     void SetImageOperations(const std::vector<ImageTransform>& _imageOperations);
@@ -375,9 +375,9 @@ Default value: 0px.
 
                     /**
                      * Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      */
                     std::string m_sourceMedia;
                     bool m_sourceMediaHasBeenSet;
@@ -389,7 +389,7 @@ Note: When using the download URL of another media file as the material source a
                     bool m_sourceMediaStartTimeHasBeenSet;
 
                     /**
-                     * Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
@@ -397,7 +397,7 @@ Note: When using the download URL of another media file as the material source a
                     /**
                      * Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
                      */
                     double m_targetDuration;
                     bool m_targetDurationHasBeenSet;
@@ -411,8 +411,8 @@ Default value: Center.
                     bool m_coordinateOriginHasBeenSet;
 
                     /**
-                     * Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+                     * Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
                      */
@@ -420,8 +420,8 @@ Default value: 0px.
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+                     * Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
                      */
@@ -457,7 +457,7 @@ Default value: 0px.
                     bool m_audioOperationsHasBeenSet;
 
                     /**
-                     * Operation performed on the image, for example, image rotation.
+                     * Operation performed on the image, such as image rotation.
                      */
                     std::vector<ImageTransform> m_imageOperations;
                     bool m_imageOperationsHasBeenSet;

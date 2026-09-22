@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取List of template IDs used for watermarking if the screenshot is watermarked.
-                     * @return WaterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
+                     * 获取List of template IDs if the screenshot is watermarked.
+                     * @return WaterMarkDefinition List of template IDs if the screenshot is watermarked.
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置List of template IDs used for watermarking if the screenshot is watermarked.
-                     * @param _waterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
+                     * 设置List of template IDs if the screenshot is watermarked.
+                     * @param _waterMarkDefinition List of template IDs if the screenshot is watermarked.
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * List of template IDs used for watermarking if the screenshot is watermarked.
+                     * List of template IDs if the screenshot is watermarked.
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

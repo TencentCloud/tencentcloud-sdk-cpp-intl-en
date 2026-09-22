@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Audio stream bitrate, unit: bps.</p>
-                     * @return Bitrate <p>Audio stream bitrate, unit: bps.</p>
+                     * 获取<p>Bitrate of the audio stream. Unit: bps.</p>
+                     * @return Bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置<p>Audio stream bitrate, unit: bps.</p>
-                     * @param _bitrate <p>Audio stream bitrate, unit: bps.</p>
+                     * 设置<p>Bitrate of the audio stream. Unit: bps.</p>
+                     * @param _bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Audio stream bitrate, unit: bps.</p>
+                     * <p>Bitrate of the audio stream. Unit: bps.</p>
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

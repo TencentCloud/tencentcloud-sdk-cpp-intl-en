@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of IDs of files to delete.</p>
-                     * @return FileIdSet <p>List of IDs of files to delete.</p>
+                     * 获取<p>List of file IDs to delete.</p>
+                     * @return FileIdSet <p>List of file IDs to delete.</p>
                      * 
                      */
                     std::vector<std::string> GetFileIdSet() const;
 
                     /**
-                     * 设置<p>List of IDs of files to delete.</p>
-                     * @param _fileIdSet <p>List of IDs of files to delete.</p>
+                     * 设置<p>List of file IDs to delete.</p>
+                     * @param _fileIdSet <p>List of file IDs to delete.</p>
                      * 
                      */
                     void SetFileIdSet(const std::vector<std::string>& _fileIdSet);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>List of IDs of files to delete.</p>
+                     * <p>List of file IDs to delete.</p>
                      */
                     std::vector<std::string> m_fileIdSet;
                     bool m_fileIdSetHasBeenSet;

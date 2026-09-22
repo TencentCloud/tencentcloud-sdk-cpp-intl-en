@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Suspected segment of Ocr text in audio/video moderation
+                * Suspected segment of Ocr text in video moderation
                 */
                 class MediaContentReviewOcrTextSegmentItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of the suspected segment, in seconds.
-                     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
+                     * 获取End time offset of a suspected segment, in seconds.
+                     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of the suspected segment, in seconds.
-                     * @param _endTimeOffset End time offset of the suspected segment, in seconds.
+                     * 设置End time offset of a suspected segment, in seconds.
+                     * @param _endTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of suspicious keywords.
-                     * @return KeywordSet List of suspicious keywords.
+                     * 获取List of suspect keywords.
+                     * @return KeywordSet List of suspect keywords.
                      * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
-                     * 设置List of suspicious keywords.
-                     * @param _keywordSet List of suspicious keywords.
+                     * 设置List of suspect keywords.
+                     * @param _keywordSet List of suspect keywords.
                      * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
@@ -164,15 +164,15 @@ namespace TencentCloud
                     bool KeywordSetHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-                     * @return AreaCoordSet Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * 获取Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+                     * @return AreaCoordSet Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-                     * @param _areaCoordSet Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * 设置Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+                     * @param _areaCoordSet Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -185,18 +185,18 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * 获取Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * @return Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * 设置Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @param _url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * @param _url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
@@ -239,7 +239,7 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of the suspected segment, in seconds.
+                     * End time offset of a suspected segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
@@ -260,19 +260,19 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of suspicious keywords.
+                     * List of suspect keywords.
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;
 
                     /**
-                     * Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;

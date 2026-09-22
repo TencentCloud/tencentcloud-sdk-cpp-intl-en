@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
-                     * @return Switch Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+                     * 获取Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+                     * @return Switch Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
-                     * @param _switch Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+                     * 设置Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+                     * @param _switch Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+                     * Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

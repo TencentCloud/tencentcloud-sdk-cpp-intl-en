@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subject reference information.
+                * Principal reference information.
                 */
                 class ElementReferInfo : public AbstractModel
                 {

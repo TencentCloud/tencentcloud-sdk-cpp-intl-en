@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini Program Audio and Video moderation information unit
+                * Mini Program Audio and Video review information unit
                 */
                 class MediaMiniProgramReviewInfoItem : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
-                     * @return Definition Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+                     * 获取Template ID. The transcoding template ID corresponding to the video released in the mini program. 0 indicates the original video.
+                     * @return Definition Template ID. The transcoding template ID corresponding to the video released in the mini program. 0 indicates the original video.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
-                     * @param _definition Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+                     * 设置Template ID. The transcoding template ID corresponding to the video released in the mini program. 0 indicates the original video.
+                     * @param _definition Template ID. The transcoding template ID corresponding to the video released in the mini program. 0 indicates the original video.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -112,10 +112,10 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Publishing status of the mini program video:
+                     * 获取Mini program video publishing status:
 <li>Pass: Succeeded.</li>
 <li>Rejected: failed.</li>
-                     * @return ReviewResult Publishing status of the mini program video:
+                     * @return ReviewResult Mini program video publishing status:
 <li>Pass: Succeeded.</li>
 <li>Rejected: failed.</li>
                      * 
@@ -123,10 +123,10 @@ namespace TencentCloud
                     std::string GetReviewResult() const;
 
                     /**
-                     * 设置Publishing status of the mini program video:
+                     * 设置Mini program video publishing status:
 <li>Pass: Succeeded.</li>
 <li>Rejected: failed.</li>
-                     * @param _reviewResult Publishing status of the mini program video:
+                     * @param _reviewResult Mini program video publishing status:
 <li>Pass: Succeeded.</li>
 <li>Rejected: failed.</li>
                      * 
@@ -141,15 +141,15 @@ namespace TencentCloud
                     bool ReviewResultHasBeenSet() const;
 
                     /**
-                     * 获取Mini Program Audio and Video moderation element.
-                     * @return ReviewSummary Mini Program Audio and Video moderation element.
+                     * 获取Mini Program Audio and Video review element.
+                     * @return ReviewSummary Mini Program Audio and Video review element.
                      * 
                      */
                     std::vector<MediaMiniProgramReviewElem> GetReviewSummary() const;
 
                     /**
-                     * 设置Mini Program Audio and Video moderation element.
-                     * @param _reviewSummary Mini Program Audio and Video moderation element.
+                     * 设置Mini Program Audio and Video review element.
+                     * @param _reviewSummary Mini Program Audio and Video review element.
                      * 
                      */
                     void SetReviewSummary(const std::vector<MediaMiniProgramReviewElem>& _reviewSummary);
@@ -164,7 +164,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+                     * Template ID. The transcoding template ID corresponding to the video released in the mini program. 0 indicates the original video.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -182,7 +182,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Publishing status of the mini program video:
+                     * Mini program video publishing status:
 <li>Pass: Succeeded.</li>
 <li>Rejected: failed.</li>
                      */
@@ -190,7 +190,7 @@ namespace TencentCloud
                     bool m_reviewResultHasBeenSet;
 
                     /**
-                     * Mini Program Audio and Video moderation element.
+                     * Mini Program Audio and Video review element.
                      */
                     std::vector<MediaMiniProgramReviewElem> m_reviewSummary;
                     bool m_reviewSummaryHasBeenSet;

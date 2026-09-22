@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of the Audio and Video Quality Rebirth Template.
+                * Audio-visual quality rebirth template details.
                 */
                 class RebuildMediaTemplate : public AbstractModel
                 {
@@ -101,15 +101,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video quality rebirth template name.
-                     * @return Name Audio and video quality rebirth template name.
+                     * 获取Audio-visual quality rebirth template name.
+                     * @return Name Audio-visual quality rebirth template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Audio and video quality rebirth template name.
-                     * @param _name Audio and video quality rebirth template name.
+                     * 设置Audio-visual quality rebirth template name.
+                     * @param _name Audio-visual quality rebirth template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -122,15 +122,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description of the Audio and Video Quality Rebirth Template.
-                     * @return Comment Description of the Audio and Video Quality Rebirth Template.
+                     * 获取Audio and video quality rebirth template description.
+                     * @return Comment Audio and video quality rebirth template description.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description of the Audio and Video Quality Rebirth Template.
-                     * @param _comment Description of the Audio and Video Quality Rebirth Template.
+                     * 设置Audio and video quality rebirth template description.
+                     * @param _comment Audio and video quality rebirth template description.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -314,15 +314,15 @@ Default value: 0.
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -335,15 +335,15 @@ Default value: 0.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -372,13 +372,13 @@ Default value: 0.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Audio and video quality rebirth template name.
+                     * Audio-visual quality rebirth template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description of the Audio and Video Quality Rebirth Template.
+                     * Audio and video quality rebirth template description.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
@@ -432,13 +432,13 @@ Default value: 0.
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

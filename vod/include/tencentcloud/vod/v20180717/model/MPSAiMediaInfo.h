@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent media information processed by MPS
+                * Intelligent media information after MPS processing
                 */
                 class MPSAiMediaInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent media information list processed by MPS
-                     * @return AiMediaList Intelligent media information list processed by MPS
+                     * 获取Intelligent media information list after MPS processing
+                     * @return AiMediaList Intelligent media information list after MPS processing
                      * 
                      */
                     std::vector<MPSAiMediaItem> GetAiMediaList() const;
 
                     /**
-                     * 设置Intelligent media information list processed by MPS
-                     * @param _aiMediaList Intelligent media information list processed by MPS
+                     * 设置Intelligent media information list after MPS processing
+                     * @param _aiMediaList Intelligent media information list after MPS processing
                      * 
                      */
                     void SetAiMediaList(const std::vector<MPSAiMediaItem>& _aiMediaList);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Intelligent media information list processed by MPS
+                     * Intelligent media information list after MPS processing
                      */
                     std::vector<MPSAiMediaItem> m_aiMediaList;
                     bool m_aiMediaListHasBeenSet;

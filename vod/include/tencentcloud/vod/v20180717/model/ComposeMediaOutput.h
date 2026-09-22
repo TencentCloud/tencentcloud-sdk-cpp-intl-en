@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filename, which contains up to 64 characters.
-                     * @return FileName Filename, which contains up to 64 characters.
+                     * 获取Filename, up to 64 characters.
+                     * @return FileName Filename, up to 64 characters.
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename, which contains up to 64 characters.
-                     * @param _fileName Filename, which contains up to 64 characters.
+                     * 设置Filename, up to 64 characters.
+                     * @param _fileName Filename, up to 64 characters.
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Description. Up to 128 characters.
-                     * @return Description Description. Up to 128 characters.
+                     * 获取Description. The maximum length is 128 characters.
+                     * @return Description Description. The maximum length is 128 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description. Up to 128 characters.
-                     * @param _description Description. Up to 128 characters.
+                     * 设置Description. The maximum length is 128 characters.
+                     * @param _description Description. The maximum length is 128 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -201,11 +201,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @return RemoveVideo Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -214,11 +214,11 @@ Default value: 0.
 
                     /**
                      * 设置Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @param _removeVideo Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -234,11 +234,11 @@ Default value: 0.
 
                     /**
                      * 获取Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @return RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -247,11 +247,11 @@ Default value: 0.
 
                     /**
                      * 设置Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * @param _removeAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      * 
@@ -268,13 +268,13 @@ Default value: 0.
                 private:
 
                     /**
-                     * Filename, which contains up to 64 characters.
+                     * Filename, up to 64 characters.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Description. Up to 128 characters.
+                     * Description. The maximum length is 128 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -312,7 +312,7 @@ Default value: 0.
 
                     /**
                      * Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      */
@@ -321,7 +321,7 @@ Default value: 0.
 
                     /**
                      * Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
                      */

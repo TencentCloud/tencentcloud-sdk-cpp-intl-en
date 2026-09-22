@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle suppression module text stroke configuration for MPS
+                * Text stroke configuration for the MPS subtitle suppression module
                 */
                 class MPSSubtitleOutlineConfig : public AbstractModel
                 {

@@ -81,15 +81,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
-                     * @return StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+                     * 获取Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
+                     * @return StartTimeOffset Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
-                     * @param _startTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+                     * 设置Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
+                     * @param _startTimeOffset Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -425,7 +425,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+                     * Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;

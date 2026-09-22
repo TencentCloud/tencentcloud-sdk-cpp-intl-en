@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of the AIGC video conversion task.
+                * Input of an AIGC video stylization task.
                 */
                 class AigcVideoRedrawTaskInput : public AbstractModel
                 {
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool FileInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>AIGC video conversion task parameter information.</p>
-                     * @return TaskInfo <p>AIGC video conversion task parameter information.</p>
+                     * 获取<p>AIGC video redrawing task parameter information.</p>
+                     * @return TaskInfo <p>AIGC video redrawing task parameter information.</p>
                      * 
                      */
                     AigcVideoRedrawTaskInfo GetTaskInfo() const;
 
                     /**
-                     * 设置<p>AIGC video conversion task parameter information.</p>
-                     * @param _taskInfo <p>AIGC video conversion task parameter information.</p>
+                     * 设置<p>AIGC video redrawing task parameter information.</p>
+                     * @param _taskInfo <p>AIGC video redrawing task parameter information.</p>
                      * 
                      */
                     void SetTaskInfo(const AigcVideoRedrawTaskInfo& _taskInfo);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_fileInfoHasBeenSet;
 
                     /**
-                     * <p>AIGC video conversion task parameter information.</p>
+                     * <p>AIGC video redrawing task parameter information.</p>
                      */
                     AigcVideoRedrawTaskInfo m_taskInfo;
                     bool m_taskInfoHasBeenSet;

@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
-                     * @return Segments List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+                     * 获取Video split task information list. It can simultaneously support up to 100 split information entries.
+                     * @return Segments Video split task information list. It can simultaneously support up to 100 split information entries.
                      * 
                      */
                     std::vector<SplitMediaTaskConfig> GetSegments() const;
 
                     /**
-                     * 设置List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
-                     * @param _segments List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+                     * 设置Video split task information list. It can simultaneously support up to 100 split information entries.
+                     * @param _segments Video split task information list. It can simultaneously support up to 100 split information entries.
                      * 
                      */
                     void SetSegments(const std::vector<SplitMediaTaskConfig>& _segments);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SegmentsHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
-                     * @return SessionContext Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+                     * 获取Identify source context, used to pass through user request information. This field value will be returned in SplitMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * @return SessionContext Identify source context, used to pass through user request information. This field value will be returned in SplitMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
-                     * @param _sessionContext Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+                     * 设置Identify source context, used to pass through user request information. This field value will be returned in SplitMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+                     * @param _sessionContext Identify source context, used to pass through user request information. This field value will be returned in SplitMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -178,19 +178,19 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+                     * Video split task information list. It can simultaneously support up to 100 split information entries.
                      */
                     std::vector<SplitMediaTaskConfig> m_segments;
                     bool m_segmentsHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+                     * Identify source context, used to pass through user request information. This field value will be returned in SplitMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

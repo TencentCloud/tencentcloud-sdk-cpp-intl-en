@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Suspected segments involving inappropriate information in audio/video moderation
+                * Suspected segments involving inappropriate information in video moderation
                 */
                 class MediaContentReviewPoliticalSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset time of the start of the suspected segment. Unit: seconds.
-                     * @return StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+                     * 获取Time offset of the start of the suspected segment. Unit: second.
+                     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Offset time of the start of the suspected segment. Unit: seconds.
-                     * @param _startTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+                     * 设置Time offset of the start of the suspected segment. Unit: second.
+                     * @param _startTimeOffset Time offset of the start of the suspected segment. Unit: second.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a suspected segment, in seconds.
-                     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
+                     * 获取End time offset of the suspected segment, in seconds.
+                     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a suspected segment, in seconds.
-                     * @param _endTimeOffset End time offset of a suspected segment, in seconds.
+                     * 设置End time offset of the suspected segment, in seconds.
+                     * @param _endTimeOffset End time offset of the suspected segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Score of the suspected segment.
-                     * @return Confidence Score of the suspected segment.
+                     * 获取Suspected segment score.
+                     * @return Confidence Suspected segment score.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of the suspected segment.
-                     * @param _confidence Score of the suspected segment.
+                     * 设置Suspected segment score.
+                     * @param _confidence Suspected segment score.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -164,7 +164,7 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+                     * 获取Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -182,13 +182,13 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
-                     * @return Label Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+<li>sensitive_military: relevant people involved in rule violation.</li>
+                     * @return Label Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -206,18 +206,18 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
+<li>sensitive_military: relevant people involved in rule violation.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+                     * 设置Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -235,13 +235,13 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
-                     * @param _label Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+<li>sensitive_military: relevant people involved in rule violation.</li>
+                     * @param _label Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -259,12 +259,12 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
+<li>sensitive_military: relevant people involved in rule violation.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -277,18 +277,18 @@ military:
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * 获取Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * @return Url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * 设置Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @param _url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * @param _url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
@@ -302,15 +302,15 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
-                     * @return AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * 获取Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * @return AreaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
-                     * @param _areaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * 设置Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * @param _areaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -323,15 +323,15 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Deprecated. Please use `PicUrlExpireTime`.
-                     * @return PicUrlExpireTimeStamp Deprecated. Please use `PicUrlExpireTime`.
+                     * 获取Deprecated. Please use PicUrlExpireTime.
+                     * @return PicUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
                      * @deprecated
                      */
                     int64_t GetPicUrlExpireTimeStamp() const;
 
                     /**
-                     * 设置Deprecated. Please use `PicUrlExpireTime`.
-                     * @param _picUrlExpireTimeStamp Deprecated. Please use `PicUrlExpireTime`.
+                     * 设置Deprecated. Please use PicUrlExpireTime.
+                     * @param _picUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
                      * @deprecated
                      */
                     void SetPicUrlExpireTimeStamp(const int64_t& _picUrlExpireTimeStamp);
@@ -344,15 +344,15 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return PicUrlExpireTime URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _picUrlExpireTime URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -367,19 +367,19 @@ Images will be deleted after the PicUrlExpireTime time point).
                 private:
 
                     /**
-                     * Offset time of the start of the suspected segment. Unit: seconds.
+                     * Time offset of the start of the suspected segment. Unit: second.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a suspected segment, in seconds.
+                     * End time offset of the suspected segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Score of the suspected segment.
+                     * Suspected segment score.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
@@ -400,7 +400,7 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+                     * Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -418,37 +418,37 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
+<li>sensitive_military: relevant people involved in rule violation.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+                     * Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Deprecated. Please use `PicUrlExpireTime`.
+                     * Deprecated. Please use PicUrlExpireTime.
                      */
                     int64_t m_picUrlExpireTimeStamp;
                     bool m_picUrlExpireTimeStampHasBeenSet;
 
                     /**
-                     * URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

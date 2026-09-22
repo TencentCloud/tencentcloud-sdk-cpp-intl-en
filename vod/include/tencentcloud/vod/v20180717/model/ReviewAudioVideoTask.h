@@ -204,15 +204,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
-                     * @return SessionContext Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+                     * 获取Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
+                     * @return SessionContext Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
-                     * @param _sessionContext Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+                     * 设置Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
+                     * @param _sessionContext Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -271,7 +271,7 @@ namespace TencentCloud
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+                     * Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter for user-customized text, audio, and video moderation tasks
+                * User-defined custom text audio/video moderation task control parameters.
                 */
                 class UserDefineOcrTextReviewTemplateInfo : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User custom text audio/video moderation task switch. Available values:
-<li>ON: enable custom text audio/video moderation tasks;</li>
+                     * 获取Switch for custom text, audio, and video moderation tasks. Available values:
+<li>ON: enable custom text, audio, and video moderation tasks;</li>
 <li>OFF: disables the custom text audio/video moderation task.</li>
-                     * @return Switch User custom text audio/video moderation task switch. Available values:
-<li>ON: enable custom text audio/video moderation tasks;</li>
+                     * @return Switch Switch for custom text, audio, and video moderation tasks. Available values:
+<li>ON: enable custom text, audio, and video moderation tasks;</li>
 <li>OFF: disables the custom text audio/video moderation task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置User custom text audio/video moderation task switch. Available values:
-<li>ON: enable custom text audio/video moderation tasks;</li>
+                     * 设置Switch for custom text, audio, and video moderation tasks. Available values:
+<li>ON: enable custom text, audio, and video moderation tasks;</li>
 <li>OFF: disables the custom text audio/video moderation task.</li>
-                     * @param _switch User custom text audio/video moderation task switch. Available values:
-<li>ON: enable custom text audio/video moderation tasks;</li>
+                     * @param _switch Switch for custom text, audio, and video moderation tasks. Available values:
+<li>ON: enable custom text, audio, and video moderation tasks;</li>
 <li>OFF: disables the custom text audio/video moderation task.</li>
                      * 
                      */
@@ -76,18 +76,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+                     * 获取User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-                     * @return LabelSet User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+                     * @return LabelSet User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+                     * 设置User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-                     * @param _labelSet User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+                     * @param _labelSet User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
@@ -101,15 +101,15 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
-                     * @return BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * 获取Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
-                     * @param _blockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * 设置Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * @param _blockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -122,15 +122,15 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -145,28 +145,28 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                 private:
 
                     /**
-                     * User custom text audio/video moderation task switch. Available values:
-<li>ON: enable custom text audio/video moderation tasks;</li>
+                     * Switch for custom text, audio, and video moderation tasks. Available values:
+<li>ON: enable custom text, audio, and video moderation tasks;</li>
 <li>OFF: disables the custom text audio/video moderation task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * User-defined text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
+                     * User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

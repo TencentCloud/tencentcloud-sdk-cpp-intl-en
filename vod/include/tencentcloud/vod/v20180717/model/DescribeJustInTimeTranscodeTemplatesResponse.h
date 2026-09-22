@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Template detail list.
-                     * @return JustInTimeTranscodeTemplateSet Template detail list.
+                     * 获取Template details list.
+                     * @return JustInTimeTranscodeTemplateSet Template details list.
                      * 
                      */
                     std::vector<JustInTimeTranscodeTemplate> GetJustInTimeTranscodeTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Template detail list.
+                     * Template details list.
                      */
                     std::vector<JustInTimeTranscodeTemplate> m_justInTimeTranscodeTemplateSet;
                     bool m_justInTimeTranscodeTemplateSetHasBeenSet;

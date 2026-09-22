@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for mosaic detection in video footage.
+                * Control parameters for video frame mosaic detection.
                 */
                 class MosaicConfigureInfoForUpdate : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
                      * @return Switch Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
                      * @param _switch Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,7 +80,7 @@ namespace TencentCloud
                     /**
                      * Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

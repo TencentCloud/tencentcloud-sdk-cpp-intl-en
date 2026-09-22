@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face recognition input.
+                * User-submitted input for face recognition.
                 */
                 class AiRecognitionTaskFaceResultInput : public AbstractModel
                 {

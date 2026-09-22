@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input for the audio and video quality inspection task.
+                * Input of the audio and video quality inspection task.
                 */
                 class QualityInspectTaskInput : public AbstractModel
                 {

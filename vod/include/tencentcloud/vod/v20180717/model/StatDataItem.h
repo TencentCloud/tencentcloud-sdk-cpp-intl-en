@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the time interval where the data is located, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+                     * 获取Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
-                     * @return Time Start time of the time interval where the data is located, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
+                     * @return Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Start time of the time interval where the data is located, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+                     * 设置Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
-                     * @param _time Start time of the time interval where the data is located, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
+                     * @param _time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -83,7 +83,7 @@ namespace TencentCloud
 <li>Bandwidth statistics in bit/s.</li>
 <li>Live stream editing data, in seconds.</li>
 <li>Loop banner data, in seconds.</li>
-<li>Number of sub-applications. The unit is count.</li>
+<li>Number of sub-applications data. The unit is count.</li>
 <li>Log service usage data, in counts.</li>
                      * @return Value Data size.
 <li>Data of storage space, in bytes.</li>
@@ -92,7 +92,7 @@ namespace TencentCloud
 <li>Bandwidth statistics in bit/s.</li>
 <li>Live stream editing data, in seconds.</li>
 <li>Loop banner data, in seconds.</li>
-<li>Number of sub-applications. The unit is count.</li>
+<li>Number of sub-applications data. The unit is count.</li>
 <li>Log service usage data, in counts.</li>
                      * 
                      */
@@ -106,7 +106,7 @@ namespace TencentCloud
 <li>Bandwidth statistics in bit/s.</li>
 <li>Live stream editing data, in seconds.</li>
 <li>Loop banner data, in seconds.</li>
-<li>Number of sub-applications. The unit is count.</li>
+<li>Number of sub-applications data. The unit is count.</li>
 <li>Log service usage data, in counts.</li>
                      * @param _value Data size.
 <li>Data of storage space, in bytes.</li>
@@ -115,7 +115,7 @@ namespace TencentCloud
 <li>Bandwidth statistics in bit/s.</li>
 <li>Live stream editing data, in seconds.</li>
 <li>Loop banner data, in seconds.</li>
-<li>Number of sub-applications. The unit is count.</li>
+<li>Number of sub-applications data. The unit is count.</li>
 <li>Log service usage data, in counts.</li>
                      * 
                      */
@@ -131,9 +131,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of the time interval where the data is located, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+                     * Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
 <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+<li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
@@ -146,7 +146,7 @@ namespace TencentCloud
 <li>Bandwidth statistics in bit/s.</li>
 <li>Live stream editing data, in seconds.</li>
 <li>Loop banner data, in seconds.</li>
-<li>Number of sub-applications. The unit is count.</li>
+<li>Number of sub-applications data. The unit is count.</li>
 <li>Log service usage data, in counts.</li>
                      */
                     int64_t m_value;

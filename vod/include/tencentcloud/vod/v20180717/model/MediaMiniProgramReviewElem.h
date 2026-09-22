@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini Program Audio and Video review summary meta-information
+                * Mini Program Audio and Video review overview meta information
                 */
                 class MediaMiniProgramReviewElem : public AbstractModel
                 {
@@ -49,16 +49,16 @@ namespace TencentCloud
                     /**
                      * 获取Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
 <li>Political.Asr: The sound involves inappropriate information.</li>
                      * @return Type Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -70,16 +70,16 @@ namespace TencentCloud
                     /**
                      * 设置Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
 <li>Political.Asr: The sound involves inappropriate information.</li>
                      * @param _type Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -96,11 +96,11 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video review comments.
+                     * 获取Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
-                     * @return Suggestion Audio and video review comments.
+                     * @return Suggestion Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
@@ -109,11 +109,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Audio and video review comments.
+                     * 设置Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
-                     * @param _suggestion Audio and video review comments.
+                     * @param _suggestion Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
@@ -154,8 +154,8 @@ namespace TencentCloud
                     /**
                      * Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -165,7 +165,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Audio and video review comments.
+                     * Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>

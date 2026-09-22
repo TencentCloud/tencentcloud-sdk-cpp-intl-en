@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type for generating a sprite sheet from a video
+                * Result type of the image sprite task for a video
                 */
                 class MediaProcessTaskImageSpriteResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of the image sprite task for videos.
-                     * @return Input Input of the image sprite task for videos.
+                     * 获取Input of the image sprite task for a video.
+                     * @return Input Input of the image sprite task for a video.
                      * 
                      */
                     ImageSpriteTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of the image sprite task for videos.
-                     * @param _input Input of the image sprite task for videos.
+                     * 设置Input of the image sprite task for a video.
+                     * @param _input Input of the image sprite task for a video.
                      * 
                      */
                     void SetInput(const ImageSpriteTaskInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Video image sprite task progress, in the range of [0,100].
-                     * @return Progress Video image sprite task progress, in the range of [0,100].
+                     * 获取Progress of the image sprite task for videos. Value range: 0-100.
+                     * @return Progress Progress of the image sprite task for videos. Value range: 0-100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Video image sprite task progress, in the range of [0,100].
-                     * @param _progress Video image sprite task progress, in the range of [0,100].
+                     * 设置Progress of the image sprite task for videos. Value range: 0-100.
+                     * @param _progress Progress of the image sprite task for videos. Value range: 0-100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _finishTime Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _finishTime Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of the image sprite task for videos.
+                     * Input of the image sprite task for a video.
                      */
                     ImageSpriteTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -276,7 +276,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Video image sprite task progress, in the range of [0,100].
+                     * Progress of the image sprite task for videos. Value range: 0-100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
@@ -288,7 +288,7 @@ namespace TencentCloud
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

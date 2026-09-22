@@ -71,10 +71,10 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task stream status. Valid values:
+                     * 获取Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-                     * @return Status Task stream status. Valid values:
+                     * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      * 
@@ -82,10 +82,10 @@ namespace TencentCloud
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task stream status. Valid values:
+                     * 设置Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-                     * @param _status Task stream status. Valid values:
+                     * @param _status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      * 
@@ -100,12 +100,12 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+                     * 获取Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-                     * @return ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+                     * @return ErrCode Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      * 
@@ -113,12 +113,12 @@ namespace TencentCloud
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+                     * 设置Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-                     * @param _errCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+                     * @param _errCode Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      * 
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the audio and video quality regeneration task. Value range: [0-100].
-                     * @return Progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+                     * 获取Progress of the audio and video quality regeneration task, in the range of [0,100].
+                     * @return Progress Progress of the audio and video quality regeneration task, in the range of [0,100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the audio and video quality regeneration task. Value range: [0-100].
-                     * @param _progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+                     * 设置Progress of the audio and video quality regeneration task, in the range of [0,100].
+                     * @param _progress Progress of the audio and video quality regeneration task, in the range of [0,100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Meta information of the output video after audio and video quality revival.
-                     * @return MetaData Meta information of the output video after audio and video quality revival.
+                     * 获取Meta-information of the output video after audio and video quality revival.
+                     * @return MetaData Meta-information of the output video after audio and video quality revival.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Meta information of the output video after audio and video quality revival.
-                     * @param _metaData Meta information of the output video after audio and video quality revival.
+                     * 设置Meta-information of the output video after audio and video quality revival.
+                     * @param _metaData Meta-information of the output video after audio and video quality revival.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -309,7 +309,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task stream status. Valid values:
+                     * Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      */
@@ -317,8 +317,8 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+                     * Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
                      */
@@ -338,7 +338,7 @@ namespace TencentCloud
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Progress of the audio and video quality regeneration task. Value range: [0-100].
+                     * Progress of the audio and video quality regeneration task, in the range of [0,100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
@@ -356,7 +356,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Meta information of the output video after audio and video quality revival.
+                     * Meta-information of the output video after audio and video quality revival.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

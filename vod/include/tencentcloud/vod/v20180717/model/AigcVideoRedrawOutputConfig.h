@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
-                     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
+                     * 获取<p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置<p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
-                     * @param _storageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
+                     * 设置<p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
-                     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+                     * 获取<p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+                     * @return ClassId <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置<p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
-                     * @param _classId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+                     * 设置<p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+                     * @param _classId <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
-                     * @return ExpireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
+                     * 获取<p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
+                     * @return ExpireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置<p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
-                     * @param _expireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
+                     * 设置<p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
+                     * @param _expireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
+                     * <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+                     * <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
+                     * <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

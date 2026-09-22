@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional parameters for asynchronous image processing.
+                * Additional parameters for image asynchronous processing.
                 */
                 class ProcessImageAsyncInputExtendedParameter : public AbstractModel
                 {

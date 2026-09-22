@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameters for image recognition involving inappropriate information.
-                     * @return ImgReviewInfo Control parameters for image recognition involving inappropriate information.
+                     * 获取Image recognition involves control parameters for inappropriate information.
+                     * @return ImgReviewInfo Image recognition involves control parameters for inappropriate information.
                      * 
                      */
                     PoliticalImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
-                     * 设置Control parameters for image recognition involving inappropriate information.
-                     * @param _imgReviewInfo Control parameters for image recognition involving inappropriate information.
+                     * 设置Image recognition involves control parameters for inappropriate information.
+                     * @param _imgReviewInfo Image recognition involves control parameters for inappropriate information.
                      * 
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfoForUpdate& _imgReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for ASR-based recognition involving inappropriate information.
-                     * @return AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+                     * 获取Control parameters for inappropriate information involved in ASR-based recognition.
+                     * @return AsrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
                      * 
                      */
                     PoliticalAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameters for ASR-based recognition involving inappropriate information.
-                     * @param _asrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+                     * 设置Control parameters for inappropriate information involved in ASR-based recognition.
+                     * @param _asrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
                      * 
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
@@ -115,13 +115,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameters for image recognition involving inappropriate information.
+                     * Image recognition involves control parameters for inappropriate information.
                      */
                     PoliticalImgReviewTemplateInfoForUpdate m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameters for ASR-based recognition involving inappropriate information.
+                     * Control parameters for inappropriate information involved in ASR-based recognition.
                      */
                     PoliticalAsrReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;

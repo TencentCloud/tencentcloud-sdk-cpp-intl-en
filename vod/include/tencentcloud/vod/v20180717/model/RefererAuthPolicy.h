@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取[Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
                      * @return Status [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置[Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
                      * @param _status [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -77,11 +77,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
                      * @return AuthType Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
                      * 
@@ -90,11 +90,11 @@ When Status is Enabled, AuthType must be assigned a value.
 
                     /**
                      * 设置Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
                      * @param _authType Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
                      * 
@@ -109,15 +109,15 @@ When Status is Enabled, AuthType must be assigned a value.
                     bool AuthTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
-                     * @return Referers List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+                     * 获取List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
+                     * @return Referers List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
                      * 
                      */
                     std::vector<std::string> GetReferers() const;
 
                     /**
-                     * 设置List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
-                     * @param _referers List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+                     * 设置List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
+                     * @param _referers List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
                      * 
                      */
                     void SetReferers(const std::vector<std::string>& _referers);
@@ -132,11 +132,11 @@ When Status is Enabled, AuthType must be assigned a value.
                     /**
                      * 获取Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
                      * @return BlankRefererAllowed Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
                      * 
                      */
@@ -145,11 +145,11 @@ When Status is Enabled, BlankRefererAllowed must be assigned a value.
                     /**
                      * 设置Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
                      * @param _blankRefererAllowed Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
                      * 
                      */
@@ -167,14 +167,14 @@ When Status is Enabled, BlankRefererAllowed must be assigned a value.
                     /**
                      * [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
                      */
@@ -182,7 +182,7 @@ When Status is Enabled, AuthType must be assigned a value.
                     bool m_authTypeHasBeenSet;
 
                     /**
-                     * List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+                     * List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
                      */
                     std::vector<std::string> m_referers;
                     bool m_referersHasBeenSet;
@@ -190,7 +190,7 @@ When Status is Enabled, AuthType must be assigned a value.
                     /**
                      * Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
                      */
                     std::string m_blankRefererAllowed;

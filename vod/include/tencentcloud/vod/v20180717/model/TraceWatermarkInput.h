@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Watermark parameters for tracing the source
+                * Watermark parameters for source tracing
                 */
                 class TraceWatermarkInput : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
                      * @return Switch Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
                      * @param _switch Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -100,8 +100,8 @@ namespace TencentCloud
 
                     /**
                      * Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

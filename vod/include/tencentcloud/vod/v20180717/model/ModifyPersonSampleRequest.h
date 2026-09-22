@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -130,26 +130,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      * @return Usages Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      * 
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
                      * 设置Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      * @param _usages Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
@@ -212,7 +212,7 @@ namespace TencentCloud
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -231,9 +231,9 @@ namespace TencentCloud
 
                     /**
                      * Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;

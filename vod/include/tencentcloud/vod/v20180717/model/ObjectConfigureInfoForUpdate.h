@@ -79,11 +79,11 @@ namespace TencentCloud
                      * 获取Object library selection. Valid values:
 <li>Default: use the default object library;</li>
 <li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
                      * @return ObjectLibrary Object library selection. Valid values:
 <li>Default: use the default object library;</li>
 <li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
                      * 
                      */
                     std::string GetObjectLibrary() const;
@@ -92,11 +92,11 @@ namespace TencentCloud
                      * 设置Object library selection. Valid values:
 <li>Default: use the default object library;</li>
 <li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
                      * @param _objectLibrary Object library selection. Valid values:
 <li>Default: use the default object library;</li>
 <li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
                      * 
                      */
                     void SetObjectLibrary(const std::string& _objectLibrary);
@@ -122,7 +122,7 @@ namespace TencentCloud
                      * Object library selection. Valid values:
 <li>Default: use the default object library;</li>
 <li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
                      */
                     std::string m_objectLibrary;
                     bool m_objectLibraryHasBeenSet;

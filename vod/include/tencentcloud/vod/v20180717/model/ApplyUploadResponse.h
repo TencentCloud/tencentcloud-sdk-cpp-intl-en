@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
-                     * @return VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+                     * 获取<p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+                     * @return VodSessionKey <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
                      * 
                      */
                     std::string GetVodSessionKey() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool VodSessionKeyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media storage path, the object Key for storing media uploaded through the API.</p>
-                     * @return MediaStoragePath <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+                     * 获取<p>Media storage path, the object Key for uploading and storing media through the API.</p>
+                     * @return MediaStoragePath <p>Media storage path, the object Key for uploading and storing media through the API.</p>
                      * 
                      */
                     std::string GetMediaStoragePath() const;
@@ -143,13 +143,13 @@ namespace TencentCloud
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+                     * <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
                      */
                     std::string m_vodSessionKey;
                     bool m_vodSessionKeyHasBeenSet;
 
                     /**
-                     * <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+                     * <p>Media storage path, the object Key for uploading and storing media through the API.</p>
                      */
                     std::string m_mediaStoragePath;
                     bool m_mediaStoragePathHasBeenSet;

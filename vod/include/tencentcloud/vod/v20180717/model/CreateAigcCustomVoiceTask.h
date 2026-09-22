@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
-                     * @return ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+                     * 获取<p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * @return ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置<p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
-                     * @param _errCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+                     * 设置<p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+                     * @param _errCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task progress. Value range: 0–100.</p>
-                     * @return Progress <p>Task progress. Value range: 0–100.</p>
+                     * 获取<p>Task progress, value ranges from 0 to 100.</p>
+                     * @return Progress <p>Task progress, value ranges from 0 to 100.</p>
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置<p>Task progress. Value range: 0–100.</p>
-                     * @param _progress <p>Task progress. Value range: 0–100.</p>
+                     * 设置<p>Task progress, value ranges from 0 to 100.</p>
+                     * @param _progress <p>Task progress, value ranges from 0 to 100.</p>
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input information for creating an AIGC custom voice type.</p>
-                     * @return Input <p>Input information for creating an AIGC custom voice type.</p>
+                     * 获取<p>Create AIGC custom voice type input information.</p>
+                     * @return Input <p>Create AIGC custom voice type input information.</p>
                      * 
                      */
                     CreateAigcCustomVoiceInput GetInput() const;
 
                     /**
-                     * 设置<p>Input information for creating an AIGC custom voice type.</p>
-                     * @param _input <p>Input information for creating an AIGC custom voice type.</p>
+                     * 设置<p>Create AIGC custom voice type input information.</p>
+                     * @param _input <p>Create AIGC custom voice type input information.</p>
                      * 
                      */
                     void SetInput(const CreateAigcCustomVoiceInput& _input);
@@ -279,7 +279,7 @@ namespace TencentCloud
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+                     * <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
@@ -291,13 +291,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * <p>Task progress. Value range: 0–100.</p>
+                     * <p>Task progress, value ranges from 0 to 100.</p>
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * <p>Input information for creating an AIGC custom voice type.</p>
+                     * <p>Create AIGC custom voice type input information.</p>
                      */
                     CreateAigcCustomVoiceInput m_input;
                     bool m_inputHasBeenSet;

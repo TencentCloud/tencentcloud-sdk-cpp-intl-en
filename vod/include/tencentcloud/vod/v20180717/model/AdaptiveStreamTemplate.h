@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool AudioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
-                     * @return RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 获取<p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+                     * @return RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置<p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
-                     * @param _removeAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 设置<p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+                     * @param _removeAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
                      * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
@@ -212,7 +212,7 @@ namespace TencentCloud
                     bool m_audioHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+                     * <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;

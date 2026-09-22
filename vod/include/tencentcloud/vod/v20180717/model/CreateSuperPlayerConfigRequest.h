@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
-                     * @return Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+                     * 获取Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
+                     * @return Name Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
-                     * @param _name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+                     * 设置Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
+                     * @param _name Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -128,12 +128,12 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      * @return DrmSwitch Switch for playing DRM-protected adaptive bitstream:
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      * 
                      */
                     std::string GetDrmSwitch() const;
@@ -143,12 +143,12 @@ This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      * @param _drmSwitch Switch for playing DRM-protected adaptive bitstream:
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      * 
                      */
                     void SetDrmSwitch(const std::string& _drmSwitch);
@@ -318,15 +318,15 @@ Required if `AudioVideoType` is `Transcode`.
                     bool ResolutionNamesHasBeenSet() const;
 
                     /**
-                     * 获取Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
-                     * @return Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+                     * 获取Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+                     * @return Domain Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
-                     * @param _domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+                     * 设置Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+                     * @param _domain Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -339,10 +339,10 @@ Required if `AudioVideoType` is `Transcode`.
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+                     * 获取Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
-                     * @return Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+                     * @return Scheme Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
                      * 
@@ -350,10 +350,10 @@ Required if `AudioVideoType` is `Transcode`.
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+                     * 设置Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
-                     * @param _scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+                     * @param _scheme Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
                      * 
@@ -391,13 +391,13 @@ Required if `AudioVideoType` is `Transcode`.
                 private:
 
                     /**
-                     * Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+                     * Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -417,7 +417,7 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      */
                     std::string m_drmSwitch;
                     bool m_drmSwitchHasBeenSet;
@@ -466,13 +466,13 @@ Required if `AudioVideoType` is `Transcode`.
                     bool m_resolutionNamesHasBeenSet;
 
                     /**
-                     * Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+                     * Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+                     * Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
                      */

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Content review template detail list.
-                     * @return ContentReviewTemplateSet Content review template detail list.
+                     * 获取Content moderation template details list.
+                     * @return ContentReviewTemplateSet Content moderation template details list.
                      * 
                      */
                     std::vector<ContentReviewTemplateItem> GetContentReviewTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Content review template detail list.
+                     * Content moderation template details list.
                      */
                     std::vector<ContentReviewTemplateItem> m_contentReviewTemplateSet;
                     bool m_contentReviewTemplateSetHasBeenSet;

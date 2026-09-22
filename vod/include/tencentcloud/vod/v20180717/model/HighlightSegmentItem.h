@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of intelligent highlight segments.
+                * List of intelligent highlight clips.
                 */
                 class HighlightSegmentItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment start time offset.</p><p>Unit: seconds</p>
-                     * @return StartTimeOffset <p>Segment start time offset.</p><p>Unit: seconds</p>
+                     * 获取<p>Start time offset of a segment.</p><p>Unit: seconds</p>
+                     * @return StartTimeOffset <p>Start time offset of a segment.</p><p>Unit: seconds</p>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置<p>Segment start time offset.</p><p>Unit: seconds</p>
-                     * @param _startTimeOffset <p>Segment start time offset.</p><p>Unit: seconds</p>
+                     * 设置<p>Start time offset of a segment.</p><p>Unit: seconds</p>
+                     * @param _startTimeOffset <p>Start time offset of a segment.</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -118,7 +118,7 @@ namespace TencentCloud
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * <p>Segment start time offset.</p><p>Unit: seconds</p>
+                     * <p>Start time offset of a segment.</p><p>Unit: seconds</p>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;

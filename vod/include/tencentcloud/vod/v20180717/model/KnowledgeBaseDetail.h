@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detailed information such as the knowledge library list to import media assets into and the parsing template used
+                * Detailed information about the knowledge base list to which media assets are imported, as well as the parsing template used.
                 */
                 class KnowledgeBaseDetail : public AbstractModel
                 {

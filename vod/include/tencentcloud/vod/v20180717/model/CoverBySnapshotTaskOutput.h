@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task output type for screencapturing a video for cover image
+                * Task output type for screencapturing for cover image of a video
                 */
                 class CoverBySnapshotTaskOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cover URL.
-                     * @return CoverUrl Cover URL.
+                     * 获取URL of a cover.
+                     * @return CoverUrl URL of a cover.
                      * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
-                     * 设置Cover URL.
-                     * @param _coverUrl Cover URL.
+                     * 设置URL of a cover.
+                     * @param _coverUrl URL of a cover.
                      * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cover URL.
+                     * URL of a cover.
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;

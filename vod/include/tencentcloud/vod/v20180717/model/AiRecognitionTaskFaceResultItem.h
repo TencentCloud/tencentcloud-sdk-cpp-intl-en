@@ -69,10 +69,10 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Library type of the figure, which indicates which figure library the recognized figure comes from:
+                     * 获取Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
-                     * @return Type Library type of the figure, which indicates which figure library the recognized figure comes from:
+                     * @return Type Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
                      * 
@@ -80,10 +80,10 @@ namespace TencentCloud
                     std::string GetType() const;
 
                     /**
-                     * 设置Library type of the figure, which indicates which figure library the recognized figure comes from:
+                     * 设置Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
-                     * @param _type Library type of the figure, which indicates which figure library the recognized figure comes from:
+                     * @param _type Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
                      * 
@@ -148,7 +148,7 @@ namespace TencentCloud
                     bool m_idHasBeenSet;
 
                     /**
-                     * Library type of the figure, which indicates which figure library the recognized figure comes from:
+                     * Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
                      */

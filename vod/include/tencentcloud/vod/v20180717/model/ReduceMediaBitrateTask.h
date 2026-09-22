@@ -120,15 +120,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Media filename.
-                     * @return FileName Media filename.
+                     * 获取Media file name.
+                     * @return FileName Media file name.
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Media filename.
-                     * @param _fileName Media filename.
+                     * 设置Media file name.
+                     * @param _fileName Media file name.
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -226,10 +226,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
                      * @return TasksNotifyMode Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
                      * 
                      */
@@ -237,10 +237,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
                      * @param _tasksNotifyMode Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
                      * 
                      */
@@ -318,7 +318,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Media filename.
+                     * Media file name.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
@@ -349,7 +349,7 @@ namespace TencentCloud
 
                     /**
                      * Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
                      */
                     std::string m_tasksNotifyMode;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Extract blind watermark input information
+                * Extraction blind watermark input information
                 */
                 class ExtractBlindWatermarkInputInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Media asset file ID to be extracted
-                     * @return FileId Media asset file ID to be extracted
+                     * 获取Media asset file ID to extract
+                     * @return FileId Media asset file ID to extract
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media asset file ID to be extracted
-                     * @param _fileId Media asset file ID to be extracted
+                     * 设置Media asset file ID to extract
+                     * @param _fileId Media asset file ID to extract
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -118,7 +118,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Media asset file ID to be extracted
+                     * Media asset file ID to extract
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

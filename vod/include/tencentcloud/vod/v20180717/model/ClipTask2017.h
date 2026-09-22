@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video editing task information. This structure is only used for tasks initiated by the 2017 version [video editing](https://www.tencentcloud.com/document/product/266/10156?from_cn_redirect=1) API.
+                * Video editing task information. This structure is only used for tasks initiated by the 2017 version of the video editing API.
                 */
                 class ClipTask2017 : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SrcFileIdHasBeenSet() const;
 
                     /**
-                     * 获取File information of the video editing output.
-                     * @return FileInfo File information of the video editing output.
+                     * 获取Video editing output file information.
+                     * @return FileInfo Video editing output file information.
                      * 
                      */
                     ClipFileInfo2017 GetFileInfo() const;
 
                     /**
-                     * 设置File information of the video editing output.
-                     * @param _fileInfo File information of the video editing output.
+                     * 设置Video editing output file information.
+                     * @param _fileInfo Video editing output file information.
                      * 
                      */
                     void SetFileInfo(const ClipFileInfo2017& _fileInfo);
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_srcFileIdHasBeenSet;
 
                     /**
-                     * File information of the video editing output.
+                     * Video editing output file information.
                      */
                     ClipFileInfo2017 m_fileInfo;
                     bool m_fileInfoHasBeenSet;

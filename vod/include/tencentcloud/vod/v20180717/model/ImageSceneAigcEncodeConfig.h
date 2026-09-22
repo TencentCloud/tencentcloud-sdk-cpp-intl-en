@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
-                     * @return Format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * 获取Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * @return Format Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
-                     * @param _format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * 设置Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * @param _format Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;

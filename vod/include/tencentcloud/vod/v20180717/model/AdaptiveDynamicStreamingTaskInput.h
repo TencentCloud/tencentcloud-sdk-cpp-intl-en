@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool BlindWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取<p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
-                     * @return SubtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * 获取<p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * @return SubtitleSet <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
                      * 
                      */
                     std::vector<std::string> GetSubtitleSet() const;
 
                     /**
-                     * 设置<p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
-                     * @param _subtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * 设置<p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * @param _subtitleSet <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
                      * 
                      */
                     void SetSubtitleSet(const std::vector<std::string>& _subtitleSet);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool SubtitleInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
-                     * @return DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+                     * 获取<p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
+                     * @return DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
                      * 
                      */
                     ThirdPartyDrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置<p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
-                     * @param _drmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+                     * 设置<p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
+                     * @param _drmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
                      * 
                      */
                     void SetDrmInfo(const ThirdPartyDrmInfo& _drmInfo);
@@ -253,7 +253,7 @@ namespace TencentCloud
                     bool m_blindWatermarkHasBeenSet;
 
                     /**
-                     * <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
                      */
                     std::vector<std::string> m_subtitleSet;
                     bool m_subtitleSetHasBeenSet;
@@ -265,7 +265,7 @@ namespace TencentCloud
                     bool m_subtitleInfoSetHasBeenSet;
 
                     /**
-                     * <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+                     * <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
                      */
                     ThirdPartyDrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;

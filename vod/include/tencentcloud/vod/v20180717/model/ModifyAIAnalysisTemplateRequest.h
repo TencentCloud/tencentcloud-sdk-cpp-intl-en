@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent tag task control parameter.
-                     * @return TagConfigure Intelligent tag task control parameter.
+                     * 获取Control parameter of an intelligent tag task.
+                     * @return TagConfigure Control parameter of an intelligent tag task.
                      * 
                      */
                     TagConfigureInfoForUpdate GetTagConfigure() const;
 
                     /**
-                     * 设置Intelligent tag task control parameter.
-                     * @param _tagConfigure Intelligent tag task control parameter.
+                     * 设置Control parameter of an intelligent tag task.
+                     * @param _tagConfigure Control parameter of an intelligent tag task.
                      * 
                      */
                     void SetTagConfigure(const TagConfigureInfoForUpdate& _tagConfigure);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool CoverConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for the intelligent frame-specific tagging task.
-                     * @return FrameTagConfigure Control parameter for the intelligent frame-specific tagging task.
+                     * 获取Task control parameter for intelligent frame tagging.
+                     * @return FrameTagConfigure Task control parameter for intelligent frame tagging.
                      * 
                      */
                     FrameTagConfigureInfoForUpdate GetFrameTagConfigure() const;
 
                     /**
-                     * 设置Control parameter for the intelligent frame-specific tagging task.
-                     * @param _frameTagConfigure Control parameter for the intelligent frame-specific tagging task.
+                     * 设置Task control parameter for intelligent frame tagging.
+                     * @param _frameTagConfigure Task control parameter for intelligent frame tagging.
                      * 
                      */
                     void SetFrameTagConfigure(const FrameTagConfigureInfoForUpdate& _frameTagConfigure);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool FrameTagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent Highlights Compilation Task Control Parameters.
-                     * @return HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+                     * 获取Control parameters for the intelligent highlights compilation task.
+                     * @return HighlightConfigure Control parameters for the intelligent highlights compilation task.
                      * 
                      */
                     HighlightsConfigureInfoForUpdate GetHighlightConfigure() const;
 
                     /**
-                     * 设置Intelligent Highlights Compilation Task Control Parameters.
-                     * @param _highlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+                     * 设置Control parameters for the intelligent highlights compilation task.
+                     * @param _highlightConfigure Control parameters for the intelligent highlights compilation task.
                      * 
                      */
                     void SetHighlightConfigure(const HighlightsConfigureInfoForUpdate& _highlightConfigure);
@@ -245,7 +245,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -269,7 +269,7 @@ namespace TencentCloud
                     bool m_classificationConfigureHasBeenSet;
 
                     /**
-                     * Intelligent tag task control parameter.
+                     * Control parameter of an intelligent tag task.
                      */
                     TagConfigureInfoForUpdate m_tagConfigure;
                     bool m_tagConfigureHasBeenSet;
@@ -281,13 +281,13 @@ namespace TencentCloud
                     bool m_coverConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for the intelligent frame-specific tagging task.
+                     * Task control parameter for intelligent frame tagging.
                      */
                     FrameTagConfigureInfoForUpdate m_frameTagConfigure;
                     bool m_frameTagConfigureHasBeenSet;
 
                     /**
-                     * Intelligent Highlights Compilation Task Control Parameters.
+                     * Control parameters for the intelligent highlights compilation task.
                      */
                     HighlightsConfigureInfoForUpdate m_highlightConfigure;
                     bool m_highlightConfigureHasBeenSet;

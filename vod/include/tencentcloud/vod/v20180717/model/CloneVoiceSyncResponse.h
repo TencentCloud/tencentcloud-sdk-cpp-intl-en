@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Cloned timbre</p>
-                     * @return VoiceId <p>Cloned timbre</p>
+                     * 获取<p>Cloned voice type</p>
+                     * @return VoiceId <p>Cloned voice type</p>
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Cloned timbre</p>
+                     * <p>Cloned voice type</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;

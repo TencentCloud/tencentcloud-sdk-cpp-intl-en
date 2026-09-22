@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AIGC-generated text detail
+                * AIGC-generated details
                 */
                 class AigcTextDetail : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text generation details</p>
-                     * @return Data <p>Text generation details</p>
+                     * 获取<p>Detailed data for text generation</p>
+                     * @return Data <p>Detailed data for text generation</p>
                      * 
                      */
                     std::vector<AigcTextDetailData> GetData() const;
 
                     /**
-                     * 设置<p>Text generation details</p>
-                     * @param _data <p>Text generation details</p>
+                     * 设置<p>Detailed data for text generation</p>
+                     * @param _data <p>Detailed data for text generation</p>
                      * 
                      */
                     void SetData(const std::vector<AigcTextDetailData>& _data);
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * <p>Text generation details</p>
+                     * <p>Detailed data for text generation</p>
                      */
                     std::vector<AigcTextDetailData> m_data;
                     bool m_dataHasBeenSet;

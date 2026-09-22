@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration of async image processing tasks.
-                     * @return ProcessImageConfigure Configuration of async image processing tasks.
+                     * 获取Image asynchronous processing task configuration.
+                     * @return ProcessImageConfigure Image asynchronous processing task configuration.
                      * 
                      */
                     ProcessImageAsyncTask GetProcessImageConfigure() const;
 
                     /**
-                     * 设置Configuration of async image processing tasks.
-                     * @param _processImageConfigure Configuration of async image processing tasks.
+                     * 设置Image asynchronous processing task configuration.
+                     * @param _processImageConfigure Image asynchronous processing task configuration.
                      * 
                      */
                     void SetProcessImageConfigure(const ProcessImageAsyncTask& _processImageConfigure);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ProcessImageConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Image asynchronous processing template name. Length limit: 64 characters.
-                     * @return Name Image asynchronous processing template name. Length limit: 64 characters.
+                     * 获取Name of the image async processing template. The length cannot exceed 64 characters.
+                     * @return Name Name of the image async processing template. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Image asynchronous processing template name. Length limit: 64 characters.
-                     * @param _name Image asynchronous processing template name. Length limit: 64 characters.
+                     * 设置Name of the image async processing template. The length cannot exceed 64 characters.
+                     * @param _name Name of the image async processing template. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -130,19 +130,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration of async image processing tasks.
+                     * Image asynchronous processing task configuration.
                      */
                     ProcessImageAsyncTask m_processImageConfigure;
                     bool m_processImageConfigureHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Image asynchronous processing template name. Length limit: 64 characters.
+                     * Name of the image async processing template. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

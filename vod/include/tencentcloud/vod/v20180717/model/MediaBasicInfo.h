@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool ClassNameHasBeenSet() const;
 
                     /**
-                     * 获取Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
-                     * @return ClassPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+                     * 获取Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
+                     * @return ClassPath Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
                      * 
                      */
                     std::string GetClassPath() const;
 
                     /**
-                     * 设置Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
-                     * @param _classPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+                     * 设置Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
+                     * @param _classPath Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
                      * 
                      */
                     void SetClassPath(const std::string& _classPath);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool CoverUrlHasBeenSet() const;
 
                     /**
-                     * 获取Muxing format of the media file, such as mp4 and flv.
-                     * @return Type Muxing format of the media file, such as mp4 and flv.
+                     * 获取Muxing format of the media file, for example, mp4 and flv.
+                     * @return Type Muxing format of the media file, for example, mp4 and flv.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Muxing format of the media file, such as mp4 and flv.
-                     * @param _type Muxing format of the media file, such as mp4 and flv.
+                     * 设置Muxing format of the media file, for example, mp4 and flv.
+                     * @param _type Muxing format of the media file, for example, mp4 and flv.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool SourceInfoHasBeenSet() const;
 
                     /**
-                     * 获取Storage region of media files, for example, ap-chongqing. See region list.
-                     * @return StorageRegion Storage region of media files, for example, ap-chongqing. See region list.
+                     * 获取Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * @return StorageRegion Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
-                     * 设置Storage region of media files, for example, ap-chongqing. See region list.
-                     * @param _storageRegion Storage region of media files, for example, ap-chongqing. See region list.
+                     * 设置Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * @param _storageRegion Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool StoragePathHasBeenSet() const;
 
                     /**
-                     * 获取Tag information of a media file.
-                     * @return TagSet Tag information of a media file.
+                     * 获取Tag information of the media file.
+                     * @return TagSet Tag information of the media file.
                      * 
                      */
                     std::vector<std::string> GetTagSet() const;
 
                     /**
-                     * 设置Tag information of a media file.
-                     * @param _tagSet Tag information of a media file.
+                     * 设置Tag information of the media file.
+                     * @param _tagSet Tag information of the media file.
                      * 
                      */
                     void SetTagSet(const std::vector<std::string>& _tagSet);
@@ -442,12 +442,12 @@ namespace TencentCloud
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
                      * @return StorageClass Storage class of a media file
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
                      * 
                      */
                     std::string GetStorageClass() const;
@@ -457,12 +457,12 @@ namespace TencentCloud
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
                      * @param _storageClass Storage class of a media file
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
                      * 
                      */
                     void SetStorageClass(const std::string& _storageClass);
@@ -489,13 +489,13 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -519,7 +519,7 @@ namespace TencentCloud
                     bool m_classNameHasBeenSet;
 
                     /**
-                     * Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+                     * Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
                      */
                     std::string m_classPath;
                     bool m_classPathHasBeenSet;
@@ -531,7 +531,7 @@ namespace TencentCloud
                     bool m_coverUrlHasBeenSet;
 
                     /**
-                     * Muxing format of the media file, such as mp4 and flv.
+                     * Muxing format of the media file, for example, mp4 and flv.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -549,7 +549,7 @@ namespace TencentCloud
                     bool m_sourceInfoHasBeenSet;
 
                     /**
-                     * Storage region of media files, for example, ap-chongqing. See region list.
+                     * Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
@@ -561,7 +561,7 @@ namespace TencentCloud
                     bool m_storagePathHasBeenSet;
 
                     /**
-                     * Tag information of a media file.
+                     * Tag information of the media file.
                      */
                     std::vector<std::string> m_tagSet;
                     bool m_tagSetHasBeenSet;
@@ -592,7 +592,7 @@ namespace TencentCloud
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
                      */
                     std::string m_storageClass;
                     bool m_storageClassHasBeenSet;

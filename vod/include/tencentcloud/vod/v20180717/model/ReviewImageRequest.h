@@ -44,18 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
                      * @return Definition Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
                      * @param _definition Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+                     * 获取Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
-                     * @return FileId Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+                     * @return FileId Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+                     * 设置Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
-                     * @param _fileId Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+                     * @param _fileId Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
                      * 
                      */
@@ -93,10 +93,10 @@ Either FileId or MediaStoragePath must be provided.
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Storage path of the media.
+                     * 获取Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
-                     * @return MediaStoragePath Storage path of the media.
+                     * @return MediaStoragePath Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
                      * 
@@ -104,10 +104,10 @@ Either FileId or MediaStoragePath must be provided.
                     std::string GetMediaStoragePath() const;
 
                     /**
-                     * 设置Storage path of the media.
+                     * 设置Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
-                     * @param _mediaStoragePath Storage path of the media.
+                     * @param _mediaStoragePath Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
                      * 
@@ -122,15 +122,15 @@ Either FileId or MediaStoragePath must be provided.
                     bool MediaStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -146,20 +146,20 @@ Either FileId or MediaStoragePath must be provided.
 
                     /**
                      * Image content review template ID. Valid values:
-<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+<li>10: Pre-set template. Supported violation labels for detection include Porn, Terror, and Polity.</li>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+                     * Media file ID, which is the globally unique identifier of the file in VOD. This interface requires that the media file must be in an image format.
 Either FileId or MediaStoragePath must be provided.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Storage path of the media.
+                     * Media storage path.
 Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
 Either FileId or MediaStoragePath must be provided.
                      */
@@ -167,7 +167,7 @@ Either FileId or MediaStoragePath must be provided.
                     bool m_mediaStoragePathHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

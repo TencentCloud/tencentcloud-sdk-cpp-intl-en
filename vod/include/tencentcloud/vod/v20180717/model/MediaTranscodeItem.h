@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>File address of the transcoded video.</p>
-                     * @return Url <p>File address of the transcoded video.</p>
+                     * 获取<p>File URL of the video after transcoding.</p>
+                     * @return Url <p>File URL of the video after transcoding.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>File address of the transcoded video.</p>
-                     * @param _url <p>File address of the transcoded video.</p>
+                     * 设置<p>File URL of the video after transcoding.</p>
+                     * @param _url <p>File URL of the video after transcoding.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
-                     * @return Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
+                     * 获取<p>Transcoding specification ID. See <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the raw file.</font></p>
+                     * @return Definition <p>Transcoding specification ID. See <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the raw file.</font></p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
-                     * @param _definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
+                     * 设置<p>Transcoding specification ID. See <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the raw file.</font></p>
+                     * @param _definition <p>Transcoding specification ID. See <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the raw file.</font></p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
-                     * @return Bitrate <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
+                     * 获取<p>Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.</p>
+                     * @return Bitrate <p>Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.</p>
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置<p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
-                     * @param _bitrate <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
+                     * 设置<p>Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.</p>
+                     * @param _bitrate <p>Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.</p>
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum video stream height. Unit: px.</p>
-                     * @return Height <p>Maximum video stream height. Unit: px.</p>
+                     * 获取<p>Maximum height of the video stream. Unit: px.</p>
+                     * @return Height <p>Maximum height of the video stream. Unit: px.</p>
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置<p>Maximum video stream height. Unit: px.</p>
-                     * @param _height <p>Maximum video stream height. Unit: px.</p>
+                     * 设置<p>Maximum height of the video stream. Unit: px.</p>
+                     * @param _height <p>Maximum height of the video stream. Unit: px.</p>
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool AudioStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
-                     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+                     * 获取<p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+                     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
                      * 
                      */
                     std::string GetDigitalWatermarkType() const;
 
                     /**
-                     * 设置<p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
-                     * @param _digitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+                     * 设置<p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+                     * @param _digitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
                      * 
                      */
                     void SetDigitalWatermarkType(const std::string& _digitalWatermarkType);
@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool CopyRightWatermarkTextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Digit watermark template id.</p>
-                     * @return BlindWatermarkDefinition <p>Digit watermark template id.</p>
+                     * 获取<p>Digital watermark template id.</p>
+                     * @return BlindWatermarkDefinition <p>Digital watermark template id.</p>
                      * 
                      */
                     int64_t GetBlindWatermarkDefinition() const;
 
                     /**
-                     * 设置<p>Digit watermark template id.</p>
-                     * @param _blindWatermarkDefinition <p>Digit watermark template id.</p>
+                     * 设置<p>Digital watermark template id.</p>
+                     * @param _blindWatermarkDefinition <p>Digital watermark template id.</p>
                      * 
                      */
                     void SetBlindWatermarkDefinition(const int64_t& _blindWatermarkDefinition);
@@ -343,15 +343,15 @@ namespace TencentCloud
                     bool BlindWatermarkDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
-                     * @return FileId <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
+                     * 获取<p>New FileId generated by transcoding. Valid when requesting to turn on standalone media asset output.</p>
+                     * @return FileId <p>New FileId generated by transcoding. Valid when requesting to turn on standalone media asset output.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
-                     * @param _fileId <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
+                     * 设置<p>New FileId generated by transcoding. Valid when requesting to turn on standalone media asset output.</p>
+                     * @param _fileId <p>New FileId generated by transcoding. Valid when requesting to turn on standalone media asset output.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -366,25 +366,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>File address of the transcoded video.</p>
+                     * <p>File URL of the video after transcoding.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the original file.</font></p>
+                     * <p>Transcoding specification ID. See <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: The value 0 means the raw file.</font></p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Sum of the average video stream bitrate and average audio stream bitrate, unit: bps.</p>
+                     * <p>Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.</p>
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * <p>Maximum video stream height. Unit: px.</p>
+                     * <p>Maximum height of the video stream. Unit: px.</p>
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
@@ -432,7 +432,7 @@ namespace TencentCloud
                     bool m_audioStreamSetHasBeenSet;
 
                     /**
-                     * <p>Digital watermark type. Available values:</p><li>Trace means processed with traceability watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+                     * <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
@@ -444,13 +444,13 @@ namespace TencentCloud
                     bool m_copyRightWatermarkTextHasBeenSet;
 
                     /**
-                     * <p>Digit watermark template id.</p>
+                     * <p>Digital watermark template id.</p>
                      */
                     int64_t m_blindWatermarkDefinition;
                     bool m_blindWatermarkDefinitionHasBeenSet;
 
                     /**
-                     * <p>New FileId generated by transcoding. Valid when standalone media asset output is requested.</p>
+                     * <p>New FileId generated by transcoding. Valid when requesting to turn on standalone media asset output.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

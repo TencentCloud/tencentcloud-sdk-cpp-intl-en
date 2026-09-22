@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for video splitting task recognition
+                * Video splitting task recognition control parameters.
                 */
                 class SegmentConfigureInfo : public AbstractModel
                 {

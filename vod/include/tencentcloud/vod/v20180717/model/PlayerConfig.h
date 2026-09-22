@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
-                     * @return AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+                     * 获取<p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+                     * @return AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
                      * 
                      */
                     std::string GetAudioVideoType() const;
 
                     /**
-                     * 设置<p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
-                     * @param _audioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+                     * 设置<p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+                     * @param _audioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
                      * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
-                     * @return DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+                     * 获取<p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
+                     * @return DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
                      * 
                      */
                     std::string GetDrmSwitch() const;
 
                     /**
-                     * 设置<p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
-                     * @param _drmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+                     * 设置<p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
+                     * @param _drmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
                      * 
                      */
                     void SetDrmSwitch(const std::string& _drmSwitch);
@@ -357,13 +357,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+                     * <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
                      */
                     std::string m_audioVideoType;
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+                     * <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
                      */
                     std::string m_drmSwitch;
                     bool m_drmSwitchHasBeenSet;

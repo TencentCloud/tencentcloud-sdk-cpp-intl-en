@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Unique identifier of the Large Model Understanding template.</p>
-                     * @return Definition <p>Unique identifier of the Large Model Understanding template.</p>
+                     * 获取<p>Unique identifier of the Large Model Understanding template</p>
+                     * @return Definition <p>Unique identifier of the Large Model Understanding template</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>Unique identifier of the Large Model Understanding template.</p>
-                     * @param _definition <p>Unique identifier of the Large Model Understanding template.</p>
+                     * 设置<p>Unique identifier of the Large Model Understanding template</p>
+                     * @param _definition <p>Unique identifier of the Large Model Understanding template</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
-                     * @return Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+                     * 获取<p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
+                     * @return Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置<p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
-                     * @param _model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+                     * 设置<p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
+                     * @param _model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool AsrHasBeenSet() const;
 
                     /**
-                     * 获取<p>Facial recognition configuration</p>
-                     * @return FaceRecognition <p>Facial recognition configuration</p>
+                     * 获取<p>Face recognition configuration</p>
+                     * @return FaceRecognition <p>Face recognition configuration</p>
                      * 
                      */
                     LLMComprehendFaceRecognitionForUpdate GetFaceRecognition() const;
 
                     /**
-                     * 设置<p>Facial recognition configuration</p>
-                     * @param _faceRecognition <p>Facial recognition configuration</p>
+                     * 设置<p>Face recognition configuration</p>
+                     * @param _faceRecognition <p>Face recognition configuration</p>
                      * 
                      */
                     void SetFaceRecognition(const LLMComprehendFaceRecognitionForUpdate& _faceRecognition);
@@ -216,13 +216,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Unique identifier of the Large Model Understanding template.</p>
+                     * <p>Unique identifier of the Large Model Understanding template</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -240,7 +240,7 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+                     * <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;
@@ -258,7 +258,7 @@ namespace TencentCloud
                     bool m_asrHasBeenSet;
 
                     /**
-                     * <p>Facial recognition configuration</p>
+                     * <p>Face recognition configuration</p>
                      */
                     LLMComprehendFaceRecognitionForUpdate m_faceRecognition;
                     bool m_faceRecognitionHasBeenSet;

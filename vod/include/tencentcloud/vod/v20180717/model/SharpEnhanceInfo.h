@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
                      * @return Switch Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
                      * @param _switch Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -104,8 +104,8 @@ Default: 0.0.
 
                     /**
                      * Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instant transcoding video template configuration.
+                * JIT transcoding video template configuration.
                 */
                 class VideoConfigureInfo : public AbstractModel
                 {
@@ -138,12 +138,12 @@ Default value: 0.
 
                     /**
                      * 获取Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
                      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -153,12 +153,12 @@ Default value: open.
 
                     /**
                      * 设置Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
                      * @param _resolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -174,19 +174,19 @@ Default value: open.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
-                     * @return Bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+                     * 获取Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
+                     * @return Bitrate Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
-                     * @param _bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+                     * 设置Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
+                     * @param _bitrate Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -226,7 +226,7 @@ Default value: 0.
 
                     /**
                      * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -235,8 +235,8 @@ Default value: open.
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+                     * Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

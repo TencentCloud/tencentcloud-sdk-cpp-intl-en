@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool WebhookNameHasBeenSet() const;
 
                     /**
-                     * 获取New callback URL, which must use the HTTPS protocol.
-                     * @return WebhookURL New callback URL, which must use the HTTPS protocol.
+                     * 获取<p>New callback URL, must be HTTPS protocol</p>
+                     * @return WebhookURL <p>New callback URL, must be HTTPS protocol</p>
                      * 
                      */
                     std::string GetWebhookURL() const;
 
                     /**
-                     * 设置New callback URL, which must use the HTTPS protocol.
-                     * @param _webhookURL New callback URL, which must use the HTTPS protocol.
+                     * 设置<p>New callback URL, must be HTTPS protocol</p>
+                     * @param _webhookURL <p>New callback URL, must be HTTPS protocol</p>
                      * 
                      */
                     void SetWebhookURL(const std::string& _webhookURL);
@@ -104,6 +104,27 @@ namespace TencentCloud
                      * 
                      */
                     bool WebhookURLHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+                     * @return SignatureKey <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+                     * 
+                     */
+                    std::string GetSignatureKey() const;
+
+                    /**
+                     * 设置<p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+                     * @param _signatureKey <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+                     * 
+                     */
+                    void SetSignatureKey(const std::string& _signatureKey);
+
+                    /**
+                     * 判断参数 SignatureKey 是否已赋值
+                     * @return SignatureKey 是否已赋值
+                     * 
+                     */
+                    bool SignatureKeyHasBeenSet() const;
 
                 private:
 
@@ -120,10 +141,16 @@ namespace TencentCloud
                     bool m_webhookNameHasBeenSet;
 
                     /**
-                     * New callback URL, which must use the HTTPS protocol.
+                     * <p>New callback URL, must be HTTPS protocol</p>
                      */
                     std::string m_webhookURL;
                     bool m_webhookURLHasBeenSet;
+
+                    /**
+                     * <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+                     */
+                    std::string m_signatureKey;
+                    bool m_signatureKeyHasBeenSet;
 
                 };
             }

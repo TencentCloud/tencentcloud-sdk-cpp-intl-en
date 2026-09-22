@@ -54,15 +54,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video transcoding task list.
-                     * @return TranscodeTaskSet Video transcoding task list.
+                     * 获取List of video transcoding tasks.
+                     * @return TranscodeTaskSet List of video transcoding tasks.
                      * 
                      */
                     std::vector<TranscodeTaskInput> GetTranscodeTaskSet() const;
 
                     /**
-                     * 设置Video transcoding task list.
-                     * @param _transcodeTaskSet Video transcoding task list.
+                     * 设置List of video transcoding tasks.
+                     * @param _transcodeTaskSet List of video transcoding tasks.
                      * 
                      */
                     void SetTranscodeTaskSet(const std::vector<TranscodeTaskInput>& _transcodeTaskSet);
@@ -96,15 +96,15 @@ namespace TencentCloud
                     bool AnimatedGraphicTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of time point screencapturing tasks for videos.
-                     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
+                     * 获取List of time point screenshot tasks for videos.
+                     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
                      * 
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> GetSnapshotByTimeOffsetTaskSet() const;
 
                     /**
-                     * 设置List of time point screencapturing tasks for videos.
-                     * @param _snapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
+                     * 设置List of time point screenshot tasks for videos.
+                     * @param _snapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
                      * 
                      */
                     void SetSnapshotByTimeOffsetTaskSet(const std::vector<SnapshotByTimeOffsetTaskInput>& _snapshotByTimeOffsetTaskSet);
@@ -159,15 +159,15 @@ namespace TencentCloud
                     bool ImageSpriteTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取Task list of screencapturing for cover image tasks for videos.
-                     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
+                     * 获取Task list of screencapturing for cover images from videos.
+                     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
                      * 
                      */
                     std::vector<CoverBySnapshotTaskInput> GetCoverBySnapshotTaskSet() const;
 
                     /**
-                     * 设置Task list of screencapturing for cover image tasks for videos.
-                     * @param _coverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
+                     * 设置Task list of screencapturing for cover images from videos.
+                     * @param _coverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
                      * 
                      */
                     void SetCoverBySnapshotTaskSet(const std::vector<CoverBySnapshotTaskInput>& _coverBySnapshotTaskSet);
@@ -203,7 +203,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video transcoding task list.
+                     * List of video transcoding tasks.
                      */
                     std::vector<TranscodeTaskInput> m_transcodeTaskSet;
                     bool m_transcodeTaskSetHasBeenSet;
@@ -215,7 +215,7 @@ namespace TencentCloud
                     bool m_animatedGraphicTaskSetHasBeenSet;
 
                     /**
-                     * List of time point screencapturing tasks for videos.
+                     * List of time point screenshot tasks for videos.
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> m_snapshotByTimeOffsetTaskSet;
                     bool m_snapshotByTimeOffsetTaskSetHasBeenSet;
@@ -233,7 +233,7 @@ namespace TencentCloud
                     bool m_imageSpriteTaskSetHasBeenSet;
 
                     /**
-                     * Task list of screencapturing for cover image tasks for videos.
+                     * Task list of screencapturing for cover images from videos.
                      */
                     std::vector<CoverBySnapshotTaskInput> m_coverBySnapshotTaskSet;
                     bool m_coverBySnapshotTaskSetHasBeenSet;

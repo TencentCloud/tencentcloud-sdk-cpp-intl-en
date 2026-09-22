@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool ResultSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
-                     * @return ResultSetFileUrl URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
+                     * 获取URL of the speech keyword recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching ResultSetFileUrlExpireTime.)
+                     * @return ResultSetFileUrl URL of the speech keyword recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching ResultSetFileUrlExpireTime.)
                      * 
                      */
                     std::string GetResultSetFileUrl() const;
 
                     /**
-                     * 设置URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
-                     * @param _resultSetFileUrl URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
+                     * 设置URL of the speech keyword recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching ResultSetFileUrlExpireTime.)
+                     * @param _resultSetFileUrl URL of the speech keyword recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching ResultSetFileUrlExpireTime.)
                      * 
                      */
                     void SetResultSetFileUrl(const std::string& _resultSetFileUrl);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool ResultSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return ResultSetFileUrlExpireTime Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiration time of the speech keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ResultSetFileUrlExpireTime Expiration time of the speech keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetResultSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _resultSetFileUrlExpireTime Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiration time of the speech keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _resultSetFileUrlExpireTime Expiration time of the speech keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetResultSetFileUrlExpireTime(const std::string& _resultSetFileUrlExpireTime);
@@ -124,13 +124,13 @@ namespace TencentCloud
                     bool m_resultSetHasBeenSet;
 
                     /**
-                     * URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
+                     * URL of the speech keyword recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching ResultSetFileUrlExpireTime.)
                      */
                     std::string m_resultSetFileUrl;
                     bool m_resultSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiration time of the speech keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_resultSetFileUrlExpireTime;
                     bool m_resultSetFileUrlExpireTimeHasBeenSet;

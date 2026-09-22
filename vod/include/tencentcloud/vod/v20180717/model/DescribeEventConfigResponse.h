@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
-                     * @return NotificationUrl Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
+                     * 获取Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address that receives V3 version event notifications.
+                     * @return NotificationUrl Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address that receives V3 version event notifications.
                      * 
                      */
                     std::string GetNotificationUrl() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool UploadMediaCompleteEventSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
-                     * @return DeleteMediaCompleteEventSwitch Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * 获取Whether to receive event notifications for video deletion completion (https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1). "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * @return DeleteMediaCompleteEventSwitch Whether to receive event notifications for video deletion completion (https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1). "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      * 
                      */
                     std::string GetDeleteMediaCompleteEventSwitch() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool DeleteMediaCompleteEventSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
-                     * @return PersistenceCompleteEventSwitch Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * 获取Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means it is received.
+                     * @return PersistenceCompleteEventSwitch Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means it is received.
                      * 
                      */
                     std::string GetPersistenceCompleteEventSwitch() const;
@@ -122,7 +122,7 @@ namespace TencentCloud
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
+                     * Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address that receives V3 version event notifications.
                      */
                     std::string m_notificationUrl;
                     bool m_notificationUrlHasBeenSet;
@@ -134,13 +134,13 @@ namespace TencentCloud
                     bool m_uploadMediaCompleteEventSwitchHasBeenSet;
 
                     /**
-                     * Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * Whether to receive event notifications for video deletion completion (https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1). "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      */
                     std::string m_deleteMediaCompleteEventSwitch;
                     bool m_deleteMediaCompleteEventSwitchHasBeenSet;
 
                     /**
-                     * Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means it is received.
                      */
                     std::string m_persistenceCompleteEventSwitch;
                     bool m_persistenceCompleteEventSwitchHasBeenSet;

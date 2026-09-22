@@ -49,18 +49,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
                      * @return ClassificationSet Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
                      * 
                      */
                     std::vector<MediaAiAnalysisClassificationItem> GetClassificationSet() const;
 
                     /**
                      * 设置Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
                      * @param _classificationSet Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
                      * 
                      */
                     void SetClassificationSet(const std::vector<MediaAiAnalysisClassificationItem>& _classificationSet);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool ClassificationSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
-                     * @return ClassificationSetFileUrl URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+                     * 获取Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+                     * @return ClassificationSetFileUrl Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
                      * 
                      */
                     std::string GetClassificationSetFileUrl() const;
 
                     /**
-                     * 设置URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
-                     * @param _classificationSetFileUrl URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+                     * 设置Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+                     * @param _classificationSetFileUrl Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
                      * 
                      */
                     void SetClassificationSetFileUrl(const std::string& _classificationSetFileUrl);
@@ -118,13 +118,13 @@ namespace TencentCloud
 
                     /**
                      * Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
                      */
                     std::vector<MediaAiAnalysisClassificationItem> m_classificationSet;
                     bool m_classificationSetHasBeenSet;
 
                     /**
-                     * URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+                     * Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
                      */
                     std::string m_classificationSetFileUrl;
                     bool m_classificationSetFileUrlHasBeenSet;

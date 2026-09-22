@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent highlight result.
+                * Intelligent highlight result information.
                 */
                 class AiAnalysisTaskHighlightOutput : public AbstractModel
                 {
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool HighlightSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
-                     * @return HighlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+                     * 获取URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
+                     * @return HighlightSetFileUrl URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
                      * 
                      */
                     std::string GetHighlightSetFileUrl() const;
 
                     /**
-                     * 设置URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
-                     * @param _highlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+                     * 设置URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
+                     * @param _highlightSetFileUrl URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
                      * 
                      */
                     void SetHighlightSetFileUrl(const std::string& _highlightSetFileUrl);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool HighlightSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return HighlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return HighlightSetFileUrlExpireTime Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetHighlightSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _highlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _highlightSetFileUrlExpireTime Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetHighlightSetFileUrlExpireTime(const std::string& _highlightSetFileUrlExpireTime);
@@ -124,13 +124,13 @@ namespace TencentCloud
                     bool m_highlightSetHasBeenSet;
 
                     /**
-                     * URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+                     * URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
                      */
                     std::string m_highlightSetFileUrl;
                     bool m_highlightSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_highlightSetFileUrlExpireTime;
                     bool m_highlightSetFileUrlExpireTimeHasBeenSet;

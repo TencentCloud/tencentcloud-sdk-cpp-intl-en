@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * JIT transcoding watermark template update configuration.
+                * Update the watermark template configuration for JIT transcoding.
                 */
                 class WatermarkConfigureInfoForUpdate : public AbstractModel
                 {
@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Horizontal position of the distance between the watermark origin and the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
-                     * @return XPos Horizontal position of the distance between the watermark origin and the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+                     * 获取Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+                     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
                      * 
                      */
                     std::string GetXPos() const;
 
                     /**
-                     * 设置Horizontal position of the distance between the watermark origin and the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
-                     * @param _xPos Horizontal position of the distance between the watermark origin and the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+                     * 设置Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+                     * @param _xPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
                      * 
                      */
                     void SetXPos(const std::string& _xPos);
@@ -219,7 +219,7 @@ namespace TencentCloud
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Horizontal position of the distance between the watermark origin and the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+                     * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
                      */
                     std::string m_xPos;
                     bool m_xPosHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MPS task template details.
+                * MPS task template detail.
                 */
                 class MPSTemplate : public AbstractModel
                 {
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取MPS task template detail content.
-                     * @return MPSTemplateInfo MPS task template detail content.
+                     * 获取Details of the MPS task template.
+                     * @return MPSTemplateInfo Details of the MPS task template.
                      * 
                      */
                     std::string GetMPSTemplateInfo() const;
 
                     /**
-                     * 设置MPS task template detail content.
-                     * @param _mPSTemplateInfo MPS task template detail content.
+                     * 设置Details of the MPS task template.
+                     * @param _mPSTemplateInfo Details of the MPS task template.
                      * 
                      */
                     void SetMPSTemplateInfo(const std::string& _mPSTemplateInfo);
@@ -102,7 +102,7 @@ namespace TencentCloud
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * MPS task template detail content.
+                     * Details of the MPS task template.
                      */
                     std::string m_mPSTemplateInfo;
                     bool m_mPSTemplateInfoHasBeenSet;

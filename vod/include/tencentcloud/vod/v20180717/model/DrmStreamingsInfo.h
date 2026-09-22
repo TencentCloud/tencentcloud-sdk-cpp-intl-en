@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool WidevineDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Adaptive bitrate streaming template ID with FairPlay protection type.
-                     * @return FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
+                     * 获取Adaptive bitstreaming template ID with FairPlay protection type.
+                     * @return FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection type.
                      * 
                      */
                     uint64_t GetFairPlayDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming template ID with FairPlay protection type.
-                     * @param _fairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
+                     * 设置Adaptive bitstreaming template ID with FairPlay protection type.
+                     * @param _fairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection type.
                      * 
                      */
                     void SetFairPlayDefinition(const uint64_t& _fairPlayDefinition);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_widevineDefinitionHasBeenSet;
 
                     /**
-                     * Adaptive bitrate streaming template ID with FairPlay protection type.
+                     * Adaptive bitstreaming template ID with FairPlay protection type.
                      */
                     uint64_t m_fairPlayDefinition;
                     bool m_fairPlayDefinitionHasBeenSet;

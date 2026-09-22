@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of the AIGC sound effect task.
+                * Input of the AIGC sound effect generation task.
                 */
                 class AigcAudioTaskInput : public AbstractModel
                 {
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
-                     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * 获取<p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+                     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置<p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
-                     * @param _sceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * 设置<p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+                     * @param _sceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-                     * @return Prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 获取<p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+                     * @return Prompt <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-                     * @param _prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 设置<p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+                     * @param _prompt <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
-                     * @return NegativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * 获取<p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * @return NegativePrompt <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置<p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
-                     * @param _negativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * 设置<p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * @param _negativePrompt <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio content for reference.</p>
-                     * @return AudioInfos <p>Audio content for reference.</p>
+                     * 获取<p>Reference audio content</p>
+                     * @return AudioInfos <p>Reference audio content</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceAudioInfo> GetAudioInfos() const;
 
                     /**
-                     * 设置<p>Audio content for reference.</p>
-                     * @param _audioInfos <p>Audio content for reference.</p>
+                     * 设置<p>Reference audio content</p>
+                     * @param _audioInfos <p>Reference audio content</p>
                      * 
                      */
                     void SetAudioInfos(const std::vector<AigcAudioReferenceAudioInfo>& _audioInfos);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reference video info.</p>
-                     * @return VideoInfos <p>Reference video info.</p>
+                     * 获取<p>Reference video info</p>
+                     * @return VideoInfos <p>Reference video info</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceVideoInfo> GetVideoInfos() const;
 
                     /**
-                     * 设置<p>Reference video info.</p>
-                     * @param _videoInfos <p>Reference video info.</p>
+                     * 设置<p>Reference video info</p>
+                     * @param _videoInfos <p>Reference video info</p>
                      * 
                      */
                     void SetVideoInfos(const std::vector<AigcAudioReferenceVideoInfo>& _videoInfos);
@@ -274,31 +274,31 @@ namespace TencentCloud
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * <p>Audio content for reference.</p>
+                     * <p>Reference audio content</p>
                      */
                     std::vector<AigcAudioReferenceAudioInfo> m_audioInfos;
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * <p>Reference video info.</p>
+                     * <p>Reference video info</p>
                      */
                     std::vector<AigcAudioReferenceVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;

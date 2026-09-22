@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Prohibition task control parameter
+                * Prohibited task control parameter
                 */
                 class ProhibitedConfigureInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Speech prohibition control parameter.
-                     * @return AsrReviewInfo Speech prohibition control parameter.
+                     * 获取Voice prohibition control parameter.
+                     * @return AsrReviewInfo Voice prohibition control parameter.
                      * 
                      */
                     ProhibitedAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Speech prohibition control parameter.
-                     * @param _asrReviewInfo Speech prohibition control parameter.
+                     * 设置Voice prohibition control parameter.
+                     * @param _asrReviewInfo Voice prohibition control parameter.
                      * 
                      */
                     void SetAsrReviewInfo(const ProhibitedAsrReviewTemplateInfo& _asrReviewInfo);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Text prohibited control parameters.
-                     * @return OcrReviewInfo Text prohibited control parameters.
+                     * 获取Prohibited control parameters for text.
+                     * @return OcrReviewInfo Prohibited control parameters for text.
                      * 
                      */
                     ProhibitedOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Text prohibited control parameters.
-                     * @param _ocrReviewInfo Text prohibited control parameters.
+                     * 设置Prohibited control parameters for text.
+                     * @param _ocrReviewInfo Prohibited control parameters for text.
                      * 
                      */
                     void SetOcrReviewInfo(const ProhibitedOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Speech prohibition control parameter.
+                     * Voice prohibition control parameter.
                      */
                     ProhibitedAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Text prohibited control parameters.
+                     * Prohibited control parameters for text.
                      */
                     ProhibitedOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

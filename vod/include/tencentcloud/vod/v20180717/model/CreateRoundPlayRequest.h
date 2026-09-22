@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return StartTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @return StartTime Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _startTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @param _startTime Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RoundPlaylistHasBeenSet() const;
 
                     /**
-                     * 获取<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -186,15 +186,15 @@ Default value: Loop.
                     bool PlayBackModeHasBeenSet() const;
 
                     /**
-                     * 获取Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
-                     * @return RoundPlayId Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
+                     * 获取Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
+                     * @return RoundPlayId Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
                      * 
                      */
                     std::string GetRoundPlayId() const;
 
                     /**
-                     * 设置Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
-                     * @param _roundPlayId Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
+                     * 设置Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
+                     * @param _roundPlayId Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
                      * 
                      */
                     void SetRoundPlayId(const std::string& _roundPlayId);
@@ -207,15 +207,15 @@ Default value: Loop.
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
-                     * @return ExpiredTime Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
+                     * 获取Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
+                     * @return ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
                      * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
-                     * @param _expiredTime Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
+                     * 设置Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
+                     * @param _expiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
                      * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
@@ -230,7 +230,7 @@ Default value: Loop.
                 private:
 
                     /**
-                     * Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * Playback start time in ISO 8601 format. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -243,7 +243,7 @@ Default value: Loop.
                     bool m_roundPlaylistHasBeenSet;
 
                     /**
-                     * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -270,13 +270,13 @@ Default value: Loop.
                     bool m_playBackModeHasBeenSet;
 
                     /**
-                     * Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
+                     * Unique identification ID of the playlist. Length limit: 64 characters. Only allow uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, the InvalidParameterValue.RoundPlayAlreadyExists error is returned. The default value is empty, which means it is assigned by the system.
                      */
                     std::string m_roundPlayId;
                     bool m_roundPlayIdHasBeenSet;
 
                     /**
-                     * Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
+                     * Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). The playlist will stop playback after expiry. "9999-12-31T23:59:59+08:00" means never expire. Default value: 9999-12-31T23:59:59+08:00.
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;

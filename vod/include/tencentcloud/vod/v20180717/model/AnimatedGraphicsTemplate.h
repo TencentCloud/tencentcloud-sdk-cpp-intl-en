@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rotating image template details.
+                * Rotating image template description.
                 */
                 class AnimatedGraphicsTemplate : public AbstractModel
                 {
@@ -69,10 +69,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * @return Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * 
                      */
@@ -80,10 +80,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * @param _type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      * 
                      */
@@ -222,11 +222,11 @@ Default value: 0.
 
                     /**
                      * 获取Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
                      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
                      * 
@@ -235,11 +235,11 @@ Default value: open.
 
                     /**
                      * 设置Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
                      * @param _resolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
                      * 
@@ -368,7 +368,7 @@ Default value: open.
 
                     /**
                      * Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
                      */
                     std::string m_type;
@@ -410,7 +410,7 @@ Default value: 0.
 
                     /**
                      * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
                      */

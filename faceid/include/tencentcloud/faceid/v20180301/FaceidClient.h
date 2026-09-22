@@ -554,7 +554,7 @@ This API on the legacy version will continue to serve existing users but will be
                 UpdateAMLOngoingScreeningStatusOutcomeCallable UpdateAMLOngoingScreeningStatusCallable(const Model::UpdateAMLOngoingScreeningStatusRequest& request);
 
                 /**
-                 *This API updates the Webhook configuration.
+                 *This API is used to update Webhook configurations.
                  * @param req UpdateEKYCWebhookRequest
                  * @return UpdateEKYCWebhookOutcome
                  */

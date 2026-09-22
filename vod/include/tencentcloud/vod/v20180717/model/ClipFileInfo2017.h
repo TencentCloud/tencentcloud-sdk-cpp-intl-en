@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video clipping result file info (2017)
+                * Video clipping result file information (2017 version)
                 */
                 class ClipFileInfo2017 : public AbstractModel
                 {

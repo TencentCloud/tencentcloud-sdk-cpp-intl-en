@@ -36,9 +36,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure and specified removal region configuration.
+                * Intelligent removal, specify the removal region configuration.
 Directly erase the specified region within a specified period.
-When both BeginMs and EndMs are set to 0, the specified region in the entire video is directly erased.
+When both BeginMs and EndMs are 0, directly erase the specified region in the entire video.
                 */
                 class MPSEraseTimeArea : public AbstractModel
                 {

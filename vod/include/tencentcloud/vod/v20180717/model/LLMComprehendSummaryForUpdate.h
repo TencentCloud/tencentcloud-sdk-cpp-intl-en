@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
-                     * @return Switch Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
+                     * 获取Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
+                     * @return Switch Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
-                     * @param _switch Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
+                     * 设置Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
+                     * @param _switch Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
-                     * @return ExtendedParameter Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * 获取Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * @return ExtendedParameter Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      * 
                      */
                     std::string GetExtendedParameter() const;
 
                     /**
-                     * 设置Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
-                     * @param _extendedParameter Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * 设置Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * @param _extendedParameter Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Segment summary task switch. Available values:
-- ON: Enable the segmentation summary task.
-- OFF: disables segment summary.
+                     * Task switch for segment summary. Available values:
+- ON: enable the segmentation summary task.
+-OFF: disables segment summary.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      */
                     std::string m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;

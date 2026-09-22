@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive bitstreaming information
+                * Adaptive bitrate streaming information.
                 */
                 class AdaptiveDynamicStreamingInfoItem : public AbstractModel
                 {
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
-                     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+                     * 获取<p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+                     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
                      * 
                      */
                     std::string GetDigitalWatermarkType() const;
 
                     /**
-                     * 设置<p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
-                     * @param _digitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+                     * 设置<p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+                     * @param _digitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
                      * 
                      */
                     void SetDigitalWatermarkType(const std::string& _digitalWatermarkType);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subflow information list.</p>
-                     * @return SubStreamSet <p>Subflow information list.</p>
+                     * 获取<p>List of substream info.</p>
+                     * @return SubStreamSet <p>List of substream info.</p>
                      * 
                      */
                     std::vector<MediaSubStreamInfoItem> GetSubStreamSet() const;
 
                     /**
-                     * 设置<p>Subflow information list.</p>
-                     * @param _subStreamSet <p>Subflow information list.</p>
+                     * 设置<p>List of substream info.</p>
+                     * @param _subStreamSet <p>List of substream info.</p>
                      * 
                      */
                     void SetSubStreamSet(const std::vector<MediaSubStreamInfoItem>& _subStreamSet);
@@ -333,13 +333,13 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+                     * <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
 
                     /**
-                     * <p>Subflow information list.</p>
+                     * <p>List of substream info.</p>
                      */
                     std::vector<MediaSubStreamInfoItem> m_subStreamSet;
                     bool m_subStreamSetHasBeenSet;

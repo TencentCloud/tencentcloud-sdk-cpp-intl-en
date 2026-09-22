@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
-                     * @return FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+                     * 获取Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
+                     * @return FaceId Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
                      * 
                      */
                     std::string GetFaceId() const;
 
                     /**
-                     * 设置Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
-                     * @param _faceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+                     * 设置Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
+                     * @param _faceId Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
                      * 
                      */
                     void SetFaceId(const std::string& _faceId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FaceImageHasBeenSet() const;
 
                     /**
-                     * 获取Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
-                     * @return StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+                     * 获取Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
+                     * @return StartTime Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
-                     * @param _startTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+                     * 设置Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
+                     * @param _startTime Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
-                     * @return EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+                     * 获取End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
+                     * @return EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
-                     * @param _endTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+                     * 设置End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
+                     * @param _endTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+                     * Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_faceImageHasBeenSet;
 
                     /**
-                     * Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+                     * Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+                     * End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;

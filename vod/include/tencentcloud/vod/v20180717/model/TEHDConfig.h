@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
-                     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+                     * 获取Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
+                     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
                      * 
                      */
                     uint64_t GetMaxVideoBitrate() const;
 
                     /**
-                     * 设置Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
-                     * @param _maxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+                     * 设置Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
+                     * @param _maxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
                      * 
                      */
                     void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
@@ -101,8 +101,8 @@ Leave this parameter empty or set it to 0, and VOD automatically sets the bitrat
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+                     * Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
                      */
                     uint64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;

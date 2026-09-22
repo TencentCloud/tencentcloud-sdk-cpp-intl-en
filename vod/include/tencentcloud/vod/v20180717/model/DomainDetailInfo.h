@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool AccelerateAreaInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
-                     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+                     * 获取<p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
+                     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
                      * 
                      */
                     std::string GetDeployStatus() const;
 
                     /**
-                     * 设置<p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
-                     * @param _deployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+                     * 设置<p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
+                     * @param _deployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
                      * 
                      */
                     void SetDeployStatus(const std::string& _deployStatus);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain name QUIC configuration information.</p>
-                     * @return QUICConfig <p>Domain name QUIC configuration information.</p>
+                     * 获取<p>Domain name QUIC configuration message.</p>
+                     * @return QUICConfig <p>Domain name QUIC configuration message.</p>
                      * 
                      */
                     DomainQUICConfig GetQUICConfig() const;
 
                     /**
-                     * 设置<p>Domain name QUIC configuration information.</p>
-                     * @param _qUICConfig <p>Domain name QUIC configuration information.</p>
+                     * 设置<p>Domain name QUIC configuration message.</p>
+                     * @param _qUICConfig <p>Domain name QUIC configuration message.</p>
                      * 
                      */
                     void SetQUICConfig(const DomainQUICConfig& _qUICConfig);
@@ -242,15 +242,15 @@ namespace TencentCloud
                     bool IPFilterPolicyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
-                     * @return Type <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+                     * 获取<p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+                     * @return Type <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
-                     * @param _type <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+                     * 设置<p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+                     * @param _type <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -277,7 +277,7 @@ namespace TencentCloud
                     bool m_accelerateAreaInfosHasBeenSet;
 
                     /**
-                     * <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+                     * <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
                      */
                     std::string m_deployStatus;
                     bool m_deployStatusHasBeenSet;
@@ -307,7 +307,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Domain name QUIC configuration information.</p>
+                     * <p>Domain name QUIC configuration message.</p>
                      */
                     DomainQUICConfig m_qUICConfig;
                     bool m_qUICConfigHasBeenSet;
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_iPFilterPolicyHasBeenSet;
 
                     /**
-                     * <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+                     * <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

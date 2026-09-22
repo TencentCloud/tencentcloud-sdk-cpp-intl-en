@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
                      * @return Switch Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
                      * @param _switch Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -117,7 +117,7 @@ Default value: normal.
                     /**
                      * Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

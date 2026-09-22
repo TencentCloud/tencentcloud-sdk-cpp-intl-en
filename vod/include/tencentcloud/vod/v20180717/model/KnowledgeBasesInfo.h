@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent knowledge library information for media assets
+                * Media asset intelligent knowledge base information
                 */
                 class KnowledgeBasesInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of knowledge bases currently importing media assets</p>
-                     * @return Bases <p>List of knowledge bases currently importing media assets</p>
+                     * 获取<p>List of knowledge bases currently imported for the media asset</p>
+                     * @return Bases <p>List of knowledge bases currently imported for the media asset</p>
                      * 
                      */
                     std::vector<std::string> GetBases() const;
 
                     /**
-                     * 设置<p>List of knowledge bases currently importing media assets</p>
-                     * @param _bases <p>List of knowledge bases currently importing media assets</p>
+                     * 设置<p>List of knowledge bases currently imported for the media asset</p>
+                     * @param _bases <p>List of knowledge bases currently imported for the media asset</p>
                      * 
                      */
                     void SetBases(const std::vector<std::string>& _bases);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool BasesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media analysis information in the knowledge base</p>
-                     * @return KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+                     * 获取<p>Media analysis info in the knowledge base</p>
+                     * @return KnowledgeAnalysisInfos <p>Media analysis info in the knowledge base</p>
                      * 
                      */
                     std::vector<KnowledgeAnalysisInfo> GetKnowledgeAnalysisInfos() const;
 
                     /**
-                     * 设置<p>Media analysis information in the knowledge base</p>
-                     * @param _knowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+                     * 设置<p>Media analysis info in the knowledge base</p>
+                     * @param _knowledgeAnalysisInfos <p>Media analysis info in the knowledge base</p>
                      * 
                      */
                     void SetKnowledgeAnalysisInfos(const std::vector<KnowledgeAnalysisInfo>& _knowledgeAnalysisInfos);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool KnowledgeAnalysisInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
-                     * @return KnowledgeBaseDetails <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+                     * 获取<p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
+                     * @return KnowledgeBaseDetails <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
                      * 
                      */
                     std::vector<KnowledgeBaseDetail> GetKnowledgeBaseDetails() const;
 
                     /**
-                     * 设置<p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
-                     * @param _knowledgeBaseDetails <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+                     * 设置<p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
+                     * @param _knowledgeBaseDetails <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
                      * 
                      */
                     void SetKnowledgeBaseDetails(const std::vector<KnowledgeBaseDetail>& _knowledgeBaseDetails);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>List of knowledge bases currently importing media assets</p>
+                     * <p>List of knowledge bases currently imported for the media asset</p>
                      */
                     std::vector<std::string> m_bases;
                     bool m_basesHasBeenSet;
 
                     /**
-                     * <p>Media analysis information in the knowledge base</p>
+                     * <p>Media analysis info in the knowledge base</p>
                      */
                     std::vector<KnowledgeAnalysisInfo> m_knowledgeAnalysisInfos;
                     bool m_knowledgeAnalysisInfosHasBeenSet;
 
                     /**
-                     * <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+                     * <p>Current repository list imported for the media asset, as well as detailed information such as the parsing template used</p>
                      */
                     std::vector<KnowledgeBaseDetail> m_knowledgeBaseDetails;
                     bool m_knowledgeBaseDetailsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input type of the intelligent highlight task.
+                * Intelligent highlight task input type.
                 */
                 class AiAnalysisTaskHighlightInput : public AbstractModel
                 {

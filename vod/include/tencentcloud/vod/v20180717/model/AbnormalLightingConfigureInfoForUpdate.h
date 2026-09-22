@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch for detecting low-light and overexposed video images. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @return Switch Switch for detecting low-light and overexposed video images. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 获取Low-light and overexposure detection switch for video images. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+                     * @return Switch Low-light and overexposure detection switch for video images. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch for detecting low-light and overexposed video images. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @param _switch Switch for detecting low-light and overexposed video images. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 设置Low-light and overexposure detection switch for video images. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+                     * @param _switch Low-light and overexposure detection switch for video images. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch for detecting low-light and overexposed video images. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * Low-light and overexposure detection switch for video images. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

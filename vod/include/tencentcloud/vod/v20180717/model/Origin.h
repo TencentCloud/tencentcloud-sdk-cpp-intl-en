@@ -72,11 +72,11 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool OriginsHasBeenSet() const;
 
                     /**
-                     * 获取Primary origin server type. Input supports the following types:
+                     * 获取Primary origin server type. The input parameter supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-                     * @return OriginType Primary origin server type. Input supports the following types:
+                     * @return OriginType Primary origin server type. The input parameter supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -85,11 +85,11 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置Primary origin server type. Input supports the following types:
+                     * 设置Primary origin server type. The input parameter supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-                     * @param _originType Primary origin server type. Input supports the following types:
+                     * @param _originType Primary origin server type. The input parameter supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -105,18 +105,18 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
+                     * 获取Host header when accessing the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
-                     * @return ServerName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
+                     * @return ServerName Host header when accessing the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
                      * 
                      */
                     std::string GetServerName() const;
 
                     /**
-                     * 设置Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
+                     * 设置Host header when accessing the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
-                     * @param _serverName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
+                     * @param _serverName Host header when accessing the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
                      * 
                      */
@@ -221,15 +221,15 @@ When modifying the backup origin server, fill in the corresponding OriginType at
                     bool BackupOriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
-                     * @return BackupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * 获取Host header when accessing the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * @return BackupServerName Host header when accessing the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
                      * 
                      */
                     std::string GetBackupServerName() const;
 
                     /**
-                     * 设置Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
-                     * @param _backupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * 设置Host header when accessing the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * @param _backupServerName Host header when accessing the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
                      * 
                      */
                     void SetBackupServerName(const std::string& _backupServerName);
@@ -288,7 +288,7 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool m_originsHasBeenSet;
 
                     /**
-                     * Primary origin server type. Input supports the following types:
+                     * Primary origin server type. The input parameter supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -297,7 +297,7 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
+                     * Host header when accessing the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
                      */
                     std::string m_serverName;
@@ -329,7 +329,7 @@ When modifying the backup origin server, fill in the corresponding OriginType at
                     bool m_backupOriginTypeHasBeenSet;
 
                     /**
-                     * Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * Host header when accessing the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
                      */
                     std::string m_backupServerName;
                     bool m_backupServerNameHasBeenSet;

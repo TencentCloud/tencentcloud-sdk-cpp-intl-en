@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
-                     * @return SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+                     * 获取<p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+                     * @return SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
-                     * @param _subAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+                     * 设置<p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+                     * @param _subAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
-                     * @return Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+                     * 获取<p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
+                     * @return Name <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
-                     * @param _name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+                     * 设置<p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
+                     * @param _name <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+                     * <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+                     * <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

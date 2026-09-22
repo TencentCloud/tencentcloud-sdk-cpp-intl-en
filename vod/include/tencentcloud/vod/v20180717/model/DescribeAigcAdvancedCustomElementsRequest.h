@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-                     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-                     * @param _subAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
-                     * @return Offset <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+                     * 获取<p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+                     * @return Offset <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
-                     * @param _offset <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+                     * 设置<p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+                     * @param _offset <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
-                     * @return Limit <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
+                     * 获取<p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
+                     * @return Limit <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
-                     * @param _limit <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
+                     * 设置<p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
+                     * @param _limit <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Starting offset amount for pagination return. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
+                     * <p>Starting offset amount for pagination return. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p><p>Offset must be a multiple of Limit.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be a multiple of Limit.</p>
+                     * <p>Number of records returned in pages.</p><p>Value range: [1, 300]</p><p>Default value: 10</p><p>Offset must be an integral multiple of Limit.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

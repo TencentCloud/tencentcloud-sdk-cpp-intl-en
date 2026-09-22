@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * 获取<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * 设置<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Timbre name. The text content can be up to 20 characters in length.</p>
-                     * @return VoiceName <p>Timbre name. The text content can be up to 20 characters in length.</p>
+                     * 获取<p>Timbre name. The text content can contain up to 20 characters.</p>
+                     * @return VoiceName <p>Timbre name. The text content can contain up to 20 characters.</p>
                      * 
                      */
                     std::string GetVoiceName() const;
 
                     /**
-                     * 设置<p>Timbre name. The text content can be up to 20 characters in length.</p>
-                     * @param _voiceName <p>Timbre name. The text content can be up to 20 characters in length.</p>
+                     * 设置<p>Timbre name. The text content can contain up to 20 characters.</p>
+                     * @param _voiceName <p>Timbre name. The text content can contain up to 20 characters.</p>
                      * 
                      */
                     void SetVoiceName(const std::string& _voiceName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VoiceNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
-                     * @return VoiceUrl <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
+                     * 获取<p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
+                     * @return VoiceUrl <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
                      * 
                      */
                     std::string GetVoiceUrl() const;
 
                     /**
-                     * 设置<p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
-                     * @param _voiceUrl <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
+                     * 设置<p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
+                     * @param _voiceUrl <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
                      * 
                      */
                     void SetVoiceUrl(const std::string& _voiceUrl);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
-                     * @return SessionContext <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
+                     * 获取<p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置<p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
-                     * @param _sessionContext <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
+                     * 设置<p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -213,19 +213,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Timbre name. The text content can be up to 20 characters in length.</p>
+                     * <p>Timbre name. The text content can contain up to 20 characters.</p>
                      */
                     std::string m_voiceName;
                     bool m_voiceNameHasBeenSet;
 
                     /**
-                     * <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
+                     * <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
                      */
                     std::string m_voiceUrl;
                     bool m_voiceUrlHasBeenSet;
@@ -249,13 +249,13 @@ namespace TencentCloud
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
+                     * <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

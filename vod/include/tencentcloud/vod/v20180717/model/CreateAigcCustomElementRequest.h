@@ -67,10 +67,10 @@ namespace TencentCloud
                     /**
                      * 获取Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
                      * @return ElementDescription Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
                      * 
                      */
                     std::string GetElementDescription() const;
@@ -78,10 +78,10 @@ Up to 100 characters.
                     /**
                      * 设置Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
                      * @param _elementDescription Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
                      * 
                      */
                     void SetElementDescription(const std::string& _elementDescription);
@@ -95,11 +95,11 @@ Up to 100 characters.
 
                     /**
                      * 获取Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      * @return ElementFrontalImage Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      * 
@@ -108,11 +108,11 @@ The image file size must not exceed 10 MB. The image width and height must not b
 
                     /**
                      * 设置Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      * @param _elementFrontalImage Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      * 
@@ -158,14 +158,14 @@ The image file size must not exceed 10 MB. The image width and height must not b
                     /**
                      * Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
                      */
                     std::string m_elementDescription;
                     bool m_elementDescriptionHasBeenSet;
 
                     /**
                      * Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      */

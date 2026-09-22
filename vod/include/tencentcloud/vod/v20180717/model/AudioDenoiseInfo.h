@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
                      * @return Switch Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
                      * @param _switch Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -108,8 +108,8 @@ Default value: normal.
 
                     /**
                      * Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

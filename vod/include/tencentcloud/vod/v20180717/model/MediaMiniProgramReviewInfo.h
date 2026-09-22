@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio and video moderation information list.
-                     * @return MiniProgramReviewList Audio and video moderation information list.
+                     * 获取Audio/video moderation information list.
+                     * @return MiniProgramReviewList Audio/video moderation information list.
                      * 
                      */
                     std::vector<MediaMiniProgramReviewInfoItem> GetMiniProgramReviewList() const;
 
                     /**
-                     * 设置Audio and video moderation information list.
-                     * @param _miniProgramReviewList Audio and video moderation information list.
+                     * 设置Audio/video moderation information list.
+                     * @param _miniProgramReviewList Audio/video moderation information list.
                      * 
                      */
                     void SetMiniProgramReviewList(const std::vector<MediaMiniProgramReviewInfoItem>& _miniProgramReviewList);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio and video moderation information list.
+                     * Audio/video moderation information list.
                      */
                     std::vector<MediaMiniProgramReviewInfoItem> m_miniProgramReviewList;
                     bool m_miniProgramReviewListHasBeenSet;

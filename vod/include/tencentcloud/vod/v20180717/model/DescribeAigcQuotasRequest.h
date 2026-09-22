@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
-                     * @return SubAppId <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+                     * 获取<p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
+                     * @return SubAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
-                     * @param _subAppId <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+                     * 设置<p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
+                     * @param _subAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool QuotaTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
-                     * @return ApiToken <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+                     * 获取<p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
+                     * @return ApiToken <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
                      * 
                      */
                     std::string GetApiToken() const;
 
                     /**
-                     * 设置<p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
-                     * @param _apiToken <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+                     * 设置<p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
+                     * @param _apiToken <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
                      * 
                      */
                     void SetApiToken(const std::string& _apiToken);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ApiTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
-                     * @return Limit <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+                     * 获取<p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+                     * @return Limit <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
-                     * @param _limit <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+                     * 设置<p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+                     * @param _limit <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
-                     * @return Offset <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+                     * 获取<p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
+                     * @return Offset <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
-                     * @param _offset <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+                     * 设置<p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
+                     * @param _offset <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+                     * <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -162,19 +162,19 @@ namespace TencentCloud
                     bool m_quotaTypeHasBeenSet;
 
                     /**
-                     * <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+                     * <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;
 
                     /**
-                     * <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+                     * <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+                     * <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

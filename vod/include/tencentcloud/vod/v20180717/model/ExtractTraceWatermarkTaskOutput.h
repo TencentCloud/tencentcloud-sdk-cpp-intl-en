@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Player's ID in hexadecimal, 6 digits.
-                     * @return Uv Player's ID in hexadecimal, 6 digits.
+                     * 获取Player's ID, represented in hexadecimal, 6 digits in total.
+                     * @return Uv Player's ID, represented in hexadecimal, 6 digits in total.
                      * 
                      */
                     std::string GetUv() const;
 
                     /**
-                     * 设置Player's ID in hexadecimal, 6 digits.
-                     * @param _uv Player's ID in hexadecimal, 6 digits.
+                     * 设置Player's ID, represented in hexadecimal, 6 digits in total.
+                     * @param _uv Player's ID, represented in hexadecimal, 6 digits in total.
                      * 
                      */
                     void SetUv(const std::string& _uv);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Player's ID in hexadecimal, 6 digits.
+                     * Player's ID, represented in hexadecimal, 6 digits in total.
                      */
                     std::string m_uv;
                     bool m_uvHasBeenSet;

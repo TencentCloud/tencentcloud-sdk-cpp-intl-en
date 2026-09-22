@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
-                     * @return Switch High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+                     * 获取HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
+                     * @return Switch HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
-                     * @param _switch High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+                     * 设置HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
+                     * @param _switch HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -123,9 +123,9 @@ Note:
                 private:
 
                     /**
-                     * High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+                     * HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
-                     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+                     * 获取<p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
+                     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
-                     * @param _fileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+                     * 设置<p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
+                     * @param _fileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
-                     * @return Default <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+                     * 获取<p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+                     * @return Default <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
                      * 
                      */
                     std::string GetDefault() const;
 
                     /**
-                     * 设置<p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
-                     * @param _default <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+                     * 设置<p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+                     * @param _default <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
                      * 
                      */
                     void SetDefault(const std::string& _default);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DefaultHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
-                     * @return AudioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+                     * 获取<p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
+                     * @return AudioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
                      * 
                      */
                     uint64_t GetAudioTrackIdx() const;
 
                     /**
-                     * 设置<p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
-                     * @param _audioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+                     * 设置<p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
+                     * @param _audioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
                      * 
                      */
                     void SetAudioTrackIdx(const uint64_t& _audioTrackIdx);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+                     * <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_languageHasBeenSet;
 
                     /**
-                     * <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+                     * <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
                      */
                     std::string m_default;
                     bool m_defaultHasBeenSet;
 
                     /**
-                     * <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+                     * <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
                      */
                     uint64_t m_audioTrackIdx;
                     bool m_audioTrackIdxHasBeenSet;

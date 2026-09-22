@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
-                     * @return SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+                     * 获取VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
+                     * @return SubAppId VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
-                     * @param _subAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+                     * 设置VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
+                     * @param _subAppId VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * VOD application ID. For customers who activate on-demand services after December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+                     * VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

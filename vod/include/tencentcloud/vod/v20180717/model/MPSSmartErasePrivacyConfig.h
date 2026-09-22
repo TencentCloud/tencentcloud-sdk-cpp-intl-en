@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PrivacyModelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
-                     * @return PrivacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * 获取<p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * @return PrivacyTargets <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
                      * 
                      */
                     std::vector<std::string> GetPrivacyTargets() const;
 
                     /**
-                     * 设置<p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
-                     * @param _privacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * 设置<p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * @param _privacyTargets <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
                      * 
                      */
                     void SetPrivacyTargets(const std::vector<std::string>& _privacyTargets);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_privacyModelHasBeenSet;
 
                     /**
-                     * <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
                      */
                     std::vector<std::string> m_privacyTargets;
                     bool m_privacyTargetsHasBeenSet;

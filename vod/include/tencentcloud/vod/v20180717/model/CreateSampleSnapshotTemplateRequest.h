@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Sampling screenshot type. Value:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
-                     * @return SampleType <p>Sampling screenshot type. Value:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+                     * 获取<p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+                     * @return SampleType <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
                      * 
                      */
                     std::string GetSampleType() const;
 
                     /**
-                     * 设置<p>Sampling screenshot type. Value:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
-                     * @param _sampleType <p>Sampling screenshot type. Value:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+                     * 设置<p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+                     * @param _sampleType <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
                      * 
                      */
                     void SetSampleType(const std::string& _sampleType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SampleIntervalHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services on or after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
-                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services on or after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether default applications or newly created applications), this field must be filled with the app ID.</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether default applications or newly created applications), this field must be filled with the app ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services on or after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
-                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services on or after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether default applications or newly created applications), this field must be filled with the app ID.</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether default applications or newly created applications), this field must be filled with the app ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取<p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
-                     * @return Height <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+                     * 获取<p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+                     * @return Height <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置<p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
-                     * @param _height <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+                     * 设置<p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+                     * @param _height <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取<p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
-                     * @return ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+                     * 获取<p>Resolution adaptation. Available values:</p><li>open: Turn on. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: Turn off. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
+                     * @return ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: Turn on. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: Turn off. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置<p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
-                     * @param _resolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+                     * 设置<p>Resolution adaptation. Available values:</p><li>open: Turn on. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: Turn off. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
+                     * @param _resolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: Turn on. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: Turn off. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
-                     * @return FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+                     * 获取<p>Filling mode. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "padding". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, with the remaining edge part filled with black.</li><li>white: Keep the video aspect ratio unchanged, with the edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
+                     * @return FillType <p>Filling mode. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "padding". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, with the remaining edge part filled with black.</li><li>white: Keep the video aspect ratio unchanged, with the edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置<p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
-                     * @param _fillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+                     * 设置<p>Filling mode. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "padding". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, with the remaining edge part filled with black.</li><li>white: Keep the video aspect ratio unchanged, with the edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
+                     * @param _fillType <p>Filling mode. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "padding". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, with the remaining edge part filled with black.</li><li>white: Keep the video aspect ratio unchanged, with the edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -255,7 +255,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Sampling screenshot type. Value:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+                     * <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
                      */
                     std::string m_sampleType;
                     bool m_sampleTypeHasBeenSet;
@@ -267,7 +267,7 @@ namespace TencentCloud
                     bool m_sampleIntervalHasBeenSet;
 
                     /**
-                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services on or after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether default applications or newly created applications), this field must be filled with the app ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -285,13 +285,13 @@ namespace TencentCloud
                     bool m_widthHasBeenSet;
 
                     /**
-                     * <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+                     * <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+                     * <p>Resolution adaptation. Available values:</p><li>open: Turn on. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: Turn off. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
@@ -309,7 +309,7 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+                     * <p>Filling mode. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "padding". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, with the remaining edge part filled with black.</li><li>white: Keep the video aspect ratio unchanged, with the edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle suppression module text shadow configuration
+                * MPS subtitle suppression module text shadow configuration
                 */
                 class MPSSubtitleShadowConfig : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ShadowWidthUnitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
-                     * @return ShadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+                     * 获取<p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
+                     * @return ShadowColor <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
                      * 
                      */
                     std::string GetShadowColor() const;
 
                     /**
-                     * 设置<p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
-                     * @param _shadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+                     * 设置<p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
+                     * @param _shadowColor <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
                      * 
                      */
                     void SetShadowColor(const std::string& _shadowColor);
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_shadowWidthUnitHasBeenSet;
 
                     /**
-                     * <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+                     * <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
                      */
                     std::string m_shadowColor;
                     bool m_shadowColorHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
-                     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * 获取<p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+                     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
-                     * @param _subAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * 设置<p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+                     * @param _subAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
-                     * @return TemplateType <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
+                     * 获取<p>Type of MPS template that needs to be deleted. Value: </p><li>AIAnalysis: Create intelligent analysis template.</li><li>SmartSubtitle: Create smart subtitling template.</li><li>SmartErase: Create intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
+                     * @return TemplateType <p>Type of MPS template that needs to be deleted. Value: </p><li>AIAnalysis: Create intelligent analysis template.</li><li>SmartSubtitle: Create smart subtitling template.</li><li>SmartErase: Create intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
                      * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
-                     * 设置<p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
-                     * @param _templateType <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
+                     * 设置<p>Type of MPS template that needs to be deleted. Value: </p><li>AIAnalysis: Create intelligent analysis template.</li><li>SmartSubtitle: Create smart subtitling template.</li><li>SmartErase: Create intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
+                     * @param _templateType <p>Type of MPS template that needs to be deleted. Value: </p><li>AIAnalysis: Create intelligent analysis template.</li><li>SmartSubtitle: Create smart subtitling template.</li><li>SmartErase: Create intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
                      * 
                      */
                     void SetTemplateType(const std::string& _templateType);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Type of MPS template that needs to be deleted. Parameter values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
+                     * <p>Type of MPS template that needs to be deleted. Value: </p><li>AIAnalysis: Create intelligent analysis template.</li><li>SmartSubtitle: Create smart subtitling template.</li><li>SmartErase: Create intelligent erasure template.</li><li>EmbedSubtitle: Subtitle suppression template.</li>
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;

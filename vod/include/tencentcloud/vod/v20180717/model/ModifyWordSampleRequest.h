@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -87,7 +87,7 @@ namespace TencentCloud
 
                     /**
                      * 获取<b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -96,7 +96,7 @@ namespace TencentCloud
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
 7. All: include all of the above, equivalent to 1+2+3+4.
                      * @return Usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -110,7 +110,7 @@ namespace TencentCloud
 
                     /**
                      * 设置<b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -119,7 +119,7 @@ namespace TencentCloud
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
 7. All: include all of the above, equivalent to 1+2+3+4.
                      * @param _usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -168,14 +168,14 @@ namespace TencentCloud
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
                      * <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.

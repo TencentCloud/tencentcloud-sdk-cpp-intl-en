@@ -102,10 +102,10 @@ namespace TencentCloud
                     /**
                      * 获取Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
@@ -113,10 +113,10 @@ namespace TencentCloud
                     /**
                      * 设置Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * @param _errCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the media file creation task, with a value range of [0-100].
-                     * @return Progress Progress of the media file creation task, with a value range of [0-100].
+                     * 获取Progress of the media file creation task, in the range of [0,100].
+                     * @return Progress Progress of the media file creation task, in the range of [0,100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the media file creation task, with a value range of [0-100].
-                     * @param _progress Progress of the media file creation task, with a value range of [0-100].
+                     * 设置Progress of the media file creation task, in the range of [0,100].
+                     * @param _progress Progress of the media file creation task, in the range of [0,100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Meta information of the output video.
-                     * @return MetaData Meta information of the output video.
+                     * 获取Metadata of the output video.
+                     * @return MetaData Metadata of the output video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Meta information of the output video.
-                     * @param _metaData Meta information of the output video.
+                     * 设置Metadata of the output video.
+                     * @param _metaData Metadata of the output video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -294,7 +294,7 @@ namespace TencentCloud
                     /**
                      * Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -306,7 +306,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Progress of the media file creation task, with a value range of [0-100].
+                     * Progress of the media file creation task, in the range of [0,100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
@@ -324,7 +324,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Meta information of the output video.
+                     * Metadata of the output video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

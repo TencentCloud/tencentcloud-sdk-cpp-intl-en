@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI sample management and face information.
+                * AI sample management, face information.
                 */
                 class AiSampleFaceInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Human face image address.
-                     * @return Url Human face image address.
+                     * 获取Face image address.
+                     * @return Url Face image address.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Human face image address.
-                     * @param _url Human face image address.
+                     * 设置Face image address.
+                     * @param _url Face image address.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_faceIdHasBeenSet;
 
                     /**
-                     * Human face image address.
+                     * Face image address.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

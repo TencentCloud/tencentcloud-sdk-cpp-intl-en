@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AIGC stats
+                * AIGC statistics
                 */
                 class AigcUsageDataItem : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent cover task control parameters
+                * Intelligent Cover Task Control Parameters
                 */
                 class CoverConfigureInfo : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
                      * @return Switch Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
                      * @param _switch Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,7 +80,7 @@ namespace TencentCloud
                     /**
                      * Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

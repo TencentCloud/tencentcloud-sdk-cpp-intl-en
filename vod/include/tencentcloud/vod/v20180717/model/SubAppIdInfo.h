@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
-                     * @return Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+                     * 获取Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
+                     * @return Name Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
-                     * @param _name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+                     * 设置Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
+                     * @param _name Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -193,11 +193,11 @@ namespace TencentCloud
                      * 获取Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
                      * @return Mode Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
                      * 
                      */
                     std::string GetMode() const;
@@ -206,11 +206,11 @@ Leave empty to select the FileID-only mode by default.
                      * 设置Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
                      * @param _mode Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -301,7 +301,7 @@ Leave empty to select the FileID-only mode by default.
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+                     * Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -310,7 +310,7 @@ Leave empty to select the FileID-only mode by default.
                      * Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;

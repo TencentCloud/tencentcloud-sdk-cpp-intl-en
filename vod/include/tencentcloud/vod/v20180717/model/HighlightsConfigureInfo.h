@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent highlight task switch. Available values:
+                     * 获取Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
-                     * @return Switch Intelligent highlight task switch. Available values:
+                     * @return Switch Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Intelligent highlight task switch. Available values:
+                     * 设置Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
-                     * @param _switch Intelligent highlight task switch. Available values:
+                     * @param _switch Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Intelligent highlight task switch. Available values:
+                     * Task switch for intelligent highlight. Available values:
 <li>ON: enable the intelligent highlight task;</li>
 <li>OFF: disables the intelligent highlight task.</li>
                      */

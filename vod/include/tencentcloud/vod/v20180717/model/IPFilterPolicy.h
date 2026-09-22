@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP access restriction rule. It supports configuration of IP blocklists and allowlists.
+                * IP access restriction rule. It currently supports IP blocklist and allowlist configuration.
                 */
                 class IPFilterPolicy : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
                      * @return Status IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
                      * @param _status IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
-                     * @return FilterType IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+                     * 获取IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+                     * @return FilterType IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
-                     * @param _filterType IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+                     * 设置IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+                     * @param _filterType IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -126,14 +126,14 @@ namespace TencentCloud
                     /**
                      * IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+                     * IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;

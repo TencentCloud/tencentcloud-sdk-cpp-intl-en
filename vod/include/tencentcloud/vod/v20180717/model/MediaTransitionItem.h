@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Transition info
+                * Transition information
                 */
                 class MediaTransitionItem : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
-                     * @return Duration Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+                     * 获取Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
+                     * @return Duration Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
-                     * @param _duration Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+                     * 设置Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
+                     * @param _duration Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool TransitionsHasBeenSet() const;
 
                     /**
-                     * 获取Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
-                     * @return MediaTransitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * 获取Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
+                     * @return MediaTransitions Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
                      * 
                      */
                     std::vector<TransitionOperation> GetMediaTransitions() const;
 
                     /**
-                     * 设置Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
-                     * @param _mediaTransitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * 设置Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
+                     * @param _mediaTransitions Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
                      * 
                      */
                     void SetMediaTransitions(const std::vector<TransitionOperation>& _mediaTransitions);
@@ -114,7 +114,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+                     * Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
@@ -126,7 +126,7 @@ namespace TencentCloud
                     bool m_transitionsHasBeenSet;
 
                     /**
-                     * Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
                      */
                     std::vector<TransitionOperation> m_mediaTransitions;
                     bool m_mediaTransitionsHasBeenSet;

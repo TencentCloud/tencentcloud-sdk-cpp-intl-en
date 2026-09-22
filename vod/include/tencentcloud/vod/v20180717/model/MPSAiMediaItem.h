@@ -54,34 +54,34 @@ namespace TencentCloud
 <li>AiAnalysis.TagTask: intelligent tag task.</li>
 <li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
-<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: smart text extraction subtitle task.</li>
                      * @return TaskType MPS intelligent processing task type. Valid values:
 <li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
 <li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
 <li>AiAnalysis.TagTask: intelligent tag task.</li>
 <li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
-<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: smart text extraction subtitle task.</li>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -93,34 +93,34 @@ namespace TencentCloud
 <li>AiAnalysis.TagTask: intelligent tag task.</li>
 <li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
-<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: smart text extraction subtitle task.</li>
                      * @param _taskType MPS intelligent processing task type. Valid values:
 <li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
 <li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
 <li>AiAnalysis.TagTask: intelligent tag task.</li>
 <li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
-<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: smart text extraction subtitle task.</li>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -162,17 +162,17 @@ namespace TencentCloud
 <li>AiAnalysis.TagTask: intelligent tag task.</li>
 <li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
-<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: smart text extraction subtitle task.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

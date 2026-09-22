@@ -47,26 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice translation recognition task switch. Available values:
+                     * 获取Task switch for speech translation recognition. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+<li>OFF: disable.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition feature items simultaneously is forbidden.
 
-                     * @return Switch Voice translation recognition task switch. Available values:
+                     * @return Switch Task switch for speech translation recognition. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+<li>OFF: disable.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition feature items simultaneously is forbidden.
 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Voice translation recognition task switch. Available values:
+                     * 设置Task switch for speech translation recognition. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+<li>OFF: disable.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition feature items simultaneously is forbidden.
 
-                     * @param _switch Voice translation recognition task switch. Available values:
+                     * @param _switch Task switch for speech translation recognition. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+<li>OFF: disable.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition feature items simultaneously is forbidden.
 
                      * 
                      */
@@ -154,7 +154,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Translation target language. This parameter is valid when Switch is ON.
-If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+If this parameter is not specified or an empty string is entered, it means that only full text recognition is performed without translation. The billing item is the same as that of full text recognition in AsrFullTextConfigure.
 Otherwise, the parameter value range is divided into the following cases:
 When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
@@ -188,18 +188,18 @@ When SrcLanguage is en, value range:
 <li>ms: Malay;</li>
 <li>ar: Arabic;</li>
 <li>hi: Hindi.</li>
-When `SrcLanguage` is `ja` (Japanese), value range:
+When SrcLanguage is ja (Japanese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), value ranges from...to...
+When `SrcLanguage` is `ko` (Korean), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value ranges from...to...
+When SrcLanguage is pt (Portuguese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -208,7 +208,7 @@ When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>de: German;</li>
 <li>tr: Turkish;</li>
 <li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), value ranges from...to...
+When SrcLanguage is tr (Turkish), the value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -217,7 +217,7 @@ When SrcLanguage is tr (Turkish), value ranges from...to...
 <li>de: German;</li>
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), value ranges from...to...
+When SrcLanguage is es (Spanish), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -238,7 +238,7 @@ When SrcLanguage is fr (French), value range:
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
                      * @return DstLanguage Translation target language. This parameter is valid when Switch is ON.
-If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+If this parameter is not specified or an empty string is entered, it means that only full text recognition is performed without translation. The billing item is the same as that of full text recognition in AsrFullTextConfigure.
 Otherwise, the parameter value range is divided into the following cases:
 When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
@@ -272,18 +272,18 @@ When SrcLanguage is en, value range:
 <li>ms: Malay;</li>
 <li>ar: Arabic;</li>
 <li>hi: Hindi.</li>
-When `SrcLanguage` is `ja` (Japanese), value range:
+When SrcLanguage is ja (Japanese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), value ranges from...to...
+When `SrcLanguage` is `ko` (Korean), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value ranges from...to...
+When SrcLanguage is pt (Portuguese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -292,7 +292,7 @@ When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>de: German;</li>
 <li>tr: Turkish;</li>
 <li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), value ranges from...to...
+When SrcLanguage is tr (Turkish), the value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -301,7 +301,7 @@ When SrcLanguage is tr (Turkish), value ranges from...to...
 <li>de: German;</li>
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), value ranges from...to...
+When SrcLanguage is es (Spanish), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -327,7 +327,7 @@ When SrcLanguage is fr (French), value range:
 
                     /**
                      * 设置Translation target language. This parameter is valid when Switch is ON.
-If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+If this parameter is not specified or an empty string is entered, it means that only full text recognition is performed without translation. The billing item is the same as that of full text recognition in AsrFullTextConfigure.
 Otherwise, the parameter value range is divided into the following cases:
 When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
@@ -361,18 +361,18 @@ When SrcLanguage is en, value range:
 <li>ms: Malay;</li>
 <li>ar: Arabic;</li>
 <li>hi: Hindi.</li>
-When `SrcLanguage` is `ja` (Japanese), value range:
+When SrcLanguage is ja (Japanese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), value ranges from...to...
+When `SrcLanguage` is `ko` (Korean), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value ranges from...to...
+When SrcLanguage is pt (Portuguese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -381,7 +381,7 @@ When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>de: German;</li>
 <li>tr: Turkish;</li>
 <li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), value ranges from...to...
+When SrcLanguage is tr (Turkish), the value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -390,7 +390,7 @@ When SrcLanguage is tr (Turkish), value ranges from...to...
 <li>de: German;</li>
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), value ranges from...to...
+When SrcLanguage is es (Spanish), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -411,7 +411,7 @@ When SrcLanguage is fr (French), value range:
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
                      * @param _dstLanguage Translation target language. This parameter is valid when Switch is ON.
-If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+If this parameter is not specified or an empty string is entered, it means that only full text recognition is performed without translation. The billing item is the same as that of full text recognition in AsrFullTextConfigure.
 Otherwise, the parameter value range is divided into the following cases:
 When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
@@ -445,18 +445,18 @@ When SrcLanguage is en, value range:
 <li>ms: Malay;</li>
 <li>ar: Arabic;</li>
 <li>hi: Hindi.</li>
-When `SrcLanguage` is `ja` (Japanese), value range:
+When SrcLanguage is ja (Japanese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), value ranges from...to...
+When `SrcLanguage` is `ko` (Korean), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value ranges from...to...
+When SrcLanguage is pt (Portuguese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -465,7 +465,7 @@ When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>de: German;</li>
 <li>tr: Turkish;</li>
 <li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), value ranges from...to...
+When SrcLanguage is tr (Turkish), the value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -474,7 +474,7 @@ When SrcLanguage is tr (Turkish), value ranges from...to...
 <li>de: German;</li>
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), value ranges from...to...
+When SrcLanguage is es (Spanish), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -506,23 +506,23 @@ When SrcLanguage is fr (French), value range:
                     bool DstLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+                     * 获取Generated subtitle file format list. Leaving it empty or as an empty array means no subtitle file will be generated. Valid values:
 <li>vtt: Generate a WebVTT subtitle file;</li>
-<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
-                     * @return SubtitleFormats Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. Therefore, when and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
+                     * @return SubtitleFormats Generated subtitle file format list. Leaving it empty or as an empty array means no subtitle file will be generated. Valid values:
 <li>vtt: Generate a WebVTT subtitle file;</li>
-<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. Therefore, when and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
                      * 
                      */
                     std::vector<std::string> GetSubtitleFormats() const;
 
                     /**
-                     * 设置Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+                     * 设置Generated subtitle file format list. Leaving it empty or as an empty array means no subtitle file will be generated. Valid values:
 <li>vtt: Generate a WebVTT subtitle file;</li>
-<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
-                     * @param _subtitleFormats Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. Therefore, when and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
+                     * @param _subtitleFormats Generated subtitle file format list. Leaving it empty or as an empty array means no subtitle file will be generated. Valid values:
 <li>vtt: Generate a WebVTT subtitle file;</li>
-<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. Therefore, when and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
                      * 
                      */
                     void SetSubtitleFormats(const std::vector<std::string>& _subtitleFormats);
@@ -535,10 +535,10 @@ When SrcLanguage is fr (French), value range:
                     bool SubtitleFormatsHasBeenSet() const;
 
                     /**
-                     * 获取Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+                     * 获取Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will automatically generate it.
 <font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
 
-                     * @return SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+                     * @return SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will automatically generate it.
 <font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
 
                      * 
@@ -546,10 +546,10 @@ When SrcLanguage is fr (French), value range:
                     std::string GetSubtitleName() const;
 
                     /**
-                     * 设置Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+                     * 设置Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will automatically generate it.
 <font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
 
-                     * @param _subtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+                     * @param _subtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will automatically generate it.
 <font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
 
                      * 
@@ -566,9 +566,9 @@ When SrcLanguage is fr (French), value range:
                 private:
 
                     /**
-                     * Voice translation recognition task switch. Available values:
+                     * Task switch for speech translation recognition. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full-text recognition result. To avoid duplicate charges, do not enable voice translation recognition and ASR full-text recognition simultaneously.
+<li>OFF: disable.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition feature items simultaneously is forbidden.
 
                      */
                     std::string m_switch;
@@ -595,7 +595,7 @@ When SrcLanguage is fr (French), value range:
 
                     /**
                      * Translation target language. This parameter is valid when Switch is ON.
-If this parameter is not specified or an empty string is entered, it means that only full speech recognition is performed without translation (the billing item is the same as that of full speech recognition in AsrFullTextConfigure).
+If this parameter is not specified or an empty string is entered, it means that only full text recognition is performed without translation. The billing item is the same as that of full text recognition in AsrFullTextConfigure.
 Otherwise, the parameter value range is divided into the following cases:
 When SrcLanguage is zh (Chinese), value range:
 <li>en: English;</li>
@@ -629,18 +629,18 @@ When SrcLanguage is en, value range:
 <li>ms: Malay;</li>
 <li>ar: Arabic;</li>
 <li>hi: Hindi.</li>
-When `SrcLanguage` is `ja` (Japanese), value range:
+When SrcLanguage is ja (Japanese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), value ranges from...to...
+When `SrcLanguage` is `ko` (Korean), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>ja: Japanese.</li>
-When `SrcLanguage` is `vi` (Vietnamese), `ms` (Malay), or `th` (Thai), the value range is:
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
 <li>zh: Chinese;</li>
 <li>en: English.</li>
-When SrcLanguage is pt (Portuguese), value ranges from...to...
+When SrcLanguage is pt (Portuguese), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -649,7 +649,7 @@ When SrcLanguage is pt (Portuguese), value ranges from...to...
 <li>de: German;</li>
 <li>tr: Turkish;</li>
 <li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), value ranges from...to...
+When SrcLanguage is tr (Turkish), the value ranges from...to...
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -658,7 +658,7 @@ When SrcLanguage is tr (Turkish), value ranges from...to...
 <li>de: German;</li>
 <li>ru: Russian;</li>
 <li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), value ranges from...to...
+When SrcLanguage is es (Spanish), value range:
 <li>zh: Chinese;</li>
 <li>en: English;</li>
 <li>fr: French;</li>
@@ -683,15 +683,15 @@ When SrcLanguage is fr (French), value range:
                     bool m_dstLanguageHasBeenSet;
 
                     /**
-                     * Generated subtitle file format list. Leaving it empty or passing an empty array means no subtitle file will be generated. Valid values:
+                     * Generated subtitle file format list. Leaving it empty or as an empty array means no subtitle file will be generated. Valid values:
 <li>vtt: Generate a WebVTT subtitle file;</li>
-<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD adds the generated subtitles to media assets.
+<li>srt: generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. Therefore, when and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
                      */
                     std::vector<std::string> m_subtitleFormats;
                     bool m_subtitleFormatsHasBeenSet;
 
                     /**
-                     * Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will auto generate it.
+                     * Specify subtitle name. Length limited to 64 characters. This value will be used for player display. If left blank, VOD will automatically generate it.
 <font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
 
                      */

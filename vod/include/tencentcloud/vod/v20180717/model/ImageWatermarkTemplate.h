@@ -97,27 +97,27 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Height of a watermark, supporting two formats: % and px.
+                     * 获取Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
-                     * @return Height Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
+                     * @return Height Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
                      * 
                      */
                     std::string GetHeight() const;
 
                     /**
-                     * 设置Height of a watermark, supporting two formats: % and px.
+                     * 设置Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
-                     * @param _height Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
+                     * @param _height Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
                      * 
                      */
                     void SetHeight(const std::string& _height);
@@ -132,11 +132,11 @@ namespace TencentCloud
                     /**
                      * 获取Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
                      * @return RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
                      * 
                      */
@@ -145,11 +145,11 @@ namespace TencentCloud
                     /**
                      * 设置Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
                      * @param _repeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
                      * 
                      */
@@ -208,10 +208,10 @@ namespace TencentCloud
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Height of a watermark, supporting two formats: % and px.
+                     * Height of the watermark. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-0px: Height is scaled proportionally to the video width based on Width.
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+0px: means Height is scaled proportionally to the video width according to Width.
                      */
                     std::string m_height;
                     bool m_heightHasBeenSet;
@@ -219,7 +219,7 @@ namespace TencentCloud
                     /**
                      * Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
 <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
                      */
                     std::string m_repeatType;

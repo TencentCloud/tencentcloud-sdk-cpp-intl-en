@@ -91,10 +91,10 @@ namespace TencentCloud
                     /**
                      * 获取Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
                      * @return Status Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -102,10 +102,10 @@ namespace TencentCloud
                     /**
                      * 设置Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
                      * @param _status Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -184,7 +184,7 @@ namespace TencentCloud
                     /**
                      * Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

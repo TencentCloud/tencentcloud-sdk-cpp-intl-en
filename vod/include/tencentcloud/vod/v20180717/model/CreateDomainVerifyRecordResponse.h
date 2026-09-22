@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool DNSVerifyInfoHasBeenSet() const;
 
                     /**
-                     * 获取File validation information
-                     * @return FileVerifyInfo File validation information
+                     * 获取File verification information
+                     * @return FileVerifyInfo File verification information
                      * 
                      */
                     FileVerifyInfo GetFileVerifyInfo() const;
@@ -82,7 +82,7 @@ namespace TencentCloud
                     bool m_dNSVerifyInfoHasBeenSet;
 
                     /**
-                     * File validation information
+                     * File verification information
                      */
                     FileVerifyInfo m_fileVerifyInfo;
                     bool m_fileVerifyInfoHasBeenSet;

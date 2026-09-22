@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content intelligent identification trigger count.
-                     * @return TotalCount Content intelligent identification trigger count.
+                     * 获取Content intelligent identification initiation count.
+                     * @return TotalCount Content intelligent identification initiation count.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TotalDurationHasBeenSet() const;
 
                     /**
-                     * 获取Duration stats of content intelligent identification, one data point per day.
-                     * @return Data Duration stats of content intelligent identification, one data point per day.
+                     * 获取Duration statistics of content intelligent identification. One data point per day.
+                     * @return Data Duration statistics of content intelligent identification. One data point per day.
                      * 
                      */
                     std::vector<StatDataItem> GetData() const;
@@ -89,7 +89,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Content intelligent identification trigger count.
+                     * Content intelligent identification initiation count.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -101,7 +101,7 @@ namespace TencentCloud
                     bool m_totalDurationHasBeenSet;
 
                     /**
-                     * Duration stats of content intelligent identification, one data point per day.
+                     * Duration statistics of content intelligent identification. One data point per day.
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

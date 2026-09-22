@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image quality restoration control parameters
+                * Image quality restoration control parameters.
                 */
                 class RepairInfo : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
                      * @return Switch Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
                      * @param _switch Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -117,7 +117,7 @@ Default value: weak.
                     /**
                      * Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

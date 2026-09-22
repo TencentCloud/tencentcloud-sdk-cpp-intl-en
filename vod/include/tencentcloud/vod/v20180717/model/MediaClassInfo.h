@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
-                     * @return Level Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+                     * 获取Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
+                     * @return Level Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
-                     * 设置Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
-                     * @param _level Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+                     * 设置Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
+                     * @param _level Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+                     * Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;

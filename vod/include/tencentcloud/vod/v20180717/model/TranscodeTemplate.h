@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
-                     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+                     * 获取<p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
+                     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置<p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
-                     * @param _container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+                     * 设置<p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
+                     * @param _container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
-                     * @return Type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+                     * 获取<p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+                     * @return Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
-                     * @param _type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+                     * 设置<p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+                     * @param _type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
-                     * @return RemoveVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+                     * 获取<p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
+                     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
                      * 
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置<p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
-                     * @param _removeVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+                     * 设置<p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
+                     * @param _removeVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
                      * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
@@ -282,15 +282,15 @@ namespace TencentCloud
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
-                     * @return ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+                     * 获取<p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+                     * @return ContainerType <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
                      * 
                      */
                     std::string GetContainerType() const;
 
                     /**
-                     * 设置<p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
-                     * @param _containerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+                     * 设置<p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+                     * @param _containerType <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
                      * 
                      */
                     void SetContainerType(const std::string& _containerType);
@@ -345,15 +345,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment type. Valid only when Container is hls.</p>
-                     * @return SegmentType <p>Segment type. Valid only when Container is hls.</p>
+                     * 获取<p>Segment type. It is valid only when Container is hls.</p>
+                     * @return SegmentType <p>Segment type. It is valid only when Container is hls.</p>
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置<p>Segment type. Valid only when Container is hls.</p>
-                     * @param _segmentType <p>Segment type. Valid only when Container is hls.</p>
+                     * 设置<p>Segment type. It is valid only when Container is hls.</p>
+                     * @param _segmentType <p>Segment type. It is valid only when Container is hls.</p>
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -395,7 +395,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+                     * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
@@ -413,13 +413,13 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+                     * <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+                     * <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
@@ -455,7 +455,7 @@ namespace TencentCloud
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+                     * <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
                      */
                     std::string m_containerType;
                     bool m_containerTypeHasBeenSet;
@@ -473,7 +473,7 @@ namespace TencentCloud
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * <p>Segment type. Valid only when Container is hls.</p>
+                     * <p>Segment type. It is valid only when Container is hls.</p>
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;

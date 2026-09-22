@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -107,12 +107,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Client upload acceleration type. Valid values:
-<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
-<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+<li> AccelerationWithHTTP: upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: Upload acceleration over QUIC transmission mode.</li>
 Default query for the amount of all acceleration types.
                      * @return Type Client upload acceleration type. Valid values:
-<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
-<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+<li> AccelerationWithHTTP: upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: Upload acceleration over QUIC transmission mode.</li>
 Default query for the amount of all acceleration types.
                      * 
                      */
@@ -120,12 +120,12 @@ Default query for the amount of all acceleration types.
 
                     /**
                      * 设置Client upload acceleration type. Valid values:
-<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
-<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+<li> AccelerationWithHTTP: upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: Upload acceleration over QUIC transmission mode.</li>
 Default query for the amount of all acceleration types.
                      * @param _type Client upload acceleration type. Valid values:
-<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
-<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+<li> AccelerationWithHTTP: upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: Upload acceleration over QUIC transmission mode.</li>
 Default query for the amount of all acceleration types.
                      * 
                      */
@@ -153,15 +153,15 @@ Default query for the amount of all acceleration types.
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
                      * Client upload acceleration type. Valid values:
-<li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
-<li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+<li> AccelerationWithHTTP: upload acceleration over HTTP transmission method.</li>
+<li> AccelerationWithQUIC: Upload acceleration over QUIC transmission mode.</li>
 Default query for the amount of all acceleration types.
                      */
                     std::string m_type;

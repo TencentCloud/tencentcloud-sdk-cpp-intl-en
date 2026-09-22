@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * On-demand file transcoding information
+                * Transcoding information of a VOD file
                 */
                 class MediaTranscodeInfo : public AbstractModel
                 {

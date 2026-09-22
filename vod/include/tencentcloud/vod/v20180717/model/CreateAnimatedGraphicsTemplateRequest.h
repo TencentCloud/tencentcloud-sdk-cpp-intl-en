@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -126,13 +126,13 @@ Default value: 0.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+                     * 获取Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
-                     * @return Height Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+                     * @return Height Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -143,13 +143,13 @@ Default value: 0.
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+                     * 设置Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
-                     * @param _height Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+                     * @param _height Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -200,15 +200,15 @@ Default value: open.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取Animated image file format. Valid values: gif and webp. Default value: gif.
-                     * @return Format Animated image file format. Valid values: gif and webp. Default value: gif.
+                     * 获取Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
+                     * @return Format Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Animated image file format. Valid values: gif and webp. Default value: gif.
-                     * @param _format Animated image file format. Valid values: gif and webp. Default value: gif.
+                     * 设置Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
+                     * @param _format Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -221,15 +221,15 @@ Default value: open.
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Image quality. Value range: [1, 100]. Default value: 75.
-                     * @return Quality Image quality. Value range: [1, 100]. Default value: 75.
+                     * 获取Image quality. Valid range: [1, 100]. Default value: 75.
+                     * @return Quality Image quality. Valid range: [1, 100]. Default value: 75.
                      * 
                      */
                     double GetQuality() const;
 
                     /**
-                     * 设置Image quality. Value range: [1, 100]. Default value: 75.
-                     * @param _quality Image quality. Value range: [1, 100]. Default value: 75.
+                     * 设置Image quality. Valid range: [1, 100]. Default value: 75.
+                     * @param _quality Image quality. Valid range: [1, 100]. Default value: 75.
                      * 
                      */
                     void SetQuality(const double& _quality);
@@ -292,7 +292,7 @@ Default value: open.
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -309,7 +309,7 @@ Default value: 0.
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+                     * Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -329,13 +329,13 @@ Default value: open.
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * Animated image file format. Valid values: gif and webp. Default value: gif.
+                     * Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Image quality. Value range: [1, 100]. Default value: 75.
+                     * Image quality. Valid range: [1, 100]. Default value: 75.
                      */
                     double m_quality;
                     bool m_qualityHasBeenSet;

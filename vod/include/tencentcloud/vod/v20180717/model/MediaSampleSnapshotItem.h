@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 获取Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 设置Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -98,22 +98,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
                      * @return Interval Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
                      * 
                      */
                     int64_t GetInterval() const;
 
                     /**
                      * 设置Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
                      * @param _interval Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
                      * 
                      */
                     void SetInterval(const int64_t& _interval);
@@ -170,7 +170,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -185,8 +185,8 @@ namespace TencentCloud
 
                     /**
                      * Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;

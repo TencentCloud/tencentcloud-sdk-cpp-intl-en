@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Carousel playlist description, with a length limit of 256 characters.
-                     * @return Desc Carousel playlist description, with a length limit of 256 characters.
+                     * 获取Carousel playlist description. Length limit: 256 characters.
+                     * @return Desc Carousel playlist description. Length limit: 256 characters.
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置Carousel playlist description, with a length limit of 256 characters.
-                     * @param _desc Carousel playlist description, with a length limit of 256 characters.
+                     * 设置Carousel playlist description. Length limit: 256 characters.
+                     * @param _desc Carousel playlist description. Length limit: 256 characters.
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -154,11 +154,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
                      * @return Status Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
                      * 
@@ -167,11 +167,11 @@ Default value: Enabled.
 
                     /**
                      * 设置Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
                      * @param _status Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
                      * 
@@ -261,15 +261,15 @@ Default value: Loop.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return UpdateTime Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @return UpdateTime Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _updateTime Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @param _updateTime Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -282,15 +282,15 @@ Default value: Loop.
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
-                     * @return ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+                     * 获取Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+                     * @return ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
                      * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
-                     * @param _expiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+                     * 设置Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+                     * @param _expiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
                      * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
@@ -329,14 +329,14 @@ Default value: Loop.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Carousel playlist description, with a length limit of 256 characters.
+                     * Carousel playlist description. Length limit: 256 characters.
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
                      * Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
                      */
@@ -365,13 +365,13 @@ Default value: Loop.
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+                     * Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;

@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media material source of the audio clip, which can be:
+                     * 获取Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
-                     * @return SourceMedia Media material source of the audio clip, which can be:
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+                     * @return SourceMedia Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     std::string GetSourceMedia() const;
 
                     /**
-                     * 设置Media material source of the audio clip, which can be:
+                     * 设置Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
-                     * @param _sourceMedia Media material source of the audio clip, which can be:
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+                     * @param _sourceMedia Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
@@ -81,15 +81,15 @@ Note: When using the download URL of another media file as the material source a
                     bool SourceMediaHasBeenSet() const;
 
                     /**
-                     * 获取The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
-                     * @return SourceMediaStartTime The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+                     * 获取Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
+                     * @return SourceMediaStartTime Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
                      * 
                      */
                     double GetSourceMediaStartTime() const;
 
                     /**
-                     * 设置The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
-                     * @param _sourceMediaStartTime The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+                     * 设置Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
+                     * @param _sourceMediaStartTime Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
                      * 
                      */
                     void SetSourceMediaStartTime(const double& _sourceMediaStartTime);
@@ -102,15 +102,15 @@ Note: When using the download URL of another media file as the material source a
                     bool SourceMediaStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
-                     * @return Duration Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+                     * 获取Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
+                     * @return Duration Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
-                     * @param _duration Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+                     * 设置Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
+                     * @param _duration Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -123,23 +123,23 @@ Note: When using the download URL of another media file as the material source a
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Target duration of the audio clip in seconds.
+                     * 获取Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
-                     * @return TargetDuration Target duration of the audio clip in seconds.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
+                     * @return TargetDuration Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
                      * 
                      */
                     double GetTargetDuration() const;
 
                     /**
-                     * 设置Target duration of the audio clip in seconds.
+                     * 设置Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
-                     * @param _targetDuration Target duration of the audio clip in seconds.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
+                     * @param _targetDuration Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
                      * 
                      */
                     void SetTargetDuration(const double& _targetDuration);
@@ -152,15 +152,15 @@ Note: When using the download URL of another media file as the material source a
                     bool TargetDurationHasBeenSet() const;
 
                     /**
-                     * 获取Operation performed on the audio clip, such as volume adjustment.
-                     * @return AudioOperations Operation performed on the audio clip, such as volume adjustment.
+                     * 获取Operation performed on the audio clip, for example, audio volume adjustment.
+                     * @return AudioOperations Operation performed on the audio clip, for example, audio volume adjustment.
                      * 
                      */
                     std::vector<AudioTransform> GetAudioOperations() const;
 
                     /**
-                     * 设置Operation performed on the audio clip, such as volume adjustment.
-                     * @param _audioOperations Operation performed on the audio clip, such as volume adjustment.
+                     * 设置Operation performed on the audio clip, for example, audio volume adjustment.
+                     * @param _audioOperations Operation performed on the audio clip, for example, audio volume adjustment.
                      * 
                      */
                     void SetAudioOperations(const std::vector<AudioTransform>& _audioOperations);
@@ -175,36 +175,36 @@ Note: When using the download URL of another media file as the material source a
                 private:
 
                     /**
-                     * Media material source of the audio clip, which can be:
+                     * Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      */
                     std::string m_sourceMedia;
                     bool m_sourceMediaHasBeenSet;
 
                     /**
-                     * The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+                     * Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
                      */
                     double m_sourceMediaStartTime;
                     bool m_sourceMediaStartTimeHasBeenSet;
 
                     /**
-                     * Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+                     * Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Target duration of the audio clip in seconds.
+                     * Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
                      */
                     double m_targetDuration;
                     bool m_targetDurationHasBeenSet;
 
                     /**
-                     * Operation performed on the audio clip, such as volume adjustment.
+                     * Operation performed on the audio clip, for example, audio volume adjustment.
                      */
                     std::vector<AudioTransform> m_audioOperations;
                     bool m_audioOperationsHasBeenSet;

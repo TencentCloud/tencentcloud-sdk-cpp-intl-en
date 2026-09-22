@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * @return Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * @param _id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -73,18 +73,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * @return Name Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * @param _name Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -171,14 +171,14 @@ namespace TencentCloud
 
                     /**
                      * Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
                      * Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Timestamp hotlink protection mode D configuration;
+                * Configuration of timestamp hotlink protection mode D.
 The access URL format of timestamp hotlink protection mode D is: http://DomainName/FileName?sign=md5hash&t=timestamp;
 Among them, timestamp is a decimal or hexadecimal UNIX timestamp;
 md5hash: MD5 (custom key + file path + timestamp).
@@ -51,18 +51,18 @@ md5hash: MD5 (custom key + file path + timestamp).
 
                     /**
                      * 获取Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * @return SecretKey Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * @param _secretKey Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -101,18 +101,18 @@ In seconds. Maximum settable value: 630720000.
 
                     /**
                      * 获取List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
                      * @return FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
                      * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
                      * 设置List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
                      * @param _fileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
                      * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
@@ -125,19 +125,19 @@ If it contains the character *, it means all files.
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
-                     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+                     * 获取whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
+                     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
-                     * @param _filterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+                     * 设置whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
+                     * @param _filterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -150,19 +150,19 @@ blacklist: blocklist, which means authentication is only applicable to the types
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
-                     * @return SignParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+                     * 获取Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
+                     * @return SignParam Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      * 
                      */
                     std::string GetSignParam() const;
 
                     /**
-                     * 设置Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
-                     * @param _signParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+                     * 设置Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
+                     * @param _signParam Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      * 
                      */
                     void SetSignParam(const std::string& _signParam);
@@ -176,18 +176,18 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
                     /**
                      * 获取Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      * @return TimeParam Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      * 
                      */
                     std::string GetTimeParam() const;
 
                     /**
                      * 设置Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      * @param _timeParam Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      * 
                      */
                     void SetTimeParam(const std::string& _timeParam);
@@ -230,18 +230,18 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
                     /**
                      * 获取Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * @return BackupSecretKey Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * 
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
                      * 设置Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * @param _backupSecretKey Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      * 
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
@@ -257,7 +257,7 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
                     /**
                      * Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
@@ -271,28 +271,28 @@ In seconds. Maximum settable value: 630720000.
 
                     /**
                      * List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+                     * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+                     * Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      */
                     std::string m_signParam;
                     bool m_signParamHasBeenSet;
 
                     /**
                      * Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
                      */
                     std::string m_timeParam;
                     bool m_timeParamHasBeenSet;
@@ -307,7 +307,7 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
                     /**
                      * Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
                      */
                     std::string m_backupSecretKey;
                     bool m_backupSecretKeyHasBeenSet;

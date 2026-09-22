@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
-                     * @return ClothesFileInfos <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * 获取<p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * @return ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
                      * 
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> GetClothesFileInfos() const;
 
                     /**
-                     * 设置<p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
-                     * @param _clothesFileInfos <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * 设置<p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * @param _clothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
                      * 
                      */
                     void SetClothesFileInfos(const std::vector<SceneAigcImageTaskInputFileInfo>& _clothesFileInfos);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+                     * <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> m_clothesFileInfos;
                     bool m_clothesFileInfosHasBeenSet;

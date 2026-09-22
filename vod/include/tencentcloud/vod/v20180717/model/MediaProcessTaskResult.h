@@ -59,7 +59,7 @@ namespace TencentCloud
 <li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheets</li>
+<li>ImageSprites: sprite sheet</li>
 <li>CoverBySnapshot: screencapturing for cover image</li>
 <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      * @return Type Task type. Valid values:
@@ -67,7 +67,7 @@ namespace TencentCloud
 <li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheets</li>
+<li>ImageSprites: sprite sheet</li>
 <li>CoverBySnapshot: screencapturing for cover image</li>
 <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      * 
@@ -80,7 +80,7 @@ namespace TencentCloud
 <li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheets</li>
+<li>ImageSprites: sprite sheet</li>
 <li>CoverBySnapshot: screencapturing for cover image</li>
 <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      * @param _type Task type. Valid values:
@@ -88,7 +88,7 @@ namespace TencentCloud
 <li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheets</li>
+<li>ImageSprites: sprite sheet</li>
 <li>CoverBySnapshot: screencapturing for cover image</li>
 <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      * 
@@ -103,15 +103,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Query result of the video transcoding task. Valid when the task type is `Transcode`.
-                     * @return TranscodeTask Query result of the video transcoding task. Valid when the task type is `Transcode`.
+                     * 获取Query result of a video transcoding task. Valid when the task type is Transcode.
+                     * @return TranscodeTask Query result of a video transcoding task. Valid when the task type is Transcode.
                      * 
                      */
                     MediaProcessTaskTranscodeResult GetTranscodeTask() const;
 
                     /**
-                     * 设置Query result of the video transcoding task. Valid when the task type is `Transcode`.
-                     * @param _transcodeTask Query result of the video transcoding task. Valid when the task type is `Transcode`.
+                     * 设置Query result of a video transcoding task. Valid when the task type is Transcode.
+                     * @param _transcodeTask Query result of a video transcoding task. Valid when the task type is Transcode.
                      * 
                      */
                     void SetTranscodeTask(const MediaProcessTaskTranscodeResult& _transcodeTask);
@@ -124,15 +124,15 @@ namespace TencentCloud
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
-                     * @return AnimatedGraphicTask Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
+                     * 获取Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
+                     * @return AnimatedGraphicTask Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
                      * 
                      */
                     MediaProcessTaskAnimatedGraphicResult GetAnimatedGraphicTask() const;
 
                     /**
-                     * 设置Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
-                     * @param _animatedGraphicTask Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
+                     * 设置Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
+                     * @param _animatedGraphicTask Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
                      * 
                      */
                     void SetAnimatedGraphicTask(const MediaProcessTaskAnimatedGraphicResult& _animatedGraphicTask);
@@ -187,15 +187,15 @@ namespace TencentCloud
                     bool SampleSnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of an image sprite task. Valid when the task type is `ImageSprite`.
-                     * @return ImageSpriteTask Query result of an image sprite task. Valid when the task type is `ImageSprite`.
+                     * 获取Query result of the image sprite task for a video. Valid when the task type is `ImageSprite`.
+                     * @return ImageSpriteTask Query result of the image sprite task for a video. Valid when the task type is `ImageSprite`.
                      * 
                      */
                     MediaProcessTaskImageSpriteResult GetImageSpriteTask() const;
 
                     /**
-                     * 设置Query result of an image sprite task. Valid when the task type is `ImageSprite`.
-                     * @param _imageSpriteTask Query result of an image sprite task. Valid when the task type is `ImageSprite`.
+                     * 设置Query result of the image sprite task for a video. Valid when the task type is `ImageSprite`.
+                     * @param _imageSpriteTask Query result of the image sprite task for a video. Valid when the task type is `ImageSprite`.
                      * 
                      */
                     void SetImageSpriteTask(const MediaProcessTaskImageSpriteResult& _imageSpriteTask);
@@ -229,15 +229,15 @@ namespace TencentCloud
                     bool CoverBySnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
-                     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * 获取Query result of the video to adaptive streaming task. Valid when the task type is AdaptiveDynamicStreaming.
+                     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task. Valid when the task type is AdaptiveDynamicStreaming.
                      * 
                      */
                     MediaProcessTaskAdaptiveDynamicStreamingResult GetAdaptiveDynamicStreamingTask() const;
 
                     /**
-                     * 设置Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
-                     * @param _adaptiveDynamicStreamingTask Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * 设置Query result of the video to adaptive streaming task. Valid when the task type is AdaptiveDynamicStreaming.
+                     * @param _adaptiveDynamicStreamingTask Query result of the video to adaptive streaming task. Valid when the task type is AdaptiveDynamicStreaming.
                      * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const MediaProcessTaskAdaptiveDynamicStreamingResult& _adaptiveDynamicStreamingTask);
@@ -257,7 +257,7 @@ namespace TencentCloud
 <li>AnimatedGraphics: animated image</li>
 <li>SnapshotByTimeOffset: time point screenshot.</li>
 <li>SampleSnapshot: sampled screenshot.</li>
-<li>ImageSprites: sprite sheets</li>
+<li>ImageSprites: sprite sheet</li>
 <li>CoverBySnapshot: screencapturing for cover image</li>
 <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      */
@@ -265,13 +265,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Query result of the video transcoding task. Valid when the task type is `Transcode`.
+                     * Query result of a video transcoding task. Valid when the task type is Transcode.
                      */
                     MediaProcessTaskTranscodeResult m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
+                     * Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
                      */
                     MediaProcessTaskAnimatedGraphicResult m_animatedGraphicTask;
                     bool m_animatedGraphicTaskHasBeenSet;
@@ -289,7 +289,7 @@ namespace TencentCloud
                     bool m_sampleSnapshotTaskHasBeenSet;
 
                     /**
-                     * Query result of an image sprite task. Valid when the task type is `ImageSprite`.
+                     * Query result of the image sprite task for a video. Valid when the task type is `ImageSprite`.
                      */
                     MediaProcessTaskImageSpriteResult m_imageSpriteTask;
                     bool m_imageSpriteTaskHasBeenSet;
@@ -301,7 +301,7 @@ namespace TencentCloud
                     bool m_coverBySnapshotTaskHasBeenSet;
 
                     /**
-                     * Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * Query result of the video to adaptive streaming task. Valid when the task type is AdaptiveDynamicStreaming.
                      */
                     MediaProcessTaskAdaptiveDynamicStreamingResult m_adaptiveDynamicStreamingTask;
                     bool m_adaptiveDynamicStreamingTaskHasBeenSet;

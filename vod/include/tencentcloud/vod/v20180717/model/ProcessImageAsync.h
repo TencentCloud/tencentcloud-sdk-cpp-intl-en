@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of async image processing tasks.
+                * Information of the image asynchronous processing task.
                 */
                 class ProcessImageAsync : public AbstractModel
                 {
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
-                     * @return ErrCode Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * 获取Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
-                     * @param _errCode Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * 设置Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * @param _errCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task progress, value range: [0-100].
-                     * @return Progress Task progress, value range: [0-100].
+                     * 获取Task progress. Value range: [0-100].
+                     * @return Progress Task progress. Value range: [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress, value range: [0-100].
-                     * @param _progress Task progress, value range: [0-100].
+                     * 设置Task progress. Value range: [0-100].
+                     * @param _progress Task progress. Value range: [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input information of async image processing tasks.
-                     * @return Input Input information of async image processing tasks.
+                     * 获取Input information of the image asynchronous processing task.
+                     * @return Input Input information of the image asynchronous processing task.
                      * 
                      */
                     ProcessImageAsyncInput GetInput() const;
 
                     /**
-                     * 设置Input information of async image processing tasks.
-                     * @param _input Input information of async image processing tasks.
+                     * 设置Input information of the image asynchronous processing task.
+                     * @param _input Input information of the image asynchronous processing task.
                      * 
                      */
                     void SetInput(const ProcessImageAsyncInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of the image asynchronous processing task.
-                     * @return Output Output information of the image asynchronous processing task.
+                     * 获取Output information of the image asynchronous task processing.
+                     * @return Output Output information of the image asynchronous task processing.
                      * 
                      */
                     ProcessImageAsyncOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of the image asynchronous processing task.
-                     * @param _output Output information of the image asynchronous processing task.
+                     * 设置Output information of the image asynchronous task processing.
+                     * @param _output Output information of the image asynchronous task processing.
                      * 
                      */
                     void SetOutput(const ProcessImageAsyncOutput& _output);
@@ -252,7 +252,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -264,19 +264,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task progress, value range: [0-100].
+                     * Task progress. Value range: [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input information of async image processing tasks.
+                     * Input information of the image asynchronous processing task.
                      */
                     ProcessImageAsyncInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of the image asynchronous processing task.
+                     * Output information of the image asynchronous task processing.
                      */
                     ProcessImageAsyncOutput m_output;
                     bool m_outputHasBeenSet;

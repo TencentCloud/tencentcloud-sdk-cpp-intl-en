@@ -79,10 +79,10 @@ namespace TencentCloud
                     /**
                      * 获取IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      * @return FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      * 
                      */
                     std::string GetFilterType() const;
@@ -90,10 +90,10 @@ namespace TencentCloud
                     /**
                      * 设置IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      * @param _filterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -106,19 +106,19 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
-                     * @return Filters IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+                     * 获取IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+                     * @return Filters IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
-                     * @param _filters IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+                     * 设置IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+                     * @param _filters IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
                      * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -131,15 +131,15 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取IP allowlist/blocklist path-specific configuration.
-                     * @return FilterRules IP allowlist/blocklist path-specific configuration.
+                     * 获取IP blocklist/allowlist path-specific configuration.
+                     * @return FilterRules IP blocklist/allowlist path-specific configuration.
                      * 
                      */
                     std::vector<IpFilterPathRule> GetFilterRules() const;
 
                     /**
-                     * 设置IP allowlist/blocklist path-specific configuration.
-                     * @param _filterRules IP allowlist/blocklist path-specific configuration.
+                     * 设置IP blocklist/allowlist path-specific configuration.
+                     * @param _filterRules IP blocklist/allowlist path-specific configuration.
                      * 
                      */
                     void SetFilterRules(const std::vector<IpFilterPathRule>& _filterRules);
@@ -164,20 +164,20 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
                     /**
                      * IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+                     * IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * IP allowlist/blocklist path-specific configuration.
+                     * IP blocklist/allowlist path-specific configuration.
                      */
                     std::vector<IpFilterPathRule> m_filterRules;
                     bool m_filterRulesHasBeenSet;

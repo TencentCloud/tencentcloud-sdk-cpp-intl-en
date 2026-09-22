@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool BlindWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mosaic list. Up to 10 mosaics are supported.</p>
-                     * @return MosaicSet <p>Mosaic list. Up to 10 mosaics are supported.</p>
+                     * 获取<p>Mosaic list. Up to 10 images are supported.</p>
+                     * @return MosaicSet <p>Mosaic list. Up to 10 images are supported.</p>
                      * 
                      */
                     std::vector<MosaicInput> GetMosaicSet() const;
 
                     /**
-                     * 设置<p>Mosaic list. Up to 10 mosaics are supported.</p>
-                     * @param _mosaicSet <p>Mosaic list. Up to 10 mosaics are supported.</p>
+                     * 设置<p>Mosaic list. Up to 10 images are supported.</p>
+                     * @param _mosaicSet <p>Mosaic list. Up to 10 images are supported.</p>
                      * 
                      */
                     void SetMosaicSet(const std::vector<MosaicInput>& _mosaicSet);
@@ -318,7 +318,7 @@ namespace TencentCloud
                     bool m_blindWatermarkHasBeenSet;
 
                     /**
-                     * <p>Mosaic list. Up to 10 mosaics are supported.</p>
+                     * <p>Mosaic list. Up to 10 images are supported.</p>
                      */
                     std::vector<MosaicInput> m_mosaicSet;
                     bool m_mosaicSetHasBeenSet;

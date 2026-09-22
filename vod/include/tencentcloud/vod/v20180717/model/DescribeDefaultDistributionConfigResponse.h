@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Distribute the configured domain name (abandoned).</p>
-                     * @return DomainName <p>Distribute the configured domain name (abandoned).</p>
+                     * 获取<p>Distribution configured domain name (abandoned).</p>
+                     * @return DomainName <p>Distribution configured domain name (abandoned).</p>
                      * @deprecated
                      */
                     std::string GetDomainName() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
-                     * @return PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+                     * 获取<p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
+                     * @return PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
                      * 
                      */
                     std::string GetPlayKey() const;
@@ -102,7 +102,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Distribute the configured domain name (abandoned).</p>
+                     * <p>Distribution configured domain name (abandoned).</p>
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+                     * <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
                      */
                     std::string m_playKey;
                     bool m_playKeyHasBeenSet;

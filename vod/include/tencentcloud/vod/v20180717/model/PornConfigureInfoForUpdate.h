@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task control parameter for authentication involving offensive content.
+                * Task control parameters for authentication involving offensive content.
                 */
                 class PornConfigureInfoForUpdate : public AbstractModel
                 {
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for ASR-based recognition involving offensive information.
-                     * @return AsrReviewInfo Control parameters for ASR-based recognition involving offensive information.
+                     * 获取Control parameters for offensive information involved in ASR-based recognition.
+                     * @return AsrReviewInfo Control parameters for offensive information involved in ASR-based recognition.
                      * 
                      */
                     PornAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameters for ASR-based recognition involving offensive information.
-                     * @param _asrReviewInfo Control parameters for ASR-based recognition involving offensive information.
+                     * 设置Control parameters for offensive information involved in ASR-based recognition.
+                     * @param _asrReviewInfo Control parameters for offensive information involved in ASR-based recognition.
                      * 
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for text recognition involving offensive information.
-                     * @return OcrReviewInfo Control parameters for text recognition involving offensive information.
+                     * 获取Control parameters for text recognition involving offensive content.
+                     * @return OcrReviewInfo Control parameters for text recognition involving offensive content.
                      * 
                      */
                     PornOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameters for text recognition involving offensive information.
-                     * @param _ocrReviewInfo Control parameters for text recognition involving offensive information.
+                     * 设置Control parameters for text recognition involving offensive content.
+                     * @param _ocrReviewInfo Control parameters for text recognition involving offensive content.
                      * 
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
@@ -121,13 +121,13 @@ namespace TencentCloud
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameters for ASR-based recognition involving offensive information.
+                     * Control parameters for offensive information involved in ASR-based recognition.
                      */
                     PornAsrReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameters for text recognition involving offensive information.
+                     * Control parameters for text recognition involving offensive content.
                      */
                     PornOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

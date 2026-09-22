@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool WebhookIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to add a secret key. Default value: false.
-                     * @return HasSignatureKey Whether to add a secret key. Default value: false.
+                     * 获取<p>Whether to add a callback signature key</p><p>Default value: false</p>
+                     * @return HasSignatureKey <p>Whether to add a callback signature key</p><p>Default value: false</p>
                      * 
                      */
                     bool GetHasSignatureKey() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool HasSignatureKeyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Callback secret key</p>
-                     * @return SignatureKey <p>Callback secret key</p>
+                     * 获取<p>Callback signature key</p>
+                     * @return SignatureKey <p>Callback signature key</p>
                      * 
                      */
                     std::string GetSignatureKey() const;
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_webhookIdHasBeenSet;
 
                     /**
-                     * Whether to add a secret key. Default value: false.
+                     * <p>Whether to add a callback signature key</p><p>Default value: false</p>
                      */
                     bool m_hasSignatureKey;
                     bool m_hasSignatureKeyHasBeenSet;
 
                     /**
-                     * <p>Callback secret key</p>
+                     * <p>Callback signature key</p>
                      */
                     std::string m_signatureKey;
                     bool m_signatureKeyHasBeenSet;

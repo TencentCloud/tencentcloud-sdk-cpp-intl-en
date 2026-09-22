@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Knowledge base information.
+                * Knowledge base info.
                 */
                 class KnowledgeBaseInfo : public AbstractModel
                 {

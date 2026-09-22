@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool StandardStorageHasBeenSet() const;
 
                     /**
-                     * 获取Current infrequent access storage capacity in bytes.
-                     * @return InfrequentStorage Current infrequent access storage capacity in bytes.
+                     * 获取Current infrequent access storage capacity, in bytes.
+                     * @return InfrequentStorage Current infrequent access storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetInfrequentStorage() const;
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_standardStorageHasBeenSet;
 
                     /**
-                     * Current infrequent access storage capacity in bytes.
+                     * Current infrequent access storage capacity, in bytes.
                      */
                     uint64_t m_infrequentStorage;
                     bool m_infrequentStorageHasBeenSet;

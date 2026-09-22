@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Principal ID. Record the returned principal ID.
-                     * @return SessionId Principal ID. Record the returned principal ID.
+                     * 获取Principal ID. Note the returned principal ID.
+                     * @return SessionId Principal ID. Note the returned principal ID.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Principal ID. Record the returned principal ID.
-                     * @param _sessionId Principal ID. Record the returned principal ID.
+                     * 设置Principal ID. Note the returned principal ID.
+                     * @param _sessionId Principal ID. Note the returned principal ID.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Principal ID. Record the returned principal ID.
+                     * Principal ID. Note the returned principal ID.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

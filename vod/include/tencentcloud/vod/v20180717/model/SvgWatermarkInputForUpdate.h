@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameters of the SVG watermark template
+                * SVG watermark template input parameters.
                 */
                 class SvgWatermarkInputForUpdate : public AbstractModel
                 {
@@ -102,21 +102,21 @@ Default value: 10W%.
 
                     /**
                      * 获取Height of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
-<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
+<li>If a string ends with px, the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Height` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the video long side. For example, `10L%` means that `Height` is 10% of the video long side.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
                      * @return Height Height of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
-<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
+<li>If a string ends with px, the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Height` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the video long side. For example, `10L%` means that `Height` is 10% of the video long side.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
                      * 
@@ -125,21 +125,21 @@ Default value: 0px.
 
                     /**
                      * 设置Height of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
-<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
+<li>If a string ends with px, the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Height` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the video long side. For example, `10L%` means that `Height` is 10% of the video long side.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
                      * @param _height Height of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
-<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
+<li>If a string ends with px, the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Height` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the video long side. For example, `10L%` means that `Height` is 10% of the video long side.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
                      * 
@@ -154,35 +154,35 @@ Default value: 0px.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Watermark cycle configuration, for configuring the periodic display and hiding of watermarks.
+                     * 获取Watermark period configuration, which is used to configure the periodic display and hiding of watermarks.
 Main usage scenarios: to prevent watermark occlusion in videos, set watermarks in multiple places. These watermarks are displayed and hidden periodically in a fixed sequence.
-For example, set four watermarks A, B, C, and D at the upper left corner, upper right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
-Curly braces {} represent a long cycle consisting of 4 watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
+For example, set four watermarks A, B, C, and D at the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
+Curly braces {} indicate a long cycle consisting of four watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
 You can see that A, B, C, and D are all displayed for 5 seconds and hidden for 15 seconds periodically, and they have a fixed display order.
-This configuration item is used to describe the cycle configuration of each watermark.
-                     * @return CycleConfig Watermark cycle configuration, for configuring the periodic display and hiding of watermarks.
+This configuration item is used to describe the periodic configuration of each watermark.
+                     * @return CycleConfig Watermark period configuration, which is used to configure the periodic display and hiding of watermarks.
 Main usage scenarios: to prevent watermark occlusion in videos, set watermarks in multiple places. These watermarks are displayed and hidden periodically in a fixed sequence.
-For example, set four watermarks A, B, C, and D at the upper left corner, upper right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
-Curly braces {} represent a long cycle consisting of 4 watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
+For example, set four watermarks A, B, C, and D at the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
+Curly braces {} indicate a long cycle consisting of four watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
 You can see that A, B, C, and D are all displayed for 5 seconds and hidden for 15 seconds periodically, and they have a fixed display order.
-This configuration item is used to describe the cycle configuration of each watermark.
+This configuration item is used to describe the periodic configuration of each watermark.
                      * @deprecated
                      */
                     WatermarkCycleConfigForUpdate GetCycleConfig() const;
 
                     /**
-                     * 设置Watermark cycle configuration, for configuring the periodic display and hiding of watermarks.
+                     * 设置Watermark period configuration, which is used to configure the periodic display and hiding of watermarks.
 Main usage scenarios: to prevent watermark occlusion in videos, set watermarks in multiple places. These watermarks are displayed and hidden periodically in a fixed sequence.
-For example, set four watermarks A, B, C, and D at the upper left corner, upper right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
-Curly braces {} represent a long cycle consisting of 4 watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
+For example, set four watermarks A, B, C, and D at the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
+Curly braces {} indicate a long cycle consisting of four watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
 You can see that A, B, C, and D are all displayed for 5 seconds and hidden for 15 seconds periodically, and they have a fixed display order.
-This configuration item is used to describe the cycle configuration of each watermark.
-                     * @param _cycleConfig Watermark cycle configuration, for configuring the periodic display and hiding of watermarks.
+This configuration item is used to describe the periodic configuration of each watermark.
+                     * @param _cycleConfig Watermark period configuration, which is used to configure the periodic display and hiding of watermarks.
 Main usage scenarios: to prevent watermark occlusion in videos, set watermarks in multiple places. These watermarks are displayed and hidden periodically in a fixed sequence.
-For example, set four watermarks A, B, C, and D at the upper left corner, upper right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
-Curly braces {} represent a long cycle consisting of 4 watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
+For example, set four watermarks A, B, C, and D at the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
+Curly braces {} indicate a long cycle consisting of four watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
 You can see that A, B, C, and D are all displayed for 5 seconds and hidden for 15 seconds periodically, and they have a fixed display order.
-This configuration item is used to describe the cycle configuration of each watermark.
+This configuration item is used to describe the periodic configuration of each watermark.
                      * @deprecated
                      */
                     void SetCycleConfig(const WatermarkCycleConfigForUpdate& _cycleConfig);
@@ -212,12 +212,12 @@ Default value: 10W%.
 
                     /**
                      * Height of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
-<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
+<li>If a string ends with px, the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. If 0px is entered and
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Height` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the video long side. For example, `10L%` means that `Height` is 10% of the video long side.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
                      */
@@ -225,12 +225,12 @@ Default value: 0px.
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Watermark cycle configuration, for configuring the periodic display and hiding of watermarks.
+                     * Watermark period configuration, which is used to configure the periodic display and hiding of watermarks.
 Main usage scenarios: to prevent watermark occlusion in videos, set watermarks in multiple places. These watermarks are displayed and hidden periodically in a fixed sequence.
-For example, set four watermarks A, B, C, and D at the upper left corner, upper right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
-Curly braces {} represent a long cycle consisting of 4 watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
+For example, set four watermarks A, B, C, and D at the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C displays for 5 seconds -> D displays for 5 seconds } -> A displays for 5 seconds -> B displays for 5 seconds -> ..., and only one watermark is displayed at any time.
+Curly braces {} indicate a long cycle consisting of four watermarks: A, B, C, and D. You can see each long cycle lasts 20 seconds.
 You can see that A, B, C, and D are all displayed for 5 seconds and hidden for 15 seconds periodically, and they have a fixed display order.
-This configuration item is used to describe the cycle configuration of each watermark.
+This configuration item is used to describe the periodic configuration of each watermark.
                      */
                     WatermarkCycleConfigForUpdate m_cycleConfig;
                     bool m_cycleConfigHasBeenSet;

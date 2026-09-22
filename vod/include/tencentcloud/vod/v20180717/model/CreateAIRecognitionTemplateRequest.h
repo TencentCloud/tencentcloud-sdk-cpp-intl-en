@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Video content recognition template name. Length limit: 64 characters.
-                     * @return Name Video content recognition template name. Length limit: 64 characters.
+                     * 获取Audio/Video content recognition template name, with a length limit of 64 characters.
+                     * @return Name Audio/Video content recognition template name, with a length limit of 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Video content recognition template name. Length limit: 64 characters.
-                     * @param _name Video content recognition template name. Length limit: 64 characters.
+                     * 设置Audio/Video content recognition template name, with a length limit of 64 characters.
+                     * @param _name Audio/Video content recognition template name, with a length limit of 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for video opening and closing recognition.
-                     * @return HeadTailConfigure Control parameters for video opening and closing recognition.
+                     * 获取Video opening and closing recognition control parameter.
+                     * @return HeadTailConfigure Video opening and closing recognition control parameter.
                      * 
                      */
                     HeadTailConfigureInfo GetHeadTailConfigure() const;
 
                     /**
-                     * 设置Control parameters for video opening and closing recognition.
-                     * @param _headTailConfigure Control parameters for video opening and closing recognition.
+                     * 设置Video opening and closing recognition control parameter.
+                     * @param _headTailConfigure Video opening and closing recognition control parameter.
                      * 
                      */
                     void SetHeadTailConfigure(const HeadTailConfigureInfo& _headTailConfigure);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool SegmentConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for face recognition.
-                     * @return FaceConfigure Control parameters for face recognition.
+                     * 获取Face recognition control parameter.
+                     * @return FaceConfigure Face recognition control parameter.
                      * 
                      */
                     FaceConfigureInfo GetFaceConfigure() const;
 
                     /**
-                     * 设置Control parameters for face recognition.
-                     * @param _faceConfigure Control parameters for face recognition.
+                     * 设置Face recognition control parameter.
+                     * @param _faceConfigure Face recognition control parameter.
                      * 
                      */
                     void SetFaceConfigure(const FaceConfigureInfo& _faceConfigure);
@@ -221,18 +221,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * @return AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * 
                      */
                     AsrFullTextConfigureInfo GetAsrFullTextConfigure() const;
 
                     /**
                      * 设置Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * @param _asrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      * 
                      */
                     void SetAsrFullTextConfigure(const AsrFullTextConfigureInfo& _asrFullTextConfigure);
@@ -266,15 +266,15 @@ namespace TencentCloud
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Speech translation recognition control parameters.
-                     * @return AsrTranslateConfigure Speech translation recognition control parameters.
+                     * 获取Voice translation recognition control parameters.
+                     * @return AsrTranslateConfigure Voice translation recognition control parameters.
                      * 
                      */
                     AsrTranslateConfigureInfo GetAsrTranslateConfigure() const;
 
                     /**
-                     * 设置Speech translation recognition control parameters.
-                     * @param _asrTranslateConfigure Speech translation recognition control parameters.
+                     * 设置Voice translation recognition control parameters.
+                     * @param _asrTranslateConfigure Voice translation recognition control parameters.
                      * 
                      */
                     void SetAsrTranslateConfigure(const AsrTranslateConfigureInfo& _asrTranslateConfigure);
@@ -287,15 +287,15 @@ namespace TencentCloud
                     bool AsrTranslateConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for object recognition.
-                     * @return ObjectConfigure Control parameters for object recognition.
+                     * 获取Object recognition control parameter.
+                     * @return ObjectConfigure Object recognition control parameter.
                      * 
                      */
                     ObjectConfigureInfo GetObjectConfigure() const;
 
                     /**
-                     * 设置Control parameters for object recognition.
-                     * @param _objectConfigure Control parameters for object recognition.
+                     * 设置Object recognition control parameter.
+                     * @param _objectConfigure Object recognition control parameter.
                      * 
                      */
                     void SetObjectConfigure(const ObjectConfigureInfo& _objectConfigure);
@@ -308,15 +308,15 @@ namespace TencentCloud
                     bool ObjectConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-                     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * 获取Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * @return ScreenshotInterval Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-                     * @param _screenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * 设置Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * @param _screenshotInterval Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -337,7 +337,7 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Video content recognition template name. Length limit: 64 characters.
+                     * Audio/Video content recognition template name, with a length limit of 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -349,7 +349,7 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Control parameters for video opening and closing recognition.
+                     * Video opening and closing recognition control parameter.
                      */
                     HeadTailConfigureInfo m_headTailConfigure;
                     bool m_headTailConfigureHasBeenSet;
@@ -361,7 +361,7 @@ namespace TencentCloud
                     bool m_segmentConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for face recognition.
+                     * Face recognition control parameter.
                      */
                     FaceConfigureInfo m_faceConfigure;
                     bool m_faceConfigureHasBeenSet;
@@ -380,7 +380,7 @@ namespace TencentCloud
 
                     /**
                      * Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
                      */
                     AsrFullTextConfigureInfo m_asrFullTextConfigure;
                     bool m_asrFullTextConfigureHasBeenSet;
@@ -392,19 +392,19 @@ namespace TencentCloud
                     bool m_asrWordsConfigureHasBeenSet;
 
                     /**
-                     * Speech translation recognition control parameters.
+                     * Voice translation recognition control parameters.
                      */
                     AsrTranslateConfigureInfo m_asrTranslateConfigure;
                     bool m_asrTranslateConfigureHasBeenSet;
 
                     /**
-                     * Control parameters for object recognition.
+                     * Object recognition control parameter.
                      */
                     ObjectConfigureInfo m_objectConfigure;
                     bool m_objectConfigureHasBeenSet;
 
                     /**
-                     * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;

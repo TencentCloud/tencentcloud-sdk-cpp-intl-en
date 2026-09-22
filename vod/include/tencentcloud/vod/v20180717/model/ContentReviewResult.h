@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result of the image intelligent content identification task.
+                * Result of the image intelligent content recognition task.
                 */
                 class ContentReviewResult : public AbstractModel
                 {
@@ -52,38 +52,38 @@ namespace TencentCloud
 
                     /**
                      * 获取Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
                      * @return Type Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
                      * @param _type Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -117,15 +117,15 @@ namespace TencentCloud
                     bool PornImageResultHasBeenSet() const;
 
                     /**
-                     * 获取Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
-                     * @return TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+                     * 获取Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
+                     * @return TerrorismImageResult Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
                      * 
                      */
                     TerrorismImageResult GetTerrorismImageResult() const;
 
                     /**
-                     * 设置Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
-                     * @param _terrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+                     * 设置Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
+                     * @param _terrorismImageResult Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
                      * 
                      */
                     void SetTerrorismImageResult(const TerrorismImageResult& _terrorismImageResult);
@@ -138,15 +138,15 @@ namespace TencentCloud
                     bool TerrorismImageResultHasBeenSet() const;
 
                     /**
-                     * 获取Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
-                     * @return PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+                     * 获取Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
+                     * @return PoliticalImageResult Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
                      * 
                      */
                     PoliticalImageResult GetPoliticalImageResult() const;
 
                     /**
-                     * 设置Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
-                     * @param _politicalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+                     * 设置Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
+                     * @param _politicalImageResult Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
                      * 
                      */
                     void SetPoliticalImageResult(const PoliticalImageResult& _politicalImageResult);
@@ -201,15 +201,15 @@ namespace TencentCloud
                     bool TerrorismOcrResultHasBeenSet() const;
 
                     /**
-                     * 获取The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
-                     * @return PoliticalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+                     * 获取Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
+                     * @return PoliticalOcrResult Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
                      * 
                      */
                     ContentReviewOcrResult GetPoliticalOcrResult() const;
 
                     /**
-                     * 设置The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
-                     * @param _politicalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+                     * 设置Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
+                     * @param _politicalOcrResult Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
                      * 
                      */
                     void SetPoliticalOcrResult(const ContentReviewOcrResult& _politicalOcrResult);
@@ -225,12 +225,12 @@ namespace TencentCloud
 
                     /**
                      * Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -242,13 +242,13 @@ namespace TencentCloud
                     bool m_pornImageResultHasBeenSet;
 
                     /**
-                     * Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+                     * Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
                      */
                     TerrorismImageResult m_terrorismImageResult;
                     bool m_terrorismImageResultHasBeenSet;
 
                     /**
-                     * Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+                     * Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
                      */
                     PoliticalImageResult m_politicalImageResult;
                     bool m_politicalImageResultHasBeenSet;
@@ -266,7 +266,7 @@ namespace TencentCloud
                     bool m_terrorismOcrResultHasBeenSet;
 
                     /**
-                     * The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+                     * Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
                      */
                     ContentReviewOcrResult m_politicalOcrResult;
                     bool m_politicalOcrResultHasBeenSet;

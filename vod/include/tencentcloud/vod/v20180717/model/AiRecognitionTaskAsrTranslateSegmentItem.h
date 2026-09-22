@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Voice translation recognition segment.
+                * Segment undergone voice translation recognition.
                 */
                 class AiRecognitionTaskAsrTranslateSegmentItem : public AbstractModel
                 {

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of MPS smart subtitle template
+                * Input for MPS smart subtitle template
                 */
                 class MPSSmartSubtitleTemplateForUpdate : public AbstractModel
                 {

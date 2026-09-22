@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded string of the watermark image. Supports jpeg and png image formats.
-                     * @return ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+                     * 获取Base64-encoded string of the watermark image. Supports jpeg and png formats.
+                     * @return ImageContent Base64-encoded string of the watermark image. Supports jpeg and png formats.
                      * 
                      */
                     std::string GetImageContent() const;
 
                     /**
-                     * 设置Base64-encoded string of the watermark image. Supports jpeg and png image formats.
-                     * @param _imageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+                     * 设置Base64-encoded string of the watermark image. Supports jpeg and png formats.
+                     * @param _imageContent Base64-encoded string of the watermark image. Supports jpeg and png formats.
                      * 
                      */
                     void SetImageContent(const std::string& _imageContent);
@@ -168,15 +168,15 @@ namespace TencentCloud
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
-                     * @return YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+                     * 获取Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+                     * @return YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
-                     * @param _yPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+                     * 设置Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+                     * @param _yPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -199,7 +199,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+                     * Base64-encoded string of the watermark image. Supports jpeg and png formats.
                      */
                     std::string m_imageContent;
                     bool m_imageContentHasBeenSet;
@@ -225,7 +225,7 @@ namespace TencentCloud
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+                     * Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;

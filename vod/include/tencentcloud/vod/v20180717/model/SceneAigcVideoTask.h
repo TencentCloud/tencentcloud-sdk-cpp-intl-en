@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scenario-based AIGC video task info
+                * Information of the scenario-based AIGC video task.
                 */
                 class SceneAigcVideoTask : public AbstractModel
                 {
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
-                     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * 获取Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * @return ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
-                     * @param _errCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * 设置Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * @param _errCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task progress, value range: [0-100].
-                     * @return Progress Task progress, value range: [0-100].
+                     * 获取Task progress, with a value range of [0-100].
+                     * @return Progress Task progress, with a value range of [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress, value range: [0-100].
-                     * @param _progress Task progress, value range: [0-100].
+                     * 设置Task progress, with a value range of [0-100].
+                     * @param _progress Task progress, with a value range of [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input information of the AIGC video generation task.
-                     * @return Input Input information of the AIGC video generation task.
+                     * 获取Input information of an AIGC video task.
+                     * @return Input Input information of an AIGC video task.
                      * 
                      */
                     SceneAigcVideoTaskInput GetInput() const;
 
                     /**
-                     * 设置Input information of the AIGC video generation task.
-                     * @param _input Input information of the AIGC video generation task.
+                     * 设置Input information of an AIGC video task.
+                     * @param _input Input information of an AIGC video task.
                      * 
                      */
                     void SetInput(const SceneAigcVideoTaskInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of the AIGC video task.
-                     * @return Output Output information of the AIGC video task.
+                     * 获取Output information of an AIGC video task.
+                     * @return Output Output information of an AIGC video task.
                      * 
                      */
                     SceneAigcVideoTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of the AIGC video task.
-                     * @param _output Output information of the AIGC video task.
+                     * 设置Output information of an AIGC video task.
+                     * @param _output Output information of an AIGC video task.
                      * 
                      */
                     void SetOutput(const SceneAigcVideoTaskOutput& _output);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -252,7 +252,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -264,25 +264,25 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task progress, value range: [0-100].
+                     * Task progress, with a value range of [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input information of the AIGC video generation task.
+                     * Input information of an AIGC video task.
                      */
                     SceneAigcVideoTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of the AIGC video task.
+                     * Output information of an AIGC video task.
                      */
                     SceneAigcVideoTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

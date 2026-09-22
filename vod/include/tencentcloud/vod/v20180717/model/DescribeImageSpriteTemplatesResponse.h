@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Sprite template details list.
-                     * @return ImageSpriteTemplateSet Sprite template details list.
+                     * 获取Sprite sheet template details list.
+                     * @return ImageSpriteTemplateSet Sprite sheet template details list.
                      * 
                      */
                     std::vector<ImageSpriteTemplate> GetImageSpriteTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Sprite template details list.
+                     * Sprite sheet template details list.
                      */
                     std::vector<ImageSpriteTemplate> m_imageSpriteTemplateSet;
                     bool m_imageSpriteTemplateSetHasBeenSet;

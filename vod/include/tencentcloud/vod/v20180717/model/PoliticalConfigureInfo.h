@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task control parameter for authentication involving inappropriate information
+                * Task control parameters for authentication involving inappropriate information
                 */
                 class PoliticalConfigureInfo : public AbstractModel
                 {
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameters for ASR-based recognition involving inappropriate information.
-                     * @return AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+                     * 获取Control parameters for inappropriate information involved in ASR-based recognition.
+                     * @return AsrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
                      * 
                      */
                     PoliticalAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameters for ASR-based recognition involving inappropriate information.
-                     * @param _asrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+                     * 设置Control parameters for inappropriate information involved in ASR-based recognition.
+                     * @param _asrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
                      * 
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfo& _asrReviewInfo);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameters for ASR-based recognition involving inappropriate information.
+                     * Control parameters for inappropriate information involved in ASR-based recognition.
                      */
                     PoliticalAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;

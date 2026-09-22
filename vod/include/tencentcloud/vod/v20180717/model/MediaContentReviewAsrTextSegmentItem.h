@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset time of the start of the suspected segment. Unit: seconds.
-                     * @return StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+                     * 获取Start time offset of a suspected segment, in seconds.
+                     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Offset time of the start of the suspected segment. Unit: seconds.
-                     * @param _startTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+                     * 设置Start time offset of a suspected segment, in seconds.
+                     * @param _startTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Result suggestion for video moderation of the suspected segment. Value range:
+                     * 获取Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+                     * @return Suggestion Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result suggestion for video moderation of the suspected segment. Value range:
+                     * 设置Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Result suggestion for video moderation of the suspected segment. Value range:
+                     * @param _suggestion Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -166,7 +166,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Offset time of the start of the suspected segment. Unit: seconds.
+                     * Start time offset of a suspected segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Result suggestion for video moderation of the suspected segment. Value range:
+                     * Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool WordHasBeenSet() const;
 
                     /**
-                     * 获取List of segments where the text key appears.
-                     * @return SegmentSet List of segments where the text key appears.
+                     * 获取List of segments where the key text appears.
+                     * @return SegmentSet List of segments where the key text appears.
                      * 
                      */
                     std::vector<AiRecognitionTaskOcrWordsSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of segments where the text key appears.
-                     * @param _segmentSet List of segments where the text key appears.
+                     * 设置List of segments where the key text appears.
+                     * @param _segmentSet List of segments where the key text appears.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskOcrWordsSegmentItem>& _segmentSet);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_wordHasBeenSet;
 
                     /**
-                     * List of segments where the text key appears.
+                     * List of segments where the key text appears.
                      */
                     std::vector<AiRecognitionTaskOcrWordsSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

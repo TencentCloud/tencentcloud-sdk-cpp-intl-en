@@ -224,15 +224,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Video splitting task progress, in the range of [0,100].
-                     * @return Progress Video splitting task progress, in the range of [0,100].
+                     * 获取Video splitting task progress, value ranges from 0 to 100.
+                     * @return Progress Video splitting task progress, value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Video splitting task progress, in the range of [0,100].
-                     * @param _progress Video splitting task progress, in the range of [0,100].
+                     * 设置Video splitting task progress, value ranges from 0 to 100.
+                     * @param _progress Video splitting task progress, value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -297,7 +297,7 @@ namespace TencentCloud
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Video splitting task progress, in the range of [0,100].
+                     * Video splitting task progress, value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

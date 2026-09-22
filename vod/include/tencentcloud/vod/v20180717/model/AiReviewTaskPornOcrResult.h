@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
-                     * @return Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+                     * 获取Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
+                     * @return Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
-                     * @param _progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+                     * 设置Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
+                     * @param _progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -234,7 +234,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+                     * Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

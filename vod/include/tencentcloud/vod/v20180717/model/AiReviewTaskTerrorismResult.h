@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type of audio/video moderation involving unsafe information
+                * Task result type of audio/video moderation involving unsafe information.
                 */
                 class AiReviewTaskTerrorismResult : public AbstractModel
                 {
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Task output involving unsafe information in audio/video moderation.
-                     * @return Output Task output involving unsafe information in audio/video moderation.
+                     * 获取Task output of audio and video moderation involving unsafe information.
+                     * @return Output Task output of audio and video moderation involving unsafe information.
                      * 
                      */
                     AiReviewTerrorismTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Task output involving unsafe information in audio/video moderation.
-                     * @param _output Task output involving unsafe information in audio/video moderation.
+                     * 设置Task output of audio and video moderation involving unsafe information.
+                     * @param _output Task output of audio and video moderation involving unsafe information.
                      * 
                      */
                     void SetOutput(const AiReviewTerrorismTaskOutput& _output);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Task output involving unsafe information in audio/video moderation.
+                     * Task output of audio and video moderation involving unsafe information.
                      */
                     AiReviewTerrorismTaskOutput m_output;
                     bool m_outputHasBeenSet;

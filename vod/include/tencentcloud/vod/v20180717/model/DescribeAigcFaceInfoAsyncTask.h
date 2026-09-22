@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asynchronously fetch AIGC face information tasks.
+                * Asynchronously fetch AIGC human face information tasks.
                 */
                 class DescribeAigcFaceInfoAsyncTask : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
-                     * @return ErrCodeExt <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+                     * 获取<p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
+                     * @return ErrCodeExt <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置<p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
-                     * @param _errCodeExt <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+                     * 设置<p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
+                     * @param _errCodeExt <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task progress. Value range: 0-100.</p>
-                     * @return Progress <p>Task progress. Value range: 0-100.</p>
+                     * 获取<p>Task progress, value ranges from 0 to 100.</p>
+                     * @return Progress <p>Task progress, value ranges from 0 to 100.</p>
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置<p>Task progress. Value range: 0-100.</p>
-                     * @param _progress <p>Task progress. Value range: 0-100.</p>
+                     * 设置<p>Task progress, value ranges from 0 to 100.</p>
+                     * @param _progress <p>Task progress, value ranges from 0 to 100.</p>
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -279,7 +279,7 @@ namespace TencentCloud
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+                     * <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
@@ -291,7 +291,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * <p>Task progress. Value range: 0-100.</p>
+                     * <p>Task progress, value ranges from 0 to 100.</p>
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

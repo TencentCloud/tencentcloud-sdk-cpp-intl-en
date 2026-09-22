@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of an AIGC image task.
+                * Output of an AIGC image generation task.
                 */
                 class AigcImageTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Output file information for an AIGC image task.</p>
-                     * @return FileInfos <p>Output file information for an AIGC image task.</p>
+                     * 获取<p>Information of the output file of an AIGC image generation task.</p>
+                     * @return FileInfos <p>Information of the output file of an AIGC image generation task.</p>
                      * 
                      */
                     std::vector<AigcImageTaskOutputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置<p>Output file information for an AIGC image task.</p>
-                     * @param _fileInfos <p>Output file information for an AIGC image task.</p>
+                     * 设置<p>Information of the output file of an AIGC image generation task.</p>
+                     * @param _fileInfos <p>Information of the output file of an AIGC image generation task.</p>
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcImageTaskOutputFileInfo>& _fileInfos);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Output file information for an AIGC image task.</p>
+                     * <p>Information of the output file of an AIGC image generation task.</p>
                      */
                     std::vector<AigcImageTaskOutputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;

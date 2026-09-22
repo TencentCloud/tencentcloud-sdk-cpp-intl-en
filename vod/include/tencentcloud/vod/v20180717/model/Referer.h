@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Referrer blocklist/allowlist configuration switch. Value:
+                     * 获取Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Referrer blocklist/allowlist configuration switch. Value:
+                     * @return Switch Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Referrer blocklist/allowlist configuration switch. Value:
+                     * 设置Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Referrer blocklist/allowlist configuration switch. Value:
+                     * @param _switch Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -100,7 +100,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Referrer blocklist/allowlist configuration switch. Value:
+                     * Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

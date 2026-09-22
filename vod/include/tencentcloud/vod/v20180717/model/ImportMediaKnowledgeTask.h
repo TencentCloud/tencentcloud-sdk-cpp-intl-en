@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Error code. 0 indicates success, and other values indicate failure.</p>
-                     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
+                     * 获取<p>Error code. 0 indicates success, and other values indicate failure</p>
+                     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure</p>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置<p>Error code. 0 indicates success, and other values indicate failure.</p>
-                     * @param _errCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
+                     * 设置<p>Error code. 0 indicates success, and other values indicate failure</p>
+                     * @param _errCode <p>Error code. 0 indicates success, and other values indicate failure</p>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -200,7 +200,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Error code. 0 indicates success, and other values indicate failure.</p>
+                     * <p>Error code. 0 indicates success, and other values indicate failure</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

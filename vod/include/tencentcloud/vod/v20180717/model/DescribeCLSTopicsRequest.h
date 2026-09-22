@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取List of log topic IDs. If left empty, it means query all log topics.
-                     * @return TopicIds List of log topic IDs. If left empty, it means query all log topics.
+                     * 获取List of log topic IDs. If left empty, it means to query all log topics.
+                     * @return TopicIds List of log topic IDs. If left empty, it means to query all log topics.
                      * 
                      */
                     std::vector<std::string> GetTopicIds() const;
 
                     /**
-                     * 设置List of log topic IDs. If left empty, it means query all log topics.
-                     * @param _topicIds List of log topic IDs. If left empty, it means query all log topics.
+                     * 设置List of log topic IDs. If left empty, it means to query all log topics.
+                     * @param _topicIds List of log topic IDs. If left empty, it means to query all log topics.
                      * 
                      */
                     void SetTopicIds(const std::vector<std::string>& _topicIds);
@@ -162,7 +162,7 @@ namespace TencentCloud
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * List of log topic IDs. If left empty, it means query all log topics.
+                     * List of log topic IDs. If left empty, it means to query all log topics.
                      */
                     std::vector<std::string> m_topicIds;
                     bool m_topicIdsHasBeenSet;

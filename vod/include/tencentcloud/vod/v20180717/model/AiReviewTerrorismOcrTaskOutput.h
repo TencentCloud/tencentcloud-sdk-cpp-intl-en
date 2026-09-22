@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
-                     * @return Confidence Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+                     * 获取Score of unsafe information in Ocr text. Value range: 0-100.
+                     * @return Confidence Score of unsafe information in Ocr text. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
-                     * @param _confidence Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+                     * 设置Score of unsafe information in Ocr text. Value range: 0-100.
+                     * @param _confidence Score of unsafe information in Ocr text. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Ocr text contains result suggestions involving unsafe information. Value range:
+                     * 获取Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Ocr text contains result suggestions involving unsafe information. Value range:
+                     * @return Suggestion Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Ocr text contains result suggestions involving unsafe information. Value range:
+                     * 设置Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Ocr text contains result suggestions involving unsafe information. Value range:
+                     * @param _suggestion Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-                     * @return SegmentSetFileUrl URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+                     * 获取URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
+                     * @return SegmentSetFileUrl URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
                      * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-                     * @param _segmentSetFileUrl URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+                     * 设置URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
+                     * @param _segmentSetFileUrl URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
                      * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _segmentSetFileUrlExpireTime Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _segmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
@@ -171,13 +171,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+                     * Score of unsafe information in Ocr text. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Ocr text contains result suggestions involving unsafe information. Value range:
+                     * Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -193,13 +193,13 @@ namespace TencentCloud
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+                     * URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

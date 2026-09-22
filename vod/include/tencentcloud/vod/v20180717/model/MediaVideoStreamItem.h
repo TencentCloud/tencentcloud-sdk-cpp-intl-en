@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video stream information of VOD files.
+                * Video stream information of VOD files
                 */
                 class MediaVideoStreamItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bitrate of video stream, unit: bps.
-                     * @return Bitrate Bitrate of video stream, unit: bps.
+                     * 获取Bitrate of the video stream. Unit: bps.
+                     * @return Bitrate Bitrate of the video stream. Unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of video stream, unit: bps.
-                     * @param _bitrate Bitrate of video stream, unit: bps.
+                     * 设置Bitrate of the video stream. Unit: bps.
+                     * @param _bitrate Bitrate of the video stream. Unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Video stream height. Unit: px.
-                     * @return Height Video stream height. Unit: px.
+                     * 获取Height of the video stream. Unit: px.
+                     * @return Height Height of the video stream. Unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Video stream height. Unit: px.
-                     * @param _height Video stream height. Unit: px.
+                     * 设置Height of the video stream. Unit: px.
+                     * @param _height Height of the video stream. Unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Video stream encoding format, for example, h264.
-                     * @return Codec Video stream encoding format, for example, h264.
+                     * 获取Video stream encoding format, for example h264.
+                     * @return Codec Video stream encoding format, for example h264.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Video stream encoding format, for example, h264.
-                     * @param _codec Video stream encoding format, for example, h264.
+                     * 设置Video stream encoding format, for example h264.
+                     * @param _codec Video stream encoding format, for example h264.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取Encoding tag. It is valid only when Codec is hevc.
-                     * @return CodecTag Encoding tag. It is valid only when Codec is hevc.
+                     * 获取Encoding tag, valid only when Codec is hevc.
+                     * @return CodecTag Encoding tag, valid only when Codec is hevc.
                      * 
                      */
                     std::string GetCodecTag() const;
 
                     /**
-                     * 设置Encoding tag. It is valid only when Codec is hevc.
-                     * @param _codecTag Encoding tag. It is valid only when Codec is hevc.
+                     * 设置Encoding tag, valid only when Codec is hevc.
+                     * @param _codecTag Encoding tag, valid only when Codec is hevc.
                      * 
                      */
                     void SetCodecTag(const std::string& _codecTag);
@@ -175,18 +175,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * @return DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * 
                      */
                     DynamicRangeInfo GetDynamicRangeInfo() const;
 
                     /**
                      * 设置Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * @param _dynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * 
                      */
                     void SetDynamicRangeInfo(const DynamicRangeInfo& _dynamicRangeInfo);
@@ -201,13 +201,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bitrate of video stream, unit: bps.
+                     * Bitrate of the video stream. Unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Video stream height. Unit: px.
+                     * Height of the video stream. Unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
@@ -219,7 +219,7 @@ namespace TencentCloud
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Video stream encoding format, for example, h264.
+                     * Video stream encoding format, for example h264.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
@@ -231,14 +231,14 @@ namespace TencentCloud
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * Encoding tag. It is valid only when Codec is hevc.
+                     * Encoding tag, valid only when Codec is hevc.
                      */
                     std::string m_codecTag;
                     bool m_codecTagHasBeenSet;
 
                     /**
                      * Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      */
                     DynamicRangeInfo m_dynamicRangeInfo;
                     bool m_dynamicRangeInfoHasBeenSet;

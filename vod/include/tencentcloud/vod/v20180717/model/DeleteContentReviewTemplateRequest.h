@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content review template unique identifier.
-                     * @return Definition Content review template unique identifier.
+                     * 获取Unique identifier of a content review template.
+                     * @return Definition Unique identifier of a content review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Content review template unique identifier.
-                     * @param _definition Content review template unique identifier.
+                     * 设置Unique identifier of a content review template.
+                     * @param _definition Unique identifier of a content review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Content review template unique identifier.
+                     * Unique identifier of a content review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

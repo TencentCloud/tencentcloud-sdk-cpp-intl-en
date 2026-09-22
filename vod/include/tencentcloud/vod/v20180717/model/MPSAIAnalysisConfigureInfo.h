@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration options for MPS intelligent analysis templates
+                * Configuration options of MPS intelligent analysis templates
                 */
                 class MPSAIAnalysisConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
-                     * @return Switch <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+                     * 获取<p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
+                     * @return Switch <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置<p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
-                     * @param _switch <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+                     * 设置<p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
+                     * @param _switch <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Intelligent categorization task switch. Available values: <li>ON: Enable the intelligent categorization task;</li> <li>OFF: Disable the intelligent categorization task.</li></p>
+                     * <p>Intelligent classification task switch. Available values: <li>ON: Enable the intelligent classification task;</li> <li>OFF: Disable the intelligent classification task.</li></p>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Media analysis information in the knowledge base.
+                * Knowledge base media analysis information.
                 */
                 class KnowledgeAnalysisInfo : public AbstractModel
                 {

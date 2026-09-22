@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
-                     * @return InputTokens <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+                     * 获取<p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
+                     * @return InputTokens <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
                      * 
                      */
                     int64_t GetInputTokens() const;
 
                     /**
-                     * 设置<p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
-                     * @param _inputTokens <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+                     * 设置<p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
+                     * @param _inputTokens <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
                      * 
                      */
                     void SetInputTokens(const int64_t& _inputTokens);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ThoughtTokensHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
-                     * @return InputImageCount <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+                     * 获取<p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
+                     * @return InputImageCount <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
                      * 
                      */
                     int64_t GetInputImageCount() const;
 
                     /**
-                     * 设置<p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
-                     * @param _inputImageCount <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+                     * 设置<p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
+                     * @param _inputImageCount <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
                      * 
                      */
                     void SetInputImageCount(const int64_t& _inputImageCount);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OutputSecondsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
-                     * @return TotalSeconds <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+                     * 获取<p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
+                     * @return TotalSeconds <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
                      * 
                      */
                     int64_t GetTotalSeconds() const;
 
                     /**
-                     * 设置<p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
-                     * @param _totalSeconds <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+                     * 设置<p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
+                     * @param _totalSeconds <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
                      * 
                      */
                     void SetTotalSeconds(const int64_t& _totalSeconds);
@@ -175,7 +175,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+                     * <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
                      */
                     int64_t m_inputTokens;
                     bool m_inputTokensHasBeenSet;
@@ -187,7 +187,7 @@ namespace TencentCloud
                     bool m_thoughtTokensHasBeenSet;
 
                     /**
-                     * <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+                     * <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
                      */
                     int64_t m_inputImageCount;
                     bool m_inputImageCountHasBeenSet;
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_outputSecondsHasBeenSet;
 
                     /**
-                     * <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+                     * <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
                      */
                     int64_t m_totalSeconds;
                     bool m_totalSecondsHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WebhookIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Callback URL name</p>
-                     * @return WebhookName <p>Callback URL name</p>
+                     * 获取<p>Callback address name</p>
+                     * @return WebhookName <p>Callback address name</p>
                      * 
                      */
                     std::string GetWebhookName() const;
 
                     /**
-                     * 设置<p>Callback URL name</p>
-                     * @param _webhookName <p>Callback URL name</p>
+                     * 设置<p>Callback address name</p>
+                     * @param _webhookName <p>Callback address name</p>
                      * 
                      */
                     void SetWebhookName(const std::string& _webhookName);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ModTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Callback request key</p>
-                     * @return SignatureKey <p>Callback request key</p>
+                     * 获取<p>Callback signature key, up to 128 characters.</p>
+                     * @return SignatureKey <p>Callback signature key, up to 128 characters.</p>
                      * 
                      */
                     std::string GetSignatureKey() const;
 
                     /**
-                     * 设置<p>Callback request key</p>
-                     * @param _signatureKey <p>Callback request key</p>
+                     * 设置<p>Callback signature key, up to 128 characters.</p>
+                     * @param _signatureKey <p>Callback signature key, up to 128 characters.</p>
                      * 
                      */
                     void SetSignatureKey(const std::string& _signatureKey);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SignatureKeyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Existence of callback API key</p>
-                     * @return HasSignatureKey <p>Existence of callback API key</p>
+                     * 获取<p>Existence of callback signature key</p>
+                     * @return HasSignatureKey <p>Existence of callback signature key</p>
                      * 
                      */
                     bool GetHasSignatureKey() const;
 
                     /**
-                     * 设置<p>Existence of callback API key</p>
-                     * @param _hasSignatureKey <p>Existence of callback API key</p>
+                     * 设置<p>Existence of callback signature key</p>
+                     * @param _hasSignatureKey <p>Existence of callback signature key</p>
                      * 
                      */
                     void SetHasSignatureKey(const bool& _hasSignatureKey);
@@ -223,7 +223,7 @@ namespace TencentCloud
                     bool m_webhookIdHasBeenSet;
 
                     /**
-                     * <p>Callback URL name</p>
+                     * <p>Callback address name</p>
                      */
                     std::string m_webhookName;
                     bool m_webhookNameHasBeenSet;
@@ -253,13 +253,13 @@ namespace TencentCloud
                     bool m_modTimeHasBeenSet;
 
                     /**
-                     * <p>Callback request key</p>
+                     * <p>Callback signature key, up to 128 characters.</p>
                      */
                     std::string m_signatureKey;
                     bool m_signatureKeyHasBeenSet;
 
                     /**
-                     * <p>Existence of callback API key</p>
+                     * <p>Existence of callback signature key</p>
                      */
                     bool m_hasSignatureKey;
                     bool m_hasSignatureKeyHasBeenSet;

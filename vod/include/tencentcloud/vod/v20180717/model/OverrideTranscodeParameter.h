@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取<p>TSC transcoding configuration parameters.</p>
-                     * @return TEHDConfig <p>TSC transcoding configuration parameters.</p>
+                     * 获取<p>Top Speed Codec transcoding configuration parameters.</p>
+                     * @return TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
                      * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
-                     * 设置<p>TSC transcoding configuration parameters.</p>
-                     * @param _tEHDConfig <p>TSC transcoding configuration parameters.</p>
+                     * 设置<p>Top Speed Codec transcoding configuration parameters.</p>
+                     * @param _tEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
@@ -229,7 +229,7 @@ namespace TencentCloud
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * <p>TSC transcoding configuration parameters.</p>
+                     * <p>Top Speed Codec transcoding configuration parameters.</p>
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;

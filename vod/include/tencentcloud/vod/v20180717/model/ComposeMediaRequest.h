@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
-                     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * 获取Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
                      * 
                      */
                     std::vector<MediaTrack> GetTracks() const;
 
                     /**
-                     * 设置Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
-                     * @param _tracks Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * 设置Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * @param _tracks Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
                      * 
                      */
                     void SetTracks(const std::vector<MediaTrack>& _tracks);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool CanvasHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
-                     * @return SessionContext Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+                     * 获取Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
+                     * @return SessionContext Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
-                     * @param _sessionContext Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+                     * 设置Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
+                     * @param _sessionContext Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @return SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 获取Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @param _sessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 设置Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @param _sessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -174,7 +174,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
                      */
                     std::vector<MediaTrack> m_tracks;
                     bool m_tracksHasBeenSet;
@@ -186,7 +186,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -198,13 +198,13 @@ namespace TencentCloud
                     bool m_canvasHasBeenSet;
 
                     /**
-                     * Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+                     * Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

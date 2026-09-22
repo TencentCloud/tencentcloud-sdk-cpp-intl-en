@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the input image file of an AIGC video generation task.
+                * Image file information for the AIGC video generation task input.
                 */
                 class AigcVideoTaskInputFileInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
-                     * @return Category <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+                     * 获取<p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+                     * @return Category <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置<p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
-                     * @param _category <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+                     * 设置<p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+                     * @param _category <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
-                     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * 获取<p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * @return FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
-                     * @param _fileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * 设置<p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * @param _fileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
-                     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * 获取<p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
-                     * @param _url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * 设置<p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * @param _url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
-                     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * 获取<p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
                      * 
                      */
                     std::string GetBase64() const;
 
                     /**
-                     * 设置<p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
-                     * @param _base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * 设置<p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * @param _base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
                      * 
                      */
                     void SetBase64(const std::string& _base64);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool Base64HasBeenSet() const;
 
                     /**
-                     * 获取<p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
-                     * @return ReferenceType <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
+                     * 获取<p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
+                     * @return ReferenceType <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
                      * 
                      */
                     std::string GetReferenceType() const;
 
                     /**
-                     * 设置<p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
-                     * @param _referenceType <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
+                     * 设置<p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
+                     * @param _referenceType <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
                      * 
                      */
                     void SetReferenceType(const std::string& _referenceType);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool UsageHasBeenSet() const;
 
                     /**
-                     * 获取<p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
-                     * @return Text <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+                     * 获取<p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+                     * @return Text <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置<p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
-                     * @param _text <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+                     * 设置<p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+                     * @param _text <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -286,31 +286,31 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+                     * <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+                     * <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
                      */
                     std::string m_base64;
                     bool m_base64HasBeenSet;
 
                     /**
-                     * <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
+                     * <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
                      */
                     std::string m_referenceType;
                     bool m_referenceTypeHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_usageHasBeenSet;
 
                     /**
-                     * <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+                     * <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

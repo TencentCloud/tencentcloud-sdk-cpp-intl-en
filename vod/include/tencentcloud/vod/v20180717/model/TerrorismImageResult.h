@@ -101,7 +101,7 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Result tag for authentication involving unsafe information. Value range:
+                     * 获取Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -109,7 +109,7 @@ namespace TencentCloud
 <li>banners: violent and terrorist flags;</li>
 <li>explosion: explosions and fires;</li>
 <li>scenario: Violent and terrorist visuals.</li>
-                     * @return Label Result tag for authentication involving unsafe information. Value range:
+                     * @return Label Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -122,7 +122,7 @@ namespace TencentCloud
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Result tag for authentication involving unsafe information. Value range:
+                     * 设置Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -130,7 +130,7 @@ namespace TencentCloud
 <li>banners: violent and terrorist flags;</li>
 <li>explosion: explosions and fires;</li>
 <li>scenario: Violent and terrorist visuals.</li>
-                     * @param _label Result tag for authentication involving unsafe information. Value range:
+                     * @param _label Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -167,7 +167,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Result tag for authentication involving unsafe information. Value range:
+                     * Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>

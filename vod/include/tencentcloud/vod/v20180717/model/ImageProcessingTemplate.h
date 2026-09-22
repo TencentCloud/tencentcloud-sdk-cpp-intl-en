@@ -140,18 +140,18 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Array of image processing operations. Operations are performed in array order.
+                     * 获取Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
-                     * @return Operations Array of image processing operations. Operations are performed in array order.
+                     * @return Operations Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
                      * 
                      */
                     std::vector<ImageOperation> GetOperations() const;
 
                     /**
-                     * 设置Array of image processing operations. Operations are performed in array order.
+                     * 设置Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
-                     * @param _operations Array of image processing operations. Operations are performed in array order.
+                     * @param _operations Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
                      * 
                      */
@@ -214,7 +214,7 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Array of image processing operations. Operations are performed in array order.
+                     * Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
                      */
                     std::vector<ImageOperation> m_operations;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
-                     * @return Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+                     * 获取Object key prefix matching, limited to object keys with the specified prefix in response.
+                     * @return Prefix Object key prefix matching, limited to object keys with the specified prefix in response.
                      * 
                      */
                     std::string GetPrefix() const;
 
                     /**
-                     * 设置Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
-                     * @param _prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+                     * 设置Object key prefix matching, limited to object keys with the specified prefix in response.
+                     * @param _prefix Object key prefix matching, limited to object keys with the specified prefix in response.
                      * 
                      */
                     void SetPrefix(const std::string& _prefix);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+                     * Object key prefix matching, limited to object keys with the specified prefix in response.
                      */
                     std::string m_prefix;
                     bool m_prefixHasBeenSet;

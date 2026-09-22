@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task control parameters for text recognition involving offensive content.
+                * Task control parameters for text recognition involving offensive content
                 */
                 class PornOcrReviewTemplateInfo : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
                      * @return Switch Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
                      * @param _switch Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
-                     * @return BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * 获取Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
-                     * @param _blockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * 设置Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * @param _blockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -121,20 +121,20 @@ namespace TencentCloud
 
                     /**
                      * Task switch for text recognition involving offensive content. Available values:
-<li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task involving offensive content in text recognition.</li>
+<li>ON: enable the task of text recognition involving offensive content;</li>
+<li>OFF: Disable the task involving text recognition of offensive content.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Threshold score for determining suspected violations. When the moderation score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+                     * Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

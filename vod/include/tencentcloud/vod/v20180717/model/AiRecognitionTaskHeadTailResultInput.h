@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video start and end recognition template ID.
-                     * @return Definition Video start and end recognition template ID.
+                     * 获取Opening and closing segments recognition template ID.
+                     * @return Definition Opening and closing segments recognition template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Video start and end recognition template ID.
-                     * @param _definition Video start and end recognition template ID.
+                     * 设置Opening and closing segments recognition template ID.
+                     * @param _definition Opening and closing segments recognition template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video start and end recognition template ID.
+                     * Opening and closing segments recognition template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

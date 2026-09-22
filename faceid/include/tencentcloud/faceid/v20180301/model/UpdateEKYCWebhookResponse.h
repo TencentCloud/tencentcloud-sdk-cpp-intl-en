@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>ID of the updated Webhook configuration</p>
-                     * @return WebhookId <p>ID of the updated Webhook configuration</p>
+                     * 获取<p>ID of the Webhook configuration to be updated</p>
+                     * @return WebhookId <p>ID of the Webhook configuration to be updated</p>
                      * 
                      */
                     uint64_t GetWebhookId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool WebhookIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
-                     * @return ModTime <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
+                     * 获取<p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
+                     * @return ModTime <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
                      * 
                      */
                     std::string GetModTime() const;
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>ID of the updated Webhook configuration</p>
+                     * <p>ID of the Webhook configuration to be updated</p>
                      */
                     uint64_t m_webhookId;
                     bool m_webhookIdHasBeenSet;
 
                     /**
-                     * <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
+                     * <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
                      */
                     std::string m_modTime;
                     bool m_modTimeHasBeenSet;

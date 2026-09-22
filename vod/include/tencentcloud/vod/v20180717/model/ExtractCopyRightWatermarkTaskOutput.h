@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output information of copyright watermark extraction
+                * Extract copyright watermark output information
                 */
                 class ExtractCopyRightWatermarkTaskOutput : public AbstractModel
                 {

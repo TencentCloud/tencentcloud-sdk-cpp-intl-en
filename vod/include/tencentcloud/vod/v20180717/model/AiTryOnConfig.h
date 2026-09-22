@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
-                     * @return Model <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+                     * 获取<p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
+                     * @return Model <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置<p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
-                     * @param _model <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+                     * 设置<p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
+                     * @param _model <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -113,7 +113,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+                     * <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;

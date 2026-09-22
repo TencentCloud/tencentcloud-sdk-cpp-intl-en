@@ -25,7 +25,8 @@ using namespace std;
 UpdateEKYCWebhookRequest::UpdateEKYCWebhookRequest() :
     m_webhookIdHasBeenSet(false),
     m_webhookNameHasBeenSet(false),
-    m_webhookURLHasBeenSet(false)
+    m_webhookURLHasBeenSet(false),
+    m_signatureKeyHasBeenSet(false)
 {
 }
 
@@ -58,6 +59,14 @@ string UpdateEKYCWebhookRequest::ToJsonString() const
         string key = "WebhookURL";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_webhookURL.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_signatureKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SignatureKey";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_signatureKey.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -114,6 +123,22 @@ void UpdateEKYCWebhookRequest::SetWebhookURL(const string& _webhookURL)
 bool UpdateEKYCWebhookRequest::WebhookURLHasBeenSet() const
 {
     return m_webhookURLHasBeenSet;
+}
+
+string UpdateEKYCWebhookRequest::GetSignatureKey() const
+{
+    return m_signatureKey;
+}
+
+void UpdateEKYCWebhookRequest::SetSignatureKey(const string& _signatureKey)
+{
+    m_signatureKey = _signatureKey;
+    m_signatureKeyHasBeenSet = true;
+}
+
+bool UpdateEKYCWebhookRequest::SignatureKeyHasBeenSet() const
+{
+    return m_signatureKeyHasBeenSet;
 }
 
 

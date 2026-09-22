@@ -101,15 +101,15 @@ Note: The audio and video to operate must be in HLS format.
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
-                     * @return TranscodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+                     * 获取Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
+                     * @return TranscodeDefinition Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
                      * 
                      */
                     int64_t GetTranscodeDefinition() const;
 
                     /**
-                     * 设置Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
-                     * @param _transcodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+                     * 设置Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
+                     * @param _transcodeDefinition Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
                      * 
                      */
                     void SetTranscodeDefinition(const int64_t& _transcodeDefinition);
@@ -122,15 +122,15 @@ Note: The audio and video to operate must be in HLS format.
                     bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Media editing start offset time in seconds.
-                     * @return StartTimeOffset Media editing start offset time in seconds.
+                     * 获取Media editing start offset time, in seconds.
+                     * @return StartTimeOffset Media editing start offset time, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Media editing start offset time in seconds.
-                     * @param _startTimeOffset Media editing start offset time in seconds.
+                     * 设置Media editing start offset time, in seconds.
+                     * @param _startTimeOffset Media editing start offset time, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -181,13 +181,13 @@ Note: The audio and video to operate must be in HLS format.
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+                     * Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
                      */
                     int64_t m_transcodeDefinition;
                     bool m_transcodeDefinitionHasBeenSet;
 
                     /**
-                     * Media editing start offset time in seconds.
+                     * Media editing start offset time, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;

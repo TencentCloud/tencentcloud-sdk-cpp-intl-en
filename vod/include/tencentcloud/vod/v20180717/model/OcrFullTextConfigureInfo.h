@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
                      * @return Switch Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
                      * @param _switch Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -79,8 +79,8 @@ namespace TencentCloud
 
                     /**
                      * Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
                      * @return Switch Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
                      * @param _switch Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,11 +76,11 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+                     * 获取Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
-                     * @return Type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+                     * @return Type Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
@@ -89,11 +89,11 @@ Default value: weak.
                     std::string GetType() const;
 
                     /**
-                     * 设置Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+                     * 设置Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
-                     * @param _type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+                     * @param _type Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
@@ -112,14 +112,14 @@ Default value: weak.
 
                     /**
                      * Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+                     * Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MPS media processing task info.
+                * MPS media processing task information.
                 */
                 class ProcessMediaByMPS : public AbstractModel
                 {

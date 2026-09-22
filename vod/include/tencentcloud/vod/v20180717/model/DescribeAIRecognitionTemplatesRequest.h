@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
-                     * @return Type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+                     * 获取Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
+                     * @return Type Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
-                     * @param _type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+                     * 设置Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
+                     * @param _type Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -162,7 +162,7 @@ namespace TencentCloud
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+                     * Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

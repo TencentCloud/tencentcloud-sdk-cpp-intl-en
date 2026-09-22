@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain names or IP addresses of each sprite sheet.</p>
-                     * @return ImageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
+                     * 获取<p>Address of each sprite sheet.</p>
+                     * @return ImageUrlSet <p>Address of each sprite sheet.</p>
                      * 
                      */
                     std::vector<std::string> GetImageUrlSet() const;
 
                     /**
-                     * 设置<p>Domain names or IP addresses of each sprite sheet.</p>
-                     * @param _imageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
+                     * 设置<p>Address of each sprite sheet.</p>
+                     * @param _imageUrlSet <p>Address of each sprite sheet.</p>
                      * 
                      */
                     void SetImageUrlSet(const std::vector<std::string>& _imageUrlSet);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ImageUrlSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
-                     * @return WebVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+                     * 获取<p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
+                     * @return WebVttUrl <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
                      * 
                      */
                     std::string GetWebVttUrl() const;
 
                     /**
-                     * 设置<p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
-                     * @param _webVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+                     * 设置<p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
+                     * @param _webVttUrl <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
                      * 
                      */
                     void SetWebVttUrl(const std::string& _webVttUrl);
@@ -199,13 +199,13 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Domain names or IP addresses of each sprite sheet.</p>
+                     * <p>Address of each sprite sheet.</p>
                      */
                     std::vector<std::string> m_imageUrlSet;
                     bool m_imageUrlSetHasBeenSet;
 
                     /**
-                     * <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+                     * <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
                      */
                     std::string m_webVttUrl;
                     bool m_webVttUrlHasBeenSet;

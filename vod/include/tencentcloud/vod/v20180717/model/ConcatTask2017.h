@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video splicing task information. This structure is only used for tasks initiated by the 2017 version [video splicing](https://www.tencentcloud.com/document/product/266/7821?from_cn_redirect=1) API.
+                * Video splicing task information. This structure is only used for tasks initiated via the 2017 [video splicing](https://www.tencentcloud.com/document/product/266/7821?from_cn_redirect=1) API.
                 */
                 class ConcatTask2017 : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Video splicing source file information.
-                     * @return FileInfoSet Video splicing source file information.
+                     * 获取Source file information for video splicing.
+                     * @return FileInfoSet Source file information for video splicing.
                      * 
                      */
                     std::vector<ConcatFileInfo2017> GetFileInfoSet() const;
 
                     /**
-                     * 设置Video splicing source file information.
-                     * @param _fileInfoSet Video splicing source file information.
+                     * 设置Source file information for video splicing.
+                     * @param _fileInfoSet Source file information for video splicing.
                      * 
                      */
                     void SetFileInfoSet(const std::vector<ConcatFileInfo2017>& _fileInfoSet);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Video splicing source file information.
+                     * Source file information for video splicing.
                      */
                     std::vector<ConcatFileInfo2017> m_fileInfoSet;
                     bool m_fileInfoSetHasBeenSet;

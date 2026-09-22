@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio and video moderation clip.
+                * Audio/video moderation clip.
                 */
                 class ReviewAudioVideoSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time offset of the start of the suspected segment. Unit: second.
-                     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+                     * 获取Start time offset of a suspected segment, in seconds.
+                     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Time offset of the start of the suspected segment. Unit: second.
-                     * @param _startTimeOffset Time offset of the start of the suspected segment. Unit: second.
+                     * 设置Start time offset of a suspected segment, in seconds.
+                     * @param _startTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of the suspected segment, in seconds.
-                     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
+                     * 获取End time offset of a suspected segment, in seconds.
+                     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of the suspected segment, in seconds.
-                     * @param _endTimeOffset End time offset of the suspected segment, in seconds.
+                     * 设置End time offset of a suspected segment, in seconds.
+                     * @param _endTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -139,42 +139,42 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Label of the most likely rule violation in the suspected segment. Value range:
+                     * 获取Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
-                     * @return Label Label of the most likely rule violation in the suspected segment. Value range:
+                     * @return Label Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Label of the most likely rule violation in the suspected segment. Value range:
+                     * 设置Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
-                     * @param _label Label of the most likely rule violation in the suspected segment. Value range:
+                     * @param _label Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
                      * 
                      */
@@ -210,12 +210,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
                      * @return Form Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -225,12 +225,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
                      * @param _form Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -246,15 +246,15 @@ namespace TencentCloud
                     bool FormHasBeenSet() const;
 
                     /**
-                     * 获取Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
-                     * @return AreaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+                     * 获取Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+                     * @return AreaCoordSet Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
-                     * @param _areaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+                     * 设置Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+                     * @param _areaCoordSet Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -267,15 +267,15 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
-                     * @return Text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+                     * 获取Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
+                     * @return Text Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
-                     * @param _text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+                     * 设置Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
+                     * @param _text Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -309,18 +309,18 @@ namespace TencentCloud
                     bool KeywordSetHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (images are not retained permanently and will reach
+                     * 获取Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @return Url Suspected image URL (images are not retained permanently and will reach
+                     * @return Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (images are not retained permanently and will reach
+                     * 设置Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-                     * @param _url Suspected image URL (images are not retained permanently and will reach
+                     * @param _url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
@@ -334,15 +334,15 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _picUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -357,13 +357,13 @@ Images will be deleted after the PicUrlExpireTime time point).
                 private:
 
                     /**
-                     * Time offset of the start of the suspected segment. Unit: second.
+                     * Start time offset of a suspected segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of the suspected segment, in seconds.
+                     * End time offset of a suspected segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
@@ -383,13 +383,13 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Label of the most likely rule violation in the suspected segment. Value range:
+                     * Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
                      */
                     std::string m_label;
@@ -403,7 +403,7 @@ Images will be deleted after the PicUrlExpireTime time point).
 
                     /**
                      * Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -412,13 +412,13 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_formHasBeenSet;
 
                     /**
-                     * Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+                     * Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+                     * Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
@@ -430,14 +430,14 @@ Images will be deleted after the PicUrlExpireTime time point).
                     bool m_keywordSetHasBeenSet;
 
                     /**
-                     * Suspected image URL (images are not retained permanently and will reach
+                     * Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

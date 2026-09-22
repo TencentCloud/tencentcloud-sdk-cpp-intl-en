@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Width of the animated image in px.
-                     * @return Width Width of the animated image in px.
+                     * 获取Width of the animated image. Unit: px.
+                     * @return Width Width of the animated image. Unit: px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width of the animated image in px.
-                     * @param _width Width of the animated image in px.
+                     * 设置Width of the animated image. Unit: px.
+                     * @param _width Width of the animated image. Unit: px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Animated image bitrate. Measurement unit: bps.
-                     * @return Bitrate Animated image bitrate. Measurement unit: bps.
+                     * 获取Animated image bitrate in bps.
+                     * @return Bitrate Animated image bitrate in bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Animated image bitrate. Measurement unit: bps.
-                     * @param _bitrate Animated image bitrate. Measurement unit: bps.
+                     * 设置Animated image bitrate in bps.
+                     * @param _bitrate Animated image bitrate in bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of the GIF in the video, in seconds.
-                     * @return EndTimeOffset End time offset of the GIF in the video, in seconds.
+                     * 获取End time offset of an animated image in the video, in seconds.
+                     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of the GIF in the video, in seconds.
-                     * @param _endTimeOffset End time offset of the GIF in the video, in seconds.
+                     * 设置End time offset of an animated image in the video, in seconds.
+                     * @param _endTimeOffset End time offset of an animated image in the video, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -283,13 +283,13 @@ namespace TencentCloud
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Width of the animated image in px.
+                     * Width of the animated image. Unit: px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Animated image bitrate. Measurement unit: bps.
+                     * Animated image bitrate in bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
@@ -313,7 +313,7 @@ namespace TencentCloud
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of the GIF in the video, in seconds.
+                     * End time offset of an animated image in the video, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

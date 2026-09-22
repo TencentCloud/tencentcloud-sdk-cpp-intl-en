@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video transcoding playback information (2017)
+                * Playback information of video transcoding (2017)
                 */
                 class TranscodePlayInfo2017 : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
-                     * @return Definition Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+                     * 获取Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+                     * @return Definition Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
-                     * @param _definition Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+                     * 设置Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+                     * @param _definition Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the video stream width in px.
-                     * @return Width Maximum value of the video stream width in px.
+                     * 获取Maximum video stream width in px.
+                     * @return Width Maximum video stream width in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum value of the video stream width in px.
-                     * @param _width Maximum value of the video stream width in px.
+                     * 设置Maximum video stream width in px.
+                     * @param _width Maximum video stream width in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+                     * Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Maximum value of the video stream width in px.
+                     * Maximum video stream width in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;

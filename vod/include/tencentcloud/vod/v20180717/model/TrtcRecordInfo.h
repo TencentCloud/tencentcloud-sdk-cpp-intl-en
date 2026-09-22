@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取List of user IDs participating in recording.
-                     * @return UserIds List of user IDs participating in recording.
+                     * 获取User ID list of the recording participants.
+                     * @return UserIds User ID list of the recording participants.
                      * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
-                     * 设置List of user IDs participating in recording.
-                     * @param _userIds List of user IDs participating in recording.
+                     * 设置User ID list of the recording participants.
+                     * @param _userIds User ID list of the recording participants.
                      * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * List of user IDs participating in recording.
+                     * User ID list of the recording participants.
                      */
                     std::vector<std::string> m_userIds;
                     bool m_userIdsHasBeenSet;

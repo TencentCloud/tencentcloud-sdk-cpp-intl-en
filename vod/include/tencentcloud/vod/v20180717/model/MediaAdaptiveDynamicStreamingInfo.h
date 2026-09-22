@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive Bitrate Streaming information
+                * Adaptive bitrate information.
                 */
                 class MediaAdaptiveDynamicStreamingInfo : public AbstractModel
                 {

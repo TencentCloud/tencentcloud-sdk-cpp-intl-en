@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input media track list, including multiple track information composed of materials such as video, audio, and images.
-                     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
+                     * 获取Input media track list, including multiple track information composed of materials such as video, audio, and image.
+                     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image.
                      * 
                      */
                     std::vector<MediaTrack> GetTracks() const;
 
                     /**
-                     * 设置Input media track list, including multiple track information composed of materials such as video, audio, and images.
-                     * @param _tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
+                     * 设置Input media track list, including multiple track information composed of materials such as video, audio, and image.
+                     * @param _tracks Input media track list, including multiple track information composed of materials such as video, audio, and image.
                      * 
                      */
                     void SetTracks(const std::vector<MediaTrack>& _tracks);
@@ -115,7 +115,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input media track list, including multiple track information composed of materials such as video, audio, and images.
+                     * Input media track list, including multiple track information composed of materials such as video, audio, and image.
                      */
                     std::vector<MediaTrack> m_tracks;
                     bool m_tracksHasBeenSet;

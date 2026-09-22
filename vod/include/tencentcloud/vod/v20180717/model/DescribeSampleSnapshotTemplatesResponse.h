@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Sampling screenshot template detail list.
-                     * @return SampleSnapshotTemplateSet Sampling screenshot template detail list.
+                     * 获取List of sampled screenshot template details.
+                     * @return SampleSnapshotTemplateSet List of sampled screenshot template details.
                      * 
                      */
                     std::vector<SampleSnapshotTemplate> GetSampleSnapshotTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Sampling screenshot template detail list.
+                     * List of sampled screenshot template details.
                      */
                     std::vector<SampleSnapshotTemplate> m_sampleSnapshotTemplateSet;
                     bool m_sampleSnapshotTemplateSetHasBeenSet;

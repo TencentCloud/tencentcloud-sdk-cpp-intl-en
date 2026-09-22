@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Character parameter information for AIGC video conversion.
+                * AIGC video conversion figure parameter information.
                 */
                 class AigcVideoRedrawTaskInfo : public AbstractModel
                 {

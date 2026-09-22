@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
-                     * @return FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+                     * 获取<p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>Either FileId or MediaStoragePath must be provided.</p>
+                     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>Either FileId or MediaStoragePath must be provided.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
-                     * @param _fileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+                     * 设置<p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>Either FileId or MediaStoragePath must be provided.</p>
+                     * @param _fileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>Either FileId or MediaStoragePath must be provided.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MediaStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+                     * 获取<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+                     * 设置<p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
-                     * @return AiContentReviewTask <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+                     * 获取<p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">audio and video moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">image moderation (ReviewImage)</a>.</p>
+                     * @return AiContentReviewTask <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">audio and video moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">image moderation (ReviewImage)</a>.</p>
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置<p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
-                     * @param _aiContentReviewTask <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+                     * 设置<p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">audio and video moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">image moderation (ReviewImage)</a>.</p>
+                     * @param _aiContentReviewTask <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">audio and video moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">image moderation (ReviewImage)</a>.</p>
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reserved field, used for special purposes.</p>
-                     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
+                     * 获取<p>Reserved field, used for special purpose.</p>
+                     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置<p>Reserved field, used for special purposes.</p>
-                     * @param _extInfo <p>Reserved field, used for special purposes.</p>
+                     * 设置<p>Reserved field, used for special purpose.</p>
+                     * @param _extInfo <p>Reserved field, used for special purpose.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
-                     * @return OutputAsIndependentMedia <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
+                     * 获取<p>The media processing transcoding result is output as a standalone media asset. Enabling this option will output the product as a standalone media asset and generate a brand new FileID. Currently, only TranscodeTask transcoding tasks support output as a standalone media asset.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermark, and other features in transcoding tasks.</p>
+                     * @return OutputAsIndependentMedia <p>The media processing transcoding result is output as a standalone media asset. Enabling this option will output the product as a standalone media asset and generate a brand new FileID. Currently, only TranscodeTask transcoding tasks support output as a standalone media asset.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermark, and other features in transcoding tasks.</p>
                      * 
                      */
                     std::string GetOutputAsIndependentMedia() const;
 
                     /**
-                     * 设置<p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
-                     * @param _outputAsIndependentMedia <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
+                     * 设置<p>The media processing transcoding result is output as a standalone media asset. Enabling this option will output the product as a standalone media asset and generate a brand new FileID. Currently, only TranscodeTask transcoding tasks support output as a standalone media asset.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermark, and other features in transcoding tasks.</p>
+                     * @param _outputAsIndependentMedia <p>The media processing transcoding result is output as a standalone media asset. Enabling this option will output the product as a standalone media asset and generate a brand new FileID. Currently, only TranscodeTask transcoding tasks support output as a standalone media asset.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermark, and other features in transcoding tasks.</p>
                      * 
                      */
                     void SetOutputAsIndependentMedia(const std::string& _outputAsIndependentMedia);
@@ -343,7 +343,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+                     * <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>Either FileId or MediaStoragePath must be provided.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
@@ -355,7 +355,7 @@ namespace TencentCloud
                     bool m_mediaStoragePathHasBeenSet;
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+                     * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -367,7 +367,7 @@ namespace TencentCloud
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+                     * <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">audio and video moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">image moderation (ReviewImage)</a>.</p>
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
@@ -409,7 +409,7 @@ namespace TencentCloud
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * <p>Reserved field, used for special purposes.</p>
+                     * <p>Reserved field, used for special purpose.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;
@@ -421,7 +421,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
+                     * <p>The media processing transcoding result is output as a standalone media asset. Enabling this option will output the product as a standalone media asset and generate a brand new FileID. Currently, only TranscodeTask transcoding tasks support output as a standalone media asset.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermark, and other features in transcoding tasks.</p>
                      */
                     std::string m_outputAsIndependentMedia;
                     bool m_outputAsIndependentMediaHasBeenSet;

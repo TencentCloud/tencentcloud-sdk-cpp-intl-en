@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task control parameter for text recognition involving unsafe information.
+                * Task control parameter for text recognition involving unsafe information
                 */
                 class TerrorismOcrReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
                      * @return Switch Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
                      * @param _switch Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -122,7 +122,7 @@ namespace TencentCloud
                     /**
                      * Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -134,7 +134,7 @@ namespace TencentCloud
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

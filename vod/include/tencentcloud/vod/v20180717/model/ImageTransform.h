@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Operations such as image rotation and flipping.
+                * Image rotation, flipping, and other operations.
                 */
                 class ImageTransform : public AbstractModel
                 {
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
-                     * @return RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+                     * 获取Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
+                     * @return RotateAngle Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
                      * 
                      */
                     double GetRotateAngle() const;
 
                     /**
-                     * 设置Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
-                     * @param _rotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+                     * 设置Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
+                     * @param _rotateAngle Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
                      * 
                      */
                     void SetRotateAngle(const double& _rotateAngle);
@@ -98,12 +98,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
                      * @return Flip Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
                      * 
                      */
@@ -111,12 +111,12 @@ Valid when Type is set to Flip.
 
                     /**
                      * 设置Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
                      * @param _flip Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
                      * 
                      */
@@ -140,15 +140,15 @@ Valid when Type is set to Flip.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+                     * Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
                      */
                     double m_rotateAngle;
                     bool m_rotateAngleHasBeenSet;
 
                     /**
                      * Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
                      */
                     std::string m_flip;

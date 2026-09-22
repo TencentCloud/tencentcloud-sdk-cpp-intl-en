@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Duration in seconds.
-                     * @return Duration Duration in seconds.
+                     * 获取Duration, in seconds.
+                     * @return Duration Duration, in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Duration in seconds.
-                     * @param _duration Duration in seconds.
+                     * 设置Duration, in seconds.
+                     * @param _duration Duration, in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Duration in seconds.
+                     * Duration, in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;

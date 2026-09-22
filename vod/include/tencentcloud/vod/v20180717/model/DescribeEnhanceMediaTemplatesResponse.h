@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video quality rebirth template detail list.
-                     * @return RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
+                     * 获取List of audio and video quality rebirth template details.
+                     * @return RebuildMediaTemplateSet List of audio and video quality rebirth template details.
                      * 
                      */
                     std::vector<RebuildMediaTemplate> GetRebuildMediaTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Audio and video quality rebirth template detail list.
+                     * List of audio and video quality rebirth template details.
                      */
                     std::vector<RebuildMediaTemplate> m_rebuildMediaTemplateSet;
                     bool m_rebuildMediaTemplateSetHasBeenSet;

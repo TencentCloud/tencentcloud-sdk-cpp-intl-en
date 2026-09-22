@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Files deleted this time.
-                     * @return DeleteParts Files deleted this time.
+                     * 获取Part of the files deleted this time.
+                     * @return DeleteParts Part of the files deleted this time.
                      * 
                      */
                     std::vector<MediaDeleteItem> GetDeleteParts() const;
 
                     /**
-                     * 设置Files deleted this time.
-                     * @param _deleteParts Files deleted this time.
+                     * 设置Part of the files deleted this time.
+                     * @param _deleteParts Part of the files deleted this time.
                      * 
                      */
                     void SetDeleteParts(const std::vector<MediaDeleteItem>& _deleteParts);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Files deleted this time.
+                     * Part of the files deleted this time.
                      */
                     std::vector<MediaDeleteItem> m_deleteParts;
                     bool m_deletePartsHasBeenSet;

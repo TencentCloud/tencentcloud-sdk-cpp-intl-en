@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Aggregation results of one detection item for the LLM large model in audio and video quality detection.
+                * Aggregation results of one detection item of the LLM large model for audio and video quality detection.
                 */
                 class QualityInspectLLMDetectionResultItem : public AbstractModel
                 {

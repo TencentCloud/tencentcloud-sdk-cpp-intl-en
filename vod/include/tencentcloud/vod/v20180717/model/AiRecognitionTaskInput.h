@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video intelligence identification template ID.
-                     * @return Definition Video intelligence identification template ID.
+                     * 获取Video intelligent identification template ID.
+                     * @return Definition Video intelligent identification template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Video intelligence identification template ID.
-                     * @param _definition Video intelligence identification template ID.
+                     * 设置Video intelligent identification template ID.
+                     * @param _definition Video intelligent identification template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video intelligence identification template ID.
+                     * Video intelligent identification template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

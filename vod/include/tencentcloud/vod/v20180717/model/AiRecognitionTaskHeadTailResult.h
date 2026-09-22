@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input information for the video start and end recognition task.
-                     * @return Input Input information for the video start and end recognition task.
+                     * 获取Input information of the video opening and closing credits recognition task.
+                     * @return Input Input information of the video opening and closing credits recognition task.
                      * 
                      */
                     AiRecognitionTaskHeadTailResultInput GetInput() const;
 
                     /**
-                     * 设置Input information for the video start and end recognition task.
-                     * @param _input Input information for the video start and end recognition task.
+                     * 设置Input information of the video opening and closing credits recognition task.
+                     * @param _input Input information of the video opening and closing credits recognition task.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskHeadTailResultInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Video start and end recognition task progress, in the range of [0,100].
-                     * @return Progress Video start and end recognition task progress, in the range of [0,100].
+                     * 获取Video opening and closing credits recognition task progress, value ranges from 0 to 100.
+                     * @return Progress Video opening and closing credits recognition task progress, value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Video start and end recognition task progress, in the range of [0,100].
-                     * @param _progress Video start and end recognition task progress, in the range of [0,100].
+                     * 设置Video opening and closing credits recognition task progress, value ranges from 0 to 100.
+                     * @param _progress Video opening and closing credits recognition task progress, value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _finishTime Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _finishTime The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input information for the video start and end recognition task.
+                     * Input information of the video opening and closing credits recognition task.
                      */
                     AiRecognitionTaskHeadTailResultInput m_input;
                     bool m_inputHasBeenSet;
@@ -276,7 +276,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Video start and end recognition task progress, in the range of [0,100].
+                     * Video opening and closing credits recognition task progress, value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
@@ -288,7 +288,7 @@ namespace TencentCloud
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

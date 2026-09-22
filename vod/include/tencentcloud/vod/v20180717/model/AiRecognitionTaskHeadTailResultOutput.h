@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recognition confidence of the opening scene. Value range: 0-100.
-                     * @return HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
+                     * 获取Confidence of opening scene recognition. Value range: 0-100.
+                     * @return HeadConfidence Confidence of opening scene recognition. Value range: 0-100.
                      * 
                      */
                     double GetHeadConfidence() const;
 
                     /**
-                     * 设置Recognition confidence of the opening scene. Value range: 0-100.
-                     * @param _headConfidence Recognition confidence of the opening scene. Value range: 0-100.
+                     * 设置Confidence of opening scene recognition. Value range: 0-100.
+                     * @param _headConfidence Confidence of opening scene recognition. Value range: 0-100.
                      * 
                      */
                     void SetHeadConfidence(const double& _headConfidence);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TailConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Start time point of the video ending, in seconds.
-                     * @return TailTimeOffset Start time point of the video ending, in seconds.
+                     * 获取Start time point of the video ending scene. Unit: seconds.
+                     * @return TailTimeOffset Start time point of the video ending scene. Unit: seconds.
                      * 
                      */
                     double GetTailTimeOffset() const;
 
                     /**
-                     * 设置Start time point of the video ending, in seconds.
-                     * @param _tailTimeOffset Start time point of the video ending, in seconds.
+                     * 设置Start time point of the video ending scene. Unit: seconds.
+                     * @param _tailTimeOffset Start time point of the video ending scene. Unit: seconds.
                      * 
                      */
                     void SetTailTimeOffset(const double& _tailTimeOffset);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Recognition confidence of the opening scene. Value range: 0-100.
+                     * Confidence of opening scene recognition. Value range: 0-100.
                      */
                     double m_headConfidence;
                     bool m_headConfidenceHasBeenSet;
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_tailConfidenceHasBeenSet;
 
                     /**
-                     * Start time point of the video ending, in seconds.
+                     * Start time point of the video ending scene. Unit: seconds.
                      */
                     double m_tailTimeOffset;
                     bool m_tailTimeOffsetHasBeenSet;

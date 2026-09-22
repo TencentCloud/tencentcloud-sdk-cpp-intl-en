@@ -48,11 +48,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * 
@@ -61,11 +61,11 @@ Default value: ON.
 
                     /**
                      * 设置Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * @param _switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * 
@@ -81,11 +81,11 @@ Default value: ON.
 
                     /**
                      * 获取Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
                      * @return Type Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
                      * 
@@ -94,11 +94,11 @@ Default value: standard.
 
                     /**
                      * 设置Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
                      * @param _type Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
                      * 
@@ -167,15 +167,15 @@ Default value: standard.
                     bool PercentHasBeenSet() const;
 
                     /**
-                     * 获取Target image width. It cannot exceed 4096.
-                     * @return Width Target image width. It cannot exceed 4096.
+                     * 获取Target image width. Cannot exceed 4096.
+                     * @return Width Target image width. Cannot exceed 4096.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Target image width. It cannot exceed 4096.
-                     * @param _width Target image width. It cannot exceed 4096.
+                     * 设置Target image width. Cannot exceed 4096.
+                     * @param _width Target image width. Cannot exceed 4096.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -209,19 +209,19 @@ Default value: standard.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
-                     * @return LongSide Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+                     * 获取Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+                     * @return LongSide Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      * 
                      */
                     int64_t GetLongSide() const;
 
                     /**
-                     * 设置Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
-                     * @param _longSide Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+                     * 设置Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+                     * @param _longSide Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      * 
                      */
                     void SetLongSide(const int64_t& _longSide);
@@ -235,18 +235,18 @@ Note: This configuration is used when Mode is equal to aspect or fixed, and Widt
 
                     /**
                      * 获取Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      * @return ShortSide Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      * 
                      */
                     int64_t GetShortSide() const;
 
                     /**
                      * 设置Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      * @param _shortSide Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      * 
                      */
                     void SetShortSide(const int64_t& _shortSide);
@@ -262,7 +262,7 @@ Note: This configuration is used when Mode is equal to aspect or fixed, and Widt
 
                     /**
                      * Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      */
@@ -271,7 +271,7 @@ Default value: ON.
 
                     /**
                      * Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
                      */
@@ -294,7 +294,7 @@ Default value: standard.
                     bool m_percentHasBeenSet;
 
                     /**
-                     * Target image width. It cannot exceed 4096.
+                     * Target image width. Cannot exceed 4096.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
@@ -306,15 +306,15 @@ Default value: standard.
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+                     * Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      */
                     int64_t m_longSide;
                     bool m_longSideHasBeenSet;
 
                     /**
                      * Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
                      */
                     int64_t m_shortSide;
                     bool m_shortSideHasBeenSet;

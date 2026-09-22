@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of the video to adaptive streaming task.
-                     * @return Output Output of the video to adaptive streaming task.
+                     * 获取Output of a video to adaptive streaming task.
+                     * @return Output Output of a video to adaptive streaming task.
                      * 
                      */
                     AdaptiveDynamicStreamingInfoItem GetOutput() const;
 
                     /**
-                     * 设置Output of the video to adaptive streaming task.
-                     * @param _output Output of the video to adaptive streaming task.
+                     * 设置Output of a video to adaptive streaming task.
+                     * @param _output Output of a video to adaptive streaming task.
                      * 
                      */
                     void SetOutput(const AdaptiveDynamicStreamingInfoItem& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of the video to adaptive streaming task.
+                     * Output of a video to adaptive streaming task.
                      */
                     AdaptiveDynamicStreamingInfoItem m_output;
                     bool m_outputHasBeenSet;

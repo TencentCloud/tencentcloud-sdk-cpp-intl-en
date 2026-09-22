@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of the video editing task.
+                * Output of video editing tasks.
                 */
                 class EditMediaTaskOutput : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
-                     * @return MediaName Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+                     * 获取Output filename, up to 64 characters. By default, the system generates a filename.
+                     * @return MediaName Output filename, up to 64 characters. By default, the system generates a filename.
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
-                     * @param _mediaName Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+                     * 设置Output filename, up to 64 characters. By default, the system generates a filename.
+                     * @param _mediaName Output filename, up to 64 characters. By default, the system generates a filename.
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -197,7 +197,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+                     * Output filename, up to 64 characters. By default, the system generates a filename.
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;

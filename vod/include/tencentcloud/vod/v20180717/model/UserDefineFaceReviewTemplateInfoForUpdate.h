@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for audio/video moderation tasks of user-defined characters.
+                * User-defined character control parameters for audio/video moderation tasks.
                 */
                 class UserDefineFaceReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
-                     * @return Switch Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+                     * 获取Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
+                     * @return Switch Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
-                     * @param _switch Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+                     * 设置Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
+                     * @param _switch Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -101,15 +101,15 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
-                     * @return BlockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * 获取Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * @return BlockConfidence Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
-                     * @param _blockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * 设置Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * @param _blockConfidence Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -122,15 +122,15 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+                     * 获取Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+                     * 设置Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -145,9 +145,9 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                 private:
 
                     /**
-                     * Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+                     * Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -160,13 +160,13 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+                     * Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

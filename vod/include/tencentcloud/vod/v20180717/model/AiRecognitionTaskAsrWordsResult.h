@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Speech keyword recognition task progress. Value range: [0-100].
-                     * @return Progress Speech keyword recognition task progress. Value range: [0-100].
+                     * 获取Speech keyword recognition task progress, in the range of [0,100].
+                     * @return Progress Speech keyword recognition task progress, in the range of [0,100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Speech keyword recognition task progress. Value range: [0-100].
-                     * @param _progress Speech keyword recognition task progress. Value range: [0-100].
+                     * 设置Speech keyword recognition task progress, in the range of [0,100].
+                     * @param _progress Speech keyword recognition task progress, in the range of [0,100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _finishTime Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _finishTime Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -276,7 +276,7 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Speech keyword recognition task progress. Value range: [0-100].
+                     * Speech keyword recognition task progress, in the range of [0,100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
@@ -288,7 +288,7 @@ namespace TencentCloud
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

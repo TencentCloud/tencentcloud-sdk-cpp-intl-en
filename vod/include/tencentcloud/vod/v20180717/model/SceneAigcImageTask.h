@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
-                     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * 获取Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * @return ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
-                     * @param _errCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * 设置Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+                     * @param _errCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -252,7 +252,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Screencapturing for cover image task result type
+                * Result type of the screencapturing for cover image task
                 */
                 class MediaProcessTaskCoverBySnapshotResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of the screencapturing for cover image task for videos.
-                     * @return Input Input of the screencapturing for cover image task for videos.
+                     * 获取Input of the screencapturing for cover image task.
+                     * @return Input Input of the screencapturing for cover image task.
                      * 
                      */
                     CoverBySnapshotTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of the screencapturing for cover image task for videos.
-                     * @param _input Input of the screencapturing for cover image task for videos.
+                     * 设置Input of the screencapturing for cover image task.
+                     * @param _input Input of the screencapturing for cover image task.
                      * 
                      */
                     void SetInput(const CoverBySnapshotTaskInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress of screencapturing for video cover image, in the range of [0,100].
-                     * @return Progress Task progress of screencapturing for video cover image, in the range of [0,100].
+                     * 获取Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
+                     * @return Progress Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress of screencapturing for video cover image, in the range of [0,100].
-                     * @param _progress Task progress of screencapturing for video cover image, in the range of [0,100].
+                     * 设置Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
+                     * @param _progress Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return BeginProcessTime Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _beginProcessTime Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _beginProcessTime Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return FinishTime Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _finishTime Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _finishTime Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of the screencapturing for cover image task for videos.
+                     * Input of the screencapturing for cover image task.
                      */
                     CoverBySnapshotTaskInput m_input;
                     bool m_inputHasBeenSet;
@@ -276,19 +276,19 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress of screencapturing for video cover image, in the range of [0,100].
+                     * Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

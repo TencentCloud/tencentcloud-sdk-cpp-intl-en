@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Large model parses face identification configuration
+                * Large model parsing face recognition configuration
                 */
                 class LLMComprehendFaceRecognition : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
-                     * @return Score <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+                     * 获取<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+                     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置<p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
-                     * @param _score <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+                     * 设置<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+                     * @param _score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
                      * 
                      */
                     void SetScore(const double& _score);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
-                     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * 获取<p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * @return UserDefineLibraryLabelSet <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
                      * 
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
-                     * 设置<p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
-                     * @param _userDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * 设置<p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * @param _userDefineLibraryLabelSet <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
                      * 
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+                     * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_defaultLibraryLabelSetHasBeenSet;
 
                     /**
-                     * <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+                     * <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
                      */
                     std::vector<std::string> m_userDefineLibraryLabelSet;
                     bool m_userDefineLibraryLabelSetHasBeenSet;

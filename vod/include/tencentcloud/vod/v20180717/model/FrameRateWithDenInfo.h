@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @return Switch Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 获取Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+                     * @return Switch Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @param _switch Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 设置Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+                     * @param _switch Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -120,9 +120,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

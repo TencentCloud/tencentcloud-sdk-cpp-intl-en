@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      * @return Switch Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      * @param _switch Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -79,8 +79,8 @@ namespace TencentCloud
 
                     /**
                      * Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

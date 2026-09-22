@@ -69,11 +69,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
                      * @return Status Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
                      * 
@@ -82,11 +82,11 @@ FINISH: completed.
 
                     /**
                      * 设置Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
                      * @param _status Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
                      * 
@@ -103,10 +103,10 @@ FINISH: completed.
                     /**
                      * 获取Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
@@ -114,10 +114,10 @@ FINISH: completed.
                     /**
                      * 设置Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * @param _errCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -151,15 +151,15 @@ FINISH: completed.
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Video file ID for publishing.
-                     * @return FileId Video file ID for publishing.
+                     * 获取Publish the video file ID.
+                     * @return FileId Publish the video file ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Video file ID for publishing.
-                     * @param _fileId Video file ID for publishing.
+                     * 设置Publish the video file ID.
+                     * @param _fileId Publish the video file ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -172,15 +172,15 @@ FINISH: completed.
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding template ID for the published video. 0 represents the original video.
-                     * @return SourceDefinition Transcoding template ID for the published video. 0 represents the original video.
+                     * 获取Transcoding template ID of the published video. 0 represents the original video.
+                     * @return SourceDefinition Transcoding template ID of the published video. 0 represents the original video.
                      * 
                      */
                     uint64_t GetSourceDefinition() const;
 
                     /**
-                     * 设置Transcoding template ID for the published video. 0 represents the original video.
-                     * @param _sourceDefinition Transcoding template ID for the published video. 0 represents the original video.
+                     * 设置Transcoding template ID of the published video. 0 represents the original video.
+                     * @param _sourceDefinition Transcoding template ID of the published video. 0 represents the original video.
                      * 
                      */
                     void SetSourceDefinition(const uint64_t& _sourceDefinition);
@@ -235,7 +235,7 @@ FINISH: completed.
 
                     /**
                      * Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
                      */
@@ -245,7 +245,7 @@ FINISH: completed.
                     /**
                      * Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -257,13 +257,13 @@ FINISH: completed.
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Video file ID for publishing.
+                     * Publish the video file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Transcoding template ID for the published video. 0 represents the original video.
+                     * Transcoding template ID of the published video. 0 represents the original video.
                      */
                     uint64_t m_sourceDefinition;
                     bool m_sourceDefinitionHasBeenSet;

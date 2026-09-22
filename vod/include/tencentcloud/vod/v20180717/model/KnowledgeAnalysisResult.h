@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
-                     * @return TaskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * 获取<p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * @return TaskType <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置<p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
-                     * @param _taskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * 设置<p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * @param _taskType <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

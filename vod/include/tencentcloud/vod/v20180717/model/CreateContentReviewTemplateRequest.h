@@ -48,22 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+                     * 获取Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
-                     * @return ReviewWallSwitch Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+                     * @return ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
                      * 
                      */
                     std::string GetReviewWallSwitch() const;
 
                     /**
-                     * 设置Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+                     * 设置Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
-                     * @param _reviewWallSwitch Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+                     * @param _reviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
                      * 
                      */
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool ReviewWallSwitchHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Content review template name. Length limit: 64 characters.
-                     * @return Name Content review template name. Length limit: 64 characters.
+                     * 获取Content review template name, with a length limit of 64 characters.
+                     * @return Name Content review template name, with a length limit of 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Content review template name. Length limit: 64 characters.
-                     * @param _name Content review template name. Length limit: 64 characters.
+                     * 设置Content review template name, with a length limit of 64 characters.
+                     * @param _name Content review template name, with a length limit of 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-                     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * 获取Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+                     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-                     * @param _screenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * 设置Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -276,21 +276,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+                     * Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
                      */
                     std::string m_reviewWallSwitch;
                     bool m_reviewWallSwitchHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Content review template name. Length limit: 64 characters.
+                     * Content review template name, with a length limit of 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -334,7 +334,7 @@ namespace TencentCloud
                     bool m_userDefineConfigureHasBeenSet;
 
                     /**
-                     * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;

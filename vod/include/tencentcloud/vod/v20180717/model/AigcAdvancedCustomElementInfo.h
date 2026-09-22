@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Principal ID.</p>
-                     * @return Id <p>Principal ID.</p>
+                     * 获取<p>Subject ID.</p>
+                     * @return Id <p>Subject ID.</p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置<p>Principal ID.</p>
-                     * @param _id <p>Principal ID.</p>
+                     * 设置<p>Subject ID.</p>
+                     * @param _id <p>Subject ID.</p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-                     * @return CreateTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * 获取<p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @return CreateTime <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-                     * @param _createTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * 设置<p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @param _createTime <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Principal ID.</p>
+                     * <p>Subject ID.</p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

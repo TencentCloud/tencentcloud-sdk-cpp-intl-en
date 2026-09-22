@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Abnormal fragment information for audio and video quality inspection.
+                * Audio and video quality detection abnormal fragment info.
                 */
                 class QualityInspectItem : public AbstractModel
                 {
@@ -89,14 +89,14 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+                     * 获取Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
 <li>QRCode: QR code;</li>
 <li>AppletCode: mini program code;</li>
 <li>BarCode: barcode.</li>
-                     * @return AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+                     * @return AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
@@ -108,14 +108,14 @@ namespace TencentCloud
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+                     * 设置Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
 <li>QRCode: QR code;</li>
 <li>AppletCode: mini program code;</li>
 <li>BarCode: barcode.</li>
-                     * @param _areaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+                     * @param _areaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
@@ -189,7 +189,7 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+                     * Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>

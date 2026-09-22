@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of Asr text moderation prohibited task for audio/video moderation.
+                * Result type of prohibited task for Asr text in audio/video moderation
                 */
                 class AiReviewTaskProhibitedAsrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for Asr text moderation tasks in audio/video moderation.
-                     * @return Input Input for Asr text moderation tasks in audio/video moderation.
+                     * 获取Task input for prohibited information recognition in Asr text during audio/video moderation.
+                     * @return Input Task input for prohibited information recognition in Asr text during audio/video moderation.
                      * 
                      */
                     AiReviewProhibitedAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for Asr text moderation tasks in audio/video moderation.
-                     * @param _input Input for Asr text moderation tasks in audio/video moderation.
+                     * 设置Task input for prohibited information recognition in Asr text during audio/video moderation.
+                     * @param _input Task input for prohibited information recognition in Asr text during audio/video moderation.
                      * 
                      */
                     void SetInput(const AiReviewProhibitedAsrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Asr text moderation prohibited task output for audio/video moderation.
-                     * @return Output Asr text moderation prohibited task output for audio/video moderation.
+                     * 获取Task output of prohibited information recognition in Asr text during audio/video moderation.
+                     * @return Output Task output of prohibited information recognition in Asr text during audio/video moderation.
                      * 
                      */
                     AiReviewProhibitedAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Asr text moderation prohibited task output for audio/video moderation.
-                     * @param _output Asr text moderation prohibited task output for audio/video moderation.
+                     * 设置Task output of prohibited information recognition in Asr text during audio/video moderation.
+                     * @param _output Task output of prohibited information recognition in Asr text during audio/video moderation.
                      * 
                      */
                     void SetOutput(const AiReviewProhibitedAsrTaskOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
-                     * @return Progress Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+                     * 获取Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
+                     * @return Progress Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
-                     * @param _progress Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+                     * 设置Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
+                     * @param _progress Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -222,19 +222,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for Asr text moderation tasks in audio/video moderation.
+                     * Task input for prohibited information recognition in Asr text during audio/video moderation.
                      */
                     AiReviewProhibitedAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Asr text moderation prohibited task output for audio/video moderation.
+                     * Task output of prohibited information recognition in Asr text during audio/video moderation.
                      */
                     AiReviewProhibitedAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+                     * Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

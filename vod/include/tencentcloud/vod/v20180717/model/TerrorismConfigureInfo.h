@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task control parameter for authentication involving unsafe information
+                * Task control parameters for authentication that involve unsafe information
                 */
                 class TerrorismConfigureInfo : public AbstractModel
                 {

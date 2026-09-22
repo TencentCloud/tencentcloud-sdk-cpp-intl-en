@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of asynchronous image processing tasks.
+                * Information of an image asynchronous processing task.
                 */
                 class ProcessImageAsyncInput : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ImageTaskInputHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output media file configuration for image processing tasks.</p>
-                     * @return OutputConfig <p>Output media file configuration for image processing tasks.</p>
+                     * 获取<p>Configuration of the output media file for an image processing task.</p>
+                     * @return OutputConfig <p>Configuration of the output media file for an image processing task.</p>
                      * 
                      */
                     ProcessImageAsyncOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output media file configuration for image processing tasks.</p>
-                     * @param _outputConfig <p>Output media file configuration for image processing tasks.</p>
+                     * 设置<p>Configuration of the output media file for an image processing task.</p>
+                     * @param _outputConfig <p>Configuration of the output media file for an image processing task.</p>
                      * 
                      */
                     void SetOutputConfig(const ProcessImageAsyncOutputConfig& _outputConfig);
@@ -153,7 +153,7 @@ namespace TencentCloud
                     bool m_imageTaskInputHasBeenSet;
 
                     /**
-                     * <p>Output media file configuration for image processing tasks.</p>
+                     * <p>Configuration of the output media file for an image processing task.</p>
                      */
                     ProcessImageAsyncOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
