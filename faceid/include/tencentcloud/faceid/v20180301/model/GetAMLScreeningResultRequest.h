@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
-                     * @return UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+                     * 获取<p>User's unique identifier in the customer system, up to 256 characters.</p>
+                     * @return UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
                      * 
                      */
                     std::string GetUniqueCustomerID() const;
 
                     /**
-                     * 设置<p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
-                     * @param _uniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+                     * 设置<p>User's unique identifier in the customer system, up to 256 characters.</p>
+                     * @param _uniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
                      * 
                      */
                     void SetUniqueCustomerID(const std::string& _uniqueCustomerID);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+                     * <p>User's unique identifier in the customer system, up to 256 characters.</p>
                      */
                     std::string m_uniqueCustomerID;
                     bool m_uniqueCustomerIDHasBeenSet;

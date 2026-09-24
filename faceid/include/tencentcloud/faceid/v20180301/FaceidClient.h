@@ -373,7 +373,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GenerateReflectSequenceOutcomeCallable GenerateReflectSequenceCallable(const Model::GenerateReflectSequenceRequest& request);
 
                 /**
-                 *Queries the AML name list screening result.
+                 *Status change of continuous name list screening
                  * @param req GetAMLScreeningResultRequest
                  * @return GetAMLScreeningResultOutcome
                  */
@@ -527,7 +527,7 @@ This API on the legacy version will continue to serve existing users but will be
                 PhoneVerificationOutcomeCallable PhoneVerificationCallable(const Model::PhoneVerificationRequest& request);
 
                 /**
-                 *AML name list screening
+                 *AML list screening
                  * @param req RunAMLNameScreeningRequest
                  * @return RunAMLNameScreeningOutcome
                  */
@@ -536,7 +536,7 @@ This API on the legacy version will continue to serve existing users but will be
                 RunAMLNameScreeningOutcomeCallable RunAMLNameScreeningCallable(const Model::RunAMLNameScreeningRequest& request);
 
                 /**
-                 *AML name list screening
+                 *AML list screening
                  * @param req UpdateAMLCustomerProfileRequest
                  * @return UpdateAMLCustomerProfileOutcome
                  */

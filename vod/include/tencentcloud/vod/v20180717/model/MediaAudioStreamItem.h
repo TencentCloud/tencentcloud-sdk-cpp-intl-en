@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Bitrate of the audio stream. Unit: bps.</p>
-                     * @return Bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
+                     * 获取<p>Audio stream bitrate, in bps.</p>
+                     * @return Bitrate <p>Audio stream bitrate, in bps.</p>
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置<p>Bitrate of the audio stream. Unit: bps.</p>
-                     * @param _bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
+                     * 设置<p>Audio stream bitrate, in bps.</p>
+                     * @param _bitrate <p>Audio stream bitrate, in bps.</p>
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sampling rate of the audio stream. Unit: hz.</p>
-                     * @return SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
+                     * 获取<p>Sampling rate of the audio stream, unit: hz.</p>
+                     * @return SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
                      * 
                      */
                     int64_t GetSamplingRate() const;
 
                     /**
-                     * 设置<p>Sampling rate of the audio stream. Unit: hz.</p>
-                     * @param _samplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
+                     * 设置<p>Sampling rate of the audio stream, unit: hz.</p>
+                     * @param _samplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
                      * 
                      */
                     void SetSamplingRate(const int64_t& _samplingRate);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Bitrate of the audio stream. Unit: bps.</p>
+                     * <p>Audio stream bitrate, in bps.</p>
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * <p>Sampling rate of the audio stream. Unit: hz.</p>
+                     * <p>Sampling rate of the audio stream, unit: hz.</p>
                      */
                     int64_t m_samplingRate;
                     bool m_samplingRateHasBeenSet;

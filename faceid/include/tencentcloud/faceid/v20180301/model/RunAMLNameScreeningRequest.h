@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool UniqueCustomerIDHasBeenSet() const;
 
                     /**
-                     * 获取Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
-                     * @return EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+                     * 获取<p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+                     * @return EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
                      * 
                      */
                     std::string GetEntityType() const;
 
                     /**
-                     * 设置Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
-                     * @param _entityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+                     * 设置<p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+                     * @param _entityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
                      * 
                      */
                     void SetEntityType(const std::string& _entityType);
@@ -87,19 +87,15 @@ namespace TencentCloud
                     bool EntityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
-                     * @return Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+                     * 获取<p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
+                     * @return Person <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
                      * 
                      */
                     Person GetPerson() const;
 
                     /**
-                     * 设置Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
-                     * @param _person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+                     * 设置<p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
+                     * @param _person <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
                      * 
                      */
                     void SetPerson(const Person& _person);
@@ -112,19 +108,15 @@ Input restriction: EntityType=PERSON.
                     bool PersonHasBeenSet() const;
 
                     /**
-                     * 获取Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
-                     * @return Company Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+                     * 获取<p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+                     * @return Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
                      * 
                      */
                     Company GetCompany() const;
 
                     /**
-                     * 设置Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
-                     * @param _company Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+                     * 设置<p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+                     * @param _company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
                      * 
                      */
                     void SetCompany(const Company& _company);
@@ -137,15 +129,15 @@ Input restriction: EntityType=COMPANY.
                     bool CompanyHasBeenSet() const;
 
                     /**
-                     * 获取Whether continuous monitoring screening is enabled. Default value: false.
-                     * @return EnableOngoingScreening Whether continuous monitoring screening is enabled. Default value: false.
+                     * 获取<p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
+                     * @return EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
                      * 
                      */
                     bool GetEnableOngoingScreening() const;
 
                     /**
-                     * 设置Whether continuous monitoring screening is enabled. Default value: false.
-                     * @param _enableOngoingScreening Whether continuous monitoring screening is enabled. Default value: false.
+                     * 设置<p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
+                     * @param _enableOngoingScreening <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
                      * 
                      */
                     void SetEnableOngoingScreening(const bool& _enableOngoingScreening);
@@ -166,27 +158,25 @@ Input restriction: EntityType=COMPANY.
                     bool m_uniqueCustomerIDHasBeenSet;
 
                     /**
-                     * Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+                     * <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
                      */
                     std::string m_entityType;
                     bool m_entityTypeHasBeenSet;
 
                     /**
-                     * Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+                     * <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
                      */
                     Person m_person;
                     bool m_personHasBeenSet;
 
                     /**
-                     * Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+                     * <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
                      */
                     Company m_company;
                     bool m_companyHasBeenSet;
 
                     /**
-                     * Whether continuous monitoring screening is enabled. Default value: false.
+                     * <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
                      */
                     bool m_enableOngoingScreening;
                     bool m_enableOngoingScreeningHasBeenSet;

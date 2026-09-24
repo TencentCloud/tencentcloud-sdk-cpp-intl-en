@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AIGC image generation task input file information.
+                * AIGC image generation task input file information
                 */
                 class AigcImageTaskInputFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or transcoded video;</li></p>
-                     * @return Type <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or transcoded video;</li></p>
+                     * 获取<p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or video for transcoding;</li></p>
+                     * @return Type <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or video for transcoding;</li></p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or transcoded video;</li></p>
-                     * @param _type <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or transcoded video;</li></p>
+                     * 设置<p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or video for transcoding;</li></p>
+                     * @param _type <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or video for transcoding;</li></p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
-                     * @return FileId <p>Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+                     * 获取<p>Media file ID of the image file, which is the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+                     * @return FileId <p>Media file ID of the image file, which is the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
-                     * @param _fileId <p>Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+                     * 设置<p>Media file ID of the image file, which is the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+                     * @param _fileId <p>Media file ID of the image file, which is the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image formats should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
-                     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image formats should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * 获取<p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
                      * 
                      */
                     std::string GetBase64() const;
 
                     /**
-                     * 设置<p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image formats should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
-                     * @param _base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image formats should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * 设置<p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * @param _base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
                      * 
                      */
                     void SetBase64(const std::string& _base64);
@@ -175,13 +175,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or transcoded video;</li></p>
+                     * <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or video for transcoding;</li></p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+                     * <p>Media file ID of the image file, which is the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image formats should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+                     * <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
                      */
                     std::string m_base64;
                     bool m_base64HasBeenSet;

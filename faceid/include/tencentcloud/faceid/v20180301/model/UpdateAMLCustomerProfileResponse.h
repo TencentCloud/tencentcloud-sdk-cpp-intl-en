@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取<p>Description of results returned</p>
-                     * @return Description <p>Description of results returned</p>
+                     * 获取<p>Return result description</p>
+                     * @return Description <p>Return result description</p>
                      * 
                      */
                     std::string GetDescription() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Whether continuous monitoring screening is enabled
-                     * @return EnableOngoingScreening Whether continuous monitoring screening is enabled
+                     * 获取<p>Whether continuous monitoring and screening is enabled</p>
+                     * @return EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled</p>
                      * 
                      */
                     bool GetEnableOngoingScreening() const;
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_resultHasBeenSet;
 
                     /**
-                     * <p>Description of results returned</p>
+                     * <p>Return result description</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Whether continuous monitoring screening is enabled
+                     * <p>Whether continuous monitoring and screening is enabled</p>
                      */
                     bool m_enableOngoingScreening;
                     bool m_enableOngoingScreeningHasBeenSet;

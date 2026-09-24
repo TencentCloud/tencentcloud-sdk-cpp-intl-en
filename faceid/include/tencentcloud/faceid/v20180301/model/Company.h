@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CompanyCertNumberHasBeenSet() const;
 
                     /**
-                     * 获取<p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
-                     * @return CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+                     * 获取<p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
+                     * @return CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
                      * 
                      */
                     std::string GetCompanyCountry() const;
 
                     /**
-                     * 设置<p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
-                     * @param _companyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+                     * 设置<p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
+                     * @param _companyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
                      * 
                      */
                     void SetCompanyCountry(const std::string& _companyCountry);
@@ -145,7 +145,7 @@ namespace TencentCloud
                     bool m_companyCertNumberHasBeenSet;
 
                     /**
-                     * <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+                     * <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
                      */
                     std::string m_companyCountry;
                     bool m_companyCountryHasBeenSet;

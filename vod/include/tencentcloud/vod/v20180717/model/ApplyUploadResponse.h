@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Bucket, used as the bucket_name for uploading API URL.</p>
-                     * @return StorageBucket <p>Bucket, used as the bucket_name for uploading API URL.</p>
+                     * 获取<p>Bucket, the bucket_name for uploading API URL.</p>
+                     * @return StorageBucket <p>Bucket, the bucket_name for uploading API URL.</p>
                      * 
                      */
                     std::string GetStorageBucket() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
-                     * @return VodSessionKey <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+                     * 获取<p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+                     * @return VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
                      * 
                      */
                     std::string GetVodSessionKey() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool VodSessionKeyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media storage path, the object Key for uploading and storing media through the API.</p>
-                     * @return MediaStoragePath <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+                     * 获取<p>Media storage path, the object Key for uploading and storing media via the API.</p>
+                     * @return MediaStoragePath <p>Media storage path, the object Key for uploading and storing media via the API.</p>
                      * 
                      */
                     std::string GetMediaStoragePath() const;
@@ -131,7 +131,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Bucket, used as the bucket_name for uploading API URL.</p>
+                     * <p>Bucket, the bucket_name for uploading API URL.</p>
                      */
                     std::string m_storageBucket;
                     bool m_storageBucketHasBeenSet;
@@ -143,13 +143,13 @@ namespace TencentCloud
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+                     * <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
                      */
                     std::string m_vodSessionKey;
                     bool m_vodSessionKeyHasBeenSet;
 
                     /**
-                     * <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+                     * <p>Media storage path, the object Key for uploading and storing media via the API.</p>
                      */
                     std::string m_mediaStoragePath;
                     bool m_mediaStoragePathHasBeenSet;

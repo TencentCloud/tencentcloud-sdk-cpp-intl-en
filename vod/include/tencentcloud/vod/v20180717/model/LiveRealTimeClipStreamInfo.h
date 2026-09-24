@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live streaming Instant Editing stream information
+                * Live streaming Instant Editing stream info
                 */
                 class LiveRealTimeClipStreamInfo : public AbstractModel
                 {

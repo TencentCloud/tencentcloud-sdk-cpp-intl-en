@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Container type, for example, m4a and mp4.
-                     * @return Container Container type, for example, m4a and mp4.
+                     * 获取Container type, such as m4a, mp4.
+                     * @return Container Container type, such as m4a, mp4.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container type, for example, m4a and mp4.
-                     * @param _container Container type, for example, m4a and mp4.
+                     * 设置Container type, such as m4a, mp4.
+                     * @param _container Container type, such as m4a, mp4.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
-                     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * 获取Sum of the average video stream bitrate and average audio stream bitrate, in bps.
+                     * @return Bitrate Sum of the average video stream bitrate and average audio stream bitrate, in bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
-                     * @param _bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * 设置Sum of the average video stream bitrate and average audio stream bitrate, in bps.
+                     * @param _bitrate Sum of the average video stream bitrate and average audio stream bitrate, in bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum height of the video stream. Unit: px.
-                     * @return Height Maximum height of the video stream. Unit: px.
+                     * 获取Maximum value of the video stream height in px.
+                     * @return Height Maximum value of the video stream height in px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum height of the video stream. Unit: px.
-                     * @param _height Maximum height of the video stream. Unit: px.
+                     * 设置Maximum value of the video stream height in px.
+                     * @param _height Maximum value of the video stream height in px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Maximum video stream width in px.
-                     * @return Width Maximum video stream width in px.
+                     * 获取Maximum value of the video stream width in px.
+                     * @return Width Maximum value of the video stream width in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum video stream width in px.
-                     * @param _width Maximum video stream width in px.
+                     * 设置Maximum value of the video stream width in px.
+                     * @param _width Maximum value of the video stream width in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Video duration, in seconds.
-                     * @return Duration Video duration, in seconds.
+                     * 获取Video duration, unit: seconds.
+                     * @return Duration Video duration, unit: seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video duration, in seconds.
-                     * @param _duration Video duration, in seconds.
+                     * 设置Video duration, unit: seconds.
+                     * @param _duration Video duration, unit: seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Selection angle during video shooting. Measurement unit: degree.
-                     * @return Rotate Selection angle during video shooting. Measurement unit: degree.
+                     * 获取Selection angle during video shooting. Unit: degree.
+                     * @return Rotate Selection angle during video shooting. Unit: degree.
                      * 
                      */
                     int64_t GetRotate() const;
 
                     /**
-                     * 设置Selection angle during video shooting. Measurement unit: degree.
-                     * @param _rotate Selection angle during video shooting. Measurement unit: degree.
+                     * 设置Selection angle during video shooting. Unit: degree.
+                     * @param _rotate Selection angle during video shooting. Unit: degree.
                      * 
                      */
                     void SetRotate(const int64_t& _rotate);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool AudioStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取Video duration, in seconds.
-                     * @return VideoDuration Video duration, in seconds.
+                     * 获取Video duration, unit: seconds.
+                     * @return VideoDuration Video duration, unit: seconds.
                      * 
                      */
                     double GetVideoDuration() const;
 
                     /**
-                     * 设置Video duration, in seconds.
-                     * @param _videoDuration Video duration, in seconds.
+                     * 设置Video duration, unit: seconds.
+                     * @param _videoDuration Video duration, unit: seconds.
                      * 
                      */
                     void SetVideoDuration(const double& _videoDuration);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool VideoDurationHasBeenSet() const;
 
                     /**
-                     * 获取Audio duration in seconds.
-                     * @return AudioDuration Audio duration in seconds.
+                     * 获取Audio duration, in seconds.
+                     * @return AudioDuration Audio duration, in seconds.
                      * 
                      */
                     double GetAudioDuration() const;
 
                     /**
-                     * 设置Audio duration in seconds.
-                     * @param _audioDuration Audio duration in seconds.
+                     * 设置Audio duration, in seconds.
+                     * @param _audioDuration Audio duration, in seconds.
                      * 
                      */
                     void SetAudioDuration(const double& _audioDuration);
@@ -313,37 +313,37 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Container type, for example, m4a and mp4.
+                     * Container type, such as m4a, mp4.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * Sum of the average video stream bitrate and average audio stream bitrate, in bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Maximum height of the video stream. Unit: px.
+                     * Maximum value of the video stream height in px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Maximum video stream width in px.
+                     * Maximum value of the video stream width in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Video duration, in seconds.
+                     * Video duration, unit: seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Selection angle during video shooting. Measurement unit: degree.
+                     * Selection angle during video shooting. Unit: degree.
                      */
                     int64_t m_rotate;
                     bool m_rotateHasBeenSet;
@@ -361,13 +361,13 @@ namespace TencentCloud
                     bool m_audioStreamSetHasBeenSet;
 
                     /**
-                     * Video duration, in seconds.
+                     * Video duration, unit: seconds.
                      */
                     double m_videoDuration;
                     bool m_videoDurationHasBeenSet;
 
                     /**
-                     * Audio duration in seconds.
+                     * Audio duration, in seconds.
                      */
                     double m_audioDuration;
                     bool m_audioDurationHasBeenSet;

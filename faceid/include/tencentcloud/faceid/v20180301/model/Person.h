@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
-                     * @return FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+                     * 获取<p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
+                     * @return FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
-                     * 设置<p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
-                     * @param _fullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+                     * 设置<p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
+                     * @param _fullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FullNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>name (Either this field or FullName is required)</p>
-                     * @return LastName <p>name (Either this field or FullName is required)</p>
+                     * 获取<p>name (either this or FullName is required)</p>
+                     * @return LastName <p>name (either this or FullName is required)</p>
                      * 
                      */
                     std::string GetLastName() const;
 
                     /**
-                     * 设置<p>name (Either this field or FullName is required)</p>
-                     * @param _lastName <p>name (Either this field or FullName is required)</p>
+                     * 设置<p>name (either this or FullName is required)</p>
+                     * @param _lastName <p>name (either this or FullName is required)</p>
                      * 
                      */
                     void SetLastName(const std::string& _lastName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LastNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>First name (Option)</p>
-                     * @return FirstName <p>First name (Option)</p>
+                     * 获取<p>First name (optional)</p>
+                     * @return FirstName <p>First name (optional)</p>
                      * 
                      */
                     std::string GetFirstName() const;
 
                     /**
-                     * 设置<p>First name (Option)</p>
-                     * @param _firstName <p>First name (Option)</p>
+                     * 设置<p>First name (optional)</p>
+                     * @param _firstName <p>First name (optional)</p>
                      * 
                      */
                     void SetFirstName(const std::string& _firstName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FirstNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Middle name (Option)</p>
-                     * @return MiddleName <p>Middle name (Option)</p>
+                     * 获取<p>Middle name (optional)</p>
+                     * @return MiddleName <p>Middle name (optional)</p>
                      * 
                      */
                     std::string GetMiddleName() const;
 
                     /**
-                     * 设置<p>Middle name (Option)</p>
-                     * @param _middleName <p>Middle name (Option)</p>
+                     * 设置<p>Middle name (optional)</p>
+                     * @param _middleName <p>Middle name (optional)</p>
                      * 
                      */
                     void SetMiddleName(const std::string& _middleName);
@@ -259,25 +259,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+                     * <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
-                     * <p>name (Either this field or FullName is required)</p>
+                     * <p>name (either this or FullName is required)</p>
                      */
                     std::string m_lastName;
                     bool m_lastNameHasBeenSet;
 
                     /**
-                     * <p>First name (Option)</p>
+                     * <p>First name (optional)</p>
                      */
                     std::string m_firstName;
                     bool m_firstNameHasBeenSet;
 
                     /**
-                     * <p>Middle name (Option)</p>
+                     * <p>Middle name (optional)</p>
                      */
                     std::string m_middleName;
                     bool m_middleNameHasBeenSet;
