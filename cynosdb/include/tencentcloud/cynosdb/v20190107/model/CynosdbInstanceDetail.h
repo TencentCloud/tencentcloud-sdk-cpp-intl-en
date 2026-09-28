@@ -802,6 +802,69 @@ namespace TencentCloud
                      */
                     bool MasterZoneHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Actual availability zone of the instance</p>
+                     * @return RealZone <p>Actual availability zone of the instance</p>
+                     * 
+                     */
+                    std::string GetRealZone() const;
+
+                    /**
+                     * 设置<p>Actual availability zone of the instance</p>
+                     * @param _realZone <p>Actual availability zone of the instance</p>
+                     * 
+                     */
+                    void SetRealZone(const std::string& _realZone);
+
+                    /**
+                     * 判断参数 RealZone 是否已赋值
+                     * @return RealZone 是否已赋值
+                     * 
+                     */
+                    bool RealZoneHasBeenSet() const;
+
+                    /**
+                     * 获取<p>List of standby availability zones</p>
+                     * @return SlaveZones <p>List of standby availability zones</p>
+                     * 
+                     */
+                    std::vector<std::string> GetSlaveZones() const;
+
+                    /**
+                     * 设置<p>List of standby availability zones</p>
+                     * @param _slaveZones <p>List of standby availability zones</p>
+                     * 
+                     */
+                    void SetSlaveZones(const std::vector<std::string>& _slaveZones);
+
+                    /**
+                     * 判断参数 SlaveZones 是否已赋值
+                     * @return SlaveZones 是否已赋值
+                     * 
+                     */
+                    bool SlaveZonesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+                     * @return StorageVersion <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+                     * 
+                     */
+                    std::string GetStorageVersion() const;
+
+                    /**
+                     * 设置<p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+                     * @param _storageVersion <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+                     * 
+                     */
+                    void SetStorageVersion(const std::string& _storageVersion);
+
+                    /**
+                     * 判断参数 StorageVersion 是否已赋值
+                     * @return StorageVersion 是否已赋值
+                     * 
+                     */
+                    bool StorageVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1019,6 +1082,24 @@ namespace TencentCloud
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;
+
+                    /**
+                     * <p>Actual availability zone of the instance</p>
+                     */
+                    std::string m_realZone;
+                    bool m_realZoneHasBeenSet;
+
+                    /**
+                     * <p>List of standby availability zones</p>
+                     */
+                    std::vector<std::string> m_slaveZones;
+                    bool m_slaveZonesHasBeenSet;
+
+                    /**
+                     * <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+                     */
+                    std::string m_storageVersion;
+                    bool m_storageVersionHasBeenSet;
 
                 };
             }

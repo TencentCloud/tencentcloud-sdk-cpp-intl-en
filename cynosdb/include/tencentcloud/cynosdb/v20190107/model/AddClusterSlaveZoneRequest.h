@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Replica AZ.
-                     * @return SlaveZone Replica AZ.
+                     * 获取<p>Secondary AZ</p>
+                     * @return SlaveZone <p>Secondary AZ</p>
                      * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
-                     * 设置Replica AZ.
-                     * @param _slaveZone Replica AZ.
+                     * 设置<p>Secondary AZ</p>
+                     * @param _slaveZone <p>Secondary AZ</p>
                      * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
-                     * @return BinlogSyncWay Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
+                     * 获取<p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
+                     * @return BinlogSyncWay <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
                      * 
                      */
                     std::string GetBinlogSyncWay() const;
 
                     /**
-                     * 设置Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
-                     * @param _binlogSyncWay Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
+                     * 设置<p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
+                     * @param _binlogSyncWay <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
                      * 
                      */
                     void SetBinlogSyncWay(const std::string& _binlogSyncWay);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool BinlogSyncWayHasBeenSet() const;
 
                     /**
-                     * 获取Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
-                     * @return SemiSyncTimeout Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+                     * 获取<p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default is 10000 ms.</p>
+                     * @return SemiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default is 10000 ms.</p>
                      * 
                      */
                     int64_t GetSemiSyncTimeout() const;
 
                     /**
-                     * 设置Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
-                     * @param _semiSyncTimeout Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+                     * 设置<p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default is 10000 ms.</p>
+                     * @param _semiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default is 10000 ms.</p>
                      * 
                      */
                     void SetSemiSyncTimeout(const int64_t& _semiSyncTimeout);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Replica AZ.
+                     * <p>Secondary AZ</p>
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;
 
                     /**
-                     * Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
+                     * <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
                      */
                     std::string m_binlogSyncWay;
                     bool m_binlogSyncWayHasBeenSet;
 
                     /**
-                     * Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+                     * <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default is 10000 ms.</p>
                      */
                     int64_t m_semiSyncTimeout;
                     bool m_semiSyncTimeoutHasBeenSet;

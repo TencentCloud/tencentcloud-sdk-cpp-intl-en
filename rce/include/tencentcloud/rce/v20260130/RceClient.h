@@ -84,7 +84,7 @@ namespace TencentCloud
                 AssessDeviceRiskProOutcomeCallable AssessDeviceRiskProCallable(const Model::AssessDeviceRiskProRequest& request);
 
                 /**
-                 *Environment Risk Assessment
+                 *Performs risk identification based on the client IP provided as input. Provides environmental risk assessment (including risk level and risk labels), along with IP geolocation and network information.
                  * @param req AssessEnvironmentRiskRequest
                  * @return AssessEnvironmentRiskOutcome
                  */

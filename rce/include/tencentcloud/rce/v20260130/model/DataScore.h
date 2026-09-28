@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RiskLabelsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
-                     * @return RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * 获取<p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
+                     * @return RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
                      * 
                      */
                     int64_t GetRiskScore() const;
 
                     /**
-                     * 设置<p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
-                     * @param _riskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * 设置<p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
+                     * @param _riskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
                      * 
                      */
                     void SetRiskScore(const int64_t& _riskScore);
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_riskLabelsHasBeenSet;
 
                     /**
-                     * <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
                      */
                     int64_t m_riskScore;
                     bool m_riskScoreHasBeenSet;

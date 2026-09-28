@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Kernel version
-                     * @return CynosVersion Kernel version
+                     * 获取<p>Kernel version</p>
+                     * @return CynosVersion <p>Kernel version</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置Kernel version
-                     * @param _cynosVersion Kernel version
+                     * 设置<p>Kernel version</p>
+                     * @param _cynosVersion <p>Kernel version</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CynosVersionHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
-                     * @return UpgradeType Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+                     * 获取<p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
+                     * @return UpgradeType <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
                      * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
-                     * 设置Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
-                     * @param _upgradeType Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+                     * 设置<p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
+                     * @param _upgradeType <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
                      * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Kernel version
+                     * <p>Kernel version</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
 
                     /**
-                     * Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+                     * <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;
