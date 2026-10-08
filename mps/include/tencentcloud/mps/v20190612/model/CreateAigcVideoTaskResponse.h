@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取<p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
+                     * @return TaskId <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

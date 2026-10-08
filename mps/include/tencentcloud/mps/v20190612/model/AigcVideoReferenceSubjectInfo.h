@@ -35,13 +35,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Reference entity information.
+                * For entity information, see.
 For the Vidu model:
-Id -> server_id. Principal ID obtained through the principal creation API.
-Principal ID, subsequently used in the format of @Principal ID.
+Id -> server_id, the principal ID obtained through the principal creation API.
+name -> principal ID, subsequently used in the format @principal ID.
 
 For the Kling model:
-element id, obtained through the principal creation API.
+id -> element_id, the principal ID obtained through the principal creation API.
                 */
                 class AigcVideoReferenceSubjectInfo : public AbstractModel
                 {
@@ -53,15 +53,15 @@ element id, obtained through the principal creation API.
 
 
                     /**
-                     * 获取<p>ID of the reference subject.</p>
-                     * @return Id <p>ID of the reference subject.</p>
+                     * 获取<p>ID of the referenced entity.</p>
+                     * @return Id <p>ID of the referenced entity.</p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置<p>ID of the reference subject.</p>
-                     * @param _id <p>ID of the reference subject.</p>
+                     * 设置<p>ID of the referenced entity.</p>
+                     * @param _id <p>ID of the referenced entity.</p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -95,15 +95,15 @@ element id, obtained through the principal creation API.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Main voice ID.</p>
-                     * @return VoiceId <p>Main voice ID.</p>
+                     * 获取<p>Main voice type ID.</p>
+                     * @return VoiceId <p>Main voice type ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置<p>Main voice ID.</p>
-                     * @param _voiceId <p>Main voice ID.</p>
+                     * 设置<p>Main voice type ID.</p>
+                     * @param _voiceId <p>Main voice type ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -160,7 +160,7 @@ element id, obtained through the principal creation API.
                 private:
 
                     /**
-                     * <p>ID of the reference subject.</p>
+                     * <p>ID of the referenced entity.</p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
@@ -172,7 +172,7 @@ element id, obtained through the principal creation API.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Main voice ID.</p>
+                     * <p>Main voice type ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;

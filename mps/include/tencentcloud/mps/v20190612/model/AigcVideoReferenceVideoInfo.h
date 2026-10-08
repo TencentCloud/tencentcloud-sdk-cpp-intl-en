@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Reference video asset for AIGC video generation.
                 */
                 class AigcVideoReferenceVideoInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
-                     * @return VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * 获取<p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * @return VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
                      * 
                      */
                     std::string GetVideoUrl() const;
 
                     /**
-                     * 设置<p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
-                     * @param _videoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * 设置<p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * @param _videoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
                      * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
                      */
                     std::string m_videoUrl;
                     bool m_videoUrlHasBeenSet;
