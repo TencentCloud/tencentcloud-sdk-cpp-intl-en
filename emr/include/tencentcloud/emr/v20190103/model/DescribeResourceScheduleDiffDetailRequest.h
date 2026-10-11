@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
-                     * @return Scheduler Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+                     * 获取Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
+                     * @return Scheduler Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
-                     * @param _scheduler Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+                     * 设置Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
+                     * @param _scheduler Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
                      * 
                      */
                     void SetScheduler(const std::string& _scheduler);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+                     * Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;

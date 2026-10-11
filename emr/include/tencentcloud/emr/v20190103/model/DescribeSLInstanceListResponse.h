@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of qualified instances	.
-                     * @return TotalCnt Total number of qualified instances	.
+                     * 获取Total number of instances that meet the criteria.	
+                     * @return TotalCnt Total number of instances that meet the criteria.	
                      * 
                      */
                     int64_t GetTotalCnt() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of qualified instances	.
+                     * Total number of instances that meet the criteria.	
                      */
                     int64_t m_totalCnt;
                     bool m_totalCntHasBeenSet;

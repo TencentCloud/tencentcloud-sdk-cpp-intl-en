@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Details Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Change item details.
+                     * @return Details Change item details.
                      * 
                      */
                     std::vector<DiffDetail> GetDetails() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Change item details.
                      */
                     std::vector<DiffDetail> m_details;
                     bool m_detailsHasBeenSet;

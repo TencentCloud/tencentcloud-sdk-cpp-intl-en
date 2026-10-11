@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * A key-value pair filter used for condition filtering and queries.
+                * Key-value pair filter, which is mainly for condition filtering and query.
                 */
                 class Filter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Fields that need to be filtered.
-                     * @return Name Fields that need to be filtered.
+                     * 获取Fields to be filtered.
+                     * @return Name Fields to be filtered.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Fields that need to be filtered.
-                     * @param _name Fields that need to be filtered.
+                     * 设置Fields to be filtered.
+                     * @param _name Fields to be filtered.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Fields that need to be filtered.
+                     * Fields to be filtered.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

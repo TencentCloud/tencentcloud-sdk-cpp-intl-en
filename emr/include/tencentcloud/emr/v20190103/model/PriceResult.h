@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inquiry results
+                * Price inquiry result.
                 */
                 class PriceResult : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount price.
-                     * @return DiscountCost Discount price.
+                     * 获取Discounted price.
+                     * @return DiscountCost Discounted price.
                      * 
                      */
                     double GetDiscountCost() const;
 
                     /**
-                     * 设置Discount price.
-                     * @param _discountCost Discount price.
+                     * 设置Discounted price.
+                     * @param _discountCost Discounted price.
                      * 
                      */
                     void SetDiscountCost(const double& _discountCost);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discount price.
+                     * Discounted price.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;

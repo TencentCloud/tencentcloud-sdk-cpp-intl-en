@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster name.
-                     * @return InstanceId Cluster name.
+                     * 获取<p>Cluster name.</p>
+                     * @return InstanceId <p>Cluster name.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster name.
-                     * @param _instanceId Cluster name.
+                     * 设置<p>Cluster name.</p>
+                     * @param _instanceId <p>Cluster name.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User group name.
-                     * @return Group User group name.
+                     * 获取<p>User group name.</p>
+                     * @return Group <p>User group name.</p>
                      * 
                      */
                     std::string GetGroup() const;
 
                     /**
-                     * 设置User group name.
-                     * @param _group User group name.
+                     * 设置<p>User group name.</p>
+                     * @param _group <p>User group name.</p>
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GroupHasBeenSet() const;
 
                     /**
-                     * 获取User list.
-                     * @return Users User list.
+                     * 获取<p>User list.</p>
+                     * @return Users <p>User list.</p>
                      * 
                      */
                     std::vector<std::string> GetUsers() const;
 
                     /**
-                     * 设置User list.
-                     * @param _users User list.
+                     * 设置<p>User list.</p>
+                     * @param _users <p>User list.</p>
                      * 
                      */
                     void SetUsers(const std::vector<std::string>& _users);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool UsersHasBeenSet() const;
 
                     /**
-                     * 获取User group description.
-                     * @return Description User group description.
+                     * 获取<p>User group description.</p>
+                     * @return Description <p>User group description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置User group description.
-                     * @param _description User group description.
+                     * 设置<p>User group description.</p>
+                     * @param _description <p>User group description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -127,47 +127,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
-                     * @return OperateAction Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+                     * 获取<p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
+                     * @return OperateAction <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
                      * 
                      */
                     std::string GetOperateAction() const;
 
                     /**
-                     * 设置Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
-                     * @param _operateAction Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+                     * 设置<p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
+                     * @param _operateAction <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
                      * 
                      */
                     void SetOperateAction(const std::string& _operateAction);
@@ -182,39 +150,31 @@ Defaults to SYNC.
                 private:
 
                     /**
-                     * Cluster name.
+                     * <p>Cluster name.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User group name.
+                     * <p>User group name.</p>
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;
 
                     /**
-                     * User list.
+                     * <p>User list.</p>
                      */
                     std::vector<std::string> m_users;
                     bool m_usersHasBeenSet;
 
                     /**
-                     * User group description.
+                     * <p>User group description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+                     * <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
                      */
                     std::string m_operateAction;
                     bool m_operateActionHasBeenSet;

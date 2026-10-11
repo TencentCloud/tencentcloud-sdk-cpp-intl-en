@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description of Pod storage.
+                * Description of the Pod storage device.
                 */
                 class PodVolume : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage type, which can be "pvc" or "hostpath".
-                     * @return VolumeType Storage type, which can be "pvc" or "hostpath".
+                     * 获取Storage type. Valid values: "pvc" and "hostpath".
+                     * @return VolumeType Storage type. Valid values: "pvc" and "hostpath".
                      * 
                      */
                     std::string GetVolumeType() const;
 
                     /**
-                     * 设置Storage type, which can be "pvc" or "hostpath".
-                     * @param _volumeType Storage type, which can be "pvc" or "hostpath".
+                     * 设置Storage type. Valid values: "pvc" and "hostpath".
+                     * @param _volumeType Storage type. Valid values: "pvc" and "hostpath".
                      * 
                      */
                     void SetVolumeType(const std::string& _volumeType);
@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool VolumeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PVCVolume This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When VolumeType is set to "pvc", this parameter takes effect.
+                     * @return PVCVolume When VolumeType is set to "pvc", this parameter takes effect.
                      * 
                      */
                     PersistentVolumeContext GetPVCVolume() const;
 
                     /**
-                     * 设置This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pVCVolume This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置When VolumeType is set to "pvc", this parameter takes effect.
+                     * @param _pVCVolume When VolumeType is set to "pvc", this parameter takes effect.
                      * 
                      */
                     void SetPVCVolume(const PersistentVolumeContext& _pVCVolume);
@@ -95,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PVCVolumeHasBeenSet() const;
 
                     /**
-                     * 获取This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostVolume This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When VolumeType is set to "hostpath", this parameter takes effect.
+                     * @return HostVolume When VolumeType is set to "hostpath", this parameter takes effect.
                      * 
                      */
                     HostVolumeContext GetHostVolume() const;
 
                     /**
-                     * 设置This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostVolume This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置When VolumeType is set to "hostpath", this parameter takes effect.
+                     * @param _hostVolume When VolumeType is set to "hostpath", this parameter takes effect.
                      * 
                      */
                     void SetHostVolume(const HostVolumeContext& _hostVolume);
@@ -122,21 +114,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Storage type, which can be "pvc" or "hostpath".
+                     * Storage type. Valid values: "pvc" and "hostpath".
                      */
                     std::string m_volumeType;
                     bool m_volumeTypeHasBeenSet;
 
                     /**
-                     * This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When VolumeType is set to "pvc", this parameter takes effect.
                      */
                     PersistentVolumeContext m_pVCVolume;
                     bool m_pVCVolumeHasBeenSet;
 
                     /**
-                     * This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When VolumeType is set to "hostpath", this parameter takes effect.
                      */
                     HostVolumeContext m_hostVolume;
                     bool m_hostVolumeHasBeenSet;

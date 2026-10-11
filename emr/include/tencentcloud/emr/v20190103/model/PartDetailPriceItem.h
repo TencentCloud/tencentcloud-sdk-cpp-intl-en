@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Price details by node part, used for creating the cluster price list
+                * Prices of node components used for the cluster creation price list.
                 */
                 class PartDetailPriceItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
-                     * @return InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+                     * 获取Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
+                     * @return InstanceType Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
-                     * @param _instanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+                     * 设置Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
+                     * @param _instanceType Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -175,7 +175,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+                     * Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

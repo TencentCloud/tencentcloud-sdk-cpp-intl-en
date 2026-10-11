@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scheduling task details
+                * Scheduling task details.
                 */
                 class SchedulerTaskDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Steps.
-                     * @return Step Steps.
+                     * 获取Step.
+                     * @return Step Step.
                      * 
                      */
                     std::string GetStep() const;
 
                     /**
-                     * 设置Steps.
-                     * @param _step Steps.
+                     * 设置Step.
+                     * @param _step Step.
                      * 
                      */
                     void SetStep(const std::string& _step);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Steps.
+                     * Step.
                      */
                     std::string m_step;
                     bool m_stepHasBeenSet;

@@ -47,12 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StageDetails Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task step details.
+                     * @return StageDetails Task step details.
                      * 
                      */
                     std::vector<StageInfoDetail> GetStageDetails() const;
@@ -66,9 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FlowDesc Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FlowParamsDesc> GetFlowDesc() const;
@@ -111,20 +105,20 @@ Example: 0.8.
                     bool FlowTotalProgressHasBeenSet() const;
 
                     /**
-                     * 获取Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
-                     * @return FlowTotalStatus Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
+                     * 获取Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
+                     * @return FlowTotalStatus Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
                      * 
                      */
                     int64_t GetFlowTotalStatus() const;
@@ -137,12 +131,10 @@ Example: 0.8.
                     bool FlowTotalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Additional process information.
+                     * 获取Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FlowExtraDetail Additional process information.
+                     * @return FlowExtraDetail Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FlowExtraDetail> GetFlowExtraDetail() const;
@@ -171,16 +163,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task step details.
                      */
                     std::vector<StageInfoDetail> m_stageDetails;
                     bool m_stageDetailsHasBeenSet;
 
                     /**
                      * Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<FlowParamsDesc> m_flowDesc;
                     bool m_flowDescHasBeenSet;
@@ -199,21 +188,20 @@ Example: 0.8.
                     bool m_flowTotalProgressHasBeenSet;
 
                     /**
-                     * Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
+                     * Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
                      */
                     int64_t m_flowTotalStatus;
                     bool m_flowTotalStatusHasBeenSet;
 
                     /**
-                     * Additional process information.
+                     * Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<FlowExtraDetail> m_flowExtraDetail;
                     bool m_flowExtraDetailHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-cloud disk parameters
+                * Multi-cloud disk parameter.
                 */
                 class MultiDisk : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-                     * @return DiskType Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
+                     * 获取Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+                     * @return DiskType Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-                     * @param _diskType Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
+                     * 设置Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+                     * @param _diskType Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -124,10 +124,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
+                     * Cloud disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;

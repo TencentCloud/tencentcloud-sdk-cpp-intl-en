@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Forcibly Modifying Tags
+                * Specifies the tags to be forcibly modified.
                 */
                 class ModifyResourceTags : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID or CVM ID
-                     * @return ResourceId Cluster ID or CVM ID
+                     * 获取Cluster ID or CVM ID.
+                     * @return ResourceId Cluster ID or CVM ID.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Cluster ID or CVM ID
-                     * @param _resourceId Cluster ID or CVM ID
+                     * 设置Cluster ID or CVM ID.
+                     * @param _resourceId Cluster ID or CVM ID.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取6-segment resource expression
-                     * @return Resource 6-segment resource expression
+                     * 获取Six-segment resource expression.
+                     * @return Resource Six-segment resource expression.
                      * 
                      */
                     std::string GetResource() const;
 
                     /**
-                     * 设置6-segment resource expression
-                     * @param _resource 6-segment resource expression
+                     * 设置Six-segment resource expression.
+                     * @param _resource Six-segment resource expression.
                      * 
                      */
                     void SetResource(const std::string& _resource);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ResourceHasBeenSet() const;
 
                     /**
-                     * 获取Resource prefix
-                     * @return ResourcePrefix Resource prefix
+                     * 获取Resource prefix.
+                     * @return ResourcePrefix Resource prefix.
                      * 
                      */
                     std::string GetResourcePrefix() const;
 
                     /**
-                     * 设置Resource prefix
-                     * @param _resourcePrefix Resource prefix
+                     * 设置Resource prefix.
+                     * @param _resourcePrefix Resource prefix.
                      * 
                      */
                     void SetResourcePrefix(const std::string& _resourcePrefix);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ServiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of deleted tags
-                     * @return DeleteTags List of deleted tags
+                     * 获取List of deleted tags.
+                     * @return DeleteTags List of deleted tags.
                      * 
                      */
                     std::vector<Tag> GetDeleteTags() const;
 
                     /**
-                     * 设置List of deleted tags
-                     * @param _deleteTags List of deleted tags
+                     * 设置List of deleted tags.
+                     * @param _deleteTags List of deleted tags.
                      * 
                      */
                     void SetDeleteTags(const std::vector<Tag>& _deleteTags);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool DeleteTagsHasBeenSet() const;
 
                     /**
-                     * 获取List of added tags
-                     * @return AddTags List of added tags
+                     * 获取List of added tags.
+                     * @return AddTags List of added tags.
                      * 
                      */
                     std::vector<Tag> GetAddTags() const;
 
                     /**
-                     * 设置List of added tags
-                     * @param _addTags List of added tags
+                     * 设置List of added tags.
+                     * @param _addTags List of added tags.
                      * 
                      */
                     void SetAddTags(const std::vector<Tag>& _addTags);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool AddTagsHasBeenSet() const;
 
                     /**
-                     * 获取List of modified tags
-                     * @return ModifyTags List of modified tags
+                     * 获取List of modified tags.
+                     * @return ModifyTags List of modified tags.
                      * 
                      */
                     std::vector<Tag> GetModifyTags() const;
 
                     /**
-                     * 设置List of modified tags
-                     * @param _modifyTags List of modified tags
+                     * 设置List of modified tags.
+                     * @param _modifyTags List of modified tags.
                      * 
                      */
                     void SetModifyTags(const std::vector<Tag>& _modifyTags);
@@ -218,19 +218,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID or CVM ID
+                     * Cluster ID or CVM ID.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * 6-segment resource expression
+                     * Six-segment resource expression.
                      */
                     std::string m_resource;
                     bool m_resourceHasBeenSet;
 
                     /**
-                     * Resource prefix
+                     * Resource prefix.
                      */
                     std::string m_resourcePrefix;
                     bool m_resourcePrefixHasBeenSet;
@@ -248,19 +248,19 @@ namespace TencentCloud
                     bool m_serviceTypeHasBeenSet;
 
                     /**
-                     * List of deleted tags
+                     * List of deleted tags.
                      */
                     std::vector<Tag> m_deleteTags;
                     bool m_deleteTagsHasBeenSet;
 
                     /**
-                     * List of added tags
+                     * List of added tags.
                      */
                     std::vector<Tag> m_addTags;
                     bool m_addTagsHasBeenSet;
 
                     /**
-                     * List of modified tags
+                     * List of modified tags.
                      */
                     std::vector<Tag> m_modifyTags;
                     bool m_modifyTagsHasBeenSet;

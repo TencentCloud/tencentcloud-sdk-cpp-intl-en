@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Resized CPU.
-                     * @return NewCpu Resized CPU.
+                     * 获取Changed CPU.
+                     * @return NewCpu Changed CPU.
                      * 
                      */
                     int64_t GetNewCpu() const;
 
                     /**
-                     * 设置Resized CPU.
-                     * @param _newCpu Resized CPU.
+                     * 设置Changed CPU.
+                     * @param _newCpu Changed CPU.
                      * 
                      */
                     void SetNewCpu(const int64_t& _newCpu);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NewCpuHasBeenSet() const;
 
                     /**
-                     * 获取Resized memory.
-                     * @return NewMem Resized memory.
+                     * 获取Changed memory.
+                     * @return NewMem Changed memory.
                      * 
                      */
                     int64_t GetNewMem() const;
 
                     /**
-                     * 设置Resized memory.
-                     * @param _newMem Resized memory.
+                     * 设置Changed memory.
+                     * @param _newMem Changed memory.
                      * 
                      */
                     void SetNewMem(const int64_t& _newMem);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取Resized machine specifications.
-                     * @return InstanceType Resized machine specifications.
+                     * 获取Changed machine specifications.
+                     * @return InstanceType Changed machine specifications.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Resized machine specifications.
-                     * @param _instanceType Resized machine specifications.
+                     * 设置Changed machine specifications.
+                     * @param _instanceType Changed machine specifications.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node ID List.
-                     * @return ResourceIdList Node ID List.
+                     * 获取Node ID list.
+                     * @return ResourceIdList Node ID list.
                      * 
                      */
                     std::vector<std::string> GetResourceIdList() const;
 
                     /**
-                     * 设置Node ID List.
-                     * @param _resourceIdList Node ID List.
+                     * 设置Node ID list.
+                     * @param _resourceIdList Node ID list.
                      * 
                      */
                     void SetResourceIdList(const std::vector<std::string>& _resourceIdList);
@@ -204,13 +204,13 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Resized CPU.
+                     * Changed CPU.
                      */
                     int64_t m_newCpu;
                     bool m_newCpuHasBeenSet;
 
                     /**
-                     * Resized memory.
+                     * Changed memory.
                      */
                     int64_t m_newMem;
                     bool m_newMemHasBeenSet;
@@ -222,13 +222,13 @@ namespace TencentCloud
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * Resized machine specifications.
+                     * Changed machine specifications.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Node ID List.
+                     * Node ID list.
                      */
                     std::vector<std::string> m_resourceIdList;
                     bool m_resourceIdListHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource scheduling - Queue modification information
+                * Queue modification information in resource scheduling.
                 */
                 class ConfigModifyInfoV2 : public AbstractModel
                 {
@@ -51,20 +51,20 @@ namespace TencentCloud
                     /**
                      * 获取Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
                      * @return OpType Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
                      * 
                      */
                     uint64_t GetOpType() const;
@@ -72,20 +72,20 @@ namespace TencentCloud
                     /**
                      * 设置Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
                      * @param _opType Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
                      * 
                      */
                     void SetOpType(const uint64_t& _opType);
@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
-                     * @return ParentId Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
+                     * 获取Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
+                     * @return ParentId Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
                      * 
                      */
                     std::string GetParentId() const;
 
                     /**
-                     * 设置Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
-                     * @param _parentId Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
+                     * 设置Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
+                     * @param _parentId Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
                      * 
                      */
                     void SetParentId(const std::string& _parentId);
@@ -140,15 +140,15 @@ namespace TencentCloud
                     bool ParentIdHasBeenSet() const;
 
                     /**
-                     * 获取Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
-                     * @return MyId Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
+                     * 获取Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
+                     * @return MyId Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
                      * 
                      */
                     std::string GetMyId() const;
 
                     /**
-                     * 设置Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
-                     * @param _myId Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
+                     * 设置Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
+                     * @param _myId Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
                      * 
                      */
                     void SetMyId(const std::string& _myId);
@@ -161,51 +161,18 @@ namespace TencentCloud
                     bool MyIdHasBeenSet() const;
 
                     /**
-                     * 获取Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
+                     * 获取Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
 
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
-
-```
-type AclForYarnQueue struct {
-	User  *string `json:"user"` // Username
-	Group *string `json:"group"`// Group name
-}
-```
-###### Capacity scheduler
-Values of key are as follows:
-
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
-```
-type AclForYarnQueue struct {
-	User  *string `json:"user"` // Username
-	Group *string `json:"group"`// Group name
-}
-```
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BasicParams Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
-
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
 
 ```
 type AclForYarnQueue struct {
@@ -213,72 +180,72 @@ type AclForYarnQueue struct {
 	Group *string `json:"group"`// Group name
 }
 ```
-###### Capacity scheduler
-Values of key are as follows:
+###### Capacity scheduler.
+The key value information is as follows:
 
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
 ```
 type AclForYarnQueue struct {
 	User  *string `json:"user"` // Username
 	Group *string `json:"group"`// Group name
 }
 ```
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BasicParams Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
+
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
+
+```
+type AclForYarnQueue struct {
+	User  *string `json:"user"` // Username
+	Group *string `json:"group"`// Group name
+}
+```
+###### Capacity scheduler.
+The key value information is as follows:
+
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
+```
+type AclForYarnQueue struct {
+	User  *string `json:"user"` // Username
+	Group *string `json:"group"`// Group name
+}
+```
                      * 
                      */
                     ItemSeq GetBasicParams() const;
 
                     /**
-                     * 设置Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
+                     * 设置Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
 
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
-
-```
-type AclForYarnQueue struct {
-	User  *string `json:"user"` // Username
-	Group *string `json:"group"`// Group name
-}
-```
-###### Capacity scheduler
-Values of key are as follows:
-
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
-```
-type AclForYarnQueue struct {
-	User  *string `json:"user"` // Username
-	Group *string `json:"group"`// Group name
-}
-```
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _basicParams Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
-
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
 
 ```
 type AclForYarnQueue struct {
@@ -286,22 +253,55 @@ type AclForYarnQueue struct {
 	Group *string `json:"group"`// Group name
 }
 ```
-###### Capacity scheduler
-Values of key are as follows:
+###### Capacity scheduler.
+The key value information is as follows:
 
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
 ```
 type AclForYarnQueue struct {
 	User  *string `json:"user"` // Username
 	Group *string `json:"group"`// Group name
 }
 ```
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _basicParams Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
+
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
+
+```
+type AclForYarnQueue struct {
+	User  *string `json:"user"` // Username
+	Group *string `json:"group"`// Group name
+}
+```
+###### Capacity scheduler.
+The key value information is as follows:
+
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
+```
+type AclForYarnQueue struct {
+	User  *string `json:"user"` // Username
+	Group *string `json:"group"`// Group name
+}
+```
                      * 
                      */
                     void SetBasicParams(const ItemSeq& _basicParams);
@@ -314,19 +314,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BasicParamsHasBeenSet() const;
 
                     /**
-                     * 获取Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigSetParams Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
+                     * @return ConfigSetParams Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
                      * 
                      */
                     std::vector<ConfigSetInfo> GetConfigSetParams() const;
 
                     /**
-                     * 设置Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configSetParams Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
+                     * @param _configSetParams Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
                      * 
                      */
                     void SetConfigSetParams(const std::vector<ConfigSetInfo>& _configSetParams);
@@ -339,19 +335,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigSetParamsHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeleteLables This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
+                     * @return DeleteLables Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
                      * 
                      */
                     std::vector<std::string> GetDeleteLables() const;
 
                     /**
-                     * 设置This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deleteLables This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
+                     * @param _deleteLables Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
                      * 
                      */
                     void SetDeleteLables(const std::vector<std::string>& _deleteLables);
@@ -368,12 +360,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Operation type. Valid values:
 
-- 0: create a queue.
-- 1: edit - full overwrite.
-- 2: create a sub-queue.
-- 3: delete.
-- 4: clone. It is the same as sub-queue creation. Especially, for `fair`, a sub-queue can be copied to a new queue.
-- 6: edit - incremental update.
+0: Create a queue.
+1: Edit - fully overwrite a queue.
+2: Create a subqueue.
+3: Delete a queue.
+4: Clone a queue. This is the same as creating a subqueue. Specifically, for `fair`, a subqueue can be copied to a new queue.
+6: Edit - incrementally update a queue.
                      */
                     uint64_t m_opType;
                     bool m_opTypeHasBeenSet;
@@ -385,29 +377,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Create root queue: Pass "myId of root"; Create sub-queue: Pass "myId of the selected queue"; Clone queue: Pass "parentId of the selected queue".
+                     * Create the root queue: pass "myId of root". Create a subqueue: pass "myId of the selected queue". Clone a queue: pass "parentId of the selected queue".
                      */
                     std::string m_parentId;
                     bool m_parentIdHasBeenSet;
 
                     /**
-                     * Edit or delete operations: Require passing "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a sub-queue to a new queue.
+                     * Edit or delete operations: pass "myId of the selected queue". Passing is required for cloning only when the scheduler is `fair` in order to copy a subqueue to a new queue.
                      */
                     std::string m_myId;
                     bool m_myIdHasBeenSet;
 
                     /**
-                     * Basic configuration. The value of key is consistent with the field returned by **DescribeYarnQueue**.###### Fair scheduler
-Values of key are as follows:
+                     * Basic configuration information. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+###### Fair scheduler.
+The key value information is as follows:
 
-- type: parent queue. Value: **parent** or **null**.
-- aclSubmitApps: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- aclAdministerApps: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- minSharePreemptionTimeout: timeout of minimum share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionTimeout: timeout of fair share before preemption. Value: **numeric string** or **null**.
-- fairSharePreemptionThreshold: fair share preemption threshold. Value: **numeric string** or **null**. Numeric string range: (0,1].
-- allowPreemptionFrom: preemption mode. Value: **Boolean string** or **null**.
-- schedulingPolicy: scheduling policy. Value: **drf**, **fair**, **fifo**, or **null**.
+- type: parent queue. The value is **parent** or **null**.
+- aclSubmitApps: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- aclAdministerApps: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- minSharePreemptionTimeout: minimum share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionTimeout: fair share preemption timeout. The value is a **numeric string** or **null**.
+- fairSharePreemptionThreshold: fair share preemption threshold. The value is a **numeric string** or **null**, where the numeric range is (0, 1].
+- allowPreemptionFrom: preemption mode. The value is a **boolean string** or **null**.
+- schedulingPolicy: scheduling policy. The value is **drf**, **fair**, **fifo**, or **null**.
 
 ```
 type AclForYarnQueue struct {
@@ -415,36 +408,33 @@ type AclForYarnQueue struct {
 	Group *string `json:"group"`// Group name
 }
 ```
-###### Capacity scheduler
-Values of key are as follows:
+###### Capacity scheduler.
+The key value information is as follows:
 
-- state: queue status. Value: **STOPPED** or **RUNNING**.
-- default-node-label-expression: default tag expression. Value: **tag** or **null**.
-- acl_submit_applications: submission ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- acl_administer_queue: administration ACL. Value: **JSON string of the AclForYarnQueue type** or **null**.
-- maximum-allocation-mb: maximum memory allocated to each container. Value: **numeric string** or **null**.
-- maximum-allocation-vcores: maximum number of virtual cores allocated to each container. Value: **numeric string** or **null**.
+- state: queue status. The value is **STOPPED** or **RUNNING**.
+- default-node-label-expression: default label expression. The value is a **label** or **null**.
+- acl_submit_applications: submit access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- acl_administer_queue: administer access control. The value is a **JSON string of the AclForYarnQueue type** or **null**.
+- maximum-allocation-mb: maximum memory allocated to a container. The value is a **numeric string** or **null**.
+- maximum-allocation-vcores: maximum number of vCores allocated to a container. The value is a **numeric string** or **null**.
 ```
 type AclForYarnQueue struct {
 	User  *string `json:"user"` // Username
 	Group *string `json:"group"`// Group name
 }
 ```
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ItemSeq m_basicParams;
                     bool m_basicParamsHasBeenSet;
 
                     /**
-                     * Configuration set information. For the values, see the parameter description of ConfigSetInfo. Configuration set is the representation of the plan mode in the queue, containing different configuration item values for different time periods. The configuration set names of all queues are the same. For a single queue, the tags and parameters in each configuration set are the same, but the parameter values are different.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration set information. For the value, see the parameter description of this complex type. A configuration set is the representation of the plan mode in a queue, indicating different configuration values in different time periods. All queues have the same configuration set name. For a single queue, the labels and parameters in each configuration set are the same, but the parameter values differ.
                      */
                     std::vector<ConfigSetInfo> m_configSetParams;
                     bool m_configSetParamsHasBeenSet;
 
                     /**
-                     * This parameter is specific for capacity scheduling and is valid only when `OpType` is set to `6`. It indicates tags to be deleted from the queue. This parameter has a higher priority than LabelParams in ConfigSetParams.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specific to the capacity scheduler. It takes effect only when `OpType` is `6` and indicates which labels in this queue are to be deleted. Its priority is higher than that of LabelParams in ConfigSetParams.
                      */
                     std::vector<std::string> m_deleteLables;
                     bool m_deleteLablesHasBeenSet;

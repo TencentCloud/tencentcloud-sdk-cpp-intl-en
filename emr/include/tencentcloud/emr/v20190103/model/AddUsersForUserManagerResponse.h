@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SuccessUserList The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取List of successfully added users.
+                     * @return SuccessUserList List of successfully added users.
                      * 
                      */
                     std::vector<std::string> GetSuccessUserList() const;
@@ -60,10 +58,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SuccessUserListHasBeenSet() const;
 
                     /**
-                     * 获取The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return FailedUserList The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取List of users failed to be added.
+                     * @return FailedUserList List of users failed to be added.
                      * 
                      */
                     std::vector<std::string> GetFailedUserList() const;
@@ -76,8 +72,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool FailedUserListHasBeenSet() const;
 
                     /**
-                     * 获取Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
-                     * @return FlowId Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+                     * 获取Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
+                     * @return FlowId Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -92,21 +88,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * List of successfully added users.
                      */
                     std::vector<std::string> m_successUserList;
                     bool m_successUserListHasBeenSet;
 
                     /**
-                     * The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * List of users failed to be added.
                      */
                     std::vector<std::string> m_failedUserList;
                     bool m_failedUserListHasBeenSet;
 
                     /**
-                     * Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+                     * Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

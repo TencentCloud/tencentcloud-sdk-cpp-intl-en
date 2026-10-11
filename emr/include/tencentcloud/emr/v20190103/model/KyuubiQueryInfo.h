@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Submitter IP address.
-                     * @return ClientIP Submitter IP address.
+                     * 获取Submission IP address.
+                     * @return ClientIP Submission IP address.
                      * 
                      */
                     std::string GetClientIP() const;
 
                     /**
-                     * 设置Submitter IP address.
-                     * @param _clientIP Submitter IP address.
+                     * 设置Submission IP address.
+                     * @param _clientIP Submission IP address.
                      * 
                      */
                     void SetClientIP(const std::string& _clientIP);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool StatementIDHasBeenSet() const;
 
                     /**
-                     * 获取User who submits requests.
-                     * @return User User who submits requests.
+                     * 获取Submission user.
+                     * @return User Submission user.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置User who submits requests.
-                     * @param _user User who submits requests.
+                     * 设置Submission user.
+                     * @param _user Submission user.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -301,7 +301,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Submitter IP address.
+                     * Submission IP address.
                      */
                     std::string m_clientIP;
                     bool m_clientIPHasBeenSet;
@@ -367,7 +367,7 @@ namespace TencentCloud
                     bool m_statementIDHasBeenSet;
 
                     /**
-                     * User who submits requests.
+                     * Submission user.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;

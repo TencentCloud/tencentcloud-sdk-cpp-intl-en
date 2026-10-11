@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Description of the returned value.
-                     * @return Info Description of the returned value.
+                     * 获取Return value description.
+                     * @return Info Return value description.
                      * 
                      */
                     std::string GetInfo() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Description of the returned value.
+                     * Return value description.
                      */
                     std::string m_info;
                     bool m_infoHasBeenSet;

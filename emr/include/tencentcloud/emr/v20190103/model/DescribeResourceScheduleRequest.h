@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取EMR cluster ID
-                     * @return InstanceId EMR cluster ID
+                     * 获取English ID of the EMR cluster.
+                     * @return InstanceId English ID of the EMR cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置EMR cluster ID
-                     * @param _instanceId EMR cluster ID
+                     * 设置English ID of the EMR cluster.
+                     * @param _instanceId English ID of the EMR cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * EMR cluster ID
+                     * English ID of the EMR cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

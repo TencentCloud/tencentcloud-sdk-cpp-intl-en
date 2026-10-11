@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule for time-based scaling
+                * Rule for time-based scaling.
                 */
                 class TimeAutoScaleStrategy : public AbstractModel
                 {
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取Cooling time after policy trigger, during which auto scaling cannot be triggered.
-                     * @return IntervalTime Cooling time after policy trigger, during which auto scaling cannot be triggered.
+                     * 获取Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
+                     * @return IntervalTime Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
                      * 
                      */
                     uint64_t GetIntervalTime() const;
 
                     /**
-                     * 设置Cooling time after policy trigger, during which auto scaling cannot be triggered.
-                     * @param _intervalTime Cooling time after policy trigger, during which auto scaling cannot be triggered.
+                     * 设置Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
+                     * @param _intervalTime Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
                      * 
                      */
                     void SetIntervalTime(const uint64_t& _intervalTime);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool IntervalTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scaling action. 1: scale-out, 2: scale-in.
-                     * @return ScaleAction Scaling action. 1: scale-out, 2: scale-in.
+                     * 获取Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
+                     * @return ScaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
                      * 
                      */
                     uint64_t GetScaleAction() const;
 
                     /**
-                     * 设置Scaling action. 1: scale-out, 2: scale-in.
-                     * @param _scaleAction Scaling action. 1: scale-out, 2: scale-in.
+                     * 设置Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
+                     * @param _scaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
                      * 
                      */
                     void SetScaleAction(const uint64_t& _scaleAction);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool ScaleActionHasBeenSet() const;
 
                     /**
-                     * 获取Scaling amount.
-                     * @return ScaleNum Scaling amount.
+                     * 获取Number of scaling operations.
+                     * @return ScaleNum Number of scaling operations.
                      * 
                      */
                     uint64_t GetScaleNum() const;
 
                     /**
-                     * 设置Scaling amount.
-                     * @param _scaleNum Scaling amount.
+                     * 设置Number of scaling operations.
+                     * @param _scaleNum Number of scaling operations.
                      * 
                      */
                     void SetScaleNum(const uint64_t& _scaleNum);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool ScaleNumHasBeenSet() const;
 
                     /**
-                     * 获取Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
-                     * @return StrategyStatus Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+                     * 获取(Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
+                     * @return StrategyStatus (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
                      * 
                      */
                     uint64_t GetStrategyStatus() const;
 
                     /**
-                     * 设置Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
-                     * @param _strategyStatus Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+                     * 设置(Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
+                     * @param _strategyStatus (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
                      * 
                      */
                     void SetStrategyStatus(const uint64_t& _strategyStatus);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool StrategyStatusHasBeenSet() const;
 
                     /**
-                     * 获取Rule priority. The smaller value indicates the higher priority.
-                     * @return Priority Rule priority. The smaller value indicates the higher priority.
+                     * 获取Rule priority. A smaller value indicates a higher priority.
+                     * @return Priority Rule priority. A smaller value indicates a higher priority.
                      * 
                      */
                     uint64_t GetPriority() const;
 
                     /**
-                     * 设置Rule priority. The smaller value indicates the higher priority.
-                     * @param _priority Rule priority. The smaller value indicates the higher priority.
+                     * 设置Rule priority. A smaller value indicates a higher priority.
+                     * @param _priority Rule priority. A smaller value indicates a higher priority.
                      * 
                      */
                     void SetPriority(const uint64_t& _priority);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
-                     * @return RetryValidTime When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+                     * 获取When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
+                     * @return RetryValidTime When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
                      * 
                      */
                     uint64_t GetRetryValidTime() const;
 
                     /**
-                     * 设置When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
-                     * @param _retryValidTime When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+                     * 设置When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
+                     * @param _retryValidTime When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
                      * 
                      */
                     void SetRetryValidTime(const uint64_t& _retryValidTime);
@@ -197,23 +197,15 @@ namespace TencentCloud
                     bool RetryValidTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RepeatStrategy Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time scaling repetition policy.
+                     * @return RepeatStrategy Time scaling repetition policy.
                      * 
                      */
                     RepeatStrategy GetRepeatStrategy() const;
 
                     /**
-                     * 设置Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _repeatStrategy Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time scaling repetition policy.
+                     * @param _repeatStrategy Time scaling repetition policy.
                      * 
                      */
                     void SetRepeatStrategy(const RepeatStrategy& _repeatStrategy);
@@ -289,23 +281,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GraceDownTimeHasBeenSet() const;
 
                     /**
-                     * 获取Bound tag list
+                     * 获取Whether to enable task protection.
+                     * @return GraceDownProtectFlag Whether to enable task protection.
+                     * 
+                     */
+                    bool GetGraceDownProtectFlag() const;
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Bound tag list
+                    /**
+                     * 设置Whether to enable task protection.
+                     * @param _graceDownProtectFlag Whether to enable task protection.
+                     * 
+                     */
+                    void SetGraceDownProtectFlag(const bool& _graceDownProtectFlag);
 
-Note: This field may return null, indicating that no valid values can be obtained.
+                    /**
+                     * 判断参数 GraceDownProtectFlag 是否已赋值
+                     * @return GraceDownProtectFlag 是否已赋值
+                     * 
+                     */
+                    bool GraceDownProtectFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Bound tag list.
+                     * @return Tags Bound tag list.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bound tag list.
+                     * @param _tags Bound tag list.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -339,31 +344,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigGroupAssignedHasBeenSet() const;
 
                     /**
-                     * 获取Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
-                     * @return MeasureMethod Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+                     * 获取Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
+                     * @return MeasureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
                      * 
                      */
                     std::string GetMeasureMethod() const;
 
                     /**
-                     * 设置Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
-                     * @param _measureMethod Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+                     * 设置Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
+                     * @param _measureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
                      * 
                      */
                     void SetMeasureMethod(const std::string& _measureMethod);
@@ -376,15 +381,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MeasureMethodHasBeenSet() const;
 
                     /**
-                     * 获取Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
-                     * @return TerminatePolicy Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+                     * 获取Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
+                     * @return TerminatePolicy Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
                      * 
                      */
                     std::string GetTerminatePolicy() const;
 
                     /**
-                     * 设置Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
-                     * @param _terminatePolicy Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+                     * 设置Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
+                     * @param _terminatePolicy Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
                      * 
                      */
                     void SetTerminatePolicy(const std::string& _terminatePolicy);
@@ -397,15 +402,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TerminatePolicyHasBeenSet() const;
 
                     /**
-                     * 获取Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
-                     * @return MaxUse Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+                     * 获取Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
+                     * @return MaxUse Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
                      * 
                      */
                     int64_t GetMaxUse() const;
 
                     /**
-                     * 设置Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
-                     * @param _maxUse Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+                     * 设置Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
+                     * @param _maxUse Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
                      * 
                      */
                     void SetMaxUse(const int64_t& _maxUse);
@@ -418,19 +423,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxUseHasBeenSet() const;
 
                     /**
-                     * 获取Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SoftDeployInfo Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+                     * @return SoftDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     std::vector<int64_t> GetSoftDeployInfo() const;
 
                     /**
-                     * 设置Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _softDeployInfo Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+                     * @param _softDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     void SetSoftDeployInfo(const std::vector<int64_t>& _softDeployInfo);
@@ -443,23 +444,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SoftDeployInfoHasBeenSet() const;
 
                     /**
-                     * 获取Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceNodeInfo Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Startup process list.
+                     * @return ServiceNodeInfo Startup process list.
                      * 
                      */
                     std::vector<int64_t> GetServiceNodeInfo() const;
 
                     /**
-                     * 设置Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceNodeInfo Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Startup process list.
+                     * @param _serviceNodeInfo Startup process list.
                      * 
                      */
                     void SetServiceNodeInfo(const std::vector<int64_t>& _serviceNodeInfo);
@@ -472,15 +465,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServiceNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Compensatory scale-out. 0: disable, 1: enable.
-                     * @return CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+                     * 获取Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
+                     * @return CompensateFlag Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
                      * 
                      */
                     int64_t GetCompensateFlag() const;
 
                     /**
-                     * 设置Compensatory scale-out. 0: disable, 1: enable.
-                     * @param _compensateFlag Compensatory scale-out. 0: disable, 1: enable.
+                     * 设置Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
+                     * @param _compensateFlag Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
                      * 
                      */
                     void SetCompensateFlag(const int64_t& _compensateFlag);
@@ -514,15 +507,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
-                     * @return GraceDownLabel Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+                     * 获取Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
+                     * @return GraceDownLabel Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
                      * 
                      */
                     std::vector<TkeLabel> GetGraceDownLabel() const;
 
                     /**
-                     * 设置Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
-                     * @param _graceDownLabel Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+                     * 设置Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
+                     * @param _graceDownLabel Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
                      * 
                      */
                     void SetGraceDownLabel(const std::vector<TkeLabel>& _graceDownLabel);
@@ -534,6 +527,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool GraceDownLabelHasBeenSet() const;
 
+                    /**
+                     * 获取Task protection time.
+                     * @return GraceDownProtectTime Task protection time.
+                     * 
+                     */
+                    int64_t GetGraceDownProtectTime() const;
+
+                    /**
+                     * 设置Task protection time.
+                     * @param _graceDownProtectTime Task protection time.
+                     * 
+                     */
+                    void SetGraceDownProtectTime(const int64_t& _graceDownProtectTime);
+
+                    /**
+                     * 判断参数 GraceDownProtectTime 是否已赋值
+                     * @return GraceDownProtectTime 是否已赋值
+                     * 
+                     */
+                    bool GraceDownProtectTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -543,45 +557,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * Cooling time after policy trigger, during which auto scaling cannot be triggered.
+                     * Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
                      */
                     uint64_t m_intervalTime;
                     bool m_intervalTimeHasBeenSet;
 
                     /**
-                     * Scaling action. 1: scale-out, 2: scale-in.
+                     * Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
                      */
                     uint64_t m_scaleAction;
                     bool m_scaleActionHasBeenSet;
 
                     /**
-                     * Scaling amount.
+                     * Number of scaling operations.
                      */
                     uint64_t m_scaleNum;
                     bool m_scaleNumHasBeenSet;
 
                     /**
-                     * Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+                     * (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
                      */
                     uint64_t m_strategyStatus;
                     bool m_strategyStatusHasBeenSet;
 
                     /**
-                     * Rule priority. The smaller value indicates the higher priority.
+                     * Rule priority. A smaller value indicates a higher priority.
                      */
                     uint64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+                     * When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
                      */
                     uint64_t m_retryValidTime;
                     bool m_retryValidTimeHasBeenSet;
 
                     /**
-                     * Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time scaling repetition policy.
                      */
                     RepeatStrategy m_repeatStrategy;
                     bool m_repeatStrategyHasBeenSet;
@@ -605,9 +617,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_graceDownTimeHasBeenSet;
 
                     /**
-                     * Bound tag list
+                     * Whether to enable task protection.
+                     */
+                    bool m_graceDownProtectFlag;
+                    bool m_graceDownProtectFlagHasBeenSet;
 
-Note: This field may return null, indicating that no valid values can be obtained.
+                    /**
+                     * Bound tag list.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -619,44 +635,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_configGroupAssignedHasBeenSet;
 
                     /**
-                     * Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+                     * Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
                      */
                     std::string m_measureMethod;
                     bool m_measureMethodHasBeenSet;
 
                     /**
-                     * Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+                     * Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
                      */
                     std::string m_terminatePolicy;
                     bool m_terminatePolicyHasBeenSet;
 
                     /**
-                     * Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+                     * Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
                      */
                     int64_t m_maxUse;
                     bool m_maxUseHasBeenSet;
 
                     /**
-                     * Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
                      */
                     std::vector<int64_t> m_softDeployInfo;
                     bool m_softDeployInfoHasBeenSet;
 
                     /**
-                     * Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Startup process list.
                      */
                     std::vector<int64_t> m_serviceNodeInfo;
                     bool m_serviceNodeInfoHasBeenSet;
 
                     /**
-                     * Compensatory scale-out. 0: disable, 1: enable.
+                     * Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
                      */
                     int64_t m_compensateFlag;
                     bool m_compensateFlagHasBeenSet;
@@ -668,10 +681,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+                     * Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
                      */
                     std::vector<TkeLabel> m_graceDownLabel;
                     bool m_graceDownLabelHasBeenSet;
+
+                    /**
+                     * Task protection time.
+                     */
+                    int64_t m_graceDownProtectTime;
+                    bool m_graceDownProtectTimeHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VPC parameters
+                * VPC parameter.
                 */
                 class VirtualPrivateCloud : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The VPC ID.
-                     * @return VpcId The VPC ID.
+                     * 获取VPC ID
+                     * @return VpcId VPC ID
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置The VPC ID.
-                     * @param _vpcId The VPC ID.
+                     * 设置VPC ID
+                     * @param _vpcId VPC ID
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The subnet ID.
-                     * @return SubnetId The subnet ID.
+                     * 获取Subnet ID
+                     * @return SubnetId Subnet ID
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置The subnet ID.
-                     * @param _subnetId The subnet ID.
+                     * 设置Subnet ID
+                     * @param _subnetId Subnet ID
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The VPC ID.
+                     * VPC ID
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The subnet ID.
+                     * Subnet ID
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;

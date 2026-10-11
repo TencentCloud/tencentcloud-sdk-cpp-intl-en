@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * FlowParam process parameters.
+                * FlowParam: flow parameters.
                 */
                 class FlowParam : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process parameter key.
+                     * 获取Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
-                     * @return FKey Process parameter key.
+                     * @return FKey Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
                      * 
@@ -58,10 +58,10 @@ FlowId: Query by FlowId.
                     std::string GetFKey() const;
 
                     /**
-                     * 设置Process parameter key.
+                     * 设置Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
-                     * @param _fKey Process parameter key.
+                     * @param _fKey Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
                      * 
@@ -76,15 +76,15 @@ FlowId: Query by FlowId.
                     bool FKeyHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value
-                     * @return FValue Parameter value
+                     * 获取Parameter value.
+                     * @return FValue Parameter value.
                      * 
                      */
                     std::string GetFValue() const;
 
                     /**
-                     * 设置Parameter value
-                     * @param _fValue Parameter value
+                     * 设置Parameter value.
+                     * @param _fValue Parameter value.
                      * 
                      */
                     void SetFValue(const std::string& _fValue);
@@ -99,7 +99,7 @@ FlowId: Query by FlowId.
                 private:
 
                     /**
-                     * Process parameter key.
+                     * Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
                      */
@@ -107,7 +107,7 @@ FlowId: Query by FlowId.
                     bool m_fKeyHasBeenSet;
 
                     /**
-                     * Parameter value
+                     * Parameter value.
                      */
                     std::string m_fValue;
                     bool m_fValueHasBeenSet;

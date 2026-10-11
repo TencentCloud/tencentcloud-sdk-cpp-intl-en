@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Name of the configuration file where the configuration item is located.
-                     * @return InFile Name of the configuration file where the configuration item is located.
+                     * 获取Name of the configuration file where the configuration items are located.
+                     * @return InFile Name of the configuration file where the configuration items are located.
                      * 
                      */
                     std::string GetInFile() const;
 
                     /**
-                     * 设置Name of the configuration file where the configuration item is located.
-                     * @param _inFile Name of the configuration file where the configuration item is located.
+                     * 设置Name of the configuration file where the configuration items are located.
+                     * @param _inFile Name of the configuration file where the configuration items are located.
                      * 
                      */
                     void SetInFile(const std::string& _inFile);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Name of the configuration file where the configuration item is located.
+                     * Name of the configuration file where the configuration items are located.
                      */
                     std::string m_inFile;
                     bool m_inFileHasBeenSet;

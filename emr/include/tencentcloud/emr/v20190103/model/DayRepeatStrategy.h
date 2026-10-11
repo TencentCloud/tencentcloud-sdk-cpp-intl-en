@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description of daily repeated tasks for elastic scaling
+                * Description of daily repetition tasks for auto scaling.
                 */
                 class DayRepeatStrategy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specific time for repetition task execution, such as 01:02:00.
-                     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+                     * 获取Specific time for repetition task execution, for example, 01:02:00.
+                     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
                      * 
                      */
                     std::string GetExecuteAtTimeOfDay() const;
 
                     /**
-                     * 设置Specific time for repetition task execution, such as 01:02:00.
-                     * @param _executeAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+                     * 设置Specific time for repetition task execution, for example, 01:02:00.
+                     * @param _executeAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
                      * 
                      */
                     void SetExecuteAtTimeOfDay(const std::string& _executeAtTimeOfDay);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ExecuteAtTimeOfDayHasBeenSet() const;
 
                     /**
-                     * 获取Executing every Step days.
-                     * @return Step Executing every Step days.
+                     * 获取Execute every Step days.
+                     * @return Step Execute every Step days.
                      * 
                      */
                     uint64_t GetStep() const;
 
                     /**
-                     * 设置Executing every Step days.
-                     * @param _step Executing every Step days.
+                     * 设置Execute every Step days.
+                     * @param _step Execute every Step days.
                      * 
                      */
                     void SetStep(const uint64_t& _step);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specific time for repetition task execution, such as 01:02:00.
+                     * Specific time for repetition task execution, for example, 01:02:00.
                      */
                     std::string m_executeAtTimeOfDay;
                     bool m_executeAtTimeOfDayHasBeenSet;
 
                     /**
-                     * Executing every Step days.
+                     * Execute every Step days.
                      */
                     uint64_t m_step;
                     bool m_stepHasBeenSet;

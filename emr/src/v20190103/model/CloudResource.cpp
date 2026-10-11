@@ -1,0 +1,760 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/emr/v20190103/model/CloudResource.h>
+
+using TencentCloud::CoreInternalOutcome;
+using namespace TencentCloud::Emr::V20190103::Model;
+using namespace std;
+
+CloudResource::CloudResource() :
+    m_componentNameHasBeenSet(false),
+    m_podNumberHasBeenSet(false),
+    m_limitCpuHasBeenSet(false),
+    m_limitMemoryHasBeenSet(false),
+    m_serviceHasBeenSet(false),
+    m_volumeDirHasBeenSet(false),
+    m_externalAccessHasBeenSet(false),
+    m_affinityHasBeenSet(false),
+    m_disksHasBeenSet(false),
+    m_tolerationsHasBeenSet(false),
+    m_podAffinityHasBeenSet(false),
+    m_podAntiAffinityHasBeenSet(false),
+    m_topologySpreadConstraintsHasBeenSet(false),
+    m_podLabelsHasBeenSet(false),
+    m_enableDefaultRayClusterHasBeenSet(false),
+    m_imageInfoV2HasBeenSet(false),
+    m_dynamicInstanceFormHasBeenSet(false)
+{
+}
+
+CoreInternalOutcome CloudResource::Deserialize(const rapidjson::Value &value)
+{
+    string requestId = "";
+
+
+    if (value.HasMember("ComponentName") && !value["ComponentName"].IsNull())
+    {
+        if (!value["ComponentName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.ComponentName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_componentName = string(value["ComponentName"].GetString());
+        m_componentNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodNumber") && !value["PodNumber"].IsNull())
+    {
+        if (!value["PodNumber"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.PodNumber` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_podNumber = value["PodNumber"].GetInt64();
+        m_podNumberHasBeenSet = true;
+    }
+
+    if (value.HasMember("LimitCpu") && !value["LimitCpu"].IsNull())
+    {
+        if (!value["LimitCpu"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.LimitCpu` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_limitCpu = value["LimitCpu"].GetInt64();
+        m_limitCpuHasBeenSet = true;
+    }
+
+    if (value.HasMember("LimitMemory") && !value["LimitMemory"].IsNull())
+    {
+        if (!value["LimitMemory"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.LimitMemory` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_limitMemory = value["LimitMemory"].GetInt64();
+        m_limitMemoryHasBeenSet = true;
+    }
+
+    if (value.HasMember("Service") && !value["Service"].IsNull())
+    {
+        if (!value["Service"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.Service` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_service = string(value["Service"].GetString());
+        m_serviceHasBeenSet = true;
+    }
+
+    if (value.HasMember("VolumeDir") && !value["VolumeDir"].IsNull())
+    {
+        if (!value["VolumeDir"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.VolumeDir` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_volumeDir.Deserialize(value["VolumeDir"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_volumeDirHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExternalAccess") && !value["ExternalAccess"].IsNull())
+    {
+        if (!value["ExternalAccess"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.ExternalAccess` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_externalAccess.Deserialize(value["ExternalAccess"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_externalAccessHasBeenSet = true;
+    }
+
+    if (value.HasMember("Affinity") && !value["Affinity"].IsNull())
+    {
+        if (!value["Affinity"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.Affinity` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_affinity.Deserialize(value["Affinity"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_affinityHasBeenSet = true;
+    }
+
+    if (value.HasMember("Disks") && !value["Disks"].IsNull())
+    {
+        if (!value["Disks"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CloudResource.Disks` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Disks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Disk item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_disks.push_back(item);
+        }
+        m_disksHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tolerations") && !value["Tolerations"].IsNull())
+    {
+        if (!value["Tolerations"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CloudResource.Tolerations` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tolerations"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Toleration item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tolerations.push_back(item);
+        }
+        m_tolerationsHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodAffinity") && !value["PodAffinity"].IsNull())
+    {
+        if (!value["PodAffinity"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.PodAffinity` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_podAffinity.Deserialize(value["PodAffinity"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_podAffinityHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodAntiAffinity") && !value["PodAntiAffinity"].IsNull())
+    {
+        if (!value["PodAntiAffinity"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.PodAntiAffinity` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_podAntiAffinity.Deserialize(value["PodAntiAffinity"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_podAntiAffinityHasBeenSet = true;
+    }
+
+    if (value.HasMember("TopologySpreadConstraints") && !value["TopologySpreadConstraints"].IsNull())
+    {
+        if (!value["TopologySpreadConstraints"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CloudResource.TopologySpreadConstraints` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TopologySpreadConstraints"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            TopologySpreadConstraint item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_topologySpreadConstraints.push_back(item);
+        }
+        m_topologySpreadConstraintsHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodLabels") && !value["PodLabels"].IsNull())
+    {
+        if (!value["PodLabels"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CloudResource.PodLabels` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["PodLabels"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            StringMap item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_podLabels.push_back(item);
+        }
+        m_podLabelsHasBeenSet = true;
+    }
+
+    if (value.HasMember("EnableDefaultRayCluster") && !value["EnableDefaultRayCluster"].IsNull())
+    {
+        if (!value["EnableDefaultRayCluster"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.EnableDefaultRayCluster` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_enableDefaultRayCluster = value["EnableDefaultRayCluster"].GetBool();
+        m_enableDefaultRayClusterHasBeenSet = true;
+    }
+
+    if (value.HasMember("ImageInfoV2") && !value["ImageInfoV2"].IsNull())
+    {
+        if (!value["ImageInfoV2"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.ImageInfoV2` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_imageInfoV2.Deserialize(value["ImageInfoV2"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_imageInfoV2HasBeenSet = true;
+    }
+
+    if (value.HasMember("DynamicInstanceForm") && !value["DynamicInstanceForm"].IsNull())
+    {
+        if (!value["DynamicInstanceForm"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CloudResource.DynamicInstanceForm` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_dynamicInstanceForm.Deserialize(value["DynamicInstanceForm"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_dynamicInstanceFormHasBeenSet = true;
+    }
+
+
+    return CoreInternalOutcome(true);
+}
+
+void CloudResource::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+{
+
+    if (m_componentNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ComponentName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_componentName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_podNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodNumber";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_podNumber, allocator);
+    }
+
+    if (m_limitCpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LimitCpu";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_limitCpu, allocator);
+    }
+
+    if (m_limitMemoryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LimitMemory";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_limitMemory, allocator);
+    }
+
+    if (m_serviceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Service";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_service.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_volumeDirHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VolumeDir";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_volumeDir.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_externalAccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExternalAccess";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_externalAccess.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_affinityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Affinity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_affinity.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_disksHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Disks";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_disks.begin(); itr != m_disks.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_tolerationsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tolerations";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tolerations.begin(); itr != m_tolerations.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_podAffinityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodAffinity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_podAffinity.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_podAntiAffinityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodAntiAffinity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_podAntiAffinity.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_topologySpreadConstraintsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopologySpreadConstraints";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_topologySpreadConstraints.begin(); itr != m_topologySpreadConstraints.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_podLabelsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodLabels";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_podLabels.begin(); itr != m_podLabels.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_enableDefaultRayClusterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableDefaultRayCluster";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_enableDefaultRayCluster, allocator);
+    }
+
+    if (m_imageInfoV2HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageInfoV2";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_imageInfoV2.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_dynamicInstanceFormHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DynamicInstanceForm";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dynamicInstanceForm.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+}
+
+
+string CloudResource::GetComponentName() const
+{
+    return m_componentName;
+}
+
+void CloudResource::SetComponentName(const string& _componentName)
+{
+    m_componentName = _componentName;
+    m_componentNameHasBeenSet = true;
+}
+
+bool CloudResource::ComponentNameHasBeenSet() const
+{
+    return m_componentNameHasBeenSet;
+}
+
+int64_t CloudResource::GetPodNumber() const
+{
+    return m_podNumber;
+}
+
+void CloudResource::SetPodNumber(const int64_t& _podNumber)
+{
+    m_podNumber = _podNumber;
+    m_podNumberHasBeenSet = true;
+}
+
+bool CloudResource::PodNumberHasBeenSet() const
+{
+    return m_podNumberHasBeenSet;
+}
+
+int64_t CloudResource::GetLimitCpu() const
+{
+    return m_limitCpu;
+}
+
+void CloudResource::SetLimitCpu(const int64_t& _limitCpu)
+{
+    m_limitCpu = _limitCpu;
+    m_limitCpuHasBeenSet = true;
+}
+
+bool CloudResource::LimitCpuHasBeenSet() const
+{
+    return m_limitCpuHasBeenSet;
+}
+
+int64_t CloudResource::GetLimitMemory() const
+{
+    return m_limitMemory;
+}
+
+void CloudResource::SetLimitMemory(const int64_t& _limitMemory)
+{
+    m_limitMemory = _limitMemory;
+    m_limitMemoryHasBeenSet = true;
+}
+
+bool CloudResource::LimitMemoryHasBeenSet() const
+{
+    return m_limitMemoryHasBeenSet;
+}
+
+string CloudResource::GetService() const
+{
+    return m_service;
+}
+
+void CloudResource::SetService(const string& _service)
+{
+    m_service = _service;
+    m_serviceHasBeenSet = true;
+}
+
+bool CloudResource::ServiceHasBeenSet() const
+{
+    return m_serviceHasBeenSet;
+}
+
+VolumeSetting CloudResource::GetVolumeDir() const
+{
+    return m_volumeDir;
+}
+
+void CloudResource::SetVolumeDir(const VolumeSetting& _volumeDir)
+{
+    m_volumeDir = _volumeDir;
+    m_volumeDirHasBeenSet = true;
+}
+
+bool CloudResource::VolumeDirHasBeenSet() const
+{
+    return m_volumeDirHasBeenSet;
+}
+
+ExternalAccess CloudResource::GetExternalAccess() const
+{
+    return m_externalAccess;
+}
+
+void CloudResource::SetExternalAccess(const ExternalAccess& _externalAccess)
+{
+    m_externalAccess = _externalAccess;
+    m_externalAccessHasBeenSet = true;
+}
+
+bool CloudResource::ExternalAccessHasBeenSet() const
+{
+    return m_externalAccessHasBeenSet;
+}
+
+NodeAffinity CloudResource::GetAffinity() const
+{
+    return m_affinity;
+}
+
+void CloudResource::SetAffinity(const NodeAffinity& _affinity)
+{
+    m_affinity = _affinity;
+    m_affinityHasBeenSet = true;
+}
+
+bool CloudResource::AffinityHasBeenSet() const
+{
+    return m_affinityHasBeenSet;
+}
+
+vector<Disk> CloudResource::GetDisks() const
+{
+    return m_disks;
+}
+
+void CloudResource::SetDisks(const vector<Disk>& _disks)
+{
+    m_disks = _disks;
+    m_disksHasBeenSet = true;
+}
+
+bool CloudResource::DisksHasBeenSet() const
+{
+    return m_disksHasBeenSet;
+}
+
+vector<Toleration> CloudResource::GetTolerations() const
+{
+    return m_tolerations;
+}
+
+void CloudResource::SetTolerations(const vector<Toleration>& _tolerations)
+{
+    m_tolerations = _tolerations;
+    m_tolerationsHasBeenSet = true;
+}
+
+bool CloudResource::TolerationsHasBeenSet() const
+{
+    return m_tolerationsHasBeenSet;
+}
+
+PodAffinitySpec CloudResource::GetPodAffinity() const
+{
+    return m_podAffinity;
+}
+
+void CloudResource::SetPodAffinity(const PodAffinitySpec& _podAffinity)
+{
+    m_podAffinity = _podAffinity;
+    m_podAffinityHasBeenSet = true;
+}
+
+bool CloudResource::PodAffinityHasBeenSet() const
+{
+    return m_podAffinityHasBeenSet;
+}
+
+PodAffinitySpec CloudResource::GetPodAntiAffinity() const
+{
+    return m_podAntiAffinity;
+}
+
+void CloudResource::SetPodAntiAffinity(const PodAffinitySpec& _podAntiAffinity)
+{
+    m_podAntiAffinity = _podAntiAffinity;
+    m_podAntiAffinityHasBeenSet = true;
+}
+
+bool CloudResource::PodAntiAffinityHasBeenSet() const
+{
+    return m_podAntiAffinityHasBeenSet;
+}
+
+vector<TopologySpreadConstraint> CloudResource::GetTopologySpreadConstraints() const
+{
+    return m_topologySpreadConstraints;
+}
+
+void CloudResource::SetTopologySpreadConstraints(const vector<TopologySpreadConstraint>& _topologySpreadConstraints)
+{
+    m_topologySpreadConstraints = _topologySpreadConstraints;
+    m_topologySpreadConstraintsHasBeenSet = true;
+}
+
+bool CloudResource::TopologySpreadConstraintsHasBeenSet() const
+{
+    return m_topologySpreadConstraintsHasBeenSet;
+}
+
+vector<StringMap> CloudResource::GetPodLabels() const
+{
+    return m_podLabels;
+}
+
+void CloudResource::SetPodLabels(const vector<StringMap>& _podLabels)
+{
+    m_podLabels = _podLabels;
+    m_podLabelsHasBeenSet = true;
+}
+
+bool CloudResource::PodLabelsHasBeenSet() const
+{
+    return m_podLabelsHasBeenSet;
+}
+
+bool CloudResource::GetEnableDefaultRayCluster() const
+{
+    return m_enableDefaultRayCluster;
+}
+
+void CloudResource::SetEnableDefaultRayCluster(const bool& _enableDefaultRayCluster)
+{
+    m_enableDefaultRayCluster = _enableDefaultRayCluster;
+    m_enableDefaultRayClusterHasBeenSet = true;
+}
+
+bool CloudResource::EnableDefaultRayClusterHasBeenSet() const
+{
+    return m_enableDefaultRayClusterHasBeenSet;
+}
+
+ImageInfoV2 CloudResource::GetImageInfoV2() const
+{
+    return m_imageInfoV2;
+}
+
+void CloudResource::SetImageInfoV2(const ImageInfoV2& _imageInfoV2)
+{
+    m_imageInfoV2 = _imageInfoV2;
+    m_imageInfoV2HasBeenSet = true;
+}
+
+bool CloudResource::ImageInfoV2HasBeenSet() const
+{
+    return m_imageInfoV2HasBeenSet;
+}
+
+DynamicInstanceForm CloudResource::GetDynamicInstanceForm() const
+{
+    return m_dynamicInstanceForm;
+}
+
+void CloudResource::SetDynamicInstanceForm(const DynamicInstanceForm& _dynamicInstanceForm)
+{
+    m_dynamicInstanceForm = _dynamicInstanceForm;
+    m_dynamicInstanceFormHasBeenSet = true;
+}
+
+bool CloudResource::DynamicInstanceFormHasBeenSet() const
+{
+    return m_dynamicInstanceFormHasBeenSet;
+}
+

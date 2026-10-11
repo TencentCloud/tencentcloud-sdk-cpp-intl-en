@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance unique identifier (string).
-                     * @return InstanceId Instance unique identifier (string).
+                     * 获取<p>Instance unique identifier (string).</p>
+                     * @return InstanceId <p>Instance unique identifier (string).</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance unique identifier (string).
-                     * @param _instanceId Instance unique identifier (string).
+                     * 设置<p>Instance unique identifier (string).</p>
+                     * @param _instanceId <p>Instance unique identifier (string).</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Region name to be changed.
-                     * @return Zone Region name to be changed.
+                     * 获取<p>Name of the region to be changed.</p>
+                     * @return Zone <p>Name of the region to be changed.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Region name to be changed.
-                     * @param _zone Region name to be changed.
+                     * 设置<p>Name of the region to be changed.</p>
+                     * @param _zone <p>Name of the region to be changed.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
-                     * @return NodeNum Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+                     * 获取<p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
+                     * @return NodeNum <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
                      * 
                      */
                     int64_t GetNodeNum() const;
 
                     /**
-                     * 设置Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
-                     * @param _nodeNum Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+                     * 设置<p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
+                     * @param _nodeNum <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
                      * 
                      */
                     void SetNodeNum(const int64_t& _nodeNum);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
-                     * @return ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+                     * 获取<p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+                     * @return ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
                      * 
                      */
                     std::string GetClientToken() const;
 
                     /**
-                     * 设置The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
-                     * @param _clientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+                     * 设置<p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+                     * @param _clientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
                      * 
                      */
                     void SetClientToken(const std::string& _clientToken);
@@ -126,31 +126,58 @@ namespace TencentCloud
                      */
                     bool ClientTokenHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+                     * @return DiskSize <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+                     * 
+                     */
+                    int64_t GetDiskSize() const;
+
+                    /**
+                     * 设置<p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+                     * @param _diskSize <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+                     * 
+                     */
+                    void SetDiskSize(const int64_t& _diskSize);
+
+                    /**
+                     * 判断参数 DiskSize 是否已赋值
+                     * @return DiskSize 是否已赋值
+                     * 
+                     */
+                    bool DiskSizeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance unique identifier (string).
+                     * <p>Instance unique identifier (string).</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Region name to be changed.
+                     * <p>Name of the region to be changed.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+                     * <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
                      */
                     int64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+                     * <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
+
+                    /**
+                     * <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+                     */
+                    int64_t m_diskSize;
+                    bool m_diskSizeHasBeenSet;
 
                 };
             }

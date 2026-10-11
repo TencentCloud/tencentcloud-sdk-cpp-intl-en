@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible instances.
-                     * @return TotalCnt Number of eligible instances.
+                     * 获取
+                     * @return TotalCnt 
                      * 
                      */
                     int64_t GetTotalCnt() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCntHasBeenSet() const;
 
                     /**
-                     * 获取List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterList List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ClusterList 
                      * 
                      */
                     std::vector<ClusterInstancesInfo> GetClusterList() const;
@@ -75,10 +73,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ClusterListHasBeenSet() const;
 
                     /**
-                     * 获取List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TagKeys List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TagKeys 
                      * 
                      */
                     std::vector<std::string> GetTagKeys() const;
@@ -93,21 +89,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of eligible instances.
+                     * 
                      */
                     int64_t m_totalCnt;
                     bool m_totalCntHasBeenSet;
 
                     /**
-                     * List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ClusterInstancesInfo> m_clusterList;
                     bool m_clusterListHasBeenSet;
 
                     /**
-                     * List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> m_tagKeys;
                     bool m_tagKeysHasBeenSet;

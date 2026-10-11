@@ -54,71 +54,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
-                     * @return ProductId Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
+                     * 获取<p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
+                     * @return ProductId <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
                      * 
                      */
                     uint64_t GetProductId() const;
 
                     /**
-                     * 设置Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
-                     * @param _productId Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
+                     * 设置<p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
+                     * @param _productId <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
                      * 
                      */
                     void SetProductId(const uint64_t& _productId);
@@ -131,19 +75,15 @@ namespace TencentCloud
                     bool ProductIdHasBeenSet() const;
 
                     /**
-                     * 获取List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
-                     * @return Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
+                     * 获取<p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
+                     * @return Software <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
                      * 
                      */
                     std::vector<std::string> GetSoftware() const;
 
                     /**
-                     * 设置List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
-                     * @param _software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
+                     * 设置<p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
+                     * @param _software <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
                      * 
                      */
                     void SetSoftware(const std::vector<std::string>& _software);
@@ -156,23 +96,15 @@ Enter an instance value: `hive` or `flink`.
                     bool SoftwareHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
-                     * @return SupportHA Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
+                     * 获取<p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
+                     * @return SupportHA <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
                      * 
                      */
                     uint64_t GetSupportHA() const;
 
                     /**
-                     * 设置Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
-                     * @param _supportHA Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
+                     * 设置<p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
+                     * @param _supportHA <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
                      * 
                      */
                     void SetSupportHA(const uint64_t& _supportHA);
@@ -185,23 +117,15 @@ Enter an instance value: `hive` or `flink`.
                     bool SupportHAHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
-                     * @return InstanceName Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
+                     * 获取<p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+                     * @return InstanceName <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
-                     * @param _instanceName Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
+                     * 设置<p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+                     * @param _instanceName <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -214,19 +138,15 @@ Enter an instance value: `hive` or `flink`.
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
-                     * @return PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+                     * 获取<p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+                     * @return PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
-                     * 设置Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
-                     * @param _payMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+                     * 设置<p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+                     * @param _payMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -239,23 +159,15 @@ Enter an instance value: `hive` or `flink`.
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
-                     * @return TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+                     * 获取<p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+                     * @return TimeSpan <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
-                     * @param _timeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+                     * 设置<p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+                     * @param _timeSpan <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -268,23 +180,15 @@ Enter an instance value: `hive` or `flink`.
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-                     * @return TimeUnit Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+                     * 获取<p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @return TimeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-                     * @param _timeUnit Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+                     * 设置<p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @param _timeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -297,23 +201,15 @@ Enter an instance value: `hive` or `flink`.
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
-                     * @return LoginSettings Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+                     * 获取<p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+                     * @return LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
                      * 
                      */
                     LoginSettings GetLoginSettings() const;
 
                     /**
-                     * 设置Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
-                     * @param _loginSettings Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+                     * 设置<p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+                     * @param _loginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
                      * 
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
@@ -326,15 +222,15 @@ Enter an instance value: `hive` or `flink`.
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     * @return VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * 获取<p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+                     * @return VPCSettings <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
                      * 
                      */
                     VPCSettings GetVPCSettings() const;
 
                     /**
-                     * 设置Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     * @param _vPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * 设置<p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
+                     * @param _vPCSettings <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
                      * 
                      */
                     void SetVPCSettings(const VPCSettings& _vPCSettings);
@@ -347,15 +243,15 @@ Enter an instance value: `hive` or `flink`.
                     bool VPCSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Node resource specification.
-                     * @return ResourceSpec Node resource specification.
+                     * 获取<p>Node resource specifications.</p>
+                     * @return ResourceSpec <p>Node resource specifications.</p>
                      * 
                      */
                     NewResourceSpec GetResourceSpec() const;
 
                     /**
-                     * 设置Node resource specification.
-                     * @param _resourceSpec Node resource specification.
+                     * 设置<p>Node resource specifications.</p>
+                     * @param _resourceSpec <p>Node resource specifications.</p>
                      * 
                      */
                     void SetResourceSpec(const NewResourceSpec& _resourceSpec);
@@ -368,15 +264,15 @@ Enter an instance value: `hive` or `flink`.
                     bool ResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取Parameter required for enabling COS access.
-                     * @return COSSettings Parameter required for enabling COS access.
+                     * 获取<p>Specifies the parameters to be set for enabling COS access.</p>
+                     * @return COSSettings <p>Specifies the parameters to be set for enabling COS access.</p>
                      * 
                      */
                     COSSettings GetCOSSettings() const;
 
                     /**
-                     * 设置Parameter required for enabling COS access.
-                     * @param _cOSSettings Parameter required for enabling COS access.
+                     * 设置<p>Specifies the parameters to be set for enabling COS access.</p>
+                     * @param _cOSSettings <p>Specifies the parameters to be set for enabling COS access.</p>
                      * 
                      */
                     void SetCOSSettings(const COSSettings& _cOSSettings);
@@ -389,15 +285,15 @@ Enter an instance value: `hive` or `flink`.
                     bool COSSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 获取<p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+                     * @return Placement <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
                      * 
                      */
                     Placement GetPlacement() const;
 
                     /**
-                     * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param _placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 设置<p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
+                     * @param _placement <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
                      * 
                      */
                     void SetPlacement(const Placement& _placement);
@@ -410,15 +306,15 @@ Enter an instance value: `hive` or `flink`.
                     bool PlacementHasBeenSet() const;
 
                     /**
-                     * 获取Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
-                     * @return SgId Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
+                     * 获取<p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+                     * @return SgId <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
                      * 
                      */
                     std::string GetSgId() const;
 
                     /**
-                     * 设置Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
-                     * @param _sgId Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
+                     * 设置<p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+                     * @param _sgId <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
                      * 
                      */
                     void SetSgId(const std::string& _sgId);
@@ -431,15 +327,15 @@ Enter an instance value: `hive` or `flink`.
                     bool SgIdHasBeenSet() const;
 
                     /**
-                     * 获取[Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
-                     * @return PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+                     * 获取<p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+                     * @return PreExecutedFileSettings <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
                      * 
                      */
                     std::vector<PreExecuteFileSettings> GetPreExecutedFileSettings() const;
 
                     /**
-                     * 设置[Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
-                     * @param _preExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+                     * 设置<p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+                     * @param _preExecutedFileSettings <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
                      * 
                      */
                     void SetPreExecutedFileSettings(const std::vector<PreExecuteFileSettings>& _preExecutedFileSettings);
@@ -452,23 +348,15 @@ Enter an instance value: `hive` or `flink`.
                     bool PreExecutedFileSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
-                     * @return AutoRenew Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
+                     * 获取<p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
+                     * @return AutoRenew <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
                      * 
                      */
                     uint64_t GetAutoRenew() const;
 
                     /**
-                     * 设置Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
-                     * @param _autoRenew Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
+                     * 设置<p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
+                     * @param _autoRenew <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
                      * 
                      */
                     void SetAutoRenew(const uint64_t& _autoRenew);
@@ -481,15 +369,15 @@ Enter an instance value: `hive` or `flink`.
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
-                     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * 获取<p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+                     * @return ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
                      * 
                      */
                     std::string GetClientToken() const;
 
                     /**
-                     * 设置Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
-                     * @param _clientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * 设置<p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+                     * @param _clientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
                      * 
                      */
                     void SetClientToken(const std::string& _clientToken);
@@ -502,23 +390,15 @@ Enter an instance value: `hive` or `flink`.
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
-                     * @return NeedMasterWan Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
+                     * 获取<p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+                     * @return NeedMasterWan <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
                      * 
                      */
                     std::string GetNeedMasterWan() const;
 
                     /**
-                     * 设置Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
-                     * @param _needMasterWan Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
+                     * 设置<p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+                     * @param _needMasterWan <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
                      * 
                      */
                     void SetNeedMasterWan(const std::string& _needMasterWan);
@@ -531,15 +411,15 @@ Enter an instance value: `hive` or `flink`.
                     bool NeedMasterWanHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
-                     * @return RemoteLoginAtCreate Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
+                     * 获取<p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
+                     * @return RemoteLoginAtCreate <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
                      * 
                      */
                     int64_t GetRemoteLoginAtCreate() const;
 
                     /**
-                     * 设置Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
-                     * @param _remoteLoginAtCreate Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
+                     * 设置<p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
+                     * @param _remoteLoginAtCreate <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
                      * 
                      */
                     void SetRemoteLoginAtCreate(const int64_t& _remoteLoginAtCreate);
@@ -552,15 +432,15 @@ Enter an instance value: `hive` or `flink`.
                     bool RemoteLoginAtCreateHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable secure cluster. 0: no; other values: yes.
-                     * @return CheckSecurity Whether to enable secure cluster. 0: no; other values: yes.
+                     * 获取<p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
+                     * @return CheckSecurity <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
                      * 
                      */
                     int64_t GetCheckSecurity() const;
 
                     /**
-                     * 设置Whether to enable secure cluster. 0: no; other values: yes.
-                     * @param _checkSecurity Whether to enable secure cluster. 0: no; other values: yes.
+                     * 设置<p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
+                     * @param _checkSecurity <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
                      * 
                      */
                     void SetCheckSecurity(const int64_t& _checkSecurity);
@@ -573,15 +453,15 @@ Enter an instance value: `hive` or `flink`.
                     bool CheckSecurityHasBeenSet() const;
 
                     /**
-                     * 获取Accesses to external file system.
-                     * @return ExtendFsField Accesses to external file system.
+                     * 获取<p>Specifies the external file system to be accessed.</p>
+                     * @return ExtendFsField <p>Specifies the external file system to be accessed.</p>
                      * 
                      */
                     std::string GetExtendFsField() const;
 
                     /**
-                     * 设置Accesses to external file system.
-                     * @param _extendFsField Accesses to external file system.
+                     * 设置<p>Specifies the external file system to be accessed.</p>
+                     * @param _extendFsField <p>Specifies the external file system to be accessed.</p>
                      * 
                      */
                     void SetExtendFsField(const std::string& _extendFsField);
@@ -594,15 +474,15 @@ Enter an instance value: `hive` or `flink`.
                     bool ExtendFsFieldHasBeenSet() const;
 
                     /**
-                     * 获取Tag description list. This parameter is used to bind a tag to a resource instance.
-                     * @return Tags Tag description list. This parameter is used to bind a tag to a resource instance.
+                     * 获取<p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+                     * @return Tags <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag description list. This parameter is used to bind a tag to a resource instance.
-                     * @param _tags Tag description list. This parameter is used to bind a tag to a resource instance.
+                     * 设置<p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+                     * @param _tags <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -615,19 +495,15 @@ Enter an instance value: `hive` or `flink`.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
-                     * @return DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
+                     * 获取<p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+                     * @return DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
                      * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
-                     * 设置List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
-                     * @param _disasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
+                     * 设置<p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+                     * @param _disasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
                      * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
@@ -640,15 +516,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
-                     * @return CbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+                     * 获取<p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
+                     * @return CbsEncrypt <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
                      * 
                      */
                     uint64_t GetCbsEncrypt() const;
 
                     /**
-                     * 设置CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
-                     * @param _cbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+                     * 设置<p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
+                     * @param _cbsEncrypt <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
                      * 
                      */
                     void SetCbsEncrypt(const uint64_t& _cbsEncrypt);
@@ -661,27 +537,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
                     bool CbsEncryptHasBeenSet() const;
 
                     /**
-                     * 获取Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
-                     * @return MetaType Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+                     * 获取<p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+                     * @return MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
                      * 
                      */
                     std::string GetMetaType() const;
 
                     /**
-                     * 设置Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
-                     * @param _metaType Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+                     * 设置<p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+                     * @param _metaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
                      * 
                      */
                     void SetMetaType(const std::string& _metaType);
@@ -694,15 +558,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
                     bool MetaTypeHasBeenSet() const;
 
                     /**
-                     * 获取EMR-MetaDB instance
-                     * @return UnifyMetaInstanceId EMR-MetaDB instance
+                     * 获取<p>EMR-MetaDB instance.</p>
+                     * @return UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
                      * 
                      */
                     std::string GetUnifyMetaInstanceId() const;
 
                     /**
-                     * 设置EMR-MetaDB instance
-                     * @param _unifyMetaInstanceId EMR-MetaDB instance
+                     * 设置<p>EMR-MetaDB instance.</p>
+                     * @param _unifyMetaInstanceId <p>EMR-MetaDB instance.</p>
                      * 
                      */
                     void SetUnifyMetaInstanceId(const std::string& _unifyMetaInstanceId);
@@ -715,15 +579,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
                     bool UnifyMetaInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom MetaDB instance information
-                     * @return MetaDBInfo Custom MetaDB instance information
+                     * 获取<p>Custom MetaDB information.</p>
+                     * @return MetaDBInfo <p>Custom MetaDB information.</p>
                      * 
                      */
                     CustomMetaInfo GetMetaDBInfo() const;
 
                     /**
-                     * 设置Custom MetaDB instance information
-                     * @param _metaDBInfo Custom MetaDB instance information
+                     * 设置<p>Custom MetaDB information.</p>
+                     * @param _metaDBInfo <p>Custom MetaDB information.</p>
                      * 
                      */
                     void SetMetaDBInfo(const CustomMetaInfo& _metaDBInfo);
@@ -736,15 +600,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
                     bool MetaDBInfoHasBeenSet() const;
 
                     /**
-                     * 获取Custom application role.
-                     * @return ApplicationRole Custom application role.
+                     * 获取<p>Custom application role.</p>
+                     * @return ApplicationRole <p>Custom application role.</p>
                      * 
                      */
                     std::string GetApplicationRole() const;
 
                     /**
-                     * 设置Custom application role.
-                     * @param _applicationRole Custom application role.
+                     * 设置<p>Custom application role.</p>
+                     * @param _applicationRole <p>Custom application role.</p>
                      * 
                      */
                     void SetApplicationRole(const std::string& _applicationRole);
@@ -757,31 +621,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
                     bool ApplicationRoleHasBeenSet() const;
 
                     /**
-                     * 获取Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
-                     * @return SceneName Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+                     * 获取<p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
+                     * @return SceneName <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
                      * 
                      */
                     std::string GetSceneName() const;
 
                     /**
-                     * 设置Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
-                     * @param _sceneName Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+                     * 设置<p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
+                     * @param _sceneName <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
                      * 
                      */
                     void SetSceneName(const std::string& _sceneName);
@@ -794,15 +642,15 @@ Hadoop-Hbase
                     bool SceneNameHasBeenSet() const;
 
                     /**
-                     * 获取Shared component information
-                     * @return ExternalService Shared component information
+                     * 获取<p>Shared component information.</p>
+                     * @return ExternalService <p>Shared component information.</p>
                      * 
                      */
                     std::vector<ExternalService> GetExternalService() const;
 
                     /**
-                     * 设置Shared component information
-                     * @param _externalService Shared component information
+                     * 设置<p>Shared component information.</p>
+                     * @param _externalService <p>Shared component information.</p>
                      * 
                      */
                     void SetExternalService(const std::vector<ExternalService>& _externalService);
@@ -815,15 +663,15 @@ Hadoop-Hbase
                     bool ExternalServiceHasBeenSet() const;
 
                     /**
-                     * 获取If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
-                     * @return VersionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+                     * 获取<p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
+                     * @return VersionID <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
                      * 
                      */
                     int64_t GetVersionID() const;
 
                     /**
-                     * 设置If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
-                     * @param _versionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+                     * 设置<p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
+                     * @param _versionID <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
                      * 
                      */
                     void SetVersionID(const int64_t& _versionID);
@@ -836,15 +684,15 @@ Hadoop-Hbase
                     bool VersionIDHasBeenSet() const;
 
                     /**
-                     * 获取`true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
-                     * @return MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     * 获取<p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
+                     * @return MultiZone <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
                      * 
                      */
                     bool GetMultiZone() const;
 
                     /**
-                     * 设置`true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
-                     * @param _multiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     * 设置<p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
+                     * @param _multiZone <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
                      * 
                      */
                     void SetMultiZone(const bool& _multiZone);
@@ -857,15 +705,15 @@ Hadoop-Hbase
                     bool MultiZoneHasBeenSet() const;
 
                     /**
-                     * 获取Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
-                     * @return MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     * 获取<p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+                     * @return MultiZoneSettings <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
                      * 
                      */
                     std::vector<MultiZoneSetting> GetMultiZoneSettings() const;
 
                     /**
-                     * 设置Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
-                     * @param _multiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     * 设置<p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+                     * @param _multiZoneSettings <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
                      * 
                      */
                     void SetMultiZoneSettings(const std::vector<MultiZoneSetting>& _multiZoneSettings);
@@ -878,15 +726,15 @@ Hadoop-Hbase
                     bool MultiZoneSettingsHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
-                     * @return CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * 获取<p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+                     * @return CosBucket <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
                      * 
                      */
                     std::string GetCosBucket() const;
 
                     /**
-                     * 设置COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
-                     * @param _cosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * 设置<p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+                     * @param _cosBucket <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
                      * 
                      */
                     void SetCosBucket(const std::string& _cosBucket);
@@ -899,15 +747,15 @@ Hadoop-Hbase
                     bool CosBucketHasBeenSet() const;
 
                     /**
-                     * 获取Node identifier information: currently used only in Terraform.
-                     * @return NodeMarks Node identifier information: currently used only in Terraform.
+                     * 获取<p>Node flag information, which is currently only provided for the Terraform platform.</p>
+                     * @return NodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
                      * 
                      */
                     std::vector<NodeMark> GetNodeMarks() const;
 
                     /**
-                     * 设置Node identifier information: currently used only in Terraform.
-                     * @param _nodeMarks Node identifier information: currently used only in Terraform.
+                     * 设置<p>Node flag information, which is currently only provided for the Terraform platform.</p>
+                     * @param _nodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
                      * 
                      */
                     void SetNodeMarks(const std::vector<NodeMark>& _nodeMarks);
@@ -920,15 +768,15 @@ Hadoop-Hbase
                     bool NodeMarksHasBeenSet() const;
 
                     /**
-                     * 获取CLB id
-                     * @return LoadBalancerId CLB id
+                     * 获取<p>CLB id</p>
+                     * @return LoadBalancerId <p>CLB id</p>
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB id
-                     * @param _loadBalancerId CLB id
+                     * 设置<p>CLB id</p>
+                     * @param _loadBalancerId <p>CLB id</p>
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -940,255 +788,379 @@ Hadoop-Hbase
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Database type. Valid values: mysql8/tdsql8.</p>
+                     * @return DefaultMetaVersion <p>Database type. Valid values: mysql8/tdsql8.</p>
+                     * 
+                     */
+                    std::string GetDefaultMetaVersion() const;
+
+                    /**
+                     * 设置<p>Database type. Valid values: mysql8/tdsql8.</p>
+                     * @param _defaultMetaVersion <p>Database type. Valid values: mysql8/tdsql8.</p>
+                     * 
+                     */
+                    void SetDefaultMetaVersion(const std::string& _defaultMetaVersion);
+
+                    /**
+                     * 判断参数 DefaultMetaVersion 是否已赋值
+                     * @return DefaultMetaVersion 是否已赋值
+                     * 
+                     */
+                    bool DefaultMetaVersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+                     * @return NeedCdbAudit <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+                     * 
+                     */
+                    int64_t GetNeedCdbAudit() const;
+
+                    /**
+                     * 设置<p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+                     * @param _needCdbAudit <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+                     * 
+                     */
+                    void SetNeedCdbAudit(const int64_t& _needCdbAudit);
+
+                    /**
+                     * 判断参数 NeedCdbAudit 是否已赋值
+                     * @return NeedCdbAudit 是否已赋值
+                     * 
+                     */
+                    bool NeedCdbAuditHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Source IP address, which is specified in the security group.</p>
+                     * @return SgIP <p>Source IP address, which is specified in the security group.</p>
+                     * 
+                     */
+                    std::string GetSgIP() const;
+
+                    /**
+                     * 设置<p>Source IP address, which is specified in the security group.</p>
+                     * @param _sgIP <p>Source IP address, which is specified in the security group.</p>
+                     * 
+                     */
+                    void SetSgIP(const std::string& _sgIP);
+
+                    /**
+                     * 判断参数 SgIP 是否已赋值
+                     * @return SgIP 是否已赋值
+                     * 
+                     */
+                    bool SgIPHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Partition of a partition placement group.</p>
+                     * @return PartitionNumber <p>Partition of a partition placement group.</p>
+                     * 
+                     */
+                    int64_t GetPartitionNumber() const;
+
+                    /**
+                     * 设置<p>Partition of a partition placement group.</p>
+                     * @param _partitionNumber <p>Partition of a partition placement group.</p>
+                     * 
+                     */
+                    void SetPartitionNumber(const int64_t& _partitionNumber);
+
+                    /**
+                     * 判断参数 PartitionNumber 是否已赋值
+                     * @return PartitionNumber 是否已赋值
+                     * 
+                     */
+                    bool PartitionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+                     * @return WebUiVersion <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+                     * 
+                     */
+                    int64_t GetWebUiVersion() const;
+
+                    /**
+                     * 设置<p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+                     * @param _webUiVersion <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+                     * 
+                     */
+                    void SetWebUiVersion(const int64_t& _webUiVersion);
+
+                    /**
+                     * 判断参数 WebUiVersion 是否已赋值
+                     * @return WebUiVersion 是否已赋值
+                     * 
+                     */
+                    bool WebUiVersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+                     * @return CbsSysEncrypt <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+                     * 
+                     */
+                    int64_t GetCbsSysEncrypt() const;
+
+                    /**
+                     * 设置<p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+                     * @param _cbsSysEncrypt <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+                     * 
+                     */
+                    void SetCbsSysEncrypt(const int64_t& _cbsSysEncrypt);
+
+                    /**
+                     * 判断参数 CbsSysEncrypt 是否已赋值
+                     * @return CbsSysEncrypt 是否已赋值
+                     * 
+                     */
+                    bool CbsSysEncryptHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Product ID. Different product IDs stand for different EMR product versions. Valid range:
-51: STARROCKS-V1.4.0
-54: STARROCKS-V2.0.0
-27: KAFKA-V1.0.0
-50: KAFKA-V2.0.0
-16: EMR-V2.3.0
-20: EMR-V2.5.0
-30: EMR-V2.6.0
-38: EMR-V2.7.0
-25: EMR-V3.1.0
-33: EMR-V3.2.1
-34: EMR-V3.3.0
-37: EMR-V3.4.0
-44: EMR-V3.5.0
-53: EMR-V3.6.0
+                     * <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
                      */
                     uint64_t m_productId;
                     bool m_productIdHasBeenSet;
 
                     /**
-                     * List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-Enter an instance value: `hive` or `flink`.
+                     * <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
                      */
                     std::vector<std::string> m_software;
                     bool m_softwareHasBeenSet;
 
                     /**
-                     * Whether to enable high node availability. Valid values:
-<li>0: does not enable high availability of node.</li>
-<li>1: enables high availability of node.</li>
+                     * <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
                      */
                     uint64_t m_supportHA;
                     bool m_supportHAHasBeenSet;
 
                     /**
-                     * Instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
+                     * <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+                     * <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Purchase duration of instance, which needs to be used together with `TimeUnit`.
-<li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-<li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+                     * <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Time unit of instance purchase duration. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+                     * <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-<li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-<li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+                     * <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
                      */
                     LoginSettings m_loginSettings;
                     bool m_loginSettingsHasBeenSet;
 
                     /**
-                     * Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
                      */
                     VPCSettings m_vPCSettings;
                     bool m_vPCSettingsHasBeenSet;
 
                     /**
-                     * Node resource specification.
+                     * <p>Node resource specifications.</p>
                      */
                     NewResourceSpec m_resourceSpec;
                     bool m_resourceSpecHasBeenSet;
 
                     /**
-                     * Parameter required for enabling COS access.
+                     * <p>Specifies the parameters to be set for enabling COS access.</p>
                      */
                     COSSettings m_cOSSettings;
                     bool m_cOSSettingsHasBeenSet;
 
                     /**
-                     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
                      */
                     Placement m_placement;
                     bool m_placementHasBeenSet;
 
                     /**
-                     * Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
+                     * <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
                      */
                     std::string m_sgId;
                     bool m_sgIdHasBeenSet;
 
                     /**
-                     * [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+                     * <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
                      */
                     std::vector<PreExecuteFileSettings> m_preExecutedFileSettings;
                     bool m_preExecutedFileSettingsHasBeenSet;
 
                     /**
-                     * Whether auto-renewal is enabled. Valid values:
-<li>0: auto-renewal not enabled.</li>
-<li>1: auto-renewal enabled.</li>
+                     * <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
                      */
                     uint64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * Whether to enable public IP access for master node. Valid values:
-<li>NEED_MASTER_WAN: enables public IP for master node.</li>
-<li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
+                     * <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
                      */
                     std::string m_needMasterWan;
                     bool m_needMasterWanHasBeenSet;
 
                     /**
-                     * Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
+                     * <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
                      */
                     int64_t m_remoteLoginAtCreate;
                     bool m_remoteLoginAtCreateHasBeenSet;
 
                     /**
-                     * Whether to enable secure cluster. 0: no; other values: yes.
+                     * <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
                      */
                     int64_t m_checkSecurity;
                     bool m_checkSecurityHasBeenSet;
 
                     /**
-                     * Accesses to external file system.
+                     * <p>Specifies the external file system to be accessed.</p>
                      */
                     std::string m_extendFsField;
                     bool m_extendFsFieldHasBeenSet;
 
                     /**
-                     * Tag description list. This parameter is used to bind a tag to a resource instance.
+                     * <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * List of spread placement group IDs. Only one can be specified currently.
-This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
+                     * <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
 
                     /**
-                     * CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+                     * <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
                      */
                     uint64_t m_cbsEncrypt;
                     bool m_cbsEncryptHasBeenSet;
 
                     /**
-                     * Hive-shared metadatabase type. Valid values:
-<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+                     * <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
                      */
                     std::string m_metaType;
                     bool m_metaTypeHasBeenSet;
 
                     /**
-                     * EMR-MetaDB instance
+                     * <p>EMR-MetaDB instance.</p>
                      */
                     std::string m_unifyMetaInstanceId;
                     bool m_unifyMetaInstanceIdHasBeenSet;
 
                     /**
-                     * Custom MetaDB instance information
+                     * <p>Custom MetaDB information.</p>
                      */
                     CustomMetaInfo m_metaDBInfo;
                     bool m_metaDBInfoHasBeenSet;
 
                     /**
-                     * Custom application role.
+                     * <p>Custom application role.</p>
                      */
                     std::string m_applicationRole;
                     bool m_applicationRoleHasBeenSet;
 
                     /**
-                     * Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+                     * <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
                      */
                     std::string m_sceneName;
                     bool m_sceneNameHasBeenSet;
 
                     /**
-                     * Shared component information
+                     * <p>Shared component information.</p>
                      */
                     std::vector<ExternalService> m_externalService;
                     bool m_externalServiceHasBeenSet;
 
                     /**
-                     * If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+                     * <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
                      */
                     int64_t m_versionID;
                     bool m_versionIDHasBeenSet;
 
                     /**
-                     * `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     * <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
                      */
                     bool m_multiZone;
                     bool m_multiZoneHasBeenSet;
 
                     /**
-                     * Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     * <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
                      */
                     std::vector<MultiZoneSetting> m_multiZoneSettings;
                     bool m_multiZoneSettingsHasBeenSet;
 
                     /**
-                     * COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
                      */
                     std::string m_cosBucket;
                     bool m_cosBucketHasBeenSet;
 
                     /**
-                     * Node identifier information: currently used only in Terraform.
+                     * <p>Node flag information, which is currently only provided for the Terraform platform.</p>
                      */
                     std::vector<NodeMark> m_nodeMarks;
                     bool m_nodeMarksHasBeenSet;
 
                     /**
-                     * CLB id
+                     * <p>CLB id</p>
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
+
+                    /**
+                     * <p>Database type. Valid values: mysql8/tdsql8.</p>
+                     */
+                    std::string m_defaultMetaVersion;
+                    bool m_defaultMetaVersionHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+                     */
+                    int64_t m_needCdbAudit;
+                    bool m_needCdbAuditHasBeenSet;
+
+                    /**
+                     * <p>Source IP address, which is specified in the security group.</p>
+                     */
+                    std::string m_sgIP;
+                    bool m_sgIPHasBeenSet;
+
+                    /**
+                     * <p>Partition of a partition placement group.</p>
+                     */
+                    int64_t m_partitionNumber;
+                    bool m_partitionNumberHasBeenSet;
+
+                    /**
+                     * <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+                     */
+                    int64_t m_webUiVersion;
+                    bool m_webUiVersionHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+                     */
+                    int64_t m_cbsSysEncrypt;
+                    bool m_cbsSysEncryptHasBeenSet;
 
                 };
             }

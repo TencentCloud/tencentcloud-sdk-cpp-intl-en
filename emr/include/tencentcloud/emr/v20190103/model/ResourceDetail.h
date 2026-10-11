@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPUs.
-                     * @return Cpu Number of CPUs.
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPUs.
-                     * @param _cpu Number of CPUs.
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -274,7 +274,7 @@ namespace TencentCloud
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Number of CPUs.
+                     * Number of CPU cores.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;

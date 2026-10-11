@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Dynamically generated change detail entries.
+                * Dynamically generated change detailed items.
                 */
                 class DiffDetailItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AttributeHasBeenSet() const;
 
                     /**
-                     * 获取Currently effective.
-                     * @return InEffect Currently effective.
+                     * 获取Effective item.
+                     * @return InEffect Effective item.
                      * 
                      */
                     std::string GetInEffect() const;
 
                     /**
-                     * 设置Currently effective.
-                     * @param _inEffect Currently effective.
+                     * 设置Effective item.
+                     * @param _inEffect Effective item.
                      * 
                      */
                     void SetInEffect(const std::string& _inEffect);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InEffectHasBeenSet() const;
 
                     /**
-                     * 获取To be effective.
-                     * @return PendingEffectiveness To be effective.
+                     * 获取Pending effective.
+                     * @return PendingEffectiveness Pending effective.
                      * 
                      */
                     std::string GetPendingEffectiveness() const;
 
                     /**
-                     * 设置To be effective.
-                     * @param _pendingEffectiveness To be effective.
+                     * 设置Pending effective.
+                     * @param _pendingEffectiveness Pending effective.
                      * 
                      */
                     void SetPendingEffectiveness(const std::string& _pendingEffectiveness);
@@ -328,13 +328,13 @@ namespace TencentCloud
                     bool m_attributeHasBeenSet;
 
                     /**
-                     * Currently effective.
+                     * Effective item.
                      */
                     std::string m_inEffect;
                     bool m_inEffectHasBeenSet;
 
                     /**
-                     * To be effective.
+                     * Pending effective.
                      */
                     std::string m_pendingEffectiveness;
                     bool m_pendingEffectivenessHasBeenSet;

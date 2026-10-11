@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VPC parameters
+                * VPC parameter.
                 */
                 class VPCSettings : public AbstractModel
                 {

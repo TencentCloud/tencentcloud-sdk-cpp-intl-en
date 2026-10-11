@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Key-value pair, primarily used for filtering
+                * Key-value pair, which is mainly for filtering.
                 */
                 class KeyValue : public AbstractModel
                 {

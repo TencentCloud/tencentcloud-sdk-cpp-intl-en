@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
-                     * @return StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+                     * 获取Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
+                     * @return StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
                      * 
                      */
                     int64_t GetStrategyType() const;
 
                     /**
-                     * 设置Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
-                     * @param _strategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+                     * 设置Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
+                     * @param _strategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
                      * 
                      */
                     void SetStrategyType(const int64_t& _strategyType);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+                     * Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
                      */
                     int64_t m_strategyType;
                     bool m_strategyTypeHasBeenSet;

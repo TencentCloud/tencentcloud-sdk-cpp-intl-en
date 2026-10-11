@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scheduled scaling of monthly recurring task policy
+                * Monthly repetition task policy for scheduled scaling.
                 */
                 class MonthRepeatStrategy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specific time for repetition task execution, such as 01:02:00.
-                     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+                     * 获取Specific time for repetition task execution, for example, 01:02:00.
+                     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
                      * 
                      */
                     std::string GetExecuteAtTimeOfDay() const;
 
                     /**
-                     * 设置Specific time for repetition task execution, such as 01:02:00.
-                     * @param _executeAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+                     * 设置Specific time for repetition task execution, for example, 01:02:00.
+                     * @param _executeAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
                      * 
                      */
                     void SetExecuteAtTimeOfDay(const std::string& _executeAtTimeOfDay);
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool ExecuteAtTimeOfDayHasBeenSet() const;
 
                     /**
-                     * 获取Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DaysOfMonthRange Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
+                     * @return DaysOfMonthRange Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
                      * 
                      */
                     std::vector<uint64_t> GetDaysOfMonthRange() const;
 
                     /**
-                     * 设置Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _daysOfMonthRange Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
+                     * @param _daysOfMonthRange Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
                      * 
                      */
                     void SetDaysOfMonthRange(const std::vector<uint64_t>& _daysOfMonthRange);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Specific time for repetition task execution, such as 01:02:00.
+                     * Specific time for repetition task execution, for example, 01:02:00.
                      */
                     std::string m_executeAtTimeOfDay;
                     bool m_executeAtTimeOfDayHasBeenSet;
 
                     /**
-                     * Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
                      */
                     std::vector<uint64_t> m_daysOfMonthRange;
                     bool m_daysOfMonthRangeHasBeenSet;

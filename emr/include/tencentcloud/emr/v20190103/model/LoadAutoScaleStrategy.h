@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Automatic scaling rule based on load metrics
+                * Automatic scaling rule based on load metrics.
                 */
                 class LoadAutoScaleStrategy : public AbstractModel
                 {
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取Cooling time for a rule to take effect.
-                     * @return CalmDownTime Cooling time for a rule to take effect.
+                     * 获取Cooldown time for a rule to take effect.
+                     * @return CalmDownTime Cooldown time for a rule to take effect.
                      * 
                      */
                     int64_t GetCalmDownTime() const;
 
                     /**
-                     * 设置Cooling time for a rule to take effect.
-                     * @param _calmDownTime Cooling time for a rule to take effect.
+                     * 设置Cooldown time for a rule to take effect.
+                     * @param _calmDownTime Cooldown time for a rule to take effect.
                      * 
                      */
                     void SetCalmDownTime(const int64_t& _calmDownTime);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool CalmDownTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scaling action. 1: scale-out, 2: scale-in.
-                     * @return ScaleAction Scaling action. 1: scale-out, 2: scale-in.
+                     * 获取Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
+                     * @return ScaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
                      * 
                      */
                     int64_t GetScaleAction() const;
 
                     /**
-                     * 设置Scaling action. 1: scale-out, 2: scale-in.
-                     * @param _scaleAction Scaling action. 1: scale-out, 2: scale-in.
+                     * 设置Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
+                     * @param _scaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
                      * 
                      */
                     void SetScaleAction(const int64_t& _scaleAction);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ScaleActionHasBeenSet() const;
 
                     /**
-                     * 获取Scaling amount each time the rule takes effect.
-                     * @return ScaleNum Scaling amount each time the rule takes effect.
+                     * 获取Number of scaling items each time the rule takes effect.
+                     * @return ScaleNum Number of scaling items each time the rule takes effect.
                      * 
                      */
                     int64_t GetScaleNum() const;
 
                     /**
-                     * 设置Scaling amount each time the rule takes effect.
-                     * @param _scaleNum Scaling amount each time the rule takes effect.
+                     * 设置Number of scaling items each time the rule takes effect.
+                     * @param _scaleNum Number of scaling items each time the rule takes effect.
                      * 
                      */
                     void SetScaleNum(const int64_t& _scaleNum);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ScaleNumHasBeenSet() const;
 
                     /**
-                     * 获取Metric processing method. 1: MAX, 2: MIN, 3: AVG.
-                     * @return ProcessMethod Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+                     * 获取Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
+                     * @return ProcessMethod Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
                      * 
                      */
                     int64_t GetProcessMethod() const;
 
                     /**
-                     * 设置Metric processing method. 1: MAX, 2: MIN, 3: AVG.
-                     * @param _processMethod Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+                     * 设置Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
+                     * @param _processMethod Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
                      * 
                      */
                     void SetProcessMethod(const int64_t& _processMethod);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool ProcessMethodHasBeenSet() const;
 
                     /**
-                     * 获取Rule priority, which is not applicable during adding. The default is auto-increment.
-                     * @return Priority Rule priority, which is not applicable during adding. The default is auto-increment.
+                     * 获取Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
+                     * @return Priority Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Rule priority, which is not applicable during adding. The default is auto-increment.
-                     * @param _priority Rule priority, which is not applicable during adding. The default is auto-increment.
+                     * 设置Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
+                     * @param _priority Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取Rule status. 1: enabled, 3: disabled.
-                     * @return StrategyStatus Rule status. 1: enabled, 3: disabled.
+                     * 获取Rule status. Valid values: 1 (enabled) and 3 (disabled).
+                     * @return StrategyStatus Rule status. Valid values: 1 (enabled) and 3 (disabled).
                      * 
                      */
                     int64_t GetStrategyStatus() const;
 
                     /**
-                     * 设置Rule status. 1: enabled, 3: disabled.
-                     * @param _strategyStatus Rule status. 1: enabled, 3: disabled.
+                     * 设置Rule status. Valid values: 1 (enabled) and 3 (disabled).
+                     * @param _strategyStatus Rule status. Valid values: 1 (enabled) and 3 (disabled).
                      * 
                      */
                     void SetStrategyStatus(const int64_t& _strategyStatus);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool StrategyStatusHasBeenSet() const;
 
                     /**
-                     * 获取Specified Yarn Node Label for rule scale-out.
-                     * @return YarnNodeLabel Specified Yarn Node Label for rule scale-out.
+                     * 获取YARN node label specified for the rule-based scale-out.
+                     * @return YarnNodeLabel YARN node label specified for the rule-based scale-out.
                      * 
                      */
                     std::string GetYarnNodeLabel() const;
 
                     /**
-                     * 设置Specified Yarn Node Label for rule scale-out.
-                     * @param _yarnNodeLabel Specified Yarn Node Label for rule scale-out.
+                     * 设置YARN node label specified for the rule-based scale-out.
+                     * @param _yarnNodeLabel YARN node label specified for the rule-based scale-out.
                      * 
                      */
                     void SetYarnNodeLabel(const std::string& _yarnNodeLabel);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool YarnNodeLabelHasBeenSet() const;
 
                     /**
-                     * 获取Effective time of the rule
-                     * @return PeriodValid Effective time of the rule
+                     * 获取Effective time of the rule.
+                     * @return PeriodValid Effective time of the rule.
                      * 
                      */
                     std::string GetPeriodValid() const;
 
                     /**
-                     * 设置Effective time of the rule
-                     * @param _periodValid Effective time of the rule
+                     * 设置Effective time of the rule.
+                     * @param _periodValid Effective time of the rule.
                      * 
                      */
                     void SetPeriodValid(const std::string& _periodValid);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool PeriodValidHasBeenSet() const;
 
                     /**
-                     * 获取Graceful scale-in switch
-                     * @return GraceDownFlag Graceful scale-in switch
+                     * 获取Graceful scale-in switch.
+                     * @return GraceDownFlag Graceful scale-in switch.
                      * 
                      */
                     bool GetGraceDownFlag() const;
 
                     /**
-                     * 设置Graceful scale-in switch
-                     * @param _graceDownFlag Graceful scale-in switch
+                     * 设置Graceful scale-in switch.
+                     * @param _graceDownFlag Graceful scale-in switch.
                      * 
                      */
                     void SetGraceDownFlag(const bool& _graceDownFlag);
@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool GraceDownFlagHasBeenSet() const;
 
                     /**
-                     * 获取Graceful scale-in wait time
-                     * @return GraceDownTime Graceful scale-in wait time
+                     * 获取Graceful scale-in wait time.
+                     * @return GraceDownTime Graceful scale-in wait time.
                      * 
                      */
                     int64_t GetGraceDownTime() const;
 
                     /**
-                     * 设置Graceful scale-in wait time
-                     * @param _graceDownTime Graceful scale-in wait time
+                     * 设置Graceful scale-in wait time.
+                     * @param _graceDownTime Graceful scale-in wait time.
                      * 
                      */
                     void SetGraceDownTime(const int64_t& _graceDownTime);
@@ -301,23 +301,36 @@ namespace TencentCloud
                     bool GraceDownTimeHasBeenSet() const;
 
                     /**
-                     * 获取Bound tag list
+                     * 获取Whether to enable task protection.
+                     * @return GraceDownProtectFlag Whether to enable task protection.
+                     * 
+                     */
+                    bool GetGraceDownProtectFlag() const;
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Bound tag list
+                    /**
+                     * 设置Whether to enable task protection.
+                     * @param _graceDownProtectFlag Whether to enable task protection.
+                     * 
+                     */
+                    void SetGraceDownProtectFlag(const bool& _graceDownProtectFlag);
 
-Note: This field may return null, indicating that no valid values can be obtained.
+                    /**
+                     * 判断参数 GraceDownProtectFlag 是否已赋值
+                     * @return GraceDownProtectFlag 是否已赋值
+                     * 
+                     */
+                    bool GraceDownProtectFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Bound tag list.
+                     * @return Tags Bound tag list.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bound tag list.
+                     * @param _tags Bound tag list.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -351,31 +364,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigGroupAssignedHasBeenSet() const;
 
                     /**
-                     * 获取Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
-                     * @return MeasureMethod Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+                     * 获取Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
+                     * @return MeasureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
                      * 
                      */
                     std::string GetMeasureMethod() const;
 
                     /**
-                     * 设置Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
-                     * @param _measureMethod Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+                     * 设置Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
+                     * @param _measureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
                      * 
                      */
                     void SetMeasureMethod(const std::string& _measureMethod);
@@ -388,19 +401,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MeasureMethodHasBeenSet() const;
 
                     /**
-                     * 获取Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SoftDeployDesc Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
+                     * @return SoftDeployDesc List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
                      * 
                      */
                     std::vector<std::string> GetSoftDeployDesc() const;
 
                     /**
-                     * 设置Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _softDeployDesc Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
+                     * @param _softDeployDesc List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
                      * 
                      */
                     void SetSoftDeployDesc(const std::vector<std::string>& _softDeployDesc);
@@ -413,15 +422,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SoftDeployDescHasBeenSet() const;
 
                     /**
-                     * 获取Startup process list, such as ["NodeManager"].
-                     * @return ServiceNodeDesc Startup process list, such as ["NodeManager"].
+                     * 获取Startup process list, for example, ["NodeManager"].
+                     * @return ServiceNodeDesc Startup process list, for example, ["NodeManager"].
                      * 
                      */
                     std::string GetServiceNodeDesc() const;
 
                     /**
-                     * 设置Startup process list, such as ["NodeManager"].
-                     * @param _serviceNodeDesc Startup process list, such as ["NodeManager"].
+                     * 设置Startup process list, for example, ["NodeManager"].
+                     * @param _serviceNodeDesc Startup process list, for example, ["NodeManager"].
                      * 
                      */
                     void SetServiceNodeDesc(const std::string& _serviceNodeDesc);
@@ -435,18 +444,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServiceNodeInfo Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetServiceNodeInfo() const;
 
                     /**
                      * 设置Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serviceNodeInfo Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServiceNodeInfo(const std::vector<int64_t>& _serviceNodeInfo);
@@ -459,19 +464,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServiceNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+                     * @return SoftDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     std::vector<int64_t> GetSoftDeployInfo() const;
 
                     /**
-                     * 设置Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _softDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+                     * @param _softDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     void SetSoftDeployInfo(const std::vector<int64_t>& _softDeployInfo);
@@ -484,19 +485,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SoftDeployInfoHasBeenSet() const;
 
                     /**
-                     * 获取Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadMetricsConditions Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Multi-metric triggering condition.
+                     * @return LoadMetricsConditions Multi-metric triggering condition.
                      * 
                      */
                     LoadMetricsConditions GetLoadMetricsConditions() const;
 
                     /**
-                     * 设置Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _loadMetricsConditions Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Multi-metric triggering condition.
+                     * @param _loadMetricsConditions Multi-metric triggering condition.
                      * 
                      */
                     void SetLoadMetricsConditions(const LoadMetricsConditions& _loadMetricsConditions);
@@ -530,15 +527,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Soft (for example, YARN).
-                     * @return Soft Soft (for example, YARN).
+                     * 获取Soft. Example value: yarn.
+                     * @return Soft Soft. Example value: yarn.
                      * 
                      */
                     std::string GetSoft() const;
 
                     /**
-                     * 设置Soft (for example, YARN).
-                     * @param _soft Soft (for example, YARN).
+                     * 设置Soft. Example value: yarn.
+                     * @param _soft Soft. Example value: yarn.
                      * 
                      */
                     void SetSoft(const std::string& _soft);
@@ -549,6 +546,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool SoftHasBeenSet() const;
+
+                    /**
+                     * 获取Task protection time.
+                     * @return GraceDownProtectTime Task protection time.
+                     * 
+                     */
+                    int64_t GetGraceDownProtectTime() const;
+
+                    /**
+                     * 设置Task protection time.
+                     * @param _graceDownProtectTime Task protection time.
+                     * 
+                     */
+                    void SetGraceDownProtectTime(const int64_t& _graceDownProtectTime);
+
+                    /**
+                     * 判断参数 GraceDownProtectTime 是否已赋值
+                     * @return GraceDownProtectTime 是否已赋值
+                     * 
+                     */
+                    bool GraceDownProtectTimeHasBeenSet() const;
 
                 private:
 
@@ -565,69 +583,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * Cooling time for a rule to take effect.
+                     * Cooldown time for a rule to take effect.
                      */
                     int64_t m_calmDownTime;
                     bool m_calmDownTimeHasBeenSet;
 
                     /**
-                     * Scaling action. 1: scale-out, 2: scale-in.
+                     * Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
                      */
                     int64_t m_scaleAction;
                     bool m_scaleActionHasBeenSet;
 
                     /**
-                     * Scaling amount each time the rule takes effect.
+                     * Number of scaling items each time the rule takes effect.
                      */
                     int64_t m_scaleNum;
                     bool m_scaleNumHasBeenSet;
 
                     /**
-                     * Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+                     * Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
                      */
                     int64_t m_processMethod;
                     bool m_processMethodHasBeenSet;
 
                     /**
-                     * Rule priority, which is not applicable during adding. The default is auto-increment.
+                     * Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * Rule status. 1: enabled, 3: disabled.
+                     * Rule status. Valid values: 1 (enabled) and 3 (disabled).
                      */
                     int64_t m_strategyStatus;
                     bool m_strategyStatusHasBeenSet;
 
                     /**
-                     * Specified Yarn Node Label for rule scale-out.
+                     * YARN node label specified for the rule-based scale-out.
                      */
                     std::string m_yarnNodeLabel;
                     bool m_yarnNodeLabelHasBeenSet;
 
                     /**
-                     * Effective time of the rule
+                     * Effective time of the rule.
                      */
                     std::string m_periodValid;
                     bool m_periodValidHasBeenSet;
 
                     /**
-                     * Graceful scale-in switch
+                     * Graceful scale-in switch.
                      */
                     bool m_graceDownFlag;
                     bool m_graceDownFlagHasBeenSet;
 
                     /**
-                     * Graceful scale-in wait time
+                     * Graceful scale-in wait time.
                      */
                     int64_t m_graceDownTime;
                     bool m_graceDownTimeHasBeenSet;
 
                     /**
-                     * Bound tag list
+                     * Whether to enable task protection.
+                     */
+                    bool m_graceDownProtectFlag;
+                    bool m_graceDownProtectFlagHasBeenSet;
 
-Note: This field may return null, indicating that no valid values can be obtained.
+                    /**
+                     * Bound tag list.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -639,45 +661,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_configGroupAssignedHasBeenSet;
 
                     /**
-                     * Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+                     * Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
                      */
                     std::string m_measureMethod;
                     bool m_measureMethodHasBeenSet;
 
                     /**
-                     * Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
                      */
                     std::vector<std::string> m_softDeployDesc;
                     bool m_softDeployDescHasBeenSet;
 
                     /**
-                     * Startup process list, such as ["NodeManager"].
+                     * Startup process list, for example, ["NodeManager"].
                      */
                     std::string m_serviceNodeDesc;
                     bool m_serviceNodeDescHasBeenSet;
 
                     /**
                      * Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_serviceNodeInfo;
                     bool m_serviceNodeInfoHasBeenSet;
 
                     /**
-                     * Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
                      */
                     std::vector<int64_t> m_softDeployInfo;
                     bool m_softDeployInfoHasBeenSet;
 
                     /**
-                     * Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Multi-metric triggering condition.
                      */
                     LoadMetricsConditions m_loadMetricsConditions;
                     bool m_loadMetricsConditionsHasBeenSet;
@@ -689,10 +707,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Soft (for example, YARN).
+                     * Soft. Example value: yarn.
                      */
                     std::string m_soft;
                     bool m_softHasBeenSet;
+
+                    /**
+                     * Task protection time.
+                     */
+                    int64_t m_graceDownProtectTime;
+                    bool m_graceDownProtectTimeHasBeenSet;
 
                 };
             }

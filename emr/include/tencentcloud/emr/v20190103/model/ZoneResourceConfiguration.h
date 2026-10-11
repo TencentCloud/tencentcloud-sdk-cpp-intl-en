@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AZ configurations
+                * AZ configuration information.
                 */
                 class ZoneResourceConfiguration : public AbstractModel
                 {
@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
+                     * @return VirtualPrivateCloud VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
                      * 
                      */
                     VirtualPrivateCloud GetVirtualPrivateCloud() const;
 
                     /**
-                     * 设置The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _virtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
+                     * @param _virtualPrivateCloud VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
                      * 
                      */
                     void SetVirtualPrivateCloud(const VirtualPrivateCloud& _virtualPrivateCloud);
@@ -75,19 +71,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VirtualPrivateCloudHasBeenSet() const;
 
                     /**
-                     * 获取The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
+                     * @return Placement Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
                      * 
                      */
                     Placement GetPlacement() const;
 
                     /**
-                     * 设置The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
+                     * @param _placement Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
                      * 
                      */
                     void SetPlacement(const Placement& _placement);
@@ -100,19 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PlacementHasBeenSet() const;
 
                     /**
-                     * 获取The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AllNodeResourceSpec The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifications of all node resources.
+                     * @return AllNodeResourceSpec Specifications of all node resources.
                      * 
                      */
                     AllNodeResourceSpec GetAllNodeResourceSpec() const;
 
                     /**
-                     * 设置The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _allNodeResourceSpec The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifications of all node resources.
+                     * @param _allNodeResourceSpec Specifications of all node resources.
                      * 
                      */
                     void SetAllNodeResourceSpec(const AllNodeResourceSpec& _allNodeResourceSpec);
@@ -125,11 +113,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AllNodeResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+                     * 获取In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-                     * @return ZoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+                     * @return ZoneTag In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
@@ -138,11 +126,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     std::string GetZoneTag() const;
 
                     /**
-                     * 设置Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+                     * 设置In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-                     * @param _zoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+                     * @param _zoneTag In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
@@ -160,28 +148,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
                      */
                     VirtualPrivateCloud m_virtualPrivateCloud;
                     bool m_virtualPrivateCloudHasBeenSet;
 
                     /**
-                     * The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
                      */
                     Placement m_placement;
                     bool m_placementHasBeenSet;
 
                     /**
-                     * The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifications of all node resources.
                      */
                     AllNodeResourceSpec m_allNodeResourceSpec;
                     bool m_allNodeResourceSpecHasBeenSet;
 
                     /**
-                     * Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+                     * In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>

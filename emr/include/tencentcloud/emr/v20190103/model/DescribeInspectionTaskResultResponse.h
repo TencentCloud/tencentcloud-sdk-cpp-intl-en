@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Inspection task record, encoded in Base64 format.
-                     * @return InspectionResultInfo Inspection task record, encoded in Base64 format.
+                     * 获取Inspection task record encoded in Base64 format.
+                     * @return InspectionResultInfo Inspection task record encoded in Base64 format.
                      * 
                      */
                     std::string GetInspectionResultInfo() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
-                     * @return TypeInfo Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
+                     * 获取Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
+                     * @return TypeInfo Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
                      * 
                      */
                     std::string GetTypeInfo() const;
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Inspection task record, encoded in Base64 format.
+                     * Inspection task record encoded in Base64 format.
                      */
                     std::string m_inspectionResultInfo;
                     bool m_inspectionResultInfoHasBeenSet;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
+                     * Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
                      */
                     std::string m_typeInfo;
                     bool m_typeInfoHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node model type.
+                * Node instance type.
                 */
                 class NodeSpecType : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Model series.
-                     * @return Type Model series.
+                     * 获取Instance type series.
+                     * @return Type Instance type series.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Model series.
-                     * @param _type Model series.
+                     * 设置Instance type series.
+                     * @param _type Instance type series.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Model series name.
-                     * @return TypeName Model series name.
+                     * 获取Instance type series name.
+                     * @return TypeName Instance type series name.
                      * 
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置Model series name.
-                     * @param _typeName Model series name.
+                     * 设置Instance type series name.
+                     * @param _typeName Instance type series name.
                      * 
                      */
                     void SetTypeName(const std::string& _typeName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Order.
-                     * @return Order Order.
+                     * 获取Sorting order.
+                     * @return Order Sorting order.
                      * 
                      */
                     int64_t GetOrder() const;
 
                     /**
-                     * 设置Order.
-                     * @param _order Order.
+                     * 设置Sorting order.
+                     * @param _order Sorting order.
                      * 
                      */
                     void SetOrder(const int64_t& _order);
@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceFamilies InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Array of instance families.
+                     * @return InstanceFamilies Array of instance families.
                      * 
                      */
                     std::vector<NodeSpecFamily> GetInstanceFamilies() const;
 
                     /**
-                     * 设置InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceFamilies InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Array of instance families.
+                     * @param _instanceFamilies Array of instance families.
                      * 
                      */
                     void SetInstanceFamilies(const std::vector<NodeSpecFamily>& _instanceFamilies);
@@ -138,26 +134,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Model series.
+                     * Instance type series.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Model series name.
+                     * Instance type series name.
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
 
                     /**
-                     * Order.
+                     * Sorting order.
                      */
                     int64_t m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Array of instance families.
                      */
                     std::vector<NodeSpecFamily> m_instanceFamilies;
                     bool m_instanceFamiliesHasBeenSet;

@@ -45,19 +45,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @return TimeUnit Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 获取Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @return TimeUnit Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @param _timeUnit Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 设置Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @param _timeUnit Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -70,19 +74,23 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-                     * @return TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 获取Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
+                     * @return TimeSpan Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-                     * @param _timeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 设置Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
+                     * @param _timeSpan Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -96,18 +104,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
                      * @return PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
                      * 设置Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
                      * @param _payMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -120,36 +132,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Currency.
-                     * @return Currency Currency.
-                     * 
-                     */
-                    std::string GetCurrency() const;
-
-                    /**
-                     * 设置Currency.
-                     * @param _currency Currency.
-                     * 
-                     */
-                    void SetCurrency(const std::string& _currency);
-
-                    /**
-                     * 判断参数 Currency 是否已赋值
-                     * @return Currency 是否已赋值
-                     * 
-                     */
-                    bool CurrencyHasBeenSet() const;
-
-                    /**
-                     * 获取Target node specification.
-                     * @return UpdateSpec Target node specification.
+                     * 获取
+                     * @return UpdateSpec 
                      * 
                      */
                     UpdateInstanceSettings GetUpdateSpec() const;
 
                     /**
-                     * 设置Target node specification.
-                     * @param _updateSpec Target node specification.
+                     * 设置
+                     * @param _updateSpec 
                      * 
                      */
                     void SetUpdateSpec(const UpdateInstanceSettings& _updateSpec);
@@ -162,15 +153,15 @@ namespace TencentCloud
                     bool UpdateSpecHasBeenSet() const;
 
                     /**
-                     * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 获取
+                     * @return Placement 
                      * 
                      */
                     Placement GetPlacement() const;
 
                     /**
-                     * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param _placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 设置
+                     * @param _placement 
                      * 
                      */
                     void SetPlacement(const Placement& _placement);
@@ -183,15 +174,40 @@ namespace TencentCloud
                     bool PlacementHasBeenSet() const;
 
                     /**
-                     * 获取The resource ID list for batch configuration change.
-                     * @return ResourceIdList The resource ID list for batch configuration change.
+                     * 获取Currency type. Valid values:
+<li>CNY: RMB</li>
+                     * @return Currency Currency type. Valid values:
+<li>CNY: RMB</li>
+                     * 
+                     */
+                    std::string GetCurrency() const;
+
+                    /**
+                     * 设置Currency type. Valid values:
+<li>CNY: RMB</li>
+                     * @param _currency Currency type. Valid values:
+<li>CNY: RMB</li>
+                     * 
+                     */
+                    void SetCurrency(const std::string& _currency);
+
+                    /**
+                     * 判断参数 Currency 是否已赋值
+                     * @return Currency 是否已赋值
+                     * 
+                     */
+                    bool CurrencyHasBeenSet() const;
+
+                    /**
+                     * 获取ID list of resources modified in batches.
+                     * @return ResourceIdList ID list of resources modified in batches.
                      * 
                      */
                     std::vector<std::string> GetResourceIdList() const;
 
                     /**
-                     * 设置The resource ID list for batch configuration change.
-                     * @param _resourceIdList The resource ID list for batch configuration change.
+                     * 设置ID list of resources modified in batches.
+                     * @param _resourceIdList ID list of resources modified in batches.
                      * 
                      */
                     void SetResourceIdList(const std::vector<std::string>& _resourceIdList);
@@ -206,46 +222,50 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
                      * Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Currency.
-                     */
-                    std::string m_currency;
-                    bool m_currencyHasBeenSet;
-
-                    /**
-                     * Target node specification.
+                     * 
                      */
                     UpdateInstanceSettings m_updateSpec;
                     bool m_updateSpecHasBeenSet;
 
                     /**
-                     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
                      */
                     Placement m_placement;
                     bool m_placementHasBeenSet;
 
                     /**
-                     * The resource ID list for batch configuration change.
+                     * Currency type. Valid values:
+<li>CNY: RMB</li>
+                     */
+                    std::string m_currency;
+                    bool m_currencyHasBeenSet;
+
+                    /**
+                     * ID list of resources modified in batches.
                      */
                     std::vector<std::string> m_resourceIdList;
                     bool m_resourceIdListHasBeenSet;

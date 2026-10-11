@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number
-                     * @return TotalCnt Total number
+                     * 获取Total number.
+                     * @return TotalCnt Total number.
                      * 
                      */
                     int64_t GetTotalCnt() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCntHasBeenSet() const;
 
                     /**
-                     * 获取User information list
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UserManagerUserList User information list
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取User information list.
+                     * @return UserManagerUserList User information list.
                      * 
                      */
                     std::vector<UserManagerUserBriefInfo> GetUserManagerUserList() const;
@@ -77,14 +75,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Total number
+                     * Total number.
                      */
                     int64_t m_totalCnt;
                     bool m_totalCntHasBeenSet;
 
                     /**
-                     * User information list
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * User information list.
                      */
                     std::vector<UserManagerUserBriefInfo> m_userManagerUserList;
                     bool m_userManagerUserListHasBeenSet;

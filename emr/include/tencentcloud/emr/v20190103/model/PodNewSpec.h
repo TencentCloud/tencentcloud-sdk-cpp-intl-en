@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/PodVolume.h>
 #include <tencentcloud/emr/v20190103/model/DynamicPodSpec.h>
+#include <tencentcloud/emr/v20190103/model/OtherAccountInfo.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource descriptions for container resource scale-out
+                * Resource description, which is used during a container resource scale-out.
                 */
                 class PodNewSpec : public AbstractModel
                 {
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The identifier of an external resource provider, such as "cls-a1cd23fa".
-                     * @return ResourceProviderIdentifier The identifier of an external resource provider, such as "cls-a1cd23fa".
+                     * 获取Identifier of the external resource provider, for example, "cls-a1cd23fa".
+                     * @return ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
                      * 
                      */
                     std::string GetResourceProviderIdentifier() const;
 
                     /**
-                     * 设置The identifier of an external resource provider, such as "cls-a1cd23fa".
-                     * @param _resourceProviderIdentifier The identifier of an external resource provider, such as "cls-a1cd23fa".
+                     * 设置Identifier of the external resource provider, for example, "cls-a1cd23fa".
+                     * @param _resourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
                      * 
                      */
                     void SetResourceProviderIdentifier(const std::string& _resourceProviderIdentifier);
@@ -70,15 +71,15 @@ namespace TencentCloud
                     bool ResourceProviderIdentifierHasBeenSet() const;
 
                     /**
-                     * 获取The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
-                     * @return ResourceProviderType The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+                     * 获取Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+                     * @return ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
                      * 
                      */
                     std::string GetResourceProviderType() const;
 
                     /**
-                     * 设置The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
-                     * @param _resourceProviderType The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+                     * 设置Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+                     * @param _resourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
                      * 
                      */
                     void SetResourceProviderType(const std::string& _resourceProviderType);
@@ -91,15 +92,15 @@ namespace TencentCloud
                     bool ResourceProviderTypeHasBeenSet() const;
 
                     /**
-                     * 获取The purpose of the resource, which means the node type and can only be "TASK".
-                     * @return NodeFlag The purpose of the resource, which means the node type and can only be "TASK".
+                     * 获取Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+                     * @return NodeFlag Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
                      * 
                      */
                     std::string GetNodeFlag() const;
 
                     /**
-                     * 设置The purpose of the resource, which means the node type and can only be "TASK".
-                     * @param _nodeFlag The purpose of the resource, which means the node type and can only be "TASK".
+                     * 设置Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+                     * @param _nodeFlag Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
                      * 
                      */
                     void SetNodeFlag(const std::string& _nodeFlag);
@@ -112,15 +113,15 @@ namespace TencentCloud
                     bool NodeFlagHasBeenSet() const;
 
                     /**
-                     * 获取The number of CPUs.
-                     * @return Cpu The number of CPUs.
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置The number of CPUs.
-                     * @param _cpu The number of CPUs.
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -133,15 +134,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取The memory size in GB.
-                     * @return Memory The memory size in GB.
+                     * 获取Memory size (GB).
+                     * @return Memory Memory size (GB).
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置The memory size in GB.
-                     * @param _memory The memory size in GB.
+                     * 设置Memory size (GB).
+                     * @param _memory Memory size (GB).
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -154,15 +155,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取The EKS cluster - CPU type. Valid values: `intel` and `amd`.
-                     * @return CpuType The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+                     * 获取CPU type for the EKS cluster, currently supporting intel and amd.
+                     * @return CpuType CPU type for the EKS cluster, currently supporting intel and amd.
                      * 
                      */
                     std::string GetCpuType() const;
 
                     /**
-                     * 设置The EKS cluster - CPU type. Valid values: `intel` and `amd`.
-                     * @param _cpuType The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+                     * 设置CPU type for the EKS cluster, currently supporting intel and amd.
+                     * @param _cpuType CPU type for the EKS cluster, currently supporting intel and amd.
                      * 
                      */
                     void SetCpuType(const std::string& _cpuType);
@@ -175,15 +176,15 @@ namespace TencentCloud
                     bool CpuTypeHasBeenSet() const;
 
                     /**
-                     * 获取The data directory mounting information of the pod node.
-                     * @return PodVolumes The data directory mounting information of the pod node.
+                     * 获取Mounting information of the node data directory on Pod.
+                     * @return PodVolumes Mounting information of the node data directory on Pod.
                      * 
                      */
                     std::vector<PodVolume> GetPodVolumes() const;
 
                     /**
-                     * 设置The data directory mounting information of the pod node.
-                     * @param _podVolumes The data directory mounting information of the pod node.
+                     * 设置Mounting information of the node data directory on Pod.
+                     * @param _podVolumes Mounting information of the node data directory on Pod.
                      * 
                      */
                     void SetPodVolumes(const std::vector<PodVolume>& _podVolumes);
@@ -196,23 +197,23 @@ namespace TencentCloud
                     bool PodVolumesHasBeenSet() const;
 
                     /**
-                     * 获取Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-                     * @return EnableDynamicSpecFlag Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+                     * 获取Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
+                     * @return EnableDynamicSpecFlag Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
                      * 
                      */
                     bool GetEnableDynamicSpecFlag() const;
 
                     /**
-                     * 设置Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-                     * @param _enableDynamicSpecFlag Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+                     * 设置Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
+                     * @param _enableDynamicSpecFlag Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
                      * 
                      */
                     void SetEnableDynamicSpecFlag(const bool& _enableDynamicSpecFlag);
@@ -225,19 +226,15 @@ namespace TencentCloud
                     bool EnableDynamicSpecFlagHasBeenSet() const;
 
                     /**
-                     * 获取The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DynamicPodSpec The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Floating specification.
+                     * @return DynamicPodSpec Floating specification.
                      * 
                      */
                     DynamicPodSpec GetDynamicPodSpec() const;
 
                     /**
-                     * 设置The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dynamicPodSpec The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Floating specification.
+                     * @param _dynamicPodSpec Floating specification.
                      * 
                      */
                     void SetDynamicPodSpec(const DynamicPodSpec& _dynamicPodSpec);
@@ -250,15 +247,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DynamicPodSpecHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of VPC network.
-                     * @return VpcId Unique ID of VPC network.
+                     * 获取Unique ID of the VPC.
+                     * @return VpcId Unique ID of the VPC.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Unique ID of VPC network.
-                     * @param _vpcId Unique ID of VPC network.
+                     * 设置Unique ID of the VPC.
+                     * @param _vpcId Unique ID of the VPC.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -271,15 +268,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of a VPC subnet.
-                     * @return SubnetId Unique ID of a VPC subnet.
+                     * 获取Unique ID of the VPC subnet.
+                     * @return SubnetId Unique ID of the VPC subnet.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Unique ID of a VPC subnet.
-                     * @param _subnetId Unique ID of a VPC subnet.
+                     * 设置Unique ID of the VPC subnet.
+                     * @param _subnetId Unique ID of the VPC subnet.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -312,73 +309,93 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PodNameHasBeenSet() const;
 
+                    /**
+                     * 获取Other account authorization information.
+                     * @return OtherAccountInfo Other account authorization information.
+                     * 
+                     */
+                    OtherAccountInfo GetOtherAccountInfo() const;
+
+                    /**
+                     * 设置Other account authorization information.
+                     * @param _otherAccountInfo Other account authorization information.
+                     * 
+                     */
+                    void SetOtherAccountInfo(const OtherAccountInfo& _otherAccountInfo);
+
+                    /**
+                     * 判断参数 OtherAccountInfo 是否已赋值
+                     * @return OtherAccountInfo 是否已赋值
+                     * 
+                     */
+                    bool OtherAccountInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The identifier of an external resource provider, such as "cls-a1cd23fa".
+                     * Identifier of the external resource provider, for example, "cls-a1cd23fa".
                      */
                     std::string m_resourceProviderIdentifier;
                     bool m_resourceProviderIdentifierHasBeenSet;
 
                     /**
-                     * The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+                     * Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
                      */
                     std::string m_resourceProviderType;
                     bool m_resourceProviderTypeHasBeenSet;
 
                     /**
-                     * The purpose of the resource, which means the node type and can only be "TASK".
+                     * Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
                      */
                     std::string m_nodeFlag;
                     bool m_nodeFlagHasBeenSet;
 
                     /**
-                     * The number of CPUs.
+                     * Number of CPU cores.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * The memory size in GB.
+                     * Memory size (GB).
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+                     * CPU type for the EKS cluster, currently supporting intel and amd.
                      */
                     std::string m_cpuType;
                     bool m_cpuTypeHasBeenSet;
 
                     /**
-                     * The data directory mounting information of the pod node.
+                     * Mounting information of the node data directory on Pod.
                      */
                     std::vector<PodVolume> m_podVolumes;
                     bool m_podVolumesHasBeenSet;
 
                     /**
-                     * Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+                     * Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
                      */
                     bool m_enableDynamicSpecFlag;
                     bool m_enableDynamicSpecFlagHasBeenSet;
 
                     /**
-                     * The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Floating specification.
                      */
                     DynamicPodSpec m_dynamicPodSpec;
                     bool m_dynamicPodSpecHasBeenSet;
 
                     /**
-                     * Unique ID of VPC network.
+                     * Unique ID of the VPC.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Unique ID of a VPC subnet.
+                     * Unique ID of the VPC subnet.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -388,6 +405,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;
+
+                    /**
+                     * Other account authorization information.
+                     */
+                    OtherAccountInfo m_otherAccountInfo;
+                    bool m_otherAccountInfoHasBeenSet;
 
                 };
             }

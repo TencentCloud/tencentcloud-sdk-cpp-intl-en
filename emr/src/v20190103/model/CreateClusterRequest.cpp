@@ -45,7 +45,14 @@ CreateClusterRequest::CreateClusterRequest() :
     m_zoneResourceConfigurationHasBeenSet(false),
     m_cosBucketHasBeenSet(false),
     m_nodeMarksHasBeenSet(false),
-    m_loadBalancerIdHasBeenSet(false)
+    m_loadBalancerIdHasBeenSet(false),
+    m_defaultMetaVersionHasBeenSet(false),
+    m_needCdbAuditHasBeenSet(false),
+    m_sgIPHasBeenSet(false),
+    m_partitionNumberHasBeenSet(false),
+    m_webUiVersionHasBeenSet(false),
+    m_enableCbsSysEncryptFlagHasBeenSet(false),
+    m_metaDBGroupInfoHasBeenSet(false)
 {
 }
 
@@ -287,6 +294,69 @@ string CreateClusterRequest::ToJsonString() const
         string key = "LoadBalancerId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_defaultMetaVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultMetaVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_defaultMetaVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_needCdbAuditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NeedCdbAudit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_needCdbAudit, allocator);
+    }
+
+    if (m_sgIPHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SgIP";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sgIP.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_partitionNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartitionNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_partitionNumber, allocator);
+    }
+
+    if (m_webUiVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebUiVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_webUiVersion, allocator);
+    }
+
+    if (m_enableCbsSysEncryptFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableCbsSysEncryptFlag";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableCbsSysEncryptFlag, allocator);
+    }
+
+    if (m_metaDBGroupInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetaDBGroupInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_metaDBGroupInfo.begin(); itr != m_metaDBGroupInfo.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -663,6 +733,118 @@ void CreateClusterRequest::SetLoadBalancerId(const string& _loadBalancerId)
 bool CreateClusterRequest::LoadBalancerIdHasBeenSet() const
 {
     return m_loadBalancerIdHasBeenSet;
+}
+
+string CreateClusterRequest::GetDefaultMetaVersion() const
+{
+    return m_defaultMetaVersion;
+}
+
+void CreateClusterRequest::SetDefaultMetaVersion(const string& _defaultMetaVersion)
+{
+    m_defaultMetaVersion = _defaultMetaVersion;
+    m_defaultMetaVersionHasBeenSet = true;
+}
+
+bool CreateClusterRequest::DefaultMetaVersionHasBeenSet() const
+{
+    return m_defaultMetaVersionHasBeenSet;
+}
+
+int64_t CreateClusterRequest::GetNeedCdbAudit() const
+{
+    return m_needCdbAudit;
+}
+
+void CreateClusterRequest::SetNeedCdbAudit(const int64_t& _needCdbAudit)
+{
+    m_needCdbAudit = _needCdbAudit;
+    m_needCdbAuditHasBeenSet = true;
+}
+
+bool CreateClusterRequest::NeedCdbAuditHasBeenSet() const
+{
+    return m_needCdbAuditHasBeenSet;
+}
+
+string CreateClusterRequest::GetSgIP() const
+{
+    return m_sgIP;
+}
+
+void CreateClusterRequest::SetSgIP(const string& _sgIP)
+{
+    m_sgIP = _sgIP;
+    m_sgIPHasBeenSet = true;
+}
+
+bool CreateClusterRequest::SgIPHasBeenSet() const
+{
+    return m_sgIPHasBeenSet;
+}
+
+int64_t CreateClusterRequest::GetPartitionNumber() const
+{
+    return m_partitionNumber;
+}
+
+void CreateClusterRequest::SetPartitionNumber(const int64_t& _partitionNumber)
+{
+    m_partitionNumber = _partitionNumber;
+    m_partitionNumberHasBeenSet = true;
+}
+
+bool CreateClusterRequest::PartitionNumberHasBeenSet() const
+{
+    return m_partitionNumberHasBeenSet;
+}
+
+int64_t CreateClusterRequest::GetWebUiVersion() const
+{
+    return m_webUiVersion;
+}
+
+void CreateClusterRequest::SetWebUiVersion(const int64_t& _webUiVersion)
+{
+    m_webUiVersion = _webUiVersion;
+    m_webUiVersionHasBeenSet = true;
+}
+
+bool CreateClusterRequest::WebUiVersionHasBeenSet() const
+{
+    return m_webUiVersionHasBeenSet;
+}
+
+bool CreateClusterRequest::GetEnableCbsSysEncryptFlag() const
+{
+    return m_enableCbsSysEncryptFlag;
+}
+
+void CreateClusterRequest::SetEnableCbsSysEncryptFlag(const bool& _enableCbsSysEncryptFlag)
+{
+    m_enableCbsSysEncryptFlag = _enableCbsSysEncryptFlag;
+    m_enableCbsSysEncryptFlagHasBeenSet = true;
+}
+
+bool CreateClusterRequest::EnableCbsSysEncryptFlagHasBeenSet() const
+{
+    return m_enableCbsSysEncryptFlagHasBeenSet;
+}
+
+vector<CustomMetaDBInfo> CreateClusterRequest::GetMetaDBGroupInfo() const
+{
+    return m_metaDBGroupInfo;
+}
+
+void CreateClusterRequest::SetMetaDBGroupInfo(const vector<CustomMetaDBInfo>& _metaDBGroupInfo)
+{
+    m_metaDBGroupInfo = _metaDBGroupInfo;
+    m_metaDBGroupInfoHasBeenSet = true;
+}
+
+bool CreateClusterRequest::MetaDBGroupInfoHasBeenSet() const
+{
+    return m_metaDBGroupInfoHasBeenSet;
 }
 
 

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User management list filter
+                * User management list filter.
                 */
                 class UserManagerFilter : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Elastic Scaling Record
+                * Auto scaling record.
                 */
                 class AutoScaleRecord : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the scale-in or scale-out rule.
-                     * @return StrategyName Name of the scale-in or scale-out rule.
+                     * 获取<p>Scaling rule name.</p>
+                     * @return StrategyName <p>Scaling rule name.</p>
                      * 
                      */
                     std::string GetStrategyName() const;
 
                     /**
-                     * 设置Name of the scale-in or scale-out rule.
-                     * @param _strategyName Name of the scale-in or scale-out rule.
+                     * 设置<p>Scaling rule name.</p>
+                     * @param _strategyName <p>Scaling rule name.</p>
                      * 
                      */
                     void SetStrategyName(const std::string& _strategyName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取"SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
-                     * @return ScaleAction "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+                     * 获取<p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
+                     * @return ScaleAction <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
                      * 
                      */
                     std::string GetScaleAction() const;
 
                     /**
-                     * 设置"SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
-                     * @param _scaleAction "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+                     * 设置<p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
+                     * @param _scaleAction <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
                      * 
                      */
                     void SetScaleAction(const std::string& _scaleAction);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ScaleActionHasBeenSet() const;
 
                     /**
-                     * 获取The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
-                     * @return ActionStatus The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+                     * 获取<p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
+                     * @return ActionStatus <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
                      * 
                      */
                     std::string GetActionStatus() const;
 
                     /**
-                     * 设置The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
-                     * @param _actionStatus The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+                     * 设置<p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
+                     * @param _actionStatus <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
                      * 
                      */
                     void SetActionStatus(const std::string& _actionStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ActionStatusHasBeenSet() const;
 
                     /**
-                     * 获取Process initiation time.
-                     * @return ActionTime Process initiation time.
+                     * 获取<p>Flow trigger time.</p>
+                     * @return ActionTime <p>Flow trigger time.</p>
                      * 
                      */
                     std::string GetActionTime() const;
 
                     /**
-                     * 设置Process initiation time.
-                     * @param _actionTime Process initiation time.
+                     * 设置<p>Flow trigger time.</p>
+                     * @param _actionTime <p>Flow trigger time.</p>
                      * 
                      */
                     void SetActionTime(const std::string& _actionTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ActionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Description related to auto-scaling.
-                     * @return ScaleInfo Description related to auto-scaling.
+                     * 获取<p>Scaling-related description.</p>
+                     * @return ScaleInfo <p>Scaling-related description.</p>
                      * 
                      */
                     std::string GetScaleInfo() const;
 
                     /**
-                     * 设置Description related to auto-scaling.
-                     * @param _scaleInfo Description related to auto-scaling.
+                     * 设置<p>Scaling-related description.</p>
+                     * @param _scaleInfo <p>Scaling-related description.</p>
                      * 
                      */
                     void SetScaleInfo(const std::string& _scaleInfo);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ScaleInfoHasBeenSet() const;
 
                     /**
-                     * 获取Valid only when ScaleAction is SCALE_OUT.
-                     * @return ExpectScaleNum Valid only when ScaleAction is SCALE_OUT.
+                     * 获取<p>Valid only when ScaleAction is SCALE_OUT.</p>
+                     * @return ExpectScaleNum <p>Valid only when ScaleAction is SCALE_OUT.</p>
                      * 
                      */
                     int64_t GetExpectScaleNum() const;
 
                     /**
-                     * 设置Valid only when ScaleAction is SCALE_OUT.
-                     * @param _expectScaleNum Valid only when ScaleAction is SCALE_OUT.
+                     * 设置<p>Valid only when ScaleAction is SCALE_OUT.</p>
+                     * @param _expectScaleNum <p>Valid only when ScaleAction is SCALE_OUT.</p>
                      * 
                      */
                     void SetExpectScaleNum(const int64_t& _expectScaleNum);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ExpectScaleNumHasBeenSet() const;
 
                     /**
-                     * 获取Process termination time.
-                     * @return EndTime Process termination time.
+                     * 获取<p>Flow end time.</p>
+                     * @return EndTime <p>Flow end time.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Process termination time.
-                     * @param _endTime Process termination time.
+                     * 设置<p>Flow end time.</p>
+                     * @param _endTime <p>Flow end time.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
-                     * @return StrategyType Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+                     * 获取<p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
+                     * @return StrategyType <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
                      * 
                      */
                     int64_t GetStrategyType() const;
 
                     /**
-                     * 设置Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
-                     * @param _strategyType Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+                     * 设置<p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
+                     * @param _strategyType <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
                      * 
                      */
                     void SetStrategyType(const int64_t& _strategyType);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specification information used during scale-out.
-                     * @return SpecInfo Specification information used during scale-out.
+                     * 获取<p>Specifications information used during scale-out.</p>
+                     * @return SpecInfo <p>Specifications information used during scale-out.</p>
                      * 
                      */
                     std::string GetSpecInfo() const;
 
                     /**
-                     * 设置Specification information used during scale-out.
-                     * @param _specInfo Specification information used during scale-out.
+                     * 设置<p>Specifications information used during scale-out.</p>
+                     * @param _specInfo <p>Specifications information used during scale-out.</p>
                      * 
                      */
                     void SetSpecInfo(const std::string& _specInfo);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool SpecInfoHasBeenSet() const;
 
                     /**
-                     * 获取Compensatory scale-out. 0: disable, 1: enable.
-                     * @return CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+                     * 获取<p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
+                     * @return CompensateFlag <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
                      * 
                      */
                     int64_t GetCompensateFlag() const;
 
                     /**
-                     * 设置Compensatory scale-out. 0: disable, 1: enable.
-                     * @param _compensateFlag Compensatory scale-out. 0: disable, 1: enable.
+                     * 设置<p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
+                     * @param _compensateFlag <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
                      * 
                      */
                     void SetCompensateFlag(const int64_t& _compensateFlag);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CompensateFlagHasBeenSet() const;
 
                     /**
-                     * 获取Number of compensations.
-                     * @return CompensateCount Number of compensations.
+                     * 获取<p>Number of compensations.</p>
+                     * @return CompensateCount <p>Number of compensations.</p>
                      * 
                      */
                     int64_t GetCompensateCount() const;
 
                     /**
-                     * 设置Number of compensations.
-                     * @param _compensateCount Number of compensations.
+                     * 设置<p>Number of compensations.</p>
+                     * @param _compensateCount <p>Number of compensations.</p>
                      * 
                      */
                     void SetCompensateCount(const int64_t& _compensateCount);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool CompensateCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of retries.
-                     * @return RetryCount Number of retries.
+                     * 获取<p>Number of retries.</p>
+                     * @return RetryCount <p>Number of retries.</p>
                      * 
                      */
                     uint64_t GetRetryCount() const;
 
                     /**
-                     * 设置Number of retries.
-                     * @param _retryCount Number of retries.
+                     * 设置<p>Number of retries.</p>
+                     * @param _retryCount <p>Number of retries.</p>
                      * 
                      */
                     void SetRetryCount(const uint64_t& _retryCount);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool RetryCountHasBeenSet() const;
 
                     /**
-                     * 获取Retry information.
-                     * @return RetryInfo Retry information.
+                     * 获取<p>Retry information.</p>
+                     * @return RetryInfo <p>Retry information.</p>
                      * 
                      */
                     std::string GetRetryInfo() const;
 
                     /**
-                     * 设置Retry information.
-                     * @param _retryInfo Retry information.
+                     * 设置<p>Retry information.</p>
+                     * @param _retryInfo <p>Retry information.</p>
                      * 
                      */
                     void SetRetryInfo(const std::string& _retryInfo);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool RetryInfoHasBeenSet() const;
 
                     /**
-                     * 获取Retry description in English.
-                     * @return RetryEnReason Retry description in English.
+                     * 获取<p>Retry description in English.</p>
+                     * @return RetryEnReason <p>Retry description in English.</p>
                      * 
                      */
                     std::string GetRetryEnReason() const;
 
                     /**
-                     * 设置Retry description in English.
-                     * @param _retryEnReason Retry description in English.
+                     * 设置<p>Retry description in English.</p>
+                     * @param _retryEnReason <p>Retry description in English.</p>
                      * 
                      */
                     void SetRetryEnReason(const std::string& _retryEnReason);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool RetryEnReasonHasBeenSet() const;
 
                     /**
-                     * 获取Retry description.
-                     * @return RetryReason Retry description.
+                     * 获取<p>Retry description.</p>
+                     * @return RetryReason <p>Retry description.</p>
                      * 
                      */
                     std::string GetRetryReason() const;
 
                     /**
-                     * 设置Retry description.
-                     * @param _retryReason Retry description.
+                     * 设置<p>Retry description.</p>
+                     * @param _retryReason <p>Retry description.</p>
                      * 
                      */
                     void SetRetryReason(const std::string& _retryReason);
@@ -361,97 +361,124 @@ namespace TencentCloud
                      */
                     bool RetryReasonHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Missing category.</p>
+                     * @return ShortageClass <p>Missing category.</p>
+                     * 
+                     */
+                    int64_t GetShortageClass() const;
+
+                    /**
+                     * 设置<p>Missing category.</p>
+                     * @param _shortageClass <p>Missing category.</p>
+                     * 
+                     */
+                    void SetShortageClass(const int64_t& _shortageClass);
+
+                    /**
+                     * 判断参数 ShortageClass 是否已赋值
+                     * @return ShortageClass 是否已赋值
+                     * 
+                     */
+                    bool ShortageClassHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Name of the scale-in or scale-out rule.
+                     * <p>Scaling rule name.</p>
                      */
                     std::string m_strategyName;
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+                     * <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
                      */
                     std::string m_scaleAction;
                     bool m_scaleActionHasBeenSet;
 
                     /**
-                     * The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+                     * <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
                      */
                     std::string m_actionStatus;
                     bool m_actionStatusHasBeenSet;
 
                     /**
-                     * Process initiation time.
+                     * <p>Flow trigger time.</p>
                      */
                     std::string m_actionTime;
                     bool m_actionTimeHasBeenSet;
 
                     /**
-                     * Description related to auto-scaling.
+                     * <p>Scaling-related description.</p>
                      */
                     std::string m_scaleInfo;
                     bool m_scaleInfoHasBeenSet;
 
                     /**
-                     * Valid only when ScaleAction is SCALE_OUT.
+                     * <p>Valid only when ScaleAction is SCALE_OUT.</p>
                      */
                     int64_t m_expectScaleNum;
                     bool m_expectScaleNumHasBeenSet;
 
                     /**
-                     * Process termination time.
+                     * <p>Flow end time.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+                     * <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
                      */
                     int64_t m_strategyType;
                     bool m_strategyTypeHasBeenSet;
 
                     /**
-                     * Specification information used during scale-out.
+                     * <p>Specifications information used during scale-out.</p>
                      */
                     std::string m_specInfo;
                     bool m_specInfoHasBeenSet;
 
                     /**
-                     * Compensatory scale-out. 0: disable, 1: enable.
+                     * <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
                      */
                     int64_t m_compensateFlag;
                     bool m_compensateFlagHasBeenSet;
 
                     /**
-                     * Number of compensations.
+                     * <p>Number of compensations.</p>
                      */
                     int64_t m_compensateCount;
                     bool m_compensateCountHasBeenSet;
 
                     /**
-                     * Number of retries.
+                     * <p>Number of retries.</p>
                      */
                     uint64_t m_retryCount;
                     bool m_retryCountHasBeenSet;
 
                     /**
-                     * Retry information.
+                     * <p>Retry information.</p>
                      */
                     std::string m_retryInfo;
                     bool m_retryInfoHasBeenSet;
 
                     /**
-                     * Retry description in English.
+                     * <p>Retry description in English.</p>
                      */
                     std::string m_retryEnReason;
                     bool m_retryEnReasonHasBeenSet;
 
                     /**
-                     * Retry description.
+                     * <p>Retry description.</p>
                      */
                     std::string m_retryReason;
                     bool m_retryReasonHasBeenSet;
+
+                    /**
+                     * <p>Missing category.</p>
+                     */
+                    int64_t m_shortageClass;
+                    bool m_shortageClassHasBeenSet;
 
                 };
             }

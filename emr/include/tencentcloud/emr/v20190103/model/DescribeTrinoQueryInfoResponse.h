@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QueryInfoList Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Array of query results.
+                     * @return QueryInfoList Array of query results.
                      * 
                      */
                     std::vector<TrinoQueryInfo> GetQueryInfoList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Array of query results.
                      */
                     std::vector<TrinoQueryInfo> m_queryInfoList;
                     bool m_queryInfoListHasBeenSet;

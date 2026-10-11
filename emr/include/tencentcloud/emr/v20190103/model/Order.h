@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description order, which is used for sorting.
+                * Sort description, used for sorting.
                 */
                 class Order : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order field.
-                     * @return Name Order field.
+                     * 获取Sorting field.
+                     * @return Name Sorting field.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Order field.
-                     * @param _name Order field.
+                     * 设置Sorting field.
+                     * @param _name Sorting field.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order field.
+                     * Sorting field.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

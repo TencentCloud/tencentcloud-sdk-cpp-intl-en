@@ -49,23 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-                     * @return TimeUnit Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+                     * 获取<p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @return TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-                     * @param _timeUnit Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+                     * 设置<p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @param _timeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -78,15 +70,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Time span of scale-out, which needs to be used together with `TimeUnit`.
-                     * @return TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
+                     * 获取<p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+                     * @return TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Time span of scale-out, which needs to be used together with `TimeUnit`.
-                     * @param _timeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
+                     * 设置<p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+                     * @param _timeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -99,15 +91,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -120,19 +112,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-                     * @return PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+                     * 获取<p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+                     * @return PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
-                     * 设置Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-                     * @param _payMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+                     * 设置<p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+                     * @param _payMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -145,15 +133,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Client token.
-                     * @return ClientToken Client token.
+                     * 获取<p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+                     * @return ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
                      * 
                      */
                     std::string GetClientToken() const;
 
                     /**
-                     * 设置Client token.
-                     * @param _clientToken Client token.
+                     * 设置<p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+                     * @param _clientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
                      * 
                      */
                     void SetClientToken(const std::string& _clientToken);
@@ -166,15 +154,15 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取Bootstrap script settings.
-                     * @return PreExecutedFileSettings Bootstrap script settings.
+                     * 获取<p>Bootstrap script settings.</p>
+                     * @return PreExecutedFileSettings <p>Bootstrap script settings.</p>
                      * 
                      */
                     std::vector<PreExecuteFileSettings> GetPreExecutedFileSettings() const;
 
                     /**
-                     * 设置Bootstrap script settings.
-                     * @param _preExecutedFileSettings Bootstrap script settings.
+                     * 设置<p>Bootstrap script settings.</p>
+                     * @param _preExecutedFileSettings <p>Bootstrap script settings.</p>
                      * 
                      */
                     void SetPreExecutedFileSettings(const std::vector<PreExecuteFileSettings>& _preExecutedFileSettings);
@@ -187,15 +175,15 @@ namespace TencentCloud
                     bool PreExecutedFileSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Number of task nodes to be added.
-                     * @return TaskCount Number of task nodes to be added.
+                     * 获取<p>Number of Task nodes to be scaled out.</p>
+                     * @return TaskCount <p>Number of Task nodes to be scaled out.</p>
                      * 
                      */
                     uint64_t GetTaskCount() const;
 
                     /**
-                     * 设置Number of task nodes to be added.
-                     * @param _taskCount Number of task nodes to be added.
+                     * 设置<p>Number of Task nodes to be scaled out.</p>
+                     * @param _taskCount <p>Number of Task nodes to be scaled out.</p>
                      * 
                      */
                     void SetTaskCount(const uint64_t& _taskCount);
@@ -208,15 +196,15 @@ namespace TencentCloud
                     bool TaskCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of core nodes to be added.
-                     * @return CoreCount Number of core nodes to be added.
+                     * 获取<p>Number of scale-out Core nodes.</p>
+                     * @return CoreCount <p>Number of scale-out Core nodes.</p>
                      * 
                      */
                     uint64_t GetCoreCount() const;
 
                     /**
-                     * 设置Number of core nodes to be added.
-                     * @param _coreCount Number of core nodes to be added.
+                     * 设置<p>Number of scale-out Core nodes.</p>
+                     * @param _coreCount <p>Number of scale-out Core nodes.</p>
                      * 
                      */
                     void SetCoreCount(const uint64_t& _coreCount);
@@ -229,15 +217,15 @@ namespace TencentCloud
                     bool CoreCountHasBeenSet() const;
 
                     /**
-                     * 获取Processes unnecessary for scale-out.
-                     * @return UnNecessaryNodeList Processes unnecessary for scale-out.
+                     * 获取<p>Processes, which are not required during the scale-out.</p>
+                     * @return UnNecessaryNodeList <p>Processes, which are not required during the scale-out.</p>
                      * 
                      */
                     std::vector<uint64_t> GetUnNecessaryNodeList() const;
 
                     /**
-                     * 设置Processes unnecessary for scale-out.
-                     * @param _unNecessaryNodeList Processes unnecessary for scale-out.
+                     * 设置<p>Processes, which are not required during the scale-out.</p>
+                     * @param _unNecessaryNodeList <p>Processes, which are not required during the scale-out.</p>
                      * 
                      */
                     void SetUnNecessaryNodeList(const std::vector<uint64_t>& _unNecessaryNodeList);
@@ -250,15 +238,15 @@ namespace TencentCloud
                     bool UnNecessaryNodeListHasBeenSet() const;
 
                     /**
-                     * 获取Number of router nodes to be added.
-                     * @return RouterCount Number of router nodes to be added.
+                     * 获取<p>Number of Router nodes to be scaled out.</p>
+                     * @return RouterCount <p>Number of Router nodes to be scaled out.</p>
                      * 
                      */
                     uint64_t GetRouterCount() const;
 
                     /**
-                     * 设置Number of router nodes to be added.
-                     * @param _routerCount Number of router nodes to be added.
+                     * 设置<p>Number of Router nodes to be scaled out.</p>
+                     * @param _routerCount <p>Number of Router nodes to be scaled out.</p>
                      * 
                      */
                     void SetRouterCount(const uint64_t& _routerCount);
@@ -271,23 +259,15 @@ namespace TencentCloud
                     bool RouterCountHasBeenSet() const;
 
                     /**
-                     * 获取Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
-                     * @return SoftDeployInfo Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+                     * 获取<p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
+                     * @return SoftDeployInfo <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
                      * 
                      */
                     std::vector<uint64_t> GetSoftDeployInfo() const;
 
                     /**
-                     * 设置Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
-                     * @param _softDeployInfo Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+                     * 设置<p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
+                     * @param _softDeployInfo <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
                      * 
                      */
                     void SetSoftDeployInfo(const std::vector<uint64_t>& _softDeployInfo);
@@ -300,15 +280,15 @@ namespace TencentCloud
                     bool SoftDeployInfoHasBeenSet() const;
 
                     /**
-                     * 获取Started process.
-                     * @return ServiceNodeInfo Started process.
+                     * 获取<p>Started process.</p>
+                     * @return ServiceNodeInfo <p>Started process.</p>
                      * 
                      */
                     std::vector<uint64_t> GetServiceNodeInfo() const;
 
                     /**
-                     * 设置Started process.
-                     * @param _serviceNodeInfo Started process.
+                     * 设置<p>Started process.</p>
+                     * @param _serviceNodeInfo <p>Started process.</p>
                      * 
                      */
                     void SetServiceNodeInfo(const std::vector<uint64_t>& _serviceNodeInfo);
@@ -321,15 +301,15 @@ namespace TencentCloud
                     bool ServiceNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取List of spread placement group IDs. Only one can be specified currently.
-                     * @return DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+                     * 获取<p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
+                     * @return DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
                      * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
-                     * 设置List of spread placement group IDs. Only one can be specified currently.
-                     * @param _disasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+                     * 设置<p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
+                     * @param _disasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
                      * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
@@ -342,15 +322,15 @@ namespace TencentCloud
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of tags bound to added nodes.
-                     * @return Tags List of tags bound to added nodes.
+                     * 获取<p>List of tags bound to nodes for the scale-out.</p>
+                     * @return Tags <p>List of tags bound to nodes for the scale-out.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置List of tags bound to added nodes.
-                     * @param _tags List of tags bound to added nodes.
+                     * 设置<p>List of tags bound to nodes for the scale-out.</p>
+                     * @param _tags <p>List of tags bound to nodes for the scale-out.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -363,15 +343,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
-                     * @return HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * 获取<p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+                     * @return HardwareResourceType <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
                      * 
                      */
                     std::string GetHardwareResourceType() const;
 
                     /**
-                     * 设置Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
-                     * @param _hardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * 设置<p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+                     * @param _hardwareResourceType <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
                      * 
                      */
                     void SetHardwareResourceType(const std::string& _hardwareResourceType);
@@ -384,15 +364,15 @@ namespace TencentCloud
                     bool HardwareResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specified information such as pod specification and source for scale-out with pod resources.
-                     * @return PodSpec Specified information such as pod specification and source for scale-out with pod resources.
+                     * 获取<p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
+                     * @return PodSpec <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
                      * 
                      */
                     PodSpec GetPodSpec() const;
 
                     /**
-                     * 设置Specified information such as pod specification and source for scale-out with pod resources.
-                     * @param _podSpec Specified information such as pod specification and source for scale-out with pod resources.
+                     * 设置<p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
+                     * @param _podSpec <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
                      * 
                      */
                     void SetPodSpec(const PodSpec& _podSpec);
@@ -405,15 +385,15 @@ namespace TencentCloud
                     bool PodSpecHasBeenSet() const;
 
                     /**
-                     * 获取Server group name selected for ClickHouse cluster scale-out.
-                     * @return ClickHouseClusterName Server group name selected for ClickHouse cluster scale-out.
+                     * 获取<p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+                     * @return ClickHouseClusterName <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
                      * 
                      */
                     std::string GetClickHouseClusterName() const;
 
                     /**
-                     * 设置Server group name selected for ClickHouse cluster scale-out.
-                     * @param _clickHouseClusterName Server group name selected for ClickHouse cluster scale-out.
+                     * 设置<p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+                     * @param _clickHouseClusterName <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
                      * 
                      */
                     void SetClickHouseClusterName(const std::string& _clickHouseClusterName);
@@ -426,15 +406,15 @@ namespace TencentCloud
                     bool ClickHouseClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-                     * @return ClickHouseClusterType Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+                     * 获取<p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+                     * @return ClickHouseClusterType <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
                      * 
                      */
                     std::string GetClickHouseClusterType() const;
 
                     /**
-                     * 设置Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-                     * @param _clickHouseClusterType Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+                     * 设置<p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+                     * @param _clickHouseClusterType <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
                      * 
                      */
                     void SetClickHouseClusterType(const std::string& _clickHouseClusterType);
@@ -447,15 +427,15 @@ namespace TencentCloud
                     bool ClickHouseClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Yarn node label specified for rule-based scale-out.
-                     * @return YarnNodeLabel Yarn node label specified for rule-based scale-out.
+                     * 获取<p>YARN node label specified for the rule-based scale-out.</p>
+                     * @return YarnNodeLabel <p>YARN node label specified for the rule-based scale-out.</p>
                      * 
                      */
                     std::string GetYarnNodeLabel() const;
 
                     /**
-                     * 设置Yarn node label specified for rule-based scale-out.
-                     * @param _yarnNodeLabel Yarn node label specified for rule-based scale-out.
+                     * 设置<p>YARN node label specified for the rule-based scale-out.</p>
+                     * @param _yarnNodeLabel <p>YARN node label specified for the rule-based scale-out.</p>
                      * 
                      */
                     void SetYarnNodeLabel(const std::string& _yarnNodeLabel);
@@ -468,15 +448,15 @@ namespace TencentCloud
                     bool YarnNodeLabelHasBeenSet() const;
 
                     /**
-                     * 获取Custom pod permission and parameter
-                     * @return PodParameter Custom pod permission and parameter
+                     * 获取<p>Pod custom permission and parameter.</p>
+                     * @return PodParameter <p>Pod custom permission and parameter.</p>
                      * 
                      */
                     PodParameter GetPodParameter() const;
 
                     /**
-                     * 设置Custom pod permission and parameter
-                     * @param _podParameter Custom pod permission and parameter
+                     * 设置<p>Pod custom permission and parameter.</p>
+                     * @param _podParameter <p>Pod custom permission and parameter.</p>
                      * 
                      */
                     void SetPodParameter(const PodParameter& _podParameter);
@@ -489,27 +469,15 @@ namespace TencentCloud
                     bool PodParameterHasBeenSet() const;
 
                     /**
-                     * 获取Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
-                     * @return MasterCount Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     * 获取<p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
+                     * @return MasterCount <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
                      * 
                      */
                     uint64_t GetMasterCount() const;
 
                     /**
-                     * 设置Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
-                     * @param _masterCount Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     * 设置<p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
+                     * @param _masterCount <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
                      * 
                      */
                     void SetMasterCount(const uint64_t& _masterCount);
@@ -522,15 +490,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool MasterCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether to start the service after scale-out. `true`: Yes; `false`: No.
-                     * @return StartServiceAfterScaleOut Whether to start the service after scale-out. `true`: Yes; `false`: No.
+                     * 获取<p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
+                     * @return StartServiceAfterScaleOut <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
                      * 
                      */
                     std::string GetStartServiceAfterScaleOut() const;
 
                     /**
-                     * 设置Whether to start the service after scale-out. `true`: Yes; `false`: No.
-                     * @param _startServiceAfterScaleOut Whether to start the service after scale-out. `true`: Yes; `false`: No.
+                     * 设置<p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
+                     * @param _startServiceAfterScaleOut <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
                      * 
                      */
                     void SetStartServiceAfterScaleOut(const std::string& _startServiceAfterScaleOut);
@@ -543,15 +511,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool StartServiceAfterScaleOutHasBeenSet() const;
 
                     /**
-                     * 获取AZ, which defaults to the primary AZ of the cluster.
-                     * @return ZoneId AZ, which defaults to the primary AZ of the cluster.
+                     * 获取<p>AZ. The primary AZ of the cluster is selected by default.</p>
+                     * @return ZoneId <p>AZ. The primary AZ of the cluster is selected by default.</p>
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ, which defaults to the primary AZ of the cluster.
-                     * @param _zoneId AZ, which defaults to the primary AZ of the cluster.
+                     * 设置<p>AZ. The primary AZ of the cluster is selected by default.</p>
+                     * @param _zoneId <p>AZ. The primary AZ of the cluster is selected by default.</p>
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -564,15 +532,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet, which defaults to the subnet used when the cluster is created.
-                     * @return SubnetId Subnet, which defaults to the subnet used when the cluster is created.
+                     * 获取<p>Subnet. The subnet used during cluster creation is selected by default.</p>
+                     * @return SubnetId <p>Subnet. The subnet used during cluster creation is selected by default.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet, which defaults to the subnet used when the cluster is created.
-                     * @param _subnetId Subnet, which defaults to the subnet used when the cluster is created.
+                     * 设置<p>Subnet. The subnet used during cluster creation is selected by default.</p>
+                     * @param _subnetId <p>Subnet. The subnet used during cluster creation is selected by default.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -585,15 +553,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Pre-defined configuration set
-                     * @return ScaleOutServiceConfAssign Pre-defined configuration set
+                     * 获取<p>Preset configuration group.</p>
+                     * @return ScaleOutServiceConfAssign <p>Preset configuration group.</p>
                      * 
                      */
                     std::string GetScaleOutServiceConfAssign() const;
 
                     /**
-                     * 设置Pre-defined configuration set
-                     * @param _scaleOutServiceConfAssign Pre-defined configuration set
+                     * 设置<p>Preset configuration group.</p>
+                     * @param _scaleOutServiceConfAssign <p>Preset configuration group.</p>
                      * 
                      */
                     void SetScaleOutServiceConfAssign(const std::string& _scaleOutServiceConfAssign);
@@ -606,15 +574,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool ScaleOutServiceConfAssignHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
-                     * @return AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     * 获取<p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
+                     * @return AutoRenew <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
                      * 
                      */
                     int64_t GetAutoRenew() const;
 
                     /**
-                     * 设置Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
-                     * @param _autoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     * 设置<p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
+                     * @param _autoRenew <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
                      * 
                      */
                     void SetAutoRenew(const int64_t& _autoRenew);
@@ -627,15 +595,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 获取<p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
+                     * @return ResourceBaseType <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
                      * 
                      */
                     std::string GetResourceBaseType() const;
 
                     /**
-                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 设置<p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
+                     * @param _resourceBaseType <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
                      * 
                      */
                     void SetResourceBaseType(const std::string& _resourceBaseType);
@@ -648,15 +616,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool ResourceBaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Computing resource ID.
-                     * @return ComputeResourceId Computing resource ID.
+                     * 获取<p>Computing resource ID.</p>
+                     * @return ComputeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     std::string GetComputeResourceId() const;
 
                     /**
-                     * 设置Computing resource ID.
-                     * @param _computeResourceId Computing resource ID.
+                     * 设置<p>Computing resource ID.</p>
+                     * @param _computeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     void SetComputeResourceId(const std::string& _computeResourceId);
@@ -669,15 +637,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool ComputeResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Advanced settings of computing resources.
-                     * @return ComputeResourceAdvanceParams Advanced settings of computing resources.
+                     * 获取<p>Advanced settings of computing resources.</p>
+                     * @return ComputeResourceAdvanceParams <p>Advanced settings of computing resources.</p>
                      * 
                      */
                     ComputeResourceAdvanceParams GetComputeResourceAdvanceParams() const;
 
                     /**
-                     * 设置Advanced settings of computing resources.
-                     * @param _computeResourceAdvanceParams Advanced settings of computing resources.
+                     * 设置<p>Advanced settings of computing resources.</p>
+                     * @param _computeResourceAdvanceParams <p>Advanced settings of computing resources.</p>
                      * 
                      */
                     void SetComputeResourceAdvanceParams(const ComputeResourceAdvanceParams& _computeResourceAdvanceParams);
@@ -690,15 +658,15 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool ComputeResourceAdvanceParamsHasBeenSet() const;
 
                     /**
-                     * 获取Node tag information: currently used only in Terraform.
-                     * @return NodeMarks Node tag information: currently used only in Terraform.
+                     * 获取<p>Node tag information, which is currently only provided for the Terraform platform.</p>
+                     * @return NodeMarks <p>Node tag information, which is currently only provided for the Terraform platform.</p>
                      * 
                      */
                     NodeMark GetNodeMarks() const;
 
                     /**
-                     * 设置Node tag information: currently used only in Terraform.
-                     * @param _nodeMarks Node tag information: currently used only in Terraform.
+                     * 设置<p>Node tag information, which is currently only provided for the Terraform platform.</p>
+                     * @param _nodeMarks <p>Node tag information, which is currently only provided for the Terraform platform.</p>
                      * 
                      */
                     void SetNodeMarks(const NodeMark& _nodeMarks);
@@ -710,195 +678,241 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                      */
                     bool NodeMarksHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Compute group specified for the scale-out.</p>
+                     * @return WarehouseName <p>Compute group specified for the scale-out.</p>
+                     * 
+                     */
+                    std::string GetWarehouseName() const;
+
+                    /**
+                     * 设置<p>Compute group specified for the scale-out.</p>
+                     * @param _warehouseName <p>Compute group specified for the scale-out.</p>
+                     * 
+                     */
+                    void SetWarehouseName(const std::string& _warehouseName);
+
+                    /**
+                     * 判断参数 WarehouseName 是否已赋值
+                     * @return WarehouseName 是否已赋值
+                     * 
+                     */
+                    bool WarehouseNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Partition of a partition placement group.</p>
+                     * @return PartitionNumber <p>Partition of a partition placement group.</p>
+                     * 
+                     */
+                    int64_t GetPartitionNumber() const;
+
+                    /**
+                     * 设置<p>Partition of a partition placement group.</p>
+                     * @param _partitionNumber <p>Partition of a partition placement group.</p>
+                     * 
+                     */
+                    void SetPartitionNumber(const int64_t& _partitionNumber);
+
+                    /**
+                     * 判断参数 PartitionNumber 是否已赋值
+                     * @return PartitionNumber 是否已赋值
+                     * 
+                     */
+                    bool PartitionNumberHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+                     * <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Time span of scale-out, which needs to be used together with `TimeUnit`.
+                     * <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+                     * <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Client token.
+                     * <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * Bootstrap script settings.
+                     * <p>Bootstrap script settings.</p>
                      */
                     std::vector<PreExecuteFileSettings> m_preExecutedFileSettings;
                     bool m_preExecutedFileSettingsHasBeenSet;
 
                     /**
-                     * Number of task nodes to be added.
+                     * <p>Number of Task nodes to be scaled out.</p>
                      */
                     uint64_t m_taskCount;
                     bool m_taskCountHasBeenSet;
 
                     /**
-                     * Number of core nodes to be added.
+                     * <p>Number of scale-out Core nodes.</p>
                      */
                     uint64_t m_coreCount;
                     bool m_coreCountHasBeenSet;
 
                     /**
-                     * Processes unnecessary for scale-out.
+                     * <p>Processes, which are not required during the scale-out.</p>
                      */
                     std::vector<uint64_t> m_unNecessaryNodeList;
                     bool m_unNecessaryNodeListHasBeenSet;
 
                     /**
-                     * Number of router nodes to be added.
+                     * <p>Number of Router nodes to be scaled out.</p>
                      */
                     uint64_t m_routerCount;
                     bool m_routerCountHasBeenSet;
 
                     /**
-                     * Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+                     * <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
                      */
                     std::vector<uint64_t> m_softDeployInfo;
                     bool m_softDeployInfoHasBeenSet;
 
                     /**
-                     * Started process.
+                     * <p>Started process.</p>
                      */
                     std::vector<uint64_t> m_serviceNodeInfo;
                     bool m_serviceNodeInfoHasBeenSet;
 
                     /**
-                     * List of spread placement group IDs. Only one can be specified currently.
+                     * <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
 
                     /**
-                     * List of tags bound to added nodes.
+                     * <p>List of tags bound to nodes for the scale-out.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
                      */
                     std::string m_hardwareResourceType;
                     bool m_hardwareResourceTypeHasBeenSet;
 
                     /**
-                     * Specified information such as pod specification and source for scale-out with pod resources.
+                     * <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
                      */
                     PodSpec m_podSpec;
                     bool m_podSpecHasBeenSet;
 
                     /**
-                     * Server group name selected for ClickHouse cluster scale-out.
+                     * <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
                      */
                     std::string m_clickHouseClusterName;
                     bool m_clickHouseClusterNameHasBeenSet;
 
                     /**
-                     * Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+                     * <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
                      */
                     std::string m_clickHouseClusterType;
                     bool m_clickHouseClusterTypeHasBeenSet;
 
                     /**
-                     * Yarn node label specified for rule-based scale-out.
+                     * <p>YARN node label specified for the rule-based scale-out.</p>
                      */
                     std::string m_yarnNodeLabel;
                     bool m_yarnNodeLabelHasBeenSet;
 
                     /**
-                     * Custom pod permission and parameter
+                     * <p>Pod custom permission and parameter.</p>
                      */
                     PodParameter m_podParameter;
                     bool m_podParameterHasBeenSet;
 
                     /**
-                     * Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     * <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
                      */
                     uint64_t m_masterCount;
                     bool m_masterCountHasBeenSet;
 
                     /**
-                     * Whether to start the service after scale-out. `true`: Yes; `false`: No.
+                     * <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
                      */
                     std::string m_startServiceAfterScaleOut;
                     bool m_startServiceAfterScaleOutHasBeenSet;
 
                     /**
-                     * AZ, which defaults to the primary AZ of the cluster.
+                     * <p>AZ. The primary AZ of the cluster is selected by default.</p>
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Subnet, which defaults to the subnet used when the cluster is created.
+                     * <p>Subnet. The subnet used during cluster creation is selected by default.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Pre-defined configuration set
+                     * <p>Preset configuration group.</p>
                      */
                     std::string m_scaleOutServiceConfAssign;
                     bool m_scaleOutServiceConfAssignHasBeenSet;
 
                     /**
-                     * Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     * <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
                      */
                     int64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
                      */
                     std::string m_resourceBaseType;
                     bool m_resourceBaseTypeHasBeenSet;
 
                     /**
-                     * Computing resource ID.
+                     * <p>Computing resource ID.</p>
                      */
                     std::string m_computeResourceId;
                     bool m_computeResourceIdHasBeenSet;
 
                     /**
-                     * Advanced settings of computing resources.
+                     * <p>Advanced settings of computing resources.</p>
                      */
                     ComputeResourceAdvanceParams m_computeResourceAdvanceParams;
                     bool m_computeResourceAdvanceParamsHasBeenSet;
 
                     /**
-                     * Node tag information: currently used only in Terraform.
+                     * <p>Node tag information, which is currently only provided for the Terraform platform.</p>
                      */
                     NodeMark m_nodeMarks;
                     bool m_nodeMarksHasBeenSet;
+
+                    /**
+                     * <p>Compute group specified for the scale-out.</p>
+                     */
+                    std::string m_warehouseName;
+                    bool m_warehouseNameHasBeenSet;
+
+                    /**
+                     * <p>Partition of a partition placement group.</p>
+                     */
+                    int64_t m_partitionNumber;
+                    bool m_partitionNumberHasBeenSet;
 
                 };
             }

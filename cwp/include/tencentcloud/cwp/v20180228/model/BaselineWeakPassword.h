@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Password ID
-                     * @return PasswordId Password ID
+                     * 获取Password Id
+                     * @return PasswordId Password Id
                      * 
                      */
                     int64_t GetPasswordId() const;
 
                     /**
-                     * 设置Password ID
-                     * @param _passwordId Password ID
+                     * 设置Password Id
+                     * @param _passwordId Password Id
                      * 
                      */
                     void SetPasswordId(const int64_t& _passwordId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PasswordIdHasBeenSet() const;
 
                     /**
-                     * 获取Password
-                     * @return WeakPassword Password
+                     * 获取Password.
+                     * @return WeakPassword Password.
                      * 
                      */
                     std::string GetWeakPassword() const;
 
                     /**
-                     * 设置Password
-                     * @param _weakPassword Password
+                     * 设置Password.
+                     * @param _weakPassword Password.
                      * 
                      */
                     void SetWeakPassword(const std::string& _weakPassword);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Password ID
+                     * Password Id
                      */
                     int64_t m_passwordId;
                     bool m_passwordIdHasBeenSet;
 
                     /**
-                     * Password
+                     * Password.
                      */
                     std::string m_weakPassword;
                     bool m_weakPasswordHasBeenSet;

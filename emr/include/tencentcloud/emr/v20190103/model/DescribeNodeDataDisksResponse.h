@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Cloud disk list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CBSList Cloud disk list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CBSInstance> GetCBSList() const;
@@ -88,6 +86,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaxSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum additional performance value of cloud disks.
+                     * @return MaxThroughputPerformance Maximum additional performance value of cloud disks.
+                     * 
+                     */
+                    int64_t GetMaxThroughputPerformance() const;
+
+                    /**
+                     * 判断参数 MaxThroughputPerformance 是否已赋值
+                     * @return MaxThroughputPerformance 是否已赋值
+                     * 
+                     */
+                    bool MaxThroughputPerformanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -98,7 +110,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Cloud disk list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CBSInstance> m_cBSList;
                     bool m_cBSListHasBeenSet;
@@ -108,6 +119,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
+
+                    /**
+                     * Maximum additional performance value of cloud disks.
+                     */
+                    int64_t m_maxThroughputPerformance;
+                    bool m_maxThroughputPerformanceHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Pod floating specification
+                * Pod floating specifications
                 */
                 class DynamicPodSpec : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Minimum number of CPUs
-                     * @return RequestCpu Minimum number of CPUs
+                     * 获取Minimum number of required CPU cores.
+                     * @return RequestCpu Minimum number of required CPU cores.
                      * 
                      */
                     double GetRequestCpu() const;
 
                     /**
-                     * 设置Minimum number of CPUs
-                     * @param _requestCpu Minimum number of CPUs
+                     * 设置Minimum number of required CPU cores.
+                     * @param _requestCpu Minimum number of required CPU cores.
                      * 
                      */
                     void SetRequestCpu(const double& _requestCpu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RequestCpuHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of CPUs
-                     * @return LimitCpu Maximum number of CPUs
+                     * 获取Maximum number of required CPU cores.
+                     * @return LimitCpu Maximum number of required CPU cores.
                      * 
                      */
                     double GetLimitCpu() const;
 
                     /**
-                     * 设置Maximum number of CPUs
-                     * @param _limitCpu Maximum number of CPUs
+                     * 设置Maximum number of required CPU cores.
+                     * @param _limitCpu Maximum number of required CPU cores.
                      * 
                      */
                     void SetLimitCpu(const double& _limitCpu);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LimitCpuHasBeenSet() const;
 
                     /**
-                     * 获取Minimum memory in MB
-                     * @return RequestMemory Minimum memory in MB
+                     * 获取Minimum required memory capacity (MB).
+                     * @return RequestMemory Minimum required memory capacity (MB).
                      * 
                      */
                     double GetRequestMemory() const;
 
                     /**
-                     * 设置Minimum memory in MB
-                     * @param _requestMemory Minimum memory in MB
+                     * 设置Minimum required memory capacity (MB).
+                     * @param _requestMemory Minimum required memory capacity (MB).
                      * 
                      */
                     void SetRequestMemory(const double& _requestMemory);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RequestMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Maximum memory in MB
-                     * @return LimitMemory Maximum memory in MB
+                     * 获取Maximum required memory capacity (MB).
+                     * @return LimitMemory Maximum required memory capacity (MB).
                      * 
                      */
                     double GetLimitMemory() const;
 
                     /**
-                     * 设置Maximum memory in MB
-                     * @param _limitMemory Maximum memory in MB
+                     * 设置Maximum required memory capacity (MB).
+                     * @param _limitMemory Maximum required memory capacity (MB).
                      * 
                      */
                     void SetLimitMemory(const double& _limitMemory);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Minimum number of CPUs
+                     * Minimum number of required CPU cores.
                      */
                     double m_requestCpu;
                     bool m_requestCpuHasBeenSet;
 
                     /**
-                     * Maximum number of CPUs
+                     * Maximum number of required CPU cores.
                      */
                     double m_limitCpu;
                     bool m_limitCpuHasBeenSet;
 
                     /**
-                     * Minimum memory in MB
+                     * Minimum required memory capacity (MB).
                      */
                     double m_requestMemory;
                     bool m_requestMemoryHasBeenSet;
 
                     /**
-                     * Maximum memory in MB
+                     * Maximum required memory capacity (MB).
                      */
                     double m_limitMemory;
                     bool m_limitMemoryHasBeenSet;

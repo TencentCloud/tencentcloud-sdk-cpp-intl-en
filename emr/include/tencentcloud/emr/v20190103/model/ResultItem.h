@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output results of user groups.
+                * Response result of the user group.
                 */
                 class ResultItem : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取Specify the reason for the failure in the case of creation failure.
-                     * @return Reason Specify the reason for the failure in the case of creation failure.
+                     * 获取If the creation fails, specify the reason for the failure.
+                     * @return Reason If the creation fails, specify the reason for the failure.
                      * 
                      */
                     std::string GetReason() const;
 
                     /**
-                     * 设置Specify the reason for the failure in the case of creation failure.
-                     * @param _reason Specify the reason for the failure in the case of creation failure.
+                     * 设置If the creation fails, specify the reason for the failure.
+                     * @param _reason If the creation fails, specify the reason for the failure.
                      * 
                      */
                     void SetReason(const std::string& _reason);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_resultHasBeenSet;
 
                     /**
-                     * Specify the reason for the failure in the case of creation failure.
+                     * If the creation fails, specify the reason for the failure.
                      */
                     std::string m_reason;
                     bool m_reasonHasBeenSet;

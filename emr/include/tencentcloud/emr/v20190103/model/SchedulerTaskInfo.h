@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Yarn resource scheduling history
+                * YARN resource scheduling history.
                 */
                 class SchedulerTaskInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scheduler type
-                     * @return SchedulerName Scheduler type
+                     * 获取Scheduler type.
+                     * @return SchedulerName Scheduler type.
                      * 
                      */
                     std::string GetSchedulerName() const;
 
                     /**
-                     * 设置Scheduler type
-                     * @param _schedulerName Scheduler type
+                     * 设置Scheduler type.
+                     * @param _schedulerName Scheduler type.
                      * 
                      */
                     void SetSchedulerName(const std::string& _schedulerName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SchedulerNameHasBeenSet() const;
 
                     /**
-                     * 获取Operation type
-                     * @return OperatorName Operation type
+                     * 获取Operation type.
+                     * @return OperatorName Operation type.
                      * 
                      */
                     std::string GetOperatorName() const;
 
                     /**
-                     * 设置Operation type
-                     * @param _operatorName Operation type
+                     * 设置Operation type.
+                     * @param _operatorName Operation type.
                      * 
                      */
                     void SetOperatorName(const std::string& _operatorName);
@@ -154,18 +154,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Details Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SchedulerTaskDetail> GetDetails() const;
 
                     /**
                      * 设置Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _details Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetails(const std::vector<SchedulerTaskDetail>& _details);
@@ -180,13 +176,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Scheduler type
+                     * Scheduler type.
                      */
                     std::string m_schedulerName;
                     bool m_schedulerNameHasBeenSet;
 
                     /**
-                     * Operation type
+                     * Operation type.
                      */
                     std::string m_operatorName;
                     bool m_operatorNameHasBeenSet;
@@ -211,7 +207,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SchedulerTaskDetail> m_details;
                     bool m_detailsHasBeenSet;

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupGlobalConfs Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<GroupGlobalConfs> GetGroupGlobalConfs() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<GroupGlobalConfs> m_groupGlobalConfs;
                     bool m_groupGlobalConfsHasBeenSet;

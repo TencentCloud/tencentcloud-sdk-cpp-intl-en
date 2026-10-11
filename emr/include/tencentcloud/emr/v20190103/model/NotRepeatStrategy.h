@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Context of the rule for executing elastic scaling once
+                * Context of the rule for executing auto scaling once.
                 */
                 class NotRepeatStrategy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
-                     * @return ExecuteAt The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+                     * 获取Exact time when the task was executed. Format: "2020-07-13 00:00:00".
+                     * @return ExecuteAt Exact time when the task was executed. Format: "2020-07-13 00:00:00".
                      * 
                      */
                     std::string GetExecuteAt() const;
 
                     /**
-                     * 设置The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
-                     * @param _executeAt The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+                     * 设置Exact time when the task was executed. Format: "2020-07-13 00:00:00".
+                     * @param _executeAt Exact time when the task was executed. Format: "2020-07-13 00:00:00".
                      * 
                      */
                     void SetExecuteAt(const std::string& _executeAt);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+                     * Exact time when the task was executed. Format: "2020-07-13 00:00:00".
                      */
                     std::string m_executeAt;
                     bool m_executeAtHasBeenSet;

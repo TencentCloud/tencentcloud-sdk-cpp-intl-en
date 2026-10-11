@@ -34,10 +34,12 @@ AutoScaleResourceConf::AutoScaleResourceConf() :
     m_changeToPodHasBeenSet(false),
     m_groupNameHasBeenSet(false),
     m_yarnNodeLabelHasBeenSet(false),
+    m_warehouseNameHasBeenSet(false),
     m_groupStatusHasBeenSet(false),
     m_parallelHasBeenSet(false),
     m_enableMNodeHasBeenSet(false),
-    m_extraAdvanceAttrsHasBeenSet(false)
+    m_extraAdvanceAttrsHasBeenSet(false),
+    m_customNodeNameHasBeenSet(false)
 {
 }
 
@@ -176,6 +178,16 @@ CoreInternalOutcome AutoScaleResourceConf::Deserialize(const rapidjson::Value &v
         m_yarnNodeLabelHasBeenSet = true;
     }
 
+    if (value.HasMember("WarehouseName") && !value["WarehouseName"].IsNull())
+    {
+        if (!value["WarehouseName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScaleResourceConf.WarehouseName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_warehouseName = string(value["WarehouseName"].GetString());
+        m_warehouseNameHasBeenSet = true;
+    }
+
     if (value.HasMember("GroupStatus") && !value["GroupStatus"].IsNull())
     {
         if (!value["GroupStatus"].IsInt64())
@@ -221,6 +233,16 @@ CoreInternalOutcome AutoScaleResourceConf::Deserialize(const rapidjson::Value &v
         }
 
         m_extraAdvanceAttrsHasBeenSet = true;
+    }
+
+    if (value.HasMember("CustomNodeName") && !value["CustomNodeName"].IsNull())
+    {
+        if (!value["CustomNodeName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScaleResourceConf.CustomNodeName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_customNodeName = string(value["CustomNodeName"].GetString());
+        m_customNodeNameHasBeenSet = true;
     }
 
 
@@ -334,6 +356,14 @@ void AutoScaleResourceConf::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         value.AddMember(iKey, rapidjson::Value(m_yarnNodeLabel.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_warehouseNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarehouseName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_warehouseName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_groupStatusHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -365,6 +395,14 @@ void AutoScaleResourceConf::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_extraAdvanceAttrs.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_customNodeNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomNodeName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customNodeName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -578,6 +616,22 @@ bool AutoScaleResourceConf::YarnNodeLabelHasBeenSet() const
     return m_yarnNodeLabelHasBeenSet;
 }
 
+string AutoScaleResourceConf::GetWarehouseName() const
+{
+    return m_warehouseName;
+}
+
+void AutoScaleResourceConf::SetWarehouseName(const string& _warehouseName)
+{
+    m_warehouseName = _warehouseName;
+    m_warehouseNameHasBeenSet = true;
+}
+
+bool AutoScaleResourceConf::WarehouseNameHasBeenSet() const
+{
+    return m_warehouseNameHasBeenSet;
+}
+
 int64_t AutoScaleResourceConf::GetGroupStatus() const
 {
     return m_groupStatus;
@@ -640,5 +694,21 @@ void AutoScaleResourceConf::SetExtraAdvanceAttrs(const AutoScaleGroupAdvanceAttr
 bool AutoScaleResourceConf::ExtraAdvanceAttrsHasBeenSet() const
 {
     return m_extraAdvanceAttrsHasBeenSet;
+}
+
+string AutoScaleResourceConf::GetCustomNodeName() const
+{
+    return m_customNodeName;
+}
+
+void AutoScaleResourceConf::SetCustomNodeName(const string& _customNodeName)
+{
+    m_customNodeName = _customNodeName;
+    m_customNodeNameHasBeenSet = true;
+}
+
+bool AutoScaleResourceConf::CustomNodeNameHasBeenSet() const
+{
+    return m_customNodeNameHasBeenSet;
 }
 

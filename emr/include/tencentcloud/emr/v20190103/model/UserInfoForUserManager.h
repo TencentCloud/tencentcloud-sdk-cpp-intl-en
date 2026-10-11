@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Added user information list
+                * List of added user information.
                 */
                 class UserInfoForUserManager : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Username
-                     * @return UserName Username
+                     * 获取Username.
+                     * @return UserName Username.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Username
-                     * @param _userName Username
+                     * 设置Username.
+                     * @param _userName Username.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取The group to which the user belongs
-                     * @return UserGroup The group to which the user belongs
+                     * 获取Group to which the user belongs.
+                     * @return UserGroup Group to which the user belongs.
                      * 
                      */
                     std::string GetUserGroup() const;
 
                     /**
-                     * 设置The group to which the user belongs
-                     * @param _userGroup The group to which the user belongs
+                     * 设置Group to which the user belongs.
+                     * @param _userGroup Group to which the user belongs.
                      * 
                      */
                     void SetUserGroup(const std::string& _userGroup);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserGroupHasBeenSet() const;
 
                     /**
-                     * 获取Password
-                     * @return PassWord Password
+                     * 获取Password.
+                     * @return PassWord Password.
                      * 
                      */
                     std::string GetPassWord() const;
 
                     /**
-                     * 设置Password
-                     * @param _passWord Password
+                     * 设置Password.
+                     * @param _passWord Password.
                      * 
                      */
                     void SetPassWord(const std::string& _passWord);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PassWordHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return ReMark Remarks
+                     * 获取Remarks.
+                     * @return ReMark Remarks.
                      * 
                      */
                     std::string GetReMark() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _reMark Remarks
+                     * 设置Remarks.
+                     * @param _reMark Remarks.
                      * 
                      */
                     void SetReMark(const std::string& _reMark);
@@ -154,25 +154,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Username
+                     * Username.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * The group to which the user belongs
+                     * Group to which the user belongs.
                      */
                     std::string m_userGroup;
                     bool m_userGroupHasBeenSet;
 
                     /**
-                     * Password
+                     * Password.
                      */
                     std::string m_passWord;
                     bool m_passWordHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remarks.
                      */
                     std::string m_reMark;
                     bool m_reMarkHasBeenSet;

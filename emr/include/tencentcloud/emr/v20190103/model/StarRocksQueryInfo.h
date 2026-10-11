@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CPUCostHasBeenSet() const;
 
                     /**
-                     * 获取Default DB.
-                     * @return DefaultDB Default DB.
+                     * 获取Default database.
+                     * @return DefaultDB Default database.
                      * 
                      */
                     std::string GetDefaultDB() const;
 
                     /**
-                     * 设置Default DB.
-                     * @param _defaultDB Default DB.
+                     * 设置Default database.
+                     * @param _defaultDB Default database.
                      * 
                      */
                     void SetDefaultDB(const std::string& _defaultDB);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool MemCostHasBeenSet() const;
 
                     /**
-                     * 获取CPU usage (ns) at the plan stage.
-                     * @return PlanCpuCosts CPU usage (ns) at the plan stage.
+                     * 获取CPU consumption in the plan phase (ns).
+                     * @return PlanCpuCosts CPU consumption in the plan phase (ns).
                      * 
                      */
                     int64_t GetPlanCpuCosts() const;
 
                     /**
-                     * 设置CPU usage (ns) at the plan stage.
-                     * @param _planCpuCosts CPU usage (ns) at the plan stage.
+                     * 设置CPU consumption in the plan phase (ns).
+                     * @param _planCpuCosts CPU consumption in the plan phase (ns).
                      * 
                      */
                     void SetPlanCpuCosts(const int64_t& _planCpuCosts);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool PlanCpuCostsHasBeenSet() const;
 
                     /**
-                     * 获取Memory usage (bytes) at the plan stage.
-                     * @return PlanMemCosts Memory usage (bytes) at the plan stage.
+                     * 获取Memory consumption in the plan phase (bytes).
+                     * @return PlanMemCosts Memory consumption in the plan phase (bytes).
                      * 
                      */
                     int64_t GetPlanMemCosts() const;
 
                     /**
-                     * 设置Memory usage (bytes) at the plan stage.
-                     * @param _planMemCosts Memory usage (bytes) at the plan stage.
+                     * 设置Memory consumption in the plan phase (bytes).
+                     * @param _planMemCosts Memory consumption in the plan phase (bytes).
                      * 
                      */
                     void SetPlanMemCosts(const int64_t& _planMemCosts);
@@ -445,6 +445,27 @@ namespace TencentCloud
                      */
                     bool UserHasBeenSet() const;
 
+                    /**
+                     * 获取Error code.
+                     * @return ErrorCode Error code.
+                     * 
+                     */
+                    std::string GetErrorCode() const;
+
+                    /**
+                     * 设置Error code.
+                     * @param _errorCode Error code.
+                     * 
+                     */
+                    void SetErrorCode(const std::string& _errorCode);
+
+                    /**
+                     * 判断参数 ErrorCode 是否已赋值
+                     * @return ErrorCode 是否已赋值
+                     * 
+                     */
+                    bool ErrorCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -460,7 +481,7 @@ namespace TencentCloud
                     bool m_cPUCostHasBeenSet;
 
                     /**
-                     * Default DB.
+                     * Default database.
                      */
                     std::string m_defaultDB;
                     bool m_defaultDBHasBeenSet;
@@ -496,13 +517,13 @@ namespace TencentCloud
                     bool m_memCostHasBeenSet;
 
                     /**
-                     * CPU usage (ns) at the plan stage.
+                     * CPU consumption in the plan phase (ns).
                      */
                     int64_t m_planCpuCosts;
                     bool m_planCpuCostsHasBeenSet;
 
                     /**
-                     * Memory usage (bytes) at the plan stage.
+                     * Memory consumption in the plan phase (bytes).
                      */
                     int64_t m_planMemCosts;
                     bool m_planMemCostsHasBeenSet;
@@ -560,6 +581,12 @@ namespace TencentCloud
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
+
+                    /**
+                     * Error code.
+                     */
+                    std::string m_errorCode;
+                    bool m_errorCodeHasBeenSet;
 
                 };
             }

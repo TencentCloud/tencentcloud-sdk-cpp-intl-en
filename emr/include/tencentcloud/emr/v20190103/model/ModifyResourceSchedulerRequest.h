@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取EMR cluster ID
-                     * @return InstanceId EMR cluster ID
+                     * 获取English ID of the EMR cluster.
+                     * @return InstanceId English ID of the EMR cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置EMR cluster ID
-                     * @param _instanceId EMR cluster ID
+                     * 设置English ID of the EMR cluster.
+                     * @param _instanceId English ID of the EMR cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The original scheduler: `fair`
-                     * @return OldValue The original scheduler: `fair`
+                     * 获取Old scheduler: fair.
+                     * @return OldValue Old scheduler: fair.
                      * 
                      */
                     std::string GetOldValue() const;
 
                     /**
-                     * 设置The original scheduler: `fair`
-                     * @param _oldValue The original scheduler: `fair`
+                     * 设置Old scheduler: fair.
+                     * @param _oldValue Old scheduler: fair.
                      * 
                      */
                     void SetOldValue(const std::string& _oldValue);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OldValueHasBeenSet() const;
 
                     /**
-                     * 获取The new scheduler: `capacity`
-                     * @return NewValue The new scheduler: `capacity`
+                     * 获取New scheduler: capacity.
+                     * @return NewValue New scheduler: capacity.
                      * 
                      */
                     std::string GetNewValue() const;
 
                     /**
-                     * 设置The new scheduler: `capacity`
-                     * @param _newValue The new scheduler: `capacity`
+                     * 设置New scheduler: capacity.
+                     * @param _newValue New scheduler: capacity.
                      * 
                      */
                     void SetNewValue(const std::string& _newValue);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * EMR cluster ID
+                     * English ID of the EMR cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The original scheduler: `fair`
+                     * Old scheduler: fair.
                      */
                     std::string m_oldValue;
                     bool m_oldValueHasBeenSet;
 
                     /**
-                     * The new scheduler: `capacity`
+                     * New scheduler: capacity.
                      */
                     std::string m_newValue;
                     bool m_newValueHasBeenSet;

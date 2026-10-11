@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node type: master, core, task, router.
-                     * @return NodeType Node type: master, core, task, router.
+                     * 获取Node type. Valid values: master, core, task, and router.
+                     * @return NodeType Node type. Valid values: master, core, task, and router.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type: master, core, task, router.
-                     * @param _nodeType Node type: master, core, task, router.
+                     * 设置Node type. Valid values: master, core, task, and router.
+                     * @param _nodeType Node type. Valid values: master, core, task, and router.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
-                     * @return NodeNames Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+                     * 获取Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
+                     * @return NodeNames Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
                      * 
                      */
                     std::vector<std::string> GetNodeNames() const;
 
                     /**
-                     * 设置Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
-                     * @param _nodeNames Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+                     * 设置Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
+                     * @param _nodeNames Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
                      * 
                      */
                     void SetNodeNames(const std::vector<std::string>& _nodeNames);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NodeNamesHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone name.
-                     * @return Zone Availability zone name.
+                     * 获取AZ name.
+                     * @return Zone AZ name.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone name.
-                     * @param _zone Availability zone name.
+                     * 设置AZ name.
+                     * @param _zone AZ name.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Node type: master, core, task, router.
+                     * Node type. Valid values: master, core, task, and router.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+                     * Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
                      */
                     std::vector<std::string> m_nodeNames;
                     bool m_nodeNamesHasBeenSet;
 
                     /**
-                     * Availability zone name.
+                     * AZ name.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

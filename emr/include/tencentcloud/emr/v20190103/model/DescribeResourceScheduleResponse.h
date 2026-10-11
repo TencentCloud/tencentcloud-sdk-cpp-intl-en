@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the resource scheduling feature
-                     * @return OpenSwitch Whether to enable the resource scheduling feature
+                     * 获取Whether the resource scheduling feature is enabled.
+                     * @return OpenSwitch Whether the resource scheduling feature is enabled.
                      * 
                      */
                     bool GetOpenSwitch() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool OpenSwitchHasBeenSet() const;
 
                     /**
-                     * 获取The resource scheduler in service
-                     * @return Scheduler The resource scheduler in service
+                     * 获取Resource scheduler in use.
+                     * @return Scheduler Resource scheduler in use.
                      * 
                      */
                     std::string GetScheduler() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Fair Scheduler information
-                     * @return FSInfo Fair Scheduler information
+                     * 获取Information of the fair scheduler.
+                     * @return FSInfo Information of the fair scheduler.
                      * 
                      */
                     std::string GetFSInfo() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool FSInfoHasBeenSet() const;
 
                     /**
-                     * 获取Capacity Scheduler information
-                     * @return CSInfo Capacity Scheduler information
+                     * 获取Information of the capacity scheduler.
+                     * @return CSInfo Information of the capacity scheduler.
                      * 
                      */
                     std::string GetCSInfo() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable the resource scheduling feature
+                     * Whether the resource scheduling feature is enabled.
                      */
                     bool m_openSwitch;
                     bool m_openSwitchHasBeenSet;
 
                     /**
-                     * The resource scheduler in service
+                     * Resource scheduler in use.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Fair Scheduler information
+                     * Information of the fair scheduler.
                      */
                     std::string m_fSInfo;
                     bool m_fSInfoHasBeenSet;
 
                     /**
-                     * Capacity Scheduler information
+                     * Information of the capacity scheduler.
                      */
                     std::string m_cSInfo;
                     bool m_cSInfoHasBeenSet;

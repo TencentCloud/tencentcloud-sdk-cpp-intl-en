@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupGlobalConf Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AutoScaleResourceConf GetGroupGlobalConf() const;
 
                     /**
                      * 设置Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _groupGlobalConf Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetGroupGlobalConf(const AutoScaleResourceConf& _groupGlobalConf);
@@ -139,7 +135,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AutoScaleResourceConf m_groupGlobalConf;
                     bool m_groupGlobalConfHasBeenSet;

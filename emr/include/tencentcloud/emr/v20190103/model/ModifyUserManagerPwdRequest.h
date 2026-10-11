@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID
-                     * @return InstanceId Cluster instance ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return InstanceId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID
-                     * @param _instanceId Cluster instance ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _instanceId <p>Cluster ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Username
-                     * @return UserName Username
+                     * 获取<p>Username.</p>
+                     * @return UserName <p>Username.</p>
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Username
-                     * @param _userName Username
+                     * 设置<p>Username.</p>
+                     * @param _userName <p>Username.</p>
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Password
-                     * @return PassWord Password
+                     * 获取<p>Password.</p>
+                     * @return PassWord <p>Password.</p>
                      * 
                      */
                     std::string GetPassWord() const;
 
                     /**
-                     * 设置Password
-                     * @param _passWord Password
+                     * 设置<p>Password.</p>
+                     * @param _passWord <p>Password.</p>
                      * 
                      */
                     void SetPassWord(const std::string& _passWord);
@@ -105,25 +105,52 @@ namespace TencentCloud
                      */
                     bool PassWordHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to synchronize the password.</p>
+                     * @return SyncPwd <p>Whether to synchronize the password.</p>
+                     * 
+                     */
+                    bool GetSyncPwd() const;
+
+                    /**
+                     * 设置<p>Whether to synchronize the password.</p>
+                     * @param _syncPwd <p>Whether to synchronize the password.</p>
+                     * 
+                     */
+                    void SetSyncPwd(const bool& _syncPwd);
+
+                    /**
+                     * 判断参数 SyncPwd 是否已赋值
+                     * @return SyncPwd 是否已赋值
+                     * 
+                     */
+                    bool SyncPwdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster instance ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Username
+                     * <p>Username.</p>
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Password
+                     * <p>Password.</p>
                      */
                     std::string m_passWord;
                     bool m_passWordHasBeenSet;
+
+                    /**
+                     * <p>Whether to synchronize the password.</p>
+                     */
+                    bool m_syncPwd;
+                    bool m_syncPwdHasBeenSet;
 
                 };
             }

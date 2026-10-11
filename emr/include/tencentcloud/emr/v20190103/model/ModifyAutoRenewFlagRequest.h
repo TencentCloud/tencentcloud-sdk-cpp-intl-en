@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
-                     * @return RenewFlag NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+                     * 获取NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
+                     * @return RenewFlag NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
-                     * @param _renewFlag NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+                     * 设置NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
+                     * @param _renewFlag NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+                     * NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Table schema information
+                * Table schema information.
                 */
                 class TableSchemaItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Column identifier
-                     * @return Name Column identifier
+                     * 获取Column identifier.
+                     * @return Name Column identifier.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Column identifier
-                     * @param _name Column identifier
+                     * 设置Column identifier.
+                     * @param _name Column identifier.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is sortable by this column
-                     * @return Sortable Whether it is sortable by this column
+                     * 获取Whether it is sortable by this column.
+                     * @return Sortable Whether it is sortable by this column.
                      * 
                      */
                     bool GetSortable() const;
 
                     /**
-                     * 设置Whether it is sortable by this column
-                     * @param _sortable Whether it is sortable by this column
+                     * 设置Whether it is sortable by this column.
+                     * @param _sortable Whether it is sortable by this column.
                      * 
                      */
                     void SetSortable(const bool& _sortable);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SortableHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is filterable
-                     * @return WithFilter Whether it is filterable
+                     * 获取Whether it is filterable.
+                     * @return WithFilter Whether it is filterable.
                      * 
                      */
                     bool GetWithFilter() const;
 
                     /**
-                     * 设置Whether it is filterable
-                     * @param _withFilter Whether it is filterable
+                     * 设置Whether it is filterable.
+                     * @param _withFilter Whether it is filterable.
                      * 
                      */
                     void SetWithFilter(const bool& _withFilter);
@@ -110,23 +110,15 @@ namespace TencentCloud
                     bool WithFilterHasBeenSet() const;
 
                     /**
-                     * 获取Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Candidates Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filtered candidate set.
+                     * @return Candidates Filtered candidate set.
                      * 
                      */
                     std::vector<std::string> GetCandidates() const;
 
                     /**
-                     * 设置Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _candidates Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Filtered candidate set.
+                     * @param _candidates Filtered candidate set.
                      * 
                      */
                     void SetCandidates(const std::vector<std::string>& _candidates);
@@ -183,27 +175,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Column identifier
+                     * Column identifier.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Whether it is sortable by this column
+                     * Whether it is sortable by this column.
                      */
                     bool m_sortable;
                     bool m_sortableHasBeenSet;
 
                     /**
-                     * Whether it is filterable
+                     * Whether it is filterable.
                      */
                     bool m_withFilter;
                     bool m_withFilterHasBeenSet;
 
                     /**
-                     * Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filtered candidate set.
                      */
                     std::vector<std::string> m_candidates;
                     bool m_candidatesHasBeenSet;

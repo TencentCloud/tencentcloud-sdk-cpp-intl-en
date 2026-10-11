@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Global configurations of the fair scheduler under Resource Scheduling.
+                * Global configuration of the fair scheduler in resource scheduling.
                 */
                 class FairGlobalConfig : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserMaxAppsDefault Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Program upper limit</p> on the corresponding page.
+                     * @return UserMaxAppsDefault <p>Program upper limit</p> on the corresponding page.
                      * 
                      */
                     int64_t GetUserMaxAppsDefault() const;
 
                     /**
-                     * 设置Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userMaxAppsDefault Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Program upper limit</p> on the corresponding page.
+                     * @param _userMaxAppsDefault <p>Program upper limit</p> on the corresponding page.
                      * 
                      */
                     void SetUserMaxAppsDefault(const int64_t& _userMaxAppsDefault);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Program upper limit</p> on the corresponding page.
                      */
                     int64_t m_userMaxAppsDefault;
                     bool m_userMaxAppsDefaultHasBeenSet;

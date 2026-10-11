@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total items
-                     * @return Total Total items
+                     * 获取Total number of entries.
+                     * @return Total Total number of entries.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Result list
-                     * @return Results Result list
+                     * 获取Result list.
+                     * @return Results Result list.
                      * 
                      */
                     std::vector<HiveQuery> GetResults() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total items
+                     * Total number of entries.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Result list
+                     * Result list.
                      */
                     std::vector<HiveQuery> m_results;
                     bool m_resultsHasBeenSet;

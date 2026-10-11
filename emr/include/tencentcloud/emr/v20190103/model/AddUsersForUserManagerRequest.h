@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster string ID
-                     * @return InstanceId Cluster string ID
+                     * 获取Cluster string ID.
+                     * @return InstanceId Cluster string ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster string ID
-                     * @param _instanceId Cluster string ID
+                     * 设置Cluster string ID.
+                     * @param _instanceId Cluster string ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User information list
-                     * @return UserManagerUserList User information list
+                     * 获取User information list.
+                     * @return UserManagerUserList User information list.
                      * 
                      */
                     std::vector<UserInfoForUserManager> GetUserManagerUserList() const;
 
                     /**
-                     * 设置User information list
-                     * @param _userManagerUserList User information list
+                     * 设置User information list.
+                     * @param _userManagerUserList User information list.
                      * 
                      */
                     void SetUserManagerUserList(const std::vector<UserInfoForUserManager>& _userManagerUserList);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster string ID
+                     * Cluster string ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User information list
+                     * User information list.
                      */
                     std::vector<UserInfoForUserManager> m_userManagerUserList;
                     bool m_userManagerUserListHasBeenSet;

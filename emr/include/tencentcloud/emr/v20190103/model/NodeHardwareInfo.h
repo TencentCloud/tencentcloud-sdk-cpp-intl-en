@@ -28,6 +28,7 @@
 #include <tencentcloud/emr/v20190103/model/CdbInfo.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
 #include <tencentcloud/emr/v20190103/model/SubnetInfo.h>
+#include <tencentcloud/emr/v20190103/model/DiskHealthIssue.h>
 
 
 namespace TencentCloud
@@ -39,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node hardware information
+                * Node hardware information.
                 */
                 class NodeHardwareInfo : public AbstractModel
                 {
@@ -51,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User AppID.
-                     * @return AppId User AppID.
+                     * 获取<p>User APPID.</p>
+                     * @return AppId <p>User APPID.</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User AppID.
-                     * @param _appId User AppID.
+                     * 设置<p>User APPID.</p>
+                     * @param _appId <p>User APPID.</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -72,15 +73,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Serial number.
-                     * @return SerialNo Serial number.
+                     * 获取<p>Serial number.</p>
+                     * @return SerialNo <p>Serial number.</p>
                      * 
                      */
                     std::string GetSerialNo() const;
 
                     /**
-                     * 设置Serial number.
-                     * @param _serialNo Serial number.
+                     * 设置<p>Serial number.</p>
+                     * @param _serialNo <p>Serial number.</p>
                      * 
                      */
                     void SetSerialNo(const std::string& _serialNo);
@@ -93,15 +94,15 @@ namespace TencentCloud
                     bool SerialNoHasBeenSet() const;
 
                     /**
-                     * 获取Machine instance ID.
-                     * @return OrderNo Machine instance ID.
+                     * 获取<p>Machine instance ID.</p>
+                     * @return OrderNo <p>Machine instance ID.</p>
                      * 
                      */
                     std::string GetOrderNo() const;
 
                     /**
-                     * 设置Machine instance ID.
-                     * @param _orderNo Machine instance ID.
+                     * 设置<p>Machine instance ID.</p>
+                     * @param _orderNo <p>Machine instance ID.</p>
                      * 
                      */
                     void SetOrderNo(const std::string& _orderNo);
@@ -114,15 +115,15 @@ namespace TencentCloud
                     bool OrderNoHasBeenSet() const;
 
                     /**
-                     * 获取Public network IP address bound for the Master node.
-                     * @return WanIp Public network IP address bound for the Master node.
+                     * 获取<p>Public IP address bound to the Master node.</p>
+                     * @return WanIp <p>Public IP address bound to the Master node.</p>
                      * 
                      */
                     std::string GetWanIp() const;
 
                     /**
-                     * 设置Public network IP address bound for the Master node.
-                     * @param _wanIp Public network IP address bound for the Master node.
+                     * 设置<p>Public IP address bound to the Master node.</p>
+                     * @param _wanIp <p>Public IP address bound to the Master node.</p>
                      * 
                      */
                     void SetWanIp(const std::string& _wanIp);
@@ -135,19 +136,15 @@ namespace TencentCloud
                     bool WanIpHasBeenSet() const;
 
                     /**
-                     * 获取Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
-                     * @return Flag Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
+                     * 获取<p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
+                     * @return Flag <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
                      * 
                      */
                     int64_t GetFlag() const;
 
                     /**
-                     * 设置Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
-                     * @param _flag Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
+                     * 设置<p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
+                     * @param _flag <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
                      * 
                      */
                     void SetFlag(const int64_t& _flag);
@@ -160,15 +157,15 @@ namespace TencentCloud
                     bool FlagHasBeenSet() const;
 
                     /**
-                     * 获取Node specifications.
-                     * @return Spec Node specifications.
+                     * 获取<p>Node specifications.</p>
+                     * @return Spec <p>Node specifications.</p>
                      * 
                      */
                     std::string GetSpec() const;
 
                     /**
-                     * 设置Node specifications.
-                     * @param _spec Node specifications.
+                     * 设置<p>Node specifications.</p>
+                     * @param _spec <p>Node specifications.</p>
                      * 
                      */
                     void SetSpec(const std::string& _spec);
@@ -181,15 +178,15 @@ namespace TencentCloud
                     bool SpecHasBeenSet() const;
 
                     /**
-                     * 获取Number of node cores.
-                     * @return CpuNum Number of node cores.
+                     * 获取<p>Number of node cores.</p>
+                     * @return CpuNum <p>Number of node cores.</p>
                      * 
                      */
                     int64_t GetCpuNum() const;
 
                     /**
-                     * 设置Number of node cores.
-                     * @param _cpuNum Number of node cores.
+                     * 设置<p>Number of node cores.</p>
+                     * @param _cpuNum <p>Number of node cores.</p>
                      * 
                      */
                     void SetCpuNum(const int64_t& _cpuNum);
@@ -202,15 +199,15 @@ namespace TencentCloud
                     bool CpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Node memory (bytes).
-                     * @return MemSize Node memory (bytes).
+                     * 获取<p>Node memory (bytes).</p>
+                     * @return MemSize <p>Node memory (bytes).</p>
                      * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
-                     * 设置Node memory (bytes).
-                     * @param _memSize Node memory (bytes).
+                     * 设置<p>Node memory (bytes).</p>
+                     * @param _memSize <p>Node memory (bytes).</p>
                      * 
                      */
                     void SetMemSize(const int64_t& _memSize);
@@ -223,15 +220,15 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Node memory (GB).
-                     * @return MemDesc Node memory (GB).
+                     * 获取<p>Node memory description (GB).</p>
+                     * @return MemDesc <p>Node memory description (GB).</p>
                      * 
                      */
                     std::string GetMemDesc() const;
 
                     /**
-                     * 设置Node memory (GB).
-                     * @param _memDesc Node memory (GB).
+                     * 设置<p>Node memory description (GB).</p>
+                     * @param _memDesc <p>Node memory description (GB).</p>
                      * 
                      */
                     void SetMemDesc(const std::string& _memDesc);
@@ -244,15 +241,15 @@ namespace TencentCloud
                     bool MemDescHasBeenSet() const;
 
                     /**
-                     * 获取The region where the node is located.
-                     * @return RegionId The region where the node is located.
+                     * 获取<p>Region where the node is located.</p>
+                     * @return RegionId <p>Region where the node is located.</p>
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置The region where the node is located.
-                     * @param _regionId The region where the node is located.
+                     * 设置<p>Region where the node is located.</p>
+                     * @param _regionId <p>Region where the node is located.</p>
                      * 
                      */
                     void SetRegionId(const int64_t& _regionId);
@@ -265,15 +262,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取The zone where the node is located.
-                     * @return ZoneId The zone where the node is located.
+                     * 获取<p>Zone where the node is located.</p>
+                     * @return ZoneId <p>Zone where the node is located.</p>
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置The zone where the node is located.
-                     * @param _zoneId The zone where the node is located.
+                     * 设置<p>Zone where the node is located.</p>
+                     * @param _zoneId <p>Zone where the node is located.</p>
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -286,15 +283,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Application time.
-                     * @return ApplyTime Application time.
+                     * 获取<p>Application time.</p>
+                     * @return ApplyTime <p>Application time.</p>
                      * 
                      */
                     std::string GetApplyTime() const;
 
                     /**
-                     * 设置Application time.
-                     * @param _applyTime Application time.
+                     * 设置<p>Application time.</p>
+                     * @param _applyTime <p>Application time.</p>
                      * 
                      */
                     void SetApplyTime(const std::string& _applyTime);
@@ -307,15 +304,15 @@ namespace TencentCloud
                     bool ApplyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Release time.
-                     * @return FreeTime Release time.
+                     * 获取<p>Release time.</p>
+                     * @return FreeTime <p>Release time.</p>
                      * 
                      */
                     std::string GetFreeTime() const;
 
                     /**
-                     * 设置Release time.
-                     * @param _freeTime Release time.
+                     * 设置<p>Release time.</p>
+                     * @param _freeTime <p>Release time.</p>
                      * 
                      */
                     void SetFreeTime(const std::string& _freeTime);
@@ -328,15 +325,15 @@ namespace TencentCloud
                     bool FreeTimeHasBeenSet() const;
 
                     /**
-                     * 获取Hard disk size.
-                     * @return DiskSize Hard disk size.
+                     * 获取<p>Hard disk size.</p>
+                     * @return DiskSize <p>Hard disk size.</p>
                      * 
                      */
                     std::string GetDiskSize() const;
 
                     /**
-                     * 设置Hard disk size.
-                     * @param _diskSize Hard disk size.
+                     * 设置<p>Hard disk size.</p>
+                     * @param _diskSize <p>Hard disk size.</p>
                      * 
                      */
                     void SetDiskSize(const std::string& _diskSize);
@@ -349,15 +346,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Node description.
-                     * @return NameTag Node description.
+                     * 获取<p>Node description.</p>
+                     * @return NameTag <p>Node description.</p>
                      * 
                      */
                     std::string GetNameTag() const;
 
                     /**
-                     * 设置Node description.
-                     * @param _nameTag Node description.
+                     * 设置<p>Node description.</p>
+                     * @param _nameTag <p>Node description.</p>
                      * 
                      */
                     void SetNameTag(const std::string& _nameTag);
@@ -370,15 +367,15 @@ namespace TencentCloud
                     bool NameTagHasBeenSet() const;
 
                     /**
-                     * 获取Node deployment service.
-                     * @return Services Node deployment service.
+                     * 获取<p>Services deployed on the node.</p>
+                     * @return Services <p>Services deployed on the node.</p>
                      * 
                      */
                     std::string GetServices() const;
 
                     /**
-                     * 设置Node deployment service.
-                     * @param _services Node deployment service.
+                     * 设置<p>Services deployed on the node.</p>
+                     * @param _services <p>Services deployed on the node.</p>
                      * 
                      */
                     void SetServices(const std::string& _services);
@@ -391,19 +388,15 @@ namespace TencentCloud
                     bool ServicesHasBeenSet() const;
 
                     /**
-                     * 获取Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
-                     * @return StorageType Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
+                     * 获取<p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+                     * @return StorageType <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
                      * 
                      */
                     int64_t GetStorageType() const;
 
                     /**
-                     * 设置Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
-                     * @param _storageType Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
+                     * 设置<p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+                     * @param _storageType <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
                      * 
                      */
                     void SetStorageType(const int64_t& _storageType);
@@ -416,15 +409,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取System disk size (GB).
-                     * @return RootSize System disk size (GB).
+                     * 获取<p>System disk size (GB).</p>
+                     * @return RootSize <p>System disk size (GB).</p>
                      * 
                      */
                     int64_t GetRootSize() const;
 
                     /**
-                     * 设置System disk size (GB).
-                     * @param _rootSize System disk size (GB).
+                     * 设置<p>System disk size (GB).</p>
+                     * @param _rootSize <p>System disk size (GB).</p>
                      * 
                      */
                     void SetRootSize(const int64_t& _rootSize);
@@ -437,15 +430,15 @@ namespace TencentCloud
                     bool RootSizeHasBeenSet() const;
 
                     /**
-                     * 获取Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
-                     * @return ChargeType Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
+                     * 获取<p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+                     * @return ChargeType <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
-                     * 设置Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
-                     * @param _chargeType Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
+                     * 设置<p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+                     * @param _chargeType <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
@@ -458,15 +451,15 @@ namespace TencentCloud
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database IP address.
-                     * @return CdbIp Database IP address.
+                     * 获取<p>Database IP address.</p>
+                     * @return CdbIp <p>Database IP address.</p>
                      * 
                      */
                     std::string GetCdbIp() const;
 
                     /**
-                     * 设置Database IP address.
-                     * @param _cdbIp Database IP address.
+                     * 设置<p>Database IP address.</p>
+                     * @param _cdbIp <p>Database IP address.</p>
                      * 
                      */
                     void SetCdbIp(const std::string& _cdbIp);
@@ -479,15 +472,15 @@ namespace TencentCloud
                     bool CdbIpHasBeenSet() const;
 
                     /**
-                     * 获取Database port.
-                     * @return CdbPort Database port.
+                     * 获取<p>Database port.</p>
+                     * @return CdbPort <p>Database port.</p>
                      * 
                      */
                     int64_t GetCdbPort() const;
 
                     /**
-                     * 设置Database port.
-                     * @param _cdbPort Database port.
+                     * 设置<p>Database port.</p>
+                     * @param _cdbPort <p>Database port.</p>
                      * 
                      */
                     void SetCdbPort(const int64_t& _cdbPort);
@@ -500,15 +493,15 @@ namespace TencentCloud
                     bool CdbPortHasBeenSet() const;
 
                     /**
-                     * 获取Hard disk capacity (bytes).
-                     * @return HwDiskSize Hard disk capacity (bytes).
+                     * 获取<p>Hard disk capacity (bytes).</p>
+                     * @return HwDiskSize <p>Hard disk capacity (bytes).</p>
                      * 
                      */
                     int64_t GetHwDiskSize() const;
 
                     /**
-                     * 设置Hard disk capacity (bytes).
-                     * @param _hwDiskSize Hard disk capacity (bytes).
+                     * 设置<p>Hard disk capacity (bytes).</p>
+                     * @param _hwDiskSize <p>Hard disk capacity (bytes).</p>
                      * 
                      */
                     void SetHwDiskSize(const int64_t& _hwDiskSize);
@@ -521,15 +514,15 @@ namespace TencentCloud
                     bool HwDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Hard disk capacity description.
-                     * @return HwDiskSizeDesc Hard disk capacity description.
+                     * 获取<p>Hard disk capacity description.</p>
+                     * @return HwDiskSizeDesc <p>Hard disk capacity description.</p>
                      * 
                      */
                     std::string GetHwDiskSizeDesc() const;
 
                     /**
-                     * 设置Hard disk capacity description.
-                     * @param _hwDiskSizeDesc Hard disk capacity description.
+                     * 设置<p>Hard disk capacity description.</p>
+                     * @param _hwDiskSizeDesc <p>Hard disk capacity description.</p>
                      * 
                      */
                     void SetHwDiskSizeDesc(const std::string& _hwDiskSizeDesc);
@@ -542,15 +535,15 @@ namespace TencentCloud
                     bool HwDiskSizeDescHasBeenSet() const;
 
                     /**
-                     * 获取Memory capacity (bytes).
-                     * @return HwMemSize Memory capacity (bytes).
+                     * 获取<p>Memory capacity (bytes).</p>
+                     * @return HwMemSize <p>Memory capacity (bytes).</p>
                      * 
                      */
                     int64_t GetHwMemSize() const;
 
                     /**
-                     * 设置Memory capacity (bytes).
-                     * @param _hwMemSize Memory capacity (bytes).
+                     * 设置<p>Memory capacity (bytes).</p>
+                     * @param _hwMemSize <p>Memory capacity (bytes).</p>
                      * 
                      */
                     void SetHwMemSize(const int64_t& _hwMemSize);
@@ -563,15 +556,15 @@ namespace TencentCloud
                     bool HwMemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Memory capacity description.
-                     * @return HwMemSizeDesc Memory capacity description.
+                     * 获取<p>Memory capacity description.</p>
+                     * @return HwMemSizeDesc <p>Memory capacity description.</p>
                      * 
                      */
                     std::string GetHwMemSizeDesc() const;
 
                     /**
-                     * 设置Memory capacity description.
-                     * @param _hwMemSizeDesc Memory capacity description.
+                     * 设置<p>Memory capacity description.</p>
+                     * @param _hwMemSizeDesc <p>Memory capacity description.</p>
                      * 
                      */
                     void SetHwMemSizeDesc(const std::string& _hwMemSizeDesc);
@@ -584,15 +577,15 @@ namespace TencentCloud
                     bool HwMemSizeDescHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time.
-                     * @return ExpireTime Expiration time.
+                     * 获取<p>Expiration time.</p>
+                     * @return ExpireTime <p>Expiration time.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time.
-                     * @param _expireTime Expiration time.
+                     * 设置<p>Expiration time.</p>
+                     * @param _expireTime <p>Expiration time.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -605,15 +598,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Node resource ID.
-                     * @return EmrResourceId Node resource ID.
+                     * 获取<p>Node resource ID.</p>
+                     * @return EmrResourceId <p>Node resource ID.</p>
                      * 
                      */
                     std::string GetEmrResourceId() const;
 
                     /**
-                     * 设置Node resource ID.
-                     * @param _emrResourceId Node resource ID.
+                     * 设置<p>Node resource ID.</p>
+                     * @param _emrResourceId <p>Node resource ID.</p>
                      * 
                      */
                     void SetEmrResourceId(const std::string& _emrResourceId);
@@ -626,15 +619,15 @@ namespace TencentCloud
                     bool EmrResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Renewal flag.
-                     * @return IsAutoRenew Renewal flag.
+                     * 获取<p>Renewal flag.</p>
+                     * @return IsAutoRenew <p>Renewal flag.</p>
                      * 
                      */
                     int64_t GetIsAutoRenew() const;
 
                     /**
-                     * 设置Renewal flag.
-                     * @param _isAutoRenew Renewal flag.
+                     * 设置<p>Renewal flag.</p>
+                     * @param _isAutoRenew <p>Renewal flag.</p>
                      * 
                      */
                     void SetIsAutoRenew(const int64_t& _isAutoRenew);
@@ -647,15 +640,15 @@ namespace TencentCloud
                     bool IsAutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Device identification.
-                     * @return DeviceClass Device identification.
+                     * 获取<p>Device identifier.</p>
+                     * @return DeviceClass <p>Device identifier.</p>
                      * 
                      */
                     std::string GetDeviceClass() const;
 
                     /**
-                     * 设置Device identification.
-                     * @param _deviceClass Device identification.
+                     * 设置<p>Device identifier.</p>
+                     * @param _deviceClass <p>Device identifier.</p>
                      * 
                      */
                     void SetDeviceClass(const std::string& _deviceClass);
@@ -668,15 +661,15 @@ namespace TencentCloud
                     bool DeviceClassHasBeenSet() const;
 
                     /**
-                     * 获取Supporting resizing.
-                     * @return Mutable Supporting resizing.
+                     * 获取<p>Supports configuration change.</p>
+                     * @return Mutable <p>Supports configuration change.</p>
                      * 
                      */
                     int64_t GetMutable() const;
 
                     /**
-                     * 设置Supporting resizing.
-                     * @param _mutable Supporting resizing.
+                     * 设置<p>Supports configuration change.</p>
+                     * @param _mutable <p>Supports configuration change.</p>
                      * 
                      */
                     void SetMutable(const int64_t& _mutable);
@@ -689,19 +682,15 @@ namespace TencentCloud
                     bool MutableHasBeenSet() const;
 
                     /**
-                     * 获取Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MCMultiDisk Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Multi-cloud disk.</p>
+                     * @return MCMultiDisk <p>Multi-cloud disk.</p>
                      * 
                      */
                     std::vector<MultiDiskMC> GetMCMultiDisk() const;
 
                     /**
-                     * 设置Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _mCMultiDisk Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Multi-cloud disk.</p>
+                     * @param _mCMultiDisk <p>Multi-cloud disk.</p>
                      * 
                      */
                     void SetMCMultiDisk(const std::vector<MultiDiskMC>& _mCMultiDisk);
@@ -714,19 +703,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MCMultiDiskHasBeenSet() const;
 
                     /**
-                     * 获取Database information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CdbNodeInfo Database information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database information.</p>
+                     * @return CdbNodeInfo <p>Database information.</p>
                      * 
                      */
                     CdbInfo GetCdbNodeInfo() const;
 
                     /**
-                     * 设置Database information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _cdbNodeInfo Database information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database information.</p>
+                     * @param _cdbNodeInfo <p>Database information.</p>
                      * 
                      */
                     void SetCdbNodeInfo(const CdbInfo& _cdbNodeInfo);
@@ -739,15 +724,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CdbNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Private network IP address.
-                     * @return Ip Private network IP address.
+                     * 获取<p>Private IP address.</p>
+                     * @return Ip <p>Private IP address.</p>
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Private network IP address.
-                     * @param _ip Private network IP address.
+                     * 设置<p>Private IP address.</p>
+                     * @param _ip <p>Private IP address.</p>
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -760,15 +745,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Whether this node can be terminated. 1: Yes, 0: No.
-                     * @return Destroyable Whether this node can be terminated. 1: Yes, 0: No.
+                     * 获取<p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
+                     * @return Destroyable <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     int64_t GetDestroyable() const;
 
                     /**
-                     * 设置Whether this node can be terminated. 1: Yes, 0: No.
-                     * @param _destroyable Whether this node can be terminated. 1: Yes, 0: No.
+                     * 设置<p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
+                     * @param _destroyable <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     void SetDestroyable(const int64_t& _destroyable);
@@ -781,19 +766,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DestroyableHasBeenSet() const;
 
                     /**
-                     * 获取Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Tag bound to the node.</p>
+                     * @return Tags <p>Tag bound to the node.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Tag bound to the node.</p>
+                     * @param _tags <p>Tag bound to the node.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -806,15 +787,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
-                     * @return AutoFlag Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
+                     * 获取<p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
+                     * @return AutoFlag <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
                      * 
                      */
                     int64_t GetAutoFlag() const;
 
                     /**
-                     * 设置Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
-                     * @param _autoFlag Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
+                     * 设置<p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
+                     * @param _autoFlag <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
                      * 
                      */
                     void SetAutoFlag(const int64_t& _autoFlag);
@@ -827,15 +808,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AutoFlagHasBeenSet() const;
 
                     /**
-                     * 获取Resource type, with the valid values of "host" and "pod".
-                     * @return HardwareResourceType Resource type, with the valid values of "host" and "pod".
+                     * 获取<p>Resource type. Valid values: host and pod.</p>
+                     * @return HardwareResourceType <p>Resource type. Valid values: host and pod.</p>
                      * 
                      */
                     std::string GetHardwareResourceType() const;
 
                     /**
-                     * 设置Resource type, with the valid values of "host" and "pod".
-                     * @param _hardwareResourceType Resource type, with the valid values of "host" and "pod".
+                     * 设置<p>Resource type. Valid values: host and pod.</p>
+                     * @param _hardwareResourceType <p>Resource type. Valid values: host and pod.</p>
                      * 
                      */
                     void SetHardwareResourceType(const std::string& _hardwareResourceType);
@@ -848,15 +829,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HardwareResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a floating specification. 1: Yes, 0: No.
-                     * @return IsDynamicSpec Whether it is a floating specification. 1: Yes, 0: No.
+                     * 获取<p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
+                     * @return IsDynamicSpec <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     int64_t GetIsDynamicSpec() const;
 
                     /**
-                     * 设置Whether it is a floating specification. 1: Yes, 0: No.
-                     * @param _isDynamicSpec Whether it is a floating specification. 1: Yes, 0: No.
+                     * 设置<p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
+                     * @param _isDynamicSpec <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     void SetIsDynamicSpec(const int64_t& _isDynamicSpec);
@@ -869,15 +850,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsDynamicSpecHasBeenSet() const;
 
                     /**
-                     * 获取Floating specification value in the JSON string format.
-                     * @return DynamicPodSpec Floating specification value in the JSON string format.
+                     * 获取<p>JSON string of the floating specification value.</p>
+                     * @return DynamicPodSpec <p>JSON string of the floating specification value.</p>
                      * 
                      */
                     std::string GetDynamicPodSpec() const;
 
                     /**
-                     * 设置Floating specification value in the JSON string format.
-                     * @param _dynamicPodSpec Floating specification value in the JSON string format.
+                     * 设置<p>JSON string of the floating specification value.</p>
+                     * @param _dynamicPodSpec <p>JSON string of the floating specification value.</p>
                      * 
                      */
                     void SetDynamicPodSpec(const std::string& _dynamicPodSpec);
@@ -890,15 +871,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DynamicPodSpecHasBeenSet() const;
 
                     /**
-                     * 获取Whether the billing type can be changed. 1: Yes, 0: No.
-                     * @return SupportModifyPayMode Whether the billing type can be changed. 1: Yes, 0: No.
+                     * 获取<p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
+                     * @return SupportModifyPayMode <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     int64_t GetSupportModifyPayMode() const;
 
                     /**
-                     * 设置Whether the billing type can be changed. 1: Yes, 0: No.
-                     * @param _supportModifyPayMode Whether the billing type can be changed. 1: Yes, 0: No.
+                     * 设置<p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
+                     * @param _supportModifyPayMode <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     void SetSupportModifyPayMode(const int64_t& _supportModifyPayMode);
@@ -911,15 +892,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SupportModifyPayModeHasBeenSet() const;
 
                     /**
-                     * 获取System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-                     * @return RootStorageType System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+                     * 获取<p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+                     * @return RootStorageType <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
                      * 
                      */
                     int64_t GetRootStorageType() const;
 
                     /**
-                     * 设置System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-                     * @param _rootStorageType System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+                     * 设置<p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
+                     * @param _rootStorageType <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
                      * 
                      */
                     void SetRootStorageType(const int64_t& _rootStorageType);
@@ -932,15 +913,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RootStorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Availability information.
-                     * @return Zone Availability information.
+                     * 获取<p>AZ information.</p>
+                     * @return Zone <p>AZ information.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability information.
-                     * @param _zone Availability information.
+                     * 设置<p>AZ information.</p>
+                     * @param _zone <p>AZ information.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -953,19 +934,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SubnetInfo Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Subnet.</p>
+                     * @return SubnetInfo <p>Subnet.</p>
                      * 
                      */
                     SubnetInfo GetSubnetInfo() const;
 
                     /**
-                     * 设置Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _subnetInfo Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Subnet.</p>
+                     * @param _subnetInfo <p>Subnet.</p>
                      * 
                      */
                     void SetSubnetInfo(const SubnetInfo& _subnetInfo);
@@ -978,15 +955,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SubnetInfoHasBeenSet() const;
 
                     /**
-                     * 获取Client.
-                     * @return Clients Client.
+                     * 获取<p>Client.</p>
+                     * @return Clients <p>Client.</p>
                      * 
                      */
                     std::string GetClients() const;
 
                     /**
-                     * 设置Client.
-                     * @param _clients Client.
+                     * 设置<p>Client.</p>
+                     * @param _clients <p>Client.</p>
                      * 
                      */
                     void SetClients(const std::string& _clients);
@@ -999,15 +976,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ClientsHasBeenSet() const;
 
                     /**
-                     * 获取Current system time.
-                     * @return CurrentTime Current system time.
+                     * 获取<p>Current system time.</p>
+                     * @return CurrentTime <p>Current system time.</p>
                      * 
                      */
                     std::string GetCurrentTime() const;
 
                     /**
-                     * 设置Current system time.
-                     * @param _currentTime Current system time.
+                     * 设置<p>Current system time.</p>
+                     * @param _currentTime <p>Current system time.</p>
                      * 
                      */
                     void SetCurrentTime(const std::string& _currentTime);
@@ -1020,15 +997,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool CurrentTimeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether it is for federation. 1: Yes, 0: No.
-                     * @return IsFederation Indicates whether it is for federation. 1: Yes, 0: No.
+                     * 获取<p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
+                     * @return IsFederation <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     int64_t GetIsFederation() const;
 
                     /**
-                     * 设置Indicates whether it is for federation. 1: Yes, 0: No.
-                     * @param _isFederation Indicates whether it is for federation. 1: Yes, 0: No.
+                     * 设置<p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
+                     * @param _isFederation <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
                      * 
                      */
                     void SetIsFederation(const int64_t& _isFederation);
@@ -1041,15 +1018,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IsFederationHasBeenSet() const;
 
                     /**
-                     * 获取Device name.
-                     * @return DeviceName Device name.
+                     * 获取<p>Device name.</p>
+                     * @return DeviceName <p>Device name.</p>
                      * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
-                     * 设置Device name.
-                     * @param _deviceName Device name.
+                     * 设置<p>Device name.</p>
+                     * @param _deviceName <p>Device name.</p>
                      * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
@@ -1062,15 +1039,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DeviceNameHasBeenSet() const;
 
                     /**
-                     * 获取Service.
-                     * @return ServiceClient Service.
+                     * 获取<p>Service.</p>
+                     * @return ServiceClient <p>Service.</p>
                      * 
                      */
                     std::string GetServiceClient() const;
 
                     /**
-                     * 设置Service.
-                     * @param _serviceClient Service.
+                     * 设置<p>Service.</p>
+                     * @param _serviceClient <p>Service.</p>
                      * 
                      */
                     void SetServiceClient(const std::string& _serviceClient);
@@ -1083,15 +1060,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ServiceClientHasBeenSet() const;
 
                     /**
-                     * 获取Whether instance protection is enabled. True: enabled, false: disabled.
-                     * @return DisableApiTermination Whether instance protection is enabled. True: enabled, false: disabled.
+                     * 获取<p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
+                     * @return DisableApiTermination <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
                      * 
                      */
                     bool GetDisableApiTermination() const;
 
                     /**
-                     * 设置Whether instance protection is enabled. True: enabled, false: disabled.
-                     * @param _disableApiTermination Whether instance protection is enabled. True: enabled, false: disabled.
+                     * 设置<p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
+                     * @param _disableApiTermination <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
                      * 
                      */
                     void SetDisableApiTermination(const bool& _disableApiTermination);
@@ -1104,15 +1081,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DisableApiTerminationHasBeenSet() const;
 
                     /**
-                     * 获取0: old billing, 1: new billing.
-                     * @return TradeVersion 0: old billing, 1: new billing.
+                     * 获取<p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
+                     * @return TradeVersion <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
                      * 
                      */
                     int64_t GetTradeVersion() const;
 
                     /**
-                     * 设置0: old billing, 1: new billing.
-                     * @param _tradeVersion 0: old billing, 1: new billing.
+                     * 设置<p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
+                     * @param _tradeVersion <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
                      * 
                      */
                     void SetTradeVersion(const int64_t& _tradeVersion);
@@ -1125,15 +1102,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool TradeVersionHasBeenSet() const;
 
                     /**
-                     * 获取Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
-                     * @return ServicesStatus Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
+                     * 获取<p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
+                     * @return ServicesStatus <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
                      * 
                      */
                     std::string GetServicesStatus() const;
 
                     /**
-                     * 设置Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
-                     * @param _servicesStatus Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
+                     * 设置<p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
+                     * @param _servicesStatus <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
                      * 
                      */
                     void SetServicesStatus(const std::string& _servicesStatus);
@@ -1146,15 +1123,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ServicesStatusHasBeenSet() const;
 
                     /**
-                     * 获取Remarks.
-                     * @return Remark Remarks.
+                     * 获取<p>Remarks.</p>
+                     * @return Remark <p>Remarks.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks.
-                     * @param _remark Remarks.
+                     * 设置<p>Remarks.</p>
+                     * @param _remark <p>Remarks.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -1167,15 +1144,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Shared cluster ID.
-                     * @return SharedClusterId Shared cluster ID.
+                     * 获取<p>Shared cluster ID.</p>
+                     * @return SharedClusterId <p>Shared cluster ID.</p>
                      * 
                      */
                     std::string GetSharedClusterId() const;
 
                     /**
-                     * 设置Shared cluster ID.
-                     * @param _sharedClusterId Shared cluster ID.
+                     * 设置<p>Shared cluster ID.</p>
+                     * @param _sharedClusterId <p>Shared cluster ID.</p>
                      * 
                      */
                     void SetSharedClusterId(const std::string& _sharedClusterId);
@@ -1188,15 +1165,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SharedClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Shared cluster ID description.
-                     * @return SharedClusterIdDesc Shared cluster ID description.
+                     * 获取<p>Description of the shared cluster ID.</p>
+                     * @return SharedClusterIdDesc <p>Description of the shared cluster ID.</p>
                      * 
                      */
                     std::string GetSharedClusterIdDesc() const;
 
                     /**
-                     * 设置Shared cluster ID description.
-                     * @param _sharedClusterIdDesc Shared cluster ID description.
+                     * 设置<p>Description of the shared cluster ID.</p>
+                     * @param _sharedClusterIdDesc <p>Description of the shared cluster ID.</p>
                      * 
                      */
                     void SetSharedClusterIdDesc(const std::string& _sharedClusterIdDesc);
@@ -1209,15 +1186,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SharedClusterIdDescHasBeenSet() const;
 
                     /**
-                     * 获取Whether the resource is set for scheduled termination.
-                     * @return TimingResource Whether the resource is set for scheduled termination.
+                     * 获取<p>Whether it is a scheduled termination resource.</p>
+                     * @return TimingResource <p>Whether it is a scheduled termination resource.</p>
                      * 
                      */
                     bool GetTimingResource() const;
 
                     /**
-                     * 设置Whether the resource is set for scheduled termination.
-                     * @param _timingResource Whether the resource is set for scheduled termination.
+                     * 设置<p>Whether it is a scheduled termination resource.</p>
+                     * @param _timingResource <p>Whether it is a scheduled termination resource.</p>
                      * 
                      */
                     void SetTimingResource(const bool& _timingResource);
@@ -1230,15 +1207,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool TimingResourceHasBeenSet() const;
 
                     /**
-                     * 获取Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
-                     * @return TkeClusterId Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+                     * 获取<p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
+                     * @return TkeClusterId <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
                      * 
                      */
                     std::string GetTkeClusterId() const;
 
                     /**
-                     * 设置Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
-                     * @param _tkeClusterId Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+                     * 设置<p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
+                     * @param _tkeClusterId <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
                      * 
                      */
                     void SetTkeClusterId(const std::string& _tkeClusterId);
@@ -1251,15 +1228,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool TkeClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Name list of services that can be configured when a new disk is mounted.
-                     * @return ConfigurableServices Name list of services that can be configured when a new disk is mounted.
+                     * 获取<p>Name list of services that can be configured when a new disk is mounted.</p>
+                     * @return ConfigurableServices <p>Name list of services that can be configured when a new disk is mounted.</p>
                      * 
                      */
                     std::vector<std::string> GetConfigurableServices() const;
 
                     /**
-                     * 设置Name list of services that can be configured when a new disk is mounted.
-                     * @param _configurableServices Name list of services that can be configured when a new disk is mounted.
+                     * 设置<p>Name list of services that can be configured when a new disk is mounted.</p>
+                     * @param _configurableServices <p>Name list of services that can be configured when a new disk is mounted.</p>
                      * 
                      */
                     void SetConfigurableServices(const std::vector<std::string>& _configurableServices);
@@ -1272,15 +1249,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ConfigurableServicesHasBeenSet() const;
 
                     /**
-                     * 获取Node labeling information: currently used only in the Terraform.
-                     * @return NodeMark Node labeling information: currently used only in the Terraform.
+                     * 获取<p>Node annotation information, which is currently only provided for the Terraform platform.</p>
+                     * @return NodeMark <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
                      * 
                      */
                     std::string GetNodeMark() const;
 
                     /**
-                     * 设置Node labeling information: currently used only in the Terraform.
-                     * @param _nodeMark Node labeling information: currently used only in the Terraform.
+                     * 设置<p>Node annotation information, which is currently only provided for the Terraform platform.</p>
+                     * @param _nodeMark <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
                      * 
                      */
                     void SetNodeMark(const std::string& _nodeMark);
@@ -1293,15 +1270,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool NodeMarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether auto-renewal is available for committed use resources.
-                     * @return UnderwriteSetAutoRenew Whether auto-renewal is available for committed use resources.
+                     * 获取<p>Whether the committed use resource supports setting auto-renewal.</p>
+                     * @return UnderwriteSetAutoRenew <p>Whether the committed use resource supports setting auto-renewal.</p>
                      * 
                      */
                     bool GetUnderwriteSetAutoRenew() const;
 
                     /**
-                     * 设置Whether auto-renewal is available for committed use resources.
-                     * @param _underwriteSetAutoRenew Whether auto-renewal is available for committed use resources.
+                     * 设置<p>Whether the committed use resource supports setting auto-renewal.</p>
+                     * @param _underwriteSetAutoRenew <p>Whether the committed use resource supports setting auto-renewal.</p>
                      * 
                      */
                     void SetUnderwriteSetAutoRenew(const bool& _underwriteSetAutoRenew);
@@ -1314,15 +1291,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool UnderwriteSetAutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取GPU information.
-                     * @return GpuDesc GPU information.
+                     * 获取<p>GPU information.</p>
+                     * @return GpuDesc <p>GPU information.</p>
                      * 
                      */
                     std::string GetGpuDesc() const;
 
                     /**
-                     * 设置GPU information.
-                     * @param _gpuDesc GPU information.
+                     * 设置<p>GPU information.</p>
+                     * @param _gpuDesc <p>GPU information.</p>
                      * 
                      */
                     void SetGpuDesc(const std::string& _gpuDesc);
@@ -1334,373 +1311,448 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool GpuDescHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Disk issue description.</p>
+                     * @return DiskHealthIssues <p>Disk issue description.</p>
+                     * 
+                     */
+                    std::vector<DiskHealthIssue> GetDiskHealthIssues() const;
+
+                    /**
+                     * 设置<p>Disk issue description.</p>
+                     * @param _diskHealthIssues <p>Disk issue description.</p>
+                     * 
+                     */
+                    void SetDiskHealthIssues(const std::vector<DiskHealthIssue>& _diskHealthIssues);
+
+                    /**
+                     * 判断参数 DiskHealthIssues 是否已赋值
+                     * @return DiskHealthIssues 是否已赋值
+                     * 
+                     */
+                    bool DiskHealthIssuesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>ID of the node group where the node resides.</p>
+                     * @return NodeGroupId <p>ID of the node group where the node resides.</p>
+                     * 
+                     */
+                    std::string GetNodeGroupId() const;
+
+                    /**
+                     * 设置<p>ID of the node group where the node resides.</p>
+                     * @param _nodeGroupId <p>ID of the node group where the node resides.</p>
+                     * 
+                     */
+                    void SetNodeGroupId(const std::string& _nodeGroupId);
+
+                    /**
+                     * 判断参数 NodeGroupId 是否已赋值
+                     * @return NodeGroupId 是否已赋值
+                     * 
+                     */
+                    bool NodeGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Name of the node group where the node resides.</p>
+                     * @return NodeGroupName <p>Name of the node group where the node resides.</p>
+                     * 
+                     */
+                    std::string GetNodeGroupName() const;
+
+                    /**
+                     * 设置<p>Name of the node group where the node resides.</p>
+                     * @param _nodeGroupName <p>Name of the node group where the node resides.</p>
+                     * 
+                     */
+                    void SetNodeGroupName(const std::string& _nodeGroupName);
+
+                    /**
+                     * 判断参数 NodeGroupName 是否已赋值
+                     * @return NodeGroupName 是否已赋值
+                     * 
+                     */
+                    bool NodeGroupNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * User AppID.
+                     * <p>User APPID.</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Serial number.
+                     * <p>Serial number.</p>
                      */
                     std::string m_serialNo;
                     bool m_serialNoHasBeenSet;
 
                     /**
-                     * Machine instance ID.
+                     * <p>Machine instance ID.</p>
                      */
                     std::string m_orderNo;
                     bool m_orderNoHasBeenSet;
 
                     /**
-                     * Public network IP address bound for the Master node.
+                     * <p>Public IP address bound to the Master node.</p>
                      */
                     std::string m_wanIp;
                     bool m_wanIpHasBeenSet;
 
                     /**
-                     * Node type. 0: Common node; 1: Master node.
- 2: Core node; 3: Task node.
+                     * <p>Node type. Valid values: 0 (Common node), 1 (Master node)<br>2 (Core node) and 3 (Task node).</p>
                      */
                     int64_t m_flag;
                     bool m_flagHasBeenSet;
 
                     /**
-                     * Node specifications.
+                     * <p>Node specifications.</p>
                      */
                     std::string m_spec;
                     bool m_specHasBeenSet;
 
                     /**
-                     * Number of node cores.
+                     * <p>Number of node cores.</p>
                      */
                     int64_t m_cpuNum;
                     bool m_cpuNumHasBeenSet;
 
                     /**
-                     * Node memory (bytes).
+                     * <p>Node memory (bytes).</p>
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Node memory (GB).
+                     * <p>Node memory description (GB).</p>
                      */
                     std::string m_memDesc;
                     bool m_memDescHasBeenSet;
 
                     /**
-                     * The region where the node is located.
+                     * <p>Region where the node is located.</p>
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * The zone where the node is located.
+                     * <p>Zone where the node is located.</p>
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Application time.
+                     * <p>Application time.</p>
                      */
                     std::string m_applyTime;
                     bool m_applyTimeHasBeenSet;
 
                     /**
-                     * Release time.
+                     * <p>Release time.</p>
                      */
                     std::string m_freeTime;
                     bool m_freeTimeHasBeenSet;
 
                     /**
-                     * Hard disk size.
+                     * <p>Hard disk size.</p>
                      */
                     std::string m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Node description.
+                     * <p>Node description.</p>
                      */
                     std::string m_nameTag;
                     bool m_nameTagHasBeenSet;
 
                     /**
-                     * Node deployment service.
+                     * <p>Services deployed on the node.</p>
                      */
                     std::string m_services;
                     bool m_servicesHasBeenSet;
 
                     /**
-                     * Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
-
+                     * <p>Disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
                      */
                     int64_t m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * System disk size (GB).
+                     * <p>System disk size (GB).</p>
                      */
                     int64_t m_rootSize;
                     bool m_rootSizeHasBeenSet;
 
                     /**
-                     * Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
+                     * <p>Payment type. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      */
                     int64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
 
                     /**
-                     * Database IP address.
+                     * <p>Database IP address.</p>
                      */
                     std::string m_cdbIp;
                     bool m_cdbIpHasBeenSet;
 
                     /**
-                     * Database port.
+                     * <p>Database port.</p>
                      */
                     int64_t m_cdbPort;
                     bool m_cdbPortHasBeenSet;
 
                     /**
-                     * Hard disk capacity (bytes).
+                     * <p>Hard disk capacity (bytes).</p>
                      */
                     int64_t m_hwDiskSize;
                     bool m_hwDiskSizeHasBeenSet;
 
                     /**
-                     * Hard disk capacity description.
+                     * <p>Hard disk capacity description.</p>
                      */
                     std::string m_hwDiskSizeDesc;
                     bool m_hwDiskSizeDescHasBeenSet;
 
                     /**
-                     * Memory capacity (bytes).
+                     * <p>Memory capacity (bytes).</p>
                      */
                     int64_t m_hwMemSize;
                     bool m_hwMemSizeHasBeenSet;
 
                     /**
-                     * Memory capacity description.
+                     * <p>Memory capacity description.</p>
                      */
                     std::string m_hwMemSizeDesc;
                     bool m_hwMemSizeDescHasBeenSet;
 
                     /**
-                     * Expiration time.
+                     * <p>Expiration time.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Node resource ID.
+                     * <p>Node resource ID.</p>
                      */
                     std::string m_emrResourceId;
                     bool m_emrResourceIdHasBeenSet;
 
                     /**
-                     * Renewal flag.
+                     * <p>Renewal flag.</p>
                      */
                     int64_t m_isAutoRenew;
                     bool m_isAutoRenewHasBeenSet;
 
                     /**
-                     * Device identification.
+                     * <p>Device identifier.</p>
                      */
                     std::string m_deviceClass;
                     bool m_deviceClassHasBeenSet;
 
                     /**
-                     * Supporting resizing.
+                     * <p>Supports configuration change.</p>
                      */
                     int64_t m_mutable;
                     bool m_mutableHasBeenSet;
 
                     /**
-                     * Multi-cloud disk
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Multi-cloud disk.</p>
                      */
                     std::vector<MultiDiskMC> m_mCMultiDisk;
                     bool m_mCMultiDiskHasBeenSet;
 
                     /**
-                     * Database information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Database information.</p>
                      */
                     CdbInfo m_cdbNodeInfo;
                     bool m_cdbNodeInfoHasBeenSet;
 
                     /**
-                     * Private network IP address.
+                     * <p>Private IP address.</p>
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Whether this node can be terminated. 1: Yes, 0: No.
+                     * <p>Whether this node can be terminated. Valid values: 1 (yes) and 0 (no).</p>
                      */
                     int64_t m_destroyable;
                     bool m_destroyableHasBeenSet;
 
                     /**
-                     * Tags bound to node
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Tag bound to the node.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
+                     * <p>Whether it is an auto scaling node. Valid values: 0 (regular node) and 1 (auto scaling node).</p>
                      */
                     int64_t m_autoFlag;
                     bool m_autoFlagHasBeenSet;
 
                     /**
-                     * Resource type, with the valid values of "host" and "pod".
+                     * <p>Resource type. Valid values: host and pod.</p>
                      */
                     std::string m_hardwareResourceType;
                     bool m_hardwareResourceTypeHasBeenSet;
 
                     /**
-                     * Whether it is a floating specification. 1: Yes, 0: No.
+                     * <p>Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).</p>
                      */
                     int64_t m_isDynamicSpec;
                     bool m_isDynamicSpecHasBeenSet;
 
                     /**
-                     * Floating specification value in the JSON string format.
+                     * <p>JSON string of the floating specification value.</p>
                      */
                     std::string m_dynamicPodSpec;
                     bool m_dynamicPodSpecHasBeenSet;
 
                     /**
-                     * Whether the billing type can be changed. 1: Yes, 0: No.
+                     * <p>Whether changing the billing mode is supported. Valid values: 1 (yes) and 0 (no).</p>
                      */
                     int64_t m_supportModifyPayMode;
                     bool m_supportModifyPayModeHasBeenSet;
 
                     /**
-                     * System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+                     * <p>System disk type. Valid values: 1 (Local Basic Disk), 2 (Cloud Basic Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Disk), 6 (Enhanced SSD), 11 (Throughput-Optimized Cloud Disk), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High-IO Cloud Disk), and 16 (Remote SSD Disk).</p>
                      */
                     int64_t m_rootStorageType;
                     bool m_rootStorageTypeHasBeenSet;
 
                     /**
-                     * Availability information.
+                     * <p>AZ information.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Subnet
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Subnet.</p>
                      */
                     SubnetInfo m_subnetInfo;
                     bool m_subnetInfoHasBeenSet;
 
                     /**
-                     * Client.
+                     * <p>Client.</p>
                      */
                     std::string m_clients;
                     bool m_clientsHasBeenSet;
 
                     /**
-                     * Current system time.
+                     * <p>Current system time.</p>
                      */
                     std::string m_currentTime;
                     bool m_currentTimeHasBeenSet;
 
                     /**
-                     * Indicates whether it is for federation. 1: Yes, 0: No.
+                     * <p>Whether it is used for federation. Valid values: 1 (yes) and 0 (no).</p>
                      */
                     int64_t m_isFederation;
                     bool m_isFederationHasBeenSet;
 
                     /**
-                     * Device name.
+                     * <p>Device name.</p>
                      */
                     std::string m_deviceName;
                     bool m_deviceNameHasBeenSet;
 
                     /**
-                     * Service.
+                     * <p>Service.</p>
                      */
                     std::string m_serviceClient;
                     bool m_serviceClientHasBeenSet;
 
                     /**
-                     * Whether instance protection is enabled. True: enabled, false: disabled.
+                     * <p>Whether instance protection is enabled for this instance. Valid values: true (enabled) and false (disabled).</p>
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
 
                     /**
-                     * 0: old billing, 1: new billing.
+                     * <p>0 indicates the old billing mode, and 1 indicates the new billing mode.</p>
                      */
                     int64_t m_tradeVersion;
                     bool m_tradeVersionHasBeenSet;
 
                     /**
-                     * Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
+                     * <p>Status of each component. ZooKeeper: STARTED; ResourceManager: STARTED. STARTED means started, and STOPPED means stopped.</p>
                      */
                     std::string m_servicesStatus;
                     bool m_servicesStatusHasBeenSet;
 
                     /**
-                     * Remarks.
+                     * <p>Remarks.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Shared cluster ID.
+                     * <p>Shared cluster ID.</p>
                      */
                     std::string m_sharedClusterId;
                     bool m_sharedClusterIdHasBeenSet;
 
                     /**
-                     * Shared cluster ID description.
+                     * <p>Description of the shared cluster ID.</p>
                      */
                     std::string m_sharedClusterIdDesc;
                     bool m_sharedClusterIdDescHasBeenSet;
 
                     /**
-                     * Whether the resource is set for scheduled termination.
+                     * <p>Whether it is a scheduled termination resource.</p>
                      */
                     bool m_timingResource;
                     bool m_timingResourceHasBeenSet;
 
                     /**
-                     * Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+                     * <p>TKE cluster ID when the resource type (HardwareResourceType) is pod.</p>
                      */
                     std::string m_tkeClusterId;
                     bool m_tkeClusterIdHasBeenSet;
 
                     /**
-                     * Name list of services that can be configured when a new disk is mounted.
+                     * <p>Name list of services that can be configured when a new disk is mounted.</p>
                      */
                     std::vector<std::string> m_configurableServices;
                     bool m_configurableServicesHasBeenSet;
 
                     /**
-                     * Node labeling information: currently used only in the Terraform.
+                     * <p>Node annotation information, which is currently only provided for the Terraform platform.</p>
                      */
                     std::string m_nodeMark;
                     bool m_nodeMarkHasBeenSet;
 
                     /**
-                     * Whether auto-renewal is available for committed use resources.
+                     * <p>Whether the committed use resource supports setting auto-renewal.</p>
                      */
                     bool m_underwriteSetAutoRenew;
                     bool m_underwriteSetAutoRenewHasBeenSet;
 
                     /**
-                     * GPU information.
+                     * <p>GPU information.</p>
                      */
                     std::string m_gpuDesc;
                     bool m_gpuDescHasBeenSet;
+
+                    /**
+                     * <p>Disk issue description.</p>
+                     */
+                    std::vector<DiskHealthIssue> m_diskHealthIssues;
+                    bool m_diskHealthIssuesHasBeenSet;
+
+                    /**
+                     * <p>ID of the node group where the node resides.</p>
+                     */
+                    std::string m_nodeGroupId;
+                    bool m_nodeGroupIdHasBeenSet;
+
+                    /**
+                     * <p>Name of the node group where the node resides.</p>
+                     */
+                    std::string m_nodeGroupName;
+                    bool m_nodeGroupNameHasBeenSet;
 
                 };
             }

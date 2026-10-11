@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inter-cluster binding and usage information.
+                * Binding usage information between clusters.
                 */
                 class ClusterRelationMeta : public AbstractModel
                 {
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterIdList Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of cluster IDs.
+                     * @return ClusterIdList List of cluster IDs.
                      * 
                      */
                     std::vector<std::string> GetClusterIdList() const;
 
                     /**
-                     * 设置Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterIdList Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of cluster IDs.
+                     * @param _clusterIdList List of cluster IDs.
                      * 
                      */
                     void SetClusterIdList(const std::vector<std::string>& _clusterIdList);
@@ -101,8 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of cluster IDs.
                      */
                     std::vector<std::string> m_clusterIdList;
                     bool m_clusterIdListHasBeenSet;

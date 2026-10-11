@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task parameter description
+                * Task parameter description.
                 */
                 class FlowParamsDesc : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter key
-                     * @return PKey Parameter key
+                     * 获取Parameter key.
+                     * @return PKey Parameter key.
                      * 
                      */
                     std::string GetPKey() const;
 
                     /**
-                     * 设置Parameter key
-                     * @param _pKey Parameter key
+                     * 设置Parameter key.
+                     * @param _pKey Parameter key.
                      * 
                      */
                     void SetPKey(const std::string& _pKey);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter key
+                     * Parameter key.
                      */
                     std::string m_pKey;
                     bool m_pKeyHasBeenSet;

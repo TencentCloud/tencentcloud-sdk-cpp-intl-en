@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Operation scope
+                * Operation scope.
                 */
                 class OpScope : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceInfoList The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Operation scope, with information of the service to be operated.
+                     * @return ServiceInfoList Operation scope, with information of the service to be operated.
                      * 
                      */
                     std::vector<ServiceBasicRestartInfo> GetServiceInfoList() const;
 
                     /**
-                     * 设置The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceInfoList The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Operation scope, with information of the service to be operated.
+                     * @param _serviceInfoList Operation scope, with information of the service to be operated.
                      * 
                      */
                     void SetServiceInfoList(const std::vector<ServiceBasicRestartInfo>& _serviceInfoList);
@@ -75,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Operation scope, with information of the service to be operated.
                      */
                     std::vector<ServiceBasicRestartInfo> m_serviceInfoList;
                     bool m_serviceInfoListHasBeenSet;

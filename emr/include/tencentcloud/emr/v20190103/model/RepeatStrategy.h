@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scheduled scaling task policy
+                * Scheduled scaling task policy.
                 */
                 class RepeatStrategy : public AbstractModel
                 {
@@ -72,23 +72,15 @@ namespace TencentCloud
                     bool RepeatTypeHasBeenSet() const;
 
                     /**
-                     * 获取Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DayRepeat Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Daily repetition rule, effective when RepeatType is set to DAY.
+                     * @return DayRepeat Daily repetition rule, effective when RepeatType is set to DAY.
                      * 
                      */
                     DayRepeatStrategy GetDayRepeat() const;
 
                     /**
-                     * 设置Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dayRepeat Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Daily repetition rule, effective when RepeatType is set to DAY.
+                     * @param _dayRepeat Daily repetition rule, effective when RepeatType is set to DAY.
                      * 
                      */
                     void SetDayRepeat(const DayRepeatStrategy& _dayRepeat);
@@ -101,23 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DayRepeatHasBeenSet() const;
 
                     /**
-                     * 获取Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WeekRepeat Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Weekly repetition rule, effective when RepeatType is set to DOW.
+                     * @return WeekRepeat Weekly repetition rule, effective when RepeatType is set to DOW.
                      * 
                      */
                     WeekRepeatStrategy GetWeekRepeat() const;
 
                     /**
-                     * 设置Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _weekRepeat Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Weekly repetition rule, effective when RepeatType is set to DOW.
+                     * @param _weekRepeat Weekly repetition rule, effective when RepeatType is set to DOW.
                      * 
                      */
                     void SetWeekRepeat(const WeekRepeatStrategy& _weekRepeat);
@@ -130,23 +114,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WeekRepeatHasBeenSet() const;
 
                     /**
-                     * 获取Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonthRepeat Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Monthly repetition rule, effective when RepeatType is set to DOM.
+                     * @return MonthRepeat Monthly repetition rule, effective when RepeatType is set to DOM.
                      * 
                      */
                     MonthRepeatStrategy GetMonthRepeat() const;
 
                     /**
-                     * 设置Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _monthRepeat Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Monthly repetition rule, effective when RepeatType is set to DOM.
+                     * @param _monthRepeat Monthly repetition rule, effective when RepeatType is set to DOM.
                      * 
                      */
                     void SetMonthRepeat(const MonthRepeatStrategy& _monthRepeat);
@@ -159,23 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonthRepeatHasBeenSet() const;
 
                     /**
-                     * 获取One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NotRepeat One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取One-time execution rule, effective when RepeatType is set to NONE.
+                     * @return NotRepeat One-time execution rule, effective when RepeatType is set to NONE.
                      * 
                      */
                     NotRepeatStrategy GetNotRepeat() const;
 
                     /**
-                     * 设置One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _notRepeat One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置One-time execution rule, effective when RepeatType is set to NONE.
+                     * @param _notRepeat One-time execution rule, effective when RepeatType is set to NONE.
                      * 
                      */
                     void SetNotRepeat(const NotRepeatStrategy& _notRepeat);
@@ -188,15 +156,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NotRepeatHasBeenSet() const;
 
                     /**
-                     * 获取Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
-                     * @return Expire Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+                     * 获取Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
+                     * @return Expire Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
                      * 
                      */
                     std::string GetExpire() const;
 
                     /**
-                     * 设置Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
-                     * @param _expire Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+                     * 设置Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
+                     * @param _expire Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
                      * 
                      */
                     void SetExpire(const std::string& _expire);
@@ -238,39 +206,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_repeatTypeHasBeenSet;
 
                     /**
-                     * Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Daily repetition rule, effective when RepeatType is set to DAY.
                      */
                     DayRepeatStrategy m_dayRepeat;
                     bool m_dayRepeatHasBeenSet;
 
                     /**
-                     * Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Weekly repetition rule, effective when RepeatType is set to DOW.
                      */
                     WeekRepeatStrategy m_weekRepeat;
                     bool m_weekRepeatHasBeenSet;
 
                     /**
-                     * Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Monthly repetition rule, effective when RepeatType is set to DOM.
                      */
                     MonthRepeatStrategy m_monthRepeat;
                     bool m_monthRepeatHasBeenSet;
 
                     /**
-                     * One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * One-time execution rule, effective when RepeatType is set to NONE.
                      */
                     NotRepeatStrategy m_notRepeat;
                     bool m_notRepeatHasBeenSet;
 
                     /**
-                     * Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+                     * Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
                      */
                     std::string m_expire;
                     bool m_expireHasBeenSet;

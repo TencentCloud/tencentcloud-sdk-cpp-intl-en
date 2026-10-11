@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subnet information
+                * Subnet information.
                 */
                 class SubnetInfo : public AbstractModel
                 {

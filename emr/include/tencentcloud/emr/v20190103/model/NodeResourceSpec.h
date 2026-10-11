@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/DiskSpecInfo.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
+#include <tencentcloud/emr/v20190103/model/ServiceDeploy.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource details
+                * Resource details.
                 */
                 class NodeResourceSpec : public AbstractModel
                 {
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取specifications type, such as S2.MEDIUM8.
-                     * @return InstanceType specifications type, such as S2.MEDIUM8.
+                     * 获取<p>Specifications type, such as S2.MEDIUM8.</p>
+                     * @return InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置specifications type, such as S2.MEDIUM8.
-                     * @param _instanceType specifications type, such as S2.MEDIUM8.
+                     * 设置<p>Specifications type, such as S2.MEDIUM8.</p>
+                     * @param _instanceType <p>Specifications type, such as S2.MEDIUM8.</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -70,19 +71,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SystemDisk The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>System disk. The number of system disks does not exceed 1.</p>
+                     * @return SystemDisk <p>System disk. The number of system disks does not exceed 1.</p>
                      * 
                      */
                     std::vector<DiskSpecInfo> GetSystemDisk() const;
 
                     /**
-                     * 设置The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _systemDisk The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>System disk. The number of system disks does not exceed 1.</p>
+                     * @param _systemDisk <p>System disk. The number of system disks does not exceed 1.</p>
                      * 
                      */
                     void SetSystemDisk(const std::vector<DiskSpecInfo>& _systemDisk);
@@ -95,19 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SystemDiskHasBeenSet() const;
 
                     /**
-                     * 获取The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>List of tags to be bound.</p>
+                     * @return Tags <p>List of tags to be bound.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>List of tags to be bound.</p>
+                     * @param _tags <p>List of tags to be bound.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -120,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataDisk The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
+                     * @return DataDisk <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
                      * 
                      */
                     std::vector<DiskSpecInfo> GetDataDisk() const;
 
                     /**
-                     * 设置The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataDisk The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
+                     * @param _dataDisk <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
                      * 
                      */
                     void SetDataDisk(const std::vector<DiskSpecInfo>& _dataDisk);
@@ -145,19 +134,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataDiskHasBeenSet() const;
 
                     /**
-                     * 获取The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LocalDataDisk The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Local data disk.</p>
+                     * @return LocalDataDisk <p>Local data disk.</p>
                      * 
                      */
                     std::vector<DiskSpecInfo> GetLocalDataDisk() const;
 
                     /**
-                     * 设置The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _localDataDisk The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Local data disk.</p>
+                     * @param _localDataDisk <p>Local data disk.</p>
                      * 
                      */
                     void SetLocalDataDisk(const std::vector<DiskSpecInfo>& _localDataDisk);
@@ -169,41 +154,91 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool LocalDataDiskHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+                     * @return SoftwareConfig <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+                     * 
+                     */
+                    std::vector<ServiceDeploy> GetSoftwareConfig() const;
+
+                    /**
+                     * 设置<p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+                     * @param _softwareConfig <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+                     * 
+                     */
+                    void SetSoftwareConfig(const std::vector<ServiceDeploy>& _softwareConfig);
+
+                    /**
+                     * 判断参数 SoftwareConfig 是否已赋值
+                     * @return SoftwareConfig 是否已赋值
+                     * 
+                     */
+                    bool SoftwareConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Custom hostname.</p>
+                     * @return CustomNodeName <p>Custom hostname.</p>
+                     * 
+                     */
+                    std::string GetCustomNodeName() const;
+
+                    /**
+                     * 设置<p>Custom hostname.</p>
+                     * @param _customNodeName <p>Custom hostname.</p>
+                     * 
+                     */
+                    void SetCustomNodeName(const std::string& _customNodeName);
+
+                    /**
+                     * 判断参数 CustomNodeName 是否已赋值
+                     * @return CustomNodeName 是否已赋值
+                     * 
+                     */
+                    bool CustomNodeNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * specifications type, such as S2.MEDIUM8.
+                     * <p>Specifications type, such as S2.MEDIUM8.</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>System disk. The number of system disks does not exceed 1.</p>
                      */
                     std::vector<DiskSpecInfo> m_systemDisk;
                     bool m_systemDiskHasBeenSet;
 
                     /**
-                     * The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>List of tags to be bound.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
                      */
                     std::vector<DiskSpecInfo> m_dataDisk;
                     bool m_dataDiskHasBeenSet;
 
                     /**
-                     * The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Local data disk.</p>
                      */
                     std::vector<DiskSpecInfo> m_localDataDisk;
                     bool m_localDataDiskHasBeenSet;
+
+                    /**
+                     * <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+                     */
+                    std::vector<ServiceDeploy> m_softwareConfig;
+                    bool m_softwareConfigHasBeenSet;
+
+                    /**
+                     * <p>Custom hostname.</p>
+                     */
+                    std::string m_customNodeName;
+                    bool m_customNodeNameHasBeenSet;
 
                 };
             }

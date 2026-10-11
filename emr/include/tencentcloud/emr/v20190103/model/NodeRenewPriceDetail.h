@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node renewal pricing details.
+                * Node renewal inquiry details.
                 */
                 class NodeRenewPriceDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing type (1: monthly subscription, 3: committed use).
-                     * @return ChargeType Billing type (1: monthly subscription, 3: committed use).
+                     * 获取Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
+                     * @return ChargeType Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
                      * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
-                     * 设置Billing type (1: monthly subscription, 3: committed use).
-                     * @param _chargeType Billing type (1: monthly subscription, 3: committed use).
+                     * 设置Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
+                     * @param _chargeType Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
                      * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node private network IP.
-                     * @return Ip Node private network IP.
+                     * 获取Node private network IP address.
+                     * @return Ip Node private network IP address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Node private network IP.
-                     * @param _ip Node private network IP.
+                     * 设置Node private network IP address.
+                     * @param _ip Node private network IP address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount price.
-                     * @return DiscountCost Discount price.
+                     * 获取Discounted price.
+                     * @return DiscountCost Discounted price.
                      * 
                      */
                     double GetDiscountCost() const;
 
                     /**
-                     * 设置Discount price.
-                     * @param _discountCost Discount price.
+                     * 设置Discounted price.
+                     * @param _discountCost Discounted price.
                      * 
                      */
                     void SetDiscountCost(const double& _discountCost);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Node component renewal pricing list.
-                     * @return RenewPriceDetails Node component renewal pricing list.
+                     * 获取Node sub-item renewal inquiry details list.
+                     * @return RenewPriceDetails Node sub-item renewal inquiry details list.
                      * 
                      */
                     std::vector<RenewPriceDetail> GetRenewPriceDetails() const;
 
                     /**
-                     * 设置Node component renewal pricing list.
-                     * @param _renewPriceDetails Node component renewal pricing list.
+                     * 设置Node sub-item renewal inquiry details list.
+                     * @param _renewPriceDetails Node sub-item renewal inquiry details list.
                      * 
                      */
                     void SetRenewPriceDetails(const std::vector<RenewPriceDetail>& _renewPriceDetails);
@@ -218,7 +218,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Billing type (1: monthly subscription, 3: committed use).
+                     * Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
                      */
                     int64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
@@ -236,7 +236,7 @@ namespace TencentCloud
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Node private network IP.
+                     * Node private network IP address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
@@ -254,13 +254,13 @@ namespace TencentCloud
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discount price.
+                     * Discounted price.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Node component renewal pricing list.
+                     * Node sub-item renewal inquiry details list.
                      */
                     std::vector<RenewPriceDetail> m_renewPriceDetails;
                     bool m_renewPriceDetailsHasBeenSet;

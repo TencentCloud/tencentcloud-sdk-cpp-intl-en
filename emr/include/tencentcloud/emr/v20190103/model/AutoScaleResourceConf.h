@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Elastic scaling specification configuration
+                * Auto scaling specification configuration.
                 */
                 class AutoScaleResourceConf : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration ID.
-                     * @return Id Configuration ID.
+                     * 获取<p>Configuration ID.</p>
+                     * @return Id <p>Configuration ID.</p>
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置Configuration ID.
-                     * @param _id Configuration ID.
+                     * 设置<p>Configuration ID.</p>
+                     * @param _id <p>Configuration ID.</p>
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster instance ID.
-                     * @return ClusterId Cluster instance ID.
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     int64_t GetClusterId() const;
 
                     /**
-                     * 设置Cluster instance ID.
-                     * @param _clusterId Cluster instance ID.
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const int64_t& _clusterId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of instances retained for automatic scaling
-                     * @return ScaleLowerBound Minimum number of instances retained for automatic scaling
+                     * 获取<p>Minimum number of reserved instances for auto scaling.</p>
+                     * @return ScaleLowerBound <p>Minimum number of reserved instances for auto scaling.</p>
                      * 
                      */
                     int64_t GetScaleLowerBound() const;
 
                     /**
-                     * 设置Minimum number of instances retained for automatic scaling
-                     * @param _scaleLowerBound Minimum number of instances retained for automatic scaling
+                     * 设置<p>Minimum number of reserved instances for auto scaling.</p>
+                     * @param _scaleLowerBound <p>Minimum number of reserved instances for auto scaling.</p>
                      * 
                      */
                     void SetScaleLowerBound(const int64_t& _scaleLowerBound);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ScaleLowerBoundHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of instances for auto scaling
-                     * @return ScaleUpperBound Maximum number of instances for auto scaling
+                     * 获取<p>Maximum number of instances for auto scaling.</p>
+                     * @return ScaleUpperBound <p>Maximum number of instances for auto scaling.</p>
                      * 
                      */
                     int64_t GetScaleUpperBound() const;
 
                     /**
-                     * 设置Maximum number of instances for auto scaling
-                     * @param _scaleUpperBound Maximum number of instances for auto scaling
+                     * 设置<p>Maximum number of instances for auto scaling.</p>
+                     * @param _scaleUpperBound <p>Maximum number of instances for auto scaling.</p>
                      * 
                      */
                     void SetScaleUpperBound(const int64_t& _scaleUpperBound);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ScaleUpperBoundHasBeenSet() const;
 
                     /**
-                     * 获取Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
-                     * @return StrategyType Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+                     * 获取<p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
+                     * @return StrategyType <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
                      * 
                      */
                     int64_t GetStrategyType() const;
 
                     /**
-                     * 设置Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
-                     * @param _strategyType Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+                     * 设置<p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
+                     * @param _strategyType <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
                      * 
                      */
                     void SetStrategyType(const int64_t& _strategyType);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Next scale-out time.
-                     * @return NextTimeCanScale Next scale-out time.
+                     * 获取<p>Next scale-out time.</p>
+                     * @return NextTimeCanScale <p>Next scale-out time.</p>
                      * 
                      */
                     uint64_t GetNextTimeCanScale() const;
 
                     /**
-                     * 设置Next scale-out time.
-                     * @param _nextTimeCanScale Next scale-out time.
+                     * 设置<p>Next scale-out time.</p>
+                     * @param _nextTimeCanScale <p>Next scale-out time.</p>
                      * 
                      */
                     void SetNextTimeCanScale(const uint64_t& _nextTimeCanScale);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool NextTimeCanScaleHasBeenSet() const;
 
                     /**
-                     * 获取Graceful scale-in switch.
-                     * @return GraceDownFlag Graceful scale-in switch.
+                     * 获取<p>Graceful scale-in switch.</p>
+                     * @return GraceDownFlag <p>Graceful scale-in switch.</p>
                      * 
                      */
                     bool GetGraceDownFlag() const;
 
                     /**
-                     * 设置Graceful scale-in switch.
-                     * @param _graceDownFlag Graceful scale-in switch.
+                     * 设置<p>Graceful scale-in switch.</p>
+                     * @param _graceDownFlag <p>Graceful scale-in switch.</p>
                      * 
                      */
                     void SetGraceDownFlag(const bool& _graceDownFlag);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool GraceDownFlagHasBeenSet() const;
 
                     /**
-                     * 获取"CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
-                     * @return HardwareType "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+                     * 获取<p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
+                     * @return HardwareType <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
                      * 
                      */
                     std::string GetHardwareType() const;
 
                     /**
-                     * 设置"CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
-                     * @param _hardwareType "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+                     * 设置<p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
+                     * @param _hardwareType <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
                      * 
                      */
                     void SetHardwareType(const std::string& _hardwareType);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool HardwareTypeHasBeenSet() const;
 
                     /**
-                     * 获取"POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
-                     * @return PayMode "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+                     * 获取<p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
+                     * @return PayMode <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置"POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
-                     * @param _payMode "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+                     * 设置<p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
+                     * @param _payMode <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
-                     * @return PostPayPercentMin The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+                     * 获取<p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
+                     * @return PostPayPercentMin <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
                      * 
                      */
                     int64_t GetPostPayPercentMin() const;
 
                     /**
-                     * 设置The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
-                     * @param _postPayPercentMin The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+                     * 设置<p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
+                     * @param _postPayPercentMin <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
                      * 
                      */
                     void SetPostPayPercentMin(const int64_t& _postPayPercentMin);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool PostPayPercentMinHasBeenSet() const;
 
                     /**
-                     * 获取When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
-                     * @return ChangeToPod When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+                     * 获取<p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
+                     * @return ChangeToPod <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
                      * 
                      */
                     int64_t GetChangeToPod() const;
 
                     /**
-                     * 设置When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
-                     * @param _changeToPod When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+                     * 设置<p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
+                     * @param _changeToPod <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
                      * 
                      */
                     void SetChangeToPod(const int64_t& _changeToPod);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool ChangeToPodHasBeenSet() const;
 
                     /**
-                     * 获取Scaling group name.
-                     * @return GroupName Scaling group name.
+                     * 获取<p>Scaling group name.</p>
+                     * @return GroupName <p>Scaling group name.</p>
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Scaling group name.
-                     * @param _groupName Scaling group name.
+                     * 设置<p>Scaling group name.</p>
+                     * @param _groupName <p>Scaling group name.</p>
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Tag.
-                     * @return YarnNodeLabel Tag.
+                     * 获取<p>Tag.</p>
+                     * @return YarnNodeLabel <p>Tag.</p>
                      * 
                      */
                     std::string GetYarnNodeLabel() const;
 
                     /**
-                     * 设置Tag.
-                     * @param _yarnNodeLabel Tag.
+                     * 设置<p>Tag.</p>
+                     * @param _yarnNodeLabel <p>Tag.</p>
                      * 
                      */
                     void SetYarnNodeLabel(const std::string& _yarnNodeLabel);
@@ -321,15 +321,36 @@ namespace TencentCloud
                     bool YarnNodeLabelHasBeenSet() const;
 
                     /**
-                     * 获取Scaling group status.
-                     * @return GroupStatus Scaling group status.
+                     * 获取<p>Corresponding computing group.</p>
+                     * @return WarehouseName <p>Corresponding computing group.</p>
+                     * 
+                     */
+                    std::string GetWarehouseName() const;
+
+                    /**
+                     * 设置<p>Corresponding computing group.</p>
+                     * @param _warehouseName <p>Corresponding computing group.</p>
+                     * 
+                     */
+                    void SetWarehouseName(const std::string& _warehouseName);
+
+                    /**
+                     * 判断参数 WarehouseName 是否已赋值
+                     * @return WarehouseName 是否已赋值
+                     * 
+                     */
+                    bool WarehouseNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Scaling group status.</p>
+                     * @return GroupStatus <p>Scaling group status.</p>
                      * 
                      */
                     int64_t GetGroupStatus() const;
 
                     /**
-                     * 设置Scaling group status.
-                     * @param _groupStatus Scaling group status.
+                     * 设置<p>Scaling group status.</p>
+                     * @param _groupStatus <p>Scaling group status.</p>
                      * 
                      */
                     void SetGroupStatus(const int64_t& _groupStatus);
@@ -342,15 +363,15 @@ namespace TencentCloud
                     bool GroupStatusHasBeenSet() const;
 
                     /**
-                     * 获取Parallel scaling. 0: disabled; 1: enabled.
-                     * @return Parallel Parallel scaling. 0: disabled; 1: enabled.
+                     * 获取<p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
+                     * @return Parallel <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
                      * 
                      */
                     int64_t GetParallel() const;
 
                     /**
-                     * 设置Parallel scaling. 0: disabled; 1: enabled.
-                     * @param _parallel Parallel scaling. 0: disabled; 1: enabled.
+                     * 设置<p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
+                     * @param _parallel <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
                      * 
                      */
                     void SetParallel(const int64_t& _parallel);
@@ -363,15 +384,15 @@ namespace TencentCloud
                     bool ParallelHasBeenSet() const;
 
                     /**
-                     * 获取Whether MNode is supported.
-                     * @return EnableMNode Whether MNode is supported.
+                     * 获取<p>Whether MNode is supported.</p>
+                     * @return EnableMNode <p>Whether MNode is supported.</p>
                      * 
                      */
                     int64_t GetEnableMNode() const;
 
                     /**
-                     * 设置Whether MNode is supported.
-                     * @param _enableMNode Whether MNode is supported.
+                     * 设置<p>Whether MNode is supported.</p>
+                     * @param _enableMNode <p>Whether MNode is supported.</p>
                      * 
                      */
                     void SetEnableMNode(const int64_t& _enableMNode);
@@ -384,15 +405,15 @@ namespace TencentCloud
                     bool EnableMNodeHasBeenSet() const;
 
                     /**
-                     * 获取More scaling group settings.
-                     * @return ExtraAdvanceAttrs More scaling group settings.
+                     * 获取<p>More scaling group settings.</p>
+                     * @return ExtraAdvanceAttrs <p>More scaling group settings.</p>
                      * 
                      */
                     AutoScaleGroupAdvanceAttrs GetExtraAdvanceAttrs() const;
 
                     /**
-                     * 设置More scaling group settings.
-                     * @param _extraAdvanceAttrs More scaling group settings.
+                     * 设置<p>More scaling group settings.</p>
+                     * @param _extraAdvanceAttrs <p>More scaling group settings.</p>
                      * 
                      */
                     void SetExtraAdvanceAttrs(const AutoScaleGroupAdvanceAttrs& _extraAdvanceAttrs);
@@ -404,109 +425,142 @@ namespace TencentCloud
                      */
                     bool ExtraAdvanceAttrsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Custom hostname.</p>
+                     * @return CustomNodeName <p>Custom hostname.</p>
+                     * 
+                     */
+                    std::string GetCustomNodeName() const;
+
+                    /**
+                     * 设置<p>Custom hostname.</p>
+                     * @param _customNodeName <p>Custom hostname.</p>
+                     * 
+                     */
+                    void SetCustomNodeName(const std::string& _customNodeName);
+
+                    /**
+                     * 判断参数 CustomNodeName 是否已赋值
+                     * @return CustomNodeName 是否已赋值
+                     * 
+                     */
+                    bool CustomNodeNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Configuration ID.
+                     * <p>Configuration ID.</p>
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Cluster instance ID.
+                     * <p>Cluster ID.</p>
                      */
                     int64_t m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Minimum number of instances retained for automatic scaling
+                     * <p>Minimum number of reserved instances for auto scaling.</p>
                      */
                     int64_t m_scaleLowerBound;
                     bool m_scaleLowerBoundHasBeenSet;
 
                     /**
-                     * Maximum number of instances for auto scaling
+                     * <p>Maximum number of instances for auto scaling.</p>
                      */
                     int64_t m_scaleUpperBound;
                     bool m_scaleUpperBoundHasBeenSet;
 
                     /**
-                     * Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+                     * <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
                      */
                     int64_t m_strategyType;
                     bool m_strategyTypeHasBeenSet;
 
                     /**
-                     * Next scale-out time.
+                     * <p>Next scale-out time.</p>
                      */
                     uint64_t m_nextTimeCanScale;
                     bool m_nextTimeCanScaleHasBeenSet;
 
                     /**
-                     * Graceful scale-in switch.
+                     * <p>Graceful scale-in switch.</p>
                      */
                     bool m_graceDownFlag;
                     bool m_graceDownFlagHasBeenSet;
 
                     /**
-                     * "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+                     * <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
                      */
                     std::string m_hardwareType;
                     bool m_hardwareTypeHasBeenSet;
 
                     /**
-                     * "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+                     * <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+                     * <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
                      */
                     int64_t m_postPayPercentMin;
                     bool m_postPayPercentMinHasBeenSet;
 
                     /**
-                     * When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+                     * <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
                      */
                     int64_t m_changeToPod;
                     bool m_changeToPodHasBeenSet;
 
                     /**
-                     * Scaling group name.
+                     * <p>Scaling group name.</p>
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Tag.
+                     * <p>Tag.</p>
                      */
                     std::string m_yarnNodeLabel;
                     bool m_yarnNodeLabelHasBeenSet;
 
                     /**
-                     * Scaling group status.
+                     * <p>Corresponding computing group.</p>
+                     */
+                    std::string m_warehouseName;
+                    bool m_warehouseNameHasBeenSet;
+
+                    /**
+                     * <p>Scaling group status.</p>
                      */
                     int64_t m_groupStatus;
                     bool m_groupStatusHasBeenSet;
 
                     /**
-                     * Parallel scaling. 0: disabled; 1: enabled.
+                     * <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
                      */
                     int64_t m_parallel;
                     bool m_parallelHasBeenSet;
 
                     /**
-                     * Whether MNode is supported.
+                     * <p>Whether MNode is supported.</p>
                      */
                     int64_t m_enableMNode;
                     bool m_enableMNodeHasBeenSet;
 
                     /**
-                     * More scaling group settings.
+                     * <p>More scaling group settings.</p>
                      */
                     AutoScaleGroupAdvanceAttrs m_extraAdvanceAttrs;
                     bool m_extraAdvanceAttrsHasBeenSet;
+
+                    /**
+                     * <p>Custom hostname.</p>
+                     */
+                    std::string m_customNodeName;
+                    bool m_customNodeNameHasBeenSet;
 
                 };
             }

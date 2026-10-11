@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
-                     * @return ID When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+                     * 获取When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+                     * @return ID When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
-                     * @param _iD When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+                     * 设置When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+                     * @param _iD When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
-                     * @return Type Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+                     * 获取Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
+                     * @return Type Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
-                     * @param _type Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+                     * 设置Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
+                     * @param _type Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,62 +90,60 @@ namespace TencentCloud
 
                     /**
                      * 获取Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
                      * @return RuleID Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
                      * 
                      */
@@ -153,62 +151,60 @@ TEZ-TezTaskGC:TasksGC
 
                     /**
                      * 设置Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
                      * @param _ruleID Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
                      * 
                      */
@@ -243,15 +239,15 @@ TEZ-TezTaskGC:TasksGC
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Insight rules interpretation.
-                     * @return RuleExplain Insight rules interpretation.
+                     * 获取Insight rule interpretation.
+                     * @return RuleExplain Insight rule interpretation.
                      * 
                      */
                     std::string GetRuleExplain() const;
 
                     /**
-                     * 设置Insight rules interpretation.
-                     * @param _ruleExplain Insight rules interpretation.
+                     * 设置Insight rule interpretation.
+                     * @param _ruleExplain Insight rule interpretation.
                      * 
                      */
                     void SetRuleExplain(const std::string& _ruleExplain);
@@ -306,15 +302,15 @@ TEZ-TezTaskGC:TasksGC
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
-                     * @return Value Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+                     * 获取Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
+                     * @return Value Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
-                     * @param _value Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+                     * 设置Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
+                     * @param _value Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -348,15 +344,15 @@ TEZ-TezTaskGC:TasksGC
                     bool ScheduleTaskExecIDHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling flow, DAG.
-                     * @return ScheduleFlowName Scheduling flow, DAG.
+                     * 获取Scheduling flow (DAG).
+                     * @return ScheduleFlowName Scheduling flow (DAG).
                      * 
                      */
                     std::string GetScheduleFlowName() const;
 
                     /**
-                     * 设置Scheduling flow, DAG.
-                     * @param _scheduleFlowName Scheduling flow, DAG.
+                     * 设置Scheduling flow (DAG).
+                     * @param _scheduleFlowName Scheduling flow (DAG).
                      * 
                      */
                     void SetScheduleFlowName(const std::string& _scheduleFlowName);
@@ -369,15 +365,15 @@ TEZ-TezTaskGC:TasksGC
                     bool ScheduleFlowNameHasBeenSet() const;
 
                     /**
-                     * 获取A Task node in the scheduling flow.
-                     * @return ScheduleTaskName A Task node in the scheduling flow.
+                     * 获取Task node in the scheduling flow.
+                     * @return ScheduleTaskName Task node in the scheduling flow.
                      * 
                      */
                     std::string GetScheduleTaskName() const;
 
                     /**
-                     * 设置A Task node in the scheduling flow.
-                     * @param _scheduleTaskName A Task node in the scheduling flow.
+                     * 设置Task node in the scheduling flow.
+                     * @param _scheduleTaskName Task node in the scheduling flow.
                      * 
                      */
                     void SetScheduleTaskName(const std::string& _scheduleTaskName);
@@ -390,15 +386,15 @@ TEZ-TezTaskGC:TasksGC
                     bool ScheduleTaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Core configurations for Yarn tasks.
-                     * @return JobConf Core configurations for Yarn tasks.
+                     * 获取Some core configurations of the YARN task.
+                     * @return JobConf Some core configurations of the YARN task.
                      * 
                      */
                     std::string GetJobConf() const;
 
                     /**
-                     * 设置Core configurations for Yarn tasks.
-                     * @param _jobConf Core configurations for Yarn tasks.
+                     * 设置Some core configurations of the YARN task.
+                     * @param _jobConf Some core configurations of the YARN task.
                      * 
                      */
                     void SetJobConf(const std::string& _jobConf);
@@ -411,19 +407,15 @@ TEZ-TezTaskGC:TasksGC
                     bool JobConfHasBeenSet() const;
 
                     /**
-                     * 获取Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Context Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Insight into structured information.
+                     * @return Context Insight into structured information.
                      * 
                      */
                     std::string GetContext() const;
 
                     /**
-                     * 设置Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _context Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Insight into structured information.
+                     * @param _context Insight into structured information.
                      * 
                      */
                     void SetContext(const std::string& _context);
@@ -438,46 +430,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+                     * When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+                     * Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
                      */
                     std::string m_ruleID;
@@ -490,7 +481,7 @@ TEZ-TezTaskGC:TasksGC
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Insight rules interpretation.
+                     * Insight rule interpretation.
                      */
                     std::string m_ruleExplain;
                     bool m_ruleExplainHasBeenSet;
@@ -508,7 +499,7 @@ TEZ-TezTaskGC:TasksGC
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+                     * Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;
@@ -520,26 +511,25 @@ TEZ-TezTaskGC:TasksGC
                     bool m_scheduleTaskExecIDHasBeenSet;
 
                     /**
-                     * Scheduling flow, DAG.
+                     * Scheduling flow (DAG).
                      */
                     std::string m_scheduleFlowName;
                     bool m_scheduleFlowNameHasBeenSet;
 
                     /**
-                     * A Task node in the scheduling flow.
+                     * Task node in the scheduling flow.
                      */
                     std::string m_scheduleTaskName;
                     bool m_scheduleTaskNameHasBeenSet;
 
                     /**
-                     * Core configurations for Yarn tasks.
+                     * Some core configurations of the YARN task.
                      */
                     std::string m_jobConf;
                     bool m_jobConfHasBeenSet;
 
                     /**
-                     * Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Insight into structured information.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;

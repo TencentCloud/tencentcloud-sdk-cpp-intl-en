@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node information
+                * Node information.
                 */
                 class ShortNodeInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node type: Master/Core/Task/Router/Common.
-                     * @return NodeType Node type: Master/Core/Task/Router/Common.
+                     * 获取Node type. Valid values: Master/Core/Task/Router/Common.
+                     * @return NodeType Node type. Valid values: Master/Core/Task/Router/Common.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type: Master/Core/Task/Router/Common.
-                     * @param _nodeType Node type: Master/Core/Task/Router/Common.
+                     * 设置Node type. Valid values: Master/Core/Task/Router/Common.
+                     * @param _nodeType Node type. Valid values: Master/Core/Task/Router/Common.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Node type: Master/Core/Task/Router/Common.
+                     * Node type. Valid values: Master/Core/Task/Router/Common.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;

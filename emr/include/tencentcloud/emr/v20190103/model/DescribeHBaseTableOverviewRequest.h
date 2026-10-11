@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Pagination query number offset, starting from 0.	
-                     * @return Offset Pagination query number offset, starting from 0.	
+                     * 获取Page number. Valid values: 0 (page 1) and 1 (page 2).
+                     * @return Offset Page number. Valid values: 0 (page 1) and 1 (page 2).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination query number offset, starting from 0.	
-                     * @param _offset Pagination query number offset, starting from 0.	
+                     * 设置Page number. Valid values: 0 (page 1) and 1 (page 2).
+                     * @param _offset Page number. Valid values: 0 (page 1) and 1 (page 2).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-                     * @return Limit Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+                     * 获取Number of items returned per page. Minimum value: 1. Maximum value: 100.
+                     * @return Limit Number of items returned per page. Minimum value: 1. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-                     * @param _limit Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+                     * 设置Number of items returned per page. Minimum value: 1. Maximum value: 100.
+                     * @param _limit Number of items returned per page. Minimum value: 1. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Table name, supporting fuzzy matching
-                     * @return Table Table name, supporting fuzzy matching
+                     * 获取Table name, supporting fuzzy matching.
+                     * @return Table Table name, supporting fuzzy matching.
                      * 
                      */
                     std::string GetTable() const;
 
                     /**
-                     * 设置Table name, supporting fuzzy matching
-                     * @param _table Table name, supporting fuzzy matching
+                     * 设置Table name, supporting fuzzy matching.
+                     * @param _table Table name, supporting fuzzy matching.
                      * 
                      */
                     void SetTable(const std::string& _table);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TableHasBeenSet() const;
 
                     /**
-                     * 获取Field for sorting, with a default value
-                     * @return OrderField Field for sorting, with a default value
+                     * 获取Sorting field. It has a default value.
+                     * @return OrderField Sorting field. It has a default value.
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
-                     * 设置Field for sorting, with a default value
-                     * @param _orderField Field for sorting, with a default value
+                     * 设置Sorting field. It has a default value.
+                     * @param _orderField Sorting field. It has a default value.
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取asc: Ascending; desc: Descending (default)
-                     * @return OrderType asc: Ascending; desc: Descending (default)
+                     * 获取asc: ascending; desc: descending (default).
+                     * @return OrderType asc: ascending; desc: descending (default).
                      * 
                      */
                     std::string GetOrderType() const;
 
                     /**
-                     * 设置asc: Ascending; desc: Descending (default)
-                     * @param _orderType asc: Ascending; desc: Descending (default)
+                     * 设置asc: ascending; desc: descending (default).
+                     * @param _orderType asc: ascending; desc: descending (default).
                      * 
                      */
                     void SetOrderType(const std::string& _orderType);
@@ -177,31 +177,31 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Pagination query number offset, starting from 0.	
+                     * Page number. Valid values: 0 (page 1) and 1 (page 2).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+                     * Number of items returned per page. Minimum value: 1. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Table name, supporting fuzzy matching
+                     * Table name, supporting fuzzy matching.
                      */
                     std::string m_table;
                     bool m_tableHasBeenSet;
 
                     /**
-                     * Field for sorting, with a default value
+                     * Sorting field. It has a default value.
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * asc: Ascending; desc: Descending (default)
+                     * asc: ascending; desc: descending (default).
                      */
                     std::string m_orderType;
                     bool m_orderTypeHasBeenSet;

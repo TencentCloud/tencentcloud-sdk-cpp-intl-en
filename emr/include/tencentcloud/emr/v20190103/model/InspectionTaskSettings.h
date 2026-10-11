@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Setting inspection task configurations.
+                * Specifies the inspection task configuration to be set.
                 */
                 class InspectionTaskSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier for inspection tasks.
-                     * @return TaskType Unique identifier for inspection tasks.
+                     * 获取Unique identifier for the inspection task.
+                     * @return TaskType Unique identifier for the inspection task.
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置Unique identifier for inspection tasks.
-                     * @param _taskType Unique identifier for inspection tasks.
+                     * 设置Unique identifier for the inspection task.
+                     * @param _taskType Unique identifier for the inspection task.
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool TaskSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is selected, with the valid values of "true" and "false".
-                     * @return Selected Whether it is selected, with the valid values of "true" and "false".
+                     * 获取Whether it is selected. Valid values: "true" and "false".
+                     * @return Selected Whether it is selected. Valid values: "true" and "false".
                      * 
                      */
                     std::string GetSelected() const;
 
                     /**
-                     * 设置Whether it is selected, with the valid values of "true" and "false".
-                     * @param _selected Whether it is selected, with the valid values of "true" and "false".
+                     * 设置Whether it is selected. Valid values: "true" and "false".
+                     * @param _selected Whether it is selected. Valid values: "true" and "false".
                      * 
                      */
                     void SetSelected(const std::string& _selected);
@@ -197,7 +197,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier for inspection tasks.
+                     * Unique identifier for the inspection task.
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -221,7 +221,7 @@ namespace TencentCloud
                     bool m_taskSettingsHasBeenSet;
 
                     /**
-                     * Whether it is selected, with the valid values of "true" and "false".
+                     * Whether it is selected. Valid values: "true" and "false".
                      */
                     std::string m_selected;
                     bool m_selectedHasBeenSet;

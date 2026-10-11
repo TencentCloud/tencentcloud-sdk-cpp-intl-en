@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID
-                     * @return InstanceId Cluster instance ID
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID
-                     * @param _instanceId Cluster instance ID
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Page number
-                     * @return PageNo Page number
+                     * 获取Page number.
+                     * @return PageNo Page number.
                      * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
-                     * 设置Page number
-                     * @param _pageNo Page number
+                     * 设置Page number.
+                     * @param _pageNo Page number.
                      * 
                      */
                     void SetPageNo(const int64_t& _pageNo);
@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool PageNoHasBeenSet() const;
 
                     /**
-                     * 获取Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
-                     * @return PageSize Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+                     * 获取Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
+                     * @return PageSize Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
-                     * @param _pageSize Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+                     * 设置Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
+                     * @param _pageSize Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -111,15 +111,15 @@ All are queried by default. If the PageNo and PageSize settings are inappropriat
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取User list query filter
-                     * @return UserManagerFilter User list query filter
+                     * 获取User list filter.
+                     * @return UserManagerFilter User list filter.
                      * 
                      */
                     UserManagerFilter GetUserManagerFilter() const;
 
                     /**
-                     * 设置User list query filter
-                     * @param _userManagerFilter User list query filter
+                     * 设置User list filter.
+                     * @param _userManagerFilter User list filter.
                      * 
                      */
                     void SetUserManagerFilter(const UserManagerFilter& _userManagerFilter);
@@ -132,15 +132,15 @@ All are queried by default. If the PageNo and PageSize settings are inappropriat
                     bool UserManagerFilterHasBeenSet() const;
 
                     /**
-                     * 获取Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
-                     * @return NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+                     * 获取Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
+                     * @return NeedKeytabInfo Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
                      * 
                      */
                     bool GetNeedKeytabInfo() const;
 
                     /**
-                     * 设置Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
-                     * @param _needKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+                     * 设置Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
+                     * @param _needKeytabInfo Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
                      * 
                      */
                     void SetNeedKeytabInfo(const bool& _needKeytabInfo);
@@ -155,32 +155,32 @@ All are queried by default. If the PageNo and PageSize settings are inappropriat
                 private:
 
                     /**
-                     * Cluster instance ID
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Page number
+                     * Page number.
                      */
                     int64_t m_pageNo;
                     bool m_pageNoHasBeenSet;
 
                     /**
-                     * Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+                     * Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * User list query filter
+                     * User list filter.
                      */
                     UserManagerFilter m_userManagerFilter;
                     bool m_userManagerFilterHasBeenSet;
 
                     /**
-                     * Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+                     * Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
                      */
                     bool m_needKeytabInfo;
                     bool m_needKeytabInfoHasBeenSet;

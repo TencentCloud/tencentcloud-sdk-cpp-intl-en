@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of terminated node. This parameter is reserved and does not need to be configured.
-                     * @return ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
+                     * 获取<p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
+                     * @return ResourceIds <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
-                     * 设置ID of terminated node. This parameter is reserved and does not need to be configured.
-                     * @param _resourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
+                     * 设置<p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
+                     * @param _resourceIds <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
                      * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 获取<p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
+                     * @return ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
                      * 
                      */
                     std::string GetResourceBaseType() const;
 
                     /**
-                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 设置<p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
+                     * @param _resourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
                      * 
                      */
                     void SetResourceBaseType(const std::string& _resourceBaseType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ResourceBaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Computing resource ID.
-                     * @return ComputeResourceId Computing resource ID.
+                     * 获取<p>Computing resource ID.</p>
+                     * @return ComputeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     std::string GetComputeResourceId() const;
 
                     /**
-                     * 设置Computing resource ID.
-                     * @param _computeResourceId Computing resource ID.
+                     * 设置<p>Computing resource ID.</p>
+                     * @param _computeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     void SetComputeResourceId(const std::string& _computeResourceId);
@@ -126,31 +126,58 @@ namespace TencentCloud
                      */
                     bool ComputeResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Retain the TKE cluster associated with the computing resource.</p>
+                     * @return RetainTkeCluster <p>Retain the TKE cluster associated with the computing resource.</p>
+                     * 
+                     */
+                    bool GetRetainTkeCluster() const;
+
+                    /**
+                     * 设置<p>Retain the TKE cluster associated with the computing resource.</p>
+                     * @param _retainTkeCluster <p>Retain the TKE cluster associated with the computing resource.</p>
+                     * 
+                     */
+                    void SetRetainTkeCluster(const bool& _retainTkeCluster);
+
+                    /**
+                     * 判断参数 RetainTkeCluster 是否已赋值
+                     * @return RetainTkeCluster 是否已赋值
+                     * 
+                     */
+                    bool RetainTkeClusterHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * ID of terminated node. This parameter is reserved and does not need to be configured.
+                     * <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
                      */
                     std::string m_resourceBaseType;
                     bool m_resourceBaseTypeHasBeenSet;
 
                     /**
-                     * Computing resource ID.
+                     * <p>Computing resource ID.</p>
                      */
                     std::string m_computeResourceId;
                     bool m_computeResourceIdHasBeenSet;
+
+                    /**
+                     * <p>Retain the TKE cluster associated with the computing resource.</p>
+                     */
+                    bool m_retainTkeCluster;
+                    bool m_retainTkeClusterHasBeenSet;
 
                 };
             }

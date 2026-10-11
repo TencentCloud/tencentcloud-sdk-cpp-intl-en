@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
-                     * @return RegionName Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+                     * 获取Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+                     * @return RegionName Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
-                     * @param _regionName Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+                     * 设置Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+                     * @param _regionName Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Region code, such as gz, sh, and bj
-                     * @return RegionCode Region code, such as gz, sh, and bj
+                     * 获取Region code, such as gz, sh, and bj
+                     * @return RegionCode Region code, such as gz, sh, and bj
                      * 
                      */
                     std::string GetRegionCode() const;
 
                     /**
-                     * 设置Region code, such as gz, sh, and bj
-                     * @param _regionCode Region code, such as gz, sh, and bj
+                     * 设置Region code, such as gz, sh, and bj
+                     * @param _regionCode Region code, such as gz, sh, and bj
                      * 
                      */
                     void SetRegionCode(const std::string& _regionCode);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+                     * Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Region code, such as gz, sh, and bj
+                     * Region code, such as gz, sh, and bj
                      */
                     std::string m_regionCode;
                     bool m_regionCodeHasBeenSet;

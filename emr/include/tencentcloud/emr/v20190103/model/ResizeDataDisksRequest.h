@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the EMR cluster instance.
-                     * @return InstanceId ID of the EMR cluster instance.
+                     * 获取ID of the EMR cluster.
+                     * @return InstanceId ID of the EMR cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the EMR cluster instance.
-                     * @param _instanceId ID of the EMR cluster instance.
+                     * 设置ID of the EMR cluster.
+                     * @param _instanceId ID of the EMR cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool CvmInstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cloud disk to be scaled out.
-                     * @return DiskIds ID of the cloud disk to be scaled out.
+                     * 获取ID of the cloud disks to be scaled out.
+                     * @return DiskIds ID of the cloud disks to be scaled out.
                      * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置ID of the cloud disk to be scaled out.
-                     * @param _diskIds ID of the cloud disk to be scaled out.
+                     * 设置ID of the cloud disks to be scaled out.
+                     * @param _diskIds ID of the cloud disks to be scaled out.
                      * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the EMR cluster instance.
+                     * ID of the EMR cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_cvmInstanceIdsHasBeenSet;
 
                     /**
-                     * ID of the cloud disk to be scaled out.
+                     * ID of the cloud disks to be scaled out.
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;

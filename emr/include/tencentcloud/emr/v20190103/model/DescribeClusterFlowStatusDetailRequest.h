@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取EMR instance ID
-                     * @return InstanceId EMR instance ID
+                     * 获取EMR instance ID.
+                     * @return InstanceId EMR instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置EMR instance ID
-                     * @param _instanceId EMR instance ID
+                     * 设置EMR instance ID.
+                     * @param _instanceId EMR instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool FlowParamHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return additional task information.
-The default value is false.
-                     * @return NeedExtraDetail Whether to return additional task information.
-The default value is false.
+                     * 获取Whether additional task information is returned.
+Default value: false.
+                     * @return NeedExtraDetail Whether additional task information is returned.
+Default value: false.
                      * 
                      */
                     bool GetNeedExtraDetail() const;
 
                     /**
-                     * 设置Whether to return additional task information.
-The default value is false.
-                     * @param _needExtraDetail Whether to return additional task information.
-The default value is false.
+                     * 设置Whether additional task information is returned.
+Default value: false.
+                     * @param _needExtraDetail Whether additional task information is returned.
+Default value: false.
                      * 
                      */
                     void SetNeedExtraDetail(const bool& _needExtraDetail);
@@ -113,7 +113,7 @@ The default value is false.
                 private:
 
                     /**
-                     * EMR instance ID
+                     * EMR instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -125,8 +125,8 @@ The default value is false.
                     bool m_flowParamHasBeenSet;
 
                     /**
-                     * Whether to return additional task information.
-The default value is false.
+                     * Whether additional task information is returned.
+Default value: false.
                      */
                     bool m_needExtraDetail;
                     bool m_needExtraDetailHasBeenSet;

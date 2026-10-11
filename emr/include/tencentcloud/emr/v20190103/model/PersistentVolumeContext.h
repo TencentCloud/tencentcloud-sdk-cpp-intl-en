@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description of Pod `PVC` storage method
+                * Description of the Pod PVC storage method.
                 */
                 class PersistentVolumeContext : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Disk size in GB.
-                     * @return DiskSize Disk size in GB.
+                     * 获取Disk size (GB).
+                     * @return DiskSize Disk size (GB).
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Disk size in GB.
-                     * @param _diskSize Disk size in GB.
+                     * 设置Disk size (GB).
+                     * @param _diskSize Disk size (GB).
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk type, CLOUD_PREMIUM or CLOUD_SSD.
-                     * @return DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+                     * 获取Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
+                     * @return DiskType Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Disk type, CLOUD_PREMIUM or CLOUD_SSD.
-                     * @param _diskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+                     * 设置Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
+                     * @param _diskType Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DiskNumHasBeenSet() const;
 
                     /**
-                     * 获取Additional performance of cloud disks.
-                     * @return ExtraPerformance Additional performance of cloud disks.
+                     * 获取Cloud disk additional performance.
+                     * @return ExtraPerformance Cloud disk additional performance.
                      * 
                      */
                     int64_t GetExtraPerformance() const;
 
                     /**
-                     * 设置Additional performance of cloud disks.
-                     * @param _extraPerformance Additional performance of cloud disks.
+                     * 设置Cloud disk additional performance.
+                     * @param _extraPerformance Cloud disk additional performance.
                      * 
                      */
                     void SetExtraPerformance(const int64_t& _extraPerformance);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Disk size in GB.
+                     * Disk size (GB).
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+                     * Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_diskNumHasBeenSet;
 
                     /**
-                     * Additional performance of cloud disks.
+                     * Cloud disk additional performance.
                      */
                     int64_t m_extraPerformance;
                     bool m_extraPerformanceHasBeenSet;

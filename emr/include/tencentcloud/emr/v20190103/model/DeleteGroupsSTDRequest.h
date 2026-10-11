@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster name.
-                     * @return InstanceId Cluster name.
+                     * 获取<p>Cluster name.</p>
+                     * @return InstanceId <p>Cluster name.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster name.
-                     * @param _instanceId Cluster name.
+                     * 设置<p>Cluster name.</p>
+                     * @param _instanceId <p>Cluster name.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User group name array.
-                     * @return GroupNames User group name array.
+                     * 获取<p>Array of user group names.</p>
+                     * @return GroupNames <p>Array of user group names.</p>
                      * 
                      */
                     std::vector<std::string> GetGroupNames() const;
 
                     /**
-                     * 设置User group name array.
-                     * @param _groupNames User group name array.
+                     * 设置<p>Array of user group names.</p>
+                     * @param _groupNames <p>Array of user group names.</p>
                      * 
                      */
                     void SetGroupNames(const std::vector<std::string>& _groupNames);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster name.
+                     * <p>Cluster name.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User group name array.
+                     * <p>Array of user group names.</p>
                      */
                     std::vector<std::string> m_groupNames;
                     bool m_groupNamesHasBeenSet;

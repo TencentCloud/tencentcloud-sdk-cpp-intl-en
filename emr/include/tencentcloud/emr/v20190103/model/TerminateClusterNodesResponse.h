@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The scale-in process ID.
-                     * @return FlowId The scale-in process ID.
+                     * 获取Scale-in flow ID.
+                     * @return FlowId Scale-in flow ID.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The scale-in process ID.
+                     * Scale-in flow ID.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

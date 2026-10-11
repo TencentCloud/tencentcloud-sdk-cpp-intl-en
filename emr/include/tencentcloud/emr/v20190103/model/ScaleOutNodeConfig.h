@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The type and number of nodes to be added.
+                * Scale-out node type and quantity.
                 */
                 class ScaleOutNodeConfig : public AbstractModel
                 {
@@ -47,12 +47,12 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values of node type:
+                     * 获取Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-                     * @return NodeFlag Valid values of node type:
+                     * @return NodeFlag Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -62,12 +62,12 @@ namespace TencentCloud
                     std::string GetNodeFlag() const;
 
                     /**
-                     * 设置Valid values of node type:
+                     * 设置Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-                     * @param _nodeFlag Valid values of node type:
+                     * @param _nodeFlag Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool NodeFlagHasBeenSet() const;
 
                     /**
-                     * 获取The number of nodes.
-                     * @return NodeCount The number of nodes.
+                     * 获取Number of scale-out nodes.
+                     * @return NodeCount Number of scale-out nodes.
                      * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
-                     * 设置The number of nodes.
-                     * @param _nodeCount The number of nodes.
+                     * 设置Number of scale-out nodes.
+                     * @param _nodeCount Number of scale-out nodes.
                      * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
@@ -107,7 +107,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Valid values of node type:
+                     * Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -117,7 +117,7 @@ namespace TencentCloud
                     bool m_nodeFlagHasBeenSet;
 
                     /**
-                     * The number of nodes.
+                     * Number of scale-out nodes.
                      */
                     uint64_t m_nodeCount;
                     bool m_nodeCountHasBeenSet;

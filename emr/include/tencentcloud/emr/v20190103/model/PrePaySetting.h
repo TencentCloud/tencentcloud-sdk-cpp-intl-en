@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Serverless HBase prepaid settings
+                * Serverless HBase prepaid settings.
                 */
                 class PrePaySetting : public AbstractModel
                 {
@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Period Time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     Period GetPeriod() const;
 
                     /**
                      * 设置Time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _period Time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPeriod(const Period& _period);
@@ -73,15 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
-                     * @return AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+                     * 获取Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
+                     * @return AutoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
-                     * @param _autoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+                     * 设置Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
+                     * @param _autoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -97,13 +93,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Period m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+                     * Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The cluster ID.
-                     * @return InstanceId The cluster ID.
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The cluster ID.
-                     * @param _instanceId The cluster ID.
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The start time in seconds.
-                     * @return StartTime The start time in seconds.
+                     * 获取Start time (s).
+                     * @return StartTime Start time (s).
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置The start time in seconds.
-                     * @param _startTime The start time in seconds.
+                     * 设置Start time (s).
+                     * @param _startTime Start time (s).
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
-                     * @return EndTime The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+                     * 获取End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
+                     * @return EndTime End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
-                     * @param _endTime The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+                     * 设置End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
+                     * @param _endTime End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Starting offset for pagination. Start value: 0
-                     * @return Offset Starting offset for pagination. Start value: 0
+                     * 获取Starting offset for pages, starting from 0.
+                     * @return Offset Starting offset for pages, starting from 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Starting offset for pagination. Start value: 0
-                     * @param _offset Starting offset for pagination. Start value: 0
+                     * 设置Starting offset for pages, starting from 0.
+                     * @param _offset Starting offset for pages, starting from 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page size. Valid range: [1,100]
-                     * @return Limit Page size. Valid range: [1,100]
+                     * 获取Number of entries per page. Value range: [1, 100].
+                     * @return Limit Number of entries per page. Value range: [1, 100].
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Page size. Valid range: [1,100]
-                     * @param _limit Page size. Valid range: [1,100]
+                     * 设置Number of entries per page. Value range: [1, 100].
+                     * @param _limit Number of entries per page. Value range: [1, 100].
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -213,31 +213,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The cluster ID.
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The start time in seconds.
+                     * Start time (s).
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+                     * End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Starting offset for pagination. Start value: 0
+                     * Starting offset for pages, starting from 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page size. Valid range: [1,100]
+                     * Number of entries per page. Value range: [1, 100].
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

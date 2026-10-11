@@ -32,6 +32,7 @@ TimeAutoScaleStrategy::TimeAutoScaleStrategy() :
     m_strategyIdHasBeenSet(false),
     m_graceDownFlagHasBeenSet(false),
     m_graceDownTimeHasBeenSet(false),
+    m_graceDownProtectFlagHasBeenSet(false),
     m_tagsHasBeenSet(false),
     m_configGroupAssignedHasBeenSet(false),
     m_measureMethodHasBeenSet(false),
@@ -41,7 +42,8 @@ TimeAutoScaleStrategy::TimeAutoScaleStrategy() :
     m_serviceNodeInfoHasBeenSet(false),
     m_compensateFlagHasBeenSet(false),
     m_groupIdHasBeenSet(false),
-    m_graceDownLabelHasBeenSet(false)
+    m_graceDownLabelHasBeenSet(false),
+    m_graceDownProtectTimeHasBeenSet(false)
 {
 }
 
@@ -165,6 +167,16 @@ CoreInternalOutcome TimeAutoScaleStrategy::Deserialize(const rapidjson::Value &v
         }
         m_graceDownTime = value["GraceDownTime"].GetInt64();
         m_graceDownTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("GraceDownProtectFlag") && !value["GraceDownProtectFlag"].IsNull())
+    {
+        if (!value["GraceDownProtectFlag"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `TimeAutoScaleStrategy.GraceDownProtectFlag` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_graceDownProtectFlag = value["GraceDownProtectFlag"].GetBool();
+        m_graceDownProtectFlagHasBeenSet = true;
     }
 
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
@@ -293,6 +305,16 @@ CoreInternalOutcome TimeAutoScaleStrategy::Deserialize(const rapidjson::Value &v
         m_graceDownLabelHasBeenSet = true;
     }
 
+    if (value.HasMember("GraceDownProtectTime") && !value["GraceDownProtectTime"].IsNull())
+    {
+        if (!value["GraceDownProtectTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TimeAutoScaleStrategy.GraceDownProtectTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_graceDownProtectTime = value["GraceDownProtectTime"].GetInt64();
+        m_graceDownProtectTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -387,6 +409,14 @@ void TimeAutoScaleStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         string key = "GraceDownTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_graceDownTime, allocator);
+    }
+
+    if (m_graceDownProtectFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GraceDownProtectFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_graceDownProtectFlag, allocator);
     }
 
     if (m_tagsHasBeenSet)
@@ -491,6 +521,14 @@ void TimeAutoScaleStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_graceDownProtectTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GraceDownProtectTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_graceDownProtectTime, allocator);
     }
 
 }
@@ -672,6 +710,22 @@ bool TimeAutoScaleStrategy::GraceDownTimeHasBeenSet() const
     return m_graceDownTimeHasBeenSet;
 }
 
+bool TimeAutoScaleStrategy::GetGraceDownProtectFlag() const
+{
+    return m_graceDownProtectFlag;
+}
+
+void TimeAutoScaleStrategy::SetGraceDownProtectFlag(const bool& _graceDownProtectFlag)
+{
+    m_graceDownProtectFlag = _graceDownProtectFlag;
+    m_graceDownProtectFlagHasBeenSet = true;
+}
+
+bool TimeAutoScaleStrategy::GraceDownProtectFlagHasBeenSet() const
+{
+    return m_graceDownProtectFlagHasBeenSet;
+}
+
 vector<Tag> TimeAutoScaleStrategy::GetTags() const
 {
     return m_tags;
@@ -830,5 +884,21 @@ void TimeAutoScaleStrategy::SetGraceDownLabel(const vector<TkeLabel>& _graceDown
 bool TimeAutoScaleStrategy::GraceDownLabelHasBeenSet() const
 {
     return m_graceDownLabelHasBeenSet;
+}
+
+int64_t TimeAutoScaleStrategy::GetGraceDownProtectTime() const
+{
+    return m_graceDownProtectTime;
+}
+
+void TimeAutoScaleStrategy::SetGraceDownProtectTime(const int64_t& _graceDownProtectTime)
+{
+    m_graceDownProtectTime = _graceDownProtectTime;
+    m_graceDownProtectTimeHasBeenSet = true;
+}
+
+bool TimeAutoScaleStrategy::GraceDownProtectTimeHasBeenSet() const
+{
+    return m_graceDownProtectTimeHasBeenSet;
 }
 

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Quantity.
-                     * @return Count Quantity.
+                     * 获取Number.
+                     * @return Count Number.
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Quantity.
-                     * @param _count Quantity.
+                     * 设置Number.
+                     * @param _count Number.
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -130,10 +130,31 @@ namespace TencentCloud
                      */
                     bool DefaultDiskSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a special data disk, for example, a single-replica disk.
+                     * @return IsSpecialDisk Whether it is a special data disk, for example, a single-replica disk.
+                     * 
+                     */
+                    bool GetIsSpecialDisk() const;
+
+                    /**
+                     * 设置Whether it is a special data disk, for example, a single-replica disk.
+                     * @param _isSpecialDisk Whether it is a special data disk, for example, a single-replica disk.
+                     * 
+                     */
+                    void SetIsSpecialDisk(const bool& _isSpecialDisk);
+
+                    /**
+                     * 判断参数 IsSpecialDisk 是否已赋值
+                     * @return IsSpecialDisk 是否已赋值
+                     * 
+                     */
+                    bool IsSpecialDiskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Quantity.
+                     * Number.
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;
@@ -155,6 +176,12 @@ namespace TencentCloud
                      */
                     int64_t m_defaultDiskSize;
                     bool m_defaultDiskSizeHasBeenSet;
+
+                    /**
+                     * Whether it is a special data disk, for example, a single-replica disk.
+                     */
+                    bool m_isSpecialDisk;
+                    bool m_isSpecialDiskHasBeenSet;
 
                 };
             }

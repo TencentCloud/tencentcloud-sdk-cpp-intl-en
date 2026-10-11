@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The user-created Hive-MetaDB instance information.
+                * User-defined database information.
                 */
                 class CustomMetaDBInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
-                     * @return MetaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+                     * 获取<p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
+                     * @return MetaDataJdbcUrl <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
                      * 
                      */
                     std::string GetMetaDataJdbcUrl() const;
 
                     /**
-                     * 设置The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
-                     * @param _metaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+                     * 设置<p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
+                     * @param _metaDataJdbcUrl <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
                      * 
                      */
                     void SetMetaDataJdbcUrl(const std::string& _metaDataJdbcUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MetaDataJdbcUrlHasBeenSet() const;
 
                     /**
-                     * 获取The custom metadatabase instance username.
-                     * @return MetaDataUser The custom metadatabase instance username.
+                     * 获取<p>Custom MetaDB username.</p>
+                     * @return MetaDataUser <p>Custom MetaDB username.</p>
                      * 
                      */
                     std::string GetMetaDataUser() const;
 
                     /**
-                     * 设置The custom metadatabase instance username.
-                     * @param _metaDataUser The custom metadatabase instance username.
+                     * 设置<p>Custom MetaDB username.</p>
+                     * @param _metaDataUser <p>Custom MetaDB username.</p>
                      * 
                      */
                     void SetMetaDataUser(const std::string& _metaDataUser);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MetaDataUserHasBeenSet() const;
 
                     /**
-                     * 获取The custom metadatabase instance password.
-                     * @return MetaDataPass The custom metadatabase instance password.
+                     * 获取<p>Custom MetaDB password.</p>
+                     * @return MetaDataPass <p>Custom MetaDB password.</p>
                      * 
                      */
                     std::string GetMetaDataPass() const;
 
                     /**
-                     * 设置The custom metadatabase instance password.
-                     * @param _metaDataPass The custom metadatabase instance password.
+                     * 设置<p>Custom MetaDB password.</p>
+                     * @param _metaDataPass <p>Custom MetaDB password.</p>
                      * 
                      */
                     void SetMetaDataPass(const std::string& _metaDataPass);
@@ -110,27 +110,15 @@ namespace TencentCloud
                     bool MetaDataPassHasBeenSet() const;
 
                     /**
-                     * 获取The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
-                     * @return MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+                     * 获取<p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+                     * @return MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
                      * 
                      */
                     std::string GetMetaType() const;
 
                     /**
-                     * 设置The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
-                     * @param _metaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+                     * 设置<p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+                     * @param _metaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
                      * 
                      */
                     void SetMetaType(const std::string& _metaType);
@@ -143,15 +131,15 @@ namespace TencentCloud
                     bool MetaTypeHasBeenSet() const;
 
                     /**
-                     * 获取The EMR-MetaDB instance.
-                     * @return UnifyMetaInstanceId The EMR-MetaDB instance.
+                     * 获取<p>EMR-MetaDB instance.</p>
+                     * @return UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
                      * 
                      */
                     std::string GetUnifyMetaInstanceId() const;
 
                     /**
-                     * 设置The EMR-MetaDB instance.
-                     * @param _unifyMetaInstanceId The EMR-MetaDB instance.
+                     * 设置<p>EMR-MetaDB instance.</p>
+                     * @param _unifyMetaInstanceId <p>EMR-MetaDB instance.</p>
                      * 
                      */
                     void SetUnifyMetaInstanceId(const std::string& _unifyMetaInstanceId);
@@ -163,40 +151,118 @@ namespace TencentCloud
                      */
                     bool UnifyMetaInstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Component.</p>
+                     * @return Components <p>Component.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetComponents() const;
+
+                    /**
+                     * 设置<p>Component.</p>
+                     * @param _components <p>Component.</p>
+                     * 
+                     */
+                    void SetComponents(const std::vector<std::string>& _components);
+
+                    /**
+                     * 判断参数 Components 是否已赋值
+                     * @return Components 是否已赋值
+                     * 
+                     */
+                    bool ComponentsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>MetaDB version.</p>
+                     * @return DefaultMetaVersion <p>MetaDB version.</p>
+                     * 
+                     */
+                    std::string GetDefaultMetaVersion() const;
+
+                    /**
+                     * 设置<p>MetaDB version.</p>
+                     * @param _defaultMetaVersion <p>MetaDB version.</p>
+                     * 
+                     */
+                    void SetDefaultMetaVersion(const std::string& _defaultMetaVersion);
+
+                    /**
+                     * 判断参数 DefaultMetaVersion 是否已赋值
+                     * @return DefaultMetaVersion 是否已赋值
+                     * 
+                     */
+                    bool DefaultMetaVersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>CDBId</p>
+                     * @return LinkInstanceId <p>CDBId</p>
+                     * 
+                     */
+                    std::string GetLinkInstanceId() const;
+
+                    /**
+                     * 设置<p>CDBId</p>
+                     * @param _linkInstanceId <p>CDBId</p>
+                     * 
+                     */
+                    void SetLinkInstanceId(const std::string& _linkInstanceId);
+
+                    /**
+                     * 判断参数 LinkInstanceId 是否已赋值
+                     * @return LinkInstanceId 是否已赋值
+                     * 
+                     */
+                    bool LinkInstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+                     * <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
                      */
                     std::string m_metaDataJdbcUrl;
                     bool m_metaDataJdbcUrlHasBeenSet;
 
                     /**
-                     * The custom metadatabase instance username.
+                     * <p>Custom MetaDB username.</p>
                      */
                     std::string m_metaDataUser;
                     bool m_metaDataUserHasBeenSet;
 
                     /**
-                     * The custom metadatabase instance password.
+                     * <p>Custom MetaDB password.</p>
                      */
                     std::string m_metaDataPass;
                     bool m_metaDataPassHasBeenSet;
 
                     /**
-                     * The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+                     * <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
                      */
                     std::string m_metaType;
                     bool m_metaTypeHasBeenSet;
 
                     /**
-                     * The EMR-MetaDB instance.
+                     * <p>EMR-MetaDB instance.</p>
                      */
                     std::string m_unifyMetaInstanceId;
                     bool m_unifyMetaInstanceIdHasBeenSet;
+
+                    /**
+                     * <p>Component.</p>
+                     */
+                    std::vector<std::string> m_components;
+                    bool m_componentsHasBeenSet;
+
+                    /**
+                     * <p>MetaDB version.</p>
+                     */
+                    std::string m_defaultMetaVersion;
+                    bool m_defaultMetaVersionHasBeenSet;
+
+                    /**
+                     * <p>CDBId</p>
+                     */
+                    std::string m_linkInstanceId;
+                    bool m_linkInstanceIdHasBeenSet;
 
                 };
             }

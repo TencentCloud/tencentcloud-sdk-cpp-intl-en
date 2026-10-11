@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Shared component information
+                * Shared component information.
                 */
                 class ExternalService : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shared component type, which can be EMR or CUSTOM
-                     * @return ShareType Shared component type, which can be EMR or CUSTOM
+                     * 获取Shared component type. Valid values: EMR and CUSTOM.
+                     * @return ShareType Shared component type. Valid values: EMR and CUSTOM.
                      * 
                      */
                     std::string GetShareType() const;
 
                     /**
-                     * 设置Shared component type, which can be EMR or CUSTOM
-                     * @param _shareType Shared component type, which can be EMR or CUSTOM
+                     * 设置Shared component type. Valid values: EMR and CUSTOM.
+                     * @param _shareType Shared component type. Valid values: EMR and CUSTOM.
                      * 
                      */
                     void SetShareType(const std::string& _shareType);
@@ -69,36 +69,15 @@ namespace TencentCloud
                     bool ShareTypeHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters
-                     * @return CustomServiceDefineList Custom parameters
-                     * 
-                     */
-                    std::vector<CustomServiceDefine> GetCustomServiceDefineList() const;
-
-                    /**
-                     * 设置Custom parameters
-                     * @param _customServiceDefineList Custom parameters
-                     * 
-                     */
-                    void SetCustomServiceDefineList(const std::vector<CustomServiceDefine>& _customServiceDefineList);
-
-                    /**
-                     * 判断参数 CustomServiceDefineList 是否已赋值
-                     * @return CustomServiceDefineList 是否已赋值
-                     * 
-                     */
-                    bool CustomServiceDefineListHasBeenSet() const;
-
-                    /**
-                     * 获取Shared component name
-                     * @return Service Shared component name
+                     * 获取Shared component name.
+                     * @return Service Shared component name.
                      * 
                      */
                     std::string GetService() const;
 
                     /**
-                     * 设置Shared component name
-                     * @param _service Shared component name
+                     * 设置Shared component name.
+                     * @param _service Shared component name.
                      * 
                      */
                     void SetService(const std::string& _service);
@@ -111,15 +90,15 @@ namespace TencentCloud
                     bool ServiceHasBeenSet() const;
 
                     /**
-                     * 获取Shared component cluster
-                     * @return InstanceId Shared component cluster
+                     * 获取Shared component cluster.
+                     * @return InstanceId Shared component cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Shared component cluster
-                     * @param _instanceId Shared component cluster
+                     * 设置Shared component cluster.
+                     * @param _instanceId Shared component cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -131,31 +110,52 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Custom parameter collection.
+                     * @return CustomServiceDefineList Custom parameter collection.
+                     * 
+                     */
+                    std::vector<CustomServiceDefine> GetCustomServiceDefineList() const;
+
+                    /**
+                     * 设置Custom parameter collection.
+                     * @param _customServiceDefineList Custom parameter collection.
+                     * 
+                     */
+                    void SetCustomServiceDefineList(const std::vector<CustomServiceDefine>& _customServiceDefineList);
+
+                    /**
+                     * 判断参数 CustomServiceDefineList 是否已赋值
+                     * @return CustomServiceDefineList 是否已赋值
+                     * 
+                     */
+                    bool CustomServiceDefineListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Shared component type, which can be EMR or CUSTOM
+                     * Shared component type. Valid values: EMR and CUSTOM.
                      */
                     std::string m_shareType;
                     bool m_shareTypeHasBeenSet;
 
                     /**
-                     * Custom parameters
-                     */
-                    std::vector<CustomServiceDefine> m_customServiceDefineList;
-                    bool m_customServiceDefineListHasBeenSet;
-
-                    /**
-                     * Shared component name
+                     * Shared component name.
                      */
                     std::string m_service;
                     bool m_serviceHasBeenSet;
 
                     /**
-                     * Shared component cluster
+                     * Shared component cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Custom parameter collection.
+                     */
+                    std::vector<CustomServiceDefine> m_customServiceDefineList;
+                    bool m_customServiceDefineListHasBeenSet;
 
                 };
             }

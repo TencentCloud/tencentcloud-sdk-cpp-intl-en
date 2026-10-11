@@ -91,18 +91,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Types Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<NodeSpecType> GetTypes() const;
 
                     /**
                      * 设置Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _types Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTypes(const std::vector<NodeSpecType>& _types);
@@ -115,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypesHasBeenSet() const;
 
                     /**
-                     * 获取Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CmnTypes Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of cloud-hosted node instance specifications.
+                     * @return CmnTypes List of cloud-hosted node instance specifications.
                      * 
                      */
                     std::vector<NodeSpecType> GetCmnTypes() const;
 
                     /**
-                     * 设置Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cmnTypes Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of cloud-hosted node instance specifications.
+                     * @param _cmnTypes List of cloud-hosted node instance specifications.
                      * 
                      */
                     void SetCmnTypes(const std::vector<NodeSpecType>& _cmnTypes);
@@ -155,14 +147,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NodeSpecType> m_types;
                     bool m_typesHasBeenSet;
 
                     /**
-                     * Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of cloud-hosted node instance specifications.
                      */
                     std::vector<NodeSpecType> m_cmnTypes;
                     bool m_cmnTypesHasBeenSet;

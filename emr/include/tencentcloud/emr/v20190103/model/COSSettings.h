@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * COS-related configuration
+                * COS related configuration.
                 */
                 class COSSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取COS `SecretId`
-                     * @return CosSecretId COS `SecretId`
+                     * 获取COS SecretId
+                     * @return CosSecretId COS SecretId
                      * 
                      */
                     std::string GetCosSecretId() const;
 
                     /**
-                     * 设置COS `SecretId`
-                     * @param _cosSecretId COS `SecretId`
+                     * 设置COS SecretId
+                     * @param _cosSecretId COS SecretId
                      * 
                      */
                     void SetCosSecretId(const std::string& _cosSecretId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CosSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取COS `SecrectKey`
-                     * @return CosSecretKey COS `SecrectKey`
+                     * 获取COS SecrectKey
+                     * @return CosSecretKey COS SecrectKey
                      * 
                      */
                     std::string GetCosSecretKey() const;
 
                     /**
-                     * 设置COS `SecrectKey`
-                     * @param _cosSecretKey COS `SecrectKey`
+                     * 设置COS SecrectKey
+                     * @param _cosSecretKey COS SecrectKey
                      * 
                      */
                     void SetCosSecretKey(const std::string& _cosSecretKey);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CosSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取COS path to log
-                     * @return LogOnCosPath COS path to log
+                     * 获取Log storage path on COS.
+                     * @return LogOnCosPath Log storage path on COS.
                      * 
                      */
                     std::string GetLogOnCosPath() const;
 
                     /**
-                     * 设置COS path to log
-                     * @param _logOnCosPath COS path to log
+                     * 设置Log storage path on COS.
+                     * @param _logOnCosPath Log storage path on COS.
                      * 
                      */
                     void SetLogOnCosPath(const std::string& _logOnCosPath);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * COS `SecretId`
+                     * COS SecretId
                      */
                     std::string m_cosSecretId;
                     bool m_cosSecretIdHasBeenSet;
 
                     /**
-                     * COS `SecrectKey`
+                     * COS SecrectKey
                      */
                     std::string m_cosSecretKey;
                     bool m_cosSecretKeyHasBeenSet;
 
                     /**
-                     * COS path to log
+                     * Log storage path on COS.
                      */
                     std::string m_logOnCosPath;
                     bool m_logOnCosPathHasBeenSet;

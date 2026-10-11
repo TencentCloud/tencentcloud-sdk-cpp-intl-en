@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID in the format of emr-xxxxxxxx
-                     * @return InstanceId Cluster instance ID in the format of emr-xxxxxxxx
+                     * 获取Cluster ID, such as emr-xxxxxxxx.
+                     * @return InstanceId Cluster ID, such as emr-xxxxxxxx.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID in the format of emr-xxxxxxxx
-                     * @param _instanceId Cluster instance ID in the format of emr-xxxxxxxx
+                     * 设置Cluster ID, such as emr-xxxxxxxx.
+                     * @param _instanceId Cluster ID, such as emr-xxxxxxxx.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,47 +65,55 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
-                     * @return NodeFlag Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+                     * 获取Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
+                     * @return NodeFlag Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
                      * 
                      */
                     std::string GetNodeFlag() const;
 
                     /**
-                     * 设置Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
-                     * @param _nodeFlag Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+                     * 设置Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
+                     * @param _nodeFlag Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
                      * 
                      */
                     void SetNodeFlag(const std::string& _nodeFlag);
@@ -139,15 +147,15 @@ Note: only the above values are supported for the time being. Entering other val
                     bool ExportDbHasBeenSet() const;
 
                     /**
-                     * 获取Page number. Default value: 0, indicating the first page.
-                     * @return Offset Page number. Default value: 0, indicating the first page.
+                     * 获取Page number. The default value is 0, indicating the first page.
+                     * @return Offset Page number. The default value is 0, indicating the first page.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page number. Default value: 0, indicating the first page.
-                     * @param _offset Page number. Default value: 0, indicating the first page.
+                     * 设置Page number. The default value is 0, indicating the first page.
+                     * @param _offset Page number. The default value is 0, indicating the first page.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -160,18 +168,18 @@ Note: only the above values are supported for the time being. Entering other val
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * 获取Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
-                     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * 设置Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
-                     * @param _limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * @param _limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
                      * 
                      */
@@ -185,15 +193,15 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Resource type. Valid values: all, host, pod. Default value: all
-                     * @return HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+                     * 获取Resource type. Valid values: all (default), host, and pod.
+                     * @return HardwareResourceType Resource type. Valid values: all (default), host, and pod.
                      * 
                      */
                     std::string GetHardwareResourceType() const;
 
                     /**
-                     * 设置Resource type. Valid values: all, host, pod. Default value: all
-                     * @param _hardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+                     * 设置Resource type. Valid values: all (default), host, and pod.
+                     * @param _hardwareResourceType Resource type. Valid values: all (default), host, and pod.
                      * 
                      */
                     void SetHardwareResourceType(const std::string& _hardwareResourceType);
@@ -206,15 +214,15 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
                     bool HardwareResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Searchable field
-                     * @return SearchFields Searchable field
+                     * 获取Searchable fields.
+                     * @return SearchFields Searchable fields.
                      * 
                      */
                     std::vector<SearchItem> GetSearchFields() const;
 
                     /**
-                     * 设置Searchable field
-                     * @param _searchFields Searchable field
+                     * 设置Searchable fields.
+                     * @param _searchFields Searchable fields.
                      * 
                      */
                     void SetSearchFields(const std::vector<SearchItem>& _searchFields);
@@ -227,15 +235,15 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
                     bool SearchFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Order field.
-                     * @return OrderField Order field.
+                     * 获取Sorting field.
+                     * @return OrderField Sorting field.
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
-                     * 设置Order field.
-                     * @param _orderField Order field.
+                     * 设置Sorting field.
+                     * @param _orderField Sorting field.
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -248,15 +256,15 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Ascending or not. 1: ascending; 0: descending.
-                     * @return Asc Ascending or not. 1: ascending; 0: descending.
+                     * 获取Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
+                     * @return Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
                      * 
                      */
                     int64_t GetAsc() const;
 
                     /**
-                     * 设置Ascending or not. 1: ascending; 0: descending.
-                     * @param _asc Ascending or not. 1: ascending; 0: descending.
+                     * 设置Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
+                     * @param _asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
                      * 
                      */
                     void SetAsc(const int64_t& _asc);
@@ -271,21 +279,23 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
                 private:
 
                     /**
-                     * Cluster instance ID in the format of emr-xxxxxxxx
+                     * Cluster ID, such as emr-xxxxxxxx.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+                     * Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
                      */
                     std::string m_nodeFlag;
                     bool m_nodeFlagHasBeenSet;
@@ -297,38 +307,38 @@ Note: only the above values are supported for the time being. Entering other val
                     bool m_exportDbHasBeenSet;
 
                     /**
-                     * Page number. Default value: 0, indicating the first page.
+                     * Page number. The default value is 0, indicating the first page.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Resource type. Valid values: all, host, pod. Default value: all
+                     * Resource type. Valid values: all (default), host, and pod.
                      */
                     std::string m_hardwareResourceType;
                     bool m_hardwareResourceTypeHasBeenSet;
 
                     /**
-                     * Searchable field
+                     * Searchable fields.
                      */
                     std::vector<SearchItem> m_searchFields;
                     bool m_searchFieldsHasBeenSet;
 
                     /**
-                     * Order field.
+                     * Sorting field.
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Ascending or not. 1: ascending; 0: descending.
+                     * Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
                      */
                     int64_t m_asc;
                     bool m_ascHasBeenSet;

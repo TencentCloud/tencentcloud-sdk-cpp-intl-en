@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Other pod information.
+                * Pod-related information.
                 */
                 class PodSpecInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The specified information such as pod spec and source for scale-out with pod resources.
-                     * @return PodSpec The specified information such as pod spec and source for scale-out with pod resources.
+                     * 获取Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
+                     * @return PodSpec Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
                      * 
                      */
                     PodNewSpec GetPodSpec() const;
 
                     /**
-                     * 设置The specified information such as pod spec and source for scale-out with pod resources.
-                     * @param _podSpec The specified information such as pod spec and source for scale-out with pod resources.
+                     * 设置Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
+                     * @param _podSpec Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
                      * 
                      */
                     void SetPodSpec(const PodNewSpec& _podSpec);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool PodSpecHasBeenSet() const;
 
                     /**
-                     * 获取The custom pod permission and parameter.
-                     * @return PodParameter The custom pod permission and parameter.
+                     * 获取Pod custom permission and parameter.
+                     * @return PodParameter Pod custom permission and parameter.
                      * 
                      */
                     PodNewParameter GetPodParameter() const;
 
                     /**
-                     * 设置The custom pod permission and parameter.
-                     * @param _podParameter The custom pod permission and parameter.
+                     * 设置Pod custom permission and parameter.
+                     * @param _podParameter Pod custom permission and parameter.
                      * 
                      */
                     void SetPodParameter(const PodNewParameter& _podParameter);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The specified information such as pod spec and source for scale-out with pod resources.
+                     * Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
                      */
                     PodNewSpec m_podSpec;
                     bool m_podSpecHasBeenSet;
 
                     /**
-                     * The custom pod permission and parameter.
+                     * Pod custom permission and parameter.
                      */
                     PodNewParameter m_podParameter;
                     bool m_podParameterHasBeenSet;

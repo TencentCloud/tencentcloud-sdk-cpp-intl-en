@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _startTime Start time
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Page size.
-                     * @return Offset Page size.
+                     * 获取Number of entries per page.
+                     * @return Offset Number of entries per page.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Page size.
-                     * @param _offset Page size.
+                     * 设置Number of entries per page.
+                     * @param _offset Number of entries per page.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
-                     * @return SchedulerType Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+                     * 获取Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
+                     * @return SchedulerType Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
                      * 
                      */
                     std::string GetSchedulerType() const;
 
                     /**
-                     * 设置Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
-                     * @param _schedulerType Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+                     * 设置Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
+                     * @param _schedulerType Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
                      * 
                      */
                     void SetSchedulerType(const std::string& _schedulerType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SchedulerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
-                     * @return TaskState Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+                     * 获取Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
+                     * @return TaskState Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
                      * 
                      */
                     int64_t GetTaskState() const;
 
                     /**
-                     * 设置Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
-                     * @param _taskState Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+                     * 设置Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
+                     * @param _taskState Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
                      * 
                      */
                     void SetTaskState(const int64_t& _taskState);
@@ -198,13 +198,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -216,19 +216,19 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Page size.
+                     * Number of entries per page.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+                     * Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
                      */
                     std::string m_schedulerType;
                     bool m_schedulerTypeHasBeenSet;
 
                     /**
-                     * Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+                     * Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
                      */
                     int64_t m_taskState;
                     bool m_taskStateHasBeenSet;

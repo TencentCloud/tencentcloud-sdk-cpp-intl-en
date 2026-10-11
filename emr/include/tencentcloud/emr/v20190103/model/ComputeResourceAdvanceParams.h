@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node label array.
-                     * @return Labels Node label array.
+                     * 获取<p>Node Label array.</p>
+                     * @return Labels <p>Node Label array.</p>
                      * 
                      */
                     std::vector<TkeLabel> GetLabels() const;
 
                     /**
-                     * 设置Node label array.
-                     * @param _labels Node label array.
+                     * 设置<p>Node Label array.</p>
+                     * @param _labels <p>Node Label array.</p>
                      * 
                      */
                     void SetLabels(const std::vector<TkeLabel>& _labels);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取Node taint.
-                     * @return Taints Node taint.
+                     * 获取<p>Node taint.</p>
+                     * @return Taints <p>Node taint.</p>
                      * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
-                     * 设置Node taint.
-                     * @param _taints Node taint.
+                     * 设置<p>Node taint.</p>
+                     * @param _taints <p>Node taint.</p>
                      * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool TaintsHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded user script: executed before node initializing.
-                     * @return PreStartUserScript Base64-encoded user script: executed before node initializing.
+                     * 获取<p>Base64-encoded user script, which is executed before node initialization.</p>
+                     * @return PreStartUserScript <p>Base64-encoded user script, which is executed before node initialization.</p>
                      * 
                      */
                     std::string GetPreStartUserScript() const;
 
                     /**
-                     * 设置Base64-encoded user script: executed before node initializing.
-                     * @param _preStartUserScript Base64-encoded user script: executed before node initializing.
+                     * 设置<p>Base64-encoded user script, which is executed before node initialization.</p>
+                     * @param _preStartUserScript <p>Base64-encoded user script, which is executed before node initialization.</p>
                      * 
                      */
                     void SetPreStartUserScript(const std::string& _preStartUserScript);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool PreStartUserScriptHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
-                     * @return UserScript Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+                     * 获取<p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
+                     * @return UserScript <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
                      * 
                      */
                     std::string GetUserScript() const;
 
                     /**
-                     * 设置Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
-                     * @param _userScript Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+                     * 设置<p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
+                     * @param _userScript <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
                      * 
                      */
                     void SetUserScript(const std::string& _userScript);
@@ -132,31 +132,85 @@ namespace TencentCloud
                      */
                     bool UserScriptHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Node group ID.</p>
+                     * @return TkeClusterNodePool <p>Node group ID.</p>
+                     * 
+                     */
+                    std::string GetTkeClusterNodePool() const;
+
+                    /**
+                     * 设置<p>Node group ID.</p>
+                     * @param _tkeClusterNodePool <p>Node group ID.</p>
+                     * 
+                     */
+                    void SetTkeClusterNodePool(const std::string& _tkeClusterNodePool);
+
+                    /**
+                     * 判断参数 TkeClusterNodePool 是否已赋值
+                     * @return TkeClusterNodePool 是否已赋值
+                     * 
+                     */
+                    bool TkeClusterNodePoolHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+                     * @return NodePoolJoinMode <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+                     * 
+                     */
+                    std::string GetNodePoolJoinMode() const;
+
+                    /**
+                     * 设置<p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+                     * @param _nodePoolJoinMode <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+                     * 
+                     */
+                    void SetNodePoolJoinMode(const std::string& _nodePoolJoinMode);
+
+                    /**
+                     * 判断参数 NodePoolJoinMode 是否已赋值
+                     * @return NodePoolJoinMode 是否已赋值
+                     * 
+                     */
+                    bool NodePoolJoinModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Node label array.
+                     * <p>Node Label array.</p>
                      */
                     std::vector<TkeLabel> m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * Node taint.
+                     * <p>Node taint.</p>
                      */
                     std::vector<Taint> m_taints;
                     bool m_taintsHasBeenSet;
 
                     /**
-                     * Base64-encoded user script: executed before node initializing.
+                     * <p>Base64-encoded user script, which is executed before node initialization.</p>
                      */
                     std::string m_preStartUserScript;
                     bool m_preStartUserScriptHasBeenSet;
 
                     /**
-                     * Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+                     * <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
                      */
                     std::string m_userScript;
                     bool m_userScriptHasBeenSet;
+
+                    /**
+                     * <p>Node group ID.</p>
+                     */
+                    std::string m_tkeClusterNodePool;
+                    bool m_tkeClusterNodePoolHasBeenSet;
+
+                    /**
+                     * <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+                     */
+                    std::string m_nodePoolJoinMode;
+                    bool m_nodePoolJoinModeHasBeenSet;
 
                 };
             }

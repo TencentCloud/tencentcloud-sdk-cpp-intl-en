@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifications.
-                     * @return InstanceType Specifications.
+                     * 获取<p>Specifications.</p>
+                     * @return InstanceType <p>Specifications.</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Specifications.
-                     * @param _instanceType Specifications.
+                     * 设置<p>Specifications.</p>
+                     * @param _instanceType <p>Specifications.</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取4
-                     * @return Cpu 4
+                     * 获取<p>4</p>
+                     * @return Cpu <p>4</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置4
-                     * @param _cpu 4
+                     * 设置<p>4</p>
+                     * @param _cpu <p>4</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取8, in GB.
-                     * @return Memory 8, in GB.
+                     * 获取<p>8, unit: GB.</p>
+                     * @return Memory <p>8, unit: GB.</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置8, in GB.
-                     * @param _memory 8, in GB.
+                     * 设置<p>8, unit: GB.</p>
+                     * @param _memory <p>8, unit: GB.</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Order, with the smaller coming first.
-                     * @return Order Order, with the smaller coming first.
+                     * 获取<p>Sorting order. Smaller values come first.</p>
+                     * @return Order <p>Sorting order. Smaller values come first.</p>
                      * 
                      */
                     int64_t GetOrder() const;
 
                     /**
-                     * 设置Order, with the smaller coming first.
-                     * @param _order Order, with the smaller coming first.
+                     * 设置<p>Sorting order. Smaller values come first.</p>
+                     * @param _order <p>Sorting order. Smaller values come first.</p>
                      * 
                      */
                     void SetOrder(const int64_t& _order);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Quantity.
-                     * @return Num Quantity.
+                     * 获取<p>Quantity.</p>
+                     * @return Num <p>Quantity.</p>
                      * 
                      */
                     int64_t GetNum() const;
 
                     /**
-                     * 设置Quantity.
-                     * @param _num Quantity.
+                     * 设置<p>Quantity.</p>
+                     * @param _num <p>Quantity.</p>
                      * 
                      */
                     void SetNum(const int64_t& _num);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool NumHasBeenSet() const;
 
                     /**
-                     * 获取Reasons for running out of stock.
-                     * @return SellOutReason Reasons for running out of stock.
+                     * 获取<p>Sold-out reason.</p>
+                     * @return SellOutReason <p>Sold-out reason.</p>
                      * 
                      */
                     std::string GetSellOutReason() const;
 
                     /**
-                     * 设置Reasons for running out of stock.
-                     * @param _sellOutReason Reasons for running out of stock.
+                     * 设置<p>Sold-out reason.</p>
+                     * @param _sellOutReason <p>Sold-out reason.</p>
                      * 
                      */
                     void SetSellOutReason(const std::string& _sellOutReason);
@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool SellOutReasonHasBeenSet() const;
 
                     /**
-                     * 获取System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SystemDisk System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>System disk.</p>
+                     * @return SystemDisk <p>System disk.</p>
                      * 
                      */
                     std::vector<NodeSpecDisk> GetSystemDisk() const;
 
                     /**
-                     * 设置System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _systemDisk System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>System disk.</p>
+                     * @param _systemDisk <p>System disk.</p>
                      * 
                      */
                     void SetSystemDisk(const std::vector<NodeSpecDisk>& _systemDisk);
@@ -199,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SystemDiskHasBeenSet() const;
 
                     /**
-                     * 获取Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataDisk Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Data disk.</p>
+                     * @return DataDisk <p>Data disk.</p>
                      * 
                      */
                     std::vector<NodeSpecDisk> GetDataDisk() const;
 
                     /**
-                     * 设置Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataDisk Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Data disk.</p>
+                     * @param _dataDisk <p>Data disk.</p>
                      * 
                      */
                     void SetDataDisk(const std::vector<NodeSpecDisk>& _dataDisk);
@@ -224,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataDiskHasBeenSet() const;
 
                     /**
-                     * 获取Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LocalDataDisk Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Local data disk.</p>
+                     * @return LocalDataDisk <p>Local data disk.</p>
                      * 
                      */
                     std::vector<NodeSpecDisk> GetLocalDataDisk() const;
 
                     /**
-                     * 设置Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _localDataDisk Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Local data disk.</p>
+                     * @param _localDataDisk <p>Local data disk.</p>
                      * 
                      */
                     void SetLocalDataDisk(const std::vector<NodeSpecDisk>& _localDataDisk);
@@ -249,15 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LocalDataDiskHasBeenSet() const;
 
                     /**
-                     * 获取Reasons for running out of stock.
-                     * @return SoldOutReason Reasons for running out of stock.
+                     * 获取<p>Sold-out reason.</p>
+                     * @return SoldOutReason <p>Sold-out reason.</p>
                      * 
                      */
                     std::string GetSoldOutReason() const;
 
                     /**
-                     * 设置Reasons for running out of stock.
-                     * @param _soldOutReason Reasons for running out of stock.
+                     * 设置<p>Sold-out reason.</p>
+                     * @param _soldOutReason <p>Sold-out reason.</p>
                      * 
                      */
                     void SetSoldOutReason(const std::string& _soldOutReason);
@@ -270,15 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SoldOutReasonHasBeenSet() const;
 
                     /**
-                     * 获取Model category.
-                     * @return InstanceFamily Model category.
+                     * 获取<p>Instance family.</p>
+                     * @return InstanceFamily <p>Instance family.</p>
                      * 
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
-                     * 设置Model category.
-                     * @param _instanceFamily Model category.
+                     * 设置<p>Instance family.</p>
+                     * @param _instanceFamily <p>Instance family.</p>
                      * 
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
@@ -291,15 +279,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceFamilyHasBeenSet() const;
 
                     /**
-                     * 获取Node name.
-                     * @return NodeName Node name.
+                     * 获取<p>Node name.</p>
+                     * @return NodeName <p>Node name.</p>
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Node name.
-                     * @param _nodeName Node name.
+                     * 设置<p>Node name.</p>
+                     * @param _nodeName <p>Node name.</p>
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -312,15 +300,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Node type.
-                     * @return NodeType Node type.
+                     * 获取<p>Node type.</p>
+                     * @return NodeType <p>Node type.</p>
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type.
-                     * @param _nodeType Node type.
+                     * 设置<p>Node type.</p>
+                     * @param _nodeType <p>Node type.</p>
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -333,15 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Category.
-                     * @return Type Category.
+                     * 获取<p>Category.</p>
+                     * @return Type <p>Category.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Category.
-                     * @param _type Category.
+                     * 设置<p>Category.</p>
+                     * @param _type <p>Category.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -354,15 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Category name.
-                     * @return TypeName Category name.
+                     * 获取<p>Category name.</p>
+                     * @return TypeName <p>Category name.</p>
                      * 
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置Category name.
-                     * @param _typeName Category name.
+                     * 设置<p>Category name.</p>
+                     * @param _typeName <p>Category name.</p>
                      * 
                      */
                     void SetTypeName(const std::string& _typeName);
@@ -375,15 +363,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Category classification.
-                     * @return FamilyName Category classification.
+                     * 获取<p>Category classification.</p>
+                     * @return FamilyName <p>Category classification.</p>
                      * 
                      */
                     std::string GetFamilyName() const;
 
                     /**
-                     * 设置Category classification.
-                     * @param _familyName Category classification.
+                     * 设置<p>Category classification.</p>
+                     * @param _familyName <p>Category classification.</p>
                      * 
                      */
                     void SetFamilyName(const std::string& _familyName);
@@ -396,15 +384,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FamilyNameHasBeenSet() const;
 
                     /**
-                     * 获取CPU type.
-                     * @return CpuType CPU type.
+                     * 获取<p>CPU type.</p>
+                     * @return CpuType <p>CPU type.</p>
                      * 
                      */
                     std::string GetCpuType() const;
 
                     /**
-                     * 设置CPU type.
-                     * @param _cpuType CPU type.
+                     * 设置<p>CPU type.</p>
+                     * @param _cpuType <p>CPU type.</p>
                      * 
                      */
                     void SetCpuType(const std::string& _cpuType);
@@ -417,15 +405,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuTypeHasBeenSet() const;
 
                     /**
-                     * 获取RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
-                     * @return Remark RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+                     * 获取<p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
+                     * @return Remark <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
-                     * @param _remark RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+                     * 设置<p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
+                     * @param _remark <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -438,15 +426,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Original price.
-                     * @return OriginPrice Original price.
+                     * 获取<p>Original price.</p>
+                     * @return OriginPrice <p>Original price.</p>
                      * 
                      */
                     double GetOriginPrice() const;
 
                     /**
-                     * 设置Original price.
-                     * @param _originPrice Original price.
+                     * 设置<p>Original price.</p>
+                     * @param _originPrice <p>Original price.</p>
                      * 
                      */
                     void SetOriginPrice(const double& _originPrice);
@@ -459,19 +447,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginPriceHasBeenSet() const;
 
                     /**
-                     * 获取Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrepaidUnderwritePeriods Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Purchase duration supported by instance types using the committed use billing mode.</p>
+                     * @return PrepaidUnderwritePeriods <p>Purchase duration supported by instance types using the committed use billing mode.</p>
                      * 
                      */
                     std::vector<int64_t> GetPrepaidUnderwritePeriods() const;
 
                     /**
-                     * 设置Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _prepaidUnderwritePeriods Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Purchase duration supported by instance types using the committed use billing mode.</p>
+                     * @param _prepaidUnderwritePeriods <p>Purchase duration supported by instance types using the committed use billing mode.</p>
                      * 
                      */
                     void SetPrepaidUnderwritePeriods(const std::vector<int64_t>& _prepaidUnderwritePeriods);
@@ -484,15 +468,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrepaidUnderwritePeriodsHasBeenSet() const;
 
                     /**
-                     * 获取GPU information.
-                     * @return GpuDesc GPU information.
+                     * 获取<p>GPU information.</p>
+                     * @return GpuDesc <p>GPU information.</p>
                      * 
                      */
                     std::string GetGpuDesc() const;
 
                     /**
-                     * 设置GPU information.
-                     * @param _gpuDesc GPU information.
+                     * 设置<p>GPU information.</p>
+                     * @param _gpuDesc <p>GPU information.</p>
                      * 
                      */
                     void SetGpuDesc(const std::string& _gpuDesc);
@@ -504,137 +488,295 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool GpuDescHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Number of quotas.</p>
+                     * @return QuotaNum <p>Number of quotas.</p>
+                     * 
+                     */
+                    int64_t GetQuotaNum() const;
+
+                    /**
+                     * 设置<p>Number of quotas.</p>
+                     * @param _quotaNum <p>Number of quotas.</p>
+                     * 
+                     */
+                    void SetQuotaNum(const int64_t& _quotaNum);
+
+                    /**
+                     * 判断参数 QuotaNum 是否已赋值
+                     * @return QuotaNum 是否已赋值
+                     * 
+                     */
+                    bool QuotaNumHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Quota unit.</p>
+                     * @return QuotaUnit <p>Quota unit.</p>
+                     * 
+                     */
+                    std::string GetQuotaUnit() const;
+
+                    /**
+                     * 设置<p>Quota unit.</p>
+                     * @param _quotaUnit <p>Quota unit.</p>
+                     * 
+                     */
+                    void SetQuotaUnit(const std::string& _quotaUnit);
+
+                    /**
+                     * 判断参数 QuotaUnit 是否已赋值
+                     * @return QuotaUnit 是否已赋值
+                     * 
+                     */
+                    bool QuotaUnitHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether a high-performance computing cluster needs to be provided.</p>
+                     * @return NeedHpcClusterId <p>Whether a high-performance computing cluster needs to be provided.</p>
+                     * 
+                     */
+                    bool GetNeedHpcClusterId() const;
+
+                    /**
+                     * 设置<p>Whether a high-performance computing cluster needs to be provided.</p>
+                     * @param _needHpcClusterId <p>Whether a high-performance computing cluster needs to be provided.</p>
+                     * 
+                     */
+                    void SetNeedHpcClusterId(const bool& _needHpcClusterId);
+
+                    /**
+                     * 判断参数 NeedHpcClusterId 是否已赋值
+                     * @return NeedHpcClusterId 是否已赋值
+                     * 
+                     */
+                    bool NeedHpcClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether it is a GPU instance type.</p>
+                     * @return IsGpuInstance <p>Whether it is a GPU instance type.</p>
+                     * 
+                     */
+                    bool GetIsGpuInstance() const;
+
+                    /**
+                     * 设置<p>Whether it is a GPU instance type.</p>
+                     * @param _isGpuInstance <p>Whether it is a GPU instance type.</p>
+                     * 
+                     */
+                    void SetIsGpuInstance(const bool& _isGpuInstance);
+
+                    /**
+                     * 判断参数 IsGpuInstance 是否已赋值
+                     * @return IsGpuInstance 是否已赋值
+                     * 
+                     */
+                    bool IsGpuInstanceHasBeenSet() const;
+
+                    /**
+                     * 获取<p>GPU resource definition in the Kubernetes scenario.</p>
+                     * @return GpuResourceKey <p>GPU resource definition in the Kubernetes scenario.</p>
+                     * 
+                     */
+                    std::string GetGpuResourceKey() const;
+
+                    /**
+                     * 设置<p>GPU resource definition in the Kubernetes scenario.</p>
+                     * @param _gpuResourceKey <p>GPU resource definition in the Kubernetes scenario.</p>
+                     * 
+                     */
+                    void SetGpuResourceKey(const std::string& _gpuResourceKey);
+
+                    /**
+                     * 判断参数 GpuResourceKey 是否已赋值
+                     * @return GpuResourceKey 是否已赋值
+                     * 
+                     */
+                    bool GpuResourceKeyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Number of GPU cards.</p>
+                     * @return GpuNum <p>Number of GPU cards.</p>
+                     * 
+                     */
+                    int64_t GetGpuNum() const;
+
+                    /**
+                     * 设置<p>Number of GPU cards.</p>
+                     * @param _gpuNum <p>Number of GPU cards.</p>
+                     * 
+                     */
+                    void SetGpuNum(const int64_t& _gpuNum);
+
+                    /**
+                     * 判断参数 GpuNum 是否已赋值
+                     * @return GpuNum 是否已赋值
+                     * 
+                     */
+                    bool GpuNumHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Specifications.
+                     * <p>Specifications.</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 4
+                     * <p>4</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 8, in GB.
+                     * <p>8, unit: GB.</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Order, with the smaller coming first.
+                     * <p>Sorting order. Smaller values come first.</p>
                      */
                     int64_t m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Quantity.
+                     * <p>Quantity.</p>
                      */
                     int64_t m_num;
                     bool m_numHasBeenSet;
 
                     /**
-                     * Reasons for running out of stock.
+                     * <p>Sold-out reason.</p>
                      */
                     std::string m_sellOutReason;
                     bool m_sellOutReasonHasBeenSet;
 
                     /**
-                     * System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>System disk.</p>
                      */
                     std::vector<NodeSpecDisk> m_systemDisk;
                     bool m_systemDiskHasBeenSet;
 
                     /**
-                     * Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Data disk.</p>
                      */
                     std::vector<NodeSpecDisk> m_dataDisk;
                     bool m_dataDiskHasBeenSet;
 
                     /**
-                     * Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Local data disk.</p>
                      */
                     std::vector<NodeSpecDisk> m_localDataDisk;
                     bool m_localDataDiskHasBeenSet;
 
                     /**
-                     * Reasons for running out of stock.
+                     * <p>Sold-out reason.</p>
                      */
                     std::string m_soldOutReason;
                     bool m_soldOutReasonHasBeenSet;
 
                     /**
-                     * Model category.
+                     * <p>Instance family.</p>
                      */
                     std::string m_instanceFamily;
                     bool m_instanceFamilyHasBeenSet;
 
                     /**
-                     * Node name.
+                     * <p>Node name.</p>
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Node type.
+                     * <p>Node type.</p>
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Category.
+                     * <p>Category.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Category name.
+                     * <p>Category name.</p>
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
 
                     /**
-                     * Category classification.
+                     * <p>Category classification.</p>
                      */
                     std::string m_familyName;
                     bool m_familyNameHasBeenSet;
 
                     /**
-                     * CPU type.
+                     * <p>CPU type.</p>
                      */
                     std::string m_cpuType;
                     bool m_cpuTypeHasBeenSet;
 
                     /**
-                     * RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+                     * <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Original price.
+                     * <p>Original price.</p>
                      */
                     double m_originPrice;
                     bool m_originPriceHasBeenSet;
 
                     /**
-                     * Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Purchase duration supported by instance types using the committed use billing mode.</p>
                      */
                     std::vector<int64_t> m_prepaidUnderwritePeriods;
                     bool m_prepaidUnderwritePeriodsHasBeenSet;
 
                     /**
-                     * GPU information.
+                     * <p>GPU information.</p>
                      */
                     std::string m_gpuDesc;
                     bool m_gpuDescHasBeenSet;
+
+                    /**
+                     * <p>Number of quotas.</p>
+                     */
+                    int64_t m_quotaNum;
+                    bool m_quotaNumHasBeenSet;
+
+                    /**
+                     * <p>Quota unit.</p>
+                     */
+                    std::string m_quotaUnit;
+                    bool m_quotaUnitHasBeenSet;
+
+                    /**
+                     * <p>Whether a high-performance computing cluster needs to be provided.</p>
+                     */
+                    bool m_needHpcClusterId;
+                    bool m_needHpcClusterIdHasBeenSet;
+
+                    /**
+                     * <p>Whether it is a GPU instance type.</p>
+                     */
+                    bool m_isGpuInstance;
+                    bool m_isGpuInstanceHasBeenSet;
+
+                    /**
+                     * <p>GPU resource definition in the Kubernetes scenario.</p>
+                     */
+                    std::string m_gpuResourceKey;
+                    bool m_gpuResourceKeyHasBeenSet;
+
+                    /**
+                     * <p>Number of GPU cards.</p>
+                     */
+                    int64_t m_gpuNum;
+                    bool m_gpuNumHasBeenSet;
 
                 };
             }

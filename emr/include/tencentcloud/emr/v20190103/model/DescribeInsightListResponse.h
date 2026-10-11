@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResultList Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<InsightResult> GetResultList() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<InsightResult> m_resultList;
                     bool m_resultListHasBeenSet;

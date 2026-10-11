@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom pod permission and parameter
+                * Pod custom permission and parameter.
                 */
                 class PodParameter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of TKE or EKS cluster
-                     * @return ClusterId ID of TKE or EKS cluster
+                     * 获取TKE or EKS cluster ID.
+                     * @return ClusterId TKE or EKS cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置ID of TKE or EKS cluster
-                     * @param _clusterId ID of TKE or EKS cluster
+                     * 设置TKE or EKS cluster ID.
+                     * @param _clusterId TKE or EKS cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -68,11 +68,11 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom permissions
+                     * 获取Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -103,11 +103,11 @@ Example:
     }
   ]
 }
-                     * @return Config Custom permissions
+                     * @return Config Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -143,11 +143,11 @@ Example:
                     std::string GetConfig() const;
 
                     /**
-                     * 设置Custom permissions
+                     * 设置Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -178,11 +178,11 @@ Example:
     }
   ]
 }
-                     * @param _config Custom permissions
+                     * @param _config Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -225,7 +225,7 @@ Example:
                     bool ConfigHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters
+                     * 获取Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -300,7 +300,7 @@ Example:
       }
     }
   }
-                     * @return Parameter Custom parameters
+                     * @return Parameter Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -380,7 +380,7 @@ Example:
                     std::string GetParameter() const;
 
                     /**
-                     * 设置Custom parameters
+                     * 设置Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -455,7 +455,7 @@ Example:
       }
     }
   }
-                     * @param _parameter Custom parameters
+                     * @param _parameter Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -544,17 +544,17 @@ Example:
                 private:
 
                     /**
-                     * ID of TKE or EKS cluster
+                     * TKE or EKS cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Custom permissions
+                     * Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -590,7 +590,7 @@ Example:
                     bool m_configHasBeenSet;
 
                     /**
-                     * Custom parameters
+                     * Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",

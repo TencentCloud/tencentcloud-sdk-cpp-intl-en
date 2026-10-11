@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Component restart policy
+                * Component restart policy.
                 */
                 class RestartPolicy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Restart policy name
-                     * @return Name Restart policy name
+                     * 获取Restart policy name.
+                     * @return Name Restart policy name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Restart policy name
-                     * @param _name Restart policy name
+                     * 设置Restart policy name.
+                     * @param _name Restart policy name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Policy display name
-                     * @return DisplayName Policy display name
+                     * 获取Policy display name.
+                     * @return DisplayName Policy display name.
                      * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
-                     * 设置Policy display name
-                     * @param _displayName Policy display name
+                     * 设置Policy display name.
+                     * @param _displayName Policy display name.
                      * 
                      */
                     void SetDisplayName(const std::string& _displayName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DisplayNameHasBeenSet() const;
 
                     /**
-                     * 获取Policy description
-                     * @return Describe Policy description
+                     * 获取Policy description.
+                     * @return Describe Policy description.
                      * 
                      */
                     std::string GetDescribe() const;
 
                     /**
-                     * 设置Policy description
-                     * @param _describe Policy description
+                     * 设置Policy description.
+                     * @param _describe Policy description.
                      * 
                      */
                     void SetDescribe(const std::string& _describe);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescribeHasBeenSet() const;
 
                     /**
-                     * 获取Optional range for the number of batch restarted nodes
-                     * @return BatchSizeRange Optional range for the number of batch restarted nodes
+                     * 获取Optional range for the number of nodes restarted in batches.
+                     * @return BatchSizeRange Optional range for the number of nodes restarted in batches.
                      * 
                      */
                     std::vector<int64_t> GetBatchSizeRange() const;
 
                     /**
-                     * 设置Optional range for the number of batch restarted nodes
-                     * @param _batchSizeRange Optional range for the number of batch restarted nodes
+                     * 设置Optional range for the number of nodes restarted in batches.
+                     * @param _batchSizeRange Optional range for the number of nodes restarted in batches.
                      * 
                      */
                     void SetBatchSizeRange(const std::vector<int64_t>& _batchSizeRange);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool BatchSizeRangeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is the default policy
-                     * @return IsDefault Whether it is the default policy
+                     * 获取Whether it is the default policy.
+                     * @return IsDefault Whether it is the default policy.
                      * 
                      */
                     std::string GetIsDefault() const;
 
                     /**
-                     * 设置Whether it is the default policy
-                     * @param _isDefault Whether it is the default policy
+                     * 设置Whether it is the default policy.
+                     * @param _isDefault Whether it is the default policy.
                      * 
                      */
                     void SetIsDefault(const std::string& _isDefault);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Restart policy name
+                     * Restart policy name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Policy display name
+                     * Policy display name.
                      */
                     std::string m_displayName;
                     bool m_displayNameHasBeenSet;
 
                     /**
-                     * Policy description
+                     * Policy description.
                      */
                     std::string m_describe;
                     bool m_describeHasBeenSet;
 
                     /**
-                     * Optional range for the number of batch restarted nodes
+                     * Optional range for the number of nodes restarted in batches.
                      */
                     std::vector<int64_t> m_batchSizeRange;
                     bool m_batchSizeRangeHasBeenSet;
 
                     /**
-                     * Whether it is the default policy
+                     * Whether it is the default policy.
                      */
                     std::string m_isDefault;
                     bool m_isDefaultHasBeenSet;

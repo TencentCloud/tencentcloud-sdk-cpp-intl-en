@@ -75,9 +75,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CapacityGlobalConfig Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CapacityGlobalConfig GetCapacityGlobalConfig() const;
@@ -91,9 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FairGlobalConfig Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     FairGlobalConfig GetFairGlobalConfig() const;
@@ -135,14 +131,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CapacityGlobalConfig m_capacityGlobalConfig;
                     bool m_capacityGlobalConfigHasBeenSet;
 
                     /**
                      * Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FairGlobalConfig m_fairGlobalConfig;
                     bool m_fairGlobalConfigHasBeenSet;

@@ -75,8 +75,8 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
-                     * @return PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+                     * 获取Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+                     * @return PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
                      * 
                      */
                     int64_t GetPayMode() const;
@@ -103,8 +103,8 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance single-node disk capacity, in GB.
-                     * @return DiskSize Instance single-node disk capacity, in GB.
+                     * 获取Instance single-node disk capacity (GB).
+                     * @return DiskSize Instance single-node disk capacity (GB).
                      * 
                      */
                     int64_t GetDiskSize() const;
@@ -146,9 +146,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
@@ -203,8 +201,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
-                     * @return ExpireTime Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+                     * 获取Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+                     * @return ExpireTime Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
                      * 
                      */
                     std::string GetExpireTime() const;
@@ -217,8 +215,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
-                     * @return IsolateTime Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+                     * 获取Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
+                     * @return IsolateTime Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
                      * 
                      */
                     std::string GetIsolateTime() const;
@@ -245,8 +243,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
-                     * @return Status Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+                     * 获取Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
+                     * @return Status Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
                      * 
                      */
                     int64_t GetStatus() const;
@@ -259,8 +257,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
-                     * @return AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+                     * 获取Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
+                     * @return AutoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
@@ -287,8 +285,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SLInstance 
+                     * 获取Serverless Instance infomation
+                     * @return SLInstance Serverless Instance infomation
                      * 
                      */
                     std::vector<SLInstance> GetSLInstance() const;
@@ -315,7 +313,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+                     * Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -327,7 +325,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Instance single-node disk capacity, in GB.
+                     * Instance single-node disk capacity (GB).
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
@@ -346,7 +344,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -370,13 +367,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+                     * Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+                     * Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
                      */
                     std::string m_isolateTime;
                     bool m_isolateTimeHasBeenSet;
@@ -388,13 +385,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+                     * Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+                     * Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
@@ -406,7 +403,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * 
+                     * Serverless Instance infomation
                      */
                     std::vector<SLInstance> m_sLInstance;
                     bool m_sLInstanceHasBeenSet;

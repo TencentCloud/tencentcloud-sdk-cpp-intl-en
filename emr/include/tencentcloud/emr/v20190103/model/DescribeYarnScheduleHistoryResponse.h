@@ -46,11 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tasks Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SchedulerTaskInfo> GetTasks() const;
@@ -77,12 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SchedulerNameList Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scheduling type filter list.
+                     * @return SchedulerNameList Scheduling type filter list.
                      * 
                      */
                     std::vector<std::string> GetSchedulerNameList() const;
@@ -95,12 +87,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SchedulerNameListHasBeenSet() const;
 
                     /**
-                     * 获取Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StateList Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status filter list.
+                     * @return StateList Status filter list.
                      * 
                      */
                     std::vector<int64_t> GetStateList() const;
@@ -116,8 +104,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SchedulerTaskInfo> m_tasks;
                     bool m_tasksHasBeenSet;
@@ -129,17 +115,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scheduling type filter list.
                      */
                     std::vector<std::string> m_schedulerNameList;
                     bool m_schedulerNameListHasBeenSet;
 
                     /**
-                     * Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status filter list.
                      */
                     std::vector<int64_t> m_stateList;
                     bool m_stateListHasBeenSet;

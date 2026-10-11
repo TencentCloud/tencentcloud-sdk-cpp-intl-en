@@ -33,6 +33,7 @@ LoadAutoScaleStrategy::LoadAutoScaleStrategy() :
     m_periodValidHasBeenSet(false),
     m_graceDownFlagHasBeenSet(false),
     m_graceDownTimeHasBeenSet(false),
+    m_graceDownProtectFlagHasBeenSet(false),
     m_tagsHasBeenSet(false),
     m_configGroupAssignedHasBeenSet(false),
     m_measureMethodHasBeenSet(false),
@@ -42,7 +43,8 @@ LoadAutoScaleStrategy::LoadAutoScaleStrategy() :
     m_softDeployInfoHasBeenSet(false),
     m_loadMetricsConditionsHasBeenSet(false),
     m_groupIdHasBeenSet(false),
-    m_softHasBeenSet(false)
+    m_softHasBeenSet(false),
+    m_graceDownProtectTimeHasBeenSet(false)
 {
 }
 
@@ -171,6 +173,16 @@ CoreInternalOutcome LoadAutoScaleStrategy::Deserialize(const rapidjson::Value &v
         m_graceDownTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("GraceDownProtectFlag") && !value["GraceDownProtectFlag"].IsNull())
+    {
+        if (!value["GraceDownProtectFlag"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `LoadAutoScaleStrategy.GraceDownProtectFlag` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_graceDownProtectFlag = value["GraceDownProtectFlag"].GetBool();
+        m_graceDownProtectFlagHasBeenSet = true;
+    }
+
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
@@ -297,6 +309,16 @@ CoreInternalOutcome LoadAutoScaleStrategy::Deserialize(const rapidjson::Value &v
         m_softHasBeenSet = true;
     }
 
+    if (value.HasMember("GraceDownProtectTime") && !value["GraceDownProtectTime"].IsNull())
+    {
+        if (!value["GraceDownProtectTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `LoadAutoScaleStrategy.GraceDownProtectTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_graceDownProtectTime = value["GraceDownProtectTime"].GetInt64();
+        m_graceDownProtectTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -400,6 +422,14 @@ void LoadAutoScaleStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         value.AddMember(iKey, m_graceDownTime, allocator);
     }
 
+    if (m_graceDownProtectFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GraceDownProtectFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_graceDownProtectFlag, allocator);
+    }
+
     if (m_tagsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -501,6 +531,14 @@ void LoadAutoScaleStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         string key = "Soft";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_soft.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_graceDownProtectTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GraceDownProtectTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_graceDownProtectTime, allocator);
     }
 
 }
@@ -698,6 +736,22 @@ bool LoadAutoScaleStrategy::GraceDownTimeHasBeenSet() const
     return m_graceDownTimeHasBeenSet;
 }
 
+bool LoadAutoScaleStrategy::GetGraceDownProtectFlag() const
+{
+    return m_graceDownProtectFlag;
+}
+
+void LoadAutoScaleStrategy::SetGraceDownProtectFlag(const bool& _graceDownProtectFlag)
+{
+    m_graceDownProtectFlag = _graceDownProtectFlag;
+    m_graceDownProtectFlagHasBeenSet = true;
+}
+
+bool LoadAutoScaleStrategy::GraceDownProtectFlagHasBeenSet() const
+{
+    return m_graceDownProtectFlagHasBeenSet;
+}
+
 vector<Tag> LoadAutoScaleStrategy::GetTags() const
 {
     return m_tags;
@@ -856,5 +910,21 @@ void LoadAutoScaleStrategy::SetSoft(const string& _soft)
 bool LoadAutoScaleStrategy::SoftHasBeenSet() const
 {
     return m_softHasBeenSet;
+}
+
+int64_t LoadAutoScaleStrategy::GetGraceDownProtectTime() const
+{
+    return m_graceDownProtectTime;
+}
+
+void LoadAutoScaleStrategy::SetGraceDownProtectTime(const int64_t& _graceDownProtectTime)
+{
+    m_graceDownProtectTime = _graceDownProtectTime;
+    m_graceDownProtectTimeHasBeenSet = true;
+}
+
+bool LoadAutoScaleStrategy::GraceDownProtectTimeHasBeenSet() const
+{
+    return m_graceDownProtectTimeHasBeenSet;
 }
 

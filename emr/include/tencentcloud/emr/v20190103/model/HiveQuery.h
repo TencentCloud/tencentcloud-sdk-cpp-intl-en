@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Hive query details
+                * Hive query details.
                 */
                 class HiveQuery : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Start time in milliseconds.
-                     * @return StartTime Start time in milliseconds.
+                     * 获取Start time (ms).
+                     * @return StartTime Start time (ms).
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time in milliseconds.
-                     * @param _startTime Start time in milliseconds.
+                     * 设置Start time (ms).
+                     * @param _startTime Start time (ms).
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time in milliseconds.
-                     * @return EndTime End time in milliseconds.
+                     * 获取End time (ms).
+                     * @return EndTime End time (ms).
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time in milliseconds.
-                     * @param _endTime End time in milliseconds.
+                     * 设置End time (ms).
+                     * @param _endTime End time (ms).
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -173,19 +173,15 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobIds AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取APPID list.
+                     * @return JobIds APPID list.
                      * 
                      */
                     std::vector<std::string> GetJobIds() const;
 
                     /**
-                     * 设置AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _jobIds AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置APPID list.
+                     * @param _jobIds APPID list.
                      * 
                      */
                     void SetJobIds(const std::vector<std::string>& _jobIds);
@@ -254,13 +250,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Start time in milliseconds.
+                     * Start time (ms).
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time in milliseconds.
+                     * End time (ms).
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -278,8 +274,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_userHasBeenSet;
 
                     /**
-                     * AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * APPID list.
                      */
                     std::vector<std::string> m_jobIds;
                     bool m_jobIdsHasBeenSet;

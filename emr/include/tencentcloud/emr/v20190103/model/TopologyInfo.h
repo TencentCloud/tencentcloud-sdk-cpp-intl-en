@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster node topology information
+                * Cluster node topology information.
                 */
                 class TopologyInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone ID.
-                     * @return ZoneId Availability zone ID.
+                     * 获取AZ ID.
+                     * @return ZoneId AZ ID.
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置Availability zone ID.
-                     * @param _zoneId Availability zone ID.
+                     * 设置AZ ID.
+                     * @param _zoneId AZ ID.
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Availability information.
-                     * @return Zone Availability information.
+                     * 获取AZ information.
+                     * @return Zone AZ information.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability information.
-                     * @param _zone Availability information.
+                     * 设置AZ information.
+                     * @param _zone AZ information.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -91,19 +91,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SubnetInfoList Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Subnet information.
+                     * @return SubnetInfoList Subnet information.
                      * 
                      */
                     std::vector<SubnetInfo> GetSubnetInfoList() const;
 
                     /**
-                     * 设置Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _subnetInfoList Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Subnet information.
+                     * @param _subnetInfoList Subnet information.
                      * 
                      */
                     void SetSubnetInfoList(const std::vector<SubnetInfo>& _subnetInfoList);
@@ -116,19 +112,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SubnetInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NodeInfoList Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Node information.
+                     * @return NodeInfoList Node information.
                      * 
                      */
                     std::vector<ShortNodeInfo> GetNodeInfoList() const;
 
                     /**
-                     * 设置Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _nodeInfoList Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Node information.
+                     * @param _nodeInfoList Node information.
                      * 
                      */
                     void SetNodeInfoList(const std::vector<ShortNodeInfo>& _nodeInfoList);
@@ -143,27 +135,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Availability zone ID.
+                     * AZ ID.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Availability information.
+                     * AZ information.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Subnet information.
                      */
                     std::vector<SubnetInfo> m_subnetInfoList;
                     bool m_subnetInfoListHasBeenSet;
 
                     /**
-                     * Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Node information.
                      */
                     std::vector<ShortNodeInfo> m_nodeInfoList;
                     bool m_nodeInfoListHasBeenSet;

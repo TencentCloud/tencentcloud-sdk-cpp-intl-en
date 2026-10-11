@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServiceNodeList Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ServiceNodeDetailInfo> GetServiceNodeList() const;
@@ -89,12 +87,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AliasInfoHasBeenSet() const;
 
                     /**
-                     * 获取Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportNodeFlagFilterList Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of supported flag nodes.
+                     * @return SupportNodeFlagFilterList List of supported flag nodes.
                      * 
                      */
                     std::vector<std::string> GetSupportNodeFlagFilterList() const;
@@ -116,7 +110,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ServiceNodeDetailInfo> m_serviceNodeList;
                     bool m_serviceNodeListHasBeenSet;
@@ -128,9 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aliasInfoHasBeenSet;
 
                     /**
-                     * Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of supported flag nodes.
                      */
                     std::vector<std::string> m_supportNodeFlagFilterList;
                     bool m_supportNodeFlagFilterListHasBeenSet;

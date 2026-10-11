@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Serverless HBase instance information
+                * Serverless HBase instance information.
                 */
                 class SLInstanceInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance string ID.
-                     * @return ClusterId Instance string ID.
+                     * 获取Cluster string ID.
+                     * @return ClusterId Cluster string ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Instance string ID.
-                     * @param _clusterId Instance string ID.
+                     * 设置Cluster string ID.
+                     * @param _clusterId Cluster string ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance numeric ID
-                     * @return Id Instance numeric ID
+                     * 获取Cluster ID.
+                     * @return Id Cluster ID.
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Instance numeric ID
-                     * @param _id Instance numeric ID
+                     * 设置Cluster ID.
+                     * @param _id Cluster ID.
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool HealthStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return ClusterName Instance name
+                     * 获取Instance name.
+                     * @return ClusterName Instance name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _clusterName Instance name
+                     * 设置Instance name.
+                     * @param _clusterName Instance name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return RegionId Region ID
+                     * 获取Region ID.
+                     * @return RegionId Region ID.
                      * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _regionId Region ID
+                     * 设置Region ID.
+                     * @param _regionId Region ID.
                      * 
                      */
                     void SetRegionId(const uint64_t& _regionId);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取User APP ID.
-                     * @return AppId User APP ID.
+                     * 获取User APPID.
+                     * @return AppId User APPID.
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置User APP ID.
-                     * @param _appId User APP ID.
+                     * 设置User APPID.
+                     * @param _appId User APPID.
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -259,6 +259,27 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
+                     * 获取Primary AZ VPC name.
+                     * @return VpcName Primary AZ VPC name.
+                     * 
+                     */
+                    std::string GetVpcName() const;
+
+                    /**
+                     * 设置Primary AZ VPC name.
+                     * @param _vpcName Primary AZ VPC name.
+                     * 
+                     */
+                    void SetVpcName(const std::string& _vpcName);
+
+                    /**
+                     * 判断参数 VpcName 是否已赋值
+                     * @return VpcName 是否已赋值
+                     * 
+                     */
+                    bool VpcNameHasBeenSet() const;
+
+                    /**
                      * 获取Primary AZ subnet ID.
                      * @return SubnetId Primary AZ subnet ID.
                      * 
@@ -280,15 +301,36 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Status code
-                     * @return Status Status code
+                     * 获取Primary AZ subnet name.
+                     * @return SubnetName Primary AZ subnet name.
+                     * 
+                     */
+                    std::string GetSubnetName() const;
+
+                    /**
+                     * 设置Primary AZ subnet name.
+                     * @param _subnetName Primary AZ subnet name.
+                     * 
+                     */
+                    void SetSubnetName(const std::string& _subnetName);
+
+                    /**
+                     * 判断参数 SubnetName 是否已赋值
+                     * @return SubnetName 是否已赋值
+                     * 
+                     */
+                    bool SubnetNameHasBeenSet() const;
+
+                    /**
+                     * 获取Status code.
+                     * @return Status Status code.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status code
-                     * @param _status Status code
+                     * 设置Status code.
+                     * @param _status Status code.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -322,15 +364,15 @@ namespace TencentCloud
                     bool AddTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
-                     * @return PayMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+                     * 获取Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
+                     * @return PayMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
-                     * @param _payMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+                     * 设置Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
+                     * @param _payMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -344,18 +386,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneSettings Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ZoneSetting> GetZoneSettings() const;
 
                     /**
                      * 设置Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _zoneSettings Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetZoneSettings(const std::vector<ZoneSetting>& _zoneSettings);
@@ -369,18 +407,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -393,15 +427,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
-                     * @return AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+                     * 获取Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
+                     * @return AutoRenewFlag Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
                      * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
-                     * @param _autoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+                     * 设置Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
+                     * @param _autoRenewFlag Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
                      * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
@@ -414,15 +448,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
-                     * @return IsolateTime Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+                     * 获取Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
+                     * @return IsolateTime Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
                      * 
                      */
                     std::string GetIsolateTime() const;
 
                     /**
-                     * 设置Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
-                     * @param _isolateTime Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+                     * 设置Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
+                     * @param _isolateTime Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
                      * 
                      */
                     void SetIsolateTime(const std::string& _isolateTime);
@@ -435,15 +469,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsolateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
-                     * @return ExpireTime Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+                     * 获取Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+                     * @return ExpireTime Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
-                     * @param _expireTime Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+                     * 设置Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+                     * @param _expireTime Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -455,16 +489,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Primary/standby deployment role.
+                     * @return DeployRole Primary/standby deployment role.
+                     * 
+                     */
+                    std::string GetDeployRole() const;
+
+                    /**
+                     * 设置Primary/standby deployment role.
+                     * @param _deployRole Primary/standby deployment role.
+                     * 
+                     */
+                    void SetDeployRole(const std::string& _deployRole);
+
+                    /**
+                     * 判断参数 DeployRole 是否已赋值
+                     * @return DeployRole 是否已赋值
+                     * 
+                     */
+                    bool DeployRoleHasBeenSet() const;
+
+                    /**
+                     * 获取WebUI address.
+                     * @return WebUIUrl WebUI address.
+                     * 
+                     */
+                    std::string GetWebUIUrl() const;
+
+                    /**
+                     * 设置WebUI address.
+                     * @param _webUIUrl WebUI address.
+                     * 
+                     */
+                    void SetWebUIUrl(const std::string& _webUIUrl);
+
+                    /**
+                     * 判断参数 WebUIUrl 是否已赋值
+                     * @return WebUIUrl 是否已赋值
+                     * 
+                     */
+                    bool WebUIUrlHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance string ID.
+                     * Cluster string ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance numeric ID
+                     * Cluster ID.
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
@@ -482,13 +558,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_healthStatusHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Region ID
+                     * Region ID.
                      */
                     uint64_t m_regionId;
                     bool m_regionIdHasBeenSet;
@@ -506,7 +582,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * User APP ID.
+                     * User APPID.
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -518,13 +594,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vpcIdHasBeenSet;
 
                     /**
+                     * Primary AZ VPC name.
+                     */
+                    std::string m_vpcName;
+                    bool m_vpcNameHasBeenSet;
+
+                    /**
                      * Primary AZ subnet ID.
                      */
                     uint64_t m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Status code
+                     * Primary AZ subnet name.
+                     */
+                    std::string m_subnetName;
+                    bool m_subnetNameHasBeenSet;
+
+                    /**
+                     * Status code.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -536,42 +624,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_addTimeHasBeenSet;
 
                     /**
-                     * Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+                     * Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
                      * Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ZoneSetting> m_zoneSettings;
                     bool m_zoneSettingsHasBeenSet;
 
                     /**
                      * Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+                     * Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
                      */
                     uint64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+                     * Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
                      */
                     std::string m_isolateTime;
                     bool m_isolateTimeHasBeenSet;
 
                     /**
-                     * Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+                     * Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * Primary/standby deployment role.
+                     */
+                    std::string m_deployRole;
+                    bool m_deployRoleHasBeenSet;
+
+                    /**
+                     * WebUI address.
+                     */
+                    std::string m_webUIUrl;
+                    bool m_webUIUrlHasBeenSet;
 
                 };
             }

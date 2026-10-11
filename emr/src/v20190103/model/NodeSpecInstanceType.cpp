@@ -41,7 +41,13 @@ NodeSpecInstanceType::NodeSpecInstanceType() :
     m_remarkHasBeenSet(false),
     m_originPriceHasBeenSet(false),
     m_prepaidUnderwritePeriodsHasBeenSet(false),
-    m_gpuDescHasBeenSet(false)
+    m_gpuDescHasBeenSet(false),
+    m_quotaNumHasBeenSet(false),
+    m_quotaUnitHasBeenSet(false),
+    m_needHpcClusterIdHasBeenSet(false),
+    m_isGpuInstanceHasBeenSet(false),
+    m_gpuResourceKeyHasBeenSet(false),
+    m_gpuNumHasBeenSet(false)
 {
 }
 
@@ -293,6 +299,66 @@ CoreInternalOutcome NodeSpecInstanceType::Deserialize(const rapidjson::Value &va
         m_gpuDescHasBeenSet = true;
     }
 
+    if (value.HasMember("QuotaNum") && !value["QuotaNum"].IsNull())
+    {
+        if (!value["QuotaNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeSpecInstanceType.QuotaNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_quotaNum = value["QuotaNum"].GetInt64();
+        m_quotaNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("QuotaUnit") && !value["QuotaUnit"].IsNull())
+    {
+        if (!value["QuotaUnit"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeSpecInstanceType.QuotaUnit` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_quotaUnit = string(value["QuotaUnit"].GetString());
+        m_quotaUnitHasBeenSet = true;
+    }
+
+    if (value.HasMember("NeedHpcClusterId") && !value["NeedHpcClusterId"].IsNull())
+    {
+        if (!value["NeedHpcClusterId"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeSpecInstanceType.NeedHpcClusterId` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_needHpcClusterId = value["NeedHpcClusterId"].GetBool();
+        m_needHpcClusterIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsGpuInstance") && !value["IsGpuInstance"].IsNull())
+    {
+        if (!value["IsGpuInstance"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeSpecInstanceType.IsGpuInstance` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isGpuInstance = value["IsGpuInstance"].GetBool();
+        m_isGpuInstanceHasBeenSet = true;
+    }
+
+    if (value.HasMember("GpuResourceKey") && !value["GpuResourceKey"].IsNull())
+    {
+        if (!value["GpuResourceKey"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeSpecInstanceType.GpuResourceKey` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_gpuResourceKey = string(value["GpuResourceKey"].GetString());
+        m_gpuResourceKeyHasBeenSet = true;
+    }
+
+    if (value.HasMember("GpuNum") && !value["GpuNum"].IsNull())
+    {
+        if (!value["GpuNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeSpecInstanceType.GpuNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_gpuNum = value["GpuNum"].GetInt64();
+        m_gpuNumHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -492,6 +558,54 @@ void NodeSpecInstanceType::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "GpuDesc";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_gpuDesc.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_quotaNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QuotaNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_quotaNum, allocator);
+    }
+
+    if (m_quotaUnitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QuotaUnit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_quotaUnit.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_needHpcClusterIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NeedHpcClusterId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_needHpcClusterId, allocator);
+    }
+
+    if (m_isGpuInstanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsGpuInstance";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isGpuInstance, allocator);
+    }
+
+    if (m_gpuResourceKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GpuResourceKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gpuResourceKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_gpuNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GpuNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_gpuNum, allocator);
     }
 
 }
@@ -831,5 +945,101 @@ void NodeSpecInstanceType::SetGpuDesc(const string& _gpuDesc)
 bool NodeSpecInstanceType::GpuDescHasBeenSet() const
 {
     return m_gpuDescHasBeenSet;
+}
+
+int64_t NodeSpecInstanceType::GetQuotaNum() const
+{
+    return m_quotaNum;
+}
+
+void NodeSpecInstanceType::SetQuotaNum(const int64_t& _quotaNum)
+{
+    m_quotaNum = _quotaNum;
+    m_quotaNumHasBeenSet = true;
+}
+
+bool NodeSpecInstanceType::QuotaNumHasBeenSet() const
+{
+    return m_quotaNumHasBeenSet;
+}
+
+string NodeSpecInstanceType::GetQuotaUnit() const
+{
+    return m_quotaUnit;
+}
+
+void NodeSpecInstanceType::SetQuotaUnit(const string& _quotaUnit)
+{
+    m_quotaUnit = _quotaUnit;
+    m_quotaUnitHasBeenSet = true;
+}
+
+bool NodeSpecInstanceType::QuotaUnitHasBeenSet() const
+{
+    return m_quotaUnitHasBeenSet;
+}
+
+bool NodeSpecInstanceType::GetNeedHpcClusterId() const
+{
+    return m_needHpcClusterId;
+}
+
+void NodeSpecInstanceType::SetNeedHpcClusterId(const bool& _needHpcClusterId)
+{
+    m_needHpcClusterId = _needHpcClusterId;
+    m_needHpcClusterIdHasBeenSet = true;
+}
+
+bool NodeSpecInstanceType::NeedHpcClusterIdHasBeenSet() const
+{
+    return m_needHpcClusterIdHasBeenSet;
+}
+
+bool NodeSpecInstanceType::GetIsGpuInstance() const
+{
+    return m_isGpuInstance;
+}
+
+void NodeSpecInstanceType::SetIsGpuInstance(const bool& _isGpuInstance)
+{
+    m_isGpuInstance = _isGpuInstance;
+    m_isGpuInstanceHasBeenSet = true;
+}
+
+bool NodeSpecInstanceType::IsGpuInstanceHasBeenSet() const
+{
+    return m_isGpuInstanceHasBeenSet;
+}
+
+string NodeSpecInstanceType::GetGpuResourceKey() const
+{
+    return m_gpuResourceKey;
+}
+
+void NodeSpecInstanceType::SetGpuResourceKey(const string& _gpuResourceKey)
+{
+    m_gpuResourceKey = _gpuResourceKey;
+    m_gpuResourceKeyHasBeenSet = true;
+}
+
+bool NodeSpecInstanceType::GpuResourceKeyHasBeenSet() const
+{
+    return m_gpuResourceKeyHasBeenSet;
+}
+
+int64_t NodeSpecInstanceType::GetGpuNum() const
+{
+    return m_gpuNum;
+}
+
+void NodeSpecInstanceType::SetGpuNum(const int64_t& _gpuNum)
+{
+    m_gpuNum = _gpuNum;
+    m_gpuNumHasBeenSet = true;
+}
+
+bool NodeSpecInstanceType::GpuNumHasBeenSet() const
+{
+    return m_gpuNumHasBeenSet;
 }
 

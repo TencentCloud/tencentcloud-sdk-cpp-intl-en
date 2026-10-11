@@ -92,18 +92,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Rows Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DiffDetailItem> GetRows() const;
 
                     /**
                      * 设置Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _rows Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRows(const std::vector<DiffDetailItem>& _rows);
@@ -117,18 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Header Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DiffHeader> GetHeader() const;
 
                     /**
                      * 设置Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _header Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHeader(const std::vector<DiffHeader>& _header);
@@ -156,14 +148,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DiffDetailItem> m_rows;
                     bool m_rowsHasBeenSet;
 
                     /**
                      * Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DiffHeader> m_header;
                     bool m_headerHasBeenSet;

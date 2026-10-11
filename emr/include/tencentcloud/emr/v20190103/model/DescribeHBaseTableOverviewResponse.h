@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Overview data array
-                     * @return TableMonitorList Overview data array
+                     * 获取Overview data array.
+                     * @return TableMonitorList Overview data array.
                      * 
                      */
                     std::vector<OverviewRow> GetTableMonitorList() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TableMonitorListHasBeenSet() const;
 
                     /**
-                     * 获取Overview data array length
-                     * @return TotalCount Overview data array length
+                     * 获取Overview data array length.
+                     * @return TotalCount Overview data array length.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Table schema information
-                     * @return SchemaList Table schema information
+                     * 获取Table schema information.
+                     * @return SchemaList Table schema information.
                      * 
                      */
                     std::vector<TableSchemaItem> GetSchemaList() const;
@@ -90,19 +90,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Overview data array
+                     * Overview data array.
                      */
                     std::vector<OverviewRow> m_tableMonitorList;
                     bool m_tableMonitorListHasBeenSet;
 
                     /**
-                     * Overview data array length
+                     * Overview data array length.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Table schema information
+                     * Table schema information.
                      */
                     std::vector<TableSchemaItem> m_schemaList;
                     bool m_schemaListHasBeenSet;

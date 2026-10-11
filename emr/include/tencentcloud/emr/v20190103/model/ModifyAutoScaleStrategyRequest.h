@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
-                     * @return StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+                     * 获取Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
+                     * @return StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
                      * 
                      */
                     int64_t GetStrategyType() const;
 
                     /**
-                     * 设置Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
-                     * @param _strategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+                     * 设置Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
+                     * @param _strategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
                      * 
                      */
                     void SetStrategyType(const int64_t& _strategyType);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool LoadAutoScaleStrategiesHasBeenSet() const;
 
                     /**
-                     * 获取Rule for time-based scaling
-                     * @return TimeAutoScaleStrategies Rule for time-based scaling
+                     * 获取Time-based scaling rule.
+                     * @return TimeAutoScaleStrategies Time-based scaling rule.
                      * 
                      */
                     std::vector<TimeAutoScaleStrategy> GetTimeAutoScaleStrategies() const;
 
                     /**
-                     * 设置Rule for time-based scaling
-                     * @param _timeAutoScaleStrategies Rule for time-based scaling
+                     * 设置Time-based scaling rule.
+                     * @param _timeAutoScaleStrategies Time-based scaling rule.
                      * 
                      */
                     void SetTimeAutoScaleStrategies(const std::vector<TimeAutoScaleStrategy>& _timeAutoScaleStrategies);
@@ -158,7 +158,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+                     * Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
                      */
                     int64_t m_strategyType;
                     bool m_strategyTypeHasBeenSet;
@@ -170,7 +170,7 @@ namespace TencentCloud
                     bool m_loadAutoScaleStrategiesHasBeenSet;
 
                     /**
-                     * Rule for time-based scaling
+                     * Time-based scaling rule.
                      */
                     std::vector<TimeAutoScaleStrategy> m_timeAutoScaleStrategies;
                     bool m_timeAutoScaleStrategiesHasBeenSet;

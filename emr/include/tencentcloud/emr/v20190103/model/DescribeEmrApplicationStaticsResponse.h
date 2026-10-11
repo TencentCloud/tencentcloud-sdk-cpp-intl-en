@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application statistics
-                     * @return Statics Application statistics
+                     * 获取Job statistics information.
+                     * @return Statics Job statistics information.
                      * 
                      */
                     std::vector<ApplicationStatics> GetStatics() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool StaticsHasBeenSet() const;
 
                     /**
-                     * 获取Total count
-                     * @return TotalCount Total count
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Available queue name
-                     * @return Queues Available queue name
+                     * 获取Available queue names.
+                     * @return Queues Available queue names.
                      * 
                      */
                     std::vector<std::string> GetQueues() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool QueuesHasBeenSet() const;
 
                     /**
-                     * 获取Available usernames
-                     * @return Users Available usernames
+                     * 获取Available usernames.
+                     * @return Users Available usernames.
                      * 
                      */
                     std::vector<std::string> GetUsers() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool UsersHasBeenSet() const;
 
                     /**
-                     * 获取Available application type
-                     * @return ApplicationTypes Available application type
+                     * 获取Available job types.
+                     * @return ApplicationTypes Available job types.
                      * 
                      */
                     std::vector<std::string> GetApplicationTypes() const;
@@ -117,31 +117,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application statistics
+                     * Job statistics information.
                      */
                     std::vector<ApplicationStatics> m_statics;
                     bool m_staticsHasBeenSet;
 
                     /**
-                     * Total count
+                     * Total number.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Available queue name
+                     * Available queue names.
                      */
                     std::vector<std::string> m_queues;
                     bool m_queuesHasBeenSet;
 
                     /**
-                     * Available usernames
+                     * Available usernames.
                      */
                     std::vector<std::string> m_users;
                     bool m_usersHasBeenSet;
 
                     /**
-                     * Available application type
+                     * Available job types.
                      */
                     std::vector<std::string> m_applicationTypes;
                     bool m_applicationTypesHasBeenSet;

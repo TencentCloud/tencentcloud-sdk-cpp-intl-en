@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional process information.
+                * Additional flow information.
                 */
                 class FlowExtraDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Additional information title.
-                     * @return Title Additional information title.
+                     * 获取Title of additional information.
+                     * @return Title Title of additional information.
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置Additional information title.
-                     * @param _title Additional information title.
+                     * 设置Title of additional information.
+                     * @param _title Title of additional information.
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -70,18 +70,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FlowParamsDesc> GetDetail() const;
 
                     /**
                      * 设置Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _detail Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetail(const std::vector<FlowParamsDesc>& _detail);
@@ -96,14 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Additional information title.
+                     * Title of additional information.
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
                      * Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<FlowParamsDesc> m_detail;
                     bool m_detailHasBeenSet;

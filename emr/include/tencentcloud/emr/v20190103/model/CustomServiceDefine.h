@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Shared self-built component parameters
+                * Shared self-built component parameters.
                 */
                 class CustomServiceDefine : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom parameter key
-                     * @return Name Custom parameter key
+                     * 获取Custom parameter key.
+                     * @return Name Custom parameter key.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Custom parameter key
-                     * @param _name Custom parameter key
+                     * 设置Custom parameter key.
+                     * @param _name Custom parameter key.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameter value
-                     * @return Value Custom parameter value
+                     * 获取Custom parameter value.
+                     * @return Value Custom parameter value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Custom parameter value
-                     * @param _value Custom parameter value
+                     * 设置Custom parameter value.
+                     * @param _value Custom parameter value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom parameter key
+                     * Custom parameter key.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Custom parameter value
+                     * Custom parameter value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

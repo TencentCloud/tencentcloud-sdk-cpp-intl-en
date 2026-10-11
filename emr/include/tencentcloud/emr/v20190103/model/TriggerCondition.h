@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
-                     * @return CompareMethod Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+                     * 获取Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
+                     * @return CompareMethod Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
                      * 
                      */
                     int64_t GetCompareMethod() const;
 
                     /**
-                     * 设置Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
-                     * @param _compareMethod Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+                     * 设置Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
+                     * @param _compareMethod Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
                      * 
                      */
                     void SetCompareMethod(const int64_t& _compareMethod);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CompareMethodHasBeenSet() const;
 
                     /**
-                     * 获取Conditional threshold.
-                     * @return Threshold Conditional threshold.
+                     * 获取Condition threshold.
+                     * @return Threshold Condition threshold.
                      * 
                      */
                     double GetThreshold() const;
 
                     /**
-                     * 设置Conditional threshold.
-                     * @param _threshold Conditional threshold.
+                     * 设置Condition threshold.
+                     * @param _threshold Condition threshold.
                      * 
                      */
                     void SetThreshold(const double& _threshold);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+                     * Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
                      */
                     int64_t m_compareMethod;
                     bool m_compareMethodHasBeenSet;
 
                     /**
-                     * Conditional threshold.
+                     * Condition threshold.
                      */
                     double m_threshold;
                     bool m_thresholdHasBeenSet;

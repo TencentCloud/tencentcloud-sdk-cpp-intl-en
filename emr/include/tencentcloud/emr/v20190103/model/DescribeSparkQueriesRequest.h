@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page size. Valid range: [1,100].
-                     * @return Limit Page size. Valid range: [1,100].
+                     * 获取Number of entries per page. Value range: [1, 100].
+                     * @return Limit Number of entries per page. Value range: [1, 100].
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page size. Valid range: [1,100].
-                     * @param _limit Page size. Valid range: [1,100].
+                     * 设置Number of entries per page. Value range: [1, 100].
+                     * @param _limit Number of entries per page. Value range: [1, 100].
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Execution status: RUNNING,COMPLETED, FAILED.
-                     * @return Status Execution status: RUNNING,COMPLETED, FAILED.
+                     * 获取Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
+                     * @return Status Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
                      * 
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
-                     * 设置Execution status: RUNNING,COMPLETED, FAILED.
-                     * @param _status Execution status: RUNNING,COMPLETED, FAILED.
+                     * 设置Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
+                     * @param _status Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
                      * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
@@ -195,13 +195,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page size. Valid range: [1,100].
+                     * Number of entries per page. Value range: [1, 100].
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Execution status: RUNNING,COMPLETED, FAILED.
+                     * Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
                      */
                     std::vector<std::string> m_status;
                     bool m_statusHasBeenSet;

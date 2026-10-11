@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The services to operate on
+                * Scope of service operations.
                 */
                 class ServiceBasicRestartInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The service name (required), such as HDFS.
-                     * @return ServiceName The service name (required), such as HDFS.
+                     * 获取Service name, required. Example: HDFS.
+                     * @return ServiceName Service name, required. Example: HDFS.
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置The service name (required), such as HDFS.
-                     * @param _serviceName The service name (required), such as HDFS.
+                     * 设置Service name, required. Example: HDFS.
+                     * @param _serviceName Service name, required. Example: HDFS.
                      * 
                      */
                     void SetServiceName(const std::string& _serviceName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取If it is left empty, all processes will be operated on.
-                     * @return ComponentInfoList If it is left empty, all processes will be operated on.
+                     * 获取If not provided, it indicates all processes.
+                     * @return ComponentInfoList If not provided, it indicates all processes.
                      * 
                      */
                     std::vector<ComponentBasicRestartInfo> GetComponentInfoList() const;
 
                     /**
-                     * 设置If it is left empty, all processes will be operated on.
-                     * @param _componentInfoList If it is left empty, all processes will be operated on.
+                     * 设置If not provided, it indicates all processes.
+                     * @param _componentInfoList If not provided, it indicates all processes.
                      * 
                      */
                     void SetComponentInfoList(const std::vector<ComponentBasicRestartInfo>& _componentInfoList);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The service name (required), such as HDFS.
+                     * Service name, required. Example: HDFS.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * If it is left empty, all processes will be operated on.
+                     * If not provided, it indicates all processes.
                      */
                     std::vector<ComponentBasicRestartInfo> m_componentInfoList;
                     bool m_componentInfoListHasBeenSet;

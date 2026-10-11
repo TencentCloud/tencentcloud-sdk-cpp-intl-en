@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Shared component information
+                * Shared component information.
                 */
                 class DependService : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The shared component name.
-                     * @return ServiceName The shared component name.
+                     * 获取Shared component name.
+                     * @return ServiceName Shared component name.
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置The shared component name.
-                     * @param _serviceName The shared component name.
+                     * 设置Shared component name.
+                     * @param _serviceName Shared component name.
                      * 
                      */
                     void SetServiceName(const std::string& _serviceName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取The cluster to which the shared component belongs.
-                     * @return InstanceId The cluster to which the shared component belongs.
+                     * 获取Shared component cluster.
+                     * @return InstanceId Shared component cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The cluster to which the shared component belongs.
-                     * @param _instanceId The cluster to which the shared component belongs.
+                     * 设置Shared component cluster.
+                     * @param _instanceId Shared component cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The shared component name.
+                     * Shared component name.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * The cluster to which the shared component belongs.
+                     * Shared component cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

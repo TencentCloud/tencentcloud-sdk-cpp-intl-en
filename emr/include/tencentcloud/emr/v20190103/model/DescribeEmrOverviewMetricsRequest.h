@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取End time
-                     * @return End End time
+                     * 获取End time.
+                     * @return End End time.
                      * 
                      */
                     int64_t GetEnd() const;
 
                     /**
-                     * 设置End time
-                     * @param _end End time
+                     * 设置End time.
+                     * @param _end End time.
                      * 
                      */
                     void SetEnd(const int64_t& _end);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EndHasBeenSet() const;
 
                     /**
-                     * 获取Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
-                     * @return Metric Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+                     * 获取Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
+                     * @return Metric Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
                      * 
                      */
                     std::string GetMetric() const;
 
                     /**
-                     * 设置Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
-                     * @param _metric Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+                     * 设置Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
+                     * @param _metric Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
                      * 
                      */
                     void SetMetric(const std::string& _metric);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DownsampleHasBeenSet() const;
 
                     /**
-                     * 获取Start time, not required for pie charts
-                     * @return Start Start time, not required for pie charts
+                     * 获取Start time, which is not required for pie charts.
+                     * @return Start Start time, which is not required for pie charts.
                      * 
                      */
                     int64_t GetStart() const;
 
                     /**
-                     * 设置Start time, not required for pie charts
-                     * @param _start Start time, not required for pie charts
+                     * 设置Start time, which is not required for pie charts.
+                     * @param _start Start time, which is not required for pie charts.
                      * 
                      */
                     void SetStart(const int64_t& _start);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool StartHasBeenSet() const;
 
                     /**
-                     * 获取Aggregation method, for future use
-                     * @return Aggregator Aggregation method, for future use
+                     * 获取Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
+                     * @return Aggregator Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
                      * 
                      */
                     std::string GetAggregator() const;
 
                     /**
-                     * 设置Aggregation method, for future use
-                     * @param _aggregator Aggregation method, for future use
+                     * 设置Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
+                     * @param _aggregator Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
                      * 
                      */
                     void SetAggregator(const std::string& _aggregator);
@@ -192,13 +192,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * End time
+                     * End time.
                      */
                     int64_t m_end;
                     bool m_endHasBeenSet;
 
                     /**
-                     * Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+                     * Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;
@@ -216,13 +216,13 @@ namespace TencentCloud
                     bool m_downsampleHasBeenSet;
 
                     /**
-                     * Start time, not required for pie charts
+                     * Start time, which is not required for pie charts.
                      */
                     int64_t m_start;
                     bool m_startHasBeenSet;
 
                     /**
-                     * Aggregation method, for future use
+                     * Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
                      */
                     std::string m_aggregator;
                     bool m_aggregatorHasBeenSet;

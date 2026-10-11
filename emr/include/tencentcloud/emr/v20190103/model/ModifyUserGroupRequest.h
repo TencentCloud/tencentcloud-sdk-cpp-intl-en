@@ -43,15 +43,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User information list.
-                     * @return Users User information list.
+                     * 获取<p>Cluster string ID.</p>
+                     * @return InstanceId <p>Cluster string ID.</p>
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置<p>Cluster string ID.</p>
+                     * @param _instanceId <p>Cluster string ID.</p>
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>User information list.</p>
+                     * @return Users <p>User information list.</p>
                      * 
                      */
                     std::vector<std::string> GetUsers() const;
 
                     /**
-                     * 设置User information list.
-                     * @param _users User information list.
+                     * 设置<p>User information list.</p>
+                     * @param _users <p>User information list.</p>
                      * 
                      */
                     void SetUsers(const std::vector<std::string>& _users);
@@ -64,15 +85,15 @@ namespace TencentCloud
                     bool UsersHasBeenSet() const;
 
                     /**
-                     * 获取User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
-                     * @return UserGroup User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+                     * 获取<p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
+                     * @return UserGroup <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
                      * 
                      */
                     std::string GetUserGroup() const;
 
                     /**
-                     * 设置User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
-                     * @param _userGroup User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+                     * 设置<p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
+                     * @param _userGroup <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
                      * 
                      */
                     void SetUserGroup(const std::string& _userGroup);
@@ -85,15 +106,15 @@ namespace TencentCloud
                     bool UserGroupHasBeenSet() const;
 
                     /**
-                     * 获取User subgroup.
-                     * @return Groups User subgroup.
+                     * 获取<p>Secondary user group.</p>
+                     * @return Groups <p>Secondary user group.</p>
                      * 
                      */
                     std::vector<std::string> GetGroups() const;
 
                     /**
-                     * 设置User subgroup.
-                     * @param _groups User subgroup.
+                     * 设置<p>Secondary user group.</p>
+                     * @param _groups <p>Secondary user group.</p>
                      * 
                      */
                     void SetGroups(const std::vector<std::string>& _groups);
@@ -106,15 +127,15 @@ namespace TencentCloud
                     bool GroupsHasBeenSet() const;
 
                     /**
-                     * 获取Remarks.
-                     * @return Remark Remarks.
+                     * 获取<p>Remarks.</p>
+                     * @return Remark <p>Remarks.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks.
-                     * @param _remark Remarks.
+                     * 设置<p>Remarks.</p>
+                     * @param _remark <p>Remarks.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -129,25 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User information list.
+                     * <p>Cluster string ID.</p>
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * <p>User information list.</p>
                      */
                     std::vector<std::string> m_users;
                     bool m_usersHasBeenSet;
 
                     /**
-                     * User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+                     * <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
                      */
                     std::string m_userGroup;
                     bool m_userGroupHasBeenSet;
 
                     /**
-                     * User subgroup.
+                     * <p>Secondary user group.</p>
                      */
                     std::vector<std::string> m_groups;
                     bool m_groupsHasBeenSet;
 
                     /**
-                     * Remarks.
+                     * <p>Remarks.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

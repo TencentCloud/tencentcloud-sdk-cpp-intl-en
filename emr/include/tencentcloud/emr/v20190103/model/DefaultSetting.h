@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Default configurations of resource scheduling.
+                * Default settings of resource scheduling.
                 */
                 class DefaultSetting : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name: the key for input parameters.
-                     * @return Name Name: the key for input parameters.
+                     * 获取Name, which is used as the key for request parameters.
+                     * @return Name Name, which is used as the key for request parameters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name: the key for input parameters.
-                     * @param _name Name: the key for input parameters.
+                     * 设置Name, which is used as the key for request parameters.
+                     * @param _name Name, which is used as the key for request parameters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取Key: display the configuration item in the configuration file.
-                     * @return Key Key: display the configuration item in the configuration file.
+                     * 获取Key, which is used to display the configuration items in the configuration file.
+                     * @return Key Key, which is used to display the configuration items in the configuration file.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key: display the configuration item in the configuration file.
-                     * @param _key Key: display the configuration item in the configuration file.
+                     * 设置Key, which is used to display the configuration items in the configuration file.
+                     * @param _key Key, which is used to display the configuration items in the configuration file.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name: the key for input parameters.
+                     * Name, which is used as the key for request parameters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -172,7 +172,7 @@ namespace TencentCloud
                     bool m_promptHasBeenSet;
 
                     /**
-                     * Key: display the configuration item in the configuration file.
+                     * Key, which is used to display the configuration items in the configuration file.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of key-value pairs
+                * List of key-value pairs.
                 */
                 class ItemSeq : public AbstractModel
                 {
@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Item> GetItems() const;
 
                     /**
                      * 设置Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _items Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetItems(const std::vector<Item>& _items);
@@ -76,7 +72,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Item> m_items;
                     bool m_itemsHasBeenSet;

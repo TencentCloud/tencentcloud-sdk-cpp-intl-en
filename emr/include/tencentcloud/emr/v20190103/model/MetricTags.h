@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Metric Unit.
-                     * @return Unit Metric Unit.
+                     * 获取Metric unit.
+                     * @return Unit Metric unit.
                      * 
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置Metric Unit.
-                     * @param _unit Metric Unit.
+                     * 设置Metric unit.
+                     * @param _unit Metric unit.
                      * 
                      */
                     void SetUnit(const std::string& _unit);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Metric Unit.
+                     * Metric unit.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;

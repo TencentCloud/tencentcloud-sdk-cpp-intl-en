@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Pre-execution script configuration
+                * Pre-execution script configuration.
                 */
                 class PreExecuteFileSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取COS path to script, which has been disused
-                     * @return Path COS path to script, which has been disused
+                     * 获取Script path on COS, which has been deprecated.
+                     * @return Path Script path on COS, which has been deprecated.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置COS path to script, which has been disused
-                     * @param _path COS path to script, which has been disused
+                     * 设置Script path on COS, which has been deprecated.
+                     * @param _path Script path on COS, which has been deprecated.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Execution script parameter
-                     * @return Args Execution script parameter
+                     * 获取Script execution parameter.
+                     * @return Args Script execution parameter.
                      * 
                      */
                     std::vector<std::string> GetArgs() const;
 
                     /**
-                     * 设置Execution script parameter
-                     * @param _args Execution script parameter
+                     * 设置Script execution parameter.
+                     * @param _args Script execution parameter.
                      * 
                      */
                     void SetArgs(const std::vector<std::string>& _args);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ArgsHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket name, which has been disused
-                     * @return Bucket COS bucket name, which has been disused
+                     * 获取COS bucket name, which has been deprecated.
+                     * @return Bucket COS bucket name, which has been deprecated.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置COS bucket name, which has been disused
-                     * @param _bucket COS bucket name, which has been disused
+                     * 设置COS bucket name, which has been deprecated.
+                     * @param _bucket COS bucket name, which has been deprecated.
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取COS region name, which has been disused
-                     * @return Region COS region name, which has been disused
+                     * 获取COS region name, which has been deprecated.
+                     * @return Region COS region name, which has been deprecated.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置COS region name, which has been disused
-                     * @param _region COS region name, which has been disused
+                     * 设置COS region name, which has been deprecated.
+                     * @param _region COS region name, which has been deprecated.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取COS domain data, which has been disused
-                     * @return Domain COS domain data, which has been disused
+                     * 获取COS domain data, which has been deprecated.
+                     * @return Domain COS domain data, which has been deprecated.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置COS domain data, which has been disused
-                     * @param _domain COS domain data, which has been disused
+                     * 设置COS domain data, which has been deprecated.
+                     * @param _domain COS domain data, which has been deprecated.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Execution sequence
-                     * @return RunOrder Execution sequence
+                     * 获取Execution order.
+                     * @return RunOrder Execution order.
                      * 
                      */
                     int64_t GetRunOrder() const;
 
                     /**
-                     * 设置Execution sequence
-                     * @param _runOrder Execution sequence
+                     * 设置Execution order.
+                     * @param _runOrder Execution order.
                      * 
                      */
                     void SetRunOrder(const int64_t& _runOrder);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RunOrderHasBeenSet() const;
 
                     /**
-                     * 获取`resourceAfter` or `clusterAfter`
-                     * @return WhenRun `resourceAfter` or `clusterAfter`
+                     * 获取Whether resourceAfter or clusterAfter is used.
+                     * @return WhenRun Whether resourceAfter or clusterAfter is used.
                      * 
                      */
                     std::string GetWhenRun() const;
 
                     /**
-                     * 设置`resourceAfter` or `clusterAfter`
-                     * @param _whenRun `resourceAfter` or `clusterAfter`
+                     * 设置Whether resourceAfter or clusterAfter is used.
+                     * @param _whenRun Whether resourceAfter or clusterAfter is used.
                      * 
                      */
                     void SetWhenRun(const std::string& _whenRun);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool WhenRunHasBeenSet() const;
 
                     /**
-                     * 获取Script name, which has been disused
-                     * @return CosFileName Script name, which has been disused
+                     * 获取Script file name, which has been deprecated.
+                     * @return CosFileName Script file name, which has been deprecated.
                      * 
                      */
                     std::string GetCosFileName() const;
 
                     /**
-                     * 设置Script name, which has been disused
-                     * @param _cosFileName Script name, which has been disused
+                     * 设置Script file name, which has been deprecated.
+                     * @param _cosFileName Script file name, which has been deprecated.
                      * 
                      */
                     void SetCosFileName(const std::string& _cosFileName);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CosFileNameHasBeenSet() const;
 
                     /**
-                     * 获取COS address of script
-                     * @return CosFileURI COS address of script
+                     * 获取COS address of the script.
+                     * @return CosFileURI COS address of the script.
                      * 
                      */
                     std::string GetCosFileURI() const;
 
                     /**
-                     * 设置COS address of script
-                     * @param _cosFileURI COS address of script
+                     * 设置COS address of the script.
+                     * @param _cosFileURI COS address of the script.
                      * 
                      */
                     void SetCosFileURI(const std::string& _cosFileURI);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CosFileURIHasBeenSet() const;
 
                     /**
-                     * 获取COS `SecretId`
-                     * @return CosSecretId COS `SecretId`
+                     * 获取COS SecretId.
+                     * @return CosSecretId COS SecretId.
                      * 
                      */
                     std::string GetCosSecretId() const;
 
                     /**
-                     * 设置COS `SecretId`
-                     * @param _cosSecretId COS `SecretId`
+                     * 设置COS SecretId.
+                     * @param _cosSecretId COS SecretId.
                      * 
                      */
                     void SetCosSecretId(const std::string& _cosSecretId);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CosSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取COS `SecretKey`
-                     * @return CosSecretKey COS `SecretKey`
+                     * 获取COS SecretKey.
+                     * @return CosSecretKey COS SecretKey.
                      * 
                      */
                     std::string GetCosSecretKey() const;
 
                     /**
-                     * 设置COS `SecretKey`
-                     * @param _cosSecretKey COS `SecretKey`
+                     * 设置COS SecretKey.
+                     * @param _cosSecretKey COS SecretKey.
                      * 
                      */
                     void SetCosSecretKey(const std::string& _cosSecretKey);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool CosSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取COS `appid`, which has been disused
-                     * @return AppId COS `appid`, which has been disused
+                     * 获取COS APPID, which has been deprecated.
+                     * @return AppId COS APPID, which has been deprecated.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置COS `appid`, which has been disused
-                     * @param _appId COS `appid`, which has been disused
+                     * 设置COS APPID, which has been deprecated.
+                     * @param _appId COS APPID, which has been deprecated.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Remark Remarks
+                     * 获取Remarks.
+                     * @return Remark Remarks.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _remark Remarks
+                     * 设置Remarks.
+                     * @param _remark Remarks.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -322,79 +322,79 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * COS path to script, which has been disused
+                     * Script path on COS, which has been deprecated.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Execution script parameter
+                     * Script execution parameter.
                      */
                     std::vector<std::string> m_args;
                     bool m_argsHasBeenSet;
 
                     /**
-                     * COS bucket name, which has been disused
+                     * COS bucket name, which has been deprecated.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * COS region name, which has been disused
+                     * COS region name, which has been deprecated.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * COS domain data, which has been disused
+                     * COS domain data, which has been deprecated.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Execution sequence
+                     * Execution order.
                      */
                     int64_t m_runOrder;
                     bool m_runOrderHasBeenSet;
 
                     /**
-                     * `resourceAfter` or `clusterAfter`
+                     * Whether resourceAfter or clusterAfter is used.
                      */
                     std::string m_whenRun;
                     bool m_whenRunHasBeenSet;
 
                     /**
-                     * Script name, which has been disused
+                     * Script file name, which has been deprecated.
                      */
                     std::string m_cosFileName;
                     bool m_cosFileNameHasBeenSet;
 
                     /**
-                     * COS address of script
+                     * COS address of the script.
                      */
                     std::string m_cosFileURI;
                     bool m_cosFileURIHasBeenSet;
 
                     /**
-                     * COS `SecretId`
+                     * COS SecretId.
                      */
                     std::string m_cosSecretId;
                     bool m_cosSecretIdHasBeenSet;
 
                     /**
-                     * COS `SecretKey`
+                     * COS SecretKey.
                      */
                     std::string m_cosSecretKey;
                     bool m_cosSecretKeyHasBeenSet;
 
                     /**
-                     * COS `appid`, which has been disused
+                     * COS APPID, which has been deprecated.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remarks.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

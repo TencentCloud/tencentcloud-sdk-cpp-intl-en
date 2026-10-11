@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone name
-                     * @return Zone Availability zone name
+                     * 获取AZ name.
+                     * @return Zone AZ name.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone name
-                     * @param _zone Availability zone name
+                     * 设置AZ name.
+                     * @param _zone AZ name.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -113,7 +113,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Availability zone name
+                     * AZ name.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

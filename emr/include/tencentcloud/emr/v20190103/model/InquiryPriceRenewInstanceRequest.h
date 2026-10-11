@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
-                     * @return TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+                     * 获取Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
+                     * @return TimeSpan Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
-                     * @param _timeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+                     * 设置Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
+                     * @param _timeSpan Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode.
-                     * @return PayMode Instance billing mode.
+                     * 获取Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
+                     * @return PayMode Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Instance billing mode.
-                     * @param _payMode Instance billing mode.
+                     * 设置Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
+                     * @param _payMode Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     * @return ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * 获取Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+                     * @return ResourceIds Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
-                     * 设置List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     * @param _resourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * 设置Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+                     * @param _resourceIds Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
                      * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
@@ -107,15 +107,19 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Unit of time for instance renewal.
-                     * @return TimeUnit Unit of time for instance renewal.
+                     * 获取Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
+                     * @return TimeUnit Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Unit of time for instance renewal.
-                     * @param _timeUnit Unit of time for instance renewal.
+                     * 设置Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
+                     * @param _timeUnit Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -128,15 +132,19 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Currency.
-                     * @return Currency Currency.
+                     * 获取Currency type. Valid values:
+<li>CNY: RMB</li>
+                     * @return Currency Currency type. Valid values:
+<li>CNY: RMB</li>
                      * 
                      */
                     std::string GetCurrency() const;
 
                     /**
-                     * 设置Currency.
-                     * @param _currency Currency.
+                     * 设置Currency type. Valid values:
+<li>CNY: RMB</li>
+                     * @param _currency Currency type. Valid values:
+<li>CNY: RMB</li>
                      * 
                      */
                     void SetCurrency(const std::string& _currency);
@@ -149,15 +157,15 @@ namespace TencentCloud
                     bool CurrencyHasBeenSet() const;
 
                     /**
-                     * 获取Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @return Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 获取
+                     * @return Placement 
                      * 
                      */
                     Placement GetPlacement() const;
 
                     /**
-                     * 设置Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param _placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 设置
+                     * @param _placement 
                      * 
                      */
                     void SetPlacement(const Placement& _placement);
@@ -170,15 +178,15 @@ namespace TencentCloud
                     bool PlacementHasBeenSet() const;
 
                     /**
-                     * 获取Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
-                     * @return ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     * 获取Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
+                     * @return ModifyPayMode Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
                      * 
                      */
                     int64_t GetModifyPayMode() const;
 
                     /**
-                     * 设置Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
-                     * @param _modifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     * 设置Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
+                     * @param _modifyPayMode Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
                      * 
                      */
                     void SetModifyPayMode(const int64_t& _modifyPayMode);
@@ -191,15 +199,15 @@ namespace TencentCloud
                     bool ModifyPayModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the renewal price for every node is required.
-                     * @return NeedDetail Whether the renewal price for every node is required.
+                     * 获取Whether to return the renewal price for each node.
+                     * @return NeedDetail Whether to return the renewal price for each node.
                      * 
                      */
                     bool GetNeedDetail() const;
 
                     /**
-                     * 设置Whether the renewal price for every node is required.
-                     * @param _needDetail Whether the renewal price for every node is required.
+                     * 设置Whether to return the renewal price for each node.
+                     * @param _needDetail Whether to return the renewal price for each node.
                      * 
                      */
                     void SetNeedDetail(const bool& _needDetail);
@@ -212,15 +220,15 @@ namespace TencentCloud
                     bool NeedDetailHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
-                     * @return InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * 获取Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * @return InstanceId Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
-                     * @param _instanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * 设置Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * @param _instanceId Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -235,55 +243,57 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+                     * Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Instance billing mode.
+                     * Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Unit of time for instance renewal.
+                     * Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Currency.
+                     * Currency type. Valid values:
+<li>CNY: RMB</li>
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
 
                     /**
-                     * Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
                      */
                     Placement m_placement;
                     bool m_placementHasBeenSet;
 
                     /**
-                     * Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     * Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
                      */
                     int64_t m_modifyPayMode;
                     bool m_modifyPayModeHasBeenSet;
 
                     /**
-                     * Whether the renewal price for every node is required.
+                     * Whether to return the renewal price for each node.
                      */
                     bool m_needDetail;
                     bool m_needDetailHasBeenSet;
 
                     /**
-                     * Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

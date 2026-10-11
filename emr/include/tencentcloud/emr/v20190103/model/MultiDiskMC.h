@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-cloud disk parameters
+                * Multi-cloud disk parameter.
                 */
                 class MultiDiskMC : public AbstractModel
                 {
@@ -69,62 +69,62 @@ namespace TencentCloud
 
                     /**
                      * 获取Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
                      * @return Type Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
                      * @param _type Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -188,18 +188,18 @@ namespace TencentCloud
 
                     /**
                      * Disk type.
-1: Local Disk.
-2: Cloud Disk.
-3: Local SSD.
-4: Cloud SSD.
-5: Premium Cloud Disk.
-6: Enhanced SSD.
-11: Throughput HDD.
-12: Tremendous SSD.
-13: Balanced SSD.
-14: Big Data Cloud Disk.
-15: High IO Cloud Disk.
-16: Remote SSD.
+1: Local Basic Disk
+2: Cloud Basic Disk
+3: Local SSD
+4: Cloud SSD
+5: Premium Disk
+6: Enhanced SSD
+11: Throughput-Optimized Cloud Disk
+12: Tremendous SSD
+13: Balanced SSD
+14: Big Data Cloud Disk
+15: High-IO Cloud Disk
+16: Remote SSD Disk
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;

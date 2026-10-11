@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/DescribeNodeSpec.h>
+#include <tencentcloud/emr/v20190103/model/ArchitectureInfo.h>
 
 
 namespace TencentCloud
@@ -45,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node specification type.
-                     * @return NodeSpecs Node specification type.
+                     * 获取<p>Node specifications type.</p>
+                     * @return NodeSpecs <p>Node specifications type.</p>
                      * 
                      */
                     std::vector<DescribeNodeSpec> GetNodeSpecs() const;
@@ -58,13 +59,33 @@ namespace TencentCloud
                      */
                     bool NodeSpecsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Instance type architecture information.</p>
+                     * @return Architectures <p>Instance type architecture information.</p>
+                     * 
+                     */
+                    std::vector<ArchitectureInfo> GetArchitectures() const;
+
+                    /**
+                     * 判断参数 Architectures 是否已赋值
+                     * @return Architectures 是否已赋值
+                     * 
+                     */
+                    bool ArchitecturesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Node specification type.
+                     * <p>Node specifications type.</p>
                      */
                     std::vector<DescribeNodeSpec> m_nodeSpecs;
                     bool m_nodeSpecsHasBeenSet;
+
+                    /**
+                     * <p>Instance type architecture information.</p>
+                     */
+                    std::vector<ArchitectureInfo> m_architectures;
+                    bool m_architecturesHasBeenSet;
 
                 };
             }

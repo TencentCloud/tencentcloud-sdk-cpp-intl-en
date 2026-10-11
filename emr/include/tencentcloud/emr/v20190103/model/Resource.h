@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/MultiDisk.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
+#include <tencentcloud/emr/v20190103/model/GpuImageDriverSpec.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource details
+                * Resource details.
                 */
                 class Resource : public AbstractModel
                 {
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node specifications description, such as CVM.SA2.
-                     * @return Spec Node specifications description, such as CVM.SA2.
+                     * 获取<p>Node specification description, such as CVM.SA2.</p>
+                     * @return Spec <p>Node specification description, such as CVM.SA2.</p>
                      * 
                      */
                     std::string GetSpec() const;
 
                     /**
-                     * 设置Node specifications description, such as CVM.SA2.
-                     * @param _spec Node specifications description, such as CVM.SA2.
+                     * 设置<p>Node specification description, such as CVM.SA2.</p>
+                     * @param _spec <p>Node specification description, such as CVM.SA2.</p>
                      * 
                      */
                     void SetSpec(const std::string& _spec);
@@ -70,39 +71,15 @@ namespace TencentCloud
                     bool SpecHasBeenSet() const;
 
                     /**
-                     * 获取Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
-                     * @return StorageType Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+                     * 获取<p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
+                     * @return StorageType <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
                      * 
                      */
                     int64_t GetStorageType() const;
 
                     /**
-                     * 设置Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
-                     * @param _storageType Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+                     * 设置<p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
+                     * @param _storageType <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
                      * 
                      */
                     void SetStorageType(const int64_t& _storageType);
@@ -115,31 +92,15 @@ Valid values:
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-                     * @return DiskType Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+                     * 获取<p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
+                     * @return DiskType <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-                     * @param _diskType Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+                     * 设置<p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
+                     * @param _diskType <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -152,15 +113,15 @@ Valid values.
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Memory capacity, in MB.
-                     * @return MemSize Memory capacity, in MB.
+                     * 获取<p>Memory capacity (MB).</p>
+                     * @return MemSize <p>Memory capacity (MB).</p>
                      * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
-                     * 设置Memory capacity, in MB.
-                     * @param _memSize Memory capacity, in MB.
+                     * 设置<p>Memory capacity (MB).</p>
+                     * @param _memSize <p>Memory capacity (MB).</p>
                      * 
                      */
                     void SetMemSize(const int64_t& _memSize);
@@ -173,15 +134,15 @@ Valid values.
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores.
-                     * @return Cpu Number of CPU cores.
+                     * 获取<p>Number of CPU cores.</p>
+                     * @return Cpu <p>Number of CPU cores.</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores.
-                     * @param _cpu Number of CPU cores.
+                     * 设置<p>Number of CPU cores.</p>
+                     * @param _cpu <p>Number of CPU cores.</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -194,15 +155,15 @@ Valid values.
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Data disk capacity.
-                     * @return DiskSize Data disk capacity.
+                     * 获取<p>Data disk capacity.</p>
+                     * @return DiskSize <p>Data disk capacity.</p>
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Data disk capacity.
-                     * @param _diskSize Data disk capacity.
+                     * 设置<p>Data disk capacity.</p>
+                     * @param _diskSize <p>Data disk capacity.</p>
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -215,15 +176,15 @@ Valid values.
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取System disk capacity.
-                     * @return RootSize System disk capacity.
+                     * 获取<p>System disk capacity.</p>
+                     * @return RootSize <p>System disk capacity.</p>
                      * 
                      */
                     int64_t GetRootSize() const;
 
                     /**
-                     * 设置System disk capacity.
-                     * @param _rootSize System disk capacity.
+                     * 设置<p>System disk capacity.</p>
+                     * @param _rootSize <p>System disk capacity.</p>
                      * 
                      */
                     void SetRootSize(const int64_t& _rootSize);
@@ -236,19 +197,15 @@ Valid values.
                     bool RootSizeHasBeenSet() const;
 
                     /**
-                     * 获取List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MultiDisks List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
+                     * @return MultiDisks <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
                      * 
                      */
                     std::vector<MultiDisk> GetMultiDisks() const;
 
                     /**
-                     * 设置List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _multiDisks List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
+                     * @param _multiDisks <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
                      * 
                      */
                     void SetMultiDisks(const std::vector<MultiDisk>& _multiDisks);
@@ -261,19 +218,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MultiDisksHasBeenSet() const;
 
                     /**
-                     * 获取List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Tags List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>List of tags to be bound.</p>
+                     * @return Tags <p>List of tags to be bound.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _tags List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>List of tags to be bound.</p>
+                     * @param _tags <p>List of tags to be bound.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -286,15 +239,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Specifications type, such as S2.MEDIUM8.
-                     * @return InstanceType Specifications type, such as S2.MEDIUM8.
+                     * 获取<p>Specifications type, such as S2.MEDIUM8.</p>
+                     * @return InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Specifications type, such as S2.MEDIUM8.
-                     * @param _instanceType Specifications type, such as S2.MEDIUM8.
+                     * 设置<p>Specifications type, such as S2.MEDIUM8.</p>
+                     * @param _instanceType <p>Specifications type, such as S2.MEDIUM8.</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -307,15 +260,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of local disks. This field is deprecated.
-                     * @return LocalDiskNum Number of local disks. This field is deprecated.
+                     * 获取<p>Number of local disks. This field has been deprecated.</p>
+                     * @return LocalDiskNum <p>Number of local disks. This field has been deprecated.</p>
                      * 
                      */
                     uint64_t GetLocalDiskNum() const;
 
                     /**
-                     * 设置Number of local disks. This field is deprecated.
-                     * @param _localDiskNum Number of local disks. This field is deprecated.
+                     * 设置<p>Number of local disks. This field has been deprecated.</p>
+                     * @param _localDiskNum <p>Number of local disks. This field has been deprecated.</p>
                      * 
                      */
                     void SetLocalDiskNum(const uint64_t& _localDiskNum);
@@ -328,15 +281,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LocalDiskNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of local disks, such as 2.
-                     * @return DiskNum Number of local disks, such as 2.
+                     * 获取<p>Number of local disks, such as 2.</p>
+                     * @return DiskNum <p>Number of local disks, such as 2.</p>
                      * 
                      */
                     uint64_t GetDiskNum() const;
 
                     /**
-                     * 设置Number of local disks, such as 2.
-                     * @param _diskNum Number of local disks, such as 2.
+                     * 设置<p>Number of local disks, such as 2.</p>
+                     * @param _diskNum <p>Number of local disks, such as 2.</p>
                      * 
                      */
                     void SetDiskNum(const uint64_t& _diskNum);
@@ -349,15 +302,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DiskNumHasBeenSet() const;
 
                     /**
-                     * 获取GPU information.
-                     * @return GpuDesc GPU information.
+                     * 获取<p>GPU information.</p>
+                     * @return GpuDesc <p>GPU information.</p>
                      * 
                      */
                     std::string GetGpuDesc() const;
 
                     /**
-                     * 设置GPU information.
-                     * @param _gpuDesc GPU information.
+                     * 设置<p>GPU information.</p>
+                     * @param _gpuDesc <p>GPU information.</p>
                      * 
                      */
                     void SetGpuDesc(const std::string& _gpuDesc);
@@ -369,97 +322,193 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool GpuDescHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Number of partitions in a placement group.</p>
+                     * @return PartitionNumber <p>Number of partitions in a placement group.</p>
+                     * 
+                     */
+                    int64_t GetPartitionNumber() const;
+
+                    /**
+                     * 设置<p>Number of partitions in a placement group.</p>
+                     * @param _partitionNumber <p>Number of partitions in a placement group.</p>
+                     * 
+                     */
+                    void SetPartitionNumber(const int64_t& _partitionNumber);
+
+                    /**
+                     * 判断参数 PartitionNumber 是否已赋值
+                     * @return PartitionNumber 是否已赋值
+                     * 
+                     */
+                    bool PartitionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取<p>High-performance cluster ID.</p>
+                     * @return HCCHpcClusterId <p>High-performance cluster ID.</p>
+                     * 
+                     */
+                    std::string GetHCCHpcClusterId() const;
+
+                    /**
+                     * 设置<p>High-performance cluster ID.</p>
+                     * @param _hCCHpcClusterId <p>High-performance cluster ID.</p>
+                     * 
+                     */
+                    void SetHCCHpcClusterId(const std::string& _hCCHpcClusterId);
+
+                    /**
+                     * 判断参数 HCCHpcClusterId 是否已赋值
+                     * @return HCCHpcClusterId 是否已赋值
+                     * 
+                     */
+                    bool HCCHpcClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Custom hostname.</p>
+                     * @return CustomNodeName <p>Custom hostname.</p>
+                     * 
+                     */
+                    std::string GetCustomNodeName() const;
+
+                    /**
+                     * 设置<p>Custom hostname.</p>
+                     * @param _customNodeName <p>Custom hostname.</p>
+                     * 
+                     */
+                    void SetCustomNodeName(const std::string& _customNodeName);
+
+                    /**
+                     * 判断参数 CustomNodeName 是否已赋值
+                     * @return CustomNodeName 是否已赋值
+                     * 
+                     */
+                    bool CustomNodeNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>GPU image driver configuration.</p>
+                     * @return GpuImageDriver <p>GPU image driver configuration.</p>
+                     * 
+                     */
+                    GpuImageDriverSpec GetGpuImageDriver() const;
+
+                    /**
+                     * 设置<p>GPU image driver configuration.</p>
+                     * @param _gpuImageDriver <p>GPU image driver configuration.</p>
+                     * 
+                     */
+                    void SetGpuImageDriver(const GpuImageDriverSpec& _gpuImageDriver);
+
+                    /**
+                     * 判断参数 GpuImageDriver 是否已赋值
+                     * @return GpuImageDriver 是否已赋值
+                     * 
+                     */
+                    bool GpuImageDriverHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Node specifications description, such as CVM.SA2.
+                     * <p>Node specification description, such as CVM.SA2.</p>
                      */
                     std::string m_spec;
                     bool m_specHasBeenSet;
 
                     /**
-                     * Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+                     * <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
                      */
                     int64_t m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+                     * <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Memory capacity, in MB.
+                     * <p>Memory capacity (MB).</p>
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Number of CPU cores.
+                     * <p>Number of CPU cores.</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Data disk capacity.
+                     * <p>Data disk capacity.</p>
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * System disk capacity.
+                     * <p>System disk capacity.</p>
                      */
                     int64_t m_rootSize;
                     bool m_rootSizeHasBeenSet;
 
                     /**
-                     * List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
                      */
                     std::vector<MultiDisk> m_multiDisks;
                     bool m_multiDisksHasBeenSet;
 
                     /**
-                     * List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>List of tags to be bound.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Specifications type, such as S2.MEDIUM8.
+                     * <p>Specifications type, such as S2.MEDIUM8.</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Number of local disks. This field is deprecated.
+                     * <p>Number of local disks. This field has been deprecated.</p>
                      */
                     uint64_t m_localDiskNum;
                     bool m_localDiskNumHasBeenSet;
 
                     /**
-                     * Number of local disks, such as 2.
+                     * <p>Number of local disks, such as 2.</p>
                      */
                     uint64_t m_diskNum;
                     bool m_diskNumHasBeenSet;
 
                     /**
-                     * GPU information.
+                     * <p>GPU information.</p>
                      */
                     std::string m_gpuDesc;
                     bool m_gpuDescHasBeenSet;
+
+                    /**
+                     * <p>Number of partitions in a placement group.</p>
+                     */
+                    int64_t m_partitionNumber;
+                    bool m_partitionNumberHasBeenSet;
+
+                    /**
+                     * <p>High-performance cluster ID.</p>
+                     */
+                    std::string m_hCCHpcClusterId;
+                    bool m_hCCHpcClusterIdHasBeenSet;
+
+                    /**
+                     * <p>Custom hostname.</p>
+                     */
+                    std::string m_customNodeName;
+                    bool m_customNodeNameHasBeenSet;
+
+                    /**
+                     * <p>GPU image driver configuration.</p>
+                     */
+                    GpuImageDriverSpec m_gpuImageDriver;
+                    bool m_gpuImageDriverHasBeenSet;
 
                 };
             }

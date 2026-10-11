@@ -43,19 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @return TimeUnit Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 获取<p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @return TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @param _timeUnit Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 设置<p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+                     * @param _timeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -68,19 +64,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-                     * @return TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 获取<p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+                     * @return TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-                     * @param _timeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 设置<p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+                     * @param _timeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -93,15 +85,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取ID of the AZ where an instance resides.
-                     * @return ZoneId ID of the AZ where an instance resides.
+                     * 获取<p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+                     * @return ZoneId <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置ID of the AZ where an instance resides.
-                     * @param _zoneId ID of the AZ where an instance resides.
+                     * 设置<p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+                     * @param _zoneId <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
                      * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
@@ -114,19 +106,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-                     * @return PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+                     * 获取<p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+                     * @return PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
-                     * 设置Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-                     * @param _payMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+                     * 设置<p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+                     * @param _payMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -139,15 +127,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -160,15 +148,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of core nodes to be added.
-                     * @return CoreCount Number of core nodes to be added.
+                     * 获取<p>Number of Core nodes to be scaled out.</p>
+                     * @return CoreCount <p>Number of Core nodes to be scaled out.</p>
                      * 
                      */
                     uint64_t GetCoreCount() const;
 
                     /**
-                     * 设置Number of core nodes to be added.
-                     * @param _coreCount Number of core nodes to be added.
+                     * 设置<p>Number of Core nodes to be scaled out.</p>
+                     * @param _coreCount <p>Number of Core nodes to be scaled out.</p>
                      * 
                      */
                     void SetCoreCount(const uint64_t& _coreCount);
@@ -181,15 +169,15 @@ namespace TencentCloud
                     bool CoreCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of task nodes to be added.
-                     * @return TaskCount Number of task nodes to be added.
+                     * 获取<p>Number of Task nodes to be scaled out.</p>
+                     * @return TaskCount <p>Number of Task nodes to be scaled out.</p>
                      * 
                      */
                     uint64_t GetTaskCount() const;
 
                     /**
-                     * 设置Number of task nodes to be added.
-                     * @param _taskCount Number of task nodes to be added.
+                     * 设置<p>Number of Task nodes to be scaled out.</p>
+                     * @param _taskCount <p>Number of Task nodes to be scaled out.</p>
                      * 
                      */
                     void SetTaskCount(const uint64_t& _taskCount);
@@ -202,15 +190,15 @@ namespace TencentCloud
                     bool TaskCountHasBeenSet() const;
 
                     /**
-                     * 获取Currency.
-                     * @return Currency Currency.
+                     * 获取<p>Currency type. Valid values:</p><li>CNY: RMB</li>
+                     * @return Currency <p>Currency type. Valid values:</p><li>CNY: RMB</li>
                      * 
                      */
                     std::string GetCurrency() const;
 
                     /**
-                     * 设置Currency.
-                     * @param _currency Currency.
+                     * 设置<p>Currency type. Valid values:</p><li>CNY: RMB</li>
+                     * @param _currency <p>Currency type. Valid values:</p><li>CNY: RMB</li>
                      * 
                      */
                     void SetCurrency(const std::string& _currency);
@@ -223,15 +211,15 @@ namespace TencentCloud
                     bool CurrencyHasBeenSet() const;
 
                     /**
-                     * 获取Number of router nodes to be added.
-                     * @return RouterCount Number of router nodes to be added.
+                     * 获取<p>Number of Router nodes to be scaled out.</p>
+                     * @return RouterCount <p>Number of Router nodes to be scaled out.</p>
                      * 
                      */
                     uint64_t GetRouterCount() const;
 
                     /**
-                     * 设置Number of router nodes to be added.
-                     * @param _routerCount Number of router nodes to be added.
+                     * 设置<p>Number of Router nodes to be scaled out.</p>
+                     * @param _routerCount <p>Number of Router nodes to be scaled out.</p>
                      * 
                      */
                     void SetRouterCount(const uint64_t& _routerCount);
@@ -244,15 +232,15 @@ namespace TencentCloud
                     bool RouterCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of master nodes to be added.
-                     * @return MasterCount Number of master nodes to be added.
+                     * 获取<p>Number of Master nodes to be scaled out.</p>
+                     * @return MasterCount <p>Number of Master nodes to be scaled out.</p>
                      * 
                      */
                     uint64_t GetMasterCount() const;
 
                     /**
-                     * 设置Number of master nodes to be added.
-                     * @param _masterCount Number of master nodes to be added.
+                     * 设置<p>Number of Master nodes to be scaled out.</p>
+                     * @param _masterCount <p>Number of Master nodes to be scaled out.</p>
                      * 
                      */
                     void SetMasterCount(const uint64_t& _masterCount);
@@ -265,15 +253,15 @@ namespace TencentCloud
                     bool MasterCountHasBeenSet() const;
 
                     /**
-                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 获取<p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+                     * @return ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
                      * 
                      */
                     std::string GetResourceBaseType() const;
 
                     /**
-                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 设置<p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+                     * @param _resourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
                      * 
                      */
                     void SetResourceBaseType(const std::string& _resourceBaseType);
@@ -286,15 +274,15 @@ namespace TencentCloud
                     bool ResourceBaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Computing resource ID.
-                     * @return ComputeResourceId Computing resource ID.
+                     * 获取<p>Computing resource ID.</p>
+                     * @return ComputeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     std::string GetComputeResourceId() const;
 
                     /**
-                     * 设置Computing resource ID.
-                     * @param _computeResourceId Computing resource ID.
+                     * 设置<p>Computing resource ID.</p>
+                     * @param _computeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     void SetComputeResourceId(const std::string& _computeResourceId);
@@ -307,15 +295,15 @@ namespace TencentCloud
                     bool ComputeResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Scale-out resource type.
-                     * @return HardwareResourceType Scale-out resource type.
+                     * 获取<p>Scale-out resource type.</p>
+                     * @return HardwareResourceType <p>Scale-out resource type.</p>
                      * 
                      */
                     std::string GetHardwareResourceType() const;
 
                     /**
-                     * 设置Scale-out resource type.
-                     * @param _hardwareResourceType Scale-out resource type.
+                     * 设置<p>Scale-out resource type.</p>
+                     * @param _hardwareResourceType <p>Scale-out resource type.</p>
                      * 
                      */
                     void SetHardwareResourceType(const std::string& _hardwareResourceType);
@@ -327,88 +315,112 @@ namespace TencentCloud
                      */
                     bool HardwareResourceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Node group ID.</p>
+                     * @return NodeGroupId <p>Node group ID.</p>
+                     * 
+                     */
+                    std::string GetNodeGroupId() const;
+
+                    /**
+                     * 设置<p>Node group ID.</p>
+                     * @param _nodeGroupId <p>Node group ID.</p>
+                     * 
+                     */
+                    void SetNodeGroupId(const std::string& _nodeGroupId);
+
+                    /**
+                     * 判断参数 NodeGroupId 是否已赋值
+                     * @return NodeGroupId 是否已赋值
+                     * 
+                     */
+                    bool NodeGroupIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * ID of the AZ where an instance resides.
+                     * <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+                     * <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Number of core nodes to be added.
+                     * <p>Number of Core nodes to be scaled out.</p>
                      */
                     uint64_t m_coreCount;
                     bool m_coreCountHasBeenSet;
 
                     /**
-                     * Number of task nodes to be added.
+                     * <p>Number of Task nodes to be scaled out.</p>
                      */
                     uint64_t m_taskCount;
                     bool m_taskCountHasBeenSet;
 
                     /**
-                     * Currency.
+                     * <p>Currency type. Valid values:</p><li>CNY: RMB</li>
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
 
                     /**
-                     * Number of router nodes to be added.
+                     * <p>Number of Router nodes to be scaled out.</p>
                      */
                     uint64_t m_routerCount;
                     bool m_routerCountHasBeenSet;
 
                     /**
-                     * Number of master nodes to be added.
+                     * <p>Number of Master nodes to be scaled out.</p>
                      */
                     uint64_t m_masterCount;
                     bool m_masterCountHasBeenSet;
 
                     /**
-                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
                      */
                     std::string m_resourceBaseType;
                     bool m_resourceBaseTypeHasBeenSet;
 
                     /**
-                     * Computing resource ID.
+                     * <p>Computing resource ID.</p>
                      */
                     std::string m_computeResourceId;
                     bool m_computeResourceIdHasBeenSet;
 
                     /**
-                     * Scale-out resource type.
+                     * <p>Scale-out resource type.</p>
                      */
                     std::string m_hardwareResourceType;
                     bool m_hardwareResourceTypeHasBeenSet;
+
+                    /**
+                     * <p>Node group ID.</p>
+                     */
+                    std::string m_nodeGroupId;
+                    bool m_nodeGroupIdHasBeenSet;
 
                 };
             }

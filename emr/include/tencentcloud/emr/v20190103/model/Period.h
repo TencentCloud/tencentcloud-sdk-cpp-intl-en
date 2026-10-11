@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Serverless HBase monthly subscription duration
+                * Serverless HBase monthly subscription duration.
                 */
                 class Period : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Time unit, "m" stands for month.
-                     * @return TimeUnit Time unit, "m" stands for month.
+                     * 获取Time unit. "m" stands for month(s).
+                     * @return TimeUnit Time unit. "m" stands for month(s).
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Time unit, "m" stands for month.
-                     * @param _timeUnit Time unit, "m" stands for month.
+                     * 设置Time unit. "m" stands for month(s).
+                     * @param _timeUnit Time unit. "m" stands for month(s).
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Time unit, "m" stands for month.
+                     * Time unit. "m" stands for month(s).
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;

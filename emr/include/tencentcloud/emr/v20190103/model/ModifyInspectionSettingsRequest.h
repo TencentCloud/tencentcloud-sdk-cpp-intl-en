@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Inspection type, FixedTime or RealTime.
-                     * @return Type Inspection type, FixedTime or RealTime.
+                     * 获取Inspection type. Valid values: FixedTime and RealTime.
+                     * @return Type Inspection type. Valid values: FixedTime and RealTime.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Inspection type, FixedTime or RealTime.
-                     * @param _type Inspection type, FixedTime or RealTime.
+                     * 设置Inspection type. Valid values: FixedTime and RealTime.
+                     * @param _type Inspection type. Valid values: FixedTime and RealTime.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Task configurations.
-                     * @return Settings Task configurations.
+                     * 获取Task configuration.
+                     * @return Settings Task configuration.
                      * 
                      */
                     std::vector<InspectionTaskSettings> GetSettings() const;
 
                     /**
-                     * 设置Task configurations.
-                     * @param _settings Task configurations.
+                     * 设置Task configuration.
+                     * @param _settings Task configuration.
                      * 
                      */
                     void SetSettings(const std::vector<InspectionTaskSettings>& _settings);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool DayOfWeekHasBeenSet() const;
 
                     /**
-                     * 获取Number of the day in a month.
-                     * @return DayOfMonth Number of the day in a month.
+                     * 获取Day of the month.
+                     * @return DayOfMonth Day of the month.
                      * 
                      */
                     std::string GetDayOfMonth() const;
 
                     /**
-                     * 设置Number of the day in a month.
-                     * @param _dayOfMonth Number of the day in a month.
+                     * 设置Day of the month.
+                     * @param _dayOfMonth Day of the month.
                      * 
                      */
                     void SetDayOfMonth(const std::string& _dayOfMonth);
@@ -262,13 +262,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Inspection type, FixedTime or RealTime.
+                     * Inspection type. Valid values: FixedTime and RealTime.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Task configurations.
+                     * Task configuration.
                      */
                     std::vector<InspectionTaskSettings> m_settings;
                     bool m_settingsHasBeenSet;
@@ -304,7 +304,7 @@ namespace TencentCloud
                     bool m_dayOfWeekHasBeenSet;
 
                     /**
-                     * Number of the day in a month.
+                     * Day of the month.
                      */
                     std::string m_dayOfMonth;
                     bool m_dayOfMonthHasBeenSet;

@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Description key-value pair filter, which is used for conditional filtering queries.
-                     * @return Filters Description key-value pair filter, which is used for conditional filtering queries.
+                     * 获取Description key-value pair filter, which is used for conditional filter queries.
+                     * @return Filters Description key-value pair filter, which is used for conditional filter queries.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Description key-value pair filter, which is used for conditional filtering queries.
-                     * @param _filters Description key-value pair filter, which is used for conditional filtering queries.
+                     * 设置Description key-value pair filter, which is used for conditional filter queries.
+                     * @param _filters Description key-value pair filter, which is used for conditional filter queries.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool OrderFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Number of returns.
-                     * @return Limit Number of returns.
+                     * 获取Number of returned items.
+                     * @return Limit Number of returned items.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returns.
-                     * @param _limit Number of returns.
+                     * 设置Number of returned items.
+                     * @param _limit Number of returned items.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -158,7 +158,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Description key-value pair filter, which is used for conditional filtering queries.
+                     * Description key-value pair filter, which is used for conditional filter queries.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -170,7 +170,7 @@ namespace TencentCloud
                     bool m_orderFieldsHasBeenSet;
 
                     /**
-                     * Number of returns.
+                     * Number of returned items.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

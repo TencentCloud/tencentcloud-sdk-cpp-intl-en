@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CatalogHasBeenSet() const;
 
                     /**
-                     * 获取IP address used for submission.
-                     * @return ClientIpAddr IP address used for submission.
+                     * 获取Submission IP address.
+                     * @return ClientIpAddr Submission IP address.
                      * 
                      */
                     std::string GetClientIpAddr() const;
 
                     /**
-                     * 设置IP address used for submission.
-                     * @param _clientIpAddr IP address used for submission.
+                     * 设置Submission IP address.
+                     * @param _clientIpAddr Submission IP address.
                      * 
                      */
                     void SetClientIpAddr(const std::string& _clientIpAddr);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DurationMillisHasBeenSet() const;
 
                     /**
-                     * 获取End time (seconds).
-                     * @return EndTime End time (seconds).
+                     * 获取End time (s).
+                     * @return EndTime End time (s).
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time (seconds).
-                     * @param _endTime End time (seconds).
+                     * 设置End time (s).
+                     * @param _endTime End time (s).
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool SqlCompileTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time (seconds).
-                     * @return StartTime Start time (seconds).
+                     * 获取Start time (s).
+                     * @return StartTime Start time (s).
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time (seconds).
-                     * @param _startTime Start time (seconds).
+                     * 设置Start time (s).
+                     * @param _startTime Start time (s).
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool StatementHasBeenSet() const;
 
                     /**
-                     * 获取User who submits requests.
-                     * @return User User who submits requests.
+                     * 获取Submission user.
+                     * @return User Submission user.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置User who submits requests.
-                     * @param _user User who submits requests.
+                     * 设置Submission user.
+                     * @param _user Submission user.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -445,6 +445,27 @@ namespace TencentCloud
                      */
                     bool WrittenBytesHasBeenSet() const;
 
+                    /**
+                     * 获取Error log.
+                     * @return ErrorMessage Error log.
+                     * 
+                     */
+                    std::string GetErrorMessage() const;
+
+                    /**
+                     * 设置Error log.
+                     * @param _errorMessage Error log.
+                     * 
+                     */
+                    void SetErrorMessage(const std::string& _errorMessage);
+
+                    /**
+                     * 判断参数 ErrorMessage 是否已赋值
+                     * @return ErrorMessage 是否已赋值
+                     * 
+                     */
+                    bool ErrorMessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -454,7 +475,7 @@ namespace TencentCloud
                     bool m_catalogHasBeenSet;
 
                     /**
-                     * IP address used for submission.
+                     * Submission IP address.
                      */
                     std::string m_clientIpAddr;
                     bool m_clientIpAddrHasBeenSet;
@@ -484,7 +505,7 @@ namespace TencentCloud
                     bool m_durationMillisHasBeenSet;
 
                     /**
-                     * End time (seconds).
+                     * End time (s).
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -532,7 +553,7 @@ namespace TencentCloud
                     bool m_sqlCompileTimeHasBeenSet;
 
                     /**
-                     * Start time (seconds).
+                     * Start time (s).
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -550,7 +571,7 @@ namespace TencentCloud
                     bool m_statementHasBeenSet;
 
                     /**
-                     * User who submits requests.
+                     * Submission user.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
@@ -560,6 +581,12 @@ namespace TencentCloud
                      */
                     int64_t m_writtenBytes;
                     bool m_writtenBytesHasBeenSet;
+
+                    /**
+                     * Error log.
+                     */
+                    std::string m_errorMessage;
+                    bool m_errorMessageHasBeenSet;
 
                 };
             }

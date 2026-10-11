@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cwp/v20180228/model/AddLoginWhiteListsRequest.h>
 #include <tencentcloud/cwp/v20180228/model/AddLoginWhiteListsResponse.h>
+#include <tencentcloud/cwp/v20180228/model/AddVulIgnoreRuleRequest.h>
+#include <tencentcloud/cwp/v20180228/model/AddVulIgnoreRuleResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ChangeRuleEventsIgnoreStatusRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ChangeRuleEventsIgnoreStatusResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ChangeStrategyEnableStatusRequest.h>
@@ -61,6 +63,8 @@
 #include <tencentcloud/cwp/v20180228/model/CreateMalwareWhiteListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/CreateNetAttackWhiteListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/CreateNetAttackWhiteListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/CreateProtectServerRequest.h>
+#include <tencentcloud/cwp/v20180228/model/CreateProtectServerResponse.h>
 #include <tencentcloud/cwp/v20180228/model/CreateRansomDefenseStrategyRequest.h>
 #include <tencentcloud/cwp/v20180228/model/CreateRansomDefenseStrategyResponse.h>
 #include <tencentcloud/cwp/v20180228/model/CreateScanMalwareSettingRequest.h>
@@ -79,8 +83,14 @@
 #include <tencentcloud/cwp/v20180228/model/DeleteBanWhiteListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBaselinePolicyRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBaselinePolicyResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteBaselineRuleRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteBaselineRuleResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteBaselineRuleIgnoreRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteBaselineRuleIgnoreResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBaselineStrategyRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBaselineStrategyResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteBaselineWeakPasswordRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteBaselineWeakPasswordResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBashEventsRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBashEventsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteBashPoliciesRequest.h>
@@ -121,6 +131,8 @@
 #include <tencentcloud/cwp/v20180228/model/DeletePrivilegeEventsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeletePrivilegeRulesRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DeletePrivilegeRulesResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteProtectDirRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteProtectDirResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteRaspRulesRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteRaspRulesResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteReverseShellEventsRequest.h>
@@ -143,6 +155,8 @@
 #include <tencentcloud/cwp/v20180228/model/DeleteWebHookReceiverResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteWebHookRuleRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DeleteWebHookRuleResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteWebPageEventLogRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DeleteWebPageEventLogResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeABTestConfigRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeABTestConfigResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeAESKeyRequest.h>
@@ -269,28 +283,56 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeBanStatusResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBanWhiteListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBanWhiteListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineAnalysisDataRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineAnalysisDataResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineBasicInfoRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineBasicInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineDefaultStrategyListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineDefaultStrategyListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineDetailRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineDetailResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineDetectListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineDetectListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineDetectOverviewRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineDetectOverviewResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineDownloadListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineDownloadListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineEffectHostListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineEffectHostListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineFixListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineFixListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostDetectListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostDetectListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostIgnoreListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostIgnoreListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostRiskTopRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostRiskTopResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostTopRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineHostTopResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemDetectListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemDetectListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemIgnoreListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemIgnoreListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemInfoRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemRiskTopRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineItemRiskTopResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselinePolicyListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselinePolicyListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleCategoryListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleCategoryListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleDetectListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleDetectListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleIgnoreListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleIgnoreListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeBaselineRuleListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineScanScheduleRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineScanScheduleResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeBaselineStrategyDetailRequest.h>
@@ -365,6 +407,8 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeIgnoreHostAndItemConfigResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeIgnoreRuleEffectHostListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeIgnoreRuleEffectHostListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeImportMachineInfoRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeImportMachineInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeInjectRiskyServiceSwitchRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeInjectRiskyServiceSwitchResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeJavaMemShellInfoRequest.h>
@@ -427,6 +471,8 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineLicenseDetailRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineLicenseDetailResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeMachineListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeMachineListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineOsListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineOsListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineRegionListRequest.h>
@@ -475,6 +521,8 @@
 #include <tencentcloud/cwp/v20180228/model/DescribePatchInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribePrivilegeEventInfoRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribePrivilegeEventInfoResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribePrivilegeEventsRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribePrivilegeEventsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribePrivilegeRulesRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribePrivilegeRulesResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeProVersionInfoRequest.h>
@@ -485,6 +533,10 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeProcessStatisticsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeProductStatusRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeProductStatusResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeProtectDirListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeProtectDirListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeProtectDirRelatedServerRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeProtectDirRelatedServerResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribePublicProxyInstallCommandRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribePublicProxyInstallCommandResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeRansomDefenseBackupListRequest.h>
@@ -609,6 +661,8 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeSecurityEventsCntResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeSecurityTrendsRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeSecurityTrendsResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeServerRelatedDirInfoRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeServerRelatedDirInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeServersAndRiskAndFirstInfoRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeServersAndRiskAndFirstInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeShellPolicyListRequest.h>
@@ -701,6 +755,14 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeWebHookRuleResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeWebHookRulesRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeWebHookRulesResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageEventListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageEventListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageGeneralizeRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageGeneralizeResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageProtectStatRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageProtectStatResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageServiceInfoRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeWebPageServiceInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeWindowsPatchListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeWindowsPatchListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeYDRaspBlackWhiteRequest.h>
@@ -761,8 +823,14 @@
 #include <tencentcloud/cwp/v20180228/model/ExportBaselineHostDetectListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBaselineItemDetectListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBaselineItemDetectListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ExportBaselineItemListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ExportBaselineItemListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBaselineListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBaselineListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ExportBaselineRuleDetectListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ExportBaselineRuleDetectListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ExportBaselineWeakPasswordListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ExportBaselineWeakPasswordListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBashEventsRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBashEventsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportBashEventsNewRequest.h>
@@ -795,6 +863,8 @@
 #include <tencentcloud/cwp/v20180228/model/ExportPatchEffectHostListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportPrivilegeEventsRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportPrivilegeEventsResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ExportProtectDirListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ExportProtectDirListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportRansomDefenseBackupListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportRansomDefenseBackupListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportRansomDefenseEventsListRequest.h>
@@ -835,8 +905,12 @@
 #include <tencentcloud/cwp/v20180228/model/ExportVulInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportVulListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportVulListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ExportWebPageEventListRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ExportWebPageEventListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ExportWindowsPatchListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ExportWindowsPatchListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/FixBaselineDetectRequest.h>
+#include <tencentcloud/cwp/v20180228/model/FixBaselineDetectResponse.h>
 #include <tencentcloud/cwp/v20180228/model/GetLocalStorageItemRequest.h>
 #include <tencentcloud/cwp/v20180228/model/GetLocalStorageItemResponse.h>
 #include <tencentcloud/cwp/v20180228/model/KeysLocalStorageRequest.h>
@@ -851,6 +925,14 @@
 #include <tencentcloud/cwp/v20180228/model/ModifyBanWhiteListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyBaselinePolicyRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyBaselinePolicyResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselinePolicyStateRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselinePolicyStateResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselineRuleRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselineRuleResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselineRuleIgnoreRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselineRuleIgnoreResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselineWeakPasswordRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyBaselineWeakPasswordResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyBashPolicyRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyBashPolicyResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyBashPolicyStatusRequest.h>
@@ -873,6 +955,8 @@
 #include <tencentcloud/cwp/v20180228/model/ModifyLicenseBindsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyLicenseOrderRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyLicenseOrderResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyLicenseUnBindsRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyLicenseUnBindsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyLogKafkaAccessRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyLogKafkaAccessResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyLogKafkaDeliverTypeRequest.h>
@@ -887,6 +971,8 @@
 #include <tencentcloud/cwp/v20180228/model/ModifyLoginWhiteRecordResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyMachineAutoClearConfigRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyMachineAutoClearConfigResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyMachineRemarkRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyMachineRemarkResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyMaliciousRequestWhiteListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyMaliciousRequestWhiteListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyMalwareTimingScanSettingsRequest.h>
@@ -897,6 +983,8 @@
 #include <tencentcloud/cwp/v20180228/model/ModifyNetAttackSettingResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyNetAttackWhiteListRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyNetAttackWhiteListResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyOrderAttributeRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyOrderAttributeResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyRansomDefenseEventsStatusRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyRansomDefenseEventsStatusResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyRansomDefenseStrategyStatusRequest.h>
@@ -933,6 +1021,10 @@
 #include <tencentcloud/cwp/v20180228/model/ModifyWebHookRuleResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyWebHookRuleStatusRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyWebHookRuleStatusResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyWebPageProtectDirRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyWebPageProtectDirResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyWebPageProtectSettingRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ModifyWebPageProtectSettingResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyWebPageProtectSwitchRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ModifyWebPageProtectSwitchResponse.h>
 #include <tencentcloud/cwp/v20180228/model/RansomDefenseRollbackRequest.h>
@@ -949,6 +1041,8 @@
 #include <tencentcloud/cwp/v20180228/model/RetryCreateSnapshotResponse.h>
 #include <tencentcloud/cwp/v20180228/model/RetryVulFixRequest.h>
 #include <tencentcloud/cwp/v20180228/model/RetryVulFixResponse.h>
+#include <tencentcloud/cwp/v20180228/model/ScanAssetRequest.h>
+#include <tencentcloud/cwp/v20180228/model/ScanAssetResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ScanBaselineRequest.h>
 #include <tencentcloud/cwp/v20180228/model/ScanBaselineResponse.h>
 #include <tencentcloud/cwp/v20180228/model/ScanTaskAgainRequest.h>
@@ -1012,6 +1106,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddLoginWhiteListsResponse> AddLoginWhiteListsOutcome;
                 typedef std::future<AddLoginWhiteListsOutcome> AddLoginWhiteListsOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::AddLoginWhiteListsRequest&, AddLoginWhiteListsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddLoginWhiteListsAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddVulIgnoreRuleResponse> AddVulIgnoreRuleOutcome;
+                typedef std::future<AddVulIgnoreRuleOutcome> AddVulIgnoreRuleOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::AddVulIgnoreRuleRequest&, AddVulIgnoreRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddVulIgnoreRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ChangeRuleEventsIgnoreStatusResponse> ChangeRuleEventsIgnoreStatusOutcome;
                 typedef std::future<ChangeRuleEventsIgnoreStatusOutcome> ChangeRuleEventsIgnoreStatusOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ChangeRuleEventsIgnoreStatusRequest&, ChangeRuleEventsIgnoreStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChangeRuleEventsIgnoreStatusAsyncHandler;
@@ -1066,6 +1163,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateNetAttackWhiteListResponse> CreateNetAttackWhiteListOutcome;
                 typedef std::future<CreateNetAttackWhiteListOutcome> CreateNetAttackWhiteListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::CreateNetAttackWhiteListRequest&, CreateNetAttackWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetAttackWhiteListAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProtectServerResponse> CreateProtectServerOutcome;
+                typedef std::future<CreateProtectServerOutcome> CreateProtectServerOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::CreateProtectServerRequest&, CreateProtectServerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProtectServerAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRansomDefenseStrategyResponse> CreateRansomDefenseStrategyOutcome;
                 typedef std::future<CreateRansomDefenseStrategyOutcome> CreateRansomDefenseStrategyOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::CreateRansomDefenseStrategyRequest&, CreateRansomDefenseStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRansomDefenseStrategyAsyncHandler;
@@ -1093,9 +1193,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteBaselinePolicyResponse> DeleteBaselinePolicyOutcome;
                 typedef std::future<DeleteBaselinePolicyOutcome> DeleteBaselinePolicyOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DeleteBaselinePolicyRequest&, DeleteBaselinePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselinePolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBaselineRuleResponse> DeleteBaselineRuleOutcome;
+                typedef std::future<DeleteBaselineRuleOutcome> DeleteBaselineRuleOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DeleteBaselineRuleRequest&, DeleteBaselineRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselineRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBaselineRuleIgnoreResponse> DeleteBaselineRuleIgnoreOutcome;
+                typedef std::future<DeleteBaselineRuleIgnoreOutcome> DeleteBaselineRuleIgnoreOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DeleteBaselineRuleIgnoreRequest&, DeleteBaselineRuleIgnoreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselineRuleIgnoreAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteBaselineStrategyResponse> DeleteBaselineStrategyOutcome;
                 typedef std::future<DeleteBaselineStrategyOutcome> DeleteBaselineStrategyOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DeleteBaselineStrategyRequest&, DeleteBaselineStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselineStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBaselineWeakPasswordResponse> DeleteBaselineWeakPasswordOutcome;
+                typedef std::future<DeleteBaselineWeakPasswordOutcome> DeleteBaselineWeakPasswordOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DeleteBaselineWeakPasswordRequest&, DeleteBaselineWeakPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselineWeakPasswordAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteBashEventsResponse> DeleteBashEventsOutcome;
                 typedef std::future<DeleteBashEventsOutcome> DeleteBashEventsOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DeleteBashEventsRequest&, DeleteBashEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBashEventsAsyncHandler;
@@ -1156,6 +1265,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeletePrivilegeRulesResponse> DeletePrivilegeRulesOutcome;
                 typedef std::future<DeletePrivilegeRulesOutcome> DeletePrivilegeRulesOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DeletePrivilegeRulesRequest&, DeletePrivilegeRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrivilegeRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteProtectDirResponse> DeleteProtectDirOutcome;
+                typedef std::future<DeleteProtectDirOutcome> DeleteProtectDirOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DeleteProtectDirRequest&, DeleteProtectDirOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProtectDirAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRaspRulesResponse> DeleteRaspRulesOutcome;
                 typedef std::future<DeleteRaspRulesOutcome> DeleteRaspRulesOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DeleteRaspRulesRequest&, DeleteRaspRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRaspRulesAsyncHandler;
@@ -1189,6 +1301,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteWebHookRuleResponse> DeleteWebHookRuleOutcome;
                 typedef std::future<DeleteWebHookRuleOutcome> DeleteWebHookRuleOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DeleteWebHookRuleRequest&, DeleteWebHookRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWebHookRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteWebPageEventLogResponse> DeleteWebPageEventLogOutcome;
+                typedef std::future<DeleteWebPageEventLogOutcome> DeleteWebPageEventLogOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DeleteWebPageEventLogRequest&, DeleteWebPageEventLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWebPageEventLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeABTestConfigResponse> DescribeABTestConfigOutcome;
                 typedef std::future<DescribeABTestConfigOutcome> DescribeABTestConfigOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeABTestConfigRequest&, DescribeABTestConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeABTestConfigAsyncHandler;
@@ -1378,6 +1493,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBanWhiteListResponse> DescribeBanWhiteListOutcome;
                 typedef std::future<DescribeBanWhiteListOutcome> DescribeBanWhiteListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBanWhiteListRequest&, DescribeBanWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBanWhiteListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineAnalysisDataResponse> DescribeBaselineAnalysisDataOutcome;
+                typedef std::future<DescribeBaselineAnalysisDataOutcome> DescribeBaselineAnalysisDataOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineAnalysisDataRequest&, DescribeBaselineAnalysisDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineAnalysisDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineBasicInfoResponse> DescribeBaselineBasicInfoOutcome;
                 typedef std::future<DescribeBaselineBasicInfoOutcome> DescribeBaselineBasicInfoOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineBasicInfoRequest&, DescribeBaselineBasicInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineBasicInfoAsyncHandler;
@@ -1387,21 +1505,48 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBaselineDetailResponse> DescribeBaselineDetailOutcome;
                 typedef std::future<DescribeBaselineDetailOutcome> DescribeBaselineDetailOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineDetailRequest&, DescribeBaselineDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineDetectListResponse> DescribeBaselineDetectListOutcome;
+                typedef std::future<DescribeBaselineDetectListOutcome> DescribeBaselineDetectListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineDetectListRequest&, DescribeBaselineDetectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineDetectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineDetectOverviewResponse> DescribeBaselineDetectOverviewOutcome;
+                typedef std::future<DescribeBaselineDetectOverviewOutcome> DescribeBaselineDetectOverviewOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineDetectOverviewRequest&, DescribeBaselineDetectOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineDetectOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineDownloadListResponse> DescribeBaselineDownloadListOutcome;
+                typedef std::future<DescribeBaselineDownloadListOutcome> DescribeBaselineDownloadListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineDownloadListRequest&, DescribeBaselineDownloadListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineDownloadListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineEffectHostListResponse> DescribeBaselineEffectHostListOutcome;
                 typedef std::future<DescribeBaselineEffectHostListOutcome> DescribeBaselineEffectHostListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineEffectHostListRequest&, DescribeBaselineEffectHostListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineEffectHostListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineFixListResponse> DescribeBaselineFixListOutcome;
+                typedef std::future<DescribeBaselineFixListOutcome> DescribeBaselineFixListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineFixListRequest&, DescribeBaselineFixListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineFixListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineHostDetectListResponse> DescribeBaselineHostDetectListOutcome;
                 typedef std::future<DescribeBaselineHostDetectListOutcome> DescribeBaselineHostDetectListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineHostDetectListRequest&, DescribeBaselineHostDetectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineHostDetectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineHostIgnoreListResponse> DescribeBaselineHostIgnoreListOutcome;
+                typedef std::future<DescribeBaselineHostIgnoreListOutcome> DescribeBaselineHostIgnoreListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineHostIgnoreListRequest&, DescribeBaselineHostIgnoreListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineHostIgnoreListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineHostRiskTopResponse> DescribeBaselineHostRiskTopOutcome;
+                typedef std::future<DescribeBaselineHostRiskTopOutcome> DescribeBaselineHostRiskTopOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineHostRiskTopRequest&, DescribeBaselineHostRiskTopOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineHostRiskTopAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineHostTopResponse> DescribeBaselineHostTopOutcome;
                 typedef std::future<DescribeBaselineHostTopOutcome> DescribeBaselineHostTopOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineHostTopRequest&, DescribeBaselineHostTopOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineHostTopAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineItemDetectListResponse> DescribeBaselineItemDetectListOutcome;
                 typedef std::future<DescribeBaselineItemDetectListOutcome> DescribeBaselineItemDetectListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineItemDetectListRequest&, DescribeBaselineItemDetectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineItemDetectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineItemIgnoreListResponse> DescribeBaselineItemIgnoreListOutcome;
+                typedef std::future<DescribeBaselineItemIgnoreListOutcome> DescribeBaselineItemIgnoreListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineItemIgnoreListRequest&, DescribeBaselineItemIgnoreListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineItemIgnoreListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineItemInfoResponse> DescribeBaselineItemInfoOutcome;
+                typedef std::future<DescribeBaselineItemInfoOutcome> DescribeBaselineItemInfoOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineItemInfoRequest&, DescribeBaselineItemInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineItemInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineItemListResponse> DescribeBaselineItemListOutcome;
                 typedef std::future<DescribeBaselineItemListOutcome> DescribeBaselineItemListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineItemListRequest&, DescribeBaselineItemListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineItemListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineItemRiskTopResponse> DescribeBaselineItemRiskTopOutcome;
+                typedef std::future<DescribeBaselineItemRiskTopOutcome> DescribeBaselineItemRiskTopOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineItemRiskTopRequest&, DescribeBaselineItemRiskTopOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineItemRiskTopAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineListResponse> DescribeBaselineListOutcome;
                 typedef std::future<DescribeBaselineListOutcome> DescribeBaselineListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineListRequest&, DescribeBaselineListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineListAsyncHandler;
@@ -1411,6 +1556,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBaselineRuleResponse> DescribeBaselineRuleOutcome;
                 typedef std::future<DescribeBaselineRuleOutcome> DescribeBaselineRuleOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineRuleRequest&, DescribeBaselineRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineRuleCategoryListResponse> DescribeBaselineRuleCategoryListOutcome;
+                typedef std::future<DescribeBaselineRuleCategoryListOutcome> DescribeBaselineRuleCategoryListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineRuleCategoryListRequest&, DescribeBaselineRuleCategoryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineRuleCategoryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineRuleDetectListResponse> DescribeBaselineRuleDetectListOutcome;
+                typedef std::future<DescribeBaselineRuleDetectListOutcome> DescribeBaselineRuleDetectListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineRuleDetectListRequest&, DescribeBaselineRuleDetectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineRuleDetectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineRuleIgnoreListResponse> DescribeBaselineRuleIgnoreListOutcome;
+                typedef std::future<DescribeBaselineRuleIgnoreListOutcome> DescribeBaselineRuleIgnoreListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineRuleIgnoreListRequest&, DescribeBaselineRuleIgnoreListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineRuleIgnoreListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineRuleListResponse> DescribeBaselineRuleListOutcome;
+                typedef std::future<DescribeBaselineRuleListOutcome> DescribeBaselineRuleListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeBaselineRuleListRequest&, DescribeBaselineRuleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineRuleListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineScanScheduleResponse> DescribeBaselineScanScheduleOutcome;
                 typedef std::future<DescribeBaselineScanScheduleOutcome> DescribeBaselineScanScheduleOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeBaselineScanScheduleRequest&, DescribeBaselineScanScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineScanScheduleAsyncHandler;
@@ -1522,6 +1679,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIgnoreRuleEffectHostListResponse> DescribeIgnoreRuleEffectHostListOutcome;
                 typedef std::future<DescribeIgnoreRuleEffectHostListOutcome> DescribeIgnoreRuleEffectHostListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeIgnoreRuleEffectHostListRequest&, DescribeIgnoreRuleEffectHostListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIgnoreRuleEffectHostListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImportMachineInfoResponse> DescribeImportMachineInfoOutcome;
+                typedef std::future<DescribeImportMachineInfoOutcome> DescribeImportMachineInfoOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeImportMachineInfoRequest&, DescribeImportMachineInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImportMachineInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInjectRiskyServiceSwitchResponse> DescribeInjectRiskyServiceSwitchOutcome;
                 typedef std::future<DescribeInjectRiskyServiceSwitchOutcome> DescribeInjectRiskyServiceSwitchOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeInjectRiskyServiceSwitchRequest&, DescribeInjectRiskyServiceSwitchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInjectRiskyServiceSwitchAsyncHandler;
@@ -1615,6 +1775,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMachineLicenseDetailResponse> DescribeMachineLicenseDetailOutcome;
                 typedef std::future<DescribeMachineLicenseDetailOutcome> DescribeMachineLicenseDetailOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeMachineLicenseDetailRequest&, DescribeMachineLicenseDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineLicenseDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMachineListResponse> DescribeMachineListOutcome;
+                typedef std::future<DescribeMachineListOutcome> DescribeMachineListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeMachineListRequest&, DescribeMachineListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMachineOsListResponse> DescribeMachineOsListOutcome;
                 typedef std::future<DescribeMachineOsListOutcome> DescribeMachineOsListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeMachineOsListRequest&, DescribeMachineOsListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineOsListAsyncHandler;
@@ -1687,6 +1850,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePrivilegeEventInfoResponse> DescribePrivilegeEventInfoOutcome;
                 typedef std::future<DescribePrivilegeEventInfoOutcome> DescribePrivilegeEventInfoOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribePrivilegeEventInfoRequest&, DescribePrivilegeEventInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrivilegeEventInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrivilegeEventsResponse> DescribePrivilegeEventsOutcome;
+                typedef std::future<DescribePrivilegeEventsOutcome> DescribePrivilegeEventsOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribePrivilegeEventsRequest&, DescribePrivilegeEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrivilegeEventsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrivilegeRulesResponse> DescribePrivilegeRulesOutcome;
                 typedef std::future<DescribePrivilegeRulesOutcome> DescribePrivilegeRulesOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribePrivilegeRulesRequest&, DescribePrivilegeRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrivilegeRulesAsyncHandler;
@@ -1702,6 +1868,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProductStatusResponse> DescribeProductStatusOutcome;
                 typedef std::future<DescribeProductStatusOutcome> DescribeProductStatusOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeProductStatusRequest&, DescribeProductStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProductStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProtectDirListResponse> DescribeProtectDirListOutcome;
+                typedef std::future<DescribeProtectDirListOutcome> DescribeProtectDirListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeProtectDirListRequest&, DescribeProtectDirListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProtectDirListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProtectDirRelatedServerResponse> DescribeProtectDirRelatedServerOutcome;
+                typedef std::future<DescribeProtectDirRelatedServerOutcome> DescribeProtectDirRelatedServerOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeProtectDirRelatedServerRequest&, DescribeProtectDirRelatedServerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProtectDirRelatedServerAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePublicProxyInstallCommandResponse> DescribePublicProxyInstallCommandOutcome;
                 typedef std::future<DescribePublicProxyInstallCommandOutcome> DescribePublicProxyInstallCommandOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribePublicProxyInstallCommandRequest&, DescribePublicProxyInstallCommandOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublicProxyInstallCommandAsyncHandler;
@@ -1888,6 +2060,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSecurityTrendsResponse> DescribeSecurityTrendsOutcome;
                 typedef std::future<DescribeSecurityTrendsOutcome> DescribeSecurityTrendsOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeSecurityTrendsRequest&, DescribeSecurityTrendsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityTrendsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeServerRelatedDirInfoResponse> DescribeServerRelatedDirInfoOutcome;
+                typedef std::future<DescribeServerRelatedDirInfoOutcome> DescribeServerRelatedDirInfoOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeServerRelatedDirInfoRequest&, DescribeServerRelatedDirInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServerRelatedDirInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeServersAndRiskAndFirstInfoResponse> DescribeServersAndRiskAndFirstInfoOutcome;
                 typedef std::future<DescribeServersAndRiskAndFirstInfoOutcome> DescribeServersAndRiskAndFirstInfoOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeServersAndRiskAndFirstInfoRequest&, DescribeServersAndRiskAndFirstInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServersAndRiskAndFirstInfoAsyncHandler;
@@ -2026,6 +2201,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeWebHookRulesResponse> DescribeWebHookRulesOutcome;
                 typedef std::future<DescribeWebHookRulesOutcome> DescribeWebHookRulesOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeWebHookRulesRequest&, DescribeWebHookRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebHookRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebPageEventListResponse> DescribeWebPageEventListOutcome;
+                typedef std::future<DescribeWebPageEventListOutcome> DescribeWebPageEventListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeWebPageEventListRequest&, DescribeWebPageEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebPageEventListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebPageGeneralizeResponse> DescribeWebPageGeneralizeOutcome;
+                typedef std::future<DescribeWebPageGeneralizeOutcome> DescribeWebPageGeneralizeOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeWebPageGeneralizeRequest&, DescribeWebPageGeneralizeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebPageGeneralizeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebPageProtectStatResponse> DescribeWebPageProtectStatOutcome;
+                typedef std::future<DescribeWebPageProtectStatOutcome> DescribeWebPageProtectStatOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeWebPageProtectStatRequest&, DescribeWebPageProtectStatOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebPageProtectStatAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebPageServiceInfoResponse> DescribeWebPageServiceInfoOutcome;
+                typedef std::future<DescribeWebPageServiceInfoOutcome> DescribeWebPageServiceInfoOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeWebPageServiceInfoRequest&, DescribeWebPageServiceInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebPageServiceInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeWindowsPatchListResponse> DescribeWindowsPatchListOutcome;
                 typedef std::future<DescribeWindowsPatchListOutcome> DescribeWindowsPatchListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeWindowsPatchListRequest&, DescribeWindowsPatchListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWindowsPatchListAsyncHandler;
@@ -2116,9 +2303,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExportBaselineItemDetectListResponse> ExportBaselineItemDetectListOutcome;
                 typedef std::future<ExportBaselineItemDetectListOutcome> ExportBaselineItemDetectListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportBaselineItemDetectListRequest&, ExportBaselineItemDetectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBaselineItemDetectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportBaselineItemListResponse> ExportBaselineItemListOutcome;
+                typedef std::future<ExportBaselineItemListOutcome> ExportBaselineItemListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ExportBaselineItemListRequest&, ExportBaselineItemListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBaselineItemListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportBaselineListResponse> ExportBaselineListOutcome;
                 typedef std::future<ExportBaselineListOutcome> ExportBaselineListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportBaselineListRequest&, ExportBaselineListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBaselineListAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportBaselineRuleDetectListResponse> ExportBaselineRuleDetectListOutcome;
+                typedef std::future<ExportBaselineRuleDetectListOutcome> ExportBaselineRuleDetectListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ExportBaselineRuleDetectListRequest&, ExportBaselineRuleDetectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBaselineRuleDetectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportBaselineWeakPasswordListResponse> ExportBaselineWeakPasswordListOutcome;
+                typedef std::future<ExportBaselineWeakPasswordListOutcome> ExportBaselineWeakPasswordListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ExportBaselineWeakPasswordListRequest&, ExportBaselineWeakPasswordListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBaselineWeakPasswordListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportBashEventsResponse> ExportBashEventsOutcome;
                 typedef std::future<ExportBashEventsOutcome> ExportBashEventsOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportBashEventsRequest&, ExportBashEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBashEventsAsyncHandler;
@@ -2167,6 +2363,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExportPrivilegeEventsResponse> ExportPrivilegeEventsOutcome;
                 typedef std::future<ExportPrivilegeEventsOutcome> ExportPrivilegeEventsOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportPrivilegeEventsRequest&, ExportPrivilegeEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportPrivilegeEventsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportProtectDirListResponse> ExportProtectDirListOutcome;
+                typedef std::future<ExportProtectDirListOutcome> ExportProtectDirListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ExportProtectDirListRequest&, ExportProtectDirListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportProtectDirListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportRansomDefenseBackupListResponse> ExportRansomDefenseBackupListOutcome;
                 typedef std::future<ExportRansomDefenseBackupListOutcome> ExportRansomDefenseBackupListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportRansomDefenseBackupListRequest&, ExportRansomDefenseBackupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportRansomDefenseBackupListAsyncHandler;
@@ -2227,9 +2426,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExportVulListResponse> ExportVulListOutcome;
                 typedef std::future<ExportVulListOutcome> ExportVulListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportVulListRequest&, ExportVulListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportVulListAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportWebPageEventListResponse> ExportWebPageEventListOutcome;
+                typedef std::future<ExportWebPageEventListOutcome> ExportWebPageEventListOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ExportWebPageEventListRequest&, ExportWebPageEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportWebPageEventListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportWindowsPatchListResponse> ExportWindowsPatchListOutcome;
                 typedef std::future<ExportWindowsPatchListOutcome> ExportWindowsPatchListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ExportWindowsPatchListRequest&, ExportWindowsPatchListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportWindowsPatchListAsyncHandler;
+                typedef Outcome<Core::Error, Model::FixBaselineDetectResponse> FixBaselineDetectOutcome;
+                typedef std::future<FixBaselineDetectOutcome> FixBaselineDetectOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::FixBaselineDetectRequest&, FixBaselineDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FixBaselineDetectAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetLocalStorageItemResponse> GetLocalStorageItemOutcome;
                 typedef std::future<GetLocalStorageItemOutcome> GetLocalStorageItemOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::GetLocalStorageItemRequest&, GetLocalStorageItemOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetLocalStorageItemAsyncHandler;
@@ -2251,6 +2456,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBaselinePolicyResponse> ModifyBaselinePolicyOutcome;
                 typedef std::future<ModifyBaselinePolicyOutcome> ModifyBaselinePolicyOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyBaselinePolicyRequest&, ModifyBaselinePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselinePolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBaselinePolicyStateResponse> ModifyBaselinePolicyStateOutcome;
+                typedef std::future<ModifyBaselinePolicyStateOutcome> ModifyBaselinePolicyStateOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyBaselinePolicyStateRequest&, ModifyBaselinePolicyStateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselinePolicyStateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBaselineRuleResponse> ModifyBaselineRuleOutcome;
+                typedef std::future<ModifyBaselineRuleOutcome> ModifyBaselineRuleOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyBaselineRuleRequest&, ModifyBaselineRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselineRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBaselineRuleIgnoreResponse> ModifyBaselineRuleIgnoreOutcome;
+                typedef std::future<ModifyBaselineRuleIgnoreOutcome> ModifyBaselineRuleIgnoreOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyBaselineRuleIgnoreRequest&, ModifyBaselineRuleIgnoreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselineRuleIgnoreAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBaselineWeakPasswordResponse> ModifyBaselineWeakPasswordOutcome;
+                typedef std::future<ModifyBaselineWeakPasswordOutcome> ModifyBaselineWeakPasswordOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyBaselineWeakPasswordRequest&, ModifyBaselineWeakPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselineWeakPasswordAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBashPolicyResponse> ModifyBashPolicyOutcome;
                 typedef std::future<ModifyBashPolicyOutcome> ModifyBashPolicyOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyBashPolicyRequest&, ModifyBashPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBashPolicyAsyncHandler;
@@ -2284,6 +2501,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLicenseOrderResponse> ModifyLicenseOrderOutcome;
                 typedef std::future<ModifyLicenseOrderOutcome> ModifyLicenseOrderOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyLicenseOrderRequest&, ModifyLicenseOrderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLicenseOrderAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLicenseUnBindsResponse> ModifyLicenseUnBindsOutcome;
+                typedef std::future<ModifyLicenseUnBindsOutcome> ModifyLicenseUnBindsOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyLicenseUnBindsRequest&, ModifyLicenseUnBindsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLicenseUnBindsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLogKafkaAccessResponse> ModifyLogKafkaAccessOutcome;
                 typedef std::future<ModifyLogKafkaAccessOutcome> ModifyLogKafkaAccessOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyLogKafkaAccessRequest&, ModifyLogKafkaAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLogKafkaAccessAsyncHandler;
@@ -2305,6 +2525,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMachineAutoClearConfigResponse> ModifyMachineAutoClearConfigOutcome;
                 typedef std::future<ModifyMachineAutoClearConfigOutcome> ModifyMachineAutoClearConfigOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyMachineAutoClearConfigRequest&, ModifyMachineAutoClearConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMachineAutoClearConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyMachineRemarkResponse> ModifyMachineRemarkOutcome;
+                typedef std::future<ModifyMachineRemarkOutcome> ModifyMachineRemarkOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyMachineRemarkRequest&, ModifyMachineRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMachineRemarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyMaliciousRequestWhiteListResponse> ModifyMaliciousRequestWhiteListOutcome;
                 typedef std::future<ModifyMaliciousRequestWhiteListOutcome> ModifyMaliciousRequestWhiteListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyMaliciousRequestWhiteListRequest&, ModifyMaliciousRequestWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMaliciousRequestWhiteListAsyncHandler;
@@ -2320,6 +2543,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyNetAttackWhiteListResponse> ModifyNetAttackWhiteListOutcome;
                 typedef std::future<ModifyNetAttackWhiteListOutcome> ModifyNetAttackWhiteListOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyNetAttackWhiteListRequest&, ModifyNetAttackWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetAttackWhiteListAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyOrderAttributeResponse> ModifyOrderAttributeOutcome;
+                typedef std::future<ModifyOrderAttributeOutcome> ModifyOrderAttributeOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyOrderAttributeRequest&, ModifyOrderAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOrderAttributeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRansomDefenseEventsStatusResponse> ModifyRansomDefenseEventsStatusOutcome;
                 typedef std::future<ModifyRansomDefenseEventsStatusOutcome> ModifyRansomDefenseEventsStatusOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyRansomDefenseEventsStatusRequest&, ModifyRansomDefenseEventsStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRansomDefenseEventsStatusAsyncHandler;
@@ -2374,6 +2600,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyWebHookRuleStatusResponse> ModifyWebHookRuleStatusOutcome;
                 typedef std::future<ModifyWebHookRuleStatusOutcome> ModifyWebHookRuleStatusOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyWebHookRuleStatusRequest&, ModifyWebHookRuleStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWebHookRuleStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyWebPageProtectDirResponse> ModifyWebPageProtectDirOutcome;
+                typedef std::future<ModifyWebPageProtectDirOutcome> ModifyWebPageProtectDirOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyWebPageProtectDirRequest&, ModifyWebPageProtectDirOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWebPageProtectDirAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyWebPageProtectSettingResponse> ModifyWebPageProtectSettingOutcome;
+                typedef std::future<ModifyWebPageProtectSettingOutcome> ModifyWebPageProtectSettingOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ModifyWebPageProtectSettingRequest&, ModifyWebPageProtectSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWebPageProtectSettingAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyWebPageProtectSwitchResponse> ModifyWebPageProtectSwitchOutcome;
                 typedef std::future<ModifyWebPageProtectSwitchOutcome> ModifyWebPageProtectSwitchOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ModifyWebPageProtectSwitchRequest&, ModifyWebPageProtectSwitchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWebPageProtectSwitchAsyncHandler;
@@ -2398,6 +2630,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RetryVulFixResponse> RetryVulFixOutcome;
                 typedef std::future<RetryVulFixOutcome> RetryVulFixOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::RetryVulFixRequest&, RetryVulFixOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryVulFixAsyncHandler;
+                typedef Outcome<Core::Error, Model::ScanAssetResponse> ScanAssetOutcome;
+                typedef std::future<ScanAssetOutcome> ScanAssetOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::ScanAssetRequest&, ScanAssetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScanAssetAsyncHandler;
                 typedef Outcome<Core::Error, Model::ScanBaselineResponse> ScanBaselineOutcome;
                 typedef std::future<ScanBaselineOutcome> ScanBaselineOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::ScanBaselineRequest&, ScanBaselineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScanBaselineAsyncHandler;
@@ -2478,6 +2713,15 @@ namespace TencentCloud
                 AddLoginWhiteListsOutcome AddLoginWhiteLists(const Model::AddLoginWhiteListsRequest &request);
                 void AddLoginWhiteListsAsync(const Model::AddLoginWhiteListsRequest& request, const AddLoginWhiteListsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddLoginWhiteListsOutcomeCallable AddLoginWhiteListsCallable(const Model::AddLoginWhiteListsRequest& request);
+
+                /**
+                 *This API is used to add vulnerability ignore rules.
+                 * @param req AddVulIgnoreRuleRequest
+                 * @return AddVulIgnoreRuleOutcome
+                 */
+                AddVulIgnoreRuleOutcome AddVulIgnoreRule(const Model::AddVulIgnoreRuleRequest &request);
+                void AddVulIgnoreRuleAsync(const Model::AddVulIgnoreRuleRequest& request, const AddVulIgnoreRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddVulIgnoreRuleOutcomeCallable AddVulIgnoreRuleCallable(const Model::AddVulIgnoreRuleRequest& request);
 
                 /**
                  *This API is used to ignore events or cancel ignoring in batches based on check item ID or event ID.
@@ -2645,6 +2889,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 CreateNetAttackWhiteListOutcomeCallable CreateNetAttackWhiteListCallable(const Model::CreateNetAttackWhiteListRequest& request);
 
                 /**
+                 *Adding a Website Protection Server
+                 * @param req CreateProtectServerRequest
+                 * @return CreateProtectServerOutcome
+                 */
+                CreateProtectServerOutcome CreateProtectServer(const Model::CreateProtectServerRequest &request);
+                void CreateProtectServerAsync(const Model::CreateProtectServerRequest& request, const CreateProtectServerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProtectServerOutcomeCallable CreateProtectServerCallable(const Model::CreateProtectServerRequest& request);
+
+                /**
                  *This API is used to create or modify anti-ransomware policies.
                  * @param req CreateRansomDefenseStrategyRequest
                  * @return CreateRansomDefenseStrategyOutcome
@@ -2726,6 +2979,24 @@ This API is used to call the billing payment API for payment since prepaid order
                 DeleteBaselinePolicyOutcomeCallable DeleteBaselinePolicyCallable(const Model::DeleteBaselinePolicyRequest& request);
 
                 /**
+                 *Delete a baseline rule
+                 * @param req DeleteBaselineRuleRequest
+                 * @return DeleteBaselineRuleOutcome
+                 */
+                DeleteBaselineRuleOutcome DeleteBaselineRule(const Model::DeleteBaselineRuleRequest &request);
+                void DeleteBaselineRuleAsync(const Model::DeleteBaselineRuleRequest& request, const DeleteBaselineRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBaselineRuleOutcomeCallable DeleteBaselineRuleCallable(const Model::DeleteBaselineRuleRequest& request);
+
+                /**
+                 *Delete baseline ignore rule.
+                 * @param req DeleteBaselineRuleIgnoreRequest
+                 * @return DeleteBaselineRuleIgnoreOutcome
+                 */
+                DeleteBaselineRuleIgnoreOutcome DeleteBaselineRuleIgnore(const Model::DeleteBaselineRuleIgnoreRequest &request);
+                void DeleteBaselineRuleIgnoreAsync(const Model::DeleteBaselineRuleIgnoreRequest& request, const DeleteBaselineRuleIgnoreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBaselineRuleIgnoreOutcomeCallable DeleteBaselineRuleIgnoreCallable(const Model::DeleteBaselineRuleIgnoreRequest& request);
+
+                /**
                  *This API is used to delete the policy by baseline policy ID.
                  * @param req DeleteBaselineStrategyRequest
                  * @return DeleteBaselineStrategyOutcome
@@ -2733,6 +3004,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DeleteBaselineStrategyOutcome DeleteBaselineStrategy(const Model::DeleteBaselineStrategyRequest &request);
                 void DeleteBaselineStrategyAsync(const Model::DeleteBaselineStrategyRequest& request, const DeleteBaselineStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteBaselineStrategyOutcomeCallable DeleteBaselineStrategyCallable(const Model::DeleteBaselineStrategyRequest& request);
+
+                /**
+                 *Delete baseline weak passwords
+                 * @param req DeleteBaselineWeakPasswordRequest
+                 * @return DeleteBaselineWeakPasswordOutcome
+                 */
+                DeleteBaselineWeakPasswordOutcome DeleteBaselineWeakPassword(const Model::DeleteBaselineWeakPasswordRequest &request);
+                void DeleteBaselineWeakPasswordAsync(const Model::DeleteBaselineWeakPasswordRequest& request, const DeleteBaselineWeakPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBaselineWeakPasswordOutcomeCallable DeleteBaselineWeakPasswordCallable(const Model::DeleteBaselineWeakPasswordRequest& request);
 
                 /**
                  *This API is used to delete high-risk command events based on IDs.
@@ -2915,6 +3195,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DeletePrivilegeRulesOutcomeCallable DeletePrivilegeRulesCallable(const Model::DeletePrivilegeRulesRequest& request);
 
                 /**
+                 *Delete a website protection
+                 * @param req DeleteProtectDirRequest
+                 * @return DeleteProtectDirOutcome
+                 */
+                DeleteProtectDirOutcome DeleteProtectDir(const Model::DeleteProtectDirRequest &request);
+                void DeleteProtectDirAsync(const Model::DeleteProtectDirRequest& request, const DeleteProtectDirAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteProtectDirOutcomeCallable DeleteProtectDirCallable(const Model::DeleteProtectDirRequest& request);
+
+                /**
                  *Deleting Entries from the Vulnerability Defense Allowlist
                  * @param req DeleteRaspRulesRequest
                  * @return DeleteRaspRulesOutcome
@@ -3012,6 +3301,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DeleteWebHookRuleOutcome DeleteWebHookRule(const Model::DeleteWebHookRuleRequest &request);
                 void DeleteWebHookRuleAsync(const Model::DeleteWebHookRuleRequest& request, const DeleteWebHookRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteWebHookRuleOutcomeCallable DeleteWebHookRuleCallable(const Model::DeleteWebHookRuleRequest& request);
+
+                /**
+                 *Delete website tamper-proof event records
+                 * @param req DeleteWebPageEventLogRequest
+                 * @return DeleteWebPageEventLogOutcome
+                 */
+                DeleteWebPageEventLogOutcome DeleteWebPageEventLog(const Model::DeleteWebPageEventLogRequest &request);
+                void DeleteWebPageEventLogAsync(const Model::DeleteWebPageEventLogRequest& request, const DeleteWebPageEventLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteWebPageEventLogOutcomeCallable DeleteWebPageEventLogCallable(const Model::DeleteWebPageEventLogRequest& request);
 
                 /**
                  *This API is used to obtain the current grayscale configuration of the user.
@@ -3581,6 +3879,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBanWhiteListOutcomeCallable DescribeBanWhiteListCallable(const Model::DescribeBanWhiteListRequest& request);
 
                 /**
+                 *This example shows you how to query the baseline policy overview statistics based on baseline policy IDs.
+                 * @param req DescribeBaselineAnalysisDataRequest
+                 * @return DescribeBaselineAnalysisDataOutcome
+                 */
+                DescribeBaselineAnalysisDataOutcome DescribeBaselineAnalysisData(const Model::DescribeBaselineAnalysisDataRequest &request);
+                void DescribeBaselineAnalysisDataAsync(const Model::DescribeBaselineAnalysisDataRequest& request, const DescribeBaselineAnalysisDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineAnalysisDataOutcomeCallable DescribeBaselineAnalysisDataCallable(const Model::DescribeBaselineAnalysisDataRequest& request);
+
+                /**
                  *This API is used to query the list of baseline basic information.
                  * @param req DescribeBaselineBasicInfoRequest
                  * @return DescribeBaselineBasicInfoOutcome
@@ -3608,6 +3915,33 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBaselineDetailOutcomeCallable DescribeBaselineDetailCallable(const Model::DescribeBaselineDetailRequest& request);
 
                 /**
+                 *Retrieve baseline detection detail records
+                 * @param req DescribeBaselineDetectListRequest
+                 * @return DescribeBaselineDetectListOutcome
+                 */
+                DescribeBaselineDetectListOutcome DescribeBaselineDetectList(const Model::DescribeBaselineDetectListRequest &request);
+                void DescribeBaselineDetectListAsync(const Model::DescribeBaselineDetectListRequest& request, const DescribeBaselineDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineDetectListOutcomeCallable DescribeBaselineDetectListCallable(const Model::DescribeBaselineDetectListRequest& request);
+
+                /**
+                 *Obtain baseline detection overview
+                 * @param req DescribeBaselineDetectOverviewRequest
+                 * @return DescribeBaselineDetectOverviewOutcome
+                 */
+                DescribeBaselineDetectOverviewOutcome DescribeBaselineDetectOverview(const Model::DescribeBaselineDetectOverviewRequest &request);
+                void DescribeBaselineDetectOverviewAsync(const Model::DescribeBaselineDetectOverviewRequest& request, const DescribeBaselineDetectOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineDetectOverviewOutcomeCallable DescribeBaselineDetectOverviewCallable(const Model::DescribeBaselineDetectOverviewRequest& request);
+
+                /**
+                 *This API is used to obtain the baseline download list.
+                 * @param req DescribeBaselineDownloadListRequest
+                 * @return DescribeBaselineDownloadListOutcome
+                 */
+                DescribeBaselineDownloadListOutcome DescribeBaselineDownloadList(const Model::DescribeBaselineDownloadListRequest &request);
+                void DescribeBaselineDownloadListAsync(const Model::DescribeBaselineDownloadListRequest& request, const DescribeBaselineDownloadListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineDownloadListOutcomeCallable DescribeBaselineDownloadListCallable(const Model::DescribeBaselineDownloadListRequest& request);
+
+                /**
                  *This API is used to query the list of hosts affected by a baseline based on baseline ID.
                  * @param req DescribeBaselineEffectHostListRequest
                  * @return DescribeBaselineEffectHostListOutcome
@@ -3617,6 +3951,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBaselineEffectHostListOutcomeCallable DescribeBaselineEffectHostListCallable(const Model::DescribeBaselineEffectHostListRequest& request);
 
                 /**
+                 *Query the baseline fix list.
+                 * @param req DescribeBaselineFixListRequest
+                 * @return DescribeBaselineFixListOutcome
+                 */
+                DescribeBaselineFixListOutcome DescribeBaselineFixList(const Model::DescribeBaselineFixListRequest &request);
+                void DescribeBaselineFixListAsync(const Model::DescribeBaselineFixListRequest& request, const DescribeBaselineFixListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineFixListOutcomeCallable DescribeBaselineFixListCallable(const Model::DescribeBaselineFixListRequest& request);
+
+                /**
                  *This API is used to obtain the list of hosts for baseline detection.
                  * @param req DescribeBaselineHostDetectListRequest
                  * @return DescribeBaselineHostDetectListOutcome
@@ -3624,6 +3967,24 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBaselineHostDetectListOutcome DescribeBaselineHostDetectList(const Model::DescribeBaselineHostDetectListRequest &request);
                 void DescribeBaselineHostDetectListAsync(const Model::DescribeBaselineHostDetectListRequest& request, const DescribeBaselineHostDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBaselineHostDetectListOutcomeCallable DescribeBaselineHostDetectListCallable(const Model::DescribeBaselineHostDetectListRequest& request);
+
+                /**
+                 *Retrieve the host list of ignore rules.
+                 * @param req DescribeBaselineHostIgnoreListRequest
+                 * @return DescribeBaselineHostIgnoreListOutcome
+                 */
+                DescribeBaselineHostIgnoreListOutcome DescribeBaselineHostIgnoreList(const Model::DescribeBaselineHostIgnoreListRequest &request);
+                void DescribeBaselineHostIgnoreListAsync(const Model::DescribeBaselineHostIgnoreListRequest& request, const DescribeBaselineHostIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineHostIgnoreListOutcomeCallable DescribeBaselineHostIgnoreListCallable(const Model::DescribeBaselineHostIgnoreListRequest& request);
+
+                /**
+                 *This API is used to obtain the TOP 5 server risks in the baseline.
+                 * @param req DescribeBaselineHostRiskTopRequest
+                 * @return DescribeBaselineHostRiskTopOutcome
+                 */
+                DescribeBaselineHostRiskTopOutcome DescribeBaselineHostRiskTop(const Model::DescribeBaselineHostRiskTopRequest &request);
+                void DescribeBaselineHostRiskTopAsync(const Model::DescribeBaselineHostRiskTopRequest& request, const DescribeBaselineHostRiskTopAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineHostRiskTopOutcomeCallable DescribeBaselineHostRiskTopCallable(const Model::DescribeBaselineHostRiskTopRequest& request);
 
                 /**
                  *This API is used to return Top N risky servers.
@@ -3644,6 +4005,24 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBaselineItemDetectListOutcomeCallable DescribeBaselineItemDetectListCallable(const Model::DescribeBaselineItemDetectListRequest& request);
 
                 /**
+                 *This API is used to search the ignorable rule item list.
+                 * @param req DescribeBaselineItemIgnoreListRequest
+                 * @return DescribeBaselineItemIgnoreListOutcome
+                 */
+                DescribeBaselineItemIgnoreListOutcome DescribeBaselineItemIgnoreList(const Model::DescribeBaselineItemIgnoreListRequest &request);
+                void DescribeBaselineItemIgnoreListAsync(const Model::DescribeBaselineItemIgnoreListRequest& request, const DescribeBaselineItemIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineItemIgnoreListOutcomeCallable DescribeBaselineItemIgnoreListCallable(const Model::DescribeBaselineItemIgnoreListRequest& request);
+
+                /**
+                 *Obtain Baseline Detection Item Information
+                 * @param req DescribeBaselineItemInfoRequest
+                 * @return DescribeBaselineItemInfoOutcome
+                 */
+                DescribeBaselineItemInfoOutcome DescribeBaselineItemInfo(const Model::DescribeBaselineItemInfoRequest &request);
+                void DescribeBaselineItemInfoAsync(const Model::DescribeBaselineItemInfoRequest& request, const DescribeBaselineItemInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineItemInfoOutcomeCallable DescribeBaselineItemInfoCallable(const Model::DescribeBaselineItemInfoRequest& request);
+
+                /**
                  *This API is used to obtain the list of check results on baseline check items.
                  * @param req DescribeBaselineItemListRequest
                  * @return DescribeBaselineItemListOutcome
@@ -3651,6 +4030,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBaselineItemListOutcome DescribeBaselineItemList(const Model::DescribeBaselineItemListRequest &request);
                 void DescribeBaselineItemListAsync(const Model::DescribeBaselineItemListRequest& request, const DescribeBaselineItemListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBaselineItemListOutcomeCallable DescribeBaselineItemListCallable(const Model::DescribeBaselineItemListRequest& request);
+
+                /**
+                 *Query the TOP 5 baseline detection items.
+                 * @param req DescribeBaselineItemRiskTopRequest
+                 * @return DescribeBaselineItemRiskTopOutcome
+                 */
+                DescribeBaselineItemRiskTopOutcome DescribeBaselineItemRiskTop(const Model::DescribeBaselineItemRiskTopRequest &request);
+                void DescribeBaselineItemRiskTopAsync(const Model::DescribeBaselineItemRiskTopRequest& request, const DescribeBaselineItemRiskTopAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineItemRiskTopOutcomeCallable DescribeBaselineItemRiskTopCallable(const Model::DescribeBaselineItemRiskTopRequest& request);
 
                 /**
                  *This API is used to query the information of the baseline list.
@@ -3678,6 +4066,42 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeBaselineRuleOutcome DescribeBaselineRule(const Model::DescribeBaselineRuleRequest &request);
                 void DescribeBaselineRuleAsync(const Model::DescribeBaselineRuleRequest& request, const DescribeBaselineRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBaselineRuleOutcomeCallable DescribeBaselineRuleCallable(const Model::DescribeBaselineRuleRequest& request);
+
+                /**
+                 *Obtain Baseline Classification List
+                 * @param req DescribeBaselineRuleCategoryListRequest
+                 * @return DescribeBaselineRuleCategoryListOutcome
+                 */
+                DescribeBaselineRuleCategoryListOutcome DescribeBaselineRuleCategoryList(const Model::DescribeBaselineRuleCategoryListRequest &request);
+                void DescribeBaselineRuleCategoryListAsync(const Model::DescribeBaselineRuleCategoryListRequest& request, const DescribeBaselineRuleCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineRuleCategoryListOutcomeCallable DescribeBaselineRuleCategoryListCallable(const Model::DescribeBaselineRuleCategoryListRequest& request);
+
+                /**
+                 *This API is used to obtain the baseline rule detection list.
+                 * @param req DescribeBaselineRuleDetectListRequest
+                 * @return DescribeBaselineRuleDetectListOutcome
+                 */
+                DescribeBaselineRuleDetectListOutcome DescribeBaselineRuleDetectList(const Model::DescribeBaselineRuleDetectListRequest &request);
+                void DescribeBaselineRuleDetectListAsync(const Model::DescribeBaselineRuleDetectListRequest& request, const DescribeBaselineRuleDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineRuleDetectListOutcomeCallable DescribeBaselineRuleDetectListCallable(const Model::DescribeBaselineRuleDetectListRequest& request);
+
+                /**
+                 *Get the baseline ignore rule list.
+                 * @param req DescribeBaselineRuleIgnoreListRequest
+                 * @return DescribeBaselineRuleIgnoreListOutcome
+                 */
+                DescribeBaselineRuleIgnoreListOutcome DescribeBaselineRuleIgnoreList(const Model::DescribeBaselineRuleIgnoreListRequest &request);
+                void DescribeBaselineRuleIgnoreListAsync(const Model::DescribeBaselineRuleIgnoreListRequest& request, const DescribeBaselineRuleIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineRuleIgnoreListOutcomeCallable DescribeBaselineRuleIgnoreListCallable(const Model::DescribeBaselineRuleIgnoreListRequest& request);
+
+                /**
+                 *Obtain Baseline Rule List
+                 * @param req DescribeBaselineRuleListRequest
+                 * @return DescribeBaselineRuleListOutcome
+                 */
+                DescribeBaselineRuleListOutcome DescribeBaselineRuleList(const Model::DescribeBaselineRuleListRequest &request);
+                void DescribeBaselineRuleListAsync(const Model::DescribeBaselineRuleListRequest& request, const DescribeBaselineRuleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineRuleListOutcomeCallable DescribeBaselineRuleListCallable(const Model::DescribeBaselineRuleListRequest& request);
 
                 /**
                  *This API is used to query the baseline detection progress by task ID.
@@ -4013,6 +4437,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeIgnoreRuleEffectHostListOutcomeCallable DescribeIgnoreRuleEffectHostListCallable(const Model::DescribeIgnoreRuleEffectHostListRequest& request);
 
                 /**
+                 *Querying the Machine Information Imported in Batches
+                 * @param req DescribeImportMachineInfoRequest
+                 * @return DescribeImportMachineInfoOutcome
+                 */
+                DescribeImportMachineInfoOutcome DescribeImportMachineInfo(const Model::DescribeImportMachineInfoRequest &request);
+                void DescribeImportMachineInfoAsync(const Model::DescribeImportMachineInfoRequest& request, const DescribeImportMachineInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImportMachineInfoOutcomeCallable DescribeImportMachineInfoCallable(const Model::DescribeImportMachineInfoRequest& request);
+
+                /**
                  *Query java memory horse and rasp whether inject risk service configuration
                  * @param req DescribeInjectRiskyServiceSwitchRequest
                  * @return DescribeInjectRiskyServiceSwitchOutcome
@@ -4292,6 +4725,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeMachineLicenseDetailOutcomeCallable DescribeMachineLicenseDetailCallable(const Model::DescribeMachineLicenseDetailRequest& request);
 
                 /**
+                 *This API is used to get the regional host list for web tamper protection.
+                 * @param req DescribeMachineListRequest
+                 * @return DescribeMachineListOutcome
+                 */
+                DescribeMachineListOutcome DescribeMachineList(const Model::DescribeMachineListRequest &request);
+                void DescribeMachineListAsync(const Model::DescribeMachineListRequest& request, const DescribeMachineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMachineListOutcomeCallable DescribeMachineListCallable(const Model::DescribeMachineListRequest& request);
+
+                /**
                  *This API is used to query the machine operating system list.
                  * @param req DescribeMachineOsListRequest
                  * @return DescribeMachineOsListOutcome
@@ -4508,6 +4950,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribePrivilegeEventInfoOutcomeCallable DescribePrivilegeEventInfoCallable(const Model::DescribePrivilegeEventInfoRequest& request);
 
                 /**
+                 *This example shows you how to obtain the list of local privilege escalation events.
+                 * @param req DescribePrivilegeEventsRequest
+                 * @return DescribePrivilegeEventsOutcome
+                 */
+                DescribePrivilegeEventsOutcome DescribePrivilegeEvents(const Model::DescribePrivilegeEventsRequest &request);
+                void DescribePrivilegeEventsAsync(const Model::DescribePrivilegeEventsRequest& request, const DescribePrivilegeEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrivilegeEventsOutcomeCallable DescribePrivilegeEventsCallable(const Model::DescribePrivilegeEventsRequest& request);
+
+                /**
                  *This API is used to obtain the list of local privilege escalation rules.
                  * @param req DescribePrivilegeRulesRequest
                  * @return DescribePrivilegeRulesOutcome
@@ -4551,6 +5002,24 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeProductStatusOutcome DescribeProductStatus(const Model::DescribeProductStatusRequest &request);
                 void DescribeProductStatusAsync(const Model::DescribeProductStatusRequest& request, const DescribeProductStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProductStatusOutcomeCallable DescribeProductStatusCallable(const Model::DescribeProductStatusRequest& request);
+
+                /**
+                 *Web tamper-proof protection directory listing
+                 * @param req DescribeProtectDirListRequest
+                 * @return DescribeProtectDirListOutcome
+                 */
+                DescribeProtectDirListOutcome DescribeProtectDirList(const Model::DescribeProtectDirListRequest &request);
+                void DescribeProtectDirListAsync(const Model::DescribeProtectDirListRequest& request, const DescribeProtectDirListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProtectDirListOutcomeCallable DescribeProtectDirListCallable(const Model::DescribeProtectDirListRequest& request);
+
+                /**
+                 *Query the server list information associated with the protection directory.
+                 * @param req DescribeProtectDirRelatedServerRequest
+                 * @return DescribeProtectDirRelatedServerOutcome
+                 */
+                DescribeProtectDirRelatedServerOutcome DescribeProtectDirRelatedServer(const Model::DescribeProtectDirRelatedServerRequest &request);
+                void DescribeProtectDirRelatedServerAsync(const Model::DescribeProtectDirRelatedServerRequest& request, const DescribeProtectDirRelatedServerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProtectDirRelatedServerOutcomeCallable DescribeProtectDirRelatedServerCallable(const Model::DescribeProtectDirRelatedServerRequest& request);
 
                 /**
                  *This API is used to obtain the installation command of the public network access proxy.
@@ -5111,6 +5580,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeSecurityTrendsOutcomeCallable DescribeSecurityTrendsCallable(const Model::DescribeSecurityTrendsRequest& request);
 
                 /**
+                 *Querying the Details of a Directory Associated with a Service Zone
+                 * @param req DescribeServerRelatedDirInfoRequest
+                 * @return DescribeServerRelatedDirInfoOutcome
+                 */
+                DescribeServerRelatedDirInfoOutcome DescribeServerRelatedDirInfo(const Model::DescribeServerRelatedDirInfoRequest &request);
+                void DescribeServerRelatedDirInfoAsync(const Model::DescribeServerRelatedDirInfoRequest& request, const DescribeServerRelatedDirInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeServerRelatedDirInfoOutcomeCallable DescribeServerRelatedDirInfoCallable(const Model::DescribeServerRelatedDirInfoRequest& request);
+
+                /**
                  *This API is used to obtain the number of risky files pending to be processed + the number of affected servers + whether to try to detect + last detection time.
                  * @param req DescribeServersAndRiskAndFirstInfoRequest
                  * @return DescribeServersAndRiskAndFirstInfoOutcome
@@ -5525,6 +6003,42 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeWebHookRulesOutcomeCallable DescribeWebHookRulesCallable(const Model::DescribeWebHookRulesRequest& request);
 
                 /**
+                 *Querying the List of Tampering Events
+                 * @param req DescribeWebPageEventListRequest
+                 * @return DescribeWebPageEventListOutcome
+                 */
+                DescribeWebPageEventListOutcome DescribeWebPageEventList(const Model::DescribeWebPageEventListRequest &request);
+                void DescribeWebPageEventListAsync(const Model::DescribeWebPageEventListRequest& request, const DescribeWebPageEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebPageEventListOutcomeCallable DescribeWebPageEventListCallable(const Model::DescribeWebPageEventListRequest& request);
+
+                /**
+                 *Query website tamper-proof overview information
+                 * @param req DescribeWebPageGeneralizeRequest
+                 * @return DescribeWebPageGeneralizeOutcome
+                 */
+                DescribeWebPageGeneralizeOutcome DescribeWebPageGeneralize(const Model::DescribeWebPageGeneralizeRequest &request);
+                void DescribeWebPageGeneralizeAsync(const Model::DescribeWebPageGeneralizeRequest& request, const DescribeWebPageGeneralizeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebPageGeneralizeOutcomeCallable DescribeWebPageGeneralizeCallable(const Model::DescribeWebPageGeneralizeRequest& request);
+
+                /**
+                 *Querying real-time protection information for website anti-tampering
+                 * @param req DescribeWebPageProtectStatRequest
+                 * @return DescribeWebPageProtectStatOutcome
+                 */
+                DescribeWebPageProtectStatOutcome DescribeWebPageProtectStat(const Model::DescribeWebPageProtectStatRequest &request);
+                void DescribeWebPageProtectStatAsync(const Model::DescribeWebPageProtectStatRequest& request, const DescribeWebPageProtectStatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebPageProtectStatOutcomeCallable DescribeWebPageProtectStatCallable(const Model::DescribeWebPageProtectStatRequest& request);
+
+                /**
+                 *Website Tamper Protection - Query webpage tamper protection server purchase information and server information
+                 * @param req DescribeWebPageServiceInfoRequest
+                 * @return DescribeWebPageServiceInfoOutcome
+                 */
+                DescribeWebPageServiceInfoOutcome DescribeWebPageServiceInfo(const Model::DescribeWebPageServiceInfoRequest &request);
+                void DescribeWebPageServiceInfoAsync(const Model::DescribeWebPageServiceInfoRequest& request, const DescribeWebPageServiceInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebPageServiceInfoOutcomeCallable DescribeWebPageServiceInfoCallable(const Model::DescribeWebPageServiceInfoRequest& request);
+
+                /**
                  *Search patch information list
                  * @param req DescribeWindowsPatchListRequest
                  * @return DescribeWindowsPatchListOutcome
@@ -5795,6 +6309,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ExportBaselineItemDetectListOutcomeCallable ExportBaselineItemDetectListCallable(const Model::ExportBaselineItemDetectListRequest& request);
 
                 /**
+                 *Export Detection Item Result List
+                 * @param req ExportBaselineItemListRequest
+                 * @return ExportBaselineItemListOutcome
+                 */
+                ExportBaselineItemListOutcome ExportBaselineItemList(const Model::ExportBaselineItemListRequest &request);
+                void ExportBaselineItemListAsync(const Model::ExportBaselineItemListRequest& request, const ExportBaselineItemListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportBaselineItemListOutcomeCallable ExportBaselineItemListCallable(const Model::ExportBaselineItemListRequest& request);
+
+                /**
                  *This API is used to export the list of baselines.
                  * @param req ExportBaselineListRequest
                  * @return ExportBaselineListOutcome
@@ -5802,6 +6325,24 @@ This API is used to call the billing payment API for payment since prepaid order
                 ExportBaselineListOutcome ExportBaselineList(const Model::ExportBaselineListRequest &request);
                 void ExportBaselineListAsync(const Model::ExportBaselineListRequest& request, const ExportBaselineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ExportBaselineListOutcomeCallable ExportBaselineListCallable(const Model::ExportBaselineListRequest& request);
+
+                /**
+                 *This API is used to export baseline detection rules.
+                 * @param req ExportBaselineRuleDetectListRequest
+                 * @return ExportBaselineRuleDetectListOutcome
+                 */
+                ExportBaselineRuleDetectListOutcome ExportBaselineRuleDetectList(const Model::ExportBaselineRuleDetectListRequest &request);
+                void ExportBaselineRuleDetectListAsync(const Model::ExportBaselineRuleDetectListRequest& request, const ExportBaselineRuleDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportBaselineRuleDetectListOutcomeCallable ExportBaselineRuleDetectListCallable(const Model::ExportBaselineRuleDetectListRequest& request);
+
+                /**
+                 *Export the list of weak password configurations.
+                 * @param req ExportBaselineWeakPasswordListRequest
+                 * @return ExportBaselineWeakPasswordListOutcome
+                 */
+                ExportBaselineWeakPasswordListOutcome ExportBaselineWeakPasswordList(const Model::ExportBaselineWeakPasswordListRequest &request);
+                void ExportBaselineWeakPasswordListAsync(const Model::ExportBaselineWeakPasswordListRequest& request, const ExportBaselineWeakPasswordListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportBaselineWeakPasswordListOutcomeCallable ExportBaselineWeakPasswordListCallable(const Model::ExportBaselineWeakPasswordListRequest& request);
 
                 /**
                  *This API is used to export high-risk command events.
@@ -5946,6 +6487,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ExportPrivilegeEventsOutcome ExportPrivilegeEvents(const Model::ExportPrivilegeEventsRequest &request);
                 void ExportPrivilegeEventsAsync(const Model::ExportPrivilegeEventsRequest& request, const ExportPrivilegeEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ExportPrivilegeEventsOutcomeCallable ExportPrivilegeEventsCallable(const Model::ExportPrivilegeEventsRequest& request);
+
+                /**
+                 *Export the web tamper-proof protection directory list.
+                 * @param req ExportProtectDirListRequest
+                 * @return ExportProtectDirListOutcome
+                 */
+                ExportProtectDirListOutcome ExportProtectDirList(const Model::ExportProtectDirListRequest &request);
+                void ExportProtectDirListAsync(const Model::ExportProtectDirListRequest& request, const ExportProtectDirListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportProtectDirListOutcomeCallable ExportProtectDirListCallable(const Model::ExportProtectDirListRequest& request);
 
                 /**
                  *This API is used to export the list of host snapshot backups.
@@ -6128,6 +6678,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ExportVulListOutcomeCallable ExportVulListCallable(const Model::ExportVulListRequest& request);
 
                 /**
+                 *This API is used to export the tamper event list.
+                 * @param req ExportWebPageEventListRequest
+                 * @return ExportWebPageEventListOutcome
+                 */
+                ExportWebPageEventListOutcome ExportWebPageEventList(const Model::ExportWebPageEventListRequest &request);
+                void ExportWebPageEventListAsync(const Model::ExportWebPageEventListRequest& request, const ExportWebPageEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportWebPageEventListOutcomeCallable ExportWebPageEventListCallable(const Model::ExportWebPageEventListRequest& request);
+
+                /**
                  *Export Windows patch list
                  * @param req ExportWindowsPatchListRequest
                  * @return ExportWindowsPatchListOutcome
@@ -6135,6 +6694,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ExportWindowsPatchListOutcome ExportWindowsPatchList(const Model::ExportWindowsPatchListRequest &request);
                 void ExportWindowsPatchListAsync(const Model::ExportWindowsPatchListRequest& request, const ExportWindowsPatchListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ExportWindowsPatchListOutcomeCallable ExportWindowsPatchListCallable(const Model::ExportWindowsPatchListRequest& request);
+
+                /**
+                 *This API is used to fix baseline detection.
+                 * @param req FixBaselineDetectRequest
+                 * @return FixBaselineDetectOutcome
+                 */
+                FixBaselineDetectOutcome FixBaselineDetect(const Model::FixBaselineDetectRequest &request);
+                void FixBaselineDetectAsync(const Model::FixBaselineDetectRequest& request, const FixBaselineDetectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                FixBaselineDetectOutcomeCallable FixBaselineDetectCallable(const Model::FixBaselineDetectRequest& request);
 
                 /**
                  *This API is used to obtain the locally stored data.
@@ -6198,6 +6766,42 @@ This API is used to call the billing payment API for payment since prepaid order
                 ModifyBaselinePolicyOutcome ModifyBaselinePolicy(const Model::ModifyBaselinePolicyRequest &request);
                 void ModifyBaselinePolicyAsync(const Model::ModifyBaselinePolicyRequest& request, const ModifyBaselinePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyBaselinePolicyOutcomeCallable ModifyBaselinePolicyCallable(const Model::ModifyBaselinePolicyRequest& request);
+
+                /**
+                 *This API is used to change the baseline policy status.
+                 * @param req ModifyBaselinePolicyStateRequest
+                 * @return ModifyBaselinePolicyStateOutcome
+                 */
+                ModifyBaselinePolicyStateOutcome ModifyBaselinePolicyState(const Model::ModifyBaselinePolicyStateRequest &request);
+                void ModifyBaselinePolicyStateAsync(const Model::ModifyBaselinePolicyStateRequest& request, const ModifyBaselinePolicyStateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBaselinePolicyStateOutcomeCallable ModifyBaselinePolicyStateCallable(const Model::ModifyBaselinePolicyStateRequest& request);
+
+                /**
+                 *Make a change to a baseline detection rule
+                 * @param req ModifyBaselineRuleRequest
+                 * @return ModifyBaselineRuleOutcome
+                 */
+                ModifyBaselineRuleOutcome ModifyBaselineRule(const Model::ModifyBaselineRuleRequest &request);
+                void ModifyBaselineRuleAsync(const Model::ModifyBaselineRuleRequest& request, const ModifyBaselineRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBaselineRuleOutcomeCallable ModifyBaselineRuleCallable(const Model::ModifyBaselineRuleRequest& request);
+
+                /**
+                 *Make a change to the baseline ignore rule.
+                 * @param req ModifyBaselineRuleIgnoreRequest
+                 * @return ModifyBaselineRuleIgnoreOutcome
+                 */
+                ModifyBaselineRuleIgnoreOutcome ModifyBaselineRuleIgnore(const Model::ModifyBaselineRuleIgnoreRequest &request);
+                void ModifyBaselineRuleIgnoreAsync(const Model::ModifyBaselineRuleIgnoreRequest& request, const ModifyBaselineRuleIgnoreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBaselineRuleIgnoreOutcomeCallable ModifyBaselineRuleIgnoreCallable(const Model::ModifyBaselineRuleIgnoreRequest& request);
+
+                /**
+                 *Change or add a weak password
+                 * @param req ModifyBaselineWeakPasswordRequest
+                 * @return ModifyBaselineWeakPasswordOutcome
+                 */
+                ModifyBaselineWeakPasswordOutcome ModifyBaselineWeakPassword(const Model::ModifyBaselineWeakPasswordRequest &request);
+                void ModifyBaselineWeakPasswordAsync(const Model::ModifyBaselineWeakPasswordRequest& request, const ModifyBaselineWeakPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBaselineWeakPasswordOutcomeCallable ModifyBaselineWeakPasswordCallable(const Model::ModifyBaselineWeakPasswordRequest& request);
 
                 /**
                  *This API is used to add or modify high-risk command policies.
@@ -6299,6 +6903,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ModifyLicenseOrderOutcomeCallable ModifyLicenseOrderCallable(const Model::ModifyLicenseOrderRequest& request);
 
                 /**
+                 *This API is used to unbind machines from an authorization in batches.
+                 * @param req ModifyLicenseUnBindsRequest
+                 * @return ModifyLicenseUnBindsOutcome
+                 */
+                ModifyLicenseUnBindsOutcome ModifyLicenseUnBinds(const Model::ModifyLicenseUnBindsRequest &request);
+                void ModifyLicenseUnBindsAsync(const Model::ModifyLicenseUnBindsRequest& request, const ModifyLicenseUnBindsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLicenseUnBindsOutcomeCallable ModifyLicenseUnBindsCallable(const Model::ModifyLicenseUnBindsRequest& request);
+
+                /**
                  *This API is used to add or modify the access configuration of logs shipped to Kafka.
                  * @param req ModifyLogKafkaAccessRequest
                  * @return ModifyLogKafkaAccessOutcome
@@ -6362,6 +6975,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ModifyMachineAutoClearConfigOutcomeCallable ModifyMachineAutoClearConfigCallable(const Model::ModifyMachineAutoClearConfigRequest& request);
 
                 /**
+                 *Modify Host Remark Information
+                 * @param req ModifyMachineRemarkRequest
+                 * @return ModifyMachineRemarkOutcome
+                 */
+                ModifyMachineRemarkOutcome ModifyMachineRemark(const Model::ModifyMachineRemarkRequest &request);
+                void ModifyMachineRemarkAsync(const Model::ModifyMachineRemarkRequest& request, const ModifyMachineRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyMachineRemarkOutcomeCallable ModifyMachineRemarkCallable(const Model::ModifyMachineRemarkRequest& request);
+
+                /**
                  *This API is used to update the malicious request allowlist.
                  * @param req ModifyMaliciousRequestWhiteListRequest
                  * @return ModifyMaliciousRequestWhiteListOutcome
@@ -6405,6 +7027,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 ModifyNetAttackWhiteListOutcome ModifyNetAttackWhiteList(const Model::ModifyNetAttackWhiteListRequest &request);
                 void ModifyNetAttackWhiteListAsync(const Model::ModifyNetAttackWhiteListRequest& request, const ModifyNetAttackWhiteListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyNetAttackWhiteListOutcomeCallable ModifyNetAttackWhiteListCallable(const Model::ModifyNetAttackWhiteListRequest& request);
+
+                /**
+                 *Edit order attributes
+                 * @param req ModifyOrderAttributeRequest
+                 * @return ModifyOrderAttributeOutcome
+                 */
+                ModifyOrderAttributeOutcome ModifyOrderAttribute(const Model::ModifyOrderAttributeRequest &request);
+                void ModifyOrderAttributeAsync(const Model::ModifyOrderAttributeRequest& request, const ModifyOrderAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyOrderAttributeOutcomeCallable ModifyOrderAttributeCallable(const Model::ModifyOrderAttributeRequest& request);
 
                 /**
                  *This API is used to modify the status of anti-ransomware events.
@@ -6572,6 +7203,24 @@ This API is used to call the billing payment API for payment since prepaid order
                 ModifyWebHookRuleStatusOutcomeCallable ModifyWebHookRuleStatusCallable(const Model::ModifyWebHookRuleStatusRequest& request);
 
                 /**
+                 *Creating or Modifying a Website Protection Directory
+                 * @param req ModifyWebPageProtectDirRequest
+                 * @return ModifyWebPageProtectDirOutcome
+                 */
+                ModifyWebPageProtectDirOutcome ModifyWebPageProtectDir(const Model::ModifyWebPageProtectDirRequest &request);
+                void ModifyWebPageProtectDirAsync(const Model::ModifyWebPageProtectDirRequest& request, const ModifyWebPageProtectDirAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyWebPageProtectDirOutcomeCallable ModifyWebPageProtectDirCallable(const Model::ModifyWebPageProtectDirRequest& request);
+
+                /**
+                 *Modifying Website Protection Settings
+                 * @param req ModifyWebPageProtectSettingRequest
+                 * @return ModifyWebPageProtectSettingOutcome
+                 */
+                ModifyWebPageProtectSettingOutcome ModifyWebPageProtectSetting(const Model::ModifyWebPageProtectSettingRequest &request);
+                void ModifyWebPageProtectSettingAsync(const Model::ModifyWebPageProtectSettingRequest& request, const ModifyWebPageProtectSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyWebPageProtectSettingOutcomeCallable ModifyWebPageProtectSettingCallable(const Model::ModifyWebPageProtectSettingRequest& request);
+
+                /**
                  *This API is used to enable or disable website anti-tampering protection.
                  * @param req ModifyWebPageProtectSwitchRequest
                  * @return ModifyWebPageProtectSwitchOutcome
@@ -6642,6 +7291,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 RetryVulFixOutcome RetryVulFix(const Model::RetryVulFixRequest &request);
                 void RetryVulFixAsync(const Model::RetryVulFixRequest& request, const RetryVulFixAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RetryVulFixOutcomeCallable RetryVulFixCallable(const Model::RetryVulFixRequest& request);
+
+                /**
+                 *Initiate asset fingerprinting scan
+                 * @param req ScanAssetRequest
+                 * @return ScanAssetOutcome
+                 */
+                ScanAssetOutcome ScanAsset(const Model::ScanAssetRequest &request);
+                void ScanAssetAsync(const Model::ScanAssetRequest& request, const ScanAssetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ScanAssetOutcomeCallable ScanAssetCallable(const Model::ScanAssetRequest& request);
 
                 /**
                  *This API is used to obtain baseline detection and re-detection APIs.

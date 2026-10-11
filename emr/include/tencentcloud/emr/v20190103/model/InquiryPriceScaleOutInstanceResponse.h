@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original price.
-                     * @return OriginalCost Original price.
+                     * 获取<p>Original price (CNY).</p>
+                     * @return OriginalCost <p>Original price (CNY).</p>
                      * 
                      */
                     std::string GetOriginalCost() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price.
-                     * @return DiscountCost Discounted price.
+                     * 获取<p>Discounted price (CNY).</p>
+                     * @return DiscountCost <p>Discounted price (CNY).</p>
                      * 
                      */
                     std::string GetDiscountCost() const;
@@ -74,10 +74,8 @@ namespace TencentCloud
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of scale-out. Valid values.
-<li>s: second.</li>
-                     * @return Unit Time unit of scale-out. Valid values.
-<li>s: second.</li>
+                     * 获取<p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
+                     * @return Unit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
                      * 
                      */
                     std::string GetUnit() const;
@@ -90,10 +88,8 @@ namespace TencentCloud
                     bool UnitHasBeenSet() const;
 
                     /**
-                     * 获取Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PriceSpec Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Node specifications for price inquiry.</p>
+                     * @return PriceSpec <p>Node specifications for price inquiry.</p>
                      * 
                      */
                     PriceResource GetPriceSpec() const;
@@ -106,10 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PriceSpecHasBeenSet() const;
 
                     /**
-                     * 获取The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
+                     * @return MultipleEmrPrice <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
                      * 
                      */
                     std::vector<EmrPrice> GetMultipleEmrPrice() const;
@@ -124,34 +118,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Original price.
+                     * <p>Original price (CNY).</p>
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discounted price.
+                     * <p>Discounted price (CNY).</p>
                      */
                     std::string m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Time unit of scale-out. Valid values.
-<li>s: second.</li>
+                     * <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
 
                     /**
-                     * Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Node specifications for price inquiry.</p>
                      */
                     PriceResource m_priceSpec;
                     bool m_priceSpecHasBeenSet;
 
                     /**
-                     * The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
                      */
                     std::vector<EmrPrice> m_multipleEmrPrice;
                     bool m_multipleEmrPriceHasBeenSet;

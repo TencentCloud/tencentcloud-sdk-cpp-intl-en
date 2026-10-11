@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node component renewal pricing details.
+                * Node sub-item renewal inquiry details.
                 */
                 class RenewPriceDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing item name.
-                     * @return BillingName Billing item name.
+                     * 获取Billable item name.
+                     * @return BillingName Billable item name.
                      * 
                      */
                     std::string GetBillingName() const;
 
                     /**
-                     * 设置Billing item name.
-                     * @param _billingName Billing item name.
+                     * 设置Billable item name.
+                     * @param _billingName Billable item name.
                      * 
                      */
                     void SetBillingName(const std::string& _billingName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount price.
-                     * @return DiscountCost Discount price.
+                     * 获取Discounted price.
+                     * @return DiscountCost Discounted price.
                      * 
                      */
                     double GetDiscountCost() const;
 
                     /**
-                     * 设置Discount price.
-                     * @param _discountCost Discount price.
+                     * 设置Discounted price.
+                     * @param _discountCost Discounted price.
                      * 
                      */
                     void SetDiscountCost(const double& _discountCost);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Billing item name.
+                     * Billable item name.
                      */
                     std::string m_billingName;
                     bool m_billingNameHasBeenSet;
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discount price.
+                     * Discounted price.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
-                     * @return StatisticPeriod Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+                     * 获取Rule statistics cycle. One, three, and five minutes are supported.
+                     * @return StatisticPeriod Rule statistics cycle. One, three, and five minutes are supported.
                      * 
                      */
                     int64_t GetStatisticPeriod() const;
 
                     /**
-                     * 设置Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
-                     * @param _statisticPeriod Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+                     * 设置Rule statistics cycle. One, three, and five minutes are supported.
+                     * @param _statisticPeriod Rule statistics cycle. One, three, and five minutes are supported.
                      * 
                      */
                     void SetStatisticPeriod(const int64_t& _statisticPeriod);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StatisticPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
-                     * @return TriggerThreshold Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+                     * 获取Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
+                     * @return TriggerThreshold Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
                      * 
                      */
                     int64_t GetTriggerThreshold() const;
 
                     /**
-                     * 设置Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
-                     * @param _triggerThreshold Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+                     * 设置Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
+                     * @param _triggerThreshold Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
                      * 
                      */
                     void SetTriggerThreshold(const int64_t& _triggerThreshold);
@@ -132,19 +132,15 @@ namespace TencentCloud
                     bool MetricIdHasBeenSet() const;
 
                     /**
-                     * 获取Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Conditions Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Triggering condition.
+                     * @return Conditions Triggering condition.
                      * 
                      */
                     std::vector<TriggerCondition> GetConditions() const;
 
                     /**
-                     * 设置Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conditions Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Triggering condition.
+                     * @param _conditions Triggering condition.
                      * 
                      */
                     void SetConditions(const std::vector<TriggerCondition>& _conditions);
@@ -159,13 +155,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+                     * Rule statistics cycle. One, three, and five minutes are supported.
                      */
                     int64_t m_statisticPeriod;
                     bool m_statisticPeriodHasBeenSet;
 
                     /**
-                     * Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+                     * Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
                      */
                     int64_t m_triggerThreshold;
                     bool m_triggerThresholdHasBeenSet;
@@ -183,8 +179,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_metricIdHasBeenSet;
 
                     /**
-                     * Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Triggering condition.
                      */
                     std::vector<TriggerCondition> m_conditions;
                     bool m_conditionsHasBeenSet;

@@ -44,26 +44,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      * @return DisplayStrategy Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      * 
                      */
                     std::string GetDisplayStrategy() const;
 
                     /**
                      * 设置Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      * @param _displayStrategy Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      * 
                      */
                     void SetDisplayStrategy(const std::string& _displayStrategy);
@@ -76,15 +72,15 @@ namespace TencentCloud
                     bool DisplayStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
-                     * @return InstanceIds Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+                     * 获取Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
+                     * @return InstanceIds Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
-                     * @param _instanceIds Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+                     * 设置Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
+                     * @param _instanceIds Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -97,15 +93,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Page number. Default value: 0, indicating the first page.
-                     * @return Offset Page number. Default value: 0, indicating the first page.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Page number. Default value: 0, indicating the first page.
-                     * @param _offset Page number. Default value: 0, indicating the first page.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -118,15 +114,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results per page. Default value: 10. Maximum value: 100
-                     * @return Limit Number of returned results per page. Default value: 10. Maximum value: 100
+                     * 获取Number of items returned per page. Default value: 100. Maximum value: 100.
+                     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results per page. Default value: 10. Maximum value: 100
-                     * @param _limit Number of returned results per page. Default value: 10. Maximum value: 100
+                     * 设置Number of items returned per page. Default value: 100. Maximum value: 100.
+                     * @param _limit Number of items returned per page. Default value: 100. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -139,15 +135,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
-                     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+                     * 获取It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
+                     * @return ProjectId It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
-                     * @param _projectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+                     * 设置It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
+                     * @param _projectId It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -161,26 +165,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
                      * @return OrderField Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
                      * 设置Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
                      * @param _orderField Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -193,23 +197,19 @@ namespace TencentCloud
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
-                     * @return Asc Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
+                     * 获取Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
+                     * @return Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
                      * 
                      */
                     int64_t GetAsc() const;
 
                     /**
-                     * 设置Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
-                     * @param _asc Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
+                     * 设置Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
+                     * @param _asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
                      * 
                      */
                     void SetAsc(const int64_t& _asc);
@@ -225,50 +225,50 @@ namespace TencentCloud
 
                     /**
                      * Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      */
                     std::string m_displayStrategy;
                     bool m_displayStrategyHasBeenSet;
 
                     /**
-                     * Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+                     * Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Page number. Default value: 0, indicating the first page.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results per page. Default value: 10. Maximum value: 100
+                     * Number of items returned per page. Default value: 100. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+                     * It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
                      * Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
+                     * Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
                      */
                     int64_t m_asc;
                     bool m_ascHasBeenSet;

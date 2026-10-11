@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -173,15 +174,15 @@ namespace TencentCloud
                     bool DeleteWithInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk billing type.
-                     * @return DiskChargeType Cloud disk billing type.
+                     * 获取Cloud disk billing mode.
+                     * @return DiskChargeType Cloud disk billing mode.
                      * 
                      */
                     std::string GetDiskChargeType() const;
 
                     /**
-                     * 设置Cloud disk billing type.
-                     * @param _diskChargeType Cloud disk billing type.
+                     * 设置Cloud disk billing mode.
+                     * @param _diskChargeType Cloud disk billing mode.
                      * 
                      */
                     void SetDiskChargeType(const std::string& _diskChargeType);
@@ -257,15 +258,15 @@ namespace TencentCloud
                     bool DeadlineTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the cloud disk is mounted on the cloud host.
-                     * @return Attached Whether the cloud disk is mounted on the cloud host.
+                     * 获取Whether the cloud disk is mounted on the CVM.
+                     * @return Attached Whether the cloud disk is mounted on the CVM.
                      * 
                      */
                     bool GetAttached() const;
 
                     /**
-                     * 设置Whether the cloud disk is mounted on the cloud host.
-                     * @param _attached Whether the cloud disk is mounted on the cloud host.
+                     * 设置Whether the cloud disk is mounted on the CVM.
+                     * @param _attached Whether the cloud disk is mounted on the CVM.
                      * 
                      */
                     void SetAttached(const bool& _attached);
@@ -299,19 +300,15 @@ namespace TencentCloud
                     bool DifferDaysOfDeadlineHasBeenSet() const;
 
                     /**
-                     * 获取InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIdList InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the CVM instance to which this cloud disk is currently mounted.
+                     * @return InstanceIdList ID of the CVM instance to which this cloud disk is currently mounted.
                      * 
                      */
                     std::vector<std::string> GetInstanceIdList() const;
 
                     /**
-                     * 设置InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceIdList InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the CVM instance to which this cloud disk is currently mounted.
+                     * @param _instanceIdList ID of the CVM instance to which this cloud disk is currently mounted.
                      * 
                      */
                     void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
@@ -324,15 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdListHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cloud host to which the Cloud disk is mounted.
-                     * @return InstanceId ID of the cloud host to which the Cloud disk is mounted.
+                     * 获取ID of the CVM to which the cloud disk is mounted.
+                     * @return InstanceId ID of the CVM to which the cloud disk is mounted.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the cloud host to which the Cloud disk is mounted.
-                     * @param _instanceId ID of the cloud host to which the Cloud disk is mounted.
+                     * 设置ID of the CVM to which the cloud disk is mounted.
+                     * @param _instanceId ID of the CVM to which the cloud disk is mounted.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -407,6 +404,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UnderwriteExpiredTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Tag.
+                     * @return Tags Tag.
+                     * 
+                     */
+                    std::vector<TagInfo> GetTags() const;
+
+                    /**
+                     * 设置Tag.
+                     * @param _tags Tag.
+                     * 
+                     */
+                    void SetTags(const std::vector<TagInfo>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk additional performance value. Unit: MB/s.
+                     * @return ThroughputPerformance Cloud disk additional performance value. Unit: MB/s.
+                     * 
+                     */
+                    int64_t GetThroughputPerformance() const;
+
+                    /**
+                     * 设置Cloud disk additional performance value. Unit: MB/s.
+                     * @param _throughputPerformance Cloud disk additional performance value. Unit: MB/s.
+                     * 
+                     */
+                    void SetThroughputPerformance(const int64_t& _throughputPerformance);
+
+                    /**
+                     * 判断参数 ThroughputPerformance 是否已赋值
+                     * @return ThroughputPerformance 是否已赋值
+                     * 
+                     */
+                    bool ThroughputPerformanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -446,7 +485,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_deleteWithInstanceHasBeenSet;
 
                     /**
-                     * Cloud disk billing type.
+                     * Cloud disk billing mode.
                      */
                     std::string m_diskChargeType;
                     bool m_diskChargeTypeHasBeenSet;
@@ -470,7 +509,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_deadlineTimeHasBeenSet;
 
                     /**
-                     * Whether the cloud disk is mounted on the cloud host.
+                     * Whether the cloud disk is mounted on the CVM.
                      */
                     bool m_attached;
                     bool m_attachedHasBeenSet;
@@ -482,14 +521,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_differDaysOfDeadlineHasBeenSet;
 
                     /**
-                     * InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the CVM instance to which this cloud disk is currently mounted.
                      */
                     std::vector<std::string> m_instanceIdList;
                     bool m_instanceIdListHasBeenSet;
 
                     /**
-                     * ID of the cloud host to which the Cloud disk is mounted.
+                     * ID of the CVM to which the cloud disk is mounted.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -511,6 +549,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_underwriteExpiredTime;
                     bool m_underwriteExpiredTimeHasBeenSet;
+
+                    /**
+                     * Tag.
+                     */
+                    std::vector<TagInfo> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Cloud disk additional performance value. Unit: MB/s.
+                     */
+                    int64_t m_throughputPerformance;
+                    bool m_throughputPerformanceHasBeenSet;
 
                 };
             }

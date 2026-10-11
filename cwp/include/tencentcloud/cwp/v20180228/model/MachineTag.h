@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Server tag information
+                * 
                 */
                 class MachineTag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Associated tag ID
-                     * @return Rid Associated tag ID
+                     * 获取
+                     * @return Rid 
                      * 
                      */
                     int64_t GetRid() const;
 
                     /**
-                     * 设置Associated tag ID
-                     * @param _rid Associated tag ID
+                     * 设置
+                     * @param _rid 
                      * 
                      */
                     void SetRid(const int64_t& _rid);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RidHasBeenSet() const;
 
                     /**
-                     * 获取Tag name
-                     * @return Name Tag name
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Tag name
-                     * @param _name Tag name
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tag ID
-                     * @return TagId Tag ID
+                     * 获取
+                     * @return TagId 
                      * 
                      */
                     uint64_t GetTagId() const;
 
                     /**
-                     * 设置Tag ID
-                     * @param _tagId Tag ID
+                     * 设置
+                     * @param _tagId 
                      * 
                      */
                     void SetTagId(const uint64_t& _tagId);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Associated tag ID
+                     * 
                      */
                     int64_t m_rid;
                     bool m_ridHasBeenSet;
 
                     /**
-                     * Tag name
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tag ID
+                     * 
                      */
                     uint64_t m_tagId;
                     bool m_tagIdHasBeenSet;

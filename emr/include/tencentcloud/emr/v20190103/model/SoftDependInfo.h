@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Client component dependencies
+                * External client component dependency information.
                 */
                 class SoftDependInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The component name.
-                     * @return SoftName The component name.
+                     * 获取Component name.
+                     * @return SoftName Component name.
                      * 
                      */
                     std::string GetSoftName() const;
 
                     /**
-                     * 设置The component name.
-                     * @param _softName The component name.
+                     * 设置Component name.
+                     * @param _softName Component name.
                      * 
                      */
                     void SetSoftName(const std::string& _softName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SoftNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the component is required.
-                     * @return Required Whether the component is required.
+                     * 获取Whether it is required.
+                     * @return Required Whether it is required.
                      * 
                      */
                     bool GetRequired() const;
 
                     /**
-                     * 设置Whether the component is required.
-                     * @param _required Whether the component is required.
+                     * 设置Whether it is required.
+                     * @param _required Whether it is required.
                      * 
                      */
                     void SetRequired(const bool& _required);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The component name.
+                     * Component name.
                      */
                     std::string m_softName;
                     bool m_softNameHasBeenSet;
 
                     /**
-                     * Whether the component is required.
+                     * Whether it is required.
                      */
                     bool m_required;
                     bool m_requiredHasBeenSet;

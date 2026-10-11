@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Results Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SparkQuery> GetResults() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SparkQuery> m_results;
                     bool m_resultsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * General parameters
+                * General parameters.
                 */
                 class Arg : public AbstractModel
                 {
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Values Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Value list.
+                     * @return Values Value list.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _values Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Value list.
+                     * @param _values Value list.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -105,9 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Value list.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

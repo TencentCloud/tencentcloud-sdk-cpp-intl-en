@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output parameters of the DescribeResourceConfig API.
+                * Response parameters of the DescribeResourceConfig API.
                 */
                 class DescribeResourceConfig : public AbstractModel
                 {

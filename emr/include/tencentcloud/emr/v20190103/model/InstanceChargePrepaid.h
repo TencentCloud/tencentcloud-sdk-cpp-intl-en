@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
-                     * @return Period The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * 获取Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
+                     * @return Period Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
-                     * @param _period The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * 设置Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
+                     * @param _period Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -72,23 +68,23 @@ Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-                     * @return RenewFlag Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+                     * 获取Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
+                     * @return RenewFlag Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
                      * 
                      */
                     bool GetRenewFlag() const;
 
                     /**
-                     * 设置Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-                     * @param _renewFlag Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+                     * 设置Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
+                     * @param _renewFlag Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
                      * 
                      */
                     void SetRenewFlag(const bool& _renewFlag);
@@ -103,16 +99,15 @@ Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                 private:
 
                     /**
-                     * The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+                     * Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
                      */
                     bool m_renewFlag;
                     bool m_renewFlagHasBeenSet;

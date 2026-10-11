@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Target resource specification
+                * Changed resource specifications.
                 */
                 class UpdateInstanceSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Memory capacity in GB
-                     * @return Memory Memory capacity in GB
+                     * 获取Memory capacity, in GB.
+                     * @return Memory Memory capacity, in GB.
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Memory capacity in GB
-                     * @param _memory Memory capacity in GB
+                     * 设置Memory capacity, in GB.
+                     * @param _memory Memory capacity, in GB.
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return CPUCores Number of CPU cores
+                     * 获取Number of CPU cores.
+                     * @return CPUCores Number of CPU cores.
                      * 
                      */
                     uint64_t GetCPUCores() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cPUCores Number of CPU cores
+                     * 设置Number of CPU cores.
+                     * @param _cPUCores Number of CPU cores.
                      * 
                      */
                     void SetCPUCores(const uint64_t& _cPUCores);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CPUCoresHasBeenSet() const;
 
                     /**
-                     * 获取Machine resource ID (EMR resource identifier)
-                     * @return ResourceId Machine resource ID (EMR resource identifier)
+                     * 获取Machine resource ID (EMR resource identifier).
+                     * @return ResourceId Machine resource ID (EMR resource identifier).
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Machine resource ID (EMR resource identifier)
-                     * @param _resourceId Machine resource ID (EMR resource identifier)
+                     * 设置Machine resource ID (EMR resource identifier).
+                     * @param _resourceId Machine resource ID (EMR resource identifier).
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target machine specification
-                     * @return InstanceType Target machine specification
+                     * 获取Changed machine specifications.
+                     * @return InstanceType Changed machine specifications.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Target machine specification
-                     * @param _instanceType Target machine specification
+                     * 设置Changed machine specifications.
+                     * @param _instanceType Changed machine specifications.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Memory capacity in GB
+                     * Memory capacity, in GB.
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * Number of CPU cores.
                      */
                     uint64_t m_cPUCores;
                     bool m_cPUCoresHasBeenSet;
 
                     /**
-                     * Machine resource ID (EMR resource identifier)
+                     * Machine resource ID (EMR resource identifier).
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Target machine specification
+                     * Changed machine specifications.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

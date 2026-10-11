@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process node IP
-                     * @return Ip Process node IP
+                     * 获取Process node IP address.
+                     * @return Ip Process node IP address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Process node IP
-                     * @param _ip Process node IP
+                     * 设置Process node IP address.
+                     * @param _ip Process node IP address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Process name
-                     * @return NodeName Process name
+                     * 获取Process name.
+                     * @return NodeName Process name.
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Process name
-                     * @param _nodeName Process name
+                     * 设置Process name.
+                     * @param _nodeName Process name.
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Service component status
-                     * @return ServiceStatus Service component status
+                     * 获取Service component status.
+                     * @return ServiceStatus Service component status.
                      * 
                      */
                     int64_t GetServiceStatus() const;
 
                     /**
-                     * 设置Service component status
-                     * @param _serviceStatus Service component status
+                     * 设置Service component status.
+                     * @param _serviceStatus Service component status.
                      * 
                      */
                     void SetServiceStatus(const int64_t& _serviceStatus);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool ServiceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Process monitoring status
-                     * @return MonitorStatus Process monitoring status
+                     * 获取Process monitoring status.
+                     * @return MonitorStatus Process monitoring status.
                      * 
                      */
                     int64_t GetMonitorStatus() const;
 
                     /**
-                     * 设置Process monitoring status
-                     * @param _monitorStatus Process monitoring status
+                     * 设置Process monitoring status.
+                     * @param _monitorStatus Process monitoring status.
                      * 
                      */
                     void SetMonitorStatus(const int64_t& _monitorStatus);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool MonitorStatusHasBeenSet() const;
 
                     /**
-                     * 获取Service component status
-                     * @return Status Service component status
+                     * 获取Service component status.
+                     * @return Status Service component status.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Service component status
-                     * @param _status Service component status
+                     * 设置Service component status.
+                     * @param _status Service component status.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Process port information
-                     * @return PortsInfo Process port information
+                     * 获取Process port information.
+                     * @return PortsInfo Process port information.
                      * 
                      */
                     std::string GetPortsInfo() const;
 
                     /**
-                     * 设置Process port information
-                     * @param _portsInfo Process port information
+                     * 设置Process port information.
+                     * @param _portsInfo Process port information.
                      * 
                      */
                     void SetPortsInfo(const std::string& _portsInfo);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool PortsInfoHasBeenSet() const;
 
                     /**
-                     * 获取Last restart time.
-                     * @return LastRestartTime Last restart time.
+                     * 获取Latest restart time.
+                     * @return LastRestartTime Latest restart time.
                      * 
                      */
                     std::string GetLastRestartTime() const;
 
                     /**
-                     * 设置Last restart time.
-                     * @param _lastRestartTime Last restart time.
+                     * 设置Latest restart time.
+                     * @param _lastRestartTime Latest restart time.
                      * 
                      */
                     void SetLastRestartTime(const std::string& _lastRestartTime);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool ConfGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the node needs to be restarted
-                     * @return ConfStatus Whether the node needs to be restarted
+                     * 获取Whether the node needs to be restarted.
+                     * @return ConfStatus Whether the node needs to be restarted.
                      * 
                      */
                     int64_t GetConfStatus() const;
 
                     /**
-                     * 设置Whether the node needs to be restarted
-                     * @param _confStatus Whether the node needs to be restarted
+                     * 设置Whether the node needs to be restarted.
+                     * @param _confStatus Whether the node needs to be restarted.
                      * 
                      */
                     void SetConfStatus(const int64_t& _confStatus);
@@ -302,23 +302,15 @@ namespace TencentCloud
                     bool ConfStatusHasBeenSet() const;
 
                     /**
-                     * 获取Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServiceDetectionInfo Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process detection information.
+                     * @return ServiceDetectionInfo Process detection information.
                      * 
                      */
                     std::vector<ServiceProcessFunctionInfo> GetServiceDetectionInfo() const;
 
                     /**
-                     * 设置Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serviceDetectionInfo Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process detection information.
+                     * @param _serviceDetectionInfo Process detection information.
                      * 
                      */
                     void SetServiceDetectionInfo(const std::vector<ServiceProcessFunctionInfo>& _serviceDetectionInfo);
@@ -352,23 +344,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeFlagFilterHasBeenSet() const;
 
                     /**
-                     * 获取Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HealthStatus Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process health status.
+                     * @return HealthStatus Process health status.
                      * 
                      */
                     HealthStatus GetHealthStatus() const;
 
                     /**
-                     * 设置Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _healthStatus Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process health status.
+                     * @param _healthStatus Process health status.
                      * 
                      */
                     void SetHealthStatus(const HealthStatus& _healthStatus);
@@ -402,23 +386,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSupportRoleMonitorHasBeenSet() const;
 
                     /**
-                     * 获取Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StopPolicies Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Suspension policy.
+                     * @return StopPolicies Suspension policy.
                      * 
                      */
                     std::vector<RestartPolicy> GetStopPolicies() const;
 
                     /**
-                     * 设置Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _stopPolicies Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Suspension policy.
+                     * @param _stopPolicies Suspension policy.
                      * 
                      */
                     void SetStopPolicies(const std::vector<RestartPolicy>& _stopPolicies);
@@ -431,15 +407,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StopPoliciesHasBeenSet() const;
 
                     /**
-                     * 获取Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
-                     * @return HAState Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+                     * 获取Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
+                     * @return HAState Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
                      * 
                      */
                     std::string GetHAState() const;
 
                     /**
-                     * 设置Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
-                     * @param _hAState Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+                     * 设置Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
+                     * @param _hAState Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
                      * 
                      */
                     void SetHAState(const std::string& _hAState);
@@ -494,15 +470,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsFederationHasBeenSet() const;
 
                     /**
-                     * 获取Whether the DataNode is in maintenance status.
-                     * @return DataNodeMaintenanceState Whether the DataNode is in maintenance status.
+                     * 获取Whether the DataNode is in the maintenance status.
+                     * @return DataNodeMaintenanceState Whether the DataNode is in the maintenance status.
                      * 
                      */
                     int64_t GetDataNodeMaintenanceState() const;
 
                     /**
-                     * 设置Whether the DataNode is in maintenance status.
-                     * @param _dataNodeMaintenanceState Whether the DataNode is in maintenance status.
+                     * 设置Whether the DataNode is in the maintenance status.
+                     * @param _dataNodeMaintenanceState Whether the DataNode is in the maintenance status.
                      * 
                      */
                     void SetDataNodeMaintenanceState(const int64_t& _dataNodeMaintenanceState);
@@ -517,7 +493,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Process node IP
+                     * Process node IP address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
@@ -529,37 +505,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Process name
+                     * Process name.
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Service component status
+                     * Service component status.
                      */
                     int64_t m_serviceStatus;
                     bool m_serviceStatusHasBeenSet;
 
                     /**
-                     * Process monitoring status
+                     * Process monitoring status.
                      */
                     int64_t m_monitorStatus;
                     bool m_monitorStatusHasBeenSet;
 
                     /**
-                     * Service component status
+                     * Service component status.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Process port information
+                     * Process port information.
                      */
                     std::string m_portsInfo;
                     bool m_portsInfoHasBeenSet;
 
                     /**
-                     * Last restart time.
+                     * Latest restart time.
                      */
                     std::string m_lastRestartTime;
                     bool m_lastRestartTimeHasBeenSet;
@@ -583,15 +559,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_confGroupNameHasBeenSet;
 
                     /**
-                     * Whether the node needs to be restarted
+                     * Whether the node needs to be restarted.
                      */
                     int64_t m_confStatus;
                     bool m_confStatusHasBeenSet;
 
                     /**
-                     * Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process detection information.
                      */
                     std::vector<ServiceProcessFunctionInfo> m_serviceDetectionInfo;
                     bool m_serviceDetectionInfoHasBeenSet;
@@ -603,9 +577,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nodeFlagFilterHasBeenSet;
 
                     /**
-                     * Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process health status.
                      */
                     HealthStatus m_healthStatus;
                     bool m_healthStatusHasBeenSet;
@@ -617,15 +589,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isSupportRoleMonitorHasBeenSet;
 
                     /**
-                     * Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Suspension policy.
                      */
                     std::vector<RestartPolicy> m_stopPolicies;
                     bool m_stopPoliciesHasBeenSet;
 
                     /**
-                     * Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+                     * Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
                      */
                     std::string m_hAState;
                     bool m_hAStateHasBeenSet;
@@ -643,7 +613,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isFederationHasBeenSet;
 
                     /**
-                     * Whether the DataNode is in maintenance status.
+                     * Whether the DataNode is in the maintenance status.
                      */
                     int64_t m_dataNodeMaintenanceState;
                     bool m_dataNodeMaintenanceStateHasBeenSet;

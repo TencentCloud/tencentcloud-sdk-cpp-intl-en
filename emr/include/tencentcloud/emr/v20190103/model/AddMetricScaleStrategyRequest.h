@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool LoadAutoScaleStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Rule for time-based scaling
-                     * @return TimeAutoScaleStrategy Rule for time-based scaling
+                     * 获取Time-based scaling rule.
+                     * @return TimeAutoScaleStrategy Time-based scaling rule.
                      * 
                      */
                     TimeAutoScaleStrategy GetTimeAutoScaleStrategy() const;
 
                     /**
-                     * 设置Rule for time-based scaling
-                     * @param _timeAutoScaleStrategy Rule for time-based scaling
+                     * 设置Time-based scaling rule.
+                     * @param _timeAutoScaleStrategy Time-based scaling rule.
                      * 
                      */
                     void SetTimeAutoScaleStrategy(const TimeAutoScaleStrategy& _timeAutoScaleStrategy);
@@ -149,7 +149,7 @@ namespace TencentCloud
                     bool m_loadAutoScaleStrategyHasBeenSet;
 
                     /**
-                     * Rule for time-based scaling
+                     * Time-based scaling rule.
                      */
                     TimeAutoScaleStrategy m_timeAutoScaleStrategy;
                     bool m_timeAutoScaleStrategyHasBeenSet;

@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ScanFileNumHasBeenSet() const;
 
                     /**
-                     * 获取Total data volume scanned by query (bytes).
-                     * @return ScanTotalData Total data volume scanned by query (bytes).
+                     * 获取Total scanned and queried data volume (bytes).
+                     * @return ScanTotalData Total scanned and queried data volume (bytes).
                      * 
                      */
                     int64_t GetScanTotalData() const;
 
                     /**
-                     * 设置Total data volume scanned by query (bytes).
-                     * @param _scanTotalData Total data volume scanned by query (bytes).
+                     * 设置Total scanned and queried data volume (bytes).
+                     * @param _scanTotalData Total scanned and queried data volume (bytes).
                      * 
                      */
                     void SetScanTotalData(const int64_t& _scanTotalData);
@@ -216,18 +216,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetApplicationId() const;
 
                     /**
                      * 设置Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _applicationId Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApplicationId(const std::vector<std::string>& _applicationId);
@@ -410,14 +406,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scanFileNumHasBeenSet;
 
                     /**
-                     * Total data volume scanned by query (bytes).
+                     * Total scanned and queried data volume (bytes).
                      */
                     int64_t m_scanTotalData;
                     bool m_scanTotalDataHasBeenSet;
 
                     /**
                      * Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_applicationId;
                     bool m_applicationIdHasBeenSet;

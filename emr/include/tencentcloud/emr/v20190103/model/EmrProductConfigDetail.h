@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SoftInfo Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSoftInfo() const;
 
                     /**
                      * 设置Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _softInfo Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSoftInfo(const std::vector<std::string>& _softInfo);
@@ -157,23 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComNodeSizeHasBeenSet() const;
 
                     /**
-                     * 获取Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MasterResource Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Master node resources.
+                     * @return MasterResource Master node resources.
                      * 
                      */
                     ResourceDetail GetMasterResource() const;
 
                     /**
-                     * 设置Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _masterResource Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Master node resources.
+                     * @param _masterResource Master node resources.
                      * 
                      */
                     void SetMasterResource(const ResourceDetail& _masterResource);
@@ -186,23 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MasterResourceHasBeenSet() const;
 
                     /**
-                     * 获取Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CoreResource Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Core node resources.
+                     * @return CoreResource Core node resources.
                      * 
                      */
                     ResourceDetail GetCoreResource() const;
 
                     /**
-                     * 设置Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _coreResource Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Core node resources.
+                     * @param _coreResource Core node resources.
                      * 
                      */
                     void SetCoreResource(const ResourceDetail& _coreResource);
@@ -215,23 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CoreResourceHasBeenSet() const;
 
                     /**
-                     * 获取Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskResource Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task node resources.
+                     * @return TaskResource Task node resources.
                      * 
                      */
                     ResourceDetail GetTaskResource() const;
 
                     /**
-                     * 设置Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskResource Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task node resources.
+                     * @param _taskResource Task node resources.
                      * 
                      */
                     void SetTaskResource(const ResourceDetail& _taskResource);
@@ -244,23 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskResourceHasBeenSet() const;
 
                     /**
-                     * 获取Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComResource Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Common node resources.
+                     * @return ComResource Common node resources.
                      * 
                      */
                     ResourceDetail GetComResource() const;
 
                     /**
-                     * 设置Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _comResource Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Common node resources.
+                     * @param _comResource Common node resources.
                      * 
                      */
                     void SetComResource(const ResourceDetail& _comResource);
@@ -273,15 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComResourceHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use COS.
-                     * @return OnCos Whether to use COS.
+                     * 获取Whether COS is used.
+                     * @return OnCos Whether COS is used.
                      * 
                      */
                     bool GetOnCos() const;
 
                     /**
-                     * 设置Whether to use COS.
-                     * @param _onCos Whether to use COS.
+                     * 设置Whether COS is used.
+                     * @param _onCos Whether COS is used.
                      * 
                      */
                     void SetOnCos(const bool& _onCos);
@@ -399,15 +363,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable CBS encryption.
-                     * @return CbsEncrypt Whether to enable CBS encryption.
+                     * 获取Whether CBS encryption is enabled.
+                     * @return CbsEncrypt Whether CBS encryption is enabled.
                      * 
                      */
                     int64_t GetCbsEncrypt() const;
 
                     /**
-                     * 设置Whether to enable CBS encryption.
-                     * @param _cbsEncrypt Whether to enable CBS encryption.
+                     * 设置Whether CBS encryption is enabled.
+                     * @param _cbsEncrypt Whether CBS encryption is enabled.
                      * 
                      */
                     void SetCbsEncrypt(const int64_t& _cbsEncrypt);
@@ -442,18 +406,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SecurityGroups Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
                      * 设置Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _securityGroups Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
@@ -490,7 +450,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_softInfo;
                     bool m_softInfoHasBeenSet;
@@ -520,39 +479,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_comNodeSizeHasBeenSet;
 
                     /**
-                     * Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Master node resources.
                      */
                     ResourceDetail m_masterResource;
                     bool m_masterResourceHasBeenSet;
 
                     /**
-                     * Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Core node resources.
                      */
                     ResourceDetail m_coreResource;
                     bool m_coreResourceHasBeenSet;
 
                     /**
-                     * Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task node resources.
                      */
                     ResourceDetail m_taskResource;
                     bool m_taskResourceHasBeenSet;
 
                     /**
-                     * Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Common node resources.
                      */
                     ResourceDetail m_comResource;
                     bool m_comResourceHasBeenSet;
 
                     /**
-                     * Whether to use COS.
+                     * Whether COS is used.
                      */
                     bool m_onCos;
                     bool m_onCosHasBeenSet;
@@ -588,7 +539,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * Whether to enable CBS encryption.
+                     * Whether CBS encryption is enabled.
                      */
                     int64_t m_cbsEncrypt;
                     bool m_cbsEncryptHasBeenSet;
@@ -601,7 +552,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_securityGroups;
                     bool m_securityGroupsHasBeenSet;

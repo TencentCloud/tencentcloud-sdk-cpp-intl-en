@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output parameters
+                * Response parameter.
                 */
                 class CdbInfo : public AbstractModel
                 {
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Service identifier.
-                     * @return Service Service identifier.
+                     * 获取Service flag.
+                     * @return Service Service flag.
                      * 
                      */
                     std::string GetService() const;
 
                     /**
-                     * 设置Service identifier.
-                     * @param _service Service identifier.
+                     * 设置Service flag.
+                     * @param _service Service flag.
                      * 
                      */
                     void SetService(const std::string& _service);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ApplyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing type.
-                     * @return PayType Billing type.
+                     * 获取Payment type.
+                     * @return PayType Payment type.
                      * 
                      */
                     int64_t GetPayType() const;
 
                     /**
-                     * 设置Billing type.
-                     * @param _payType Billing type.
+                     * 设置Payment type.
+                     * @param _payType Payment type.
                      * 
                      */
                     void SetPayType(const int64_t& _payType);
@@ -394,7 +394,7 @@ namespace TencentCloud
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Service identifier.
+                     * Service flag.
                      */
                     std::string m_service;
                     bool m_serviceHasBeenSet;
@@ -412,7 +412,7 @@ namespace TencentCloud
                     bool m_applyTimeHasBeenSet;
 
                     /**
-                     * Billing type.
+                     * Payment type.
                      */
                     int64_t m_payType;
                     bool m_payTypeHasBeenSet;

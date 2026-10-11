@@ -90,6 +90,56 @@ CwpClient::AddLoginWhiteListsOutcomeCallable CwpClient::AddLoginWhiteListsCallab
     return prom->get_future();
 }
 
+CwpClient::AddVulIgnoreRuleOutcome CwpClient::AddVulIgnoreRule(const AddVulIgnoreRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddVulIgnoreRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddVulIgnoreRuleResponse rsp = AddVulIgnoreRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddVulIgnoreRuleOutcome(rsp);
+        else
+            return AddVulIgnoreRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return AddVulIgnoreRuleOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::AddVulIgnoreRuleAsync(const AddVulIgnoreRuleRequest& request, const AddVulIgnoreRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddVulIgnoreRuleRequest&;
+    using Resp = AddVulIgnoreRuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddVulIgnoreRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::AddVulIgnoreRuleOutcomeCallable CwpClient::AddVulIgnoreRuleCallable(const AddVulIgnoreRuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddVulIgnoreRuleOutcome>>();
+    AddVulIgnoreRuleAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const AddVulIgnoreRuleRequest&,
+        AddVulIgnoreRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::ChangeRuleEventsIgnoreStatusOutcome CwpClient::ChangeRuleEventsIgnoreStatus(const ChangeRuleEventsIgnoreStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "ChangeRuleEventsIgnoreStatus");
@@ -990,6 +1040,56 @@ CwpClient::CreateNetAttackWhiteListOutcomeCallable CwpClient::CreateNetAttackWhi
     return prom->get_future();
 }
 
+CwpClient::CreateProtectServerOutcome CwpClient::CreateProtectServer(const CreateProtectServerRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateProtectServer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateProtectServerResponse rsp = CreateProtectServerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateProtectServerOutcome(rsp);
+        else
+            return CreateProtectServerOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateProtectServerOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::CreateProtectServerAsync(const CreateProtectServerRequest& request, const CreateProtectServerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateProtectServerRequest&;
+    using Resp = CreateProtectServerResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateProtectServer", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::CreateProtectServerOutcomeCallable CwpClient::CreateProtectServerCallable(const CreateProtectServerRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateProtectServerOutcome>>();
+    CreateProtectServerAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const CreateProtectServerRequest&,
+        CreateProtectServerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::CreateRansomDefenseStrategyOutcome CwpClient::CreateRansomDefenseStrategy(const CreateRansomDefenseStrategyRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRansomDefenseStrategy");
@@ -1440,6 +1540,106 @@ CwpClient::DeleteBaselinePolicyOutcomeCallable CwpClient::DeleteBaselinePolicyCa
     return prom->get_future();
 }
 
+CwpClient::DeleteBaselineRuleOutcome CwpClient::DeleteBaselineRule(const DeleteBaselineRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBaselineRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBaselineRuleResponse rsp = DeleteBaselineRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBaselineRuleOutcome(rsp);
+        else
+            return DeleteBaselineRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBaselineRuleOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DeleteBaselineRuleAsync(const DeleteBaselineRuleRequest& request, const DeleteBaselineRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteBaselineRuleRequest&;
+    using Resp = DeleteBaselineRuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteBaselineRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DeleteBaselineRuleOutcomeCallable CwpClient::DeleteBaselineRuleCallable(const DeleteBaselineRuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteBaselineRuleOutcome>>();
+    DeleteBaselineRuleAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DeleteBaselineRuleRequest&,
+        DeleteBaselineRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DeleteBaselineRuleIgnoreOutcome CwpClient::DeleteBaselineRuleIgnore(const DeleteBaselineRuleIgnoreRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBaselineRuleIgnore");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBaselineRuleIgnoreResponse rsp = DeleteBaselineRuleIgnoreResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBaselineRuleIgnoreOutcome(rsp);
+        else
+            return DeleteBaselineRuleIgnoreOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBaselineRuleIgnoreOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DeleteBaselineRuleIgnoreAsync(const DeleteBaselineRuleIgnoreRequest& request, const DeleteBaselineRuleIgnoreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteBaselineRuleIgnoreRequest&;
+    using Resp = DeleteBaselineRuleIgnoreResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteBaselineRuleIgnore", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DeleteBaselineRuleIgnoreOutcomeCallable CwpClient::DeleteBaselineRuleIgnoreCallable(const DeleteBaselineRuleIgnoreRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteBaselineRuleIgnoreOutcome>>();
+    DeleteBaselineRuleIgnoreAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DeleteBaselineRuleIgnoreRequest&,
+        DeleteBaselineRuleIgnoreOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DeleteBaselineStrategyOutcome CwpClient::DeleteBaselineStrategy(const DeleteBaselineStrategyRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteBaselineStrategy");
@@ -1482,6 +1682,56 @@ CwpClient::DeleteBaselineStrategyOutcomeCallable CwpClient::DeleteBaselineStrate
         const CwpClient*,
         const DeleteBaselineStrategyRequest&,
         DeleteBaselineStrategyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DeleteBaselineWeakPasswordOutcome CwpClient::DeleteBaselineWeakPassword(const DeleteBaselineWeakPasswordRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBaselineWeakPassword");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBaselineWeakPasswordResponse rsp = DeleteBaselineWeakPasswordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBaselineWeakPasswordOutcome(rsp);
+        else
+            return DeleteBaselineWeakPasswordOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBaselineWeakPasswordOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DeleteBaselineWeakPasswordAsync(const DeleteBaselineWeakPasswordRequest& request, const DeleteBaselineWeakPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteBaselineWeakPasswordRequest&;
+    using Resp = DeleteBaselineWeakPasswordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteBaselineWeakPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DeleteBaselineWeakPasswordOutcomeCallable CwpClient::DeleteBaselineWeakPasswordCallable(const DeleteBaselineWeakPasswordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteBaselineWeakPasswordOutcome>>();
+    DeleteBaselineWeakPasswordAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DeleteBaselineWeakPasswordRequest&,
+        DeleteBaselineWeakPasswordOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2490,6 +2740,56 @@ CwpClient::DeletePrivilegeRulesOutcomeCallable CwpClient::DeletePrivilegeRulesCa
     return prom->get_future();
 }
 
+CwpClient::DeleteProtectDirOutcome CwpClient::DeleteProtectDir(const DeleteProtectDirRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteProtectDir");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteProtectDirResponse rsp = DeleteProtectDirResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteProtectDirOutcome(rsp);
+        else
+            return DeleteProtectDirOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteProtectDirOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DeleteProtectDirAsync(const DeleteProtectDirRequest& request, const DeleteProtectDirAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteProtectDirRequest&;
+    using Resp = DeleteProtectDirResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteProtectDir", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DeleteProtectDirOutcomeCallable CwpClient::DeleteProtectDirCallable(const DeleteProtectDirRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteProtectDirOutcome>>();
+    DeleteProtectDirAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DeleteProtectDirRequest&,
+        DeleteProtectDirOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DeleteRaspRulesOutcome CwpClient::DeleteRaspRules(const DeleteRaspRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRaspRules");
@@ -3032,6 +3332,56 @@ CwpClient::DeleteWebHookRuleOutcomeCallable CwpClient::DeleteWebHookRuleCallable
         const CwpClient*,
         const DeleteWebHookRuleRequest&,
         DeleteWebHookRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DeleteWebPageEventLogOutcome CwpClient::DeleteWebPageEventLog(const DeleteWebPageEventLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteWebPageEventLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteWebPageEventLogResponse rsp = DeleteWebPageEventLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteWebPageEventLogOutcome(rsp);
+        else
+            return DeleteWebPageEventLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteWebPageEventLogOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DeleteWebPageEventLogAsync(const DeleteWebPageEventLogRequest& request, const DeleteWebPageEventLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteWebPageEventLogRequest&;
+    using Resp = DeleteWebPageEventLogResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteWebPageEventLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DeleteWebPageEventLogOutcomeCallable CwpClient::DeleteWebPageEventLogCallable(const DeleteWebPageEventLogRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteWebPageEventLogOutcome>>();
+    DeleteWebPageEventLogAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DeleteWebPageEventLogRequest&,
+        DeleteWebPageEventLogOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6190,6 +6540,56 @@ CwpClient::DescribeBanWhiteListOutcomeCallable CwpClient::DescribeBanWhiteListCa
     return prom->get_future();
 }
 
+CwpClient::DescribeBaselineAnalysisDataOutcome CwpClient::DescribeBaselineAnalysisData(const DescribeBaselineAnalysisDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineAnalysisData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineAnalysisDataResponse rsp = DescribeBaselineAnalysisDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineAnalysisDataOutcome(rsp);
+        else
+            return DescribeBaselineAnalysisDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineAnalysisDataOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineAnalysisDataAsync(const DescribeBaselineAnalysisDataRequest& request, const DescribeBaselineAnalysisDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineAnalysisDataRequest&;
+    using Resp = DescribeBaselineAnalysisDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineAnalysisData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineAnalysisDataOutcomeCallable CwpClient::DescribeBaselineAnalysisDataCallable(const DescribeBaselineAnalysisDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineAnalysisDataOutcome>>();
+    DescribeBaselineAnalysisDataAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineAnalysisDataRequest&,
+        DescribeBaselineAnalysisDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeBaselineBasicInfoOutcome CwpClient::DescribeBaselineBasicInfo(const DescribeBaselineBasicInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBaselineBasicInfo");
@@ -6340,6 +6740,156 @@ CwpClient::DescribeBaselineDetailOutcomeCallable CwpClient::DescribeBaselineDeta
     return prom->get_future();
 }
 
+CwpClient::DescribeBaselineDetectListOutcome CwpClient::DescribeBaselineDetectList(const DescribeBaselineDetectListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineDetectList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineDetectListResponse rsp = DescribeBaselineDetectListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineDetectListOutcome(rsp);
+        else
+            return DescribeBaselineDetectListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineDetectListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineDetectListAsync(const DescribeBaselineDetectListRequest& request, const DescribeBaselineDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineDetectListRequest&;
+    using Resp = DescribeBaselineDetectListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineDetectList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineDetectListOutcomeCallable CwpClient::DescribeBaselineDetectListCallable(const DescribeBaselineDetectListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineDetectListOutcome>>();
+    DescribeBaselineDetectListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineDetectListRequest&,
+        DescribeBaselineDetectListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineDetectOverviewOutcome CwpClient::DescribeBaselineDetectOverview(const DescribeBaselineDetectOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineDetectOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineDetectOverviewResponse rsp = DescribeBaselineDetectOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineDetectOverviewOutcome(rsp);
+        else
+            return DescribeBaselineDetectOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineDetectOverviewOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineDetectOverviewAsync(const DescribeBaselineDetectOverviewRequest& request, const DescribeBaselineDetectOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineDetectOverviewRequest&;
+    using Resp = DescribeBaselineDetectOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineDetectOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineDetectOverviewOutcomeCallable CwpClient::DescribeBaselineDetectOverviewCallable(const DescribeBaselineDetectOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineDetectOverviewOutcome>>();
+    DescribeBaselineDetectOverviewAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineDetectOverviewRequest&,
+        DescribeBaselineDetectOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineDownloadListOutcome CwpClient::DescribeBaselineDownloadList(const DescribeBaselineDownloadListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineDownloadList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineDownloadListResponse rsp = DescribeBaselineDownloadListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineDownloadListOutcome(rsp);
+        else
+            return DescribeBaselineDownloadListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineDownloadListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineDownloadListAsync(const DescribeBaselineDownloadListRequest& request, const DescribeBaselineDownloadListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineDownloadListRequest&;
+    using Resp = DescribeBaselineDownloadListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineDownloadList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineDownloadListOutcomeCallable CwpClient::DescribeBaselineDownloadListCallable(const DescribeBaselineDownloadListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineDownloadListOutcome>>();
+    DescribeBaselineDownloadListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineDownloadListRequest&,
+        DescribeBaselineDownloadListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeBaselineEffectHostListOutcome CwpClient::DescribeBaselineEffectHostList(const DescribeBaselineEffectHostListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBaselineEffectHostList");
@@ -6390,6 +6940,56 @@ CwpClient::DescribeBaselineEffectHostListOutcomeCallable CwpClient::DescribeBase
     return prom->get_future();
 }
 
+CwpClient::DescribeBaselineFixListOutcome CwpClient::DescribeBaselineFixList(const DescribeBaselineFixListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineFixList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineFixListResponse rsp = DescribeBaselineFixListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineFixListOutcome(rsp);
+        else
+            return DescribeBaselineFixListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineFixListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineFixListAsync(const DescribeBaselineFixListRequest& request, const DescribeBaselineFixListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineFixListRequest&;
+    using Resp = DescribeBaselineFixListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineFixList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineFixListOutcomeCallable CwpClient::DescribeBaselineFixListCallable(const DescribeBaselineFixListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineFixListOutcome>>();
+    DescribeBaselineFixListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineFixListRequest&,
+        DescribeBaselineFixListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeBaselineHostDetectListOutcome CwpClient::DescribeBaselineHostDetectList(const DescribeBaselineHostDetectListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBaselineHostDetectList");
@@ -6432,6 +7032,106 @@ CwpClient::DescribeBaselineHostDetectListOutcomeCallable CwpClient::DescribeBase
         const CwpClient*,
         const DescribeBaselineHostDetectListRequest&,
         DescribeBaselineHostDetectListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineHostIgnoreListOutcome CwpClient::DescribeBaselineHostIgnoreList(const DescribeBaselineHostIgnoreListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineHostIgnoreList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineHostIgnoreListResponse rsp = DescribeBaselineHostIgnoreListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineHostIgnoreListOutcome(rsp);
+        else
+            return DescribeBaselineHostIgnoreListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineHostIgnoreListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineHostIgnoreListAsync(const DescribeBaselineHostIgnoreListRequest& request, const DescribeBaselineHostIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineHostIgnoreListRequest&;
+    using Resp = DescribeBaselineHostIgnoreListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineHostIgnoreList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineHostIgnoreListOutcomeCallable CwpClient::DescribeBaselineHostIgnoreListCallable(const DescribeBaselineHostIgnoreListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineHostIgnoreListOutcome>>();
+    DescribeBaselineHostIgnoreListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineHostIgnoreListRequest&,
+        DescribeBaselineHostIgnoreListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineHostRiskTopOutcome CwpClient::DescribeBaselineHostRiskTop(const DescribeBaselineHostRiskTopRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineHostRiskTop");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineHostRiskTopResponse rsp = DescribeBaselineHostRiskTopResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineHostRiskTopOutcome(rsp);
+        else
+            return DescribeBaselineHostRiskTopOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineHostRiskTopOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineHostRiskTopAsync(const DescribeBaselineHostRiskTopRequest& request, const DescribeBaselineHostRiskTopAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineHostRiskTopRequest&;
+    using Resp = DescribeBaselineHostRiskTopResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineHostRiskTop", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineHostRiskTopOutcomeCallable CwpClient::DescribeBaselineHostRiskTopCallable(const DescribeBaselineHostRiskTopRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineHostRiskTopOutcome>>();
+    DescribeBaselineHostRiskTopAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineHostRiskTopRequest&,
+        DescribeBaselineHostRiskTopOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6540,6 +7240,106 @@ CwpClient::DescribeBaselineItemDetectListOutcomeCallable CwpClient::DescribeBase
     return prom->get_future();
 }
 
+CwpClient::DescribeBaselineItemIgnoreListOutcome CwpClient::DescribeBaselineItemIgnoreList(const DescribeBaselineItemIgnoreListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineItemIgnoreList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineItemIgnoreListResponse rsp = DescribeBaselineItemIgnoreListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineItemIgnoreListOutcome(rsp);
+        else
+            return DescribeBaselineItemIgnoreListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineItemIgnoreListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineItemIgnoreListAsync(const DescribeBaselineItemIgnoreListRequest& request, const DescribeBaselineItemIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineItemIgnoreListRequest&;
+    using Resp = DescribeBaselineItemIgnoreListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineItemIgnoreList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineItemIgnoreListOutcomeCallable CwpClient::DescribeBaselineItemIgnoreListCallable(const DescribeBaselineItemIgnoreListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineItemIgnoreListOutcome>>();
+    DescribeBaselineItemIgnoreListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineItemIgnoreListRequest&,
+        DescribeBaselineItemIgnoreListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineItemInfoOutcome CwpClient::DescribeBaselineItemInfo(const DescribeBaselineItemInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineItemInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineItemInfoResponse rsp = DescribeBaselineItemInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineItemInfoOutcome(rsp);
+        else
+            return DescribeBaselineItemInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineItemInfoOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineItemInfoAsync(const DescribeBaselineItemInfoRequest& request, const DescribeBaselineItemInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineItemInfoRequest&;
+    using Resp = DescribeBaselineItemInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineItemInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineItemInfoOutcomeCallable CwpClient::DescribeBaselineItemInfoCallable(const DescribeBaselineItemInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineItemInfoOutcome>>();
+    DescribeBaselineItemInfoAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineItemInfoRequest&,
+        DescribeBaselineItemInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeBaselineItemListOutcome CwpClient::DescribeBaselineItemList(const DescribeBaselineItemListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBaselineItemList");
@@ -6582,6 +7382,56 @@ CwpClient::DescribeBaselineItemListOutcomeCallable CwpClient::DescribeBaselineIt
         const CwpClient*,
         const DescribeBaselineItemListRequest&,
         DescribeBaselineItemListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineItemRiskTopOutcome CwpClient::DescribeBaselineItemRiskTop(const DescribeBaselineItemRiskTopRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineItemRiskTop");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineItemRiskTopResponse rsp = DescribeBaselineItemRiskTopResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineItemRiskTopOutcome(rsp);
+        else
+            return DescribeBaselineItemRiskTopOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineItemRiskTopOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineItemRiskTopAsync(const DescribeBaselineItemRiskTopRequest& request, const DescribeBaselineItemRiskTopAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineItemRiskTopRequest&;
+    using Resp = DescribeBaselineItemRiskTopResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineItemRiskTop", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineItemRiskTopOutcomeCallable CwpClient::DescribeBaselineItemRiskTopCallable(const DescribeBaselineItemRiskTopRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineItemRiskTopOutcome>>();
+    DescribeBaselineItemRiskTopAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineItemRiskTopRequest&,
+        DescribeBaselineItemRiskTopOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6732,6 +7582,206 @@ CwpClient::DescribeBaselineRuleOutcomeCallable CwpClient::DescribeBaselineRuleCa
         const CwpClient*,
         const DescribeBaselineRuleRequest&,
         DescribeBaselineRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineRuleCategoryListOutcome CwpClient::DescribeBaselineRuleCategoryList(const DescribeBaselineRuleCategoryListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineRuleCategoryList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineRuleCategoryListResponse rsp = DescribeBaselineRuleCategoryListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineRuleCategoryListOutcome(rsp);
+        else
+            return DescribeBaselineRuleCategoryListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineRuleCategoryListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineRuleCategoryListAsync(const DescribeBaselineRuleCategoryListRequest& request, const DescribeBaselineRuleCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineRuleCategoryListRequest&;
+    using Resp = DescribeBaselineRuleCategoryListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineRuleCategoryList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineRuleCategoryListOutcomeCallable CwpClient::DescribeBaselineRuleCategoryListCallable(const DescribeBaselineRuleCategoryListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineRuleCategoryListOutcome>>();
+    DescribeBaselineRuleCategoryListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineRuleCategoryListRequest&,
+        DescribeBaselineRuleCategoryListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineRuleDetectListOutcome CwpClient::DescribeBaselineRuleDetectList(const DescribeBaselineRuleDetectListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineRuleDetectList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineRuleDetectListResponse rsp = DescribeBaselineRuleDetectListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineRuleDetectListOutcome(rsp);
+        else
+            return DescribeBaselineRuleDetectListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineRuleDetectListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineRuleDetectListAsync(const DescribeBaselineRuleDetectListRequest& request, const DescribeBaselineRuleDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineRuleDetectListRequest&;
+    using Resp = DescribeBaselineRuleDetectListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineRuleDetectList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineRuleDetectListOutcomeCallable CwpClient::DescribeBaselineRuleDetectListCallable(const DescribeBaselineRuleDetectListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineRuleDetectListOutcome>>();
+    DescribeBaselineRuleDetectListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineRuleDetectListRequest&,
+        DescribeBaselineRuleDetectListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineRuleIgnoreListOutcome CwpClient::DescribeBaselineRuleIgnoreList(const DescribeBaselineRuleIgnoreListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineRuleIgnoreList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineRuleIgnoreListResponse rsp = DescribeBaselineRuleIgnoreListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineRuleIgnoreListOutcome(rsp);
+        else
+            return DescribeBaselineRuleIgnoreListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineRuleIgnoreListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineRuleIgnoreListAsync(const DescribeBaselineRuleIgnoreListRequest& request, const DescribeBaselineRuleIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineRuleIgnoreListRequest&;
+    using Resp = DescribeBaselineRuleIgnoreListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineRuleIgnoreList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineRuleIgnoreListOutcomeCallable CwpClient::DescribeBaselineRuleIgnoreListCallable(const DescribeBaselineRuleIgnoreListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineRuleIgnoreListOutcome>>();
+    DescribeBaselineRuleIgnoreListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineRuleIgnoreListRequest&,
+        DescribeBaselineRuleIgnoreListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeBaselineRuleListOutcome CwpClient::DescribeBaselineRuleList(const DescribeBaselineRuleListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineRuleList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineRuleListResponse rsp = DescribeBaselineRuleListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineRuleListOutcome(rsp);
+        else
+            return DescribeBaselineRuleListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineRuleListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeBaselineRuleListAsync(const DescribeBaselineRuleListRequest& request, const DescribeBaselineRuleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineRuleListRequest&;
+    using Resp = DescribeBaselineRuleListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineRuleList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeBaselineRuleListOutcomeCallable CwpClient::DescribeBaselineRuleListCallable(const DescribeBaselineRuleListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineRuleListOutcome>>();
+    DescribeBaselineRuleListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeBaselineRuleListRequest&,
+        DescribeBaselineRuleListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -8590,6 +9640,56 @@ CwpClient::DescribeIgnoreRuleEffectHostListOutcomeCallable CwpClient::DescribeIg
     return prom->get_future();
 }
 
+CwpClient::DescribeImportMachineInfoOutcome CwpClient::DescribeImportMachineInfo(const DescribeImportMachineInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeImportMachineInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeImportMachineInfoResponse rsp = DescribeImportMachineInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeImportMachineInfoOutcome(rsp);
+        else
+            return DescribeImportMachineInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeImportMachineInfoOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeImportMachineInfoAsync(const DescribeImportMachineInfoRequest& request, const DescribeImportMachineInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeImportMachineInfoRequest&;
+    using Resp = DescribeImportMachineInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeImportMachineInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeImportMachineInfoOutcomeCallable CwpClient::DescribeImportMachineInfoCallable(const DescribeImportMachineInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeImportMachineInfoOutcome>>();
+    DescribeImportMachineInfoAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeImportMachineInfoRequest&,
+        DescribeImportMachineInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeInjectRiskyServiceSwitchOutcome CwpClient::DescribeInjectRiskyServiceSwitch(const DescribeInjectRiskyServiceSwitchRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInjectRiskyServiceSwitch");
@@ -10140,6 +11240,56 @@ CwpClient::DescribeMachineLicenseDetailOutcomeCallable CwpClient::DescribeMachin
     return prom->get_future();
 }
 
+CwpClient::DescribeMachineListOutcome CwpClient::DescribeMachineList(const DescribeMachineListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMachineList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMachineListResponse rsp = DescribeMachineListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMachineListOutcome(rsp);
+        else
+            return DescribeMachineListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMachineListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeMachineListAsync(const DescribeMachineListRequest& request, const DescribeMachineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMachineListRequest&;
+    using Resp = DescribeMachineListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMachineList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeMachineListOutcomeCallable CwpClient::DescribeMachineListCallable(const DescribeMachineListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMachineListOutcome>>();
+    DescribeMachineListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeMachineListRequest&,
+        DescribeMachineListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeMachineOsListOutcome CwpClient::DescribeMachineOsList(const DescribeMachineOsListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMachineOsList");
@@ -11340,6 +12490,56 @@ CwpClient::DescribePrivilegeEventInfoOutcomeCallable CwpClient::DescribePrivileg
     return prom->get_future();
 }
 
+CwpClient::DescribePrivilegeEventsOutcome CwpClient::DescribePrivilegeEvents(const DescribePrivilegeEventsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePrivilegeEvents");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePrivilegeEventsResponse rsp = DescribePrivilegeEventsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePrivilegeEventsOutcome(rsp);
+        else
+            return DescribePrivilegeEventsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePrivilegeEventsOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribePrivilegeEventsAsync(const DescribePrivilegeEventsRequest& request, const DescribePrivilegeEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribePrivilegeEventsRequest&;
+    using Resp = DescribePrivilegeEventsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribePrivilegeEvents", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribePrivilegeEventsOutcomeCallable CwpClient::DescribePrivilegeEventsCallable(const DescribePrivilegeEventsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribePrivilegeEventsOutcome>>();
+    DescribePrivilegeEventsAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribePrivilegeEventsRequest&,
+        DescribePrivilegeEventsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribePrivilegeRulesOutcome CwpClient::DescribePrivilegeRules(const DescribePrivilegeRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribePrivilegeRules");
@@ -11582,6 +12782,106 @@ CwpClient::DescribeProductStatusOutcomeCallable CwpClient::DescribeProductStatus
         const CwpClient*,
         const DescribeProductStatusRequest&,
         DescribeProductStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeProtectDirListOutcome CwpClient::DescribeProtectDirList(const DescribeProtectDirListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeProtectDirList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeProtectDirListResponse rsp = DescribeProtectDirListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeProtectDirListOutcome(rsp);
+        else
+            return DescribeProtectDirListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeProtectDirListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeProtectDirListAsync(const DescribeProtectDirListRequest& request, const DescribeProtectDirListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeProtectDirListRequest&;
+    using Resp = DescribeProtectDirListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeProtectDirList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeProtectDirListOutcomeCallable CwpClient::DescribeProtectDirListCallable(const DescribeProtectDirListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeProtectDirListOutcome>>();
+    DescribeProtectDirListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeProtectDirListRequest&,
+        DescribeProtectDirListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeProtectDirRelatedServerOutcome CwpClient::DescribeProtectDirRelatedServer(const DescribeProtectDirRelatedServerRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeProtectDirRelatedServer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeProtectDirRelatedServerResponse rsp = DescribeProtectDirRelatedServerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeProtectDirRelatedServerOutcome(rsp);
+        else
+            return DescribeProtectDirRelatedServerOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeProtectDirRelatedServerOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeProtectDirRelatedServerAsync(const DescribeProtectDirRelatedServerRequest& request, const DescribeProtectDirRelatedServerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeProtectDirRelatedServerRequest&;
+    using Resp = DescribeProtectDirRelatedServerResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeProtectDirRelatedServer", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeProtectDirRelatedServerOutcomeCallable CwpClient::DescribeProtectDirRelatedServerCallable(const DescribeProtectDirRelatedServerRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeProtectDirRelatedServerOutcome>>();
+    DescribeProtectDirRelatedServerAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeProtectDirRelatedServerRequest&,
+        DescribeProtectDirRelatedServerOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -14690,6 +15990,56 @@ CwpClient::DescribeSecurityTrendsOutcomeCallable CwpClient::DescribeSecurityTren
     return prom->get_future();
 }
 
+CwpClient::DescribeServerRelatedDirInfoOutcome CwpClient::DescribeServerRelatedDirInfo(const DescribeServerRelatedDirInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeServerRelatedDirInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeServerRelatedDirInfoResponse rsp = DescribeServerRelatedDirInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeServerRelatedDirInfoOutcome(rsp);
+        else
+            return DescribeServerRelatedDirInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeServerRelatedDirInfoOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeServerRelatedDirInfoAsync(const DescribeServerRelatedDirInfoRequest& request, const DescribeServerRelatedDirInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeServerRelatedDirInfoRequest&;
+    using Resp = DescribeServerRelatedDirInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeServerRelatedDirInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeServerRelatedDirInfoOutcomeCallable CwpClient::DescribeServerRelatedDirInfoCallable(const DescribeServerRelatedDirInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeServerRelatedDirInfoOutcome>>();
+    DescribeServerRelatedDirInfoAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeServerRelatedDirInfoRequest&,
+        DescribeServerRelatedDirInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeServersAndRiskAndFirstInfoOutcome CwpClient::DescribeServersAndRiskAndFirstInfo(const DescribeServersAndRiskAndFirstInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeServersAndRiskAndFirstInfo");
@@ -16990,6 +18340,206 @@ CwpClient::DescribeWebHookRulesOutcomeCallable CwpClient::DescribeWebHookRulesCa
     return prom->get_future();
 }
 
+CwpClient::DescribeWebPageEventListOutcome CwpClient::DescribeWebPageEventList(const DescribeWebPageEventListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWebPageEventList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWebPageEventListResponse rsp = DescribeWebPageEventListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWebPageEventListOutcome(rsp);
+        else
+            return DescribeWebPageEventListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWebPageEventListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeWebPageEventListAsync(const DescribeWebPageEventListRequest& request, const DescribeWebPageEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWebPageEventListRequest&;
+    using Resp = DescribeWebPageEventListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebPageEventList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeWebPageEventListOutcomeCallable CwpClient::DescribeWebPageEventListCallable(const DescribeWebPageEventListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWebPageEventListOutcome>>();
+    DescribeWebPageEventListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeWebPageEventListRequest&,
+        DescribeWebPageEventListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeWebPageGeneralizeOutcome CwpClient::DescribeWebPageGeneralize(const DescribeWebPageGeneralizeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWebPageGeneralize");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWebPageGeneralizeResponse rsp = DescribeWebPageGeneralizeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWebPageGeneralizeOutcome(rsp);
+        else
+            return DescribeWebPageGeneralizeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWebPageGeneralizeOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeWebPageGeneralizeAsync(const DescribeWebPageGeneralizeRequest& request, const DescribeWebPageGeneralizeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWebPageGeneralizeRequest&;
+    using Resp = DescribeWebPageGeneralizeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebPageGeneralize", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeWebPageGeneralizeOutcomeCallable CwpClient::DescribeWebPageGeneralizeCallable(const DescribeWebPageGeneralizeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWebPageGeneralizeOutcome>>();
+    DescribeWebPageGeneralizeAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeWebPageGeneralizeRequest&,
+        DescribeWebPageGeneralizeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeWebPageProtectStatOutcome CwpClient::DescribeWebPageProtectStat(const DescribeWebPageProtectStatRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWebPageProtectStat");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWebPageProtectStatResponse rsp = DescribeWebPageProtectStatResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWebPageProtectStatOutcome(rsp);
+        else
+            return DescribeWebPageProtectStatOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWebPageProtectStatOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeWebPageProtectStatAsync(const DescribeWebPageProtectStatRequest& request, const DescribeWebPageProtectStatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWebPageProtectStatRequest&;
+    using Resp = DescribeWebPageProtectStatResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebPageProtectStat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeWebPageProtectStatOutcomeCallable CwpClient::DescribeWebPageProtectStatCallable(const DescribeWebPageProtectStatRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWebPageProtectStatOutcome>>();
+    DescribeWebPageProtectStatAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeWebPageProtectStatRequest&,
+        DescribeWebPageProtectStatOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::DescribeWebPageServiceInfoOutcome CwpClient::DescribeWebPageServiceInfo(const DescribeWebPageServiceInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWebPageServiceInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWebPageServiceInfoResponse rsp = DescribeWebPageServiceInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWebPageServiceInfoOutcome(rsp);
+        else
+            return DescribeWebPageServiceInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWebPageServiceInfoOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeWebPageServiceInfoAsync(const DescribeWebPageServiceInfoRequest& request, const DescribeWebPageServiceInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWebPageServiceInfoRequest&;
+    using Resp = DescribeWebPageServiceInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebPageServiceInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeWebPageServiceInfoOutcomeCallable CwpClient::DescribeWebPageServiceInfoCallable(const DescribeWebPageServiceInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWebPageServiceInfoOutcome>>();
+    DescribeWebPageServiceInfoAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeWebPageServiceInfoRequest&,
+        DescribeWebPageServiceInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeWindowsPatchListOutcome CwpClient::DescribeWindowsPatchList(const DescribeWindowsPatchListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeWindowsPatchList");
@@ -18490,6 +20040,56 @@ CwpClient::ExportBaselineItemDetectListOutcomeCallable CwpClient::ExportBaseline
     return prom->get_future();
 }
 
+CwpClient::ExportBaselineItemListOutcome CwpClient::ExportBaselineItemList(const ExportBaselineItemListRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportBaselineItemList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportBaselineItemListResponse rsp = ExportBaselineItemListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportBaselineItemListOutcome(rsp);
+        else
+            return ExportBaselineItemListOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportBaselineItemListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ExportBaselineItemListAsync(const ExportBaselineItemListRequest& request, const ExportBaselineItemListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportBaselineItemListRequest&;
+    using Resp = ExportBaselineItemListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportBaselineItemList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ExportBaselineItemListOutcomeCallable CwpClient::ExportBaselineItemListCallable(const ExportBaselineItemListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportBaselineItemListOutcome>>();
+    ExportBaselineItemListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ExportBaselineItemListRequest&,
+        ExportBaselineItemListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::ExportBaselineListOutcome CwpClient::ExportBaselineList(const ExportBaselineListRequest &request)
 {
     auto outcome = MakeRequest(request, "ExportBaselineList");
@@ -18532,6 +20132,106 @@ CwpClient::ExportBaselineListOutcomeCallable CwpClient::ExportBaselineListCallab
         const CwpClient*,
         const ExportBaselineListRequest&,
         ExportBaselineListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ExportBaselineRuleDetectListOutcome CwpClient::ExportBaselineRuleDetectList(const ExportBaselineRuleDetectListRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportBaselineRuleDetectList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportBaselineRuleDetectListResponse rsp = ExportBaselineRuleDetectListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportBaselineRuleDetectListOutcome(rsp);
+        else
+            return ExportBaselineRuleDetectListOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportBaselineRuleDetectListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ExportBaselineRuleDetectListAsync(const ExportBaselineRuleDetectListRequest& request, const ExportBaselineRuleDetectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportBaselineRuleDetectListRequest&;
+    using Resp = ExportBaselineRuleDetectListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportBaselineRuleDetectList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ExportBaselineRuleDetectListOutcomeCallable CwpClient::ExportBaselineRuleDetectListCallable(const ExportBaselineRuleDetectListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportBaselineRuleDetectListOutcome>>();
+    ExportBaselineRuleDetectListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ExportBaselineRuleDetectListRequest&,
+        ExportBaselineRuleDetectListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ExportBaselineWeakPasswordListOutcome CwpClient::ExportBaselineWeakPasswordList(const ExportBaselineWeakPasswordListRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportBaselineWeakPasswordList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportBaselineWeakPasswordListResponse rsp = ExportBaselineWeakPasswordListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportBaselineWeakPasswordListOutcome(rsp);
+        else
+            return ExportBaselineWeakPasswordListOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportBaselineWeakPasswordListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ExportBaselineWeakPasswordListAsync(const ExportBaselineWeakPasswordListRequest& request, const ExportBaselineWeakPasswordListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportBaselineWeakPasswordListRequest&;
+    using Resp = ExportBaselineWeakPasswordListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportBaselineWeakPasswordList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ExportBaselineWeakPasswordListOutcomeCallable CwpClient::ExportBaselineWeakPasswordListCallable(const ExportBaselineWeakPasswordListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportBaselineWeakPasswordListOutcome>>();
+    ExportBaselineWeakPasswordListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ExportBaselineWeakPasswordListRequest&,
+        ExportBaselineWeakPasswordListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -19332,6 +21032,56 @@ CwpClient::ExportPrivilegeEventsOutcomeCallable CwpClient::ExportPrivilegeEvents
         const CwpClient*,
         const ExportPrivilegeEventsRequest&,
         ExportPrivilegeEventsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ExportProtectDirListOutcome CwpClient::ExportProtectDirList(const ExportProtectDirListRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportProtectDirList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportProtectDirListResponse rsp = ExportProtectDirListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportProtectDirListOutcome(rsp);
+        else
+            return ExportProtectDirListOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportProtectDirListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ExportProtectDirListAsync(const ExportProtectDirListRequest& request, const ExportProtectDirListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportProtectDirListRequest&;
+    using Resp = ExportProtectDirListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportProtectDirList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ExportProtectDirListOutcomeCallable CwpClient::ExportProtectDirListCallable(const ExportProtectDirListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportProtectDirListOutcome>>();
+    ExportProtectDirListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ExportProtectDirListRequest&,
+        ExportProtectDirListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -20340,6 +22090,56 @@ CwpClient::ExportVulListOutcomeCallable CwpClient::ExportVulListCallable(const E
     return prom->get_future();
 }
 
+CwpClient::ExportWebPageEventListOutcome CwpClient::ExportWebPageEventList(const ExportWebPageEventListRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportWebPageEventList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportWebPageEventListResponse rsp = ExportWebPageEventListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportWebPageEventListOutcome(rsp);
+        else
+            return ExportWebPageEventListOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportWebPageEventListOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ExportWebPageEventListAsync(const ExportWebPageEventListRequest& request, const ExportWebPageEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportWebPageEventListRequest&;
+    using Resp = ExportWebPageEventListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportWebPageEventList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ExportWebPageEventListOutcomeCallable CwpClient::ExportWebPageEventListCallable(const ExportWebPageEventListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportWebPageEventListOutcome>>();
+    ExportWebPageEventListAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ExportWebPageEventListRequest&,
+        ExportWebPageEventListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::ExportWindowsPatchListOutcome CwpClient::ExportWindowsPatchList(const ExportWindowsPatchListRequest &request)
 {
     auto outcome = MakeRequest(request, "ExportWindowsPatchList");
@@ -20382,6 +22182,56 @@ CwpClient::ExportWindowsPatchListOutcomeCallable CwpClient::ExportWindowsPatchLi
         const CwpClient*,
         const ExportWindowsPatchListRequest&,
         ExportWindowsPatchListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::FixBaselineDetectOutcome CwpClient::FixBaselineDetect(const FixBaselineDetectRequest &request)
+{
+    auto outcome = MakeRequest(request, "FixBaselineDetect");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        FixBaselineDetectResponse rsp = FixBaselineDetectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return FixBaselineDetectOutcome(rsp);
+        else
+            return FixBaselineDetectOutcome(o.GetError());
+    }
+    else
+    {
+        return FixBaselineDetectOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::FixBaselineDetectAsync(const FixBaselineDetectRequest& request, const FixBaselineDetectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const FixBaselineDetectRequest&;
+    using Resp = FixBaselineDetectResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "FixBaselineDetect", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::FixBaselineDetectOutcomeCallable CwpClient::FixBaselineDetectCallable(const FixBaselineDetectRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<FixBaselineDetectOutcome>>();
+    FixBaselineDetectAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const FixBaselineDetectRequest&,
+        FixBaselineDetectOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -20732,6 +22582,206 @@ CwpClient::ModifyBaselinePolicyOutcomeCallable CwpClient::ModifyBaselinePolicyCa
         const CwpClient*,
         const ModifyBaselinePolicyRequest&,
         ModifyBaselinePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ModifyBaselinePolicyStateOutcome CwpClient::ModifyBaselinePolicyState(const ModifyBaselinePolicyStateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBaselinePolicyState");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBaselinePolicyStateResponse rsp = ModifyBaselinePolicyStateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBaselinePolicyStateOutcome(rsp);
+        else
+            return ModifyBaselinePolicyStateOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBaselinePolicyStateOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyBaselinePolicyStateAsync(const ModifyBaselinePolicyStateRequest& request, const ModifyBaselinePolicyStateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBaselinePolicyStateRequest&;
+    using Resp = ModifyBaselinePolicyStateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBaselinePolicyState", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyBaselinePolicyStateOutcomeCallable CwpClient::ModifyBaselinePolicyStateCallable(const ModifyBaselinePolicyStateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBaselinePolicyStateOutcome>>();
+    ModifyBaselinePolicyStateAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyBaselinePolicyStateRequest&,
+        ModifyBaselinePolicyStateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ModifyBaselineRuleOutcome CwpClient::ModifyBaselineRule(const ModifyBaselineRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBaselineRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBaselineRuleResponse rsp = ModifyBaselineRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBaselineRuleOutcome(rsp);
+        else
+            return ModifyBaselineRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBaselineRuleOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyBaselineRuleAsync(const ModifyBaselineRuleRequest& request, const ModifyBaselineRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBaselineRuleRequest&;
+    using Resp = ModifyBaselineRuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBaselineRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyBaselineRuleOutcomeCallable CwpClient::ModifyBaselineRuleCallable(const ModifyBaselineRuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBaselineRuleOutcome>>();
+    ModifyBaselineRuleAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyBaselineRuleRequest&,
+        ModifyBaselineRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ModifyBaselineRuleIgnoreOutcome CwpClient::ModifyBaselineRuleIgnore(const ModifyBaselineRuleIgnoreRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBaselineRuleIgnore");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBaselineRuleIgnoreResponse rsp = ModifyBaselineRuleIgnoreResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBaselineRuleIgnoreOutcome(rsp);
+        else
+            return ModifyBaselineRuleIgnoreOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBaselineRuleIgnoreOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyBaselineRuleIgnoreAsync(const ModifyBaselineRuleIgnoreRequest& request, const ModifyBaselineRuleIgnoreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBaselineRuleIgnoreRequest&;
+    using Resp = ModifyBaselineRuleIgnoreResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBaselineRuleIgnore", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyBaselineRuleIgnoreOutcomeCallable CwpClient::ModifyBaselineRuleIgnoreCallable(const ModifyBaselineRuleIgnoreRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBaselineRuleIgnoreOutcome>>();
+    ModifyBaselineRuleIgnoreAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyBaselineRuleIgnoreRequest&,
+        ModifyBaselineRuleIgnoreOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ModifyBaselineWeakPasswordOutcome CwpClient::ModifyBaselineWeakPassword(const ModifyBaselineWeakPasswordRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBaselineWeakPassword");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBaselineWeakPasswordResponse rsp = ModifyBaselineWeakPasswordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBaselineWeakPasswordOutcome(rsp);
+        else
+            return ModifyBaselineWeakPasswordOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBaselineWeakPasswordOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyBaselineWeakPasswordAsync(const ModifyBaselineWeakPasswordRequest& request, const ModifyBaselineWeakPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBaselineWeakPasswordRequest&;
+    using Resp = ModifyBaselineWeakPasswordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBaselineWeakPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyBaselineWeakPasswordOutcomeCallable CwpClient::ModifyBaselineWeakPasswordCallable(const ModifyBaselineWeakPasswordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBaselineWeakPasswordOutcome>>();
+    ModifyBaselineWeakPasswordAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyBaselineWeakPasswordRequest&,
+        ModifyBaselineWeakPasswordOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -21290,6 +23340,56 @@ CwpClient::ModifyLicenseOrderOutcomeCallable CwpClient::ModifyLicenseOrderCallab
     return prom->get_future();
 }
 
+CwpClient::ModifyLicenseUnBindsOutcome CwpClient::ModifyLicenseUnBinds(const ModifyLicenseUnBindsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyLicenseUnBinds");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyLicenseUnBindsResponse rsp = ModifyLicenseUnBindsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyLicenseUnBindsOutcome(rsp);
+        else
+            return ModifyLicenseUnBindsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyLicenseUnBindsOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyLicenseUnBindsAsync(const ModifyLicenseUnBindsRequest& request, const ModifyLicenseUnBindsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyLicenseUnBindsRequest&;
+    using Resp = ModifyLicenseUnBindsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyLicenseUnBinds", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyLicenseUnBindsOutcomeCallable CwpClient::ModifyLicenseUnBindsCallable(const ModifyLicenseUnBindsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyLicenseUnBindsOutcome>>();
+    ModifyLicenseUnBindsAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyLicenseUnBindsRequest&,
+        ModifyLicenseUnBindsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::ModifyLogKafkaAccessOutcome CwpClient::ModifyLogKafkaAccess(const ModifyLogKafkaAccessRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyLogKafkaAccess");
@@ -21640,6 +23740,56 @@ CwpClient::ModifyMachineAutoClearConfigOutcomeCallable CwpClient::ModifyMachineA
     return prom->get_future();
 }
 
+CwpClient::ModifyMachineRemarkOutcome CwpClient::ModifyMachineRemark(const ModifyMachineRemarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMachineRemark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMachineRemarkResponse rsp = ModifyMachineRemarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMachineRemarkOutcome(rsp);
+        else
+            return ModifyMachineRemarkOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMachineRemarkOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyMachineRemarkAsync(const ModifyMachineRemarkRequest& request, const ModifyMachineRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyMachineRemarkRequest&;
+    using Resp = ModifyMachineRemarkResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyMachineRemark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyMachineRemarkOutcomeCallable CwpClient::ModifyMachineRemarkCallable(const ModifyMachineRemarkRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyMachineRemarkOutcome>>();
+    ModifyMachineRemarkAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyMachineRemarkRequest&,
+        ModifyMachineRemarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::ModifyMaliciousRequestWhiteListOutcome CwpClient::ModifyMaliciousRequestWhiteList(const ModifyMaliciousRequestWhiteListRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyMaliciousRequestWhiteList");
@@ -21882,6 +24032,56 @@ CwpClient::ModifyNetAttackWhiteListOutcomeCallable CwpClient::ModifyNetAttackWhi
         const CwpClient*,
         const ModifyNetAttackWhiteListRequest&,
         ModifyNetAttackWhiteListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ModifyOrderAttributeOutcome CwpClient::ModifyOrderAttribute(const ModifyOrderAttributeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyOrderAttribute");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyOrderAttributeResponse rsp = ModifyOrderAttributeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyOrderAttributeOutcome(rsp);
+        else
+            return ModifyOrderAttributeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyOrderAttributeOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyOrderAttributeAsync(const ModifyOrderAttributeRequest& request, const ModifyOrderAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyOrderAttributeRequest&;
+    using Resp = ModifyOrderAttributeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyOrderAttribute", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyOrderAttributeOutcomeCallable CwpClient::ModifyOrderAttributeCallable(const ModifyOrderAttributeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyOrderAttributeOutcome>>();
+    ModifyOrderAttributeAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyOrderAttributeRequest&,
+        ModifyOrderAttributeOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -22790,6 +24990,106 @@ CwpClient::ModifyWebHookRuleStatusOutcomeCallable CwpClient::ModifyWebHookRuleSt
     return prom->get_future();
 }
 
+CwpClient::ModifyWebPageProtectDirOutcome CwpClient::ModifyWebPageProtectDir(const ModifyWebPageProtectDirRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyWebPageProtectDir");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyWebPageProtectDirResponse rsp = ModifyWebPageProtectDirResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyWebPageProtectDirOutcome(rsp);
+        else
+            return ModifyWebPageProtectDirOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyWebPageProtectDirOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyWebPageProtectDirAsync(const ModifyWebPageProtectDirRequest& request, const ModifyWebPageProtectDirAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyWebPageProtectDirRequest&;
+    using Resp = ModifyWebPageProtectDirResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyWebPageProtectDir", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyWebPageProtectDirOutcomeCallable CwpClient::ModifyWebPageProtectDirCallable(const ModifyWebPageProtectDirRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyWebPageProtectDirOutcome>>();
+    ModifyWebPageProtectDirAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyWebPageProtectDirRequest&,
+        ModifyWebPageProtectDirOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ModifyWebPageProtectSettingOutcome CwpClient::ModifyWebPageProtectSetting(const ModifyWebPageProtectSettingRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyWebPageProtectSetting");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyWebPageProtectSettingResponse rsp = ModifyWebPageProtectSettingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyWebPageProtectSettingOutcome(rsp);
+        else
+            return ModifyWebPageProtectSettingOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyWebPageProtectSettingOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ModifyWebPageProtectSettingAsync(const ModifyWebPageProtectSettingRequest& request, const ModifyWebPageProtectSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyWebPageProtectSettingRequest&;
+    using Resp = ModifyWebPageProtectSettingResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyWebPageProtectSetting", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ModifyWebPageProtectSettingOutcomeCallable CwpClient::ModifyWebPageProtectSettingCallable(const ModifyWebPageProtectSettingRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyWebPageProtectSettingOutcome>>();
+    ModifyWebPageProtectSettingAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ModifyWebPageProtectSettingRequest&,
+        ModifyWebPageProtectSettingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::ModifyWebPageProtectSwitchOutcome CwpClient::ModifyWebPageProtectSwitch(const ModifyWebPageProtectSwitchRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyWebPageProtectSwitch");
@@ -23182,6 +25482,56 @@ CwpClient::RetryVulFixOutcomeCallable CwpClient::RetryVulFixCallable(const Retry
         const CwpClient*,
         const RetryVulFixRequest&,
         RetryVulFixOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CwpClient::ScanAssetOutcome CwpClient::ScanAsset(const ScanAssetRequest &request)
+{
+    auto outcome = MakeRequest(request, "ScanAsset");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ScanAssetResponse rsp = ScanAssetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ScanAssetOutcome(rsp);
+        else
+            return ScanAssetOutcome(o.GetError());
+    }
+    else
+    {
+        return ScanAssetOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::ScanAssetAsync(const ScanAssetRequest& request, const ScanAssetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ScanAssetRequest&;
+    using Resp = ScanAssetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ScanAsset", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::ScanAssetOutcomeCallable CwpClient::ScanAssetCallable(const ScanAssetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ScanAssetOutcome>>();
+    ScanAssetAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const ScanAssetRequest&,
+        ScanAssetOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

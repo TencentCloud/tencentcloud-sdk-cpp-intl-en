@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Yarn application statistics
+                * YARN application statistics information.
                 */
                 class ApplicationStatics : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queue name
-                     * @return Queue Queue name
+                     * 获取Queue name.
+                     * @return Queue Queue name.
                      * 
                      */
                     std::string GetQueue() const;
 
                     /**
-                     * 设置Queue name
-                     * @param _queue Queue name
+                     * 设置Queue name.
+                     * @param _queue Queue name.
                      * 
                      */
                     void SetQueue(const std::string& _queue);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QueueHasBeenSet() const;
 
                     /**
-                     * 获取Username
-                     * @return User Username
+                     * 获取Username.
+                     * @return User Username.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置Username
-                     * @param _user Username
+                     * 设置Username.
+                     * @param _user Username.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取Application type
-                     * @return ApplicationType Application type
+                     * 获取Job type.
+                     * @return ApplicationType Job type.
                      * 
                      */
                     std::string GetApplicationType() const;
 
                     /**
-                     * 设置Application type
-                     * @param _applicationType Application type
+                     * 设置Job type.
+                     * @param _applicationType Job type.
                      * 
                      */
                     void SetApplicationType(const std::string& _applicationType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ApplicationTypeHasBeenSet() const;
 
                     /**
-                     * 获取`SumMemorySeconds` meaning
-                     * @return SumMemorySeconds `SumMemorySeconds` meaning
+                     * 获取Meaning of SumMemorySeconds.
+                     * @return SumMemorySeconds Meaning of SumMemorySeconds.
                      * 
                      */
                     int64_t GetSumMemorySeconds() const;
 
                     /**
-                     * 设置`SumMemorySeconds` meaning
-                     * @param _sumMemorySeconds `SumMemorySeconds` meaning
+                     * 设置Meaning of SumMemorySeconds.
+                     * @param _sumMemorySeconds Meaning of SumMemorySeconds.
                      * 
                      */
                     void SetSumMemorySeconds(const int64_t& _sumMemorySeconds);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SumMemorySecondsHasBeenSet() const;
 
                     /**
-                     * 获取Total VCore Seconds
-                     * @return SumVCoreSeconds Total VCore Seconds
+                     * 获取Meaning of SumVCoreSeconds.
+                     * @return SumVCoreSeconds Meaning of SumVCoreSeconds.
                      * 
                      */
                     int64_t GetSumVCoreSeconds() const;
 
                     /**
-                     * 设置Total VCore Seconds
-                     * @param _sumVCoreSeconds Total VCore Seconds
+                     * 设置Meaning of SumVCoreSeconds.
+                     * @param _sumVCoreSeconds Meaning of SumVCoreSeconds.
                      * 
                      */
                     void SetSumVCoreSeconds(const int64_t& _sumVCoreSeconds);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SumVCoreSecondsHasBeenSet() const;
 
                     /**
-                     * 获取SumHDFSBytesWritten (with unit)
-                     * @return SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+                     * 获取SumHDFSBytesWritten (with the unit).
+                     * @return SumHDFSBytesWritten SumHDFSBytesWritten (with the unit).
                      * 
                      */
                     std::string GetSumHDFSBytesWritten() const;
 
                     /**
-                     * 设置SumHDFSBytesWritten (with unit)
-                     * @param _sumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+                     * 设置SumHDFSBytesWritten (with the unit).
+                     * @param _sumHDFSBytesWritten SumHDFSBytesWritten (with the unit).
                      * 
                      */
                     void SetSumHDFSBytesWritten(const std::string& _sumHDFSBytesWritten);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool SumHDFSBytesWrittenHasBeenSet() const;
 
                     /**
-                     * 获取SumHDFSBytesRead (with unit)
-                     * @return SumHDFSBytesRead SumHDFSBytesRead (with unit)
+                     * 获取SumHDFSBytesRead (with the unit).
+                     * @return SumHDFSBytesRead SumHDFSBytesRead (with the unit).
                      * 
                      */
                     std::string GetSumHDFSBytesRead() const;
 
                     /**
-                     * 设置SumHDFSBytesRead (with unit)
-                     * @param _sumHDFSBytesRead SumHDFSBytesRead (with unit)
+                     * 设置SumHDFSBytesRead (with the unit).
+                     * @param _sumHDFSBytesRead SumHDFSBytesRead (with the unit).
                      * 
                      */
                     void SetSumHDFSBytesRead(const std::string& _sumHDFSBytesRead);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SumHDFSBytesReadHasBeenSet() const;
 
                     /**
-                     * 获取Application count
-                     * @return CountApps Application count
+                     * 获取Number of jobs.
+                     * @return CountApps Number of jobs.
                      * 
                      */
                     int64_t GetCountApps() const;
 
                     /**
-                     * 设置Application count
-                     * @param _countApps Application count
+                     * 设置Number of jobs.
+                     * @param _countApps Number of jobs.
                      * 
                      */
                     void SetCountApps(const int64_t& _countApps);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queue name
+                     * Queue name.
                      */
                     std::string m_queue;
                     bool m_queueHasBeenSet;
 
                     /**
-                     * Username
+                     * Username.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
-                     * Application type
+                     * Job type.
                      */
                     std::string m_applicationType;
                     bool m_applicationTypeHasBeenSet;
 
                     /**
-                     * `SumMemorySeconds` meaning
+                     * Meaning of SumMemorySeconds.
                      */
                     int64_t m_sumMemorySeconds;
                     bool m_sumMemorySecondsHasBeenSet;
 
                     /**
-                     * Total VCore Seconds
+                     * Meaning of SumVCoreSeconds.
                      */
                     int64_t m_sumVCoreSeconds;
                     bool m_sumVCoreSecondsHasBeenSet;
 
                     /**
-                     * SumHDFSBytesWritten (with unit)
+                     * SumHDFSBytesWritten (with the unit).
                      */
                     std::string m_sumHDFSBytesWritten;
                     bool m_sumHDFSBytesWrittenHasBeenSet;
 
                     /**
-                     * SumHDFSBytesRead (with unit)
+                     * SumHDFSBytesRead (with the unit).
                      */
                     std::string m_sumHDFSBytesRead;
                     bool m_sumHDFSBytesReadHasBeenSet;
 
                     /**
-                     * Application count
+                     * Number of jobs.
                      */
                     int64_t m_countApps;
                     bool m_countAppsHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuccessList List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of successful resource IDs.
+                     * @return SuccessList List of successful resource IDs.
                      * 
                      */
                     std::vector<std::string> GetSuccessList() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SuccessListHasBeenSet() const;
 
                     /**
-                     * 获取List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailList List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of failed resource IDs.
+                     * @return FailList List of failed resource IDs.
                      * 
                      */
                     std::vector<std::string> GetFailList() const;
@@ -77,10 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FailListHasBeenSet() const;
 
                     /**
-                     * 获取List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PartSuccessList List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of partially successful resource IDs.
+                     * @return PartSuccessList List of partially successful resource IDs.
                      * 
                      */
                     std::vector<std::string> GetPartSuccessList() const;
@@ -93,10 +87,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PartSuccessListHasBeenSet() const;
 
                     /**
-                     * 获取Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterToFlowIdList Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mapping list of cluster IDs and flow IDs.
+                     * @return ClusterToFlowIdList Mapping list of cluster IDs and flow IDs.
                      * 
                      */
                     std::vector<ClusterIDToFlowID> GetClusterToFlowIdList() const;
@@ -111,29 +103,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of successful resource IDs.
                      */
                     std::vector<std::string> m_successList;
                     bool m_successListHasBeenSet;
 
                     /**
-                     * List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of failed resource IDs.
                      */
                     std::vector<std::string> m_failList;
                     bool m_failListHasBeenSet;
 
                     /**
-                     * List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of partially successful resource IDs.
                      */
                     std::vector<std::string> m_partSuccessList;
                     bool m_partSuccessListHasBeenSet;
 
                     /**
-                     * Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mapping list of cluster IDs and flow IDs.
                      */
                     std::vector<ClusterIDToFlowID> m_clusterToFlowIdList;
                     bool m_clusterToFlowIdListHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Target processes
+                * Operation process scope.
                 */
                 class ComponentBasicRestartInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process name which is required, such as NameNode.
-                     * @return ComponentName Process name which is required, such as NameNode.
+                     * 获取(Required) Process name, for example, NameNode.
+                     * @return ComponentName (Required) Process name, for example, NameNode.
                      * 
                      */
                     std::string GetComponentName() const;
 
                     /**
-                     * 设置Process name which is required, such as NameNode.
-                     * @param _componentName Process name which is required, such as NameNode.
+                     * 设置(Required) Process name, for example, NameNode.
+                     * @param _componentName (Required) Process name, for example, NameNode.
                      * 
                      */
                     void SetComponentName(const std::string& _componentName);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool ComponentNameHasBeenSet() const;
 
                     /**
-                     * 获取The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IpList The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of operation IP addresses.
+                     * @return IpList List of operation IP addresses.
                      * 
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
-                     * 设置The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ipList The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of operation IP addresses.
+                     * @param _ipList List of operation IP addresses.
                      * 
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Process name which is required, such as NameNode.
+                     * (Required) Process name, for example, NameNode.
                      */
                     std::string m_componentName;
                     bool m_componentNameHasBeenSet;
 
                     /**
-                     * The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of operation IP addresses.
                      */
                     std::vector<std::string> m_ipList;
                     bool m_ipListHasBeenSet;

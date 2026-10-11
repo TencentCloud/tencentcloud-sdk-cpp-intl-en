@@ -72,15 +72,15 @@ Default mode: default.
                     bool StopPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Thread Count
-                     * @return ThreadCount Thread Count
+                     * 获取Number of threads.
+                     * @return ThreadCount Number of threads.
                      * 
                      */
                     int64_t GetThreadCount() const;
 
                     /**
-                     * 设置Thread Count
-                     * @param _threadCount Thread Count
+                     * 设置Number of threads.
+                     * @param _threadCount Number of threads.
                      * 
                      */
                     void SetThreadCount(const int64_t& _threadCount);
@@ -92,6 +92,27 @@ Default mode: default.
                      */
                     bool ThreadCountHasBeenSet() const;
 
+                    /**
+                     * 获取Graceful stop timeout period (s).
+                     * @return GraceDownTime Graceful stop timeout period (s).
+                     * 
+                     */
+                    int64_t GetGraceDownTime() const;
+
+                    /**
+                     * 设置Graceful stop timeout period (s).
+                     * @param _graceDownTime Graceful stop timeout period (s).
+                     * 
+                     */
+                    void SetGraceDownTime(const int64_t& _graceDownTime);
+
+                    /**
+                     * 判断参数 GraceDownTime 是否已赋值
+                     * @return GraceDownTime 是否已赋值
+                     * 
+                     */
+                    bool GraceDownTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,10 +123,16 @@ Default mode: default.
                     bool m_stopPolicyHasBeenSet;
 
                     /**
-                     * Thread Count
+                     * Number of threads.
                      */
                     int64_t m_threadCount;
                     bool m_threadCountHasBeenSet;
+
+                    /**
+                     * Graceful stop timeout period (s).
+                     */
+                    int64_t m_graceDownTime;
+                    bool m_graceDownTimeHasBeenSet;
 
                 };
             }

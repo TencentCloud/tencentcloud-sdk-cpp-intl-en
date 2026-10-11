@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Obtain the start time for querying information (s).
-                     * @return StartTime Obtain the start time for querying information (s).
+                     * 获取Start time for obtaining queried information (s).
+                     * @return StartTime Start time for obtaining queried information (s).
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Obtain the start time for querying information (s).
-                     * @param _startTime Obtain the start time for querying information (s).
+                     * 设置Start time for obtaining queried information (s).
+                     * @param _startTime Start time for obtaining queried information (s).
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Obtain the end time for querying information (s).
-                     * @return EndTime Obtain the end time for querying information (s).
+                     * 获取End time for obtaining queried information (s).
+                     * @return EndTime End time for obtaining queried information (s).
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置Obtain the end time for querying information (s).
-                     * @param _endTime Obtain the end time for querying information (s).
+                     * 设置End time for obtaining queried information (s).
+                     * @param _endTime End time for obtaining queried information (s).
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Page size for pagination queries. Minimum value: 1; maximum value: 100.
-                     * @return PageSize Page size for pagination queries. Minimum value: 1; maximum value: 100.
+                     * 获取Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
+                     * @return PageSize Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size for pagination queries. Minimum value: 1; maximum value: 100.
-                     * @param _pageSize Page size for pagination queries. Minimum value: 1; maximum value: 100.
+                     * 设置Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
+                     * @param _pageSize Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -156,19 +156,19 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Obtain the start time for querying information (s).
+                     * Start time for obtaining queried information (s).
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Obtain the end time for querying information (s).
+                     * End time for obtaining queried information (s).
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Page size for pagination queries. Minimum value: 1; maximum value: 100.
+                     * Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

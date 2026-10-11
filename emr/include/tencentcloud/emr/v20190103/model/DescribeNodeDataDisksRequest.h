@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the EMR cluster instance.
-                     * @return InstanceId ID of the EMR cluster instance.
+                     * 获取ID of the EMR cluster.
+                     * @return InstanceId ID of the EMR cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the EMR cluster instance.
-                     * @param _instanceId ID of the EMR cluster instance.
+                     * 设置ID of the EMR cluster.
+                     * @param _instanceId ID of the EMR cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool InnerSearchHasBeenSet() const;
 
                     /**
-                     * 获取Number of items returned per page. The default value is 100, and the maximum value is 100.
-                     * @return Limit Number of items returned per page. The default value is 100, and the maximum value is 100.
+                     * 获取Number of items returned per page. Default value: 100. Maximum value: 100.
+                     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items returned per page. The default value is 100, and the maximum value is 100.
-                     * @param _limit Number of items returned per page. The default value is 100, and the maximum value is 100.
+                     * 设置Number of items returned per page. Default value: 100. Maximum value: 100.
+                     * @param _limit Number of items returned per page. Default value: 100. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -169,10 +169,35 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+                     * @return Scene Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+                     * 
+                     */
+                    std::string GetScene() const;
+
+                    /**
+                     * 设置Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+                     * @param _scene Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+                     * 
+                     */
+                    void SetScene(const std::string& _scene);
+
+                    /**
+                     * 判断参数 Scene 是否已赋值
+                     * @return Scene 是否已赋值
+                     * 
+                     */
+                    bool SceneHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the EMR cluster instance.
+                     * ID of the EMR cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -196,7 +221,7 @@ namespace TencentCloud
                     bool m_innerSearchHasBeenSet;
 
                     /**
-                     * Number of items returned per page. The default value is 100, and the maximum value is 100.
+                     * Number of items returned per page. Default value: 100. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -206,6 +231,13 @@ namespace TencentCloud
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+                     */
+                    std::string m_scene;
+                    bool m_sceneHasBeenSet;
 
                 };
             }

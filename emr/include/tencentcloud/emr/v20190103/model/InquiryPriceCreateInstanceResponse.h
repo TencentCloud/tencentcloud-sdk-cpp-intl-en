@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original price.
-                     * @return OriginalCost Original price.
+                     * 获取<p>Original price (CNY).</p>
+                     * @return OriginalCost <p>Original price (CNY).</p>
                      * 
                      */
                     double GetOriginalCost() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price.
-                     * @return DiscountCost Discounted price.
+                     * 获取<p>Discounted price (CNY).</p>
+                     * @return DiscountCost <p>Discounted price (CNY).</p>
                      * 
                      */
                     double GetDiscountCost() const;
@@ -73,10 +73,8 @@ namespace TencentCloud
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
-                     * @return TimeUnit Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
+                     * 获取<p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
+                     * @return TimeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
@@ -89,8 +87,8 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Instance purchase duration.
-                     * @return TimeSpan Instance purchase duration.
+                     * 获取<p>Instance purchase duration.</p>
+                     * @return TimeSpan <p>Instance purchase duration.</p>
                      * 
                      */
                     int64_t GetTimeSpan() const;
@@ -103,10 +101,8 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PriceList The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Price list.</p>
+                     * @return PriceList <p>Price list.</p>
                      * 
                      */
                     std::vector<ZoneDetailPriceResult> GetPriceList() const;
@@ -121,33 +117,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Original price.
+                     * <p>Original price (CNY).</p>
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discounted price.
+                     * <p>Discounted price (CNY).</p>
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
+                     * <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Instance purchase duration.
+                     * <p>Instance purchase duration.</p>
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Price list.</p>
                      */
                     std::vector<ZoneDetailPriceResult> m_priceList;
                     bool m_priceListHasBeenSet;

@@ -64,31 +64,31 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias of the configuration to be reset. The options are as follows:
+                     * 获取Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
-                     * @return Key Alias of the configuration to be reset. The options are as follows:
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
+                     * @return Key Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Alias of the configuration to be reset. The options are as follows:
+                     * 设置Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
-                     * @param _key Alias of the configuration to be reset. The options are as follows:
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
+                     * @param _key Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -109,11 +109,11 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Alias of the configuration to be reset. The options are as follows:
+                     * Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;

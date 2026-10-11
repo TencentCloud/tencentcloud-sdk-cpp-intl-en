@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Relationship between shared components and the current cluster
+                * Mapping between the current cluster and the shared component.
                 */
                 class ClusterExternalServiceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
-                     * @return DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+                     * 获取Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
+                     * @return DependType Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
                      * 
                      */
                     int64_t GetDependType() const;
 
                     /**
-                     * 设置Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
-                     * @param _dependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+                     * 设置Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
+                     * @param _dependType Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
                      * 
                      */
                     void SetDependType(const int64_t& _dependType);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+                     * Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
                      */
                     int64_t m_dependType;
                     bool m_dependTypeHasBeenSet;

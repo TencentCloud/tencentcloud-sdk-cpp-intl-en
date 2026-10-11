@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name
-                     * @return Name Name
+                     * 获取Name.
+                     * @return Name Name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name
-                     * @param _name Name
+                     * 设置Name.
+                     * @param _name Name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取ID, which is used by the front end.
-                     * @return Id ID, which is used by the front end.
+                     * 获取ID, which is used by the frontend.
+                     * @return Id ID, which is used by the frontend.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置ID, which is used by the front end.
-                     * @param _id ID, which is used by the front end.
+                     * 设置ID, which is used by the frontend.
+                     * @param _id ID, which is used by the frontend.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name
+                     * Name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * ID, which is used by the front end.
+                     * ID, which is used by the frontend.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

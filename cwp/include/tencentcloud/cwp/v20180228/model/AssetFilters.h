@@ -35,11 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Container security
-Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
-If there are multiple Filters, the logical relationship between them is AND.
-If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
-
+                * 
                 */
                 class AssetFilters : public AbstractModel
                 {
@@ -51,15 +47,15 @@ If there are multiple Values in the same Filter, the logical relationship betwee
 
 
                     /**
-                     * 获取Name of filter key
-                     * @return Name Name of filter key
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of filter key
-                     * @param _name Name of filter key
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -72,15 +68,15 @@ If there are multiple Values in the same Filter, the logical relationship betwee
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取One or more filter values
-                     * @return Values One or more filter values
+                     * 获取
+                     * @return Values 
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置One or more filter values
-                     * @param _values One or more filter values
+                     * 设置
+                     * @param _values 
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -93,15 +89,15 @@ If there are multiple Values in the same Filter, the logical relationship betwee
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use fuzzy query
-                     * @return ExactMatch Whether to use fuzzy query
+                     * 获取
+                     * @return ExactMatch 
                      * 
                      */
                     bool GetExactMatch() const;
 
                     /**
-                     * 设置Whether to use fuzzy query
-                     * @param _exactMatch Whether to use fuzzy query
+                     * 设置
+                     * @param _exactMatch 
                      * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
@@ -116,19 +112,19 @@ If there are multiple Values in the same Filter, the logical relationship betwee
                 private:
 
                     /**
-                     * Name of filter key
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * One or more filter values
+                     * 
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Whether to use fuzzy query
+                     * 
                      */
                     bool m_exactMatch;
                     bool m_exactMatchHasBeenSet;

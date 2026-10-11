@@ -26,9 +26,9 @@ InquiryPriceUpdateInstanceRequest::InquiryPriceUpdateInstanceRequest() :
     m_timeUnitHasBeenSet(false),
     m_timeSpanHasBeenSet(false),
     m_payModeHasBeenSet(false),
-    m_currencyHasBeenSet(false),
     m_updateSpecHasBeenSet(false),
     m_placementHasBeenSet(false),
+    m_currencyHasBeenSet(false),
     m_resourceIdListHasBeenSet(false)
 {
 }
@@ -64,14 +64,6 @@ string InquiryPriceUpdateInstanceRequest::ToJsonString() const
         d.AddMember(iKey, m_payMode, allocator);
     }
 
-    if (m_currencyHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Currency";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_updateSpecHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -88,6 +80,14 @@ string InquiryPriceUpdateInstanceRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_placement.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_currencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Currency";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceIdListHasBeenSet)
@@ -159,22 +159,6 @@ bool InquiryPriceUpdateInstanceRequest::PayModeHasBeenSet() const
     return m_payModeHasBeenSet;
 }
 
-string InquiryPriceUpdateInstanceRequest::GetCurrency() const
-{
-    return m_currency;
-}
-
-void InquiryPriceUpdateInstanceRequest::SetCurrency(const string& _currency)
-{
-    m_currency = _currency;
-    m_currencyHasBeenSet = true;
-}
-
-bool InquiryPriceUpdateInstanceRequest::CurrencyHasBeenSet() const
-{
-    return m_currencyHasBeenSet;
-}
-
 UpdateInstanceSettings InquiryPriceUpdateInstanceRequest::GetUpdateSpec() const
 {
     return m_updateSpec;
@@ -205,6 +189,22 @@ void InquiryPriceUpdateInstanceRequest::SetPlacement(const Placement& _placement
 bool InquiryPriceUpdateInstanceRequest::PlacementHasBeenSet() const
 {
     return m_placementHasBeenSet;
+}
+
+string InquiryPriceUpdateInstanceRequest::GetCurrency() const
+{
+    return m_currency;
+}
+
+void InquiryPriceUpdateInstanceRequest::SetCurrency(const string& _currency)
+{
+    m_currency = _currency;
+    m_currencyHasBeenSet = true;
+}
+
+bool InquiryPriceUpdateInstanceRequest::CurrencyHasBeenSet() const
+{
+    return m_currencyHasBeenSet;
 }
 
 vector<string> InquiryPriceUpdateInstanceRequest::GetResourceIdList() const

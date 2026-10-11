@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process traceId.
-                     * @return TraceId Process traceId.
+                     * 获取Flow trace ID.
+                     * @return TraceId Flow trace ID.
                      * 
                      */
                     std::string GetTraceId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Process traceId.
+                     * Flow trace ID.
                      */
                     std::string m_traceId;
                     bool m_traceIdHasBeenSet;

@@ -340,6 +340,56 @@ EmrClient::CreateClusterOutcomeCallable EmrClient::CreateClusterCallable(const C
     return prom->get_future();
 }
 
+EmrClient::CreateDynamicInstanceOutcome EmrClient::CreateDynamicInstance(const CreateDynamicInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDynamicInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDynamicInstanceResponse rsp = CreateDynamicInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDynamicInstanceOutcome(rsp);
+        else
+            return CreateDynamicInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDynamicInstanceOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::CreateDynamicInstanceAsync(const CreateDynamicInstanceRequest& request, const CreateDynamicInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDynamicInstanceRequest&;
+    using Resp = CreateDynamicInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDynamicInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::CreateDynamicInstanceOutcomeCallable EmrClient::CreateDynamicInstanceCallable(const CreateDynamicInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDynamicInstanceOutcome>>();
+    CreateDynamicInstanceAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const CreateDynamicInstanceRequest&,
+        CreateDynamicInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 EmrClient::CreateGroupsSTDOutcome EmrClient::CreateGroupsSTD(const CreateGroupsSTDRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateGroupsSTD");
@@ -840,6 +890,56 @@ EmrClient::DescribeAutoScaleStrategiesOutcomeCallable EmrClient::DescribeAutoSca
     return prom->get_future();
 }
 
+EmrClient::DescribeBootScriptOutcome EmrClient::DescribeBootScript(const DescribeBootScriptRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBootScript");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBootScriptResponse rsp = DescribeBootScriptResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBootScriptOutcome(rsp);
+        else
+            return DescribeBootScriptOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBootScriptOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeBootScriptAsync(const DescribeBootScriptRequest& request, const DescribeBootScriptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBootScriptRequest&;
+    using Resp = DescribeBootScriptResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBootScript", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeBootScriptOutcomeCallable EmrClient::DescribeBootScriptCallable(const DescribeBootScriptRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBootScriptOutcome>>();
+    DescribeBootScriptAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeBootScriptRequest&,
+        DescribeBootScriptOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 EmrClient::DescribeClusterFlowStatusDetailOutcome EmrClient::DescribeClusterFlowStatusDetail(const DescribeClusterFlowStatusDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeClusterFlowStatusDetail");
@@ -990,6 +1090,156 @@ EmrClient::DescribeDAGInfoOutcomeCallable EmrClient::DescribeDAGInfoCallable(con
     return prom->get_future();
 }
 
+EmrClient::DescribeDynamicInstanceDetailOutcome EmrClient::DescribeDynamicInstanceDetail(const DescribeDynamicInstanceDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDynamicInstanceDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDynamicInstanceDetailResponse rsp = DescribeDynamicInstanceDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDynamicInstanceDetailOutcome(rsp);
+        else
+            return DescribeDynamicInstanceDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDynamicInstanceDetailOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeDynamicInstanceDetailAsync(const DescribeDynamicInstanceDetailRequest& request, const DescribeDynamicInstanceDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDynamicInstanceDetailRequest&;
+    using Resp = DescribeDynamicInstanceDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDynamicInstanceDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeDynamicInstanceDetailOutcomeCallable EmrClient::DescribeDynamicInstanceDetailCallable(const DescribeDynamicInstanceDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDynamicInstanceDetailOutcome>>();
+    DescribeDynamicInstanceDetailAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeDynamicInstanceDetailRequest&,
+        DescribeDynamicInstanceDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::DescribeDynamicInstanceListOutcome EmrClient::DescribeDynamicInstanceList(const DescribeDynamicInstanceListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDynamicInstanceList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDynamicInstanceListResponse rsp = DescribeDynamicInstanceListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDynamicInstanceListOutcome(rsp);
+        else
+            return DescribeDynamicInstanceListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDynamicInstanceListOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeDynamicInstanceListAsync(const DescribeDynamicInstanceListRequest& request, const DescribeDynamicInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDynamicInstanceListRequest&;
+    using Resp = DescribeDynamicInstanceListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDynamicInstanceList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeDynamicInstanceListOutcomeCallable EmrClient::DescribeDynamicInstanceListCallable(const DescribeDynamicInstanceListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDynamicInstanceListOutcome>>();
+    DescribeDynamicInstanceListAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeDynamicInstanceListRequest&,
+        DescribeDynamicInstanceListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::DescribeEMREventListOutcome EmrClient::DescribeEMREventList(const DescribeEMREventListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEMREventList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEMREventListResponse rsp = DescribeEMREventListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEMREventListOutcome(rsp);
+        else
+            return DescribeEMREventListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEMREventListOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeEMREventListAsync(const DescribeEMREventListRequest& request, const DescribeEMREventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeEMREventListRequest&;
+    using Resp = DescribeEMREventListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeEMREventList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeEMREventListOutcomeCallable EmrClient::DescribeEMREventListCallable(const DescribeEMREventListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeEMREventListOutcome>>();
+    DescribeEMREventListAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeEMREventListRequest&,
+        DescribeEMREventListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 EmrClient::DescribeEmrApplicationStaticsOutcome EmrClient::DescribeEmrApplicationStatics(const DescribeEmrApplicationStaticsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeEmrApplicationStatics");
@@ -1082,6 +1332,56 @@ EmrClient::DescribeEmrOverviewMetricsOutcomeCallable EmrClient::DescribeEmrOverv
         const EmrClient*,
         const DescribeEmrOverviewMetricsRequest&,
         DescribeEmrOverviewMetricsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::DescribeExportConfsOutcome EmrClient::DescribeExportConfs(const DescribeExportConfsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeExportConfs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeExportConfsResponse rsp = DescribeExportConfsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeExportConfsOutcome(rsp);
+        else
+            return DescribeExportConfsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeExportConfsOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeExportConfsAsync(const DescribeExportConfsRequest& request, const DescribeExportConfsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeExportConfsRequest&;
+    using Resp = DescribeExportConfsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeExportConfs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeExportConfsOutcomeCallable EmrClient::DescribeExportConfsCallable(const DescribeExportConfsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeExportConfsOutcome>>();
+    DescribeExportConfsAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeExportConfsRequest&,
+        DescribeExportConfsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1232,6 +1532,106 @@ EmrClient::DescribeHBaseTableOverviewOutcomeCallable EmrClient::DescribeHBaseTab
         const EmrClient*,
         const DescribeHBaseTableOverviewRequest&,
         DescribeHBaseTableOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::DescribeHBaseTableRequestMetricOutcome EmrClient::DescribeHBaseTableRequestMetric(const DescribeHBaseTableRequestMetricRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHBaseTableRequestMetric");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHBaseTableRequestMetricResponse rsp = DescribeHBaseTableRequestMetricResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHBaseTableRequestMetricOutcome(rsp);
+        else
+            return DescribeHBaseTableRequestMetricOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHBaseTableRequestMetricOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeHBaseTableRequestMetricAsync(const DescribeHBaseTableRequestMetricRequest& request, const DescribeHBaseTableRequestMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHBaseTableRequestMetricRequest&;
+    using Resp = DescribeHBaseTableRequestMetricResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHBaseTableRequestMetric", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeHBaseTableRequestMetricOutcomeCallable EmrClient::DescribeHBaseTableRequestMetricCallable(const DescribeHBaseTableRequestMetricRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHBaseTableRequestMetricOutcome>>();
+    DescribeHBaseTableRequestMetricAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeHBaseTableRequestMetricRequest&,
+        DescribeHBaseTableRequestMetricOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::DescribeHBaseTableStoreSizeMetricOutcome EmrClient::DescribeHBaseTableStoreSizeMetric(const DescribeHBaseTableStoreSizeMetricRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHBaseTableStoreSizeMetric");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHBaseTableStoreSizeMetricResponse rsp = DescribeHBaseTableStoreSizeMetricResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHBaseTableStoreSizeMetricOutcome(rsp);
+        else
+            return DescribeHBaseTableStoreSizeMetricOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHBaseTableStoreSizeMetricOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeHBaseTableStoreSizeMetricAsync(const DescribeHBaseTableStoreSizeMetricRequest& request, const DescribeHBaseTableStoreSizeMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHBaseTableStoreSizeMetricRequest&;
+    using Resp = DescribeHBaseTableStoreSizeMetricResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHBaseTableStoreSizeMetric", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeHBaseTableStoreSizeMetricOutcomeCallable EmrClient::DescribeHBaseTableStoreSizeMetricCallable(const DescribeHBaseTableStoreSizeMetricRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHBaseTableStoreSizeMetricOutcome>>();
+    DescribeHBaseTableStoreSizeMetricAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeHBaseTableStoreSizeMetricRequest&,
+        DescribeHBaseTableStoreSizeMetricOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1440,6 +1840,56 @@ EmrClient::DescribeInspectionTaskResultOutcomeCallable EmrClient::DescribeInspec
     return prom->get_future();
 }
 
+EmrClient::DescribeInstanceOplogOutcome EmrClient::DescribeInstanceOplog(const DescribeInstanceOplogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceOplog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceOplogResponse rsp = DescribeInstanceOplogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceOplogOutcome(rsp);
+        else
+            return DescribeInstanceOplogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceOplogOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeInstanceOplogAsync(const DescribeInstanceOplogRequest& request, const DescribeInstanceOplogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstanceOplogRequest&;
+    using Resp = DescribeInstanceOplogResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceOplog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeInstanceOplogOutcomeCallable EmrClient::DescribeInstanceOplogCallable(const DescribeInstanceOplogRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstanceOplogOutcome>>();
+    DescribeInstanceOplogAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeInstanceOplogRequest&,
+        DescribeInstanceOplogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 EmrClient::DescribeInstancesOutcome EmrClient::DescribeInstances(const DescribeInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstances");
@@ -1582,6 +2032,56 @@ EmrClient::DescribeKyuubiQueryInfoOutcomeCallable EmrClient::DescribeKyuubiQuery
         const EmrClient*,
         const DescribeKyuubiQueryInfoRequest&,
         DescribeKyuubiQueryInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::DescribeMetaDBInfoOutcome EmrClient::DescribeMetaDBInfo(const DescribeMetaDBInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMetaDBInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMetaDBInfoResponse rsp = DescribeMetaDBInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMetaDBInfoOutcome(rsp);
+        else
+            return DescribeMetaDBInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMetaDBInfoOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeMetaDBInfoAsync(const DescribeMetaDBInfoRequest& request, const DescribeMetaDBInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMetaDBInfoRequest&;
+    using Resp = DescribeMetaDBInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMetaDBInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::DescribeMetaDBInfoOutcomeCallable EmrClient::DescribeMetaDBInfoCallable(const DescribeMetaDBInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMetaDBInfoOutcome>>();
+    DescribeMetaDBInfoAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const DescribeMetaDBInfoRequest&,
+        DescribeMetaDBInfoOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2590,6 +3090,56 @@ EmrClient::InquiryPriceUpdateInstanceOutcomeCallable EmrClient::InquiryPriceUpda
     return prom->get_future();
 }
 
+EmrClient::InstallSoftwareOutcome EmrClient::InstallSoftware(const InstallSoftwareRequest &request)
+{
+    auto outcome = MakeRequest(request, "InstallSoftware");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InstallSoftwareResponse rsp = InstallSoftwareResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InstallSoftwareOutcome(rsp);
+        else
+            return InstallSoftwareOutcome(o.GetError());
+    }
+    else
+    {
+        return InstallSoftwareOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::InstallSoftwareAsync(const InstallSoftwareRequest& request, const InstallSoftwareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const InstallSoftwareRequest&;
+    using Resp = InstallSoftwareResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "InstallSoftware", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::InstallSoftwareOutcomeCallable EmrClient::InstallSoftwareCallable(const InstallSoftwareRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<InstallSoftwareOutcome>>();
+    InstallSoftwareAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const InstallSoftwareRequest&,
+        InstallSoftwareOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 EmrClient::ModifyAutoRenewFlagOutcome EmrClient::ModifyAutoRenewFlag(const ModifyAutoRenewFlagRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAutoRenewFlag");
@@ -2682,6 +3232,106 @@ EmrClient::ModifyAutoScaleStrategyOutcomeCallable EmrClient::ModifyAutoScaleStra
         const EmrClient*,
         const ModifyAutoScaleStrategyRequest&,
         ModifyAutoScaleStrategyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::ModifyBootScriptOutcome EmrClient::ModifyBootScript(const ModifyBootScriptRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBootScript");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBootScriptResponse rsp = ModifyBootScriptResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBootScriptOutcome(rsp);
+        else
+            return ModifyBootScriptOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBootScriptOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::ModifyBootScriptAsync(const ModifyBootScriptRequest& request, const ModifyBootScriptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBootScriptRequest&;
+    using Resp = ModifyBootScriptResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBootScript", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::ModifyBootScriptOutcomeCallable EmrClient::ModifyBootScriptCallable(const ModifyBootScriptRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBootScriptOutcome>>();
+    ModifyBootScriptAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const ModifyBootScriptRequest&,
+        ModifyBootScriptOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::ModifyDynamicInstanceOutcome EmrClient::ModifyDynamicInstance(const ModifyDynamicInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDynamicInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDynamicInstanceResponse rsp = ModifyDynamicInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDynamicInstanceOutcome(rsp);
+        else
+            return ModifyDynamicInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDynamicInstanceOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::ModifyDynamicInstanceAsync(const ModifyDynamicInstanceRequest& request, const ModifyDynamicInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDynamicInstanceRequest&;
+    using Resp = ModifyDynamicInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDynamicInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::ModifyDynamicInstanceOutcomeCallable EmrClient::ModifyDynamicInstanceCallable(const ModifyDynamicInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDynamicInstanceOutcome>>();
+    ModifyDynamicInstanceAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const ModifyDynamicInstanceRequest&,
+        ModifyDynamicInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3132,6 +3782,56 @@ EmrClient::ModifySLInstanceBasicOutcomeCallable EmrClient::ModifySLInstanceBasic
         const EmrClient*,
         const ModifySLInstanceBasicRequest&,
         ModifySLInstanceBasicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::ModifyServiceParamsByExportConfsOutcome EmrClient::ModifyServiceParamsByExportConfs(const ModifyServiceParamsByExportConfsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyServiceParamsByExportConfs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyServiceParamsByExportConfsResponse rsp = ModifyServiceParamsByExportConfsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyServiceParamsByExportConfsOutcome(rsp);
+        else
+            return ModifyServiceParamsByExportConfsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyServiceParamsByExportConfsOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::ModifyServiceParamsByExportConfsAsync(const ModifyServiceParamsByExportConfsRequest& request, const ModifyServiceParamsByExportConfsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyServiceParamsByExportConfsRequest&;
+    using Resp = ModifyServiceParamsByExportConfsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyServiceParamsByExportConfs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::ModifyServiceParamsByExportConfsOutcomeCallable EmrClient::ModifyServiceParamsByExportConfsCallable(const ModifyServiceParamsByExportConfsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyServiceParamsByExportConfsOutcome>>();
+    ModifyServiceParamsByExportConfsAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const ModifyServiceParamsByExportConfsRequest&,
+        ModifyServiceParamsByExportConfsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3732,6 +4432,56 @@ EmrClient::TerminateClusterNodesOutcomeCallable EmrClient::TerminateClusterNodes
         const EmrClient*,
         const TerminateClusterNodesRequest&,
         TerminateClusterNodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+EmrClient::TerminateDynamicInstancesOutcome EmrClient::TerminateDynamicInstances(const TerminateDynamicInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "TerminateDynamicInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TerminateDynamicInstancesResponse rsp = TerminateDynamicInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TerminateDynamicInstancesOutcome(rsp);
+        else
+            return TerminateDynamicInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return TerminateDynamicInstancesOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::TerminateDynamicInstancesAsync(const TerminateDynamicInstancesRequest& request, const TerminateDynamicInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TerminateDynamicInstancesRequest&;
+    using Resp = TerminateDynamicInstancesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TerminateDynamicInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EmrClient::TerminateDynamicInstancesOutcomeCallable EmrClient::TerminateDynamicInstancesCallable(const TerminateDynamicInstancesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TerminateDynamicInstancesOutcome>>();
+    TerminateDynamicInstancesAsync(
+    request,
+    [prom](
+        const EmrClient*,
+        const TerminateDynamicInstancesRequest&,
+        TerminateDynamicInstancesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

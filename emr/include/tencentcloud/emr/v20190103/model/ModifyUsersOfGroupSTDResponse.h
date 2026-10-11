@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether modification is successful.
-                     * @return Data Whether modification is successful.
+                     * 获取<p>Whether the modification is successful.</p>
+                     * @return Data <p>Whether the modification is successful.</p>
                      * 
                      */
                     bool GetData() const;
@@ -57,13 +57,33 @@ namespace TencentCloud
                      */
                     bool DataHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Flow ID.</p>
+                     * @return FlowId <p>Flow ID.</p>
+                     * 
+                     */
+                    int64_t GetFlowId() const;
+
+                    /**
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
+                     * 
+                     */
+                    bool FlowIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether modification is successful.
+                     * <p>Whether the modification is successful.</p>
                      */
                     bool m_data;
                     bool m_dataHasBeenSet;
+
+                    /**
+                     * <p>Flow ID.</p>
+                     */
+                    int64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
 
                 };
             }

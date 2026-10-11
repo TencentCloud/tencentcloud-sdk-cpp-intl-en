@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DAGInfoList StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取StarRocks query information list.
+                     * @return DAGInfoList StarRocks query information list.
                      * 
                      */
                     std::vector<DAGInfo> GetDAGInfoList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * StarRocks query information list.
                      */
                     std::vector<DAGInfo> m_dAGInfoList;
                     bool m_dAGInfoListHasBeenSet;

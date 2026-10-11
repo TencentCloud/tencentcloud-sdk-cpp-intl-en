@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID.
-                     * @return InstanceId Cluster instance ID.
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID.
-                     * @param _instanceId Cluster instance ID.
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ResourceBaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
-                     * @return ComputeResourceId Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+                     * 获取ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
+                     * @return ComputeResourceId ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
                      * 
                      */
                     std::string GetComputeResourceId() const;
 
                     /**
-                     * 设置Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
-                     * @param _computeResourceId Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+                     * 设置ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
+                     * @param _computeResourceId ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
                      * 
                      */
                     void SetComputeResourceId(const std::string& _computeResourceId);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster instance ID.
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_resourceBaseTypeHasBeenSet;
 
                     /**
-                     * Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+                     * ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
                      */
                     std::string m_computeResourceId;
                     bool m_computeResourceIdHasBeenSet;

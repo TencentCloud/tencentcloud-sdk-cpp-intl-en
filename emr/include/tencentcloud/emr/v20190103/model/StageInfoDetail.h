@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task step details
+                * Task step details.
                 */
                 class StageInfoDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Steps.
-                     * @return Stage Steps.
+                     * 获取Step.
+                     * @return Stage Step.
                      * 
                      */
                     std::string GetStage() const;
 
                     /**
-                     * 设置Steps.
-                     * @param _stage Steps.
+                     * 设置Step.
+                     * @param _stage Step.
                      * 
                      */
                     void SetStage(const std::string& _stage);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to display
-                     * @return IsShow Indicates whether to display
+                     * 获取Whether it is displayed.
+                     * @return IsShow Whether it is displayed.
                      * 
                      */
                     bool GetIsShow() const;
 
                     /**
-                     * 设置Indicates whether to display
-                     * @param _isShow Indicates whether to display
+                     * 设置Whether it is displayed.
+                     * @param _isShow Whether it is displayed.
                      * 
                      */
                     void SetIsShow(const bool& _isShow);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool IsShowHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a subprocess
-                     * @return IsSubFlow Whether it is a subprocess
+                     * 获取Whether it is a sub-flow.
+                     * @return IsSubFlow Whether it is a sub-flow.
                      * 
                      */
                     bool GetIsSubFlow() const;
 
                     /**
-                     * 设置Whether it is a subprocess
-                     * @param _isSubFlow Whether it is a subprocess
+                     * 设置Whether it is a sub-flow.
+                     * @param _isSubFlow Whether it is a sub-flow.
                      * 
                      */
                     void SetIsSubFlow(const bool& _isSubFlow);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IsSubFlowHasBeenSet() const;
 
                     /**
-                     * 获取Subprocess tag.
-                     * @return SubFlowFlag Subprocess tag.
+                     * 获取Sub-flow tag.
+                     * @return SubFlowFlag Sub-flow tag.
                      * 
                      */
                     std::string GetSubFlowFlag() const;
 
                     /**
-                     * 设置Subprocess tag.
-                     * @param _subFlowFlag Subprocess tag.
+                     * 设置Sub-flow tag.
+                     * @param _subFlowFlag Sub-flow tag.
                      * 
                      */
                     void SetSubFlowFlag(const std::string& _subFlowFlag);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SubFlowFlagHasBeenSet() const;
 
                     /**
-                     * 获取Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
-                     * @return Status Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+                     * 获取Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
+                     * @return Status Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
-                     * @param _status Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+                     * 设置Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
+                     * @param _status Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -215,23 +215,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Starttime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start time.
+                     * @return Starttime Start time.
                      * 
                      */
                     std::string GetStarttime() const;
 
                     /**
-                     * 设置Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _starttime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start time.
+                     * @param _starttime Start time.
                      * 
                      */
                     void SetStarttime(const std::string& _starttime);
@@ -244,23 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StarttimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Endtime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取End time.
+                     * @return Endtime End time.
                      * 
                      */
                     std::string GetEndtime() const;
 
                     /**
-                     * 设置End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endtime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置End time.
+                     * @param _endtime End time.
                      * 
                      */
                     void SetEndtime(const std::string& _endtime);
@@ -273,15 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndtimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether details are included.
-                     * @return HadWoodDetail Whether details are included.
+                     * 获取Whether detailed information is included.
+                     * @return HadWoodDetail Whether detailed information is included.
                      * 
                      */
                     bool GetHadWoodDetail() const;
 
                     /**
-                     * 设置Whether details are included.
-                     * @param _hadWoodDetail Whether details are included.
+                     * 设置Whether detailed information is included.
+                     * @param _hadWoodDetail Whether detailed information is included.
                      * 
                      */
                     void SetHadWoodDetail(const bool& _hadWoodDetail);
@@ -294,15 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HadWoodDetailHasBeenSet() const;
 
                     /**
-                     * 获取Wood subprocess ID.
-                     * @return WoodJobId Wood subprocess ID.
+                     * 获取Wood sub-flow ID.
+                     * @return WoodJobId Wood sub-flow ID.
                      * 
                      */
                     uint64_t GetWoodJobId() const;
 
                     /**
-                     * 设置Wood subprocess ID.
-                     * @param _woodJobId Wood subprocess ID.
+                     * 设置Wood sub-flow ID.
+                     * @param _woodJobId Wood sub-flow ID.
                      * 
                      */
                     void SetWoodJobId(const uint64_t& _woodJobId);
@@ -336,15 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LanguageKeyHasBeenSet() const;
 
                     /**
-                     * 获取Reason for stage failure.
-                     * @return FailedReason Reason for stage failure.
+                     * 获取Reason for the stage failure.
+                     * @return FailedReason Reason for the stage failure.
                      * 
                      */
                     std::string GetFailedReason() const;
 
                     /**
-                     * 设置Reason for stage failure.
-                     * @param _failedReason Reason for stage failure.
+                     * 设置Reason for the stage failure.
+                     * @param _failedReason Reason for the stage failure.
                      * 
                      */
                     void SetFailedReason(const std::string& _failedReason);
@@ -378,15 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeConsumingHasBeenSet() const;
 
                     /**
-                     * 获取id, for frontend
-                     * @return Id id, for frontend
+                     * 获取ID used by the frontend.
+                     * @return Id ID used by the frontend.
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置id, for frontend
-                     * @param _id id, for frontend
+                     * 设置ID used by the frontend.
+                     * @param _id ID used by the frontend.
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -401,7 +385,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Steps.
+                     * Step.
                      */
                     std::string m_stage;
                     bool m_stageHasBeenSet;
@@ -413,25 +397,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Indicates whether to display
+                     * Whether it is displayed.
                      */
                     bool m_isShow;
                     bool m_isShowHasBeenSet;
 
                     /**
-                     * Whether it is a subprocess
+                     * Whether it is a sub-flow.
                      */
                     bool m_isSubFlow;
                     bool m_isSubFlowHasBeenSet;
 
                     /**
-                     * Subprocess tag.
+                     * Sub-flow tag.
                      */
                     std::string m_subFlowFlag;
                     bool m_subFlowFlagHasBeenSet;
 
                     /**
-                     * Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+                     * Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -449,29 +433,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start time.
                      */
                     std::string m_starttime;
                     bool m_starttimeHasBeenSet;
 
                     /**
-                     * End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * End time.
                      */
                     std::string m_endtime;
                     bool m_endtimeHasBeenSet;
 
                     /**
-                     * Whether details are included.
+                     * Whether detailed information is included.
                      */
                     bool m_hadWoodDetail;
                     bool m_hadWoodDetailHasBeenSet;
 
                     /**
-                     * Wood subprocess ID.
+                     * Wood sub-flow ID.
                      */
                     uint64_t m_woodJobId;
                     bool m_woodJobIdHasBeenSet;
@@ -483,7 +463,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_languageKeyHasBeenSet;
 
                     /**
-                     * Reason for stage failure.
+                     * Reason for the stage failure.
                      */
                     std::string m_failedReason;
                     bool m_failedReasonHasBeenSet;
@@ -495,7 +475,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timeConsumingHasBeenSet;
 
                     /**
-                     * id, for frontend
+                     * ID used by the frontend.
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;

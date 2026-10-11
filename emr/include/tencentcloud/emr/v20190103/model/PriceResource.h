@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource queried for price
+                * Inquiry resources.
                 */
                 class PriceResource : public AbstractModel
                 {
@@ -196,19 +196,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MultiDisks List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cloud disk list.
+                     * @return MultiDisks Cloud disk list.
                      * 
                      */
                     std::vector<MultiDisk> GetMultiDisks() const;
 
                     /**
-                     * 设置List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _multiDisks List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud disk list.
+                     * @param _multiDisks Cloud disk list.
                      * 
                      */
                     void SetMultiDisks(const std::vector<MultiDisk>& _multiDisks);
@@ -263,19 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tags Tag.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -395,8 +387,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cloud disk list.
                      */
                     std::vector<MultiDisk> m_multiDisks;
                     bool m_multiDisksHasBeenSet;
@@ -414,8 +405,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

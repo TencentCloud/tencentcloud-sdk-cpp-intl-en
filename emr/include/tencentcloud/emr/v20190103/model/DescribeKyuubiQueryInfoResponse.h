@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KyuubiQueryInfoList Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Kyuubi query information list.
+                     * @return KyuubiQueryInfoList Kyuubi query information list.
                      * 
                      */
                     std::vector<KyuubiQueryInfo> GetKyuubiQueryInfoList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Kyuubi query information list.
                      */
                     std::vector<KyuubiQueryInfo> m_kyuubiQueryInfoList;
                     bool m_kyuubiQueryInfoListHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the EMR cluster instance.
-                     * @return InstanceId ID of the EMR cluster instance.
+                     * 获取ID of the EMR cluster.
+                     * @return InstanceId ID of the EMR cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the EMR cluster instance.
-                     * @param _instanceId ID of the EMR cluster instance.
+                     * 设置ID of the EMR cluster.
+                     * @param _instanceId ID of the EMR cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk ID required for mounting.
-                     * @return DiskIds Cloud disk ID required for mounting.
+                     * 获取ID of the cloud disk to be mounted.
+                     * @return DiskIds ID of the cloud disk to be mounted.
                      * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置Cloud disk ID required for mounting.
-                     * @param _diskIds Cloud disk ID required for mounting.
+                     * 设置ID of the cloud disk to be mounted.
+                     * @param _diskIds ID of the cloud disk to be mounted.
                      * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
@@ -86,23 +86,23 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
-                     * @return AlignType Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+                     * 获取Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
+                     * @return AlignType Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
                      * 
                      */
                     std::string GetAlignType() const;
 
                     /**
-                     * 设置Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
-                     * @param _alignType Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+                     * 设置Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
+                     * @param _alignType Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
                      * 
                      */
                     void SetAlignType(const std::string& _alignType);
@@ -115,15 +115,15 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                     bool AlignTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of CVM node IDs requiring mounting.
-                     * @return CvmInstanceIds List of CVM node IDs requiring mounting.
+                     * 获取ID list of the CVM instances to which disks are to be mounted.
+                     * @return CvmInstanceIds ID list of the CVM instances to which disks are to be mounted.
                      * 
                      */
                     std::vector<std::string> GetCvmInstanceIds() const;
 
                     /**
-                     * 设置List of CVM node IDs requiring mounting.
-                     * @param _cvmInstanceIds List of CVM node IDs requiring mounting.
+                     * 设置ID list of the CVM instances to which disks are to be mounted.
+                     * @param _cvmInstanceIds ID list of the CVM instances to which disks are to be mounted.
                      * 
                      */
                     void SetCvmInstanceIds(const std::vector<std::string>& _cvmInstanceIds);
@@ -178,15 +178,15 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                     bool DiskSpecHasBeenSet() const;
 
                     /**
-                     * 获取Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
-                     * @return DeleteWithInstance Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+                     * 获取Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
+                     * @return DeleteWithInstance Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
                      * 
                      */
                     bool GetDeleteWithInstance() const;
 
                     /**
-                     * 设置Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
-                     * @param _deleteWithInstance Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+                     * 设置Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
+                     * @param _deleteWithInstance Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
                      * 
                      */
                     void SetDeleteWithInstance(const bool& _deleteWithInstance);
@@ -220,15 +220,15 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                     bool SelectiveConfServicesHasBeenSet() const;
 
                     /**
-                     * 获取Disk billing type (1: monthly subscription, 3: committed use).
-                     * @return ChargeType Disk billing type (1: monthly subscription, 3: committed use).
+                     * 获取Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
+                     * @return ChargeType Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
                      * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
-                     * 设置Disk billing type (1: monthly subscription, 3: committed use).
-                     * @param _chargeType Disk billing type (1: monthly subscription, 3: committed use).
+                     * 设置Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
+                     * @param _chargeType Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
                      * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
@@ -241,15 +241,15 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
-                     * @return UnderWriteDuration Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+                     * 获取Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
+                     * @return UnderWriteDuration Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
                      * 
                      */
                     int64_t GetUnderWriteDuration() const;
 
                     /**
-                     * 设置Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
-                     * @param _underWriteDuration Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+                     * 设置Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
+                     * @param _underWriteDuration Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
                      * 
                      */
                     void SetUnderWriteDuration(const int64_t& _underWriteDuration);
@@ -264,27 +264,27 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                 private:
 
                     /**
-                     * ID of the EMR cluster instance.
+                     * ID of the EMR cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Cloud disk ID required for mounting.
+                     * ID of the cloud disk to be mounted.
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;
 
                     /**
-                     * Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+                     * Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
                      */
                     std::string m_alignType;
                     bool m_alignTypeHasBeenSet;
 
                     /**
-                     * List of CVM node IDs requiring mounting.
+                     * ID list of the CVM instances to which disks are to be mounted.
                      */
                     std::vector<std::string> m_cvmInstanceIds;
                     bool m_cvmInstanceIdsHasBeenSet;
@@ -302,7 +302,7 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                     bool m_diskSpecHasBeenSet;
 
                     /**
-                     * Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+                     * Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
                      */
                     bool m_deleteWithInstance;
                     bool m_deleteWithInstanceHasBeenSet;
@@ -314,13 +314,13 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
                     bool m_selectiveConfServicesHasBeenSet;
 
                     /**
-                     * Disk billing type (1: monthly subscription, 3: committed use).
+                     * Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
                      */
                     int64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
 
                     /**
-                     * Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+                     * Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
                      */
                     int64_t m_underWriteDuration;
                     bool m_underWriteDurationHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The bootstrap action.
+                * Bootstrap addition.
                 */
                 class ScriptBootstrapActionConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
-                     * @return CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * 获取COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * @return CosFileURI COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
                      * 
                      */
                     std::string GetCosFileURI() const;
 
                     /**
-                     * 设置The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
-                     * @param _cosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * 设置COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * @param _cosFileURI COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
                      * 
                      */
                     void SetCosFileURI(const std::string& _cosFileURI);
@@ -68,27 +68,27 @@ namespace TencentCloud
                     bool CosFileURIHasBeenSet() const;
 
                     /**
-                     * 获取The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
-                     * @return ExecutionMoment The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+                     * 获取Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
+                     * @return ExecutionMoment Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
                      * 
                      */
                     std::string GetExecutionMoment() const;
 
                     /**
-                     * 设置The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
-                     * @param _executionMoment The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+                     * 设置Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
+                     * @param _executionMoment Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
                      * 
                      */
                     void SetExecutionMoment(const std::string& _executionMoment);
@@ -101,15 +101,15 @@ namespace TencentCloud
                     bool ExecutionMomentHasBeenSet() const;
 
                     /**
-                     * 获取The execution script parameter. The parameter format must comply with standard shell specifications.
-                     * @return Args The execution script parameter. The parameter format must comply with standard shell specifications.
+                     * 获取Execution script parameters. For the parameter format, follow standard Shell specifications.
+                     * @return Args Execution script parameters. For the parameter format, follow standard Shell specifications.
                      * 
                      */
                     std::vector<std::string> GetArgs() const;
 
                     /**
-                     * 设置The execution script parameter. The parameter format must comply with standard shell specifications.
-                     * @param _args The execution script parameter. The parameter format must comply with standard shell specifications.
+                     * 设置Execution script parameters. For the parameter format, follow standard Shell specifications.
+                     * @param _args Execution script parameters. For the parameter format, follow standard Shell specifications.
                      * 
                      */
                     void SetArgs(const std::vector<std::string>& _args);
@@ -122,15 +122,15 @@ namespace TencentCloud
                     bool ArgsHasBeenSet() const;
 
                     /**
-                     * 获取The script file name.
-                     * @return CosFileName The script file name.
+                     * 获取Script file name.
+                     * @return CosFileName Script file name.
                      * 
                      */
                     std::string GetCosFileName() const;
 
                     /**
-                     * 设置The script file name.
-                     * @param _cosFileName The script file name.
+                     * 设置Script file name.
+                     * @param _cosFileName Script file name.
                      * 
                      */
                     void SetCosFileName(const std::string& _cosFileName);
@@ -166,28 +166,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
                      */
                     std::string m_cosFileURI;
                     bool m_cosFileURIHasBeenSet;
 
                     /**
-                     * The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+                     * Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
                      */
                     std::string m_executionMoment;
                     bool m_executionMomentHasBeenSet;
 
                     /**
-                     * The execution script parameter. The parameter format must comply with standard shell specifications.
+                     * Execution script parameters. For the parameter format, follow standard Shell specifications.
                      */
                     std::vector<std::string> m_args;
                     bool m_argsHasBeenSet;
 
                     /**
-                     * The script file name.
+                     * Script file name.
                      */
                     std::string m_cosFileName;
                     bool m_cosFileNameHasBeenSet;

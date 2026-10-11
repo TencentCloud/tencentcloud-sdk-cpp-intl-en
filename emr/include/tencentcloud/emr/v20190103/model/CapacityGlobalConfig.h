@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Global configurations of the capacity scheduler under Resource Scheduling.
+                * Global configuration of the capacity scheduler in resource scheduling.
                 */
                 class CapacityGlobalConfig : public AbstractModel
                 {
@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool EnableLabelHasBeenSet() const;
 
                     /**
-                     * 获取Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LabelDir Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Path where the label information is stored if label-based scheduling is enabled.
+                     * @return LabelDir Path where the label information is stored if label-based scheduling is enabled.
                      * 
                      */
                     std::string GetLabelDir() const;
 
                     /**
-                     * 设置Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _labelDir Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Path where the label information is stored if label-based scheduling is enabled.
+                     * @param _labelDir Path where the label information is stored if label-based scheduling is enabled.
                      * 
                      */
                     void SetLabelDir(const std::string& _labelDir);
@@ -94,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LabelDirHasBeenSet() const;
 
                     /**
-                     * 获取Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QueueMappingOverride Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to overwrite the user-specified queue. true indicates overwriting.
+                     * @return QueueMappingOverride Whether to overwrite the user-specified queue. true indicates overwriting.
                      * 
                      */
                     bool GetQueueMappingOverride() const;
 
                     /**
-                     * 设置Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _queueMappingOverride Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to overwrite the user-specified queue. true indicates overwriting.
+                     * @param _queueMappingOverride Whether to overwrite the user-specified queue. true indicates overwriting.
                      * 
                      */
                     void SetQueueMappingOverride(const bool& _queueMappingOverride);
@@ -120,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefaultSettings Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DefaultSetting> GetDefaultSettings() const;
 
                     /**
                      * 设置Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _defaultSettings Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefaultSettings(const std::vector<DefaultSetting>& _defaultSettings);
@@ -152,22 +140,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_enableLabelHasBeenSet;
 
                     /**
-                     * Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Path where the label information is stored if label-based scheduling is enabled.
                      */
                     std::string m_labelDir;
                     bool m_labelDirHasBeenSet;
 
                     /**
-                     * Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to overwrite the user-specified queue. true indicates overwriting.
                      */
                     bool m_queueMappingOverride;
                     bool m_queueMappingOverrideHasBeenSet;
 
                     /**
                      * Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DefaultSetting> m_defaultSettings;
                     bool m_defaultSettingsHasBeenSet;

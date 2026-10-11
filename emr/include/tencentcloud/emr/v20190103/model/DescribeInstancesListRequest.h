@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
-                     * @return DisplayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+                     * 获取Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
+                     * @return DisplayStrategy Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      * 
                      */
                     std::string GetDisplayStrategy() const;
 
                     /**
-                     * 设置Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
-                     * @param _displayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+                     * 设置Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
+                     * @param _displayStrategy Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      * 
                      */
                     void SetDisplayStrategy(const std::string& _displayStrategy);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DisplayStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Page number. Default value: `0`, indicating the first page.
-                     * @return Offset Page number. Default value: `0`, indicating the first page.
+                     * 获取Page number. The default value is 0, indicating the first page.
+                     * @return Offset Page number. The default value is 0, indicating the first page.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Page number. Default value: `0`, indicating the first page.
-                     * @param _offset Page number. Default value: `0`, indicating the first page.
+                     * 设置Page number. The default value is 0, indicating the first page.
+                     * @param _offset Page number. The default value is 0, indicating the first page.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -86,18 +86,18 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * 获取Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
-                     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * 设置Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
-                     * @param _limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * @param _limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
                      * 
                      */
@@ -111,15 +111,15 @@ If both limit and offset are 0, all records will be queried.
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
-                     * @return OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+                     * 获取Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
+                     * @return OrderField Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
-                     * 设置Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
-                     * @param _orderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+                     * 设置Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
+                     * @param _orderField Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -132,15 +132,15 @@ If both limit and offset are 0, all records will be queried.
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
-                     * @return Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+                     * 获取Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
+                     * @return Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
                      * 
                      */
                     int64_t GetAsc() const;
 
                     /**
-                     * 设置Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
-                     * @param _asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+                     * 设置Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
+                     * @param _asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
                      * 
                      */
                     void SetAsc(const int64_t& _asc);
@@ -153,15 +153,15 @@ If both limit and offset are 0, all records will be queried.
                     bool AscHasBeenSet() const;
 
                     /**
-                     * 获取Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
-                     * @return Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+                     * 获取Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+                     * @return Filters Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
-                     * @param _filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+                     * 设置Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+                     * @param _filters Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -173,44 +173,71 @@ If both limit and offset are 0, all records will be queried.
                      */
                     bool FiltersHasBeenSet() const;
 
+                    /**
+                     * 获取Default value 0 for regular clusters and 2 for TKE clusters.
+                     * @return ClusterType Default value 0 for regular clusters and 2 for TKE clusters.
+                     * 
+                     */
+                    int64_t GetClusterType() const;
+
+                    /**
+                     * 设置Default value 0 for regular clusters and 2 for TKE clusters.
+                     * @param _clusterType Default value 0 for regular clusters and 2 for TKE clusters.
+                     * 
+                     */
+                    void SetClusterType(const int64_t& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     * 
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+                     * Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
                      */
                     std::string m_displayStrategy;
                     bool m_displayStrategyHasBeenSet;
 
                     /**
-                     * Page number. Default value: `0`, indicating the first page.
+                     * Page number. The default value is 0, indicating the first page.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+                     * Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+                     * Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+                     * Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
                      */
                     int64_t m_asc;
                     bool m_ascHasBeenSet;
 
                     /**
-                     * Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+                     * Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * Default value 0 for regular clusters and 2 for TKE clusters.
+                     */
+                    int64_t m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
 
                 };
             }

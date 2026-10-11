@@ -31,7 +31,9 @@ SLInstanceInfo::SLInstanceInfo() :
     m_zoneHasBeenSet(false),
     m_appIdHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
+    m_vpcNameHasBeenSet(false),
     m_subnetIdHasBeenSet(false),
+    m_subnetNameHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_addTimeHasBeenSet(false),
     m_payModeHasBeenSet(false),
@@ -39,7 +41,9 @@ SLInstanceInfo::SLInstanceInfo() :
     m_tagsHasBeenSet(false),
     m_autoRenewFlagHasBeenSet(false),
     m_isolateTimeHasBeenSet(false),
-    m_expireTimeHasBeenSet(false)
+    m_expireTimeHasBeenSet(false),
+    m_deployRoleHasBeenSet(false),
+    m_webUIUrlHasBeenSet(false)
 {
 }
 
@@ -148,6 +152,16 @@ CoreInternalOutcome SLInstanceInfo::Deserialize(const rapidjson::Value &value)
         m_vpcIdHasBeenSet = true;
     }
 
+    if (value.HasMember("VpcName") && !value["VpcName"].IsNull())
+    {
+        if (!value["VpcName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SLInstanceInfo.VpcName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_vpcName = string(value["VpcName"].GetString());
+        m_vpcNameHasBeenSet = true;
+    }
+
     if (value.HasMember("SubnetId") && !value["SubnetId"].IsNull())
     {
         if (!value["SubnetId"].IsUint64())
@@ -156,6 +170,16 @@ CoreInternalOutcome SLInstanceInfo::Deserialize(const rapidjson::Value &value)
         }
         m_subnetId = value["SubnetId"].GetUint64();
         m_subnetIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubnetName") && !value["SubnetName"].IsNull())
+    {
+        if (!value["SubnetName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SLInstanceInfo.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_subnetName = string(value["SubnetName"].GetString());
+        m_subnetNameHasBeenSet = true;
     }
 
     if (value.HasMember("Status") && !value["Status"].IsNull())
@@ -258,6 +282,26 @@ CoreInternalOutcome SLInstanceInfo::Deserialize(const rapidjson::Value &value)
         m_expireTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("DeployRole") && !value["DeployRole"].IsNull())
+    {
+        if (!value["DeployRole"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SLInstanceInfo.DeployRole` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deployRole = string(value["DeployRole"].GetString());
+        m_deployRoleHasBeenSet = true;
+    }
+
+    if (value.HasMember("WebUIUrl") && !value["WebUIUrl"].IsNull())
+    {
+        if (!value["WebUIUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SLInstanceInfo.WebUIUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_webUIUrl = string(value["WebUIUrl"].GetString());
+        m_webUIUrlHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -345,12 +389,28 @@ void SLInstanceInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         value.AddMember(iKey, m_vpcId, allocator);
     }
 
+    if (m_vpcNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VpcName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_subnetIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_subnetId, allocator);
+    }
+
+    if (m_subnetNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubnetName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
@@ -429,6 +489,22 @@ void SLInstanceInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "ExpireTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_expireTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deployRoleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeployRole";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deployRole.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_webUIUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebUIUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_webUIUrl.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -594,6 +670,22 @@ bool SLInstanceInfo::VpcIdHasBeenSet() const
     return m_vpcIdHasBeenSet;
 }
 
+string SLInstanceInfo::GetVpcName() const
+{
+    return m_vpcName;
+}
+
+void SLInstanceInfo::SetVpcName(const string& _vpcName)
+{
+    m_vpcName = _vpcName;
+    m_vpcNameHasBeenSet = true;
+}
+
+bool SLInstanceInfo::VpcNameHasBeenSet() const
+{
+    return m_vpcNameHasBeenSet;
+}
+
 uint64_t SLInstanceInfo::GetSubnetId() const
 {
     return m_subnetId;
@@ -608,6 +700,22 @@ void SLInstanceInfo::SetSubnetId(const uint64_t& _subnetId)
 bool SLInstanceInfo::SubnetIdHasBeenSet() const
 {
     return m_subnetIdHasBeenSet;
+}
+
+string SLInstanceInfo::GetSubnetName() const
+{
+    return m_subnetName;
+}
+
+void SLInstanceInfo::SetSubnetName(const string& _subnetName)
+{
+    m_subnetName = _subnetName;
+    m_subnetNameHasBeenSet = true;
+}
+
+bool SLInstanceInfo::SubnetNameHasBeenSet() const
+{
+    return m_subnetNameHasBeenSet;
 }
 
 uint64_t SLInstanceInfo::GetStatus() const
@@ -736,5 +844,37 @@ void SLInstanceInfo::SetExpireTime(const string& _expireTime)
 bool SLInstanceInfo::ExpireTimeHasBeenSet() const
 {
     return m_expireTimeHasBeenSet;
+}
+
+string SLInstanceInfo::GetDeployRole() const
+{
+    return m_deployRole;
+}
+
+void SLInstanceInfo::SetDeployRole(const string& _deployRole)
+{
+    m_deployRole = _deployRole;
+    m_deployRoleHasBeenSet = true;
+}
+
+bool SLInstanceInfo::DeployRoleHasBeenSet() const
+{
+    return m_deployRoleHasBeenSet;
+}
+
+string SLInstanceInfo::GetWebUIUrl() const
+{
+    return m_webUIUrl;
+}
+
+void SLInstanceInfo::SetWebUIUrl(const string& _webUIUrl)
+{
+    m_webUIUrl = _webUIUrl;
+    m_webUIUrlHasBeenSet = true;
+}
+
+bool SLInstanceInfo::WebUIUrlHasBeenSet() const
+{
+    return m_webUIUrlHasBeenSet;
 }
 

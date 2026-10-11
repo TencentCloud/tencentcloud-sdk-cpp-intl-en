@@ -135,8 +135,6 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainRefererResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainsRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainsResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeLiveForbidStreamListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeLiveForbidStreamListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePlayAuthKeyRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePlayAuthKeyResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePullStreamTasksRequest.h>
@@ -187,6 +185,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveWatermarkRulesResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveWatermarksRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveWatermarksResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeOriginWhiteIpListRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeOriginWhiteIpListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeDetailInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeDetailInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeSumInfoListRequest.h>
@@ -447,9 +447,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLiveDomainsResponse> DescribeLiveDomainsOutcome;
                 typedef std::future<DescribeLiveDomainsOutcome> DescribeLiveDomainsOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainsRequest&, DescribeLiveDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeLiveForbidStreamListResponse> DescribeLiveForbidStreamListOutcome;
-                typedef std::future<DescribeLiveForbidStreamListOutcome> DescribeLiveForbidStreamListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeLiveForbidStreamListRequest&, DescribeLiveForbidStreamListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveForbidStreamListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKeyOutcome;
                 typedef std::future<DescribeLivePlayAuthKeyOutcome> DescribeLivePlayAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLivePlayAuthKeyRequest&, DescribeLivePlayAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLivePlayAuthKeyAsyncHandler;
@@ -525,6 +522,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLiveWatermarksResponse> DescribeLiveWatermarksOutcome;
                 typedef std::future<DescribeLiveWatermarksOutcome> DescribeLiveWatermarksOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveWatermarksRequest&, DescribeLiveWatermarksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveWatermarksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginWhiteIpListResponse> DescribeOriginWhiteIpListOutcome;
+                typedef std::future<DescribeOriginWhiteIpListOutcome> DescribeOriginWhiteIpListOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeOriginWhiteIpListRequest&, DescribeOriginWhiteIpListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginWhiteIpListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePlayErrorCodeDetailInfoListResponse> DescribePlayErrorCodeDetailInfoListOutcome;
                 typedef std::future<DescribePlayErrorCodeDetailInfoListOutcome> DescribePlayErrorCodeDetailInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribePlayErrorCodeDetailInfoListRequest&, DescribePlayErrorCodeDetailInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePlayErrorCodeDetailInfoListAsyncHandler;
@@ -1209,17 +1209,6 @@ Referer information is included in HTTP requests. After you enable referer confi
                 DescribeLiveDomainsOutcomeCallable DescribeLiveDomainsCallable(const Model::DescribeLiveDomainsRequest& request);
 
                 /**
-                 *This API is used to get the list of disabled streams.
-
-Note: this API is used for query only and should not be relied too much upon in important business scenarios.
-                 * @param req DescribeLiveForbidStreamListRequest
-                 * @return DescribeLiveForbidStreamListOutcome
-                 */
-                DescribeLiveForbidStreamListOutcome DescribeLiveForbidStreamList(const Model::DescribeLiveForbidStreamListRequest &request);
-                void DescribeLiveForbidStreamListAsync(const Model::DescribeLiveForbidStreamListRequest& request, const DescribeLiveForbidStreamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeLiveForbidStreamListOutcomeCallable DescribeLiveForbidStreamListCallable(const Model::DescribeLiveForbidStreamListRequest& request);
-
-                /**
                  *This API is used to query the playback authentication key.
                  * @param req DescribeLivePlayAuthKeyRequest
                  * @return DescribeLivePlayAuthKeyOutcome
@@ -1466,6 +1455,15 @@ If the start time and end time are not on the same day or if the data of specifi
                 DescribeLiveWatermarksOutcome DescribeLiveWatermarks(const Model::DescribeLiveWatermarksRequest &request);
                 void DescribeLiveWatermarksAsync(const Model::DescribeLiveWatermarksRequest& request, const DescribeLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLiveWatermarksOutcomeCallable DescribeLiveWatermarksCallable(const Model::DescribeLiveWatermarksRequest& request);
+
+                /**
+                 *This API is used to obtain the pull stream IP whitelist list of the origin server.
+                 * @param req DescribeOriginWhiteIpListRequest
+                 * @return DescribeOriginWhiteIpListOutcome
+                 */
+                DescribeOriginWhiteIpListOutcome DescribeOriginWhiteIpList(const Model::DescribeOriginWhiteIpListRequest &request);
+                void DescribeOriginWhiteIpListAsync(const Model::DescribeOriginWhiteIpListRequest& request, const DescribeOriginWhiteIpListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginWhiteIpListOutcomeCallable DescribeOriginWhiteIpListCallable(const Model::DescribeOriginWhiteIpListRequest& request);
 
                 /**
                  *This API is used to query the information of downstream playback error codes, i.e., the occurrences of each HTTP error code (4xx and 5xx) at a 1-minute granularity in a certain period of time.

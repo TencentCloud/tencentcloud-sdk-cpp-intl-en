@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool SampleTimeHasBeenSet() const;
 
                     /**
-                     * 获取Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageSummaryDistribution Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取HDFS storage details.
+                     * @return StorageSummaryDistribution HDFS storage details.
                      * 
                      */
                     std::vector<StorageSummaryDistribution> GetStorageSummaryDistribution() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sampleTimeHasBeenSet;
 
                     /**
-                     * Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * HDFS storage details.
                      */
                     std::vector<StorageSummaryDistribution> m_storageSummaryDistribution;
                     bool m_storageSummaryDistributionHasBeenSet;

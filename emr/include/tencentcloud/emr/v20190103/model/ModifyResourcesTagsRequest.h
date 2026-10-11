@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag type. Valid values: Cluster and Node
-                     * @return ModifyType Tag type. Valid values: Cluster and Node
+                     * 获取Tag type. Valid values: Cluster and Node.
+                     * @return ModifyType Tag type. Valid values: Cluster and Node.
                      * 
                      */
                     std::string GetModifyType() const;
 
                     /**
-                     * 设置Tag type. Valid values: Cluster and Node
-                     * @param _modifyType Tag type. Valid values: Cluster and Node
+                     * 设置Tag type. Valid values: Cluster and Node.
+                     * @param _modifyType Tag type. Valid values: Cluster and Node.
                      * 
                      */
                     void SetModifyType(const std::string& _modifyType);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ModifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag information
-                     * @return ModifyResourceTagsInfoList Tag information
+                     * 获取Tag information.
+                     * @return ModifyResourceTagsInfoList Tag information.
                      * 
                      */
                     std::vector<ModifyResourceTags> GetModifyResourceTagsInfoList() const;
 
                     /**
-                     * 设置Tag information
-                     * @param _modifyResourceTagsInfoList Tag information
+                     * 设置Tag information.
+                     * @param _modifyResourceTagsInfoList Tag information.
                      * 
                      */
                     void SetModifyResourceTagsInfoList(const std::vector<ModifyResourceTags>& _modifyResourceTagsInfoList);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag type. Valid values: Cluster and Node
+                     * Tag type. Valid values: Cluster and Node.
                      */
                     std::string m_modifyType;
                     bool m_modifyTypeHasBeenSet;
 
                     /**
-                     * Tag information
+                     * Tag information.
                      */
                     std::vector<ModifyResourceTags> m_modifyResourceTagsInfoList;
                     bool m_modifyResourceTagsInfoListHasBeenSet;

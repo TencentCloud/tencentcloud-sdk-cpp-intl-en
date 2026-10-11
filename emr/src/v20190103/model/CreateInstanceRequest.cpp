@@ -57,7 +57,13 @@ CreateInstanceRequest::CreateInstanceRequest() :
     m_multiZoneSettingsHasBeenSet(false),
     m_cosBucketHasBeenSet(false),
     m_nodeMarksHasBeenSet(false),
-    m_loadBalancerIdHasBeenSet(false)
+    m_loadBalancerIdHasBeenSet(false),
+    m_defaultMetaVersionHasBeenSet(false),
+    m_needCdbAuditHasBeenSet(false),
+    m_sgIPHasBeenSet(false),
+    m_partitionNumberHasBeenSet(false),
+    m_webUiVersionHasBeenSet(false),
+    m_cbsSysEncryptHasBeenSet(false)
 {
 }
 
@@ -397,6 +403,54 @@ string CreateInstanceRequest::ToJsonString() const
         string key = "LoadBalancerId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_defaultMetaVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultMetaVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_defaultMetaVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_needCdbAuditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NeedCdbAudit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_needCdbAudit, allocator);
+    }
+
+    if (m_sgIPHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SgIP";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sgIP.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_partitionNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartitionNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_partitionNumber, allocator);
+    }
+
+    if (m_webUiVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebUiVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_webUiVersion, allocator);
+    }
+
+    if (m_cbsSysEncryptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CbsSysEncrypt";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_cbsSysEncrypt, allocator);
     }
 
 
@@ -965,6 +1019,102 @@ void CreateInstanceRequest::SetLoadBalancerId(const string& _loadBalancerId)
 bool CreateInstanceRequest::LoadBalancerIdHasBeenSet() const
 {
     return m_loadBalancerIdHasBeenSet;
+}
+
+string CreateInstanceRequest::GetDefaultMetaVersion() const
+{
+    return m_defaultMetaVersion;
+}
+
+void CreateInstanceRequest::SetDefaultMetaVersion(const string& _defaultMetaVersion)
+{
+    m_defaultMetaVersion = _defaultMetaVersion;
+    m_defaultMetaVersionHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::DefaultMetaVersionHasBeenSet() const
+{
+    return m_defaultMetaVersionHasBeenSet;
+}
+
+int64_t CreateInstanceRequest::GetNeedCdbAudit() const
+{
+    return m_needCdbAudit;
+}
+
+void CreateInstanceRequest::SetNeedCdbAudit(const int64_t& _needCdbAudit)
+{
+    m_needCdbAudit = _needCdbAudit;
+    m_needCdbAuditHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::NeedCdbAuditHasBeenSet() const
+{
+    return m_needCdbAuditHasBeenSet;
+}
+
+string CreateInstanceRequest::GetSgIP() const
+{
+    return m_sgIP;
+}
+
+void CreateInstanceRequest::SetSgIP(const string& _sgIP)
+{
+    m_sgIP = _sgIP;
+    m_sgIPHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::SgIPHasBeenSet() const
+{
+    return m_sgIPHasBeenSet;
+}
+
+int64_t CreateInstanceRequest::GetPartitionNumber() const
+{
+    return m_partitionNumber;
+}
+
+void CreateInstanceRequest::SetPartitionNumber(const int64_t& _partitionNumber)
+{
+    m_partitionNumber = _partitionNumber;
+    m_partitionNumberHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::PartitionNumberHasBeenSet() const
+{
+    return m_partitionNumberHasBeenSet;
+}
+
+int64_t CreateInstanceRequest::GetWebUiVersion() const
+{
+    return m_webUiVersion;
+}
+
+void CreateInstanceRequest::SetWebUiVersion(const int64_t& _webUiVersion)
+{
+    m_webUiVersion = _webUiVersion;
+    m_webUiVersionHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::WebUiVersionHasBeenSet() const
+{
+    return m_webUiVersionHasBeenSet;
+}
+
+int64_t CreateInstanceRequest::GetCbsSysEncrypt() const
+{
+    return m_cbsSysEncrypt;
+}
+
+void CreateInstanceRequest::SetCbsSysEncrypt(const int64_t& _cbsSysEncrypt)
+{
+    m_cbsSysEncrypt = _cbsSysEncrypt;
+    m_cbsSysEncryptHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::CbsSysEncryptHasBeenSet() const
+{
+    return m_cbsSysEncryptHasBeenSet;
 }
 
 

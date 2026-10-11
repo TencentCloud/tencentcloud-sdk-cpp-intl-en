@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return InstanceId Cluster ID
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _instanceId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,11 +64,11 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Scheduler. The values are as follows:
+                     * 获取Scheduler. Valid values:
 
 1. capacity
 2. fair
-                     * @return Scheduler Scheduler. The values are as follows:
+                     * @return Scheduler Scheduler. Valid values:
 
 1. capacity
 2. fair
@@ -77,11 +77,11 @@ namespace TencentCloud
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Scheduler. The values are as follows:
+                     * 设置Scheduler. Valid values:
 
 1. capacity
 2. fair
-                     * @param _scheduler Scheduler. The values are as follows:
+                     * @param _scheduler Scheduler. Valid values:
 
 1. capacity
 2. fair
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Scheduler. The values are as follows:
+                     * Scheduler. Valid values:
 
 1. capacity
 2. fair

@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original price.
-                     * @return OriginalCost Original price.
+                     * 获取Original price (CNY).
+                     * @return OriginalCost Original price (CNY).
                      * 
                      */
                     double GetOriginalCost() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price.
-                     * @return DiscountCost Discounted price.
+                     * 获取Discounted price (CNY).
+                     * @return DiscountCost Discounted price (CNY).
                      * 
                      */
                     double GetDiscountCost() const;
@@ -74,10 +74,12 @@ namespace TencentCloud
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of resizing. Valid values:
-<li>s: second.</li>
-                     * @return TimeUnit Time unit of resizing. Valid values:
-<li>s: second.</li>
+                     * 获取Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
+                     * @return TimeUnit Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
@@ -90,8 +92,8 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Desizing duration.
-                     * @return TimeSpan Desizing duration.
+                     * 获取
+                     * @return TimeSpan 
                      * 
                      */
                     int64_t GetTimeSpan() const;
@@ -104,10 +106,8 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PriceDetail Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Price details.
+                     * @return PriceDetail Price details.
                      * 
                      */
                     std::vector<PriceDetail> GetPriceDetail() const;
@@ -120,10 +120,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PriceDetailHasBeenSet() const;
 
                     /**
-                     * 获取New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewConfigPrice New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Price of the new configuration.
+                     * @return NewConfigPrice Price of the new configuration.
                      * 
                      */
                     PriceResult GetNewConfigPrice() const;
@@ -138,40 +136,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Original price.
+                     * Original price (CNY).
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discounted price.
+                     * Discounted price (CNY).
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Time unit of resizing. Valid values:
-<li>s: second.</li>
+                     * Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Desizing duration.
+                     * 
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Price details.
                      */
                     std::vector<PriceDetail> m_priceDetail;
                     bool m_priceDetailHasBeenSet;
 
                     /**
-                     * New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Price of the new configuration.
                      */
                     PriceResult m_newConfigPrice;
                     bool m_newConfigPriceHasBeenSet;

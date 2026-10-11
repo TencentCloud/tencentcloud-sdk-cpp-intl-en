@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mapping of cluster ID and process ID
+                * Mapping between the cluster ID and flow ID.
                 */
                 class ClusterIDToFlowID : public AbstractModel
                 {

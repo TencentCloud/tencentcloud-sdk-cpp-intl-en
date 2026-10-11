@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * A key-value structure
+                * Key-value structure.
                 */
                 class Item : public AbstractModel
                 {

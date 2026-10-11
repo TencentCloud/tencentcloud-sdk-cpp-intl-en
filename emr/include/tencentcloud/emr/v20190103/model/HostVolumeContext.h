@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description of `HostPath` mounting method in the pod
+                * Description of the Pod HostPath mounting method.
                 */
                 class HostVolumeContext : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-                     * @return VolumePath Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+                     * 获取Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
+                     * @return VolumePath Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
                      * 
                      */
                     std::string GetVolumePath() const;
 
                     /**
-                     * 设置Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-                     * @param _volumePath Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+                     * 设置Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
+                     * @param _volumePath Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
                      * 
                      */
                     void SetVolumePath(const std::string& _volumePath);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+                     * Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
                      */
                     std::string m_volumePath;
                     bool m_volumePathHasBeenSet;

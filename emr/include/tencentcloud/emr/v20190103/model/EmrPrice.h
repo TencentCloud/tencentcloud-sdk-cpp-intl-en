@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * EMR inquiry description
+                * EMR inquiry description.
                 */
                 class EmrPrice : public AbstractModel
                 {
@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool UnitHasBeenSet() const;
 
                     /**
-                     * 获取The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PriceSpec The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Price inquiry configuration.
+                     * @return PriceSpec Price inquiry configuration.
                      * 
                      */
                     PriceResource GetPriceSpec() const;
 
                     /**
-                     * 设置The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _priceSpec The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Price inquiry configuration.
+                     * @param _priceSpec Price inquiry configuration.
                      * 
                      */
                     void SetPriceSpec(const PriceResource& _priceSpec);
@@ -177,8 +173,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_unitHasBeenSet;
 
                     /**
-                     * The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Price inquiry configuration.
                      */
                     PriceResource m_priceSpec;
                     bool m_priceSpecHasBeenSet;

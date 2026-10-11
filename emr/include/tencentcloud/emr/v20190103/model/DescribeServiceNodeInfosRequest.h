@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page size.
-                     * @return Limit Page size.
+                     * 获取Number of entries per page.
+                     * @return Limit Number of entries per page.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page size.
-                     * @param _limit Page size.
+                     * 设置Number of entries per page.
+                     * @param _limit Number of entries per page.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Searching fields.
-                     * @return SearchText Searching fields.
+                     * 获取Searching field.
+                     * @return SearchText Searching field.
                      * 
                      */
                     std::string GetSearchText() const;
 
                     /**
-                     * 设置Searching fields.
-                     * @param _searchText Searching fields.
+                     * 设置Searching field.
+                     * @param _searchText Searching field.
                      * 
                      */
                     void SetSearchText(const std::string& _searchText);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool SearchTextHasBeenSet() const;
 
                     /**
-                     * 获取Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
-                     * @return ConfStatus Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+                     * 获取'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
+                     * @return ConfStatus 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
                      * 
                      */
                     int64_t GetConfStatus() const;
 
                     /**
-                     * 设置Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
-                     * @param _confStatus Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+                     * 设置'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
+                     * @param _confStatus 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
                      * 
                      */
                     void SetConfStatus(const int64_t& _confStatus);
@@ -149,34 +149,30 @@ namespace TencentCloud
                     bool ConfStatusHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria: Maintenance status
+                     * 获取Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
-
-                     * @return MaintainStateId Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+                     * @return MaintainStateId Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
                      * 
                      */
                     int64_t GetMaintainStateId() const;
 
                     /**
-                     * 设置Filter criteria: Maintenance status
+                     * 设置Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
-
-                     * @param _maintainStateId Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+                     * @param _maintainStateId Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
                      * 
                      */
@@ -190,31 +186,27 @@ namespace TencentCloud
                     bool MaintainStateIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
-                     * @return OperatorStateId Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
+                     * 获取Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
+                     * @return OperatorStateId Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
                      * 
                      */
                     int64_t GetOperatorStateId() const;
 
                     /**
-                     * 设置Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
-                     * @param _operatorStateId Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
+                     * 设置Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
+                     * @param _operatorStateId Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
                      * 
                      */
                     void SetOperatorStateId(const int64_t& _operatorStateId);
@@ -227,39 +219,39 @@ namespace TencentCloud
                     bool OperatorStateIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
-                     * @return HealthStateId Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
+                     * 获取Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
+                     * @return HealthStateId Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
                      * 
                      */
                     std::string GetHealthStateId() const;
 
                     /**
-                     * 设置Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
-                     * @param _healthStateId Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
+                     * 设置Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
+                     * @param _healthStateId Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
                      * 
                      */
                     void SetHealthStateId(const std::string& _healthStateId);
@@ -272,15 +264,15 @@ namespace TencentCloud
                     bool HealthStateIdHasBeenSet() const;
 
                     /**
-                     * 获取Service component names (in all caps, for example, YARN).
-                     * @return ServiceName Service component names (in all caps, for example, YARN).
+                     * 获取Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
+                     * @return ServiceName Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Service component names (in all caps, for example, YARN).
-                     * @param _serviceName Service component names (in all caps, for example, YARN).
+                     * 设置Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
+                     * @param _serviceName Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
                      * 
                      */
                     void SetServiceName(const std::string& _serviceName);
@@ -293,15 +285,15 @@ namespace TencentCloud
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取Node names: master, core, task, common, and router.
-                     * @return NodeTypeName Node names: master, core, task, common, and router.
+                     * 获取Node name. Valid values: master, core, task, common, and router.
+                     * @return NodeTypeName Node name. Valid values: master, core, task, common, and router.
                      * 
                      */
                     std::string GetNodeTypeName() const;
 
                     /**
-                     * 设置Node names: master, core, task, common, and router.
-                     * @param _nodeTypeName Node names: master, core, task, common, and router.
+                     * 设置Node name. Valid values: master, core, task, common, and router.
+                     * @param _nodeTypeName Node name. Valid values: master, core, task, common, and router.
                      * 
                      */
                     void SetNodeTypeName(const std::string& _nodeTypeName);
@@ -314,23 +306,23 @@ namespace TencentCloud
                     bool NodeTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
-                     * @return DataNodeMaintenanceId Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
+                     * 获取Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
+                     * @return DataNodeMaintenanceId Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
                      * 
                      */
                     int64_t GetDataNodeMaintenanceId() const;
 
                     /**
-                     * 设置Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
-                     * @param _dataNodeMaintenanceId Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
+                     * 设置Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
+                     * @param _dataNodeMaintenanceId Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
                      * 
                      */
                     void SetDataNodeMaintenanceId(const int64_t& _dataNodeMaintenanceId);
@@ -343,15 +335,15 @@ namespace TencentCloud
                     bool DataNodeMaintenanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Searchable fields (currently supported SearchType: ipv4).
-                     * @return SearchFields Searchable fields (currently supported SearchType: ipv4).
+                     * 获取Searchable fields (Currently, SearchType: ipv4 is supported).
+                     * @return SearchFields Searchable fields (Currently, SearchType: ipv4 is supported).
                      * 
                      */
                     std::vector<SearchItem> GetSearchFields() const;
 
                     /**
-                     * 设置Searchable fields (currently supported SearchType: ipv4).
-                     * @param _searchFields Searchable fields (currently supported SearchType: ipv4).
+                     * 设置Searchable fields (Currently, SearchType: ipv4 is supported).
+                     * @param _searchFields Searchable fields (Currently, SearchType: ipv4 is supported).
                      * 
                      */
                     void SetSearchFields(const std::vector<SearchItem>& _searchFields);
@@ -378,78 +370,76 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page size.
+                     * Number of entries per page.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Searching fields.
+                     * Searching field.
                      */
                     std::string m_searchText;
                     bool m_searchTextHasBeenSet;
 
                     /**
-                     * Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+                     * 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
                      */
                     int64_t m_confStatus;
                     bool m_confStatusHasBeenSet;
 
                     /**
-                     * Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+                     * Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
                      */
                     int64_t m_maintainStateId;
                     bool m_maintainStateIdHasBeenSet;
 
                     /**
-                     * Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
+                     * Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
                      */
                     int64_t m_operatorStateId;
                     bool m_operatorStateIdHasBeenSet;
 
                     /**
-                     * Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
+                     * Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
                      */
                     std::string m_healthStateId;
                     bool m_healthStateIdHasBeenSet;
 
                     /**
-                     * Service component names (in all caps, for example, YARN).
+                     * Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * Node names: master, core, task, common, and router.
+                     * Node name. Valid values: master, core, task, common, and router.
                      */
                     std::string m_nodeTypeName;
                     bool m_nodeTypeNameHasBeenSet;
 
                     /**
-                     * Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
+                     * Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
                      */
                     int64_t m_dataNodeMaintenanceId;
                     bool m_dataNodeMaintenanceIdHasBeenSet;
 
                     /**
-                     * Searchable fields (currently supported SearchType: ipv4).
+                     * Searchable fields (Currently, SearchType: ipv4 is supported).
                      */
                     std::vector<SearchItem> m_searchFields;
                     bool m_searchFieldsHasBeenSet;

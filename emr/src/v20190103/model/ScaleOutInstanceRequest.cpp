@@ -52,7 +52,9 @@ ScaleOutInstanceRequest::ScaleOutInstanceRequest() :
     m_resourceBaseTypeHasBeenSet(false),
     m_computeResourceIdHasBeenSet(false),
     m_computeResourceAdvanceParamsHasBeenSet(false),
-    m_nodeMarksHasBeenSet(false)
+    m_nodeMarksHasBeenSet(false),
+    m_warehouseNameHasBeenSet(false),
+    m_partitionNumberHasBeenSet(false)
 {
 }
 
@@ -339,6 +341,22 @@ string ScaleOutInstanceRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_nodeMarks.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_warehouseNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarehouseName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_warehouseName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_partitionNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartitionNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_partitionNumber, allocator);
     }
 
 
@@ -827,6 +845,38 @@ void ScaleOutInstanceRequest::SetNodeMarks(const NodeMark& _nodeMarks)
 bool ScaleOutInstanceRequest::NodeMarksHasBeenSet() const
 {
     return m_nodeMarksHasBeenSet;
+}
+
+string ScaleOutInstanceRequest::GetWarehouseName() const
+{
+    return m_warehouseName;
+}
+
+void ScaleOutInstanceRequest::SetWarehouseName(const string& _warehouseName)
+{
+    m_warehouseName = _warehouseName;
+    m_warehouseNameHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::WarehouseNameHasBeenSet() const
+{
+    return m_warehouseNameHasBeenSet;
+}
+
+int64_t ScaleOutInstanceRequest::GetPartitionNumber() const
+{
+    return m_partitionNumber;
+}
+
+void ScaleOutInstanceRequest::SetPartitionNumber(const int64_t& _partitionNumber)
+{
+    m_partitionNumber = _partitionNumber;
+    m_partitionNumberHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::PartitionNumberHasBeenSet() const
+{
+    return m_partitionNumberHasBeenSet;
 }
 
 

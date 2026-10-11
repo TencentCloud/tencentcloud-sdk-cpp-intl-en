@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is editable, "true" or "false".
-                     * @return Editable Whether it is editable, "true" or "false".
+                     * 获取Whether it is editable. Valid values: true and false.
+                     * @return Editable Whether it is editable. Valid values: true and false.
                      * 
                      */
                     std::string GetEditable() const;
 
                     /**
-                     * 设置Whether it is editable, "true" or "false".
-                     * @param _editable Whether it is editable, "true" or "false".
+                     * 设置Whether it is editable. Valid values: true and false.
+                     * @param _editable Whether it is editable. Valid values: true and false.
                      * 
                      */
                     void SetEditable(const std::string& _editable);
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Whether it is editable, "true" or "false".
+                     * Whether it is editable. Valid values: true and false.
                      */
                     std::string m_editable;
                     bool m_editableHasBeenSet;

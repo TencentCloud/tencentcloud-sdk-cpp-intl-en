@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return InstanceId Cluster ID
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _instanceId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,11 +65,11 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Scheduler type. The values are as follows:
+                     * 获取Scheduler type. Valid values:
 
 1. capacity
 2. fair
-                     * @return Scheduler Scheduler type. The values are as follows:
+                     * @return Scheduler Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -78,11 +78,11 @@ namespace TencentCloud
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Scheduler type. The values are as follows:
+                     * 设置Scheduler type. Valid values:
 
 1. capacity
 2. fair
-                     * @param _scheduler Scheduler type. The values are as follows:
+                     * @param _scheduler Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Resource pool data
-                     * @return ConfigModifyInfoList Resource pool data
+                     * 获取Resource pool data.
+                     * @return ConfigModifyInfoList Resource pool data.
                      * 
                      */
                     std::vector<ConfigModifyInfoV2> GetConfigModifyInfoList() const;
 
                     /**
-                     * 设置Resource pool data
-                     * @param _configModifyInfoList Resource pool data
+                     * 设置Resource pool data.
+                     * @param _configModifyInfoList Resource pool data.
                      * 
                      */
                     void SetConfigModifyInfoList(const std::vector<ConfigModifyInfoV2>& _configModifyInfoList);
@@ -121,13 +121,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Scheduler type. The values are as follows:
+                     * Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Resource pool data
+                     * Resource pool data.
                      */
                     std::vector<ConfigModifyInfoV2> m_configModifyInfoList;
                     bool m_configModifyInfoListHasBeenSet;

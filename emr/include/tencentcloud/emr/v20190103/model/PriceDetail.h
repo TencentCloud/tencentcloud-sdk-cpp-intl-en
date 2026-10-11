@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Pricing details
+                * Price details.
                 */
                 class PriceDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The node ID
-                     * @return ResourceId The node ID
+                     * 获取Node ID.
+                     * @return ResourceId Node ID.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置The node ID
-                     * @param _resourceId The node ID
+                     * 设置Node ID.
+                     * @param _resourceId Node ID.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取The price formula
-                     * @return Formula The price formula
+                     * 获取Price calculation formula.
+                     * @return Formula Price calculation formula.
                      * 
                      */
                     std::string GetFormula() const;
 
                     /**
-                     * 设置The price formula
-                     * @param _formula The price formula
+                     * 设置Price calculation formula.
+                     * @param _formula Price calculation formula.
                      * 
                      */
                     void SetFormula(const std::string& _formula);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FormulaHasBeenSet() const;
 
                     /**
-                     * 获取The original price
-                     * @return OriginalCost The original price
+                     * 获取Original price.
+                     * @return OriginalCost Original price.
                      * 
                      */
                     double GetOriginalCost() const;
 
                     /**
-                     * 设置The original price
-                     * @param _originalCost The original price
+                     * 设置Original price.
+                     * @param _originalCost Original price.
                      * 
                      */
                     void SetOriginalCost(const double& _originalCost);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取The discount price
-                     * @return DiscountCost The discount price
+                     * 获取Discounted price.
+                     * @return DiscountCost Discounted price.
                      * 
                      */
                     double GetDiscountCost() const;
 
                     /**
-                     * 设置The discount price
-                     * @param _discountCost The discount price
+                     * 设置Discounted price.
+                     * @param _discountCost Discounted price.
                      * 
                      */
                     void SetDiscountCost(const double& _discountCost);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The node ID
+                     * Node ID.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * The price formula
+                     * Price calculation formula.
                      */
                     std::string m_formula;
                     bool m_formulaHasBeenSet;
 
                     /**
-                     * The original price
+                     * Original price.
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * The discount price
+                     * Discounted price.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;

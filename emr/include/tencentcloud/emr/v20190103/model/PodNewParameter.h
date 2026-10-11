@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The custom pod permission and parameter.
+                * Pod custom permission and parameter.
                 */
                 class PodNewParameter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The TKE or EKS cluster ID.
-                     * @return InstanceId The TKE or EKS cluster ID.
+                     * 获取TKE or EKS cluster ID.
+                     * @return InstanceId TKE or EKS cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The TKE or EKS cluster ID.
-                     * @param _instanceId The TKE or EKS cluster ID.
+                     * 设置TKE or EKS cluster ID.
+                     * @param _instanceId TKE or EKS cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom permissions
-Examples:
+                     * 获取Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -103,8 +103,8 @@ Examples:
     }
   ]
 }
-                     * @return Config Custom permissions
-Examples:
+                     * @return Config Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -143,8 +143,8 @@ Examples:
                     std::string GetConfig() const;
 
                     /**
-                     * 设置Custom permissions
-Examples:
+                     * 设置Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -178,8 +178,8 @@ Examples:
     }
   ]
 }
-                     * @param _config Custom permissions
-Examples:
+                     * @param _config Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -225,8 +225,8 @@ Examples:
                     bool ConfigHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters
-Examples:
+                     * 获取Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -300,8 +300,8 @@ Examples:
       }
     }
   }
-                     * @return Parameter Custom parameters
-Examples:
+                     * @return Parameter Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -380,8 +380,8 @@ Examples:
                     std::string GetParameter() const;
 
                     /**
-                     * 设置Custom parameters
-Examples:
+                     * 设置Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -455,8 +455,8 @@ Examples:
       }
     }
   }
-                     * @param _parameter Custom parameters
-Examples:
+                     * @param _parameter Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -544,14 +544,14 @@ Examples:
                 private:
 
                     /**
-                     * The TKE or EKS cluster ID.
+                     * TKE or EKS cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Custom permissions
-Examples:
+                     * Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -590,8 +590,8 @@ Examples:
                     bool m_configHasBeenSet;
 
                     /**
-                     * Custom parameters
-Examples:
+                     * Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",

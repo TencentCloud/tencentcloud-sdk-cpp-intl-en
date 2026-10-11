@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone (AZ) ID. https://document.capi.woa.com/document/api/1605/76892 can be accessed for related information.
-                     * @return ZoneId Availability zone (AZ) ID. https://document.capi.woa.com/document/api/1605/76892 can be accessed for related information.
+                     * 获取<p>AZ ID. For more information, see https://document.capi.woa.com/document/api/1605/76892.</p>
+                     * @return ZoneId <p>AZ ID. For more information, see https://document.capi.woa.com/document/api/1605/76892.</p>
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置Availability zone (AZ) ID. https://document.capi.woa.com/document/api/1605/76892 can be accessed for related information.
-                     * @param _zoneId Availability zone (AZ) ID. https://document.capi.woa.com/document/api/1605/76892 can be accessed for related information.
+                     * 设置<p>AZ ID. For more information, see https://document.capi.woa.com/document/api/1605/76892.</p>
+                     * @param _zoneId <p>AZ ID. For more information, see https://document.capi.woa.com/document/api/1605/76892.</p>
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取0: pay-as-you-go; 1: yearly/monthly subscription; 99: a combination of pay-as-you-go and yearly/monthly subscription. Invalid values will suppress billing display.
-                     * @return CvmPayMode 0: pay-as-you-go; 1: yearly/monthly subscription; 99: a combination of pay-as-you-go and yearly/monthly subscription. Invalid values will suppress billing display.
+                     * 获取<p>0: pay-as-you-go; 1: yearly/monthly subscription; 99: pay-as-you-go and yearly/monthly subscription. Incorrect values will not display billing information.</p>
+                     * @return CvmPayMode <p>0: pay-as-you-go; 1: yearly/monthly subscription; 99: pay-as-you-go and yearly/monthly subscription. Incorrect values will not display billing information.</p>
                      * 
                      */
                     uint64_t GetCvmPayMode() const;
 
                     /**
-                     * 设置0: pay-as-you-go; 1: yearly/monthly subscription; 99: a combination of pay-as-you-go and yearly/monthly subscription. Invalid values will suppress billing display.
-                     * @param _cvmPayMode 0: pay-as-you-go; 1: yearly/monthly subscription; 99: a combination of pay-as-you-go and yearly/monthly subscription. Invalid values will suppress billing display.
+                     * 设置<p>0: pay-as-you-go; 1: yearly/monthly subscription; 99: pay-as-you-go and yearly/monthly subscription. Incorrect values will not display billing information.</p>
+                     * @param _cvmPayMode <p>0: pay-as-you-go; 1: yearly/monthly subscription; 99: pay-as-you-go and yearly/monthly subscription. Incorrect values will not display billing information.</p>
                      * 
                      */
                     void SetCvmPayMode(const uint64_t& _cvmPayMode);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CvmPayModeHasBeenSet() const;
 
                     /**
-                     * 获取Node type: Master,Core,Task,Router,All.
-                     * @return NodeType Node type: Master,Core,Task,Router,All.
+                     * 获取<p>Node type. Valid values: Master, Core, Task, Router, and All.</p>
+                     * @return NodeType <p>Node type. Valid values: Master, Core, Task, Router, and All.</p>
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type: Master,Core,Task,Router,All.
-                     * @param _nodeType Node type: Master,Core,Task,Router,All.
+                     * 设置<p>Node type. Valid values: Master, Core, Task, Router, and All.</p>
+                     * @param _nodeType <p>Node type. Valid values: Master, Core, Task, Router, and All.</p>
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取0: old billing page; 1: new billing page. Invalid values will be deemed to be old billing by default.
-                     * @return TradeType 0: old billing page; 1: new billing page. Invalid values will be deemed to be old billing by default.
+                     * 获取<p>0: old billing page; 1: new billing page. If incorrectly filled, the old billing page is used by default.</p>
+                     * @return TradeType <p>0: old billing page; 1: new billing page. If incorrectly filled, the old billing page is used by default.</p>
                      * 
                      */
                     uint64_t GetTradeType() const;
 
                     /**
-                     * 设置0: old billing page; 1: new billing page. Invalid values will be deemed to be old billing by default.
-                     * @param _tradeType 0: old billing page; 1: new billing page. Invalid values will be deemed to be old billing by default.
+                     * 设置<p>0: old billing page; 1: new billing page. If incorrectly filled, the old billing page is used by default.</p>
+                     * @param _tradeType <p>0: old billing page; 1: new billing page. If incorrectly filled, the old billing page is used by default.</p>
                      * 
                      */
                     void SetTradeType(const uint64_t& _tradeType);
@@ -127,239 +127,15 @@ namespace TencentCloud
                     bool TradeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Product ID. If left blank, the value is "0". This field is used to represent the product ID in all situations. It is required in front-end scenarios.
-
-44	EMR	V3.5.0
-43	EMR	V3.4.0.tlinux
-42	EMR	V2.7.0.tlinux
-41	DRUID	V1.1.0
-67	STARROCKS	V2.2.0
-45	DRUID	V1.1.0.tlinux
-40	EMRCLOUD	v3.2.0
-47	EMR	V4.0.0
-48	STARROCKS	V1.2.0
-49	STARROCKS	V1.3.0
-50	KAFKA	V2.0.0
-51	STARROCKS	V1.4.0
-52	EMR-TKE	V1.0.0
-53	EMR	V3.6.0
-54	STARROCKS	V2.0.0
-55	EMR-TKE	V1.0.1
-56	EMR-TKE	DLCV1.0.0
-57	EMR	V2.8.0
-58	EMR	V3.6.1
-59	SERVERLESS	V1.0.0
-60	EMR-TKE	V1.1.0
-62	STARROCKS	V2.1.1
-63	STARROCKS	V2.1.1.tlinux
-64	EMR-TKE	TCCV1.0.0
-65	EMR-TKE-AI	V1.0.0
-66	RSS	V1.0.0
-24	EMR	TianQiong-V1.0.0
-3	EMR	V2.0.1.tlinux
-4	EMR	V2.1.0
-7	EMR	V3.0.0
-8	EMR	V3.0.0.tlinux
-9	EMR	V2.2.0
-11	CLICKHOUSE	V1.0.0
-12	CLICKHOUSE	V1.0.0.tlinux
-16	EMR	V2.3.0
-17	CLICKHOUSE	V1.1.0
-18	CLICKHOUSE	V1.1.0.tlinux
-19	EMR	V2.4.0
-20	EMR	V2.5.0
-21	USERCUSTOM	V1.0.0
-22	CLICKHOUSE	V1.2.0
-39	STARROCKS	V1.1.0
-25	EMR	V3.1.0
-26	DORIS	V1.0.0
-27	KAFKA	V1.0.0
-28	EMR	V3.2.0
-29	EMR	V2.5.1
-30	EMR	V2.6.0
-32	DORIS	V1.1.0
-33	EMR	V3.2.1
-34	EMR	V3.3.0
-35	DORIS	V1.2.0
-36	STARROCKS	V1.0.0
-37	EMR	V3.4.0
-38	EMR	V2.7.0
-                     * @return ProductId Product ID. If left blank, the value is "0". This field is used to represent the product ID in all situations. It is required in front-end scenarios.
-
-44	EMR	V3.5.0
-43	EMR	V3.4.0.tlinux
-42	EMR	V2.7.0.tlinux
-41	DRUID	V1.1.0
-67	STARROCKS	V2.2.0
-45	DRUID	V1.1.0.tlinux
-40	EMRCLOUD	v3.2.0
-47	EMR	V4.0.0
-48	STARROCKS	V1.2.0
-49	STARROCKS	V1.3.0
-50	KAFKA	V2.0.0
-51	STARROCKS	V1.4.0
-52	EMR-TKE	V1.0.0
-53	EMR	V3.6.0
-54	STARROCKS	V2.0.0
-55	EMR-TKE	V1.0.1
-56	EMR-TKE	DLCV1.0.0
-57	EMR	V2.8.0
-58	EMR	V3.6.1
-59	SERVERLESS	V1.0.0
-60	EMR-TKE	V1.1.0
-62	STARROCKS	V2.1.1
-63	STARROCKS	V2.1.1.tlinux
-64	EMR-TKE	TCCV1.0.0
-65	EMR-TKE-AI	V1.0.0
-66	RSS	V1.0.0
-24	EMR	TianQiong-V1.0.0
-3	EMR	V2.0.1.tlinux
-4	EMR	V2.1.0
-7	EMR	V3.0.0
-8	EMR	V3.0.0.tlinux
-9	EMR	V2.2.0
-11	CLICKHOUSE	V1.0.0
-12	CLICKHOUSE	V1.0.0.tlinux
-16	EMR	V2.3.0
-17	CLICKHOUSE	V1.1.0
-18	CLICKHOUSE	V1.1.0.tlinux
-19	EMR	V2.4.0
-20	EMR	V2.5.0
-21	USERCUSTOM	V1.0.0
-22	CLICKHOUSE	V1.2.0
-39	STARROCKS	V1.1.0
-25	EMR	V3.1.0
-26	DORIS	V1.0.0
-27	KAFKA	V1.0.0
-28	EMR	V3.2.0
-29	EMR	V2.5.1
-30	EMR	V2.6.0
-32	DORIS	V1.1.0
-33	EMR	V3.2.1
-34	EMR	V3.3.0
-35	DORIS	V1.2.0
-36	STARROCKS	V1.0.0
-37	EMR	V3.4.0
-38	EMR	V2.7.0
+                     * 获取<p>Product ID. If not specified, the value is 0, indicating all product IDs. This parameter is required on the frontend.</p><p>44    EMR    V3.5.0<br>43    EMR    V3.4.0.tlinux<br>42    EMR    V2.7.0.tlinux<br>41    DRUID    V1.1.0<br>67    STARROCKS    V2.2.0<br>45    DRUID    V1.1.0.tlinux<br>40    EMRCLOUD    v3.2.0<br>47    EMR    V4.0.0<br>48    STARROCKS    V1.2.0<br>49    STARROCKS    V1.3.0<br>50    KAFKA    V2.0.0<br>51    STARROCKS    V1.4.0<br>52    EMR-TKE    V1.0.0<br>53    EMR    V3.6.0<br>54    STARROCKS    V2.0.0<br>55    EMR-TKE    V1.0.1<br>56    EMR-TKE    DLCV1.0.0<br>57    EMR    V2.8.0<br>58    EMR    V3.6.1<br>59    SERVERLESS    V1.0.0<br>60    EMR-TKE    V1.1.0<br>62    STARROCKS    V2.1.1<br>63    STARROCKS    V2.1.1.tlinux<br>64    EMR-TKE    TCCV1.0.0<br>65    EMR-TKE-AI    V1.0.0<br>66    RSS    V1.0.0<br>24    EMR    TianQiong-V1.0.0<br>3    EMR    V2.0.1.tlinux<br>4    EMR    V2.1.0<br>7    EMR    V3.0.0<br>8    EMR    V3.0.0.tlinux<br>9    EMR    V2.2.0<br>11    CLICKHOUSE    V1.0.0<br>12    CLICKHOUSE    V1.0.0.tlinux<br>16    EMR    V2.3.0<br>17    CLICKHOUSE    V1.1.0<br>18    CLICKHOUSE    V1.1.0.tlinux<br>19    EMR    V2.4.0<br>20    EMR    V2.5.0<br>21    USERCUSTOM    V1.0.0<br>22    CLICKHOUSE    V1.2.0<br>39    STARROCKS    V1.1.0<br>25    EMR    V3.1.0<br>26    DORIS    V1.0.0<br>27    KAFKA    V1.0.0<br>28    EMR    V3.2.0<br>29    EMR    V2.5.1<br>30    EMR    V2.6.0<br>32    DORIS    V1.1.0<br>33    EMR    V3.2.1<br>34    EMR    V3.3.0<br>35    DORIS    V1.2.0<br>36    STARROCKS    V1.0.0<br>37    EMR    V3.4.0<br>38    EMR    V2.7.0</p>
+                     * @return ProductId <p>Product ID. If not specified, the value is 0, indicating all product IDs. This parameter is required on the frontend.</p><p>44    EMR    V3.5.0<br>43    EMR    V3.4.0.tlinux<br>42    EMR    V2.7.0.tlinux<br>41    DRUID    V1.1.0<br>67    STARROCKS    V2.2.0<br>45    DRUID    V1.1.0.tlinux<br>40    EMRCLOUD    v3.2.0<br>47    EMR    V4.0.0<br>48    STARROCKS    V1.2.0<br>49    STARROCKS    V1.3.0<br>50    KAFKA    V2.0.0<br>51    STARROCKS    V1.4.0<br>52    EMR-TKE    V1.0.0<br>53    EMR    V3.6.0<br>54    STARROCKS    V2.0.0<br>55    EMR-TKE    V1.0.1<br>56    EMR-TKE    DLCV1.0.0<br>57    EMR    V2.8.0<br>58    EMR    V3.6.1<br>59    SERVERLESS    V1.0.0<br>60    EMR-TKE    V1.1.0<br>62    STARROCKS    V2.1.1<br>63    STARROCKS    V2.1.1.tlinux<br>64    EMR-TKE    TCCV1.0.0<br>65    EMR-TKE-AI    V1.0.0<br>66    RSS    V1.0.0<br>24    EMR    TianQiong-V1.0.0<br>3    EMR    V2.0.1.tlinux<br>4    EMR    V2.1.0<br>7    EMR    V3.0.0<br>8    EMR    V3.0.0.tlinux<br>9    EMR    V2.2.0<br>11    CLICKHOUSE    V1.0.0<br>12    CLICKHOUSE    V1.0.0.tlinux<br>16    EMR    V2.3.0<br>17    CLICKHOUSE    V1.1.0<br>18    CLICKHOUSE    V1.1.0.tlinux<br>19    EMR    V2.4.0<br>20    EMR    V2.5.0<br>21    USERCUSTOM    V1.0.0<br>22    CLICKHOUSE    V1.2.0<br>39    STARROCKS    V1.1.0<br>25    EMR    V3.1.0<br>26    DORIS    V1.0.0<br>27    KAFKA    V1.0.0<br>28    EMR    V3.2.0<br>29    EMR    V2.5.1<br>30    EMR    V2.6.0<br>32    DORIS    V1.1.0<br>33    EMR    V3.2.1<br>34    EMR    V3.3.0<br>35    DORIS    V1.2.0<br>36    STARROCKS    V1.0.0<br>37    EMR    V3.4.0<br>38    EMR    V2.7.0</p>
                      * 
                      */
                     uint64_t GetProductId() const;
 
                     /**
-                     * 设置Product ID. If left blank, the value is "0". This field is used to represent the product ID in all situations. It is required in front-end scenarios.
-
-44	EMR	V3.5.0
-43	EMR	V3.4.0.tlinux
-42	EMR	V2.7.0.tlinux
-41	DRUID	V1.1.0
-67	STARROCKS	V2.2.0
-45	DRUID	V1.1.0.tlinux
-40	EMRCLOUD	v3.2.0
-47	EMR	V4.0.0
-48	STARROCKS	V1.2.0
-49	STARROCKS	V1.3.0
-50	KAFKA	V2.0.0
-51	STARROCKS	V1.4.0
-52	EMR-TKE	V1.0.0
-53	EMR	V3.6.0
-54	STARROCKS	V2.0.0
-55	EMR-TKE	V1.0.1
-56	EMR-TKE	DLCV1.0.0
-57	EMR	V2.8.0
-58	EMR	V3.6.1
-59	SERVERLESS	V1.0.0
-60	EMR-TKE	V1.1.0
-62	STARROCKS	V2.1.1
-63	STARROCKS	V2.1.1.tlinux
-64	EMR-TKE	TCCV1.0.0
-65	EMR-TKE-AI	V1.0.0
-66	RSS	V1.0.0
-24	EMR	TianQiong-V1.0.0
-3	EMR	V2.0.1.tlinux
-4	EMR	V2.1.0
-7	EMR	V3.0.0
-8	EMR	V3.0.0.tlinux
-9	EMR	V2.2.0
-11	CLICKHOUSE	V1.0.0
-12	CLICKHOUSE	V1.0.0.tlinux
-16	EMR	V2.3.0
-17	CLICKHOUSE	V1.1.0
-18	CLICKHOUSE	V1.1.0.tlinux
-19	EMR	V2.4.0
-20	EMR	V2.5.0
-21	USERCUSTOM	V1.0.0
-22	CLICKHOUSE	V1.2.0
-39	STARROCKS	V1.1.0
-25	EMR	V3.1.0
-26	DORIS	V1.0.0
-27	KAFKA	V1.0.0
-28	EMR	V3.2.0
-29	EMR	V2.5.1
-30	EMR	V2.6.0
-32	DORIS	V1.1.0
-33	EMR	V3.2.1
-34	EMR	V3.3.0
-35	DORIS	V1.2.0
-36	STARROCKS	V1.0.0
-37	EMR	V3.4.0
-38	EMR	V2.7.0
-                     * @param _productId Product ID. If left blank, the value is "0". This field is used to represent the product ID in all situations. It is required in front-end scenarios.
-
-44	EMR	V3.5.0
-43	EMR	V3.4.0.tlinux
-42	EMR	V2.7.0.tlinux
-41	DRUID	V1.1.0
-67	STARROCKS	V2.2.0
-45	DRUID	V1.1.0.tlinux
-40	EMRCLOUD	v3.2.0
-47	EMR	V4.0.0
-48	STARROCKS	V1.2.0
-49	STARROCKS	V1.3.0
-50	KAFKA	V2.0.0
-51	STARROCKS	V1.4.0
-52	EMR-TKE	V1.0.0
-53	EMR	V3.6.0
-54	STARROCKS	V2.0.0
-55	EMR-TKE	V1.0.1
-56	EMR-TKE	DLCV1.0.0
-57	EMR	V2.8.0
-58	EMR	V3.6.1
-59	SERVERLESS	V1.0.0
-60	EMR-TKE	V1.1.0
-62	STARROCKS	V2.1.1
-63	STARROCKS	V2.1.1.tlinux
-64	EMR-TKE	TCCV1.0.0
-65	EMR-TKE-AI	V1.0.0
-66	RSS	V1.0.0
-24	EMR	TianQiong-V1.0.0
-3	EMR	V2.0.1.tlinux
-4	EMR	V2.1.0
-7	EMR	V3.0.0
-8	EMR	V3.0.0.tlinux
-9	EMR	V2.2.0
-11	CLICKHOUSE	V1.0.0
-12	CLICKHOUSE	V1.0.0.tlinux
-16	EMR	V2.3.0
-17	CLICKHOUSE	V1.1.0
-18	CLICKHOUSE	V1.1.0.tlinux
-19	EMR	V2.4.0
-20	EMR	V2.5.0
-21	USERCUSTOM	V1.0.0
-22	CLICKHOUSE	V1.2.0
-39	STARROCKS	V1.1.0
-25	EMR	V3.1.0
-26	DORIS	V1.0.0
-27	KAFKA	V1.0.0
-28	EMR	V3.2.0
-29	EMR	V2.5.1
-30	EMR	V2.6.0
-32	DORIS	V1.1.0
-33	EMR	V3.2.1
-34	EMR	V3.3.0
-35	DORIS	V1.2.0
-36	STARROCKS	V1.0.0
-37	EMR	V3.4.0
-38	EMR	V2.7.0
+                     * 设置<p>Product ID. If not specified, the value is 0, indicating all product IDs. This parameter is required on the frontend.</p><p>44    EMR    V3.5.0<br>43    EMR    V3.4.0.tlinux<br>42    EMR    V2.7.0.tlinux<br>41    DRUID    V1.1.0<br>67    STARROCKS    V2.2.0<br>45    DRUID    V1.1.0.tlinux<br>40    EMRCLOUD    v3.2.0<br>47    EMR    V4.0.0<br>48    STARROCKS    V1.2.0<br>49    STARROCKS    V1.3.0<br>50    KAFKA    V2.0.0<br>51    STARROCKS    V1.4.0<br>52    EMR-TKE    V1.0.0<br>53    EMR    V3.6.0<br>54    STARROCKS    V2.0.0<br>55    EMR-TKE    V1.0.1<br>56    EMR-TKE    DLCV1.0.0<br>57    EMR    V2.8.0<br>58    EMR    V3.6.1<br>59    SERVERLESS    V1.0.0<br>60    EMR-TKE    V1.1.0<br>62    STARROCKS    V2.1.1<br>63    STARROCKS    V2.1.1.tlinux<br>64    EMR-TKE    TCCV1.0.0<br>65    EMR-TKE-AI    V1.0.0<br>66    RSS    V1.0.0<br>24    EMR    TianQiong-V1.0.0<br>3    EMR    V2.0.1.tlinux<br>4    EMR    V2.1.0<br>7    EMR    V3.0.0<br>8    EMR    V3.0.0.tlinux<br>9    EMR    V2.2.0<br>11    CLICKHOUSE    V1.0.0<br>12    CLICKHOUSE    V1.0.0.tlinux<br>16    EMR    V2.3.0<br>17    CLICKHOUSE    V1.1.0<br>18    CLICKHOUSE    V1.1.0.tlinux<br>19    EMR    V2.4.0<br>20    EMR    V2.5.0<br>21    USERCUSTOM    V1.0.0<br>22    CLICKHOUSE    V1.2.0<br>39    STARROCKS    V1.1.0<br>25    EMR    V3.1.0<br>26    DORIS    V1.0.0<br>27    KAFKA    V1.0.0<br>28    EMR    V3.2.0<br>29    EMR    V2.5.1<br>30    EMR    V2.6.0<br>32    DORIS    V1.1.0<br>33    EMR    V3.2.1<br>34    EMR    V3.3.0<br>35    DORIS    V1.2.0<br>36    STARROCKS    V1.0.0<br>37    EMR    V3.4.0<br>38    EMR    V2.7.0</p>
+                     * @param _productId <p>Product ID. If not specified, the value is 0, indicating all product IDs. This parameter is required on the frontend.</p><p>44    EMR    V3.5.0<br>43    EMR    V3.4.0.tlinux<br>42    EMR    V2.7.0.tlinux<br>41    DRUID    V1.1.0<br>67    STARROCKS    V2.2.0<br>45    DRUID    V1.1.0.tlinux<br>40    EMRCLOUD    v3.2.0<br>47    EMR    V4.0.0<br>48    STARROCKS    V1.2.0<br>49    STARROCKS    V1.3.0<br>50    KAFKA    V2.0.0<br>51    STARROCKS    V1.4.0<br>52    EMR-TKE    V1.0.0<br>53    EMR    V3.6.0<br>54    STARROCKS    V2.0.0<br>55    EMR-TKE    V1.0.1<br>56    EMR-TKE    DLCV1.0.0<br>57    EMR    V2.8.0<br>58    EMR    V3.6.1<br>59    SERVERLESS    V1.0.0<br>60    EMR-TKE    V1.1.0<br>62    STARROCKS    V2.1.1<br>63    STARROCKS    V2.1.1.tlinux<br>64    EMR-TKE    TCCV1.0.0<br>65    EMR-TKE-AI    V1.0.0<br>66    RSS    V1.0.0<br>24    EMR    TianQiong-V1.0.0<br>3    EMR    V2.0.1.tlinux<br>4    EMR    V2.1.0<br>7    EMR    V3.0.0<br>8    EMR    V3.0.0.tlinux<br>9    EMR    V2.2.0<br>11    CLICKHOUSE    V1.0.0<br>12    CLICKHOUSE    V1.0.0.tlinux<br>16    EMR    V2.3.0<br>17    CLICKHOUSE    V1.1.0<br>18    CLICKHOUSE    V1.1.0.tlinux<br>19    EMR    V2.4.0<br>20    EMR    V2.5.0<br>21    USERCUSTOM    V1.0.0<br>22    CLICKHOUSE    V1.2.0<br>39    STARROCKS    V1.1.0<br>25    EMR    V3.1.0<br>26    DORIS    V1.0.0<br>27    KAFKA    V1.0.0<br>28    EMR    V3.2.0<br>29    EMR    V2.5.1<br>30    EMR    V2.6.0<br>32    DORIS    V1.1.0<br>33    EMR    V3.2.1<br>34    EMR    V3.3.0<br>35    DORIS    V1.2.0<br>36    STARROCKS    V1.0.0<br>37    EMR    V3.4.0<br>38    EMR    V2.7.0</p>
                      * 
                      */
                     void SetProductId(const uint64_t& _productId);
@@ -372,15 +148,15 @@ namespace TencentCloud
                     bool ProductIdHasBeenSet() const;
 
                     /**
-                     * 获取Scenario name.
-                     * @return SceneName Scenario name.
+                     * 获取<p>Scenario name.</p>
+                     * @return SceneName <p>Scenario name.</p>
                      * 
                      */
                     std::string GetSceneName() const;
 
                     /**
-                     * 设置Scenario name.
-                     * @param _sceneName Scenario name.
+                     * 设置<p>Scenario name.</p>
+                     * @param _sceneName <p>Scenario name.</p>
                      * 
                      */
                     void SetSceneName(const std::string& _sceneName);
@@ -393,15 +169,15 @@ namespace TencentCloud
                     bool SceneNameHasBeenSet() const;
 
                     /**
-                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 获取<p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+                     * @return ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
                      * 
                      */
                     std::string GetResourceBaseType() const;
 
                     /**
-                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 设置<p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+                     * @param _resourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
                      * 
                      */
                     void SetResourceBaseType(const std::string& _resourceBaseType);
@@ -414,15 +190,15 @@ namespace TencentCloud
                     bool ResourceBaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Computing resource ID.
-                     * @return ComputeResourceId Computing resource ID.
+                     * 获取<p>Computing resource ID.</p>
+                     * @return ComputeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     std::string GetComputeResourceId() const;
 
                     /**
-                     * 设置Computing resource ID.
-                     * @param _computeResourceId Computing resource ID.
+                     * 设置<p>Computing resource ID.</p>
+                     * @param _computeResourceId <p>Computing resource ID.</p>
                      * 
                      */
                     void SetComputeResourceId(const std::string& _computeResourceId);
@@ -437,105 +213,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Availability zone (AZ) ID. https://document.capi.woa.com/document/api/1605/76892 can be accessed for related information.
+                     * <p>AZ ID. For more information, see https://document.capi.woa.com/document/api/1605/76892.</p>
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * 0: pay-as-you-go; 1: yearly/monthly subscription; 99: a combination of pay-as-you-go and yearly/monthly subscription. Invalid values will suppress billing display.
+                     * <p>0: pay-as-you-go; 1: yearly/monthly subscription; 99: pay-as-you-go and yearly/monthly subscription. Incorrect values will not display billing information.</p>
                      */
                     uint64_t m_cvmPayMode;
                     bool m_cvmPayModeHasBeenSet;
 
                     /**
-                     * Node type: Master,Core,Task,Router,All.
+                     * <p>Node type. Valid values: Master, Core, Task, Router, and All.</p>
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * 0: old billing page; 1: new billing page. Invalid values will be deemed to be old billing by default.
+                     * <p>0: old billing page; 1: new billing page. If incorrectly filled, the old billing page is used by default.</p>
                      */
                     uint64_t m_tradeType;
                     bool m_tradeTypeHasBeenSet;
 
                     /**
-                     * Product ID. If left blank, the value is "0". This field is used to represent the product ID in all situations. It is required in front-end scenarios.
-
-44	EMR	V3.5.0
-43	EMR	V3.4.0.tlinux
-42	EMR	V2.7.0.tlinux
-41	DRUID	V1.1.0
-67	STARROCKS	V2.2.0
-45	DRUID	V1.1.0.tlinux
-40	EMRCLOUD	v3.2.0
-47	EMR	V4.0.0
-48	STARROCKS	V1.2.0
-49	STARROCKS	V1.3.0
-50	KAFKA	V2.0.0
-51	STARROCKS	V1.4.0
-52	EMR-TKE	V1.0.0
-53	EMR	V3.6.0
-54	STARROCKS	V2.0.0
-55	EMR-TKE	V1.0.1
-56	EMR-TKE	DLCV1.0.0
-57	EMR	V2.8.0
-58	EMR	V3.6.1
-59	SERVERLESS	V1.0.0
-60	EMR-TKE	V1.1.0
-62	STARROCKS	V2.1.1
-63	STARROCKS	V2.1.1.tlinux
-64	EMR-TKE	TCCV1.0.0
-65	EMR-TKE-AI	V1.0.0
-66	RSS	V1.0.0
-24	EMR	TianQiong-V1.0.0
-3	EMR	V2.0.1.tlinux
-4	EMR	V2.1.0
-7	EMR	V3.0.0
-8	EMR	V3.0.0.tlinux
-9	EMR	V2.2.0
-11	CLICKHOUSE	V1.0.0
-12	CLICKHOUSE	V1.0.0.tlinux
-16	EMR	V2.3.0
-17	CLICKHOUSE	V1.1.0
-18	CLICKHOUSE	V1.1.0.tlinux
-19	EMR	V2.4.0
-20	EMR	V2.5.0
-21	USERCUSTOM	V1.0.0
-22	CLICKHOUSE	V1.2.0
-39	STARROCKS	V1.1.0
-25	EMR	V3.1.0
-26	DORIS	V1.0.0
-27	KAFKA	V1.0.0
-28	EMR	V3.2.0
-29	EMR	V2.5.1
-30	EMR	V2.6.0
-32	DORIS	V1.1.0
-33	EMR	V3.2.1
-34	EMR	V3.3.0
-35	DORIS	V1.2.0
-36	STARROCKS	V1.0.0
-37	EMR	V3.4.0
-38	EMR	V2.7.0
+                     * <p>Product ID. If not specified, the value is 0, indicating all product IDs. This parameter is required on the frontend.</p><p>44    EMR    V3.5.0<br>43    EMR    V3.4.0.tlinux<br>42    EMR    V2.7.0.tlinux<br>41    DRUID    V1.1.0<br>67    STARROCKS    V2.2.0<br>45    DRUID    V1.1.0.tlinux<br>40    EMRCLOUD    v3.2.0<br>47    EMR    V4.0.0<br>48    STARROCKS    V1.2.0<br>49    STARROCKS    V1.3.0<br>50    KAFKA    V2.0.0<br>51    STARROCKS    V1.4.0<br>52    EMR-TKE    V1.0.0<br>53    EMR    V3.6.0<br>54    STARROCKS    V2.0.0<br>55    EMR-TKE    V1.0.1<br>56    EMR-TKE    DLCV1.0.0<br>57    EMR    V2.8.0<br>58    EMR    V3.6.1<br>59    SERVERLESS    V1.0.0<br>60    EMR-TKE    V1.1.0<br>62    STARROCKS    V2.1.1<br>63    STARROCKS    V2.1.1.tlinux<br>64    EMR-TKE    TCCV1.0.0<br>65    EMR-TKE-AI    V1.0.0<br>66    RSS    V1.0.0<br>24    EMR    TianQiong-V1.0.0<br>3    EMR    V2.0.1.tlinux<br>4    EMR    V2.1.0<br>7    EMR    V3.0.0<br>8    EMR    V3.0.0.tlinux<br>9    EMR    V2.2.0<br>11    CLICKHOUSE    V1.0.0<br>12    CLICKHOUSE    V1.0.0.tlinux<br>16    EMR    V2.3.0<br>17    CLICKHOUSE    V1.1.0<br>18    CLICKHOUSE    V1.1.0.tlinux<br>19    EMR    V2.4.0<br>20    EMR    V2.5.0<br>21    USERCUSTOM    V1.0.0<br>22    CLICKHOUSE    V1.2.0<br>39    STARROCKS    V1.1.0<br>25    EMR    V3.1.0<br>26    DORIS    V1.0.0<br>27    KAFKA    V1.0.0<br>28    EMR    V3.2.0<br>29    EMR    V2.5.1<br>30    EMR    V2.6.0<br>32    DORIS    V1.1.0<br>33    EMR    V3.2.1<br>34    EMR    V3.3.0<br>35    DORIS    V1.2.0<br>36    STARROCKS    V1.0.0<br>37    EMR    V3.4.0<br>38    EMR    V2.7.0</p>
                      */
                     uint64_t m_productId;
                     bool m_productIdHasBeenSet;
 
                     /**
-                     * Scenario name.
+                     * <p>Scenario name.</p>
                      */
                     std::string m_sceneName;
                     bool m_sceneNameHasBeenSet;
 
                     /**
-                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
                      */
                     std::string m_resourceBaseType;
                     bool m_resourceBaseTypeHasBeenSet;
 
                     /**
-                     * Computing resource ID.
+                     * <p>Computing resource ID.</p>
                      */
                     std::string m_computeResourceId;
                     bool m_computeResourceIdHasBeenSet;

@@ -44,7 +44,9 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_skipOcrConfirmPageHasBeenSet(false),
     m_hideProgressBarHasBeenSet(false),
     m_allowUploadPhotoHasBeenSet(false),
-    m_enableBotBgDetectionHasBeenSet(false)
+    m_enableBotBgDetectionHasBeenSet(false),
+    m_ocrAutoDetectTimeoutHasBeenSet(false),
+    m_ocrModeTypeHasBeenSet(false)
 {
 }
 
@@ -239,6 +241,22 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "EnableBotBgDetection";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableBotBgDetection, allocator);
+    }
+
+    if (m_ocrAutoDetectTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OcrAutoDetectTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_ocrAutoDetectTimeout, allocator);
+    }
+
+    if (m_ocrModeTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OcrModeType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ocrModeType.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -599,6 +617,38 @@ void ApplySdkVerificationTokenRequest::SetEnableBotBgDetection(const bool& _enab
 bool ApplySdkVerificationTokenRequest::EnableBotBgDetectionHasBeenSet() const
 {
     return m_enableBotBgDetectionHasBeenSet;
+}
+
+int64_t ApplySdkVerificationTokenRequest::GetOcrAutoDetectTimeout() const
+{
+    return m_ocrAutoDetectTimeout;
+}
+
+void ApplySdkVerificationTokenRequest::SetOcrAutoDetectTimeout(const int64_t& _ocrAutoDetectTimeout)
+{
+    m_ocrAutoDetectTimeout = _ocrAutoDetectTimeout;
+    m_ocrAutoDetectTimeoutHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::OcrAutoDetectTimeoutHasBeenSet() const
+{
+    return m_ocrAutoDetectTimeoutHasBeenSet;
+}
+
+string ApplySdkVerificationTokenRequest::GetOcrModeType() const
+{
+    return m_ocrModeType;
+}
+
+void ApplySdkVerificationTokenRequest::SetOcrModeType(const string& _ocrModeType)
+{
+    m_ocrModeType = _ocrModeType;
+    m_ocrModeTypeHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::OcrModeTypeHasBeenSet() const
+{
+    return m_ocrModeTypeHasBeenSet;
 }
 
 

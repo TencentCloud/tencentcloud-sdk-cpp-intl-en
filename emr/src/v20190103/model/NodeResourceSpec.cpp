@@ -25,7 +25,9 @@ NodeResourceSpec::NodeResourceSpec() :
     m_systemDiskHasBeenSet(false),
     m_tagsHasBeenSet(false),
     m_dataDiskHasBeenSet(false),
-    m_localDataDiskHasBeenSet(false)
+    m_localDataDiskHasBeenSet(false),
+    m_softwareConfigHasBeenSet(false),
+    m_customNodeNameHasBeenSet(false)
 {
 }
 
@@ -124,6 +126,36 @@ CoreInternalOutcome NodeResourceSpec::Deserialize(const rapidjson::Value &value)
         m_localDataDiskHasBeenSet = true;
     }
 
+    if (value.HasMember("SoftwareConfig") && !value["SoftwareConfig"].IsNull())
+    {
+        if (!value["SoftwareConfig"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `NodeResourceSpec.SoftwareConfig` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SoftwareConfig"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ServiceDeploy item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_softwareConfig.push_back(item);
+        }
+        m_softwareConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("CustomNodeName") && !value["CustomNodeName"].IsNull())
+    {
+        if (!value["CustomNodeName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeResourceSpec.CustomNodeName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_customNodeName = string(value["CustomNodeName"].GetString());
+        m_customNodeNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -197,6 +229,29 @@ void NodeResourceSpec::ToJsonObject(rapidjson::Value &value, rapidjson::Document
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_softwareConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SoftwareConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_softwareConfig.begin(); itr != m_softwareConfig.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_customNodeNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomNodeName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customNodeName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -280,5 +335,37 @@ void NodeResourceSpec::SetLocalDataDisk(const vector<DiskSpecInfo>& _localDataDi
 bool NodeResourceSpec::LocalDataDiskHasBeenSet() const
 {
     return m_localDataDiskHasBeenSet;
+}
+
+vector<ServiceDeploy> NodeResourceSpec::GetSoftwareConfig() const
+{
+    return m_softwareConfig;
+}
+
+void NodeResourceSpec::SetSoftwareConfig(const vector<ServiceDeploy>& _softwareConfig)
+{
+    m_softwareConfig = _softwareConfig;
+    m_softwareConfigHasBeenSet = true;
+}
+
+bool NodeResourceSpec::SoftwareConfigHasBeenSet() const
+{
+    return m_softwareConfigHasBeenSet;
+}
+
+string NodeResourceSpec::GetCustomNodeName() const
+{
+    return m_customNodeName;
+}
+
+void NodeResourceSpec::SetCustomNodeName(const string& _customNodeName)
+{
+    m_customNodeName = _customNodeName;
+    m_customNodeNameHasBeenSet = true;
+}
+
+bool NodeResourceSpec::CustomNodeNameHasBeenSet() const
+{
+    return m_customNodeNameHasBeenSet;
 }
 

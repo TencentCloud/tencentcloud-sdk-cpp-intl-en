@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Price details by node, used for creating the cluster price list
+                * Node price details, which are used to create the cluster price list.
                 */
                 class NodeDetailPriceResult : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node type: Master, Core, Task, Common, Router, and MySQL.
-                     * @return NodeType Node type: Master, Core, Task, Common, Router, and MySQL.
+                     * 获取Node type. Valid values: master, core, task, common, router, and mysql.
+                     * @return NodeType Node type. Valid values: master, core, task, common, router, and mysql.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type: Master, Core, Task, Common, Router, and MySQL.
-                     * @param _nodeType Node type: Master, Core, Task, Common, Router, and MySQL.
+                     * 设置Node type. Valid values: master, core, task, common, router, and mysql.
+                     * @param _nodeType Node type. Valid values: master, core, task, common, router, and mysql.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Price details by node part
-                     * @return PartDetailPrice Price details by node part
+                     * 获取Price details for each component of the node.
+                     * @return PartDetailPrice Price details for each component of the node.
                      * 
                      */
                     std::vector<PartDetailPriceItem> GetPartDetailPrice() const;
 
                     /**
-                     * 设置Price details by node part
-                     * @param _partDetailPrice Price details by node part
+                     * 设置Price details for each component of the node.
+                     * @param _partDetailPrice Price details for each component of the node.
                      * 
                      */
                     void SetPartDetailPrice(const std::vector<PartDetailPriceItem>& _partDetailPrice);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Node type: Master, Core, Task, Common, Router, and MySQL.
+                     * Node type. Valid values: master, core, task, common, router, and mysql.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Price details by node part
+                     * Price details for each component of the node.
                      */
                     std::vector<PartDetailPriceItem> m_partDetailPrice;
                     bool m_partDetailPriceHasBeenSet;

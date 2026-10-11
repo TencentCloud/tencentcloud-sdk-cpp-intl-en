@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PageNoHasBeenSet() const;
 
                     /**
-                     * 获取Page size.
-                     * @return PageSize Page size.
+                     * 获取Number of entries per page.
+                     * @return PageSize Number of entries per page.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size.
-                     * @param _pageSize Page size.
+                     * 设置Number of entries per page.
+                     * @param _pageSize Number of entries per page.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_pageNoHasBeenSet;
 
                     /**
-                     * Page size.
+                     * Number of entries per page.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

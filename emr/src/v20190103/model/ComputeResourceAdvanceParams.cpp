@@ -24,7 +24,9 @@ ComputeResourceAdvanceParams::ComputeResourceAdvanceParams() :
     m_labelsHasBeenSet(false),
     m_taintsHasBeenSet(false),
     m_preStartUserScriptHasBeenSet(false),
-    m_userScriptHasBeenSet(false)
+    m_userScriptHasBeenSet(false),
+    m_tkeClusterNodePoolHasBeenSet(false),
+    m_nodePoolJoinModeHasBeenSet(false)
 {
 }
 
@@ -93,6 +95,26 @@ CoreInternalOutcome ComputeResourceAdvanceParams::Deserialize(const rapidjson::V
         m_userScriptHasBeenSet = true;
     }
 
+    if (value.HasMember("TkeClusterNodePool") && !value["TkeClusterNodePool"].IsNull())
+    {
+        if (!value["TkeClusterNodePool"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComputeResourceAdvanceParams.TkeClusterNodePool` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_tkeClusterNodePool = string(value["TkeClusterNodePool"].GetString());
+        m_tkeClusterNodePoolHasBeenSet = true;
+    }
+
+    if (value.HasMember("NodePoolJoinMode") && !value["NodePoolJoinMode"].IsNull())
+    {
+        if (!value["NodePoolJoinMode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComputeResourceAdvanceParams.NodePoolJoinMode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nodePoolJoinMode = string(value["NodePoolJoinMode"].GetString());
+        m_nodePoolJoinModeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -144,6 +166,22 @@ void ComputeResourceAdvanceParams::ToJsonObject(rapidjson::Value &value, rapidjs
         string key = "UserScript";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_userScript.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tkeClusterNodePoolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TkeClusterNodePool";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tkeClusterNodePool.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodePoolJoinModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodePoolJoinMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodePoolJoinMode.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -211,5 +249,37 @@ void ComputeResourceAdvanceParams::SetUserScript(const string& _userScript)
 bool ComputeResourceAdvanceParams::UserScriptHasBeenSet() const
 {
     return m_userScriptHasBeenSet;
+}
+
+string ComputeResourceAdvanceParams::GetTkeClusterNodePool() const
+{
+    return m_tkeClusterNodePool;
+}
+
+void ComputeResourceAdvanceParams::SetTkeClusterNodePool(const string& _tkeClusterNodePool)
+{
+    m_tkeClusterNodePool = _tkeClusterNodePool;
+    m_tkeClusterNodePoolHasBeenSet = true;
+}
+
+bool ComputeResourceAdvanceParams::TkeClusterNodePoolHasBeenSet() const
+{
+    return m_tkeClusterNodePoolHasBeenSet;
+}
+
+string ComputeResourceAdvanceParams::GetNodePoolJoinMode() const
+{
+    return m_nodePoolJoinMode;
+}
+
+void ComputeResourceAdvanceParams::SetNodePoolJoinMode(const string& _nodePoolJoinMode)
+{
+    m_nodePoolJoinMode = _nodePoolJoinMode;
+    m_nodePoolJoinModeHasBeenSet = true;
+}
+
+bool ComputeResourceAdvanceParams::NodePoolJoinModeHasBeenSet() const
+{
+    return m_nodePoolJoinModeHasBeenSet;
 }
 

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User-created Hive-MetaDB instance information
+                * User-built Hive-MetaDB information.
                 */
                 class CustomMetaInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
-                     * @return MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+                     * 获取Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
+                     * @return MetaDataJdbcUrl Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
                      * 
                      */
                     std::string GetMetaDataJdbcUrl() const;
 
                     /**
-                     * 设置JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
-                     * @param _metaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+                     * 设置Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
+                     * @param _metaDataJdbcUrl Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
                      * 
                      */
                     void SetMetaDataJdbcUrl(const std::string& _metaDataJdbcUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MetaDataJdbcUrlHasBeenSet() const;
 
                     /**
-                     * 获取Custom MetaDB instance username
-                     * @return MetaDataUser Custom MetaDB instance username
+                     * 获取Custom MetaDB username.
+                     * @return MetaDataUser Custom MetaDB username.
                      * 
                      */
                     std::string GetMetaDataUser() const;
 
                     /**
-                     * 设置Custom MetaDB instance username
-                     * @param _metaDataUser Custom MetaDB instance username
+                     * 设置Custom MetaDB username.
+                     * @param _metaDataUser Custom MetaDB username.
                      * 
                      */
                     void SetMetaDataUser(const std::string& _metaDataUser);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MetaDataUserHasBeenSet() const;
 
                     /**
-                     * 获取Custom MetaDB instance password
-                     * @return MetaDataPass Custom MetaDB instance password
+                     * 获取Custom MetaDB password.
+                     * @return MetaDataPass Custom MetaDB password.
                      * 
                      */
                     std::string GetMetaDataPass() const;
 
                     /**
-                     * 设置Custom MetaDB instance password
-                     * @param _metaDataPass Custom MetaDB instance password
+                     * 设置Custom MetaDB password.
+                     * @param _metaDataPass Custom MetaDB password.
                      * 
                      */
                     void SetMetaDataPass(const std::string& _metaDataPass);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+                     * Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
                      */
                     std::string m_metaDataJdbcUrl;
                     bool m_metaDataJdbcUrlHasBeenSet;
 
                     /**
-                     * Custom MetaDB instance username
+                     * Custom MetaDB username.
                      */
                     std::string m_metaDataUser;
                     bool m_metaDataUserHasBeenSet;
 
                     /**
-                     * Custom MetaDB instance password
+                     * Custom MetaDB password.
                      */
                     std::string m_metaDataPass;
                     bool m_metaDataPassHasBeenSet;

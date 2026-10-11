@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource description
+                * Resource description.
                 */
                 class NewResourceSpec : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Describes master node resource
-                     * @return MasterResourceSpec Describes master node resource
+                     * 获取Description of Master node resources.
+                     * @return MasterResourceSpec Description of Master node resources.
                      * 
                      */
                     Resource GetMasterResourceSpec() const;
 
                     /**
-                     * 设置Describes master node resource
-                     * @param _masterResourceSpec Describes master node resource
+                     * 设置Description of Master node resources.
+                     * @param _masterResourceSpec Description of Master node resources.
                      * 
                      */
                     void SetMasterResourceSpec(const Resource& _masterResourceSpec);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MasterResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取Describes core node resource
-                     * @return CoreResourceSpec Describes core node resource
+                     * 获取Description of Core node resources.
+                     * @return CoreResourceSpec Description of Core node resources.
                      * 
                      */
                     Resource GetCoreResourceSpec() const;
 
                     /**
-                     * 设置Describes core node resource
-                     * @param _coreResourceSpec Describes core node resource
+                     * 设置Description of Core node resources.
+                     * @param _coreResourceSpec Description of Core node resources.
                      * 
                      */
                     void SetCoreResourceSpec(const Resource& _coreResourceSpec);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CoreResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取Describes task node resource
-                     * @return TaskResourceSpec Describes task node resource
+                     * 获取Description of Task node resources.
+                     * @return TaskResourceSpec Description of Task node resources.
                      * 
                      */
                     Resource GetTaskResourceSpec() const;
 
                     /**
-                     * 设置Describes task node resource
-                     * @param _taskResourceSpec Describes task node resource
+                     * 设置Description of Task node resources.
+                     * @param _taskResourceSpec Description of Task node resources.
                      * 
                      */
                     void SetTaskResourceSpec(const Resource& _taskResourceSpec);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool TaskResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取Number of master nodes
-                     * @return MasterCount Number of master nodes
+                     * 获取Number of Master nodes.
+                     * @return MasterCount Number of Master nodes.
                      * 
                      */
                     int64_t GetMasterCount() const;
 
                     /**
-                     * 设置Number of master nodes
-                     * @param _masterCount Number of master nodes
+                     * 设置Number of Master nodes.
+                     * @param _masterCount Number of Master nodes.
                      * 
                      */
                     void SetMasterCount(const int64_t& _masterCount);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MasterCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of core nodes
-                     * @return CoreCount Number of core nodes
+                     * 获取Number of Core nodes.
+                     * @return CoreCount Number of Core nodes.
                      * 
                      */
                     int64_t GetCoreCount() const;
 
                     /**
-                     * 设置Number of core nodes
-                     * @param _coreCount Number of core nodes
+                     * 设置Number of Core nodes.
+                     * @param _coreCount Number of Core nodes.
                      * 
                      */
                     void SetCoreCount(const int64_t& _coreCount);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool CoreCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of task nodes
-                     * @return TaskCount Number of task nodes
+                     * 获取Number of Task nodes.
+                     * @return TaskCount Number of Task nodes.
                      * 
                      */
                     int64_t GetTaskCount() const;
 
                     /**
-                     * 设置Number of task nodes
-                     * @param _taskCount Number of task nodes
+                     * 设置Number of Task nodes.
+                     * @param _taskCount Number of Task nodes.
                      * 
                      */
                     void SetTaskCount(const int64_t& _taskCount);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool TaskCountHasBeenSet() const;
 
                     /**
-                     * 获取Describes common node resource
-                     * @return CommonResourceSpec Describes common node resource
+                     * 获取Description of Common node resources.
+                     * @return CommonResourceSpec Description of Common node resources.
                      * 
                      */
                     Resource GetCommonResourceSpec() const;
 
                     /**
-                     * 设置Describes common node resource
-                     * @param _commonResourceSpec Describes common node resource
+                     * 设置Description of Common node resources.
+                     * @param _commonResourceSpec Description of Common node resources.
                      * 
                      */
                     void SetCommonResourceSpec(const Resource& _commonResourceSpec);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool CommonResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取Number of common nodes
-                     * @return CommonCount Number of common nodes
+                     * 获取Number of Common nodes.
+                     * @return CommonCount Number of Common nodes.
                      * 
                      */
                     int64_t GetCommonCount() const;
 
                     /**
-                     * 设置Number of common nodes
-                     * @param _commonCount Number of common nodes
+                     * 设置Number of Common nodes.
+                     * @param _commonCount Number of Common nodes.
                      * 
                      */
                     void SetCommonCount(const int64_t& _commonCount);
@@ -218,49 +218,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Describes master node resource
+                     * Description of Master node resources.
                      */
                     Resource m_masterResourceSpec;
                     bool m_masterResourceSpecHasBeenSet;
 
                     /**
-                     * Describes core node resource
+                     * Description of Core node resources.
                      */
                     Resource m_coreResourceSpec;
                     bool m_coreResourceSpecHasBeenSet;
 
                     /**
-                     * Describes task node resource
+                     * Description of Task node resources.
                      */
                     Resource m_taskResourceSpec;
                     bool m_taskResourceSpecHasBeenSet;
 
                     /**
-                     * Number of master nodes
+                     * Number of Master nodes.
                      */
                     int64_t m_masterCount;
                     bool m_masterCountHasBeenSet;
 
                     /**
-                     * Number of core nodes
+                     * Number of Core nodes.
                      */
                     int64_t m_coreCount;
                     bool m_coreCountHasBeenSet;
 
                     /**
-                     * Number of task nodes
+                     * Number of Task nodes.
                      */
                     int64_t m_taskCount;
                     bool m_taskCountHasBeenSet;
 
                     /**
-                     * Describes common node resource
+                     * Description of Common node resources.
                      */
                     Resource m_commonResourceSpec;
                     bool m_commonResourceSpecHasBeenSet;
 
                     /**
-                     * Number of common nodes
+                     * Number of Common nodes.
                      */
                     int64_t m_commonCount;
                     bool m_commonCountHasBeenSet;

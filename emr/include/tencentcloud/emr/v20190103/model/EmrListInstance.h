@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Returned cluster list sample
+                * Response example for the cluster list.
                 */
                 class EmrListInstance : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
-                     * @return StatusDesc Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+                     * 获取Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
+                     * @return StatusDesc Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
                      * 
                      */
                     std::string GetStatusDesc() const;
 
                     /**
-                     * 设置Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
-                     * @param _statusDesc Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+                     * 设置Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
+                     * @param _statusDesc Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
                      * 
                      */
                     void SetStatusDesc(const std::string& _statusDesc);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster region
-                     * @return ZoneId Cluster region
+                     * 获取Cluster region.
+                     * @return ZoneId Cluster region.
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置Cluster region
-                     * @param _zoneId Cluster region
+                     * 设置Cluster region.
+                     * @param _zoneId Cluster region.
                      * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取User APPID
-                     * @return AppId User APPID
+                     * 获取User APPID.
+                     * @return AppId User APPID.
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置User APPID
-                     * @param _appId User APPID
+                     * 设置User APPID.
+                     * @param _appId User APPID.
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return AddTime Creation time
+                     * 获取Creation time.
+                     * @return AddTime Creation time.
                      * 
                      */
                     std::string GetAddTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _addTime Creation time
+                     * 设置Creation time.
+                     * @param _addTime Creation time.
                      * 
                      */
                     void SetAddTime(const std::string& _addTime);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool AddTimeHasBeenSet() const;
 
                     /**
-                     * 获取Running time
-                     * @return RunTime Running time
+                     * 获取Running time.
+                     * @return RunTime Running time.
                      * 
                      */
                     std::string GetRunTime() const;
 
                     /**
-                     * 设置Running time
-                     * @param _runTime Running time
+                     * 设置Running time.
+                     * @param _runTime Running time.
                      * 
                      */
                     void SetRunTime(const std::string& _runTime);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool RunTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster IP
-                     * @return MasterIp Cluster IP
+                     * 获取Cluster IP address.
+                     * @return MasterIp Cluster IP address.
                      * 
                      */
                     std::string GetMasterIp() const;
 
                     /**
-                     * 设置Cluster IP
-                     * @param _masterIp Cluster IP
+                     * 设置Cluster IP address.
+                     * @param _masterIp Cluster IP address.
                      * 
                      */
                     void SetMasterIp(const std::string& _masterIp);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool MasterIpHasBeenSet() const;
 
                     /**
-                     * 获取Cluster version
-                     * @return EmrVersion Cluster version
+                     * 获取Cluster version.
+                     * @return EmrVersion Cluster version.
                      * 
                      */
                     std::string GetEmrVersion() const;
 
                     /**
-                     * 设置Cluster version
-                     * @param _emrVersion Cluster version
+                     * 设置Cluster version.
+                     * @param _emrVersion Cluster version.
                      * 
                      */
                     void SetEmrVersion(const std::string& _emrVersion);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool EmrVersionHasBeenSet() const;
 
                     /**
-                     * 获取Cluster billing mode
-                     * @return ChargeType Cluster billing mode
+                     * 获取Cluster billing type.
+                     * @return ChargeType Cluster billing type.
                      * 
                      */
                     uint64_t GetChargeType() const;
 
                     /**
-                     * 设置Cluster billing mode
-                     * @param _chargeType Cluster billing mode
+                     * 设置Cluster billing type.
+                     * @param _chargeType Cluster billing type.
                      * 
                      */
                     void SetChargeType(const uint64_t& _chargeType);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取EMR ID
-                     * @return Id EMR ID
+                     * 获取emr ID
+                     * @return Id emr ID
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置EMR ID
-                     * @param _id EMR ID
+                     * 设置emr ID
+                     * @param _id emr ID
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -406,15 +406,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
-                     * @return Status Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+                     * 获取Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+                     * @return Status Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
-                     * @param _status Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+                     * 设置Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+                     * @param _status Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -427,19 +427,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Tags Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Instance tag.
+                     * @return Tags Instance tag.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _tags Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Instance tag.
+                     * @param _tags Instance tag.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -494,15 +490,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IsWoodpeckerClusterHasBeenSet() const;
 
                     /**
-                     * 获取VPC name in Chinese.
-                     * @return VpcName VPC name in Chinese.
+                     * 获取VPC.
+                     * @return VpcName VPC.
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置VPC name in Chinese.
-                     * @param _vpcName VPC name in Chinese.
+                     * 设置VPC.
+                     * @param _vpcName VPC.
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -515,15 +511,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool VpcNameHasBeenSet() const;
 
                     /**
-                     * 获取Subnet in Chinese.
-                     * @return SubnetName Subnet in Chinese.
+                     * 获取Subnet.
+                     * @return SubnetName Subnet.
                      * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
-                     * 设置Subnet in Chinese.
-                     * @param _subnetName Subnet in Chinese.
+                     * 设置Subnet.
+                     * @param _subnetName Subnet.
                      * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
@@ -536,15 +532,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SubnetNameHasBeenSet() const;
 
                     /**
-                     * 获取String VpcId.
-                     * @return UniqVpcId String VpcId.
+                     * 获取VPC ID (string).
+                     * @return UniqVpcId VPC ID (string).
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置String VpcId.
-                     * @param _uniqVpcId String VpcId.
+                     * 设置VPC ID (string).
+                     * @param _uniqVpcId VPC ID (string).
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -557,15 +553,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取String subnet.
-                     * @return UniqSubnetId String subnet.
+                     * 获取Subnet (string).
+                     * @return UniqSubnetId Subnet (string).
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置String subnet.
-                     * @param _uniqSubnetId String subnet.
+                     * 设置Subnet (string).
+                     * @param _uniqSubnetId Subnet (string).
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -620,15 +616,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IsMultiZoneClusterHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a cluster created by a cluster CVM.
-                     * @return IsHandsCluster Whether it is a cluster created by a cluster CVM.
+                     * 获取Whether it is a manually created cluster.
+                     * @return IsHandsCluster Whether it is a manually created cluster.
                      * 
                      */
                     bool GetIsHandsCluster() const;
 
                     /**
-                     * 设置Whether it is a cluster created by a cluster CVM.
-                     * @param _isHandsCluster Whether it is a cluster created by a cluster CVM.
+                     * 设置Whether it is a manually created cluster.
+                     * @param _isHandsCluster Whether it is a manually created cluster.
                      * 
                      */
                     void SetIsHandsCluster(const bool& _isHandsCluster);
@@ -641,19 +637,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IsHandsClusterHasBeenSet() const;
 
                     /**
-                     * 获取Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutSideSoftInfo Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取External client component information.
+                     * @return OutSideSoftInfo External client component information.
                      * 
                      */
                     std::vector<SoftDependInfo> GetOutSideSoftInfo() const;
 
                     /**
-                     * 设置Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outSideSoftInfo Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置External client component information.
+                     * @param _outSideSoftInfo External client component information.
                      * 
                      */
                     void SetOutSideSoftInfo(const std::vector<SoftDependInfo>& _outSideSoftInfo);
@@ -708,15 +700,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsDedicatedClusterHasBeenSet() const;
 
                     /**
-                     * 获取Cluster supports for cloning.
-                     * @return IsSupportClone Cluster supports for cloning.
+                     * 获取Whether cloning is supported for the cluster.
+                     * @return IsSupportClone Whether cloning is supported for the cluster.
                      * 
                      */
                     bool GetIsSupportClone() const;
 
                     /**
-                     * 设置Cluster supports for cloning.
-                     * @param _isSupportClone Cluster supports for cloning.
+                     * 设置Whether cloning is supported for the cluster.
+                     * @param _isSupportClone Whether cloning is supported for the cluster.
                      * 
                      */
                     void SetIsSupportClone(const bool& _isSupportClone);
@@ -731,67 +723,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+                     * Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster region
+                     * Cluster region.
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * User APPID
+                     * User APPID.
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_addTime;
                     bool m_addTimeHasBeenSet;
 
                     /**
-                     * Running time
+                     * Running time.
                      */
                     std::string m_runTime;
                     bool m_runTimeHasBeenSet;
 
                     /**
-                     * Cluster IP
+                     * Cluster IP address.
                      */
                     std::string m_masterIp;
                     bool m_masterIpHasBeenSet;
 
                     /**
-                     * Cluster version
+                     * Cluster version.
                      */
                     std::string m_emrVersion;
                     bool m_emrVersionHasBeenSet;
 
                     /**
-                     * Cluster billing mode
+                     * Cluster billing type.
                      */
                     uint64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
 
                     /**
-                     * EMR ID
+                     * emr ID
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
@@ -833,14 +825,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+                     * Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Instance tag.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -858,25 +849,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_isWoodpeckerClusterHasBeenSet;
 
                     /**
-                     * VPC name in Chinese.
+                     * VPC.
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
 
                     /**
-                     * Subnet in Chinese.
+                     * Subnet.
                      */
                     std::string m_subnetName;
                     bool m_subnetNameHasBeenSet;
 
                     /**
-                     * String VpcId.
+                     * VPC ID (string).
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * String subnet.
+                     * Subnet (string).
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
@@ -894,14 +885,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_isMultiZoneClusterHasBeenSet;
 
                     /**
-                     * Whether it is a cluster created by a cluster CVM.
+                     * Whether it is a manually created cluster.
                      */
                     bool m_isHandsCluster;
                     bool m_isHandsClusterHasBeenSet;
 
                     /**
-                     * Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * External client component information.
                      */
                     std::vector<SoftDependInfo> m_outSideSoftInfo;
                     bool m_outSideSoftInfoHasBeenSet;
@@ -919,7 +909,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isDedicatedClusterHasBeenSet;
 
                     /**
-                     * Cluster supports for cloning.
+                     * Whether cloning is supported for the cluster.
                      */
                     bool m_isSupportClone;
                     bool m_isSupportCloneHasBeenSet;

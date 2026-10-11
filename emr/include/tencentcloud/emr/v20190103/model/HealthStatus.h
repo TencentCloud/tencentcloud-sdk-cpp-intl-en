@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Process health status
+                * Process health status.
                 */
                 class HealthStatus : public AbstractModel
                 {

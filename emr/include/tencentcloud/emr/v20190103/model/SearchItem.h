@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Search field
+                * Searching field.
                 */
                 class SearchItem : public AbstractModel
                 {

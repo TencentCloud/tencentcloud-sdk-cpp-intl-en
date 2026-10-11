@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifications management, which includes specifications type descriptions.
+                * Specifications management, which includes the specifications type description.
                 */
                 class NodeResource : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration ID.
-                     * @return ResourceConfigId Configuration ID.
+                     * 获取<p>Configuration ID.</p>
+                     * @return ResourceConfigId <p>Configuration ID.</p>
                      * 
                      */
                     uint64_t GetResourceConfigId() const;
 
                     /**
-                     * 设置Configuration ID.
-                     * @param _resourceConfigId Configuration ID.
+                     * 设置<p>Configuration ID.</p>
+                     * @param _resourceConfigId <p>Configuration ID.</p>
                      * 
                      */
                     void SetResourceConfigId(const uint64_t& _resourceConfigId);
@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool ResourceConfigIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Resource Resource
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Resource</p>
+                     * @return Resource <p>Resource</p>
                      * 
                      */
                     Resource GetResource() const;
 
                     /**
-                     * 设置Resource
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resource Resource
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Resource</p>
+                     * @param _resource <p>Resource</p>
                      * 
                      */
                     void SetResource(const Resource& _resource);
@@ -94,15 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourceHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param _createTime Creation time.
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -115,15 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time.
-                     * @return UpdateTime Update time.
+                     * 获取<p>Update time.</p>
+                     * @return UpdateTime <p>Update time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time.
-                     * @param _updateTime Update time.
+                     * 设置<p>Update time.</p>
+                     * @param _updateTime <p>Update time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -136,15 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether default configuration applies, DEFAULT or BACKUP.
-                     * @return IsDefault Whether default configuration applies, DEFAULT or BACKUP.
+                     * 获取<p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
+                     * @return IsDefault <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
                      * 
                      */
                     std::string GetIsDefault() const;
 
                     /**
-                     * 设置Whether default configuration applies, DEFAULT or BACKUP.
-                     * @param _isDefault Whether default configuration applies, DEFAULT or BACKUP.
+                     * 设置<p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
+                     * @param _isDefault <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
                      * 
                      */
                     void SetIsDefault(const std::string& _isDefault);
@@ -157,15 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsDefaultHasBeenSet() const;
 
                     /**
-                     * 获取Remaining of this type.
-                     * @return MaxResourceNum Remaining of this type.
+                     * 获取<p>Remaining of this type.</p>
+                     * @return MaxResourceNum <p>Remaining of this type.</p>
                      * 
                      */
                     uint64_t GetMaxResourceNum() const;
 
                     /**
-                     * 设置Remaining of this type.
-                     * @param _maxResourceNum Remaining of this type.
+                     * 设置<p>Remaining of this type.</p>
+                     * @param _maxResourceNum <p>Remaining of this type.</p>
                      * 
                      */
                     void SetMaxResourceNum(const uint64_t& _maxResourceNum);
@@ -178,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxResourceNumHasBeenSet() const;
 
                     /**
-                     * 获取Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrepaidUnderwritePeriods Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Supported committed use duration.</p>
+                     * @return PrepaidUnderwritePeriods <p>Supported committed use duration.</p>
                      * 
                      */
                     std::vector<int64_t> GetPrepaidUnderwritePeriods() const;
 
                     /**
-                     * 设置Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _prepaidUnderwritePeriods Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Supported committed use duration.</p>
+                     * @param _prepaidUnderwritePeriods <p>Supported committed use duration.</p>
                      * 
                      */
                     void SetPrepaidUnderwritePeriods(const std::vector<int64_t>& _prepaidUnderwritePeriods);
@@ -202,51 +194,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PrepaidUnderwritePeriodsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Number of quotas.</p>
+                     * @return QuotaNum <p>Number of quotas.</p>
+                     * 
+                     */
+                    int64_t GetQuotaNum() const;
+
+                    /**
+                     * 设置<p>Number of quotas.</p>
+                     * @param _quotaNum <p>Number of quotas.</p>
+                     * 
+                     */
+                    void SetQuotaNum(const int64_t& _quotaNum);
+
+                    /**
+                     * 判断参数 QuotaNum 是否已赋值
+                     * @return QuotaNum 是否已赋值
+                     * 
+                     */
+                    bool QuotaNumHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Quota unit.</p>
+                     * @return QuotaUnit <p>Quota unit.</p>
+                     * 
+                     */
+                    std::string GetQuotaUnit() const;
+
+                    /**
+                     * 设置<p>Quota unit.</p>
+                     * @param _quotaUnit <p>Quota unit.</p>
+                     * 
+                     */
+                    void SetQuotaUnit(const std::string& _quotaUnit);
+
+                    /**
+                     * 判断参数 QuotaUnit 是否已赋值
+                     * @return QuotaUnit 是否已赋值
+                     * 
+                     */
+                    bool QuotaUnitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Configuration ID.
+                     * <p>Configuration ID.</p>
                      */
                     uint64_t m_resourceConfigId;
                     bool m_resourceConfigIdHasBeenSet;
 
                     /**
-                     * Resource
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Resource</p>
                      */
                     Resource m_resource;
                     bool m_resourceHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time.
+                     * <p>Update time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Whether default configuration applies, DEFAULT or BACKUP.
+                     * <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
                      */
                     std::string m_isDefault;
                     bool m_isDefaultHasBeenSet;
 
                     /**
-                     * Remaining of this type.
+                     * <p>Remaining of this type.</p>
                      */
                     uint64_t m_maxResourceNum;
                     bool m_maxResourceNumHasBeenSet;
 
                     /**
-                     * Supported committed use duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Supported committed use duration.</p>
                      */
                     std::vector<int64_t> m_prepaidUnderwritePeriods;
                     bool m_prepaidUnderwritePeriodsHasBeenSet;
+
+                    /**
+                     * <p>Number of quotas.</p>
+                     */
+                    int64_t m_quotaNum;
+                    bool m_quotaNumHasBeenSet;
+
+                    /**
+                     * <p>Quota unit.</p>
+                     */
+                    std::string m_quotaUnit;
+                    bool m_quotaUnitHasBeenSet;
 
                 };
             }

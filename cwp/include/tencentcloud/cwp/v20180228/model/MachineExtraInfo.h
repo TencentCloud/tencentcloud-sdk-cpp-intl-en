@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Server Basic Information
+                * 
                 */
                 class MachineExtraInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Public IP address
-                     * @return WanIP Public IP address
+                     * 获取
+                     * @return WanIP 
                      * 
                      */
                     std::string GetWanIP() const;
 
                     /**
-                     * 设置Public IP address
-                     * @param _wanIP Public IP address
+                     * 设置
+                     * @param _wanIP 
                      * 
                      */
                     void SetWanIP(const std::string& _wanIP);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WanIPHasBeenSet() const;
 
                     /**
-                     * 获取Private IP address
-                     * @return PrivateIP Private IP address
+                     * 获取
+                     * @return PrivateIP 
                      * 
                      */
                     std::string GetPrivateIP() const;
 
                     /**
-                     * 设置Private IP address
-                     * @param _privateIP Private IP address
+                     * 设置
+                     * @param _privateIP 
                      * 
                      */
                     void SetPrivateIP(const std::string& _privateIP);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PrivateIPHasBeenSet() const;
 
                     /**
-                     * 获取Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-                     * @return NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+                     * 获取
+                     * @return NetworkType 
                      * 
                      */
                     int64_t GetNetworkType() const;
 
                     /**
-                     * 设置Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-                     * @param _networkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+                     * 设置
+                     * @param _networkType 
                      * 
                      */
                     void SetNetworkType(const int64_t& _networkType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
-                     * 获取Network Name, returns vpc_id in the case of a VPC network
-                     * @return NetworkName Network Name, returns vpc_id in the case of a VPC network
+                     * 获取
+                     * @return NetworkName 
                      * 
                      */
                     std::string GetNetworkName() const;
 
                     /**
-                     * 设置Network Name, returns vpc_id in the case of a VPC network
-                     * @param _networkName Network Name, returns vpc_id in the case of a VPC network
+                     * 设置
+                     * @param _networkName 
                      * 
                      */
                     void SetNetworkName(const std::string& _networkName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool NetworkNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceID Instance ID
+                     * 获取
+                     * @return InstanceID 
                      * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceID Instance ID
+                     * 设置
+                     * @param _instanceID 
                      * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取host name
-                     * @return HostName host name
+                     * 获取
+                     * @return HostName 
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置host name
-                     * @param _hostName host name
+                     * 设置
+                     * @param _hostName 
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Public IP address
+                     * 
                      */
                     std::string m_wanIP;
                     bool m_wanIPHasBeenSet;
 
                     /**
-                     * Private IP address
+                     * 
                      */
                     std::string m_privateIP;
                     bool m_privateIPHasBeenSet;
 
                     /**
-                     * Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+                     * 
                      */
                     int64_t m_networkType;
                     bool m_networkTypeHasBeenSet;
 
                     /**
-                     * Network Name, returns vpc_id in the case of a VPC network
+                     * 
                      */
                     std::string m_networkName;
                     bool m_networkNameHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * 
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * host name
+                     * 
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;

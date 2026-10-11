@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return InstanceId Cluster ID
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _instanceId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time in the format of timestamp. Unit: seconds.
-                     * @return StartTime Start time in the format of timestamp. Unit: seconds.
+                     * 获取Start timestamp (s).
+                     * @return StartTime Start timestamp (s).
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time in the format of timestamp. Unit: seconds.
-                     * @param _startTime Start time in the format of timestamp. Unit: seconds.
+                     * 设置Start timestamp (s).
+                     * @param _startTime Start timestamp (s).
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time in the format of timestamp. Unit: seconds.
-                     * @return EndTime End time in the format of timestamp. Unit: seconds.
+                     * 获取End timestamp (s).
+                     * @return EndTime End timestamp (s).
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time in the format of timestamp. Unit: seconds.
-                     * @param _endTime End time in the format of timestamp. Unit: seconds.
+                     * 设置End timestamp (s).
+                     * @param _endTime End timestamp (s).
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Queue name used for filtering
-                     * @return Queues Queue name used for filtering
+                     * 获取Filtered queue name.
+                     * @return Queues Filtered queue name.
                      * 
                      */
                     std::vector<std::string> GetQueues() const;
 
                     /**
-                     * 设置Queue name used for filtering
-                     * @param _queues Queue name used for filtering
+                     * 设置Filtered queue name.
+                     * @param _queues Filtered queue name.
                      * 
                      */
                     void SetQueues(const std::vector<std::string>& _queues);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool QueuesHasBeenSet() const;
 
                     /**
-                     * 获取Username used for filtering
-                     * @return Users Username used for filtering
+                     * 获取Filtered username.
+                     * @return Users Filtered username.
                      * 
                      */
                     std::vector<std::string> GetUsers() const;
 
                     /**
-                     * 设置Username used for filtering
-                     * @param _users Username used for filtering
+                     * 设置Filtered username.
+                     * @param _users Filtered username.
                      * 
                      */
                     void SetUsers(const std::vector<std::string>& _users);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool UsersHasBeenSet() const;
 
                     /**
-                     * 获取Application type used for filtering
-                     * @return ApplicationTypes Application type used for filtering
+                     * 获取Filtered job type.
+                     * @return ApplicationTypes Filtered job type.
                      * 
                      */
                     std::vector<std::string> GetApplicationTypes() const;
 
                     /**
-                     * 设置Application type used for filtering
-                     * @param _applicationTypes Application type used for filtering
+                     * 设置Filtered job type.
+                     * @param _applicationTypes Filtered job type.
                      * 
                      */
                     void SetApplicationTypes(const std::vector<std::string>& _applicationTypes);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ApplicationTypesHasBeenSet() const;
 
                     /**
-                     * 获取Group field. Valid values: `queue`, `user`, and `applicationType`.
-                     * @return GroupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+                     * 获取Grouping field. Valid values: queue, user, and applicationType.
+                     * @return GroupBy Grouping field. Valid values: queue, user, and applicationType.
                      * 
                      */
                     std::vector<std::string> GetGroupBy() const;
 
                     /**
-                     * 设置Group field. Valid values: `queue`, `user`, and `applicationType`.
-                     * @param _groupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+                     * 设置Grouping field. Valid values: queue, user, and applicationType.
+                     * @param _groupBy Grouping field. Valid values: queue, user, and applicationType.
                      * 
                      */
                     void SetGroupBy(const std::vector<std::string>& _groupBy);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool GroupByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
-                     * @return OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+                     * 获取Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
+                     * @return OrderBy Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
-                     * @param _orderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+                     * 设置Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
+                     * @param _orderBy Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Order type. Valid values: `0` (descending) and `1`(ascending).
-                     * @return IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+                     * 获取Sorting order. Valid values: 0 (descending) and 1 (ascending).
+                     * @return IsAsc Sorting order. Valid values: 0 (descending) and 1 (ascending).
                      * 
                      */
                     int64_t GetIsAsc() const;
 
                     /**
-                     * 设置Order type. Valid values: `0` (descending) and `1`(ascending).
-                     * @param _isAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+                     * 设置Sorting order. Valid values: 0 (descending) and 1 (ascending).
+                     * @param _isAsc Sorting order. Valid values: 0 (descending) and 1 (ascending).
                      * 
                      */
                     void SetIsAsc(const int64_t& _isAsc);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool IsAscHasBeenSet() const;
 
                     /**
-                     * 获取Page number
-                     * @return Offset Page number
+                     * 获取Page number.
+                     * @return Offset Page number.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page number
-                     * @param _offset Page number
+                     * 设置Page number.
+                     * @param _offset Page number.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page capacity in the range of [10,100].
-                     * @return Limit Page capacity in the range of [10,100].
+                     * 获取Number of entries per page. Value range: [10, 100].
+                     * @return Limit Number of entries per page. Value range: [10, 100].
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page capacity in the range of [10,100].
-                     * @param _limit Page capacity in the range of [10,100].
+                     * 设置Number of entries per page. Value range: [10, 100].
+                     * @param _limit Number of entries per page. Value range: [10, 100].
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -276,67 +276,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time in the format of timestamp. Unit: seconds.
+                     * Start timestamp (s).
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time in the format of timestamp. Unit: seconds.
+                     * End timestamp (s).
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Queue name used for filtering
+                     * Filtered queue name.
                      */
                     std::vector<std::string> m_queues;
                     bool m_queuesHasBeenSet;
 
                     /**
-                     * Username used for filtering
+                     * Filtered username.
                      */
                     std::vector<std::string> m_users;
                     bool m_usersHasBeenSet;
 
                     /**
-                     * Application type used for filtering
+                     * Filtered job type.
                      */
                     std::vector<std::string> m_applicationTypes;
                     bool m_applicationTypesHasBeenSet;
 
                     /**
-                     * Group field. Valid values: `queue`, `user`, and `applicationType`.
+                     * Grouping field. Valid values: queue, user, and applicationType.
                      */
                     std::vector<std::string> m_groupBy;
                     bool m_groupByHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+                     * Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Order type. Valid values: `0` (descending) and `1`(ascending).
+                     * Sorting order. Valid values: 0 (descending) and 1 (ascending).
                      */
                     int64_t m_isAsc;
                     bool m_isAscHasBeenSet;
 
                     /**
-                     * Page number
+                     * Page number.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page capacity in the range of [10,100].
+                     * Number of entries per page. Value range: [10, 100].
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

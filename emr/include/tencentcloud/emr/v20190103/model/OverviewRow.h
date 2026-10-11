@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Return of HBase TableMetric overview
+                * Return of the HBase TableMetric overview.
                 */
                 class OverviewRow : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Table name
-                     * @return Table Table name
+                     * 获取Table name.
+                     * @return Table Table name.
                      * 
                      */
                     std::string GetTable() const;
 
                     /**
-                     * 设置Table name
-                     * @param _table Table name
+                     * 设置Table name.
+                     * @param _table Table name.
                      * 
                      */
                     void SetTable(const std::string& _table);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TableHasBeenSet() const;
 
                     /**
-                     * 获取Number of read requests
-                     * @return ReadRequestCount Number of read requests
+                     * 获取Number of read requests.
+                     * @return ReadRequestCount Number of read requests.
                      * 
                      */
                     double GetReadRequestCount() const;
 
                     /**
-                     * 设置Number of read requests
-                     * @param _readRequestCount Number of read requests
+                     * 设置Number of read requests.
+                     * @param _readRequestCount Number of read requests.
                      * 
                      */
                     void SetReadRequestCount(const double& _readRequestCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ReadRequestCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of write requests
-                     * @return WriteRequestCount Number of write requests
+                     * 获取Number of write requests.
+                     * @return WriteRequestCount Number of write requests.
                      * 
                      */
                     double GetWriteRequestCount() const;
 
                     /**
-                     * 设置Number of write requests
-                     * @param _writeRequestCount Number of write requests
+                     * 设置Number of write requests.
+                     * @param _writeRequestCount Number of write requests.
                      * 
                      */
                     void SetWriteRequestCount(const double& _writeRequestCount);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool WriteRequestCountHasBeenSet() const;
 
                     /**
-                     * 获取Current memstore size
-                     * @return MemstoreSize Current memstore size
+                     * 获取Size of the current MemStore.
+                     * @return MemstoreSize Size of the current MemStore.
                      * 
                      */
                     double GetMemstoreSize() const;
 
                     /**
-                     * 设置Current memstore size
-                     * @param _memstoreSize Current memstore size
+                     * 设置Size of the current MemStore.
+                     * @param _memstoreSize Size of the current MemStore.
                      * 
                      */
                     void SetMemstoreSize(const double& _memstoreSize);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MemstoreSizeHasBeenSet() const;
 
                     /**
-                     * 获取Size of StoreFile in the current region
-                     * @return StoreFileSize Size of StoreFile in the current region
+                     * 获取Size of the StoreFile in the current region.
+                     * @return StoreFileSize Size of the StoreFile in the current region.
                      * 
                      */
                     double GetStoreFileSize() const;
 
                     /**
-                     * 设置Size of StoreFile in the current region
-                     * @param _storeFileSize Size of StoreFile in the current region
+                     * 设置Size of the StoreFile in the current region.
+                     * @param _storeFileSize Size of the StoreFile in the current region.
                      * 
                      */
                     void SetStoreFileSize(const double& _storeFileSize);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取StoreFile quantity. 
-                     * @return StoreFileNum StoreFile quantity. 
+                     * 获取Number of StoreFiles.
+                     * @return StoreFileNum Number of StoreFiles.
                      * 
                      */
                     double GetStoreFileNum() const;
 
                     /**
-                     * 设置StoreFile quantity. 
-                     * @param _storeFileNum StoreFile quantity. 
+                     * 设置Number of StoreFiles.
+                     * @param _storeFileNum Number of StoreFiles.
                      * 
                      */
                     void SetStoreFileNum(const double& _storeFileNum);
@@ -196,31 +196,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Table name
+                     * Table name.
                      */
                     std::string m_table;
                     bool m_tableHasBeenSet;
 
                     /**
-                     * Number of read requests
+                     * Number of read requests.
                      */
                     double m_readRequestCount;
                     bool m_readRequestCountHasBeenSet;
 
                     /**
-                     * Number of write requests
+                     * Number of write requests.
                      */
                     double m_writeRequestCount;
                     bool m_writeRequestCountHasBeenSet;
 
                     /**
-                     * Current memstore size
+                     * Size of the current MemStore.
                      */
                     double m_memstoreSize;
                     bool m_memstoreSizeHasBeenSet;
 
                     /**
-                     * Size of StoreFile in the current region
+                     * Size of the StoreFile in the current region.
                      */
                     double m_storeFileSize;
                     bool m_storeFileSizeHasBeenSet;
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_operationHasBeenSet;
 
                     /**
-                     * StoreFile quantity. 
+                     * Number of StoreFiles.
                      */
                     double m_storeFileNum;
                     bool m_storeFileNumHasBeenSet;

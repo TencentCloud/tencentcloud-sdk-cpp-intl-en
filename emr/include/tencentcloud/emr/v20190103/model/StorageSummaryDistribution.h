@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HDFS Cloud File Storage (CFS) details.
+                * HDFS file storage details.
                 */
                 class StorageSummaryDistribution : public AbstractModel
                 {
@@ -91,18 +91,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Dps Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Dps> GetDps() const;
 
                     /**
                      * 设置Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dps Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDps(const std::vector<Dps>& _dps);
@@ -130,7 +126,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Dps> m_dps;
                     bool m_dpsHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-                     * @return StartTime Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+                     * 获取Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+                     * @return StartTime Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-                     * @param _startTime Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+                     * 设置Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+                     * @param _startTime Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-                     * @return EndTime End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+                     * 获取End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+                     * @return EndTime End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-                     * @param _endTime End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+                     * 设置End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+                     * @param _endTime End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-                     * @return PageSize Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+                     * 获取Number of items returned per page. Minimum value: 1. Maximum value: 100.
+                     * @return PageSize Number of items returned per page. Minimum value: 1. Maximum value: 100.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-                     * @param _pageSize Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+                     * 设置Number of items returned per page. Minimum value: 1. Maximum value: 100.
+                     * @param _pageSize Number of items returned per page. Minimum value: 1. Maximum value: 100.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PageHasBeenSet() const;
 
                     /**
-                     * 获取Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
-                     * @return Type Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+                     * 获取Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
+                     * @return Type Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
-                     * @param _type Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+                     * 设置Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
+                     * @param _type Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it includes specific parameter suggestions and other information
-                     * @return MustHasContext Whether it includes specific parameter suggestions and other information
+                     * 获取Whether information such as specific parameter suggestions is included.
+                     * @return MustHasContext Whether information such as specific parameter suggestions is included.
                      * 
                      */
                     bool GetMustHasContext() const;
 
                     /**
-                     * 设置Whether it includes specific parameter suggestions and other information
-                     * @param _mustHasContext Whether it includes specific parameter suggestions and other information
+                     * 设置Whether information such as specific parameter suggestions is included.
+                     * @param _mustHasContext Whether information such as specific parameter suggestions is included.
                      * 
                      */
                     void SetMustHasContext(const bool& _mustHasContext);
@@ -198,19 +198,19 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+                     * Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+                     * End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+                     * Number of items returned per page. Minimum value: 1. Maximum value: 100.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
@@ -222,13 +222,13 @@ namespace TencentCloud
                     bool m_pageHasBeenSet;
 
                     /**
-                     * Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+                     * Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Whether it includes specific parameter suggestions and other information
+                     * Whether information such as specific parameter suggestions is included.
                      */
                     bool m_mustHasContext;
                     bool m_mustHasContextHasBeenSet;

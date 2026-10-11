@@ -46,12 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadAutoScaleStrategies Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Load-based scaling rule.
+                     * @return LoadAutoScaleStrategies Load-based scaling rule.
                      * 
                      */
                     std::vector<LoadAutoScaleStrategy> GetLoadAutoScaleStrategies() const;
@@ -64,12 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LoadAutoScaleStrategiesHasBeenSet() const;
 
                     /**
-                     * 获取Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeBasedAutoScaleStrategies Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time-based scaling rule.
+                     * @return TimeBasedAutoScaleStrategies Time-based scaling rule.
                      * 
                      */
                     std::vector<TimeAutoScaleStrategy> GetTimeBasedAutoScaleStrategies() const;
@@ -84,17 +76,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Load-based scaling rule.
                      */
                     std::vector<LoadAutoScaleStrategy> m_loadAutoScaleStrategies;
                     bool m_loadAutoScaleStrategiesHasBeenSet;
 
                     /**
-                     * Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time-based scaling rule.
                      */
                     std::vector<TimeAutoScaleStrategy> m_timeBasedAutoScaleStrategies;
                     bool m_timeBasedAutoScaleStrategiesHasBeenSet;

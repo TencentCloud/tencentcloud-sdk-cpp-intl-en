@@ -133,18 +133,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataPoints Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDataPoints() const;
 
                     /**
                      * 设置Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dataPoints Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataPoints(const std::vector<std::string>& _dataPoints);
@@ -158,18 +154,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MetricTags GetTags() const;
 
                     /**
                      * 设置Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const MetricTags& _tags);
@@ -209,14 +201,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_dataPoints;
                     bool m_dataPointsHasBeenSet;
 
                     /**
                      * Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MetricTags m_tags;
                     bool m_tagsHasBeenSet;

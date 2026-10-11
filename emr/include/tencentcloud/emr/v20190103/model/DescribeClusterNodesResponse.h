@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of queried nodes
-                     * @return TotalCnt Total number of queried nodes
+                     * 获取Total number of queried nodes.
+                     * @return TotalCnt Total number of queried nodes.
                      * 
                      */
                     int64_t GetTotalCnt() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCntHasBeenSet() const;
 
                     /**
-                     * 获取List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NodeList List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Node detailed information list.
+                     * @return NodeList Node detailed information list.
                      * 
                      */
                     std::vector<NodeHardwareInfo> GetNodeList() const;
@@ -75,10 +73,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NodeListHasBeenSet() const;
 
                     /**
-                     * 获取List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TagKeys List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of all tag keys for the user.
+                     * @return TagKeys List of all tag keys for the user.
                      * 
                      */
                     std::vector<std::string> GetTagKeys() const;
@@ -91,10 +87,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagKeysHasBeenSet() const;
 
                     /**
-                     * 获取Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return HardwareResourceTypeList Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource type list.
+                     * @return HardwareResourceTypeList Resource type list.
                      * 
                      */
                     std::vector<std::string> GetHardwareResourceTypeList() const;
@@ -109,28 +103,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of queried nodes
+                     * Total number of queried nodes.
                      */
                     int64_t m_totalCnt;
                     bool m_totalCntHasBeenSet;
 
                     /**
-                     * List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Node detailed information list.
                      */
                     std::vector<NodeHardwareInfo> m_nodeList;
                     bool m_nodeListHasBeenSet;
 
                     /**
-                     * List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of all tag keys for the user.
                      */
                     std::vector<std::string> m_tagKeys;
                     bool m_tagKeysHasBeenSet;
 
                     /**
-                     * Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Resource type list.
                      */
                     std::vector<std::string> m_hardwareResourceTypeList;
                     bool m_hardwareResourceTypeListHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The instance ID.
-                     * @return InstanceId The instance ID.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The instance ID.
-                     * @param _instanceId The instance ID.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The list of resources to be terminated.
-                     * @return CvmInstanceIds The list of resources to be terminated.
+                     * 获取List of terminated resources.
+                     * @return CvmInstanceIds List of terminated resources.
                      * 
                      */
                     std::vector<std::string> GetCvmInstanceIds() const;
 
                     /**
-                     * 设置The list of resources to be terminated.
-                     * @param _cvmInstanceIds The list of resources to be terminated.
+                     * 设置List of terminated resources.
+                     * @param _cvmInstanceIds List of terminated resources.
                      * 
                      */
                     void SetCvmInstanceIds(const std::vector<std::string>& _cvmInstanceIds);
@@ -85,12 +85,12 @@ namespace TencentCloud
                     bool CvmInstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Valid values of node type:
+                     * 获取Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-                     * @return NodeFlag Valid values of node type:
+                     * @return NodeFlag Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -100,12 +100,12 @@ namespace TencentCloud
                     std::string GetNodeFlag() const;
 
                     /**
-                     * 设置Valid values of node type:
+                     * 设置Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-                     * @param _nodeFlag Valid values of node type:
+                     * @param _nodeFlag Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -122,23 +122,23 @@ namespace TencentCloud
                     bool NodeFlagHasBeenSet() const;
 
                     /**
-                     * 获取The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
-                     * @return GraceDownFlag The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+                     * 获取Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
+                     * @return GraceDownFlag Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
                      * 
                      */
                     bool GetGraceDownFlag() const;
 
                     /**
-                     * 设置The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
-                     * @param _graceDownFlag The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+                     * 设置Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
+                     * @param _graceDownFlag Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
                      * 
                      */
                     void SetGraceDownFlag(const bool& _graceDownFlag);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool GraceDownFlagHasBeenSet() const;
 
                     /**
-                     * 获取The graceful scale-in wait time in seconds. Value range: 60–1800.
-                     * @return GraceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+                     * 获取Graceful scale-in waiting time. Value range: 60–1800, in seconds.
+                     * @return GraceDownTime Graceful scale-in waiting time. Value range: 60–1800, in seconds.
                      * 
                      */
                     int64_t GetGraceDownTime() const;
 
                     /**
-                     * 设置The graceful scale-in wait time in seconds. Value range: 60–1800.
-                     * @param _graceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+                     * 设置Graceful scale-in waiting time. Value range: 60–1800, in seconds.
+                     * @param _graceDownTime Graceful scale-in waiting time. Value range: 60–1800, in seconds.
                      * 
                      */
                     void SetGraceDownTime(const int64_t& _graceDownTime);
@@ -174,19 +174,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The instance ID.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The list of resources to be terminated.
+                     * List of terminated resources.
                      */
                     std::vector<std::string> m_cvmInstanceIds;
                     bool m_cvmInstanceIdsHasBeenSet;
 
                     /**
-                     * Valid values of node type:
+                     * Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool m_nodeFlagHasBeenSet;
 
                     /**
-                     * The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+                     * Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
                      */
                     bool m_graceDownFlag;
                     bool m_graceDownFlagHasBeenSet;
 
                     /**
-                     * The graceful scale-in wait time in seconds. Value range: 60–1800.
+                     * Graceful scale-in waiting time. Value range: 60–1800, in seconds.
                      */
                     int64_t m_graceDownTime;
                     bool m_graceDownTimeHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID.
-                     * @return InstanceId Cluster instance ID.
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID.
-                     * @param _instanceId Cluster instance ID.
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Node type: Core, Task, and Router.
-                     * @return ResourceType Node type: Core, Task, and Router.
+                     * 获取Node type. Valid values: CORE, TASK, and ROUTER.
+                     * @return ResourceType Node type. Valid values: CORE, TASK, and ROUTER.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Node type: Core, Task, and Router.
-                     * @param _resourceType Node type: Core, Task, and Router.
+                     * 设置Node type. Valid values: CORE, TASK, and ROUTER.
+                     * @param _resourceType Node type. Valid values: CORE, TASK, and ROUTER.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
-                     * @return IsDefault Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+                     * 获取Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
+                     * @return IsDefault Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
                      * 
                      */
                     std::string GetIsDefault() const;
 
                     /**
-                     * 设置Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
-                     * @param _isDefault Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+                     * 设置Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
+                     * @param _isDefault Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
                      * 
                      */
                     void SetIsDefault(const std::string& _isDefault);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool MultipleResourceConfigHasBeenSet() const;
 
                     /**
-                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 获取Type. Valid values: ComputeResource and EMR. Default value: EMR.
+                     * @return ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
                      * 
                      */
                     std::string GetResourceBaseType() const;
 
                     /**
-                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 设置Type. Valid values: ComputeResource and EMR. Default value: EMR.
+                     * @param _resourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
                      * 
                      */
                     void SetResourceBaseType(const std::string& _resourceBaseType);
@@ -256,13 +256,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster instance ID.
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Node type: Core, Task, and Router.
+                     * Node type. Valid values: CORE, TASK, and ROUTER.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -280,7 +280,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+                     * Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
                      */
                     std::string m_isDefault;
                     bool m_isDefaultHasBeenSet;
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_multipleResourceConfigHasBeenSet;
 
                     /**
-                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * Type. Valid values: ComputeResource and EMR. Default value: EMR.
                      */
                     std::string m_resourceBaseType;
                     bool m_resourceBaseTypeHasBeenSet;

@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadMetrics Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule trigger condition.
+                     * @return LoadMetrics Rule trigger condition.
                      * 
                      */
                     std::vector<LoadMetricsCondition> GetLoadMetrics() const;
 
                     /**
-                     * 设置Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _loadMetrics Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule trigger condition.
+                     * @param _loadMetrics Rule trigger condition.
                      * 
                      */
                     void SetLoadMetrics(const std::vector<LoadMetricsCondition>& _loadMetrics);
@@ -73,19 +69,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LoadMetricsHasBeenSet() const;
 
                     /**
-                     * 获取0: all conditions should be met.
-1: any one of the conditions is met.
-                     * @return Match 0: all conditions should be met.
-1: any one of the conditions is met.
+                     * 获取0: All conditions are met.
+1: Any one of the conditions is met.
+                     * @return Match 0: All conditions are met.
+1: Any one of the conditions is met.
                      * 
                      */
                     int64_t GetMatch() const;
 
                     /**
-                     * 设置0: all conditions should be met.
-1: any one of the conditions is met.
-                     * @param _match 0: all conditions should be met.
-1: any one of the conditions is met.
+                     * 设置0: All conditions are met.
+1: Any one of the conditions is met.
+                     * @param _match 0: All conditions are met.
+1: Any one of the conditions is met.
                      * 
                      */
                     void SetMatch(const int64_t& _match);
@@ -100,15 +96,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule trigger condition.
                      */
                     std::vector<LoadMetricsCondition> m_loadMetrics;
                     bool m_loadMetricsHasBeenSet;
 
                     /**
-                     * 0: all conditions should be met.
-1: any one of the conditions is met.
+                     * 0: All conditions are met.
+1: Any one of the conditions is met.
                      */
                     int64_t m_match;
                     bool m_matchHasBeenSet;

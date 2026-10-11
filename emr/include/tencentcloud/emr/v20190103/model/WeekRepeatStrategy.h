@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scheduled scaling-out of weekly recurring tasks policy
+                * Weekly repetition task policy for scheduled scale-outs.
                 */
                 class WeekRepeatStrategy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specific time for repetition task execution, such as 01:02:00.
-                     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+                     * 获取Specific time for repetition task execution, for example, 01:02:00.
+                     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
                      * 
                      */
                     std::string GetExecuteAtTimeOfDay() const;
 
                     /**
-                     * 设置Specific time for repetition task execution, such as 01:02:00.
-                     * @param _executeAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+                     * 设置Specific time for repetition task execution, for example, 01:02:00.
+                     * @param _executeAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
                      * 
                      */
                     void SetExecuteAtTimeOfDay(const std::string& _executeAtTimeOfDay);
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool ExecuteAtTimeOfDayHasBeenSet() const;
 
                     /**
-                     * 获取Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DaysOfWeek Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
+                     * @return DaysOfWeek Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
                      * 
                      */
                     std::vector<uint64_t> GetDaysOfWeek() const;
 
                     /**
-                     * 设置Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _daysOfWeek Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
+                     * @param _daysOfWeek Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
                      * 
                      */
                     void SetDaysOfWeek(const std::vector<uint64_t>& _daysOfWeek);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Specific time for repetition task execution, such as 01:02:00.
+                     * Specific time for repetition task execution, for example, 01:02:00.
                      */
                     std::string m_executeAtTimeOfDay;
                     bool m_executeAtTimeOfDayHasBeenSet;
 
                     /**
-                     * Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
                      */
                     std::vector<uint64_t> m_daysOfWeek;
                     bool m_daysOfWeekHasBeenSet;

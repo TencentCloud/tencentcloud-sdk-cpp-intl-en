@@ -1,0 +1,408 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_EMR_V20190103_MODEL_PREEXECUTEFILESETTING_H_
+#define TENCENTCLOUD_EMR_V20190103_MODEL_PREEXECUTEFILESETTING_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Emr
+    {
+        namespace V20190103
+        {
+            namespace Model
+            {
+                /**
+                * Pre-execution script configuration.
+                */
+                class PreExecuteFileSetting : public AbstractModel
+                {
+                public:
+                    PreExecuteFileSetting();
+                    ~PreExecuteFileSetting() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Script path on COS.
+                     * @return Path Script path on COS.
+                     * 
+                     */
+                    std::string GetPath() const;
+
+                    /**
+                     * 设置Script path on COS.
+                     * @param _path Script path on COS.
+                     * 
+                     */
+                    void SetPath(const std::string& _path);
+
+                    /**
+                     * 判断参数 Path 是否已赋值
+                     * @return Path 是否已赋值
+                     * 
+                     */
+                    bool PathHasBeenSet() const;
+
+                    /**
+                     * 获取Script execution parameter.
+                     * @return Args Script execution parameter.
+                     * 
+                     */
+                    std::string GetArgs() const;
+
+                    /**
+                     * 设置Script execution parameter.
+                     * @param _args Script execution parameter.
+                     * 
+                     */
+                    void SetArgs(const std::string& _args);
+
+                    /**
+                     * 判断参数 Args 是否已赋值
+                     * @return Args 是否已赋值
+                     * 
+                     */
+                    bool ArgsHasBeenSet() const;
+
+                    /**
+                     * 获取COS bucket name.
+                     * @return Bucket COS bucket name.
+                     * 
+                     */
+                    std::string GetBucket() const;
+
+                    /**
+                     * 设置COS bucket name.
+                     * @param _bucket COS bucket name.
+                     * 
+                     */
+                    void SetBucket(const std::string& _bucket);
+
+                    /**
+                     * 判断参数 Bucket 是否已赋值
+                     * @return Bucket 是否已赋值
+                     * 
+                     */
+                    bool BucketHasBeenSet() const;
+
+                    /**
+                     * 获取COS region name.
+                     * @return Region COS region name.
+                     * 
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置COS region name.
+                     * @param _region COS region name.
+                     * 
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     * 
+                     */
+                    bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取COS domain data.
+                     * @return Domain COS domain data.
+                     * 
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置COS domain data.
+                     * @param _domain COS domain data.
+                     * 
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     * 
+                     */
+                    bool DomainHasBeenSet() const;
+
+                    /**
+                     * 获取Execution order.
+                     * @return RunOrder Execution order.
+                     * 
+                     */
+                    int64_t GetRunOrder() const;
+
+                    /**
+                     * 设置Execution order.
+                     * @param _runOrder Execution order.
+                     * 
+                     */
+                    void SetRunOrder(const int64_t& _runOrder);
+
+                    /**
+                     * 判断参数 RunOrder 是否已赋值
+                     * @return RunOrder 是否已赋值
+                     * 
+                     */
+                    bool RunOrderHasBeenSet() const;
+
+                    /**
+                     * 获取Whether resourceAfter or clusterAfter is used.
+                     * @return WhenRun Whether resourceAfter or clusterAfter is used.
+                     * 
+                     */
+                    std::string GetWhenRun() const;
+
+                    /**
+                     * 设置Whether resourceAfter or clusterAfter is used.
+                     * @param _whenRun Whether resourceAfter or clusterAfter is used.
+                     * 
+                     */
+                    void SetWhenRun(const std::string& _whenRun);
+
+                    /**
+                     * 判断参数 WhenRun 是否已赋值
+                     * @return WhenRun 是否已赋值
+                     * 
+                     */
+                    bool WhenRunHasBeenSet() const;
+
+                    /**
+                     * 获取Script file name.
+                     * @return CosFileName Script file name.
+                     * 
+                     */
+                    std::string GetCosFileName() const;
+
+                    /**
+                     * 设置Script file name.
+                     * @param _cosFileName Script file name.
+                     * 
+                     */
+                    void SetCosFileName(const std::string& _cosFileName);
+
+                    /**
+                     * 判断参数 CosFileName 是否已赋值
+                     * @return CosFileName 是否已赋值
+                     * 
+                     */
+                    bool CosFileNameHasBeenSet() const;
+
+                    /**
+                     * 获取Script's COS address.
+                     * @return CosFileURI Script's COS address.
+                     * 
+                     */
+                    std::string GetCosFileURI() const;
+
+                    /**
+                     * 设置Script's COS address.
+                     * @param _cosFileURI Script's COS address.
+                     * 
+                     */
+                    void SetCosFileURI(const std::string& _cosFileURI);
+
+                    /**
+                     * 判断参数 CosFileURI 是否已赋值
+                     * @return CosFileURI 是否已赋值
+                     * 
+                     */
+                    bool CosFileURIHasBeenSet() const;
+
+                    /**
+                     * 获取COS SecretId.
+                     * @return CosSecretId COS SecretId.
+                     * 
+                     */
+                    std::string GetCosSecretId() const;
+
+                    /**
+                     * 设置COS SecretId.
+                     * @param _cosSecretId COS SecretId.
+                     * 
+                     */
+                    void SetCosSecretId(const std::string& _cosSecretId);
+
+                    /**
+                     * 判断参数 CosSecretId 是否已赋值
+                     * @return CosSecretId 是否已赋值
+                     * 
+                     */
+                    bool CosSecretIdHasBeenSet() const;
+
+                    /**
+                     * 获取COS SecretKey.
+                     * @return CosSecretKey COS SecretKey.
+                     * 
+                     */
+                    std::string GetCosSecretKey() const;
+
+                    /**
+                     * 设置COS SecretKey.
+                     * @param _cosSecretKey COS SecretKey.
+                     * 
+                     */
+                    void SetCosSecretKey(const std::string& _cosSecretKey);
+
+                    /**
+                     * 判断参数 CosSecretKey 是否已赋值
+                     * @return CosSecretKey 是否已赋值
+                     * 
+                     */
+                    bool CosSecretKeyHasBeenSet() const;
+
+                    /**
+                     * 获取COS APPID.
+                     * @return AppId COS APPID.
+                     * 
+                     */
+                    std::string GetAppId() const;
+
+                    /**
+                     * 设置COS APPID.
+                     * @param _appId COS APPID.
+                     * 
+                     */
+                    void SetAppId(const std::string& _appId);
+
+                    /**
+                     * 判断参数 AppId 是否已赋值
+                     * @return AppId 是否已赋值
+                     * 
+                     */
+                    bool AppIdHasBeenSet() const;
+
+                    /**
+                     * 获取Remarks.
+                     * @return Remark Remarks.
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remarks.
+                     * @param _remark Remarks.
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Script path on COS.
+                     */
+                    std::string m_path;
+                    bool m_pathHasBeenSet;
+
+                    /**
+                     * Script execution parameter.
+                     */
+                    std::string m_args;
+                    bool m_argsHasBeenSet;
+
+                    /**
+                     * COS bucket name.
+                     */
+                    std::string m_bucket;
+                    bool m_bucketHasBeenSet;
+
+                    /**
+                     * COS region name.
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
+
+                    /**
+                     * COS domain data.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
+
+                    /**
+                     * Execution order.
+                     */
+                    int64_t m_runOrder;
+                    bool m_runOrderHasBeenSet;
+
+                    /**
+                     * Whether resourceAfter or clusterAfter is used.
+                     */
+                    std::string m_whenRun;
+                    bool m_whenRunHasBeenSet;
+
+                    /**
+                     * Script file name.
+                     */
+                    std::string m_cosFileName;
+                    bool m_cosFileNameHasBeenSet;
+
+                    /**
+                     * Script's COS address.
+                     */
+                    std::string m_cosFileURI;
+                    bool m_cosFileURIHasBeenSet;
+
+                    /**
+                     * COS SecretId.
+                     */
+                    std::string m_cosSecretId;
+                    bool m_cosSecretIdHasBeenSet;
+
+                    /**
+                     * COS SecretKey.
+                     */
+                    std::string m_cosSecretKey;
+                    bool m_cosSecretKeyHasBeenSet;
+
+                    /**
+                     * COS APPID.
+                     */
+                    std::string m_appId;
+                    bool m_appIdHasBeenSet;
+
+                    /**
+                     * Remarks.
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_EMR_V20190103_MODEL_PREEXECUTEFILESETTING_H_

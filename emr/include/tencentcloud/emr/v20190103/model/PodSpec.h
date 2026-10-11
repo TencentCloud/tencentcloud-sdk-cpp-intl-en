@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource description for container resource scale-out
+                * Resource description, which is used during a container resource scale-out.
                 */
                 class PodSpec : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Identifier of external resource provider, such as "cls-a1cd23fa".
-                     * @return ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
+                     * 获取Identifier of the external resource provider, for example, "cls-a1cd23fa".
+                     * @return ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
                      * 
                      */
                     std::string GetResourceProviderIdentifier() const;
 
                     /**
-                     * 设置Identifier of external resource provider, such as "cls-a1cd23fa".
-                     * @param _resourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
+                     * 设置Identifier of the external resource provider, for example, "cls-a1cd23fa".
+                     * @param _resourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
                      * 
                      */
                     void SetResourceProviderIdentifier(const std::string& _resourceProviderIdentifier);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ResourceProviderIdentifierHasBeenSet() const;
 
                     /**
-                     * 获取Type of external resource provider, such as "tke". Currently, only "tke" is supported.
-                     * @return ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+                     * 获取Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+                     * @return ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
                      * 
                      */
                     std::string GetResourceProviderType() const;
 
                     /**
-                     * 设置Type of external resource provider, such as "tke". Currently, only "tke" is supported.
-                     * @param _resourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+                     * 设置Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+                     * @param _resourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
                      * 
                      */
                     void SetResourceProviderType(const std::string& _resourceProviderType);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ResourceProviderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Purpose of the resource, which means the node type and can only be "TASK".
-                     * @return NodeType Purpose of the resource, which means the node type and can only be "TASK".
+                     * 获取Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+                     * @return NodeType Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Purpose of the resource, which means the node type and can only be "TASK".
-                     * @param _nodeType Purpose of the resource, which means the node type and can only be "TASK".
+                     * 设置Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+                     * @param _nodeType Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPUs
-                     * @return Cpu Number of CPUs
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPUs
-                     * @param _cpu Number of CPUs
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory size in GB.
-                     * @return Memory Memory size in GB.
+                     * 获取Memory size (GB).
+                     * @return Memory Memory size (GB).
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Memory size in GB.
-                     * @param _memory Memory size in GB.
+                     * 设置Memory size (GB).
+                     * @param _memory Memory size (GB).
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
-                     * @return DataVolumes Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+                     * 获取The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
+                     * @return DataVolumes The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
                      * 
                      */
                     std::vector<std::string> GetDataVolumes() const;
 
                     /**
-                     * 设置Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
-                     * @param _dataVolumes Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+                     * 设置The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
+                     * @param _dataVolumes The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
                      * 
                      */
                     void SetDataVolumes(const std::vector<std::string>& _dataVolumes);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool DataVolumesHasBeenSet() const;
 
                     /**
-                     * 获取EKS cluster - CPU type. Valid values: `intel` and `amd`.
-                     * @return CpuType EKS cluster - CPU type. Valid values: `intel` and `amd`.
+                     * 获取CPU type for the EKS cluster, currently supporting intel and amd.
+                     * @return CpuType CPU type for the EKS cluster, currently supporting intel and amd.
                      * 
                      */
                     std::string GetCpuType() const;
 
                     /**
-                     * 设置EKS cluster - CPU type. Valid values: `intel` and `amd`.
-                     * @param _cpuType EKS cluster - CPU type. Valid values: `intel` and `amd`.
+                     * 设置CPU type for the EKS cluster, currently supporting intel and amd.
+                     * @param _cpuType CPU type for the EKS cluster, currently supporting intel and amd.
                      * 
                      */
                     void SetCpuType(const std::string& _cpuType);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool CpuTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data directory mounting information of the pod node.
-                     * @return PodVolumes Data directory mounting information of the pod node.
+                     * 获取Mounting information of the node data directory on Pod.
+                     * @return PodVolumes Mounting information of the node data directory on Pod.
                      * 
                      */
                     std::vector<PodVolume> GetPodVolumes() const;
 
                     /**
-                     * 设置Data directory mounting information of the pod node.
-                     * @param _podVolumes Data directory mounting information of the pod node.
+                     * 设置Mounting information of the node data directory on Pod.
+                     * @param _podVolumes Mounting information of the node data directory on Pod.
                      * 
                      */
                     void SetPodVolumes(const std::vector<PodVolume>& _podVolumes);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool PodVolumesHasBeenSet() const;
 
                     /**
-                     * 获取Whether floating specification is used. `1`: Yes; `0`: No.
-                     * @return IsDynamicSpec Whether floating specification is used. `1`: Yes; `0`: No.
+                     * 获取Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
+                     * @return IsDynamicSpec Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
                      * 
                      */
                     uint64_t GetIsDynamicSpec() const;
 
                     /**
-                     * 设置Whether floating specification is used. `1`: Yes; `0`: No.
-                     * @param _isDynamicSpec Whether floating specification is used. `1`: Yes; `0`: No.
+                     * 设置Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
+                     * @param _isDynamicSpec Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
                      * 
                      */
                     void SetIsDynamicSpec(const uint64_t& _isDynamicSpec);
@@ -238,19 +238,15 @@ namespace TencentCloud
                     bool IsDynamicSpecHasBeenSet() const;
 
                     /**
-                     * 获取Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DynamicPodSpec Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Floating specification.
+                     * @return DynamicPodSpec Floating specification.
                      * 
                      */
                     DynamicPodSpec GetDynamicPodSpec() const;
 
                     /**
-                     * 设置Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dynamicPodSpec Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Floating specification.
+                     * @param _dynamicPodSpec Floating specification.
                      * 
                      */
                     void SetDynamicPodSpec(const DynamicPodSpec& _dynamicPodSpec);
@@ -263,15 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DynamicPodSpecHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of VPC network.
-                     * @return VpcId Unique ID of VPC network.
+                     * 获取Unique ID of the VPC.
+                     * @return VpcId Unique ID of the VPC.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Unique ID of VPC network.
-                     * @param _vpcId Unique ID of VPC network.
+                     * 设置Unique ID of the VPC.
+                     * @param _vpcId Unique ID of the VPC.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -284,15 +280,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of a VPC subnet.
-                     * @return SubnetId Unique ID of a VPC subnet.
+                     * 获取Unique ID of the VPC subnet.
+                     * @return SubnetId Unique ID of the VPC subnet.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Unique ID of a VPC subnet.
-                     * @param _subnetId Unique ID of a VPC subnet.
+                     * 设置Unique ID of the VPC subnet.
+                     * @param _subnetId Unique ID of the VPC subnet.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -328,74 +324,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Identifier of external resource provider, such as "cls-a1cd23fa".
+                     * Identifier of the external resource provider, for example, "cls-a1cd23fa".
                      */
                     std::string m_resourceProviderIdentifier;
                     bool m_resourceProviderIdentifierHasBeenSet;
 
                     /**
-                     * Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+                     * Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
                      */
                     std::string m_resourceProviderType;
                     bool m_resourceProviderTypeHasBeenSet;
 
                     /**
-                     * Purpose of the resource, which means the node type and can only be "TASK".
+                     * Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Number of CPUs
+                     * Number of CPU cores.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory size in GB.
+                     * Memory size (GB).
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+                     * The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
                      */
                     std::vector<std::string> m_dataVolumes;
                     bool m_dataVolumesHasBeenSet;
 
                     /**
-                     * EKS cluster - CPU type. Valid values: `intel` and `amd`.
+                     * CPU type for the EKS cluster, currently supporting intel and amd.
                      */
                     std::string m_cpuType;
                     bool m_cpuTypeHasBeenSet;
 
                     /**
-                     * Data directory mounting information of the pod node.
+                     * Mounting information of the node data directory on Pod.
                      */
                     std::vector<PodVolume> m_podVolumes;
                     bool m_podVolumesHasBeenSet;
 
                     /**
-                     * Whether floating specification is used. `1`: Yes; `0`: No.
+                     * Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
                      */
                     uint64_t m_isDynamicSpec;
                     bool m_isDynamicSpecHasBeenSet;
 
                     /**
-                     * Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Floating specification.
                      */
                     DynamicPodSpec m_dynamicPodSpec;
                     bool m_dynamicPodSpecHasBeenSet;
 
                     /**
-                     * Unique ID of VPC network.
+                     * Unique ID of the VPC.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Unique ID of a VPC subnet.
+                     * Unique ID of the VPC subnet.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;

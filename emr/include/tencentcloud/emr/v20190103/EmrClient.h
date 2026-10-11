@@ -35,6 +35,8 @@
 #include <tencentcloud/emr/v20190103/model/ConvertPreToPostClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/CreateClusterRequest.h>
 #include <tencentcloud/emr/v20190103/model/CreateClusterResponse.h>
+#include <tencentcloud/emr/v20190103/model/CreateDynamicInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/CreateDynamicInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/CreateGroupsSTDRequest.h>
 #include <tencentcloud/emr/v20190103/model/CreateGroupsSTDResponse.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceRequest.h>
@@ -55,22 +57,36 @@
 #include <tencentcloud/emr/v20190103/model/DescribeAutoScaleRecordsResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeAutoScaleStrategiesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeAutoScaleStrategiesResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeBootScriptRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeBootScriptResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterFlowStatusDetailRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterFlowStatusDetailResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeDAGInfoRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeDAGInfoResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeDynamicInstanceDetailRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeDynamicInstanceDetailResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeDynamicInstanceListRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeDynamicInstanceListResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeEMREventListRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeEMREventListResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeEmrApplicationStaticsRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeEmrApplicationStaticsResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeEmrOverviewMetricsRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeEmrOverviewMetricsResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeExportConfsRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeExportConfsResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeGlobalConfigRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeGlobalConfigResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeGroupsSTDRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeGroupsSTDResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeHBaseTableOverviewRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeHBaseTableOverviewResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeHBaseTableRequestMetricRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeHBaseTableRequestMetricResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeHBaseTableStoreSizeMetricRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeHBaseTableStoreSizeMetricResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeHDFSStorageInfoRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeHDFSStorageInfoResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeHiveQueriesRequest.h>
@@ -79,12 +95,16 @@
 #include <tencentcloud/emr/v20190103/model/DescribeInsightListResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInspectionTaskResultRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInspectionTaskResultResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeInstanceOplogRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeInstanceOplogResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesListRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesListResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeKyuubiQueryInfoRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeKyuubiQueryInfoResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeMetaDBInfoRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeMetaDBInfoResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeNodeDataDisksRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeNodeDataDisksResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeNodeResourceConfigFastRequest.h>
@@ -125,10 +145,16 @@
 #include <tencentcloud/emr/v20190103/model/InquiryPriceScaleOutInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/InstallSoftwareRequest.h>
+#include <tencentcloud/emr/v20190103/model/InstallSoftwareResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyAutoRenewFlagRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyAutoRenewFlagResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyAutoScaleStrategyRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyAutoScaleStrategyResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyBootScriptRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyBootScriptResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyDynamicInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyDynamicInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyGlobalConfigRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyGlobalConfigResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyInspectionSettingsRequest.h>
@@ -147,6 +173,8 @@
 #include <tencentcloud/emr/v20190103/model/ModifySLInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifySLInstanceBasicRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifySLInstanceBasicResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyServiceParamsByExportConfsRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyServiceParamsByExportConfsResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyUserGroupRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyUserGroupResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyUserManagerPwdRequest.h>
@@ -171,6 +199,8 @@
 #include <tencentcloud/emr/v20190103/model/StartStopServiceOrMonitorResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateClusterNodesRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateClusterNodesResponse.h>
+#include <tencentcloud/emr/v20190103/model/TerminateDynamicInstancesRequest.h>
+#include <tencentcloud/emr/v20190103/model/TerminateDynamicInstancesResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateSLInstanceRequest.h>
@@ -209,6 +239,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClusterResponse> CreateClusterOutcome;
                 typedef std::future<CreateClusterOutcome> CreateClusterOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::CreateClusterRequest&, CreateClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDynamicInstanceResponse> CreateDynamicInstanceOutcome;
+                typedef std::future<CreateDynamicInstanceOutcome> CreateDynamicInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::CreateDynamicInstanceRequest&, CreateDynamicInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDynamicInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateGroupsSTDResponse> CreateGroupsSTDOutcome;
                 typedef std::future<CreateGroupsSTDOutcome> CreateGroupsSTDOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::CreateGroupsSTDRequest&, CreateGroupsSTDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGroupsSTDAsyncHandler;
@@ -239,6 +272,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAutoScaleStrategiesResponse> DescribeAutoScaleStrategiesOutcome;
                 typedef std::future<DescribeAutoScaleStrategiesOutcome> DescribeAutoScaleStrategiesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeAutoScaleStrategiesRequest&, DescribeAutoScaleStrategiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScaleStrategiesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBootScriptResponse> DescribeBootScriptOutcome;
+                typedef std::future<DescribeBootScriptOutcome> DescribeBootScriptOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeBootScriptRequest&, DescribeBootScriptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBootScriptAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterFlowStatusDetailResponse> DescribeClusterFlowStatusDetailOutcome;
                 typedef std::future<DescribeClusterFlowStatusDetailOutcome> DescribeClusterFlowStatusDetailOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeClusterFlowStatusDetailRequest&, DescribeClusterFlowStatusDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterFlowStatusDetailAsyncHandler;
@@ -248,12 +284,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDAGInfoResponse> DescribeDAGInfoOutcome;
                 typedef std::future<DescribeDAGInfoOutcome> DescribeDAGInfoOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeDAGInfoRequest&, DescribeDAGInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDAGInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDynamicInstanceDetailResponse> DescribeDynamicInstanceDetailOutcome;
+                typedef std::future<DescribeDynamicInstanceDetailOutcome> DescribeDynamicInstanceDetailOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeDynamicInstanceDetailRequest&, DescribeDynamicInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDynamicInstanceDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDynamicInstanceListResponse> DescribeDynamicInstanceListOutcome;
+                typedef std::future<DescribeDynamicInstanceListOutcome> DescribeDynamicInstanceListOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeDynamicInstanceListRequest&, DescribeDynamicInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDynamicInstanceListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEMREventListResponse> DescribeEMREventListOutcome;
+                typedef std::future<DescribeEMREventListOutcome> DescribeEMREventListOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeEMREventListRequest&, DescribeEMREventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEMREventListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEmrApplicationStaticsResponse> DescribeEmrApplicationStaticsOutcome;
                 typedef std::future<DescribeEmrApplicationStaticsOutcome> DescribeEmrApplicationStaticsOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeEmrApplicationStaticsRequest&, DescribeEmrApplicationStaticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEmrApplicationStaticsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEmrOverviewMetricsResponse> DescribeEmrOverviewMetricsOutcome;
                 typedef std::future<DescribeEmrOverviewMetricsOutcome> DescribeEmrOverviewMetricsOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeEmrOverviewMetricsRequest&, DescribeEmrOverviewMetricsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEmrOverviewMetricsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExportConfsResponse> DescribeExportConfsOutcome;
+                typedef std::future<DescribeExportConfsOutcome> DescribeExportConfsOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeExportConfsRequest&, DescribeExportConfsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExportConfsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGlobalConfigResponse> DescribeGlobalConfigOutcome;
                 typedef std::future<DescribeGlobalConfigOutcome> DescribeGlobalConfigOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeGlobalConfigRequest&, DescribeGlobalConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlobalConfigAsyncHandler;
@@ -263,6 +311,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHBaseTableOverviewResponse> DescribeHBaseTableOverviewOutcome;
                 typedef std::future<DescribeHBaseTableOverviewOutcome> DescribeHBaseTableOverviewOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeHBaseTableOverviewRequest&, DescribeHBaseTableOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHBaseTableOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHBaseTableRequestMetricResponse> DescribeHBaseTableRequestMetricOutcome;
+                typedef std::future<DescribeHBaseTableRequestMetricOutcome> DescribeHBaseTableRequestMetricOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeHBaseTableRequestMetricRequest&, DescribeHBaseTableRequestMetricOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHBaseTableRequestMetricAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHBaseTableStoreSizeMetricResponse> DescribeHBaseTableStoreSizeMetricOutcome;
+                typedef std::future<DescribeHBaseTableStoreSizeMetricOutcome> DescribeHBaseTableStoreSizeMetricOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeHBaseTableStoreSizeMetricRequest&, DescribeHBaseTableStoreSizeMetricOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHBaseTableStoreSizeMetricAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHDFSStorageInfoResponse> DescribeHDFSStorageInfoOutcome;
                 typedef std::future<DescribeHDFSStorageInfoOutcome> DescribeHDFSStorageInfoOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeHDFSStorageInfoRequest&, DescribeHDFSStorageInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHDFSStorageInfoAsyncHandler;
@@ -275,6 +329,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInspectionTaskResultResponse> DescribeInspectionTaskResultOutcome;
                 typedef std::future<DescribeInspectionTaskResultOutcome> DescribeInspectionTaskResultOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeInspectionTaskResultRequest&, DescribeInspectionTaskResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInspectionTaskResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceOplogResponse> DescribeInstanceOplogOutcome;
+                typedef std::future<DescribeInstanceOplogOutcome> DescribeInstanceOplogOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeInstanceOplogRequest&, DescribeInstanceOplogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceOplogAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
@@ -284,6 +341,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeKyuubiQueryInfoResponse> DescribeKyuubiQueryInfoOutcome;
                 typedef std::future<DescribeKyuubiQueryInfoOutcome> DescribeKyuubiQueryInfoOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeKyuubiQueryInfoRequest&, DescribeKyuubiQueryInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKyuubiQueryInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMetaDBInfoResponse> DescribeMetaDBInfoOutcome;
+                typedef std::future<DescribeMetaDBInfoOutcome> DescribeMetaDBInfoOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeMetaDBInfoRequest&, DescribeMetaDBInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMetaDBInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNodeDataDisksResponse> DescribeNodeDataDisksOutcome;
                 typedef std::future<DescribeNodeDataDisksOutcome> DescribeNodeDataDisksOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeNodeDataDisksRequest&, DescribeNodeDataDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNodeDataDisksAsyncHandler;
@@ -344,12 +404,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquiryPriceUpdateInstanceResponse> InquiryPriceUpdateInstanceOutcome;
                 typedef std::future<InquiryPriceUpdateInstanceOutcome> InquiryPriceUpdateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::InquiryPriceUpdateInstanceRequest&, InquiryPriceUpdateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceUpdateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::InstallSoftwareResponse> InstallSoftwareOutcome;
+                typedef std::future<InstallSoftwareOutcome> InstallSoftwareOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::InstallSoftwareRequest&, InstallSoftwareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InstallSoftwareAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAutoRenewFlagResponse> ModifyAutoRenewFlagOutcome;
                 typedef std::future<ModifyAutoRenewFlagOutcome> ModifyAutoRenewFlagOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyAutoRenewFlagRequest&, ModifyAutoRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoRenewFlagAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAutoScaleStrategyResponse> ModifyAutoScaleStrategyOutcome;
                 typedef std::future<ModifyAutoScaleStrategyOutcome> ModifyAutoScaleStrategyOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyAutoScaleStrategyRequest&, ModifyAutoScaleStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoScaleStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBootScriptResponse> ModifyBootScriptOutcome;
+                typedef std::future<ModifyBootScriptOutcome> ModifyBootScriptOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyBootScriptRequest&, ModifyBootScriptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBootScriptAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDynamicInstanceResponse> ModifyDynamicInstanceOutcome;
+                typedef std::future<ModifyDynamicInstanceOutcome> ModifyDynamicInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyDynamicInstanceRequest&, ModifyDynamicInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDynamicInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyGlobalConfigResponse> ModifyGlobalConfigOutcome;
                 typedef std::future<ModifyGlobalConfigOutcome> ModifyGlobalConfigOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyGlobalConfigRequest&, ModifyGlobalConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGlobalConfigAsyncHandler;
@@ -377,6 +446,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySLInstanceBasicResponse> ModifySLInstanceBasicOutcome;
                 typedef std::future<ModifySLInstanceBasicOutcome> ModifySLInstanceBasicOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifySLInstanceBasicRequest&, ModifySLInstanceBasicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySLInstanceBasicAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyServiceParamsByExportConfsResponse> ModifyServiceParamsByExportConfsOutcome;
+                typedef std::future<ModifyServiceParamsByExportConfsOutcome> ModifyServiceParamsByExportConfsOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyServiceParamsByExportConfsRequest&, ModifyServiceParamsByExportConfsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyServiceParamsByExportConfsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyUserGroupResponse> ModifyUserGroupOutcome;
                 typedef std::future<ModifyUserGroupOutcome> ModifyUserGroupOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyUserGroupRequest&, ModifyUserGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserGroupAsyncHandler;
@@ -413,6 +485,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::TerminateClusterNodesResponse> TerminateClusterNodesOutcome;
                 typedef std::future<TerminateClusterNodesOutcome> TerminateClusterNodesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateClusterNodesRequest&, TerminateClusterNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateClusterNodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateDynamicInstancesResponse> TerminateDynamicInstancesOutcome;
+                typedef std::future<TerminateDynamicInstancesOutcome> TerminateDynamicInstancesOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::TerminateDynamicInstancesRequest&, TerminateDynamicInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDynamicInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateInstanceResponse> TerminateInstanceOutcome;
                 typedef std::future<TerminateInstanceOutcome> TerminateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateInstanceRequest&, TerminateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateInstanceAsyncHandler;
@@ -426,7 +501,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to add scaling rules by load and time.
+                 *This API is used to add an automatic scaling rule by load and time.
                  * @param req AddMetricScaleStrategyRequest
                  * @return AddMetricScaleStrategyOutcome
                  */
@@ -435,7 +510,7 @@ namespace TencentCloud
                 AddMetricScaleStrategyOutcomeCallable AddMetricScaleStrategyCallable(const Model::AddMetricScaleStrategyRequest& request);
 
                 /**
-                 *This API is used to add node specifications of the current cluster.
+                 *This API is used to add node specifications for the current cluster.
                  * @param req AddNodeResourceConfigRequest
                  * @return AddNodeResourceConfigOutcome
                  */
@@ -444,8 +519,8 @@ namespace TencentCloud
                 AddNodeResourceConfigOutcomeCallable AddNodeResourceConfigCallable(const Model::AddNodeResourceConfigRequest& request);
 
                 /**
-                 *This API is available for clusters with OpenLDAP components configured.
-This API is used to add user lists (user management).
+                 *This API is used for clusters with the OpenLDAP component installed.
+This API is used to add a user list (user management).
                  * @param req AddUsersForUserManagerRequest
                  * @return AddUsersForUserManagerOutcome
                  */
@@ -454,7 +529,7 @@ This API is used to add user lists (user management).
                 AddUsersForUserManagerOutcomeCallable AddUsersForUserManagerCallable(const Model::AddUsersForUserManagerRequest& request);
 
                 /**
-                 *This API is used to mount cloud disks.
+                 *This API is used to mount a cloud disk.
                  * @param req AttachDisksRequest
                  * @return AttachDisksOutcome
                  */
@@ -463,7 +538,7 @@ This API is used to add user lists (user management).
                 AttachDisksOutcomeCallable AttachDisksCallable(const Model::AttachDisksRequest& request);
 
                 /**
-                 *This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding cdb).
+                 *This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding CDB).
                  * @param req ConvertPreToPostClusterRequest
                  * @return ConvertPreToPostClusterOutcome
                  */
@@ -472,7 +547,7 @@ This API is used to add user lists (user management).
                 ConvertPreToPostClusterOutcomeCallable ConvertPreToPostClusterCallable(const Model::ConvertPreToPostClusterRequest& request);
 
                 /**
-                 *This API is used to create an EMR cluster instance.
+                 *This API is used to create an EMR cluster.
                  * @param req CreateClusterRequest
                  * @return CreateClusterOutcome
                  */
@@ -481,7 +556,16 @@ This API is used to add user lists (user management).
                 CreateClusterOutcomeCallable CreateClusterCallable(const Model::CreateClusterRequest& request);
 
                 /**
-                 *This API is used to create user groups in batches under User Management.
+                 *This API is used to create a DynamicInstance in a containerized EMR on TKE cluster.
+                 * @param req CreateDynamicInstanceRequest
+                 * @return CreateDynamicInstanceOutcome
+                 */
+                CreateDynamicInstanceOutcome CreateDynamicInstance(const Model::CreateDynamicInstanceRequest &request);
+                void CreateDynamicInstanceAsync(const Model::CreateDynamicInstanceRequest& request, const CreateDynamicInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDynamicInstanceOutcomeCallable CreateDynamicInstanceCallable(const Model::CreateDynamicInstanceRequest& request);
+
+                /**
+                 *This API is used to create user groups in batches in user management.
                  * @param req CreateGroupsSTDRequest
                  * @return CreateGroupsSTDOutcome
                  */
@@ -490,7 +574,7 @@ This API is used to add user lists (user management).
                 CreateGroupsSTDOutcomeCallable CreateGroupsSTDCallable(const Model::CreateGroupsSTDRequest& request);
 
                 /**
-                 *This API is used to create an EMR cluster instance.
+                 *This API is used to create an EMR cluster.
                  * @param req CreateInstanceRequest
                  * @return CreateInstanceOutcome
                  */
@@ -499,7 +583,8 @@ This API is used to add user lists (user management).
                 CreateInstanceOutcomeCallable CreateInstanceCallable(const Model::CreateInstanceRequest& request);
 
                 /**
-                 *This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+                 *This API is used to create a Serverless instance, for example, HBase, StarRocks, and TCBase instances.- This API is successfully called, and a Serverless instance is created. If the instance creation request succeeds, InstanceId of the instance and RequestID of the request are returned.
+- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
                  * @param req CreateSLInstanceRequest
                  * @return CreateSLInstanceOutcome
                  */
@@ -508,7 +593,7 @@ This API is used to add user lists (user management).
                 CreateSLInstanceOutcomeCallable CreateSLInstanceCallable(const Model::CreateSLInstanceRequest& request);
 
                 /**
-                 *This API is used to delete automatic scaling rules. Nodes scaled based on these rules are destroyed in the background.
+                 *This API is used to delete an automatic scaling rule. Nodes scaled based on this rule are terminated in the backend.
                  * @param req DeleteAutoScaleStrategyRequest
                  * @return DeleteAutoScaleStrategyOutcome
                  */
@@ -526,7 +611,7 @@ This API is used to add user lists (user management).
                 DeleteGroupsSTDOutcomeCallable DeleteGroupsSTDCallable(const Model::DeleteGroupsSTDRequest& request);
 
                 /**
-                 *This API is used to delete the node specifications of the current cluster.
+                 *This API is used to delete node specifications of the current cluster.
                  * @param req DeleteNodeResourceConfigRequest
                  * @return DeleteNodeResourceConfigOutcome
                  */
@@ -535,7 +620,7 @@ This API is used to add user lists (user management).
                 DeleteNodeResourceConfigOutcomeCallable DeleteNodeResourceConfigCallable(const Model::DeleteNodeResourceConfigRequest& request);
 
                 /**
-                 *This API is used to bring the configuration into effect in YARN resource scheduling after deployment.
+                 *This API is used to bring the deployment into effect in YARN resource scheduling.
                  * @param req DeployYarnConfRequest
                  * @return DeployYarnConfOutcome
                  */
@@ -544,7 +629,7 @@ This API is used to add user lists (user management).
                 DeployYarnConfOutcomeCallable DeployYarnConfCallable(const Model::DeployYarnConfRequest& request);
 
                 /**
-                 *This API is used to access the global configuration of automatic scaling.
+                 *This API is used to obtain the global configuration of auto scaling.
                  * @param req DescribeAutoScaleGroupGlobalConfRequest
                  * @return DescribeAutoScaleGroupGlobalConfOutcome
                  */
@@ -553,7 +638,7 @@ This API is used to add user lists (user management).
                 DescribeAutoScaleGroupGlobalConfOutcomeCallable DescribeAutoScaleGroupGlobalConfCallable(const Model::DescribeAutoScaleGroupGlobalConfRequest& request);
 
                 /**
-                 *This API is used to inquiry detailed records of cluster autoscaling.
+                 *This API is used to obtain the detailed automatic scaling records of a cluster.
                  * @param req DescribeAutoScaleRecordsRequest
                  * @return DescribeAutoScaleRecordsOutcome
                  */
@@ -562,7 +647,7 @@ This API is used to add user lists (user management).
                 DescribeAutoScaleRecordsOutcomeCallable DescribeAutoScaleRecordsCallable(const Model::DescribeAutoScaleRecordsRequest& request);
 
                 /**
-                 *This API is used to access automatic scaling rules.
+                 *This API is used to obtain an automatic scaling rule.
                  * @param req DescribeAutoScaleStrategiesRequest
                  * @return DescribeAutoScaleStrategiesOutcome
                  */
@@ -571,7 +656,16 @@ This API is used to add user lists (user management).
                 DescribeAutoScaleStrategiesOutcomeCallable DescribeAutoScaleStrategiesCallable(const Model::DescribeAutoScaleStrategiesRequest& request);
 
                 /**
-                 *This API is used to query the EMR task running details status.
+                 *This API is used to obtain a bootstrap script.
+                 * @param req DescribeBootScriptRequest
+                 * @return DescribeBootScriptOutcome
+                 */
+                DescribeBootScriptOutcome DescribeBootScript(const Model::DescribeBootScriptRequest &request);
+                void DescribeBootScriptAsync(const Model::DescribeBootScriptRequest& request, const DescribeBootScriptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBootScriptOutcomeCallable DescribeBootScriptCallable(const Model::DescribeBootScriptRequest& request);
+
+                /**
+                 *This API is used to query the running status details of an EMR cluster task.
                  * @param req DescribeClusterFlowStatusDetailRequest
                  * @return DescribeClusterFlowStatusDetailOutcome
                  */
@@ -580,7 +674,7 @@ This API is used to add user lists (user management).
                 DescribeClusterFlowStatusDetailOutcomeCallable DescribeClusterFlowStatusDetailCallable(const Model::DescribeClusterFlowStatusDetailRequest& request);
 
                 /**
-                 *This API is used to query the information of nodes in a cluster.
+                 *This API is used to query information of a cluster node.
                  * @param req DescribeClusterNodesRequest
                  * @return DescribeClusterNodesOutcome
                  */
@@ -598,7 +692,34 @@ This API is used to add user lists (user management).
                 DescribeDAGInfoOutcomeCallable DescribeDAGInfoCallable(const Model::DescribeDAGInfoRequest& request);
 
                 /**
-                 *This API is used to query the YARN application statistics API.
+                 *This API is used to describe the details of a DynamicInstance in an EMR on TKE cluster.
+                 * @param req DescribeDynamicInstanceDetailRequest
+                 * @return DescribeDynamicInstanceDetailOutcome
+                 */
+                DescribeDynamicInstanceDetailOutcome DescribeDynamicInstanceDetail(const Model::DescribeDynamicInstanceDetailRequest &request);
+                void DescribeDynamicInstanceDetailAsync(const Model::DescribeDynamicInstanceDetailRequest& request, const DescribeDynamicInstanceDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDynamicInstanceDetailOutcomeCallable DescribeDynamicInstanceDetailCallable(const Model::DescribeDynamicInstanceDetailRequest& request);
+
+                /**
+                 *This API is used to describe the DynamicInstance list of an EMR on TKE cluster.
+                 * @param req DescribeDynamicInstanceListRequest
+                 * @return DescribeDynamicInstanceListOutcome
+                 */
+                DescribeDynamicInstanceListOutcome DescribeDynamicInstanceList(const Model::DescribeDynamicInstanceListRequest &request);
+                void DescribeDynamicInstanceListAsync(const Model::DescribeDynamicInstanceListRequest& request, const DescribeDynamicInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDynamicInstanceListOutcomeCallable DescribeDynamicInstanceListCallable(const Model::DescribeDynamicInstanceListRequest& request);
+
+                /**
+                 *This API is used to query EMR event monitoring data.
+                 * @param req DescribeEMREventListRequest
+                 * @return DescribeEMREventListOutcome
+                 */
+                DescribeEMREventListOutcome DescribeEMREventList(const Model::DescribeEMREventListRequest &request);
+                void DescribeEMREventListAsync(const Model::DescribeEMREventListRequest& request, const DescribeEMREventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEMREventListOutcomeCallable DescribeEMREventListCallable(const Model::DescribeEMREventListRequest& request);
+
+                /**
+                 *This API is used to query the YARN task statistics information.
                  * @param req DescribeEmrApplicationStaticsRequest
                  * @return DescribeEmrApplicationStaticsOutcome
                  */
@@ -607,7 +728,7 @@ This API is used to add user lists (user management).
                 DescribeEmrApplicationStaticsOutcomeCallable DescribeEmrApplicationStaticsCallable(const Model::DescribeEmrApplicationStaticsRequest& request);
 
                 /**
-                 *This API is used to query the metric data on the monitoring overview page.
+                 *This API is used to query metric data on the monitoring overview page.
                  * @param req DescribeEmrOverviewMetricsRequest
                  * @return DescribeEmrOverviewMetricsOutcome
                  */
@@ -616,7 +737,16 @@ This API is used to add user lists (user management).
                 DescribeEmrOverviewMetricsOutcomeCallable DescribeEmrOverviewMetricsCallable(const Model::DescribeEmrOverviewMetricsRequest& request);
 
                 /**
-                 *This API is used to query the global configurations of YARN Resource Scheduling.
+                 *This API is used to query the export configuration.
+                 * @param req DescribeExportConfsRequest
+                 * @return DescribeExportConfsOutcome
+                 */
+                DescribeExportConfsOutcome DescribeExportConfs(const Model::DescribeExportConfsRequest &request);
+                void DescribeExportConfsAsync(const Model::DescribeExportConfsRequest& request, const DescribeExportConfsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExportConfsOutcomeCallable DescribeExportConfsCallable(const Model::DescribeExportConfsRequest& request);
+
+                /**
+                 *This API is used to query the global configuration of YARN resource scheduling.
                  * @param req DescribeGlobalConfigRequest
                  * @return DescribeGlobalConfigOutcome
                  */
@@ -634,7 +764,7 @@ This API is used to add user lists (user management).
                 DescribeGroupsSTDOutcomeCallable DescribeGroupsSTDCallable(const Model::DescribeGroupsSTDRequest& request);
 
                 /**
-                 *This API is used to access the overview of HBase table-level monitoring data.
+                 *This API is used to obtain an overview of HBase table-level monitoring data.
                  * @param req DescribeHBaseTableOverviewRequest
                  * @return DescribeHBaseTableOverviewOutcome
                  */
@@ -643,7 +773,25 @@ This API is used to add user lists (user management).
                 DescribeHBaseTableOverviewOutcomeCallable DescribeHBaseTableOverviewCallable(const Model::DescribeHBaseTableOverviewRequest& request);
 
                 /**
-                 *This API is used to query information of file(s) stored in HDFS.
+                 *This API is used to obtain the read/write rate at the HBase table level.
+                 * @param req DescribeHBaseTableRequestMetricRequest
+                 * @return DescribeHBaseTableRequestMetricOutcome
+                 */
+                DescribeHBaseTableRequestMetricOutcome DescribeHBaseTableRequestMetric(const Model::DescribeHBaseTableRequestMetricRequest &request);
+                void DescribeHBaseTableRequestMetricAsync(const Model::DescribeHBaseTableRequestMetricRequest& request, const DescribeHBaseTableRequestMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHBaseTableRequestMetricOutcomeCallable DescribeHBaseTableRequestMetricCallable(const Model::DescribeHBaseTableRequestMetricRequest& request);
+
+                /**
+                 *This API is used to query the StoreSize monitoring metric data at the HBase table level.
+                 * @param req DescribeHBaseTableStoreSizeMetricRequest
+                 * @return DescribeHBaseTableStoreSizeMetricOutcome
+                 */
+                DescribeHBaseTableStoreSizeMetricOutcome DescribeHBaseTableStoreSizeMetric(const Model::DescribeHBaseTableStoreSizeMetricRequest &request);
+                void DescribeHBaseTableStoreSizeMetricAsync(const Model::DescribeHBaseTableStoreSizeMetricRequest& request, const DescribeHBaseTableStoreSizeMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHBaseTableStoreSizeMetricOutcomeCallable DescribeHBaseTableStoreSizeMetricCallable(const Model::DescribeHBaseTableStoreSizeMetricRequest& request);
+
+                /**
+                 *This API is used to query information of files stored in HDFS.
                  * @param req DescribeHDFSStorageInfoRequest
                  * @return DescribeHDFSStorageInfoOutcome
                  */
@@ -652,7 +800,7 @@ This API is used to add user lists (user management).
                 DescribeHDFSStorageInfoOutcomeCallable DescribeHDFSStorageInfoCallable(const Model::DescribeHDFSStorageInfoRequest& request);
 
                 /**
-                 *This API is used to inquiry Hive query data.
+                 *This API is used to obtain Hive query information.
                  * @param req DescribeHiveQueriesRequest
                  * @return DescribeHiveQueriesOutcome
                  */
@@ -679,7 +827,16 @@ This API is used to add user lists (user management).
                 DescribeInspectionTaskResultOutcomeCallable DescribeInspectionTaskResultCallable(const Model::DescribeInspectionTaskResultRequest& request);
 
                 /**
-                 *This API is used to query the information of instances in a cluster.
+                 *This API is used to obtain the instance operation logs.
+                 * @param req DescribeInstanceOplogRequest
+                 * @return DescribeInstanceOplogOutcome
+                 */
+                DescribeInstanceOplogOutcome DescribeInstanceOplog(const Model::DescribeInstanceOplogRequest &request);
+                void DescribeInstanceOplogAsync(const Model::DescribeInstanceOplogRequest& request, const DescribeInstanceOplogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceOplogOutcomeCallable DescribeInstanceOplogCallable(const Model::DescribeInstanceOplogRequest& request);
+
+                /**
+                 *This API is used to query cluster information.
                  * @param req DescribeInstancesRequest
                  * @return DescribeInstancesOutcome
                  */
@@ -697,7 +854,7 @@ This API is used to add user lists (user management).
                 DescribeInstancesListOutcomeCallable DescribeInstancesListCallable(const Model::DescribeInstancesListRequest& request);
 
                 /**
-                 *This API is used to query Kyuubi query information.
+                 *This API is used to obtain Kyuubi query information.
                  * @param req DescribeKyuubiQueryInfoRequest
                  * @return DescribeKyuubiQueryInfoOutcome
                  */
@@ -706,7 +863,16 @@ This API is used to add user lists (user management).
                 DescribeKyuubiQueryInfoOutcomeCallable DescribeKyuubiQueryInfoCallable(const Model::DescribeKyuubiQueryInfoRequest& request);
 
                 /**
-                 *This API is used to query data disk information of nodes.
+                 *This API is used to obtain cluster MetaDB data.
+                 * @param req DescribeMetaDBInfoRequest
+                 * @return DescribeMetaDBInfoOutcome
+                 */
+                DescribeMetaDBInfoOutcome DescribeMetaDBInfo(const Model::DescribeMetaDBInfoRequest &request);
+                void DescribeMetaDBInfoAsync(const Model::DescribeMetaDBInfoRequest& request, const DescribeMetaDBInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMetaDBInfoOutcomeCallable DescribeMetaDBInfoCallable(const Model::DescribeMetaDBInfoRequest& request);
+
+                /**
+                 *This API is used to query data disk information of a node.
                  * @param req DescribeNodeDataDisksRequest
                  * @return DescribeNodeDataDisksOutcome
                  */
@@ -733,7 +899,7 @@ This API is used to add user lists (user management).
                 DescribeNodeSpecOutcomeCallable DescribeNodeSpecCallable(const Model::DescribeNodeSpecRequest& request);
 
                 /**
-                 *This API is used to query YARN resource scheduling information. It has been deprecated. You can use the DescribeYarnQueue API to query queue information.
+                 *This API is used to query YARN resource scheduling information. It has been deprecated. Please use `DescribeYarnQueue` to query queue information.
                  * @param req DescribeResourceScheduleRequest
                  * @return DescribeResourceScheduleOutcome
                  */
@@ -742,7 +908,7 @@ This API is used to add user lists (user management).
                 DescribeResourceScheduleOutcomeCallable DescribeResourceScheduleCallable(const Model::DescribeResourceScheduleRequest& request);
 
                 /**
-                 *This API is used to query change details in YARN resource scheduling.
+                 *This API is used to query the change details of YARN resource scheduling.
                  * @param req DescribeResourceScheduleDiffDetailRequest
                  * @return DescribeResourceScheduleDiffDetailOutcome
                  */
@@ -751,7 +917,7 @@ This API is used to add user lists (user management).
                 DescribeResourceScheduleDiffDetailOutcomeCallable DescribeResourceScheduleDiffDetailCallable(const Model::DescribeResourceScheduleDiffDetailRequest& request);
 
                 /**
-                 *This API is used to query the basic information of Serverless HBase instances.
+                 *This API is used to query basic information of a Serverless HBase instance.
                  * @param req DescribeSLInstanceRequest
                  * @return DescribeSLInstanceOutcome
                  */
@@ -760,7 +926,7 @@ This API is used to add user lists (user management).
                 DescribeSLInstanceOutcomeCallable DescribeSLInstanceCallable(const Model::DescribeSLInstanceRequest& request);
 
                 /**
-                 *This API is used to query the detailed information of the Serverless HBase instance list.
+                 *This API is used to query detailed information of the Serverless HBase instance list.
                  * @param req DescribeSLInstanceListRequest
                  * @return DescribeSLInstanceListOutcome
                  */
@@ -787,7 +953,7 @@ This API is used to add user lists (user management).
                 DescribeServiceNodeInfosOutcomeCallable DescribeServiceNodeInfosCallable(const Model::DescribeServiceNodeInfosRequest& request);
 
                 /**
-                 *This API is used to obtain a Spark application list.
+                 *This API is used to obtain the Spark application list.
                  * @param req DescribeSparkApplicationsRequest
                  * @return DescribeSparkApplicationsOutcome
                  */
@@ -796,7 +962,7 @@ This API is used to add user lists (user management).
                 DescribeSparkApplicationsOutcomeCallable DescribeSparkApplicationsCallable(const Model::DescribeSparkApplicationsRequest& request);
 
                 /**
-                 *This API is used to query the Spark query information list.
+                 *This API is used to obtain the Spark query information list.
                  * @param req DescribeSparkQueriesRequest
                  * @return DescribeSparkQueriesOutcome
                  */
@@ -805,7 +971,7 @@ This API is used to add user lists (user management).
                 DescribeSparkQueriesOutcomeCallable DescribeSparkQueriesCallable(const Model::DescribeSparkQueriesRequest& request);
 
                 /**
-                 *This API is used to query StarRocks information.
+                 *This API is used to obtain StarRocks query information.
                  * @param req DescribeStarRocksQueryInfoRequest
                  * @return DescribeStarRocksQueryInfoOutcome
                  */
@@ -814,7 +980,7 @@ This API is used to add user lists (user management).
                 DescribeStarRocksQueryInfoOutcomeCallable DescribeStarRocksQueryInfoCallable(const Model::DescribeStarRocksQueryInfoRequest& request);
 
                 /**
-                 *This API is used to query Trino(PrestoSQL) query information.
+                 *This API is used to obtain Trino (PrestoSQL) query information.
                  * @param req DescribeTrinoQueryInfoRequest
                  * @return DescribeTrinoQueryInfoOutcome
                  */
@@ -823,8 +989,8 @@ This API is used to add user lists (user management).
                 DescribeTrinoQueryInfoOutcomeCallable DescribeTrinoQueryInfoCallable(const Model::DescribeTrinoQueryInfoRequest& request);
 
                 /**
-                 *This API is available for clusters with OpenLDAP components configured.
-This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
+                 *This API is used for clusters with the OpenLDAP component installed.
+This API is used to export users in batches. For a Kerberos cluster, if the keytab file download link is required, set NeedKeytabInfo to true. Note: If SupportDownLoadKeyTab is set to true but DownLoadKeyTabUrl is an empty string, the keytab file is not ready (being generated).
                  * @param req DescribeUsersForUserManagerRequest
                  * @return DescribeUsersForUserManagerOutcome
                  */
@@ -842,7 +1008,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 DescribeYarnQueueOutcomeCallable DescribeYarnQueueCallable(const Model::DescribeYarnQueueRequest& request);
 
                 /**
-                 *This API is used to view the YARN resource scheduling history. It has been deprecated. You can use the Process Center to view the history records.
+                 *This API is used to view the YARN resource scheduling history. It has been deprecated. Please use Task Center to view the history records.
                  * @param req DescribeYarnScheduleHistoryRequest
                  * @return DescribeYarnScheduleHistoryOutcome
                  */
@@ -851,7 +1017,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 DescribeYarnScheduleHistoryOutcomeCallable DescribeYarnScheduleHistoryCallable(const Model::DescribeYarnScheduleHistoryRequest& request);
 
                 /**
-                 *This API is used to query price of instance creation.
+                 *This API is used to inquire the price for instance creation.
                  * @param req InquiryPriceCreateInstanceRequest
                  * @return InquiryPriceCreateInstanceOutcome
                  */
@@ -860,7 +1026,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 InquiryPriceCreateInstanceOutcomeCallable InquiryPriceCreateInstanceCallable(const Model::InquiryPriceCreateInstanceRequest& request);
 
                 /**
-                 *This API is used to query the price for renewal.
+                 *This API is used to inquire the price for renewal.
                  * @param req InquiryPriceRenewInstanceRequest
                  * @return InquiryPriceRenewInstanceOutcome
                  */
@@ -869,7 +1035,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 InquiryPriceRenewInstanceOutcomeCallable InquiryPriceRenewInstanceCallable(const Model::InquiryPriceRenewInstanceRequest& request);
 
                 /**
-                 *This API is used to query price of scale-out.
+                 *This API is used to inquire the price for a scale-out.
                  * @param req InquiryPriceScaleOutInstanceRequest
                  * @return InquiryPriceScaleOutInstanceOutcome
                  */
@@ -878,7 +1044,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 InquiryPriceScaleOutInstanceOutcomeCallable InquiryPriceScaleOutInstanceCallable(const Model::InquiryPriceScaleOutInstanceRequest& request);
 
                 /**
-                 *This API is used to query price of scaling.
+                 *This API is used to inquire the price for the configuration change.
                  * @param req InquiryPriceUpdateInstanceRequest
                  * @return InquiryPriceUpdateInstanceOutcome
                  */
@@ -887,8 +1053,17 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 InquiryPriceUpdateInstanceOutcomeCallable InquiryPriceUpdateInstanceCallable(const Model::InquiryPriceUpdateInstanceRequest& request);
 
                 /**
-                 *This API is used to introduce the prerequisite prepaid clusters.
-This API is used to enable or disable automatic renewal at the resource level.
+                 *This API is used to install a component. For components dependent on the MetaDB, a CDB order may be required. The components that can be installed on the current cluster and the components that might require a CDB order can be viewed via InstallSoftWareInfo.
+                 * @param req InstallSoftwareRequest
+                 * @return InstallSoftwareOutcome
+                 */
+                InstallSoftwareOutcome InstallSoftware(const Model::InstallSoftwareRequest &request);
+                void InstallSoftwareAsync(const Model::InstallSoftwareRequest& request, const InstallSoftwareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InstallSoftwareOutcomeCallable InstallSoftwareCallable(const Model::InstallSoftwareRequest& request);
+
+                /**
+                 *This API is used to introduce the prerequisites for a prepaid cluster.
+This API is used to enable or disable auto-renewal at the resource level.
                  * @param req ModifyAutoRenewFlagRequest
                  * @return ModifyAutoRenewFlagOutcome
                  */
@@ -897,7 +1072,7 @@ This API is used to enable or disable automatic renewal at the resource level.
                 ModifyAutoRenewFlagOutcomeCallable ModifyAutoRenewFlagCallable(const Model::ModifyAutoRenewFlagRequest& request);
 
                 /**
-                 *This API is used to modify automatic scaling rules.
+                 *This API is used to modify an automatic scaling rule.
                  * @param req ModifyAutoScaleStrategyRequest
                  * @return ModifyAutoScaleStrategyOutcome
                  */
@@ -906,7 +1081,25 @@ This API is used to enable or disable automatic renewal at the resource level.
                 ModifyAutoScaleStrategyOutcomeCallable ModifyAutoScaleStrategyCallable(const Model::ModifyAutoScaleStrategyRequest& request);
 
                 /**
-                 *This API is used to modify the global configuration of YARN Resource Scheduling.
+                 *This API is used to modify a bootstrap script.
+                 * @param req ModifyBootScriptRequest
+                 * @return ModifyBootScriptOutcome
+                 */
+                ModifyBootScriptOutcome ModifyBootScript(const Model::ModifyBootScriptRequest &request);
+                void ModifyBootScriptAsync(const Model::ModifyBootScriptRequest& request, const ModifyBootScriptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBootScriptOutcomeCallable ModifyBootScriptCallable(const Model::ModifyBootScriptRequest& request);
+
+                /**
+                 *This API is used to update a DynamicInstance in a containerized EMR on TKE cluster.
+                 * @param req ModifyDynamicInstanceRequest
+                 * @return ModifyDynamicInstanceOutcome
+                 */
+                ModifyDynamicInstanceOutcome ModifyDynamicInstance(const Model::ModifyDynamicInstanceRequest &request);
+                void ModifyDynamicInstanceAsync(const Model::ModifyDynamicInstanceRequest& request, const ModifyDynamicInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDynamicInstanceOutcomeCallable ModifyDynamicInstanceCallable(const Model::ModifyDynamicInstanceRequest& request);
+
+                /**
+                 *This API is used to modify the global configuration of YARN resource scheduling.
                  * @param req ModifyGlobalConfigRequest
                  * @return ModifyGlobalConfigOutcome
                  */
@@ -915,7 +1108,7 @@ This API is used to enable or disable automatic renewal at the resource level.
                 ModifyGlobalConfigOutcomeCallable ModifyGlobalConfigCallable(const Model::ModifyGlobalConfigRequest& request);
 
                 /**
-                 *This API is used to set inspection task configurations.
+                 *This API is used to set the inspection task configuration.
                  * @param req ModifyInspectionSettingsRequest
                  * @return ModifyInspectionSettingsOutcome
                  */
@@ -924,7 +1117,7 @@ This API is used to enable or disable automatic renewal at the resource level.
                 ModifyInspectionSettingsOutcomeCallable ModifyInspectionSettingsCallable(const Model::ModifyInspectionSettingsRequest& request);
 
                 /**
-                 *This API is used to modify a cluster name.
+                 *This API is used to modify the cluster name.
                  * @param req ModifyInstanceBasicRequest
                  * @return ModifyInstanceBasicOutcome
                  */
@@ -933,7 +1126,7 @@ This API is used to enable or disable automatic renewal at the resource level.
                 ModifyInstanceBasicOutcomeCallable ModifyInstanceBasicCallable(const Model::ModifyInstanceBasicRequest& request);
 
                 /**
-                 *This API is used to resize an instance.
+                 *This API is used to change the instance configuration.
                  * @param req ModifyResourceRequest
                  * @return ModifyResourceOutcome
                  */
@@ -953,7 +1146,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifyResourceScheduleConfigOutcomeCallable ModifyResourceScheduleConfigCallable(const Model::ModifyResourceScheduleConfigRequest& request);
 
                 /**
-                 *This API is used to modify a YARN resource scheduler. After the modification, you can click Deploy to bring it into effect.
+                 *This API is used to modify a YARN resource scheduler. After the modification, click Deploy to make the modification take effect.
                  * @param req ModifyResourceSchedulerRequest
                  * @return ModifyResourceSchedulerOutcome
                  */
@@ -962,7 +1155,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifyResourceSchedulerOutcomeCallable ModifyResourceSchedulerCallable(const Model::ModifyResourceSchedulerRequest& request);
 
                 /**
-                 *This API is used to forcibly modify tags.
+                 *This API is used to forcibly modify a tag.
                  * @param req ModifyResourcesTagsRequest
                  * @return ModifyResourcesTagsOutcome
                  */
@@ -971,7 +1164,9 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifyResourcesTagsOutcomeCallable ModifyResourcesTagsCallable(const Model::ModifyResourcesTagsRequest& request);
 
                 /**
-                 *This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+                 *This API is used to change the configuration of a Serverless HBase instance.
+- This API is successfully called, and a Serverless HBase instance is created. If the instance creation request succeeds, RequestID of the request is returned.
+- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
                  * @param req ModifySLInstanceRequest
                  * @return ModifySLInstanceOutcome
                  */
@@ -980,7 +1175,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifySLInstanceOutcomeCallable ModifySLInstanceCallable(const Model::ModifySLInstanceRequest& request);
 
                 /**
-                 *This API is used to modify the Serverless HBase instance name.
+                 *This API is used to modify the Serverless HBase instance name.
                  * @param req ModifySLInstanceBasicRequest
                  * @return ModifySLInstanceBasicOutcome
                  */
@@ -989,7 +1184,16 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifySLInstanceBasicOutcomeCallable ModifySLInstanceBasicCallable(const Model::ModifySLInstanceBasicRequest& request);
 
                 /**
-                 *This API is used to modify user groups under User Management.
+                 *Configuration import and delivery
+                 * @param req ModifyServiceParamsByExportConfsRequest
+                 * @return ModifyServiceParamsByExportConfsOutcome
+                 */
+                ModifyServiceParamsByExportConfsOutcome ModifyServiceParamsByExportConfs(const Model::ModifyServiceParamsByExportConfsRequest &request);
+                void ModifyServiceParamsByExportConfsAsync(const Model::ModifyServiceParamsByExportConfsRequest& request, const ModifyServiceParamsByExportConfsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyServiceParamsByExportConfsOutcomeCallable ModifyServiceParamsByExportConfsCallable(const Model::ModifyServiceParamsByExportConfsRequest& request);
+
+                /**
+                 *This API is used to modify a user group in user management.
                  * @param req ModifyUserGroupRequest
                  * @return ModifyUserGroupOutcome
                  */
@@ -998,7 +1202,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifyUserGroupOutcomeCallable ModifyUserGroupCallable(const Model::ModifyUserGroupRequest& request);
 
                 /**
-                 *This API is used to change user password (user management).
+                 *This API is used to modify a user password (user management).
                  * @param req ModifyUserManagerPwdRequest
                  * @return ModifyUserManagerPwdOutcome
                  */
@@ -1007,7 +1211,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
                 ModifyUserManagerPwdOutcomeCallable ModifyUserManagerPwdCallable(const Model::ModifyUserManagerPwdRequest& request);
 
                 /**
-                 *This API is used to change the user information of user groups.
+                 *This API is used to change user information in a user group.
                  * @param req ModifyUsersOfGroupSTDRequest
                  * @return ModifyUsersOfGroupSTDOutcome
                  */
@@ -1045,7 +1249,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 ResetYarnConfigOutcomeCallable ResetYarnConfigCallable(const Model::ResetYarnConfigRequest& request);
 
                 /**
-                 *This API is used to scale out the cloud data disk.
+                 *This API is used to scale out cloud data disks.
                  * @param req ResizeDataDisksRequest
                  * @return ResizeDataDisksOutcome
                  */
@@ -1054,7 +1258,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 ResizeDataDisksOutcomeCallable ResizeDataDisksCallable(const Model::ResizeDataDisksRequest& request);
 
                 /**
-                 *This API is used to scale out a cluster.
+                 *This API is used to scale out cluster nodes.
                  * @param req ScaleOutClusterRequest
                  * @return ScaleOutClusterOutcome
                  */
@@ -1063,7 +1267,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 ScaleOutClusterOutcomeCallable ScaleOutClusterCallable(const Model::ScaleOutClusterRequest& request);
 
                 /**
-                 *This API is used to scale out instances.
+                 *This API is used to scale out nodes.
                  * @param req ScaleOutInstanceRequest
                  * @return ScaleOutInstanceOutcome
                  */
@@ -1072,7 +1276,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 ScaleOutInstanceOutcomeCallable ScaleOutInstanceCallable(const Model::ScaleOutInstanceRequest& request);
 
                 /**
-                 *This API is used to set specifications for a node in the current cluster to default or not.
+                 *This API is used to set specifications of a node in the current cluster as the default or cancel the default setting.
                  * @param req SetNodeResourceConfigDefaultRequest
                  * @return SetNodeResourceConfigDefaultOutcome
                  */
@@ -1081,7 +1285,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 SetNodeResourceConfigDefaultOutcomeCallable SetNodeResourceConfigDefaultCallable(const Model::SetNodeResourceConfigDefaultRequest& request);
 
                 /**
-                 *This API is used to start, stop, or restart services.
+                 *This API is used to execute operations such as starting, stopping, and restarting a service.
                  * @param req StartStopServiceOrMonitorRequest
                  * @return StartStopServiceOrMonitorOutcome
                  */
@@ -1090,7 +1294,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 StartStopServiceOrMonitorOutcomeCallable StartStopServiceOrMonitorCallable(const Model::StartStopServiceOrMonitorRequest& request);
 
                 /**
-                 *This API is used to terminate cluster nodes.
+                 *This API is used to terminate a cluster node.
                  * @param req TerminateClusterNodesRequest
                  * @return TerminateClusterNodesOutcome
                  */
@@ -1099,7 +1303,16 @@ This API is used to bring configurations into effect after deployment. It has be
                 TerminateClusterNodesOutcomeCallable TerminateClusterNodesCallable(const Model::TerminateClusterNodesRequest& request);
 
                 /**
-                 *This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
+                 *This API is used to terminate a DynamicInstance in a containerized EMR on TKE cluster.
+                 * @param req TerminateDynamicInstancesRequest
+                 * @return TerminateDynamicInstancesOutcome
+                 */
+                TerminateDynamicInstancesOutcome TerminateDynamicInstances(const Model::TerminateDynamicInstancesRequest &request);
+                void TerminateDynamicInstancesAsync(const Model::TerminateDynamicInstancesRequest& request, const TerminateDynamicInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateDynamicInstancesOutcomeCallable TerminateDynamicInstancesCallable(const Model::TerminateDynamicInstancesRequest& request);
+
+                /**
+                 *This API is used to terminate an EMR instance. It is supported only for the officially billed version of EMR.
                  * @param req TerminateInstanceRequest
                  * @return TerminateInstanceOutcome
                  */
@@ -1108,7 +1321,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 TerminateInstanceOutcomeCallable TerminateInstanceCallable(const Model::TerminateInstanceRequest& request);
 
                 /**
-                 *This API is used to terminate a Serverless HBase instance.
+                 *This API is used to terminate a Serverless HBase instance.
                  * @param req TerminateSLInstanceRequest
                  * @return TerminateSLInstanceOutcome
                  */
@@ -1117,7 +1330,7 @@ This API is used to bring configurations into effect after deployment. It has be
                 TerminateSLInstanceOutcomeCallable TerminateSLInstanceCallable(const Model::TerminateSLInstanceRequest& request);
 
                 /**
-                 *This API is used to terminate a task node.
+                 *This API is used to scale in Task nodes.
                  * @param req TerminateTasksRequest
                  * @return TerminateTasksOutcome
                  */

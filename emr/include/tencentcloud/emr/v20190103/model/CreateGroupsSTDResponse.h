@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output result of each user group.
-                     * @return Data Output result of each user group.
+                     * 获取Response result of each user group.
+                     * @return Data Response result of each user group.
                      * 
                      */
                     std::vector<ResultItem> GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Output result of each user group.
+                     * Response result of each user group.
                      */
                     std::vector<ResultItem> m_data;
                     bool m_dataHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Restart, stop, or start of service/monitoring configurations
+                * Configuration for restarting services/stopping services/starting services/monitoring data.
                 */
                 class StrategyConfig : public AbstractModel
                 {
@@ -48,19 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0: disable rolling restart.
-1: enable rolling start.
-                     * @return RollingRestartSwitch 0: disable rolling restart.
-1: enable rolling start.
+                     * 获取0: disables rolling restart.
+1: enables rolling start.
+                     * @return RollingRestartSwitch 0: disables rolling restart.
+1: enables rolling start.
                      * 
                      */
                     int64_t GetRollingRestartSwitch() const;
 
                     /**
-                     * 设置0: disable rolling restart.
-1: enable rolling start.
-                     * @param _rollingRestartSwitch 0: disable rolling restart.
-1: enable rolling start.
+                     * 设置0: disables rolling restart.
+1: enables rolling start.
+                     * @param _rollingRestartSwitch 0: disables rolling restart.
+1: enables rolling start.
                      * 
                      */
                     void SetRollingRestartSwitch(const int64_t& _rollingRestartSwitch);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool RollingRestartSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Rolling restart quantity per batch, which is up to 99999.
-                     * @return BatchSize Rolling restart quantity per batch, which is up to 99999.
+                     * 获取Number of instances to restart per batch for rolling restart. Maximum value: 99999.
+                     * @return BatchSize Number of instances to restart per batch for rolling restart. Maximum value: 99999.
                      * 
                      */
                     int64_t GetBatchSize() const;
 
                     /**
-                     * 设置Rolling restart quantity per batch, which is up to 99999.
-                     * @param _batchSize Rolling restart quantity per batch, which is up to 99999.
+                     * 设置Number of instances to restart per batch for rolling restart. Maximum value: 99999.
+                     * @param _batchSize Number of instances to restart per batch for rolling restart. Maximum value: 99999.
                      * 
                      */
                     void SetBatchSize(const int64_t& _batchSize);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool BatchSizeHasBeenSet() const;
 
                     /**
-                     * 获取Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
-                     * @return TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+                     * 获取Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
+                     * @return TimeWait Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
                      * 
                      */
                     int64_t GetTimeWait() const;
 
                     /**
-                     * 设置Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
-                     * @param _timeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+                     * 设置Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
+                     * @param _timeWait Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
                      * 
                      */
                     void SetTimeWait(const int64_t& _timeWait);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool TimeWaitHasBeenSet() const;
 
                     /**
-                     * 获取Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
-                     * @return DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+                     * 获取Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
+                     * @return DealOnFail Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
                      * 
                      */
                     int64_t GetDealOnFail() const;
 
                     /**
-                     * 设置Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
-                     * @param _dealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+                     * 设置Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
+                     * @param _dealOnFail Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
                      * 
                      */
                     void SetDealOnFail(const int64_t& _dealOnFail);
@@ -137,18 +137,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Args Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Arg> GetArgs() const;
 
                     /**
                      * 设置Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _args Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetArgs(const std::vector<Arg>& _args);
@@ -163,33 +159,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 0: disable rolling restart.
-1: enable rolling start.
+                     * 0: disables rolling restart.
+1: enables rolling start.
                      */
                     int64_t m_rollingRestartSwitch;
                     bool m_rollingRestartSwitchHasBeenSet;
 
                     /**
-                     * Rolling restart quantity per batch, which is up to 99999.
+                     * Number of instances to restart per batch for rolling restart. Maximum value: 99999.
                      */
                     int64_t m_batchSize;
                     bool m_batchSizeHasBeenSet;
 
                     /**
-                     * Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+                     * Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
                      */
                     int64_t m_timeWait;
                     bool m_timeWaitHasBeenSet;
 
                     /**
-                     * Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+                     * Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
                      */
                     int64_t m_dealOnFail;
                     bool m_dealOnFailHasBeenSet;
 
                     /**
                      * Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Arg> m_args;
                     bool m_argsHasBeenSet;

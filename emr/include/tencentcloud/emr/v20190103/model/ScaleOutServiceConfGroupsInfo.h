@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool ServiceComponentNameHasBeenSet() const;
 
                     /**
-                     * 获取Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
-                     * @return ConfGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+                     * 获取Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
+                     * @return ConfGroupName Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
                      * 
                      */
                     std::string GetConfGroupName() const;
 
                     /**
-                     * 设置Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
-                     * @param _confGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+                     * 设置Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
+                     * @param _confGroupName Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
                      * 
                      */
                     void SetConfGroupName(const std::string& _confGroupName);
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool m_serviceComponentNameHasBeenSet;
 
                     /**
-                     * Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+                     * Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
                      */
                     std::string m_confGroupName;
                     bool m_confGroupNameHasBeenSet;

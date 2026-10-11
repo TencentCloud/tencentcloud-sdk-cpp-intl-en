@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Process detection information
+                * Process detection information.
                 */
                 class ServiceProcessFunctionInfo : public AbstractModel
                 {
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool DetectAlertHasBeenSet() const;
 
                     /**
-                     * 获取Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetetcFunctionKey Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection feature description.
+                     * @return DetetcFunctionKey Detection feature description.
                      * @deprecated
                      */
                     std::string GetDetetcFunctionKey() const;
 
                     /**
-                     * 设置Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _detetcFunctionKey Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection feature description.
+                     * @param _detetcFunctionKey Detection feature description.
                      * @deprecated
                      */
                     void SetDetetcFunctionKey(const std::string& _detetcFunctionKey);
@@ -97,23 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DetetcFunctionKeyHasBeenSet() const;
 
                     /**
-                     * 获取Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetetcFunctionValue Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection feature result.
+                     * @return DetetcFunctionValue Detection feature result.
                      * @deprecated
                      */
                     std::string GetDetetcFunctionValue() const;
 
                     /**
-                     * 设置Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _detetcFunctionValue Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection feature result.
+                     * @param _detetcFunctionValue Detection feature result.
                      * @deprecated
                      */
                     void SetDetetcFunctionValue(const std::string& _detetcFunctionValue);
@@ -126,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DetetcFunctionValueHasBeenSet() const;
 
                     /**
-                     * 获取Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetetcTime Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection result.
+                     * @return DetetcTime Detection result.
                      * @deprecated
                      */
                     std::string GetDetetcTime() const;
 
                     /**
-                     * 设置Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _detetcTime Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection result.
+                     * @param _detetcTime Detection result.
                      * @deprecated
                      */
                     void SetDetetcTime(const std::string& _detetcTime);
@@ -222,24 +202,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_detectAlertHasBeenSet;
 
                     /**
-                     * Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection feature description.
                      */
                     std::string m_detetcFunctionKey;
                     bool m_detetcFunctionKeyHasBeenSet;
 
                     /**
-                     * Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection feature result.
                      */
                     std::string m_detetcFunctionValue;
                     bool m_detetcFunctionValueHasBeenSet;
 
                     /**
-                     * Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection result.
                      */
                     std::string m_detetcTime;
                     bool m_detetcTimeHasBeenSet;

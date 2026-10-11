@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID.
-                     * @return InstanceId Cluster instance ID.
+                     * 获取Cluster ID.
+                     * @return InstanceId Cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID.
-                     * @param _instanceId Cluster instance ID.
+                     * 设置Cluster ID.
+                     * @param _instanceId Cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Node type, CORE, TASK, ROUTER or ALL.
-                     * @return ResourceType Node type, CORE, TASK, ROUTER or ALL.
+                     * 获取Node type. Valid values: CORE, TASK, ROUTER, and ALL.
+                     * @return ResourceType Node type. Valid values: CORE, TASK, ROUTER, and ALL.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Node type, CORE, TASK, ROUTER or ALL.
-                     * @param _resourceType Node type, CORE, TASK, ROUTER or ALL.
+                     * 设置Node type. Valid values: CORE, TASK, ROUTER, and ALL.
+                     * @param _resourceType Node type. Valid values: CORE, TASK, ROUTER, and ALL.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone ID.
-                     * @return ZoneId Availability zone ID.
+                     * 获取AZ ID.
+                     * @return ZoneId AZ ID.
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置Availability zone ID.
-                     * @param _zoneId Availability zone ID.
+                     * 设置AZ ID.
+                     * @param _zoneId AZ ID.
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 获取Type. Valid values: ComputeResource and EMR. Default value: EMR.
+                     * @return ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
                      * 
                      */
                     std::string GetResourceBaseType() const;
 
                     /**
-                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 设置Type. Valid values: ComputeResource and EMR. Default value: EMR.
+                     * @param _resourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
                      * 
                      */
                     void SetResourceBaseType(const std::string& _resourceBaseType);
@@ -192,13 +192,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster instance ID.
+                     * Cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Node type, CORE, TASK, ROUTER or ALL.
+                     * Node type. Valid values: CORE, TASK, ROUTER, and ALL.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -210,13 +210,13 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Availability zone ID.
+                     * AZ ID.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * Type. Valid values: ComputeResource and EMR. Default value: EMR.
                      */
                     std::string m_resourceBaseType;
                     bool m_resourceBaseTypeHasBeenSet;

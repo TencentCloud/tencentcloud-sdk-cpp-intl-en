@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total scale-in and scale-out records.
-                     * @return TotalCount Total scale-in and scale-out records.
+                     * 获取Total number of scaling records.
+                     * @return TotalCount Total number of scaling records.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total scale-in and scale-out records.
+                     * Total number of scaling records.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

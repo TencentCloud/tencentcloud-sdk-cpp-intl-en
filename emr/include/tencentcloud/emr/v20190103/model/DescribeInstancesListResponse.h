@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible instances.
-                     * @return TotalCnt Number of eligible instances.
+                     * 获取Total number of instances that meet the criteria.
+                     * @return TotalCnt Total number of instances that meet the criteria.
                      * 
                      */
                     int64_t GetTotalCnt() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCntHasBeenSet() const;
 
                     /**
-                     * 获取Cluster instance list.
-                     * @return InstancesList Cluster instance list.
+                     * 获取Cluster list.
+                     * @return InstancesList Cluster list.
                      * 
                      */
                     std::vector<EmrListInstance> GetInstancesList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible instances.
+                     * Total number of instances that meet the criteria.
                      */
                     int64_t m_totalCnt;
                     bool m_totalCntHasBeenSet;
 
                     /**
-                     * Cluster instance list.
+                     * Cluster list.
                      */
                     std::vector<EmrListInstance> m_instancesList;
                     bool m_instancesListHasBeenSet;
