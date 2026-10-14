@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ErrorCode 
+                     * 获取<p>Error code. 0 is returned if the request is successful.</p>
+                     * @return ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
                      * 
                      */
                     int64_t GetErrorCode() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Msg 
+                     * 获取<p>Error message. success is returned if the request is successful.</p>
+                     * @return Msg <p>Error message. success is returned if the request is successful.</p>
                      * 
                      */
                     std::string GetMsg() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>ID of the cloned generated voice type</p>
+                     * @return VoiceId <p>ID of the cloned generated voice type</p>
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioData 
+                     * 获取<p>base64-encoded synthetic audio</p>
+                     * @return AudioData <p>base64-encoded synthetic audio</p>
                      * 
                      */
                     std::string GetAudioData() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool AudioDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Synthetic audio Url, valid for 24 hours</p>
+                     * @return AudioUrl <p>Synthetic audio Url, valid for 24 hours</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
@@ -130,31 +130,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Error code. 0 is returned if the request is successful.</p>
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Error message. success is returned if the request is successful.</p>
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * 
+                     * <p>ID of the cloned generated voice type</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>base64-encoded synthetic audio</p>
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Synthetic audio Url, valid for 24 hours</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;

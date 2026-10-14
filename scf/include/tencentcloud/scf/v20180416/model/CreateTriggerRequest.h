@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the function bound to the new trigger
-                     * @return FunctionName Name of the function bound to the new trigger
+                     * 获取Function name bound to the created trigger
+                     * @return FunctionName Function name bound to the created trigger
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Name of the function bound to the new trigger
-                     * @param _functionName Name of the function bound to the new trigger
+                     * 设置Function name bound to the created trigger
+                     * @param _functionName Function name bound to the created trigger
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
-                     * @return TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+                     * 获取Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
+                     * @return TriggerName Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
                      * 
                      */
                     std::string GetTriggerName() const;
 
                     /**
-                     * 设置Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
-                     * @param _triggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+                     * 设置Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
+                     * @param _triggerName Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
                      * 
                      */
                     void SetTriggerName(const std::string& _triggerName);
@@ -85,23 +85,15 @@ namespace TencentCloud
                     bool TriggerNameHasBeenSet() const;
 
                     /**
-                     * 获取Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
-                     * @return Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+                     * 获取Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
+                     * @return Type Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
-                     * @param _type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+                     * 设置Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
+                     * @param _type Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -114,15 +106,15 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
-                     * @return TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+                     * 获取Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
+                     * @return TriggerDesc Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTriggerDesc() const;
 
                     /**
-                     * 设置For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
-                     * @param _triggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+                     * 设置Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
+                     * @param _triggerDesc Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
                      * 
                      */
                     void SetTriggerDesc(const std::string& _triggerDesc);
@@ -135,15 +127,15 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                     bool TriggerDescHasBeenSet() const;
 
                     /**
-                     * 获取Function namespace
-                     * @return Namespace Function namespace
+                     * 获取Namespace of the function
+                     * @return Namespace Namespace of the function
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Function namespace
-                     * @param _namespace Function namespace
+                     * 设置Namespace of the function
+                     * @param _namespace Namespace of the function
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -156,15 +148,15 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
-                     * @return Qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+                     * 获取Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
+                     * @return Qualifier Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
                      * 
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
-                     * @param _qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+                     * 设置Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
+                     * @param _qualifier Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
                      * 
                      */
                     void SetQualifier(const std::string& _qualifier);
@@ -177,15 +169,15 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                     bool QualifierHasBeenSet() const;
 
                     /**
-                     * 获取Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
-                     * @return Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+                     * 获取Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
+                     * @return Enable Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
                      * 
                      */
                     std::string GetEnable() const;
 
                     /**
-                     * 设置Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
-                     * @param _enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+                     * 设置Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
+                     * @param _enable Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
                      * 
                      */
                     void SetEnable(const std::string& _enable);
@@ -198,15 +190,15 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Custom argument, supporting only the timer trigger.
-                     * @return CustomArgument Custom argument, supporting only the timer trigger.
+                     * 获取User-defined parameter. Only timer triggers are supported.
+                     * @return CustomArgument User-defined parameter. Only timer triggers are supported.
                      * 
                      */
                     std::string GetCustomArgument() const;
 
                     /**
-                     * 设置Custom argument, supporting only the timer trigger.
-                     * @param _customArgument Custom argument, supporting only the timer trigger.
+                     * 设置User-defined parameter. Only timer triggers are supported.
+                     * @param _customArgument User-defined parameter. Only timer triggers are supported.
                      * 
                      */
                     void SetCustomArgument(const std::string& _customArgument);
@@ -219,15 +211,15 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                     bool CustomArgumentHasBeenSet() const;
 
                     /**
-                     * 获取Trigger description
-                     * @return Description Trigger description
+                     * 获取Trigger description.
+                     * @return Description Trigger description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Trigger description
-                     * @param _description Trigger description
+                     * 设置Trigger description.
+                     * @param _description Trigger description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -242,57 +234,55 @@ To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](ht
                 private:
 
                     /**
-                     * Name of the function bound to the new trigger
+                     * Function name bound to the created trigger
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+                     * Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
                      */
                     std::string m_triggerName;
                     bool m_triggerNameHasBeenSet;
 
                     /**
-                     * Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+                     * Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+                     * Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
                      */
                     std::string m_triggerDesc;
                     bool m_triggerDescHasBeenSet;
 
                     /**
-                     * Function namespace
+                     * Namespace of the function
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+                     * Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;
 
                     /**
-                     * Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+                     * Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
                      */
                     std::string m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Custom argument, supporting only the timer trigger.
+                     * User-defined parameter. Only timer triggers are supported.
                      */
                     std::string m_customArgument;
                     bool m_customArgumentHasBeenSet;
 
                     /**
-                     * Trigger description
+                     * Trigger description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

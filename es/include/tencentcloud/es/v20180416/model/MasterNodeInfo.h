@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the dedicated primary node in an instance
+                * Instance-dedicated primary node-related information
                 */
                 class MasterNodeInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the dedicated primary node
-                     * @return EnableDedicatedMaster Whether to enable the dedicated primary node
+                     * 获取Whether the dedicated master node is enabled or not
+                     * @return EnableDedicatedMaster Whether the dedicated master node is enabled or not
                      * 
                      */
                     bool GetEnableDedicatedMaster() const;
 
                     /**
-                     * 设置Whether to enable the dedicated primary node
-                     * @param _enableDedicatedMaster Whether to enable the dedicated primary node
+                     * 设置Whether the dedicated master node is enabled or not
+                     * @param _enableDedicatedMaster Whether the dedicated master node is enabled or not
                      * 
                      */
                     void SetEnableDedicatedMaster(const bool& _enableDedicatedMaster);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EnableDedicatedMasterHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-                     * @return MasterNodeType Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * 获取Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+                     * @return MasterNodeType Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
                      * 
                      */
                     std::string GetMasterNodeType() const;
 
                     /**
-                     * 设置Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-                     * @param _masterNodeType Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * 设置Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+                     * @param _masterNodeType Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
                      * 
                      */
                     void SetMasterNodeType(const std::string& _masterNodeType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MasterNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores of the dedicated primary node
-                     * @return MasterNodeCpuNum Number of CPU cores of the dedicated primary node
+                     * 获取Number of CPU cores of the dedicated master node
+                     * @return MasterNodeCpuNum Number of CPU cores of the dedicated master node
                      * 
                      */
                     uint64_t GetMasterNodeCpuNum() const;
 
                     /**
-                     * 设置Number of CPU cores of the dedicated primary node
-                     * @param _masterNodeCpuNum Number of CPU cores of the dedicated primary node
+                     * 设置Number of CPU cores of the dedicated master node
+                     * @param _masterNodeCpuNum Number of CPU cores of the dedicated master node
                      * 
                      */
                     void SetMasterNodeCpuNum(const uint64_t& _masterNodeCpuNum);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MasterNodeCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Memory size of the dedicated primary node in GB
-                     * @return MasterNodeMemSize Memory size of the dedicated primary node in GB
+                     * 获取Dedicated primary node memory size, in GB.
+                     * @return MasterNodeMemSize Dedicated primary node memory size, in GB.
                      * 
                      */
                     uint64_t GetMasterNodeMemSize() const;
 
                     /**
-                     * 设置Memory size of the dedicated primary node in GB
-                     * @param _masterNodeMemSize Memory size of the dedicated primary node in GB
+                     * 设置Dedicated primary node memory size, in GB.
+                     * @param _masterNodeMemSize Dedicated primary node memory size, in GB.
                      * 
                      */
                     void SetMasterNodeMemSize(const uint64_t& _masterNodeMemSize);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MasterNodeMemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk size of the dedicated primary node in GB
-                     * @return MasterNodeDiskSize Disk size of the dedicated primary node in GB
+                     * 获取Dedicated primary node disk size in GB
+                     * @return MasterNodeDiskSize Dedicated primary node disk size in GB
                      * 
                      */
                     uint64_t GetMasterNodeDiskSize() const;
 
                     /**
-                     * 设置Disk size of the dedicated primary node in GB
-                     * @param _masterNodeDiskSize Disk size of the dedicated primary node in GB
+                     * 设置Dedicated primary node disk size in GB
+                     * @param _masterNodeDiskSize Dedicated primary node disk size in GB
                      * 
                      */
                     void SetMasterNodeDiskSize(const uint64_t& _masterNodeDiskSize);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MasterNodeDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk type of the dedicated primary node
-                     * @return MasterNodeDiskType Disk type of the dedicated primary node
+                     * 获取Dedicated primary node disk type
+                     * @return MasterNodeDiskType Dedicated primary node disk type
                      * 
                      */
                     std::string GetMasterNodeDiskType() const;
 
                     /**
-                     * 设置Disk type of the dedicated primary node
-                     * @param _masterNodeDiskType Disk type of the dedicated primary node
+                     * 设置Dedicated primary node disk type
+                     * @param _masterNodeDiskType Dedicated primary node disk type
                      * 
                      */
                     void SetMasterNodeDiskType(const std::string& _masterNodeDiskType);
@@ -196,13 +196,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable the dedicated primary node
+                     * Whether the dedicated master node is enabled or not
                      */
                     bool m_enableDedicatedMaster;
                     bool m_enableDedicatedMasterHasBeenSet;
 
                     /**
-                     * Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
                      */
                     std::string m_masterNodeType;
                     bool m_masterNodeTypeHasBeenSet;
@@ -214,25 +214,25 @@ namespace TencentCloud
                     bool m_masterNodeNumHasBeenSet;
 
                     /**
-                     * Number of CPU cores of the dedicated primary node
+                     * Number of CPU cores of the dedicated master node
                      */
                     uint64_t m_masterNodeCpuNum;
                     bool m_masterNodeCpuNumHasBeenSet;
 
                     /**
-                     * Memory size of the dedicated primary node in GB
+                     * Dedicated primary node memory size, in GB.
                      */
                     uint64_t m_masterNodeMemSize;
                     bool m_masterNodeMemSizeHasBeenSet;
 
                     /**
-                     * Disk size of the dedicated primary node in GB
+                     * Dedicated primary node disk size in GB
                      */
                     uint64_t m_masterNodeDiskSize;
                     bool m_masterNodeDiskSizeHasBeenSet;
 
                     /**
-                     * Disk type of the dedicated primary node
+                     * Dedicated primary node disk type
                      */
                     std::string m_masterNodeDiskType;
                     bool m_masterNodeDiskTypeHasBeenSet;

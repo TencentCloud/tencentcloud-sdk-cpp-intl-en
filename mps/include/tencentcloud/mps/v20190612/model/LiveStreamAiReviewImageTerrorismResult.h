@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI content review image sensitive result
+                * Live stream AI content moderation result of images involving sensitive content
                 */
                 class LiveStreamAiReviewImageTerrorismResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start PTS time of a suspected segment, in seconds.
-                     * @return StartPtsTime Start PTS time of a suspected segment, in seconds.
+                     * 获取Starting PTS time of a suspected segment, in seconds.
+                     * @return StartPtsTime Starting PTS time of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of a suspected segment, in seconds.
-                     * @param _startPtsTime Start PTS time of a suspected segment, in seconds.
+                     * 设置Starting PTS time of a suspected segment, in seconds.
+                     * @param _startPtsTime Starting PTS time of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Suspected segment sensitivity score.
-                     * @return Confidence Suspected segment sensitivity score.
+                     * 获取Sensitivity score of the suspected segment.
+                     * @return Confidence Sensitivity score of the suspected segment.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Suspected segment sensitivity score.
-                     * @param _confidence Suspected segment sensitivity score.
+                     * 设置Sensitivity score of the suspected segment.
+                     * @param _confidence Sensitivity score of the suspected segment.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suspected segment sensitive result suggestion, permissible range:
+                     * 获取Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @return Suggestion Suspected segment sensitive result suggestion, permissible range:
+                     * @return Suggestion Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suspected segment sensitive result suggestion, permissible range:
+                     * 设置Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param _suggestion Suspected segment sensitive result suggestion, permissible range:
+                     * @param _suggestion Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -143,22 +143,22 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video sensitive content result tag, value ranges from...to...
+                     * 获取Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-                     * @return Label Video sensitive content result tag, value ranges from...to...
+                     * @return Label Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
                      * 
@@ -166,22 +166,22 @@ namespace TencentCloud
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Video sensitive content result tag, value ranges from...to...
+                     * 设置Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-                     * @param _label Video sensitive content result tag, value ranges from...to...
+                     * @param _label Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
                      * 
@@ -196,19 +196,19 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 获取Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @param _url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 设置Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @param _url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -221,15 +221,15 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -244,7 +244,7 @@ The image will be deleted after the PicUrlExpireTime time point.
                 private:
 
                     /**
-                     * Start PTS time of a suspected segment, in seconds.
+                     * Starting PTS time of a suspected segment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
@@ -256,13 +256,13 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Suspected segment sensitivity score.
+                     * Sensitivity score of the suspected segment.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suspected segment sensitive result suggestion, permissible range:
+                     * Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -271,13 +271,13 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video sensitive content result tag, value ranges from...to...
+                     * Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
                      */
@@ -285,14 +285,14 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

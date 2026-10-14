@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Online retrieval content reference details
                 */
                 class WebSearchReference : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Webpage URL
+                     * @return Url Webpage URL
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Webpage URL
+                     * @param _url Webpage URL
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Webpage URL
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

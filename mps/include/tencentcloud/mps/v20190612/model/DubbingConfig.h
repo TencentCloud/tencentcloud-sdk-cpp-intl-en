@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackgroundVolumeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
-                     * @return SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+                     * 获取<p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+                     * @return SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
                      * 
                      */
                     std::string GetSecondaryTuning() const;
 
                     /**
-                     * 设置<p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
-                     * @param _secondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+                     * 设置<p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+                     * @param _secondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
                      * 
                      */
                     void SetSecondaryTuning(const std::string& _secondaryTuning);
@@ -166,7 +166,7 @@ namespace TencentCloud
                     bool m_backgroundVolumeHasBeenSet;
 
                     /**
-                     * <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+                     * <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
                      */
                     std::string m_secondaryTuning;
                     bool m_secondaryTuningHasBeenSet;

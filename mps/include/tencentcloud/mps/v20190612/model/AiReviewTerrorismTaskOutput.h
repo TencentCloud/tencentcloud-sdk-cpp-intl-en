@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video sensitive content score, ranging from 0 to 100.
-                     * @return Confidence Video sensitive content score, ranging from 0 to 100.
+                     * 获取Sensitive score of the video. The score ranges from 0 to 100.
+                     * @return Confidence Sensitive score of the video. The score ranges from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Video sensitive content score, ranging from 0 to 100.
-                     * @param _confidence Video sensitive content score, ranging from 0 to 100.
+                     * 设置Sensitive score of the video. The score ranges from 0 to 100.
+                     * @param _confidence Sensitive score of the video. The score ranges from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Result Suggestions for sensitive content, value ranges from...to...
+                     * 获取Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Result Suggestions for sensitive content, value ranges from...to...
+                     * @return Suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result Suggestions for sensitive content, value ranges from...to...
+                     * 设置Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Result Suggestions for sensitive content, value ranges from...to...
+                     * @param _suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,51 +102,51 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video sensitive content detection result tag, permissible range:
+                     * 获取Video moderation result tag. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-<li>scenario: Sensitive content.</li>
-                     * @return Label Video sensitive content detection result tag, permissible range:
+<li>scenario: sensitive content.</li>
+                     * @return Label Video moderation result tag. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-<li>scenario: Sensitive content.</li>
+<li>scenario: sensitive content.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Video sensitive content detection result tag, permissible range:
+                     * 设置Video moderation result tag. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-<li>scenario: Sensitive content.</li>
-                     * @param _label Video sensitive content detection result tag, permissible range:
+<li>scenario: sensitive content.</li>
+                     * @param _label Video moderation result tag. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-<li>scenario: Sensitive content.</li>
+<li>scenario: sensitive content.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -182,13 +182,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video sensitive content score, ranging from 0 to 100.
+                     * Sensitive score of the video. The score ranges from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Result Suggestions for sensitive content, value ranges from...to...
+                     * Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -197,16 +197,16 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video sensitive content detection result tag, permissible range:
+                     * Video moderation result tag. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-<li>scenario: Sensitive content.</li>
+<li>scenario: sensitive content.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

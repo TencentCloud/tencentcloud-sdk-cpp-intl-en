@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool HighlightSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取Storage location of highlights.
+                     * @return OutputStorage Storage location of highlights.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置Storage location of highlights.
+                     * @param _outputStorage Storage location of highlights.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -99,7 +99,7 @@ namespace TencentCloud
                     bool m_highlightSetHasBeenSet;
 
                     /**
-                     * 
+                     * Storage location of highlights.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

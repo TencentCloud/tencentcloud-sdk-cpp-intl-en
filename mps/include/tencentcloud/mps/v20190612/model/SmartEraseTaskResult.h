@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure task result
+                * Intelligent erasure task result.
                 */
                 class SmartEraseTaskResult : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Intelligent removal input.
+                     * @return Input Intelligent removal input.
                      * 
                      */
                     SmartEraseTaskInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置Intelligent removal input.
+                     * @param _input Intelligent removal input.
                      * 
                      */
                     void SetInput(const SmartEraseTaskInput& _input);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the intelligent erasure task.
+                     * @return Output Output of the intelligent erasure task.
                      * 
                      */
                     AiAnalysisTaskDelLogoOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the intelligent erasure task.
+                     * @param _output Output of the intelligent erasure task.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDelLogoOutput& _output);
@@ -237,13 +237,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent removal input.
                      */
                     SmartEraseTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the intelligent erasure task.
                      */
                     AiAnalysisTaskDelLogoOutput m_output;
                     bool m_outputHasBeenSet;

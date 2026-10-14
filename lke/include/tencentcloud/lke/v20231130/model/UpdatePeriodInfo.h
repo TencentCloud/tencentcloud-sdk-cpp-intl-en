@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Update time policy
                 */
                 class UpdatePeriodInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return UpdatePeriodH 
+                     * 获取Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
+                     * @return UpdatePeriodH Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
                      * 
                      */
                     uint64_t GetUpdatePeriodH() const;
 
                     /**
-                     * 设置
-                     * @param _updatePeriodH 
+                     * 设置Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
+                     * @param _updatePeriodH Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
                      * 
                      */
                     void SetUpdatePeriodH(const uint64_t& _updatePeriodH);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
                      */
                     uint64_t m_updatePeriodH;
                     bool m_updatePeriodHHasBeenSet;

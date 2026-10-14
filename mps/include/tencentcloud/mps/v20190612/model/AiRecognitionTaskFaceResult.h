@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face Recognition result.
+                * Face recognition result.
                 */
                 class AiRecognitionTaskFaceResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Face Recognition task input.
-                     * @return Input Face Recognition task input.
+                     * 获取Face recognition task input information.
+                     * @return Input Face recognition task input information.
                      * 
                      */
                     AiRecognitionTaskFaceResultInput GetInput() const;
 
                     /**
-                     * 设置Face Recognition task input.
-                     * @param _input Face Recognition task input.
+                     * 设置Face recognition task input information.
+                     * @param _input Face recognition task input information.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskFaceResultInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output information of the face recognition task.
+                     * @return Output Output information of the face recognition task.
                      * 
                      */
                     AiRecognitionTaskFaceResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output information of the face recognition task.
+                     * @param _output Output information of the face recognition task.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskFaceResultOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Face Recognition task input.
+                     * Face recognition task input information.
                      */
                     AiRecognitionTaskFaceResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output information of the face recognition task.
                      */
                     AiRecognitionTaskFaceResultOutput m_output;
                     bool m_outputHasBeenSet;

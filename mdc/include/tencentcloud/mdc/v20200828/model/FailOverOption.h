@@ -35,7 +35,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * type FailOverOption struct {
+	FailOverType string `json:"FailOverType"` // Newly-added cold/standby COLDSTANDBY, HOTSTANDBY
+}
                 */
                 class FailOverOption : public AbstractModel
                 {
@@ -47,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FailOverType 
+                     * 获取Hot backup
+                     * @return FailOverType Hot backup
                      * 
                      */
                     std::string GetFailOverType() const;
 
                     /**
-                     * 设置
-                     * @param _failOverType 
+                     * 设置Hot backup
+                     * @param _failOverType Hot backup
                      * 
                      */
                     void SetFailOverType(const std::string& _failOverType);
@@ -70,7 +72,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Hot backup
                      */
                     std::string m_failOverType;
                     bool m_failOverTypeHasBeenSet;

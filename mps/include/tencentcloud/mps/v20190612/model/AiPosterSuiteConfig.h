@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool CustomVariablesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
-                     * @return Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+                     * 获取<p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
+                     * @return Model <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置<p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
-                     * @param _model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+                     * 设置<p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
+                     * @param _model <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -261,7 +261,7 @@ namespace TencentCloud
                     bool m_customVariablesHasBeenSet;
 
                     /**
-                     * <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+                     * <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;

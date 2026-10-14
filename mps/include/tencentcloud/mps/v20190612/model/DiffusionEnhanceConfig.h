@@ -49,12 +49,12 @@ namespace TencentCloud
                     /**
                      * 获取Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
                      * @return Switch Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
                      * 
@@ -64,12 +64,12 @@ Default value: OFF.
                     /**
                      * 设置Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
                      * @param _switch Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
                      * 
@@ -84,15 +84,35 @@ Default value: OFF.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
+                     * @return Type Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
+                     * @param _type Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -109,7 +129,7 @@ Default value: OFF.
                     /**
                      * Capability configuration switch. Valid values:
 
-ON: enabled.
+ON: enabled
 OFF: disabled.
 Default value: OFF.
                      */
@@ -117,7 +137,12 @@ Default value: OFF.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Strength type. Available values:
+
+weak
+normal
+strong
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

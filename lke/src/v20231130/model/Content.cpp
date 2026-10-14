@@ -37,7 +37,9 @@ Content::Content() :
     m_widgetActionHasBeenSet(false),
     m_tasksHasBeenSet(false),
     m_questionnaireHasBeenSet(false),
-    m_optionModeHasBeenSet(false)
+    m_optionModeHasBeenSet(false),
+    m_mcpAppHasBeenSet(false),
+    m_resourceHasBeenSet(false)
 {
 }
 
@@ -311,6 +313,40 @@ CoreInternalOutcome Content::Deserialize(const rapidjson::Value &value)
         m_optionModeHasBeenSet = true;
     }
 
+    if (value.HasMember("McpApp") && !value["McpApp"].IsNull())
+    {
+        if (!value["McpApp"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Content.McpApp` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_mcpApp.Deserialize(value["McpApp"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_mcpAppHasBeenSet = true;
+    }
+
+    if (value.HasMember("Resource") && !value["Resource"].IsNull())
+    {
+        if (!value["Resource"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Content.Resource` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_resource.Deserialize(value["Resource"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_resourceHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -496,6 +532,24 @@ void Content::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocat
         string key = "OptionMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_optionMode, allocator);
+    }
+
+    if (m_mcpAppHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "McpApp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_mcpApp.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_resourceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Resource";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_resource.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -771,5 +825,37 @@ void Content::SetOptionMode(const int64_t& _optionMode)
 bool Content::OptionModeHasBeenSet() const
 {
     return m_optionModeHasBeenSet;
+}
+
+ConversationMcpApp Content::GetMcpApp() const
+{
+    return m_mcpApp;
+}
+
+void Content::SetMcpApp(const ConversationMcpApp& _mcpApp)
+{
+    m_mcpApp = _mcpApp;
+    m_mcpAppHasBeenSet = true;
+}
+
+bool Content::McpAppHasBeenSet() const
+{
+    return m_mcpAppHasBeenSet;
+}
+
+ConversationResourceArtifact Content::GetResource() const
+{
+    return m_resource;
+}
+
+void Content::SetResource(const ConversationResourceArtifact& _resource)
+{
+    m_resource = _resource;
+    m_resourceHasBeenSet = true;
+}
+
+bool Content::ResourceHasBeenSet() const
+{
+    return m_resourceHasBeenSet;
 }
 

@@ -48,12 +48,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * 
                      */
@@ -61,12 +61,12 @@ Default value: ON.
 
                     /**
                      * 设置Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * @param _switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * 
                      */
@@ -80,15 +80,15 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FpsNum 
+                     * 获取Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+                     * @return FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
                      * 
                      */
                     int64_t GetFpsNum() const;
 
                     /**
-                     * 设置
-                     * @param _fpsNum 
+                     * 设置Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+                     * @param _fpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
                      * 
                      */
                     void SetFpsNum(const int64_t& _fpsNum);
@@ -101,15 +101,15 @@ Default value: ON.
                     bool FpsNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FpsDen 
+                     * 获取Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+                     * @return FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
                      * 
                      */
                     int64_t GetFpsDen() const;
 
                     /**
-                     * 设置
-                     * @param _fpsDen 
+                     * 设置Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+                     * @param _fpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
                      * 
                      */
                     void SetFpsDen(const int64_t& _fpsDen);
@@ -125,21 +125,21 @@ Default value: ON.
 
                     /**
                      * Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
                      */
                     int64_t m_fpsNum;
                     bool m_fpsNumHasBeenSet;
 
                     /**
-                     * 
+                     * Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
                      */
                     int64_t m_fpsDen;
                     bool m_fpsDenHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Asr text porn detection task input parameter type
+                * Task input parameter type for porn detection in Asr text during content review.
                 */
                 class AiReviewPornAsrTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pornography detection template ID.
-                     * @return Definition Pornography detection template ID.
+                     * 获取Porn detection template ID.
+                     * @return Definition Porn detection template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Pornography detection template ID.
-                     * @param _definition Pornography detection template ID.
+                     * 设置Porn detection template ID.
+                     * @param _definition Porn detection template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Pornography detection template ID.
+                     * Porn detection template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

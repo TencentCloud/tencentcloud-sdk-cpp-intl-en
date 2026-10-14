@@ -46,7 +46,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of the queried input.
+                * Query input configuration message.
                 */
                 class DescribeInput : public AbstractModel
                 {
@@ -58,15 +58,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input ID.
-                     * @return InputId Input ID.
+                     * 获取Input Id.
+                     * @return InputId Input Id.
                      * 
                      */
                     std::string GetInputId() const;
 
                     /**
-                     * 设置Input ID.
-                     * @param _inputId Input ID.
+                     * 设置Input Id.
+                     * @param _inputId Input Id.
                      * 
                      */
                     void SetInputId(const std::string& _inputId);
@@ -101,18 +101,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _description Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -146,15 +142,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Input address list.
-                     * @return InputAddressList Input address list.
+                     * 获取Input the address list.
+                     * @return InputAddressList Input the address list.
                      * 
                      */
                     std::vector<InputAddress> GetInputAddressList() const;
 
                     /**
-                     * 设置Input address list.
-                     * @param _inputAddressList Input address list.
+                     * 设置Input the address list.
+                     * @param _inputAddressList Input the address list.
                      * 
                      */
                     void SetInputAddressList(const std::vector<InputAddress>& _inputAddressList);
@@ -167,15 +163,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputAddressListHasBeenSet() const;
 
                     /**
-                     * 获取Input IP allowlist.
-                     * @return AllowIpList Input IP allowlist.
+                     * 获取Input the IP whitelist list.
+                     * @return AllowIpList Input the IP whitelist list.
                      * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
-                     * 设置Input IP allowlist.
-                     * @param _allowIpList Input IP allowlist.
+                     * 设置Input the IP whitelist list.
+                     * @param _allowIpList Input the IP whitelist list.
                      * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
@@ -188,19 +184,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AllowIpListHasBeenSet() const;
 
                     /**
-                     * 获取SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SRTSettings SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取SRT configuration information of the input.
+                     * @return SRTSettings SRT configuration information of the input.
                      * 
                      */
                     DescribeInputSRTSettings GetSRTSettings() const;
 
                     /**
-                     * 设置SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sRTSettings SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置SRT configuration information of the input.
+                     * @param _sRTSettings SRT configuration information of the input.
                      * 
                      */
                     void SetSRTSettings(const DescribeInputSRTSettings& _sRTSettings);
@@ -213,19 +205,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SRTSettingsHasBeenSet() const;
 
                     /**
-                     * 获取RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RTPSettings RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Input RTP configuration message.
+                     * @return RTPSettings Input RTP configuration message.
                      * 
                      */
                     DescribeInputRTPSettings GetRTPSettings() const;
 
                     /**
-                     * 设置RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _rTPSettings RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Input RTP configuration message.
+                     * @param _rTPSettings Input RTP configuration message.
                      * 
                      */
                     void SetRTPSettings(const DescribeInputRTPSettings& _rTPSettings);
@@ -259,15 +247,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputRegionHasBeenSet() const;
 
                     /**
-                     * 获取RTMP configuration information of an input
-                     * @return RTMPSettings RTMP configuration information of an input
+                     * 获取Input RTMP configuration message.
+                     * @return RTMPSettings Input RTMP configuration message.
                      * 
                      */
                     DescribeInputRTMPSettings GetRTMPSettings() const;
 
                     /**
-                     * 设置RTMP configuration information of an input
-                     * @param _rTMPSettings RTMP configuration information of an input
+                     * 设置Input RTMP configuration message.
+                     * @param _rTMPSettings Input RTMP configuration message.
                      * 
                      */
                     void SetRTMPSettings(const DescribeInputRTMPSettings& _rTMPSettings);
@@ -280,19 +268,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RTMPSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Input failover
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return FailOver Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Primary/replica switch input.
+                     * @return FailOver Primary/replica switch input.
                      * 
                      */
                     std::string GetFailOver() const;
 
                     /**
-                     * 设置Input failover
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _failOver Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Primary/replica switch input.
+                     * @param _failOver Primary/replica switch input.
                      * 
                      */
                     void SetFailOver(const std::string& _failOver);
@@ -305,15 +289,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
-                     * @return Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+                     * 获取Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
+                     * @return Zones Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
-                     * @param _zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+                     * 设置Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
+                     * @param _zones Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -326,15 +310,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取The input RTMP_PULL configuration information.
-                     * @return RTMPPullSettings The input RTMP_PULL configuration information.
+                     * 获取Input RTMP_PULL configuration message.
+                     * @return RTMPPullSettings Input RTMP_PULL configuration message.
                      * 
                      */
                     DescribeInputRTMPPullSettings GetRTMPPullSettings() const;
 
                     /**
-                     * 设置The input RTMP_PULL configuration information.
-                     * @param _rTMPPullSettings The input RTMP_PULL configuration information.
+                     * 设置Input RTMP_PULL configuration message.
+                     * @param _rTMPPullSettings Input RTMP_PULL configuration message.
                      * 
                      */
                     void SetRTMPPullSettings(const DescribeInputRTMPPullSettings& _rTMPPullSettings);
@@ -347,15 +331,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool RTMPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The RTSP_PULL configuration information entered.
-                     * @return RTSPPullSettings The RTSP_PULL configuration information entered.
+                     * 获取Input RTSP_PULL configuration message.
+                     * @return RTSPPullSettings Input RTSP_PULL configuration message.
                      * 
                      */
                     DescribeInputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置The RTSP_PULL configuration information entered.
-                     * @param _rTSPPullSettings The RTSP_PULL configuration information entered.
+                     * 设置Input RTSP_PULL configuration message.
+                     * @param _rTSPPullSettings Input RTSP_PULL configuration message.
                      * 
                      */
                     void SetRTSPPullSettings(const DescribeInputRTSPPullSettings& _rTSPPullSettings);
@@ -368,15 +352,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The input HLS-PULL configuration information.
-                     * @return HLSPullSettings The input HLS-PULL configuration information.
+                     * 获取Input HLS_PULL configuration message.
+                     * @return HLSPullSettings Input HLS_PULL configuration message.
                      * 
                      */
                     DescribeInputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置The input HLS-PULL configuration information.
-                     * @param _hLSPullSettings The input HLS-PULL configuration information.
+                     * 设置Input HLS_PULL configuration message.
+                     * @param _hLSPullSettings Input HLS_PULL configuration message.
                      * 
                      */
                     void SetHLSPullSettings(const DescribeInputHLSPullSettings& _hLSPullSettings);
@@ -389,15 +373,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Extended smooth streaming configuration information.
-                     * @return ResilientStream Extended smooth streaming configuration information.
+                     * 获取Configuration message for smooth streaming during delayed broadcasting.
+                     * @return ResilientStream Configuration message for smooth streaming during delayed broadcasting.
                      * 
                      */
                     ResilientStreamConf GetResilientStream() const;
 
                     /**
-                     * 设置Extended smooth streaming configuration information.
-                     * @param _resilientStream Extended smooth streaming configuration information.
+                     * 设置Configuration message for smooth streaming during delayed broadcasting.
+                     * @param _resilientStream Configuration message for smooth streaming during delayed broadcasting.
                      * 
                      */
                     void SetResilientStream(const ResilientStreamConf& _resilientStream);
@@ -410,15 +394,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool ResilientStreamHasBeenSet() const;
 
                     /**
-                     * 获取The bound security group ID.
-                     * @return SecurityGroupIds The bound security group ID.
+                     * 获取Bound input security group ID.	
+                     * @return SecurityGroupIds Bound input security group ID.	
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The bound security group ID.
-                     * @param _securityGroupIds The bound security group ID.
+                     * 设置Bound input security group ID.	
+                     * @param _securityGroupIds Bound input security group ID.	
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -431,15 +415,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取The input RIST configuration information.
-                     * @return RISTSettings The input RIST configuration information.
+                     * 获取Input RIST configuration message.
+                     * @return RISTSettings Input RIST configuration message.
                      * 
                      */
                     DescribeInputRISTSettings GetRISTSettings() const;
 
                     /**
-                     * 设置The input RIST configuration information.
-                     * @param _rISTSettings The input RIST configuration information.
+                     * 设置Input RIST configuration message.
+                     * @param _rISTSettings Input RIST configuration message.
                      * 
                      */
                     void SetRISTSettings(const DescribeInputRISTSettings& _rISTSettings);
@@ -452,15 +436,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool RISTSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
-                     * @return StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+                     * 获取Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
+                     * @return StreamUrls Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
                      * 
                      */
                     std::vector<StreamUrlDetail> GetStreamUrls() const;
 
                     /**
-                     * 设置Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
-                     * @param _streamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+                     * 设置Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
+                     * @param _streamUrls Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
                      * 
                      */
                     void SetStreamUrls(const std::vector<StreamUrlDetail>& _streamUrls);
@@ -473,15 +457,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool StreamUrlsHasBeenSet() const;
 
                     /**
-                     * 获取Disaster recovery configuration items
-                     * @return FailOverOption Disaster recovery configuration items
+                     * 获取Disaster recovery configuration item
+                     * @return FailOverOption Disaster recovery configuration item
                      * 
                      */
                     FailOverOption GetFailOverOption() const;
 
                     /**
-                     * 设置Disaster recovery configuration items
-                     * @param _failOverOption Disaster recovery configuration items
+                     * 设置Disaster recovery configuration item
+                     * @param _failOverOption Disaster recovery configuration item
                      * 
                      */
                     void SetFailOverOption(const FailOverOption& _failOverOption);
@@ -496,7 +480,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Input ID.
+                     * Input Id.
                      */
                     std::string m_inputId;
                     bool m_inputIdHasBeenSet;
@@ -509,7 +493,6 @@ Note: this field may return `null`, indicating that no valid value was found.
 
                     /**
                      * Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -521,27 +504,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Input address list.
+                     * Input the address list.
                      */
                     std::vector<InputAddress> m_inputAddressList;
                     bool m_inputAddressListHasBeenSet;
 
                     /**
-                     * Input IP allowlist.
+                     * Input the IP whitelist list.
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
 
                     /**
-                     * SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * SRT configuration information of the input.
                      */
                     DescribeInputSRTSettings m_sRTSettings;
                     bool m_sRTSettingsHasBeenSet;
 
                     /**
-                     * RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Input RTP configuration message.
                      */
                     DescribeInputRTPSettings m_rTPSettings;
                     bool m_rTPSettingsHasBeenSet;
@@ -553,68 +534,67 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inputRegionHasBeenSet;
 
                     /**
-                     * RTMP configuration information of an input
+                     * Input RTMP configuration message.
                      */
                     DescribeInputRTMPSettings m_rTMPSettings;
                     bool m_rTMPSettingsHasBeenSet;
 
                     /**
-                     * Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Primary/replica switch input.
                      */
                     std::string m_failOver;
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+                     * Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * The input RTMP_PULL configuration information.
+                     * Input RTMP_PULL configuration message.
                      */
                     DescribeInputRTMPPullSettings m_rTMPPullSettings;
                     bool m_rTMPPullSettingsHasBeenSet;
 
                     /**
-                     * The RTSP_PULL configuration information entered.
+                     * Input RTSP_PULL configuration message.
                      */
                     DescribeInputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * The input HLS-PULL configuration information.
+                     * Input HLS_PULL configuration message.
                      */
                     DescribeInputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * Extended smooth streaming configuration information.
+                     * Configuration message for smooth streaming during delayed broadcasting.
                      */
                     ResilientStreamConf m_resilientStream;
                     bool m_resilientStreamHasBeenSet;
 
                     /**
-                     * The bound security group ID.
+                     * Bound input security group ID.	
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * The input RIST configuration information.
+                     * Input RIST configuration message.
                      */
                     DescribeInputRISTSettings m_rISTSettings;
                     bool m_rISTSettingsHasBeenSet;
 
                     /**
-                     * Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+                     * Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
                      */
                     std::vector<StreamUrlDetail> m_streamUrls;
                     bool m_streamUrlsHasBeenSet;
 
                     /**
-                     * Disaster recovery configuration items
+                     * Disaster recovery configuration item
                      */
                     FailOverOption m_failOverOption;
                     bool m_failOverOptionHasBeenSet;

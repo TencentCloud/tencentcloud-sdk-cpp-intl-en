@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The timestamp (seconds) of the query.
-                     * @return Timestamp The timestamp (seconds) of the query.
+                     * 获取<p>Inquiry time. Unit: s.</p>
+                     * @return Timestamp <p>Inquiry time. Unit: s.</p>
                      * 
                      */
                     int64_t GetTimestamp() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取A list of the real-time data.
-                     * @return Datas A list of the real-time data.
+                     * 获取<p>Real-time data information list.</p>
+                     * @return Datas <p>Real-time data information list.</p>
                      * 
                      */
                     std::vector<FlowRealtimeStatusItem> GetDatas() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The timestamp (seconds) of the query.
+                     * <p>Inquiry time. Unit: s.</p>
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * A list of the real-time data.
+                     * <p>Real-time data information list.</p>
                      */
                     std::vector<FlowRealtimeStatusItem> m_datas;
                     bool m_datasHasBeenSet;

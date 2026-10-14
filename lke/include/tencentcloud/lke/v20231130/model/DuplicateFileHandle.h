@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Processing method for duplicate documents
                 */
                 class DuplicateFileHandle : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CheckType 
+                     * 获取Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
+                     * @return CheckType Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
                      * 
                      */
                     uint64_t GetCheckType() const;
 
                     /**
-                     * 设置
-                     * @param _checkType 
+                     * 设置Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
+                     * @param _checkType Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
                      * 
                      */
                     void SetCheckType(const uint64_t& _checkType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HandleType 
+                     * 获取Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
+                     * @return HandleType Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
                      * 
                      */
                     uint64_t GetHandleType() const;
 
                     /**
-                     * 设置
-                     * @param _handleType 
+                     * 设置Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
+                     * @param _handleType Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
                      * 
                      */
                     void SetHandleType(const uint64_t& _handleType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
                      */
                     uint64_t m_checkType;
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
                      */
                     uint64_t m_handleType;
                     bool m_handleTypeHasBeenSet;

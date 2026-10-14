@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TSC parameter configuration.
+                * Top Speed Codec parameter configuration.
                 */
                 class TEHDConfigForUpdate : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
+                     * @return Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
+                     * @param _type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +80,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxVideoBitrate 
+                     * 获取Maximum video bitrate. If this parameter is left empty, no modification is made.
+                     * @return MaxVideoBitrate Maximum video bitrate. If this parameter is left empty, no modification is made.
                      * 
                      */
                     int64_t GetMaxVideoBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _maxVideoBitrate 
+                     * 设置Maximum video bitrate. If this parameter is left empty, no modification is made.
+                     * @param _maxVideoBitrate Maximum video bitrate. If this parameter is left empty, no modification is made.
                      * 
                      */
                     void SetMaxVideoBitrate(const int64_t& _maxVideoBitrate);
@@ -91,13 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum video bitrate. If this parameter is left empty, no modification is made.
                      */
                     int64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent translation result type
+                * Intelligent dubbing result type.
                 */
                 class AiAnalysisTaskDubbingResult : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent dubbing task input.
-                     * @return Input Intelligent dubbing task input.
+                     * 获取Intelligent captioning task input.
+                     * @return Input Intelligent captioning task input.
                      * 
                      */
                     AiAnalysisTaskDubbingInput GetInput() const;
 
                     /**
-                     * 设置Intelligent dubbing task input.
-                     * @param _input Intelligent dubbing task input.
+                     * 设置Intelligent captioning task input.
+                     * @param _input Intelligent captioning task input.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskDubbingInput& _input);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Intelligent captioning task output.
+                     * @return Output Intelligent captioning task output.
                      * 
                      */
                     AiAnalysisTaskDubbingOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Intelligent captioning task output.
+                     * @param _output Intelligent captioning task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDubbingOutput& _output);
@@ -174,13 +174,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Intelligent dubbing task input.
+                     * Intelligent captioning task input.
                      */
                     AiAnalysisTaskDubbingInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent captioning task output.
                      */
                     AiAnalysisTaskDubbingOutput m_output;
                     bool m_outputHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Flow name
-                     * @return FlowName Flow name
+                     * 获取Stream name.
+                     * @return FlowName Stream name.
                      * 
                      */
                     std::string GetFlowName() const;
 
                     /**
-                     * 设置Flow name
-                     * @param _flowName Flow name
+                     * 设置Stream name.
+                     * @param _flowName Stream name.
                      * 
                      */
                     void SetFlowName(const std::string& _flowName);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool FlowNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
-                     * @return MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+                     * 获取Maximum bandwidth in bps. Options: [10000000, 20000000].
+                     * @return MaxBandwidth Maximum bandwidth in bps. Options: [10000000, 20000000].
                      * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
-                     * 设置Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
-                     * @param _maxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+                     * 设置Maximum bandwidth in bps. Options: [10000000, 20000000].
+                     * @param _maxBandwidth Maximum bandwidth in bps. Options: [10000000, 20000000].
                      * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool MaxBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Flow input group
-                     * @return InputGroup Flow input group
+                     * 获取Input group of a stream.
+                     * @return InputGroup Input group of a stream.
                      * 
                      */
                     std::vector<CreateInput> GetInputGroup() const;
 
                     /**
-                     * 设置Flow input group
-                     * @param _inputGroup Flow input group
+                     * 设置Input group of a stream.
+                     * @param _inputGroup Input group of a stream.
                      * 
                      */
                     void SetInputGroup(const std::vector<CreateInput>& _inputGroup);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool InputGroupHasBeenSet() const;
 
                     /**
-                     * 获取The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
-                     * @return EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+                     * 获取Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
+                     * @return EventId Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
                      * 
                      */
                     std::string GetEventId() const;
 
                     /**
-                     * 设置The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
-                     * @param _eventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+                     * 设置Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
+                     * @param _eventId Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
                      * 
                      */
                     void SetEventId(const std::string& _eventId);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool EventIdHasBeenSet() const;
 
                     /**
-                     * 获取Flow output group.
-                     * @return OutputGroup Flow output group.
+                     * 获取Output group of the stream.
+                     * @return OutputGroup Output group of the stream.
                      * 
                      */
                     std::vector<CreateOutputInfo> GetOutputGroup() const;
 
                     /**
-                     * 设置Flow output group.
-                     * @param _outputGroup Flow output group.
+                     * 设置Output group of the stream.
+                     * @param _outputGroup Output group of the stream.
                      * 
                      */
                     void SetOutputGroup(const std::vector<CreateOutputInfo>& _outputGroup);
@@ -152,31 +152,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Flow name
+                     * Stream name.
                      */
                     std::string m_flowName;
                     bool m_flowNameHasBeenSet;
 
                     /**
-                     * Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+                     * Maximum bandwidth in bps. Options: [10000000, 20000000].
                      */
                     int64_t m_maxBandwidth;
                     bool m_maxBandwidthHasBeenSet;
 
                     /**
-                     * Flow input group
+                     * Input group of a stream.
                      */
                     std::vector<CreateInput> m_inputGroup;
                     bool m_inputGroupHasBeenSet;
 
                     /**
-                     * The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+                     * Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
                      */
                     std::string m_eventId;
                     bool m_eventIdHasBeenSet;
 
                     /**
-                     * Flow output group.
+                     * Output group of the stream.
                      */
                     std::vector<CreateOutputInfo> m_outputGroup;
                     bool m_outputGroupHasBeenSet;

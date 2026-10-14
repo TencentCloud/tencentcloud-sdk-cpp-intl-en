@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Index type. `auto`: Automated; `normal`: General.
-                     * @return IndexType Index type. `auto`: Automated; `normal`: General.
+                     * 获取Index type. auto: autonomous index; normal: general index
+                     * @return IndexType Index type. auto: autonomous index; normal: general index
                      * 
                      */
                     std::string GetIndexType() const;
 
                     /**
-                     * 设置Index type. `auto`: Automated; `normal`: General.
-                     * @param _indexType Index type. `auto`: Automated; `normal`: General.
+                     * 设置Index type. auto: autonomous index; normal: general index
+                     * @param _indexType Index type. auto: autonomous index; normal: general index
                      * 
                      */
                     void SetIndexType(const std::string& _indexType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Index name. `null` indicates that all indexes are requested.
-                     * @return IndexName Index name. `null` indicates that all indexes are requested.
+                     * 获取Index name. If this parameter is left empty, all indexes are obtained.
+                     * @return IndexName Index name. If this parameter is left empty, all indexes are obtained.
                      * 
                      */
                     std::string GetIndexName() const;
 
                     /**
-                     * 设置Index name. `null` indicates that all indexes are requested.
-                     * @param _indexName Index name. `null` indicates that all indexes are requested.
+                     * 设置Index name. If this parameter is left empty, all indexes are obtained.
+                     * @param _indexName Index name. If this parameter is left empty, all indexes are obtained.
                      * 
                      */
                     void SetIndexName(const std::string& _indexName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IndexNameHasBeenSet() const;
 
                     /**
-                     * 获取Username for cluster access
-                     * @return Username Username for cluster access
+                     * 获取Cluster access username.
+                     * @return Username Cluster access username.
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username for cluster access
-                     * @param _username Username for cluster access
+                     * 设置Cluster access username.
+                     * @param _username Cluster access username.
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Password for cluster access
-                     * @return Password Password for cluster access
+                     * 获取Cluster access password
+                     * @return Password Cluster access password
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password for cluster access
-                     * @param _password Password for cluster access
+                     * 设置Cluster access password
+                     * @param _password Cluster access password
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取The starting position of paging
-                     * @return Offset The starting position of paging
+                     * 获取Paging start position
+                     * @return Offset Paging start position
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The starting position of paging
-                     * @param _offset The starting position of paging
+                     * 设置Paging start position
+                     * @param _offset Paging start position
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of results per page
-                     * @return Limit The number of results per page
+                     * 获取Number of items displayed per page
+                     * @return Limit Number of items displayed per page
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of results per page
-                     * @param _limit The number of results per page
+                     * 设置Number of items displayed per page
+                     * @param _limit Number of items displayed per page
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
-                     * @return OrderBy Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+                     * 获取Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
+                     * @return OrderBy Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
-                     * @param _orderBy Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+                     * 设置Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
+                     * @param _orderBy Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Filtering by index status
-                     * @return IndexStatusList Filtering by index status
+                     * 获取Filter by index status
+                     * @return IndexStatusList Filter by index status
                      * 
                      */
                     std::vector<std::string> GetIndexStatusList() const;
 
                     /**
-                     * 设置Filtering by index status
-                     * @param _indexStatusList Filtering by index status
+                     * 设置Filter by index status
+                     * @param _indexStatusList Filter by index status
                      * 
                      */
                     void SetIndexStatusList(const std::vector<std::string>& _indexStatusList);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool IndexStatusListHasBeenSet() const;
 
                     /**
-                     * 获取Sorting mode, which can be `asc` and `desc`.
-                     * @return Order Sorting mode, which can be `asc` and `desc`.
+                     * 获取Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
+                     * @return Order Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting mode, which can be `asc` and `desc`.
-                     * @param _order Sorting mode, which can be `asc` and `desc`.
+                     * 设置Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
+                     * @param _order Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -255,7 +255,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Index type. `auto`: Automated; `normal`: General.
+                     * Index type. auto: autonomous index; normal: general index
                      */
                     std::string m_indexType;
                     bool m_indexTypeHasBeenSet;
@@ -267,49 +267,49 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Index name. `null` indicates that all indexes are requested.
+                     * Index name. If this parameter is left empty, all indexes are obtained.
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
 
                     /**
-                     * Username for cluster access
+                     * Cluster access username.
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Password for cluster access
+                     * Cluster access password
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * The starting position of paging
+                     * Paging start position
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of results per page
+                     * Number of items displayed per page
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+                     * Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Filtering by index status
+                     * Filter by index status
                      */
                     std::vector<std::string> m_indexStatusList;
                     bool m_indexStatusListHasBeenSet;
 
                     /**
-                     * Sorting mode, which can be `asc` and `desc`.
+                     * Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

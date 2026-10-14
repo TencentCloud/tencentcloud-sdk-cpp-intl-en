@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent video splitting recording clip.
+                * Intelligent splitting video clip.
                 */
                 class SegmentRecognitionItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of a recording clip.
-                     * @return StartTimeOffset Start time offset of a recording clip.
+                     * 获取Start time offset of the segment.
+                     * @return StartTimeOffset Start time offset of the segment.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a recording clip.
-                     * @param _startTimeOffset Start time offset of a recording clip.
+                     * 设置Start time offset of the segment.
+                     * @param _startTimeOffset Start time offset of the segment.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of the recording clip.
-                     * @return EndTimeOffset End time offset of the recording clip.
+                     * 获取Segment end time offset.
+                     * @return EndTimeOffset Segment end time offset.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of the recording clip.
-                     * @param _endTimeOffset End time offset of the recording clip.
+                     * 设置Segment end time offset.
+                     * @param _endTimeOffset Segment end time offset.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Split segment URL.
-                     * @return SegmentUrl Split segment URL.
+                     * 获取Segment URL.
+                     * @return SegmentUrl Segment URL.
                      * 
                      */
                     std::string GetSegmentUrl() const;
 
                     /**
-                     * 设置Split segment URL.
-                     * @param _segmentUrl Split segment URL.
+                     * 设置Segment URL.
+                     * @param _segmentUrl Segment URL.
                      * 
                      */
                     void SetSegmentUrl(const std::string& _segmentUrl);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SegmentUrlHasBeenSet() const;
 
                     /**
-                     * 获取Segment cover.
-                     * @return CovImgUrl Segment cover.
+                     * 获取Split clip cover.
+                     * @return CovImgUrl Split clip cover.
                      * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
-                     * 设置Segment cover.
-                     * @param _covImgUrl Segment cover.
+                     * 设置Split clip cover.
+                     * @param _covImgUrl Split clip cover.
                      * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specify the figure ID.
-                     * @return PersonId Specify the figure ID.
+                     * 获取Specify the person ID.
+                     * @return PersonId Specify the person ID.
                      * 
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Specify the figure ID.
-                     * @param _personId Specify the figure ID.
+                     * 设置Specify the person ID.
+                     * @param _personId Specify the person ID.
                      * 
                      */
                     void SetPersonId(const std::string& _personId);
@@ -286,25 +286,25 @@ namespace TencentCloud
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Start time offset of a recording clip.
+                     * Start time offset of the segment.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of the recording clip.
+                     * Segment end time offset.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Split segment URL.
+                     * Segment URL.
                      */
                     std::string m_segmentUrl;
                     bool m_segmentUrlHasBeenSet;
 
                     /**
-                     * Segment cover.
+                     * Split clip cover.
                      */
                     std::string m_covImgUrl;
                     bool m_covImgUrlHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Specify the figure ID.
+                     * Specify the person ID.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;

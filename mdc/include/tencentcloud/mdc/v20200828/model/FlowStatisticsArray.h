@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * A list of the flow statistics.
+                * List of the stream's statistical data.
                 */
                 class FlowStatisticsArray : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The timestamp.
-                     * @return Timestamp The timestamp.
+                     * 获取Timestamp.
+                     * @return Timestamp Timestamp.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置The timestamp.
-                     * @param _timestamp The timestamp.
+                     * 设置Timestamp.
+                     * @param _timestamp Timestamp.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取The statistics of all the sessions.
-                     * @return FlowStatistics The statistics of all the sessions.
+                     * 获取Statistics for each session.
+                     * @return FlowStatistics Statistics for each session.
                      * 
                      */
                     std::vector<FlowStatistics> GetFlowStatistics() const;
 
                     /**
-                     * 设置The statistics of all the sessions.
-                     * @param _flowStatistics The statistics of all the sessions.
+                     * 设置Statistics for each session.
+                     * @param _flowStatistics Statistics for each session.
                      * 
                      */
                     void SetFlowStatistics(const std::vector<FlowStatistics>& _flowStatistics);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The timestamp.
+                     * Timestamp.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * The statistics of all the sessions.
+                     * Statistics for each session.
                      */
                     std::vector<FlowStatistics> m_flowStatistics;
                     bool m_flowStatisticsHasBeenSet;

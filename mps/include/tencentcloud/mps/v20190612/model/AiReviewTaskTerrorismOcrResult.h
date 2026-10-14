@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Ocr text sensitive task result type
+                * Content review Ocr text sensitivity task result type
                 */
                 class AiReviewTaskTerrorismOcrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review Ocr text sensitivity task input.
-                     * @return Input Content review Ocr text sensitivity task input.
+                     * 获取Content review Ocr text sensitive task input.
+                     * @return Input Content review Ocr text sensitive task input.
                      * 
                      */
                     AiReviewTerrorismOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review Ocr text sensitivity task input.
-                     * @param _input Content review Ocr text sensitivity task input.
+                     * 设置Content review Ocr text sensitive task input.
+                     * @param _input Content review Ocr text sensitive task input.
                      * 
                      */
                     void SetInput(const AiReviewTerrorismOcrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Content review Ocr text sensitive task output.
+                     * @return Output Content review Ocr text sensitive task output.
                      * 
                      */
                     AiReviewTerrorismOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Content review Ocr text sensitive task output.
+                     * @param _output Content review Ocr text sensitive task output.
                      * 
                      */
                     void SetOutput(const AiReviewTerrorismOcrTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review Ocr text sensitivity task input.
+                     * Content review Ocr text sensitive task input.
                      */
                     AiReviewTerrorismOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Content review Ocr text sensitive task output.
                      */
                     AiReviewTerrorismOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

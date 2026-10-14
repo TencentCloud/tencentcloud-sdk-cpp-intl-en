@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The input information after modification.
-                     * @return Info The input information after modification.
+                     * 获取Input information after modification.
+                     * @return Info Input information after modification.
                      * 
                      */
                     DescribeInput GetInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The input information after modification.
+                     * Input information after modification.
                      */
                     DescribeInput m_info;
                     bool m_infoHasBeenSet;

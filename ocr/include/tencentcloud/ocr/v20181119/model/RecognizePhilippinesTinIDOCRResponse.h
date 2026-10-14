@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The Base64-encoded identity photo.
-                     * @return HeadPortrait The Base64-encoded identity photo.
+                     * 获取Base64 encoded result of portrait photo.
+                     * @return HeadPortrait Base64 encoded result of portrait photo.
                      * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取The full name.
-                     * @return FullName The full name.
+                     * 获取Full name of the taxpayer.
+                     * @return FullName Full name of the taxpayer.
                      * 
                      */
                     TextDetectionResult GetFullName() const;
@@ -128,10 +128,66 @@ namespace TencentCloud
                      */
                     bool IssueDateHasBeenSet() const;
 
+                    /**
+                     * 获取Given name of the taxpayer.
+                     * @return GivenName Given name of the taxpayer.
+                     * 
+                     */
+                    TextDetectionResult GetGivenName() const;
+
+                    /**
+                     * 判断参数 GivenName 是否已赋值
+                     * @return GivenName 是否已赋值
+                     * 
+                     */
+                    bool GivenNameHasBeenSet() const;
+
+                    /**
+                     * 获取Last name of the taxpayer.
+                     * @return LastName Last name of the taxpayer.
+                     * 
+                     */
+                    TextDetectionResult GetLastName() const;
+
+                    /**
+                     * 判断参数 LastName 是否已赋值
+                     * @return LastName 是否已赋值
+                     * 
+                     */
+                    bool LastNameHasBeenSet() const;
+
+                    /**
+                     * 获取Middle name of the taxpayer.
+                     * @return MiddleName Middle name of the taxpayer.
+                     * 
+                     */
+                    TextDetectionResult GetMiddleName() const;
+
+                    /**
+                     * 判断参数 MiddleName 是否已赋值
+                     * @return MiddleName 是否已赋值
+                     * 
+                     */
+                    bool MiddleNameHasBeenSet() const;
+
+                    /**
+                     * 获取Revenue district office where the taxpayer is registered.
+                     * @return RDO Revenue district office where the taxpayer is registered.
+                     * 
+                     */
+                    TextDetectionResult GetRDO() const;
+
+                    /**
+                     * 判断参数 RDO 是否已赋值
+                     * @return RDO 是否已赋值
+                     * 
+                     */
+                    bool RDOHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The Base64-encoded identity photo.
+                     * Base64 encoded result of portrait photo.
                      */
                     TextDetectionResult m_headPortrait;
                     bool m_headPortraitHasBeenSet;
@@ -143,7 +199,7 @@ namespace TencentCloud
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * The full name.
+                     * Full name of the taxpayer.
                      */
                     TextDetectionResult m_fullName;
                     bool m_fullNameHasBeenSet;
@@ -165,6 +221,30 @@ namespace TencentCloud
                      */
                     TextDetectionResult m_issueDate;
                     bool m_issueDateHasBeenSet;
+
+                    /**
+                     * Given name of the taxpayer.
+                     */
+                    TextDetectionResult m_givenName;
+                    bool m_givenNameHasBeenSet;
+
+                    /**
+                     * Last name of the taxpayer.
+                     */
+                    TextDetectionResult m_lastName;
+                    bool m_lastNameHasBeenSet;
+
+                    /**
+                     * Middle name of the taxpayer.
+                     */
+                    TextDetectionResult m_middleName;
+                    bool m_middleNameHasBeenSet;
+
+                    /**
+                     * Revenue district office where the taxpayer is registered.
+                     */
+                    TextDetectionResult m_rDO;
+                    bool m_rDOHasBeenSet;
 
                 };
             }

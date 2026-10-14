@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The logs of a flow.
+                * Transmit streaming log information.
                 */
                 class FlowLogInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The timestamp (seconds).
-                     * @return Timestamp The timestamp (seconds).
+                     * 获取Timestamp in seconds.
+                     * @return Timestamp Timestamp in seconds.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置The timestamp (seconds).
-                     * @param _timestamp The timestamp (seconds).
+                     * 设置Timestamp in seconds.
+                     * @param _timestamp Timestamp in seconds.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is an input or output.
-                     * @return Type Whether it is an input or output.
+                     * 获取Input/output type. Valid values: `input`, `output`.
+                     * @return Type Input/output type. Valid values: `input`, `output`.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Whether it is an input or output.
-                     * @param _type Whether it is an input or output.
+                     * 设置Input/output type. Valid values: `input`, `output`.
+                     * @param _type Input/output type. Valid values: `input`, `output`.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The input or output ID.
-                     * @return InputOutputId The input or output ID.
+                     * 获取Input or output Id.
+                     * @return InputOutputId Input or output Id.
                      * 
                      */
                     std::string GetInputOutputId() const;
 
                     /**
-                     * 设置The input or output ID.
-                     * @param _inputOutputId The input or output ID.
+                     * 设置Input or output Id.
+                     * @param _inputOutputId Input or output Id.
                      * 
                      */
                     void SetInputOutputId(const std::string& _inputOutputId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InputOutputIdHasBeenSet() const;
 
                     /**
-                     * 获取The protocol.
-                     * @return Protocol The protocol.
+                     * 获取Protocol.
+                     * @return Protocol Protocol.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置The protocol.
-                     * @param _protocol The protocol.
+                     * 设置Protocol.
+                     * @param _protocol Protocol.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The event code.
-                     * @return EventCode The event code.
+                     * 获取Event code.
+                     * @return EventCode Event code.
                      * 
                      */
                     std::string GetEventCode() const;
 
                     /**
-                     * 设置The event code.
-                     * @param _eventCode The event code.
+                     * 设置Event code.
+                     * @param _eventCode Event code.
                      * 
                      */
                     void SetEventCode(const std::string& _eventCode);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EventCodeHasBeenSet() const;
 
                     /**
-                     * 获取The event information.
-                     * @return EventMessage The event information.
+                     * 获取Event information.
+                     * @return EventMessage Event information.
                      * 
                      */
                     std::string GetEventMessage() const;
 
                     /**
-                     * 设置The event information.
-                     * @param _eventMessage The event information.
+                     * 设置Event information.
+                     * @param _eventMessage Event information.
                      * 
                      */
                     void SetEventMessage(const std::string& _eventMessage);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EventMessageHasBeenSet() const;
 
                     /**
-                     * 获取The peer IP.
-                     * @return RemoteIp The peer IP.
+                     * 获取Peer IP.
+                     * @return RemoteIp Peer IP.
                      * 
                      */
                     std::string GetRemoteIp() const;
 
                     /**
-                     * 设置The peer IP.
-                     * @param _remoteIp The peer IP.
+                     * 设置Peer IP.
+                     * @param _remoteIp Peer IP.
                      * 
                      */
                     void SetRemoteIp(const std::string& _remoteIp);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool RemoteIpHasBeenSet() const;
 
                     /**
-                     * 获取The peer port.
-                     * @return RemotePort The peer port.
+                     * 获取Peer port.
+                     * @return RemotePort Peer port.
                      * 
                      */
                     std::string GetRemotePort() const;
 
                     /**
-                     * 设置The peer port.
-                     * @param _remotePort The peer port.
+                     * 设置Peer port.
+                     * @param _remotePort Peer port.
                      * 
                      */
                     void SetRemotePort(const std::string& _remotePort);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RemotePortHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
-                     * @return Pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+                     * 获取Primary/secondary tunnel. 0: primary, 1: backup.
+                     * @return Pipeline Primary/secondary tunnel. 0: primary, 1: backup.
                      * 
                      */
                     std::string GetPipeline() const;
 
                     /**
-                     * 设置Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
-                     * @param _pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+                     * 设置Primary/secondary tunnel. 0: primary, 1: backup.
+                     * @param _pipeline Primary/secondary tunnel. 0: primary, 1: backup.
                      * 
                      */
                     void SetPipeline(const std::string& _pipeline);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool PipelineHasBeenSet() const;
 
                     /**
-                     * 获取The input or output name.
-                     * @return InputOutputName The input or output name.
+                     * 获取Input or output name.
+                     * @return InputOutputName Input or output name.
                      * 
                      */
                     std::string GetInputOutputName() const;
 
                     /**
-                     * 设置The input or output name.
-                     * @param _inputOutputName The input or output name.
+                     * 设置Input or output name.
+                     * @param _inputOutputName Input or output name.
                      * 
                      */
                     void SetInputOutputName(const std::string& _inputOutputName);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The timestamp (seconds).
+                     * Timestamp in seconds.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * Whether it is an input or output.
+                     * Input/output type. Valid values: `input`, `output`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The input or output ID.
+                     * Input or output Id.
                      */
                     std::string m_inputOutputId;
                     bool m_inputOutputIdHasBeenSet;
 
                     /**
-                     * The protocol.
+                     * Protocol.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The event code.
+                     * Event code.
                      */
                     std::string m_eventCode;
                     bool m_eventCodeHasBeenSet;
 
                     /**
-                     * The event information.
+                     * Event information.
                      */
                     std::string m_eventMessage;
                     bool m_eventMessageHasBeenSet;
 
                     /**
-                     * The peer IP.
+                     * Peer IP.
                      */
                     std::string m_remoteIp;
                     bool m_remoteIpHasBeenSet;
 
                     /**
-                     * The peer port.
+                     * Peer port.
                      */
                     std::string m_remotePort;
                     bool m_remotePortHasBeenSet;
 
                     /**
-                     * Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+                     * Primary/secondary tunnel. 0: primary, 1: backup.
                      */
                     std::string m_pipeline;
                     bool m_pipelineHasBeenSet;
 
                     /**
-                     * The input or output name.
+                     * Input or output name.
                      */
                     std::string m_inputOutputName;
                     bool m_inputOutputNameHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A list of node types used to receive requests.
-                     * @return TargetNodeTypes A list of node types used to receive requests.
+                     * 获取List of target node types that receive requests
+                     * @return TargetNodeTypes List of target node types that receive requests
                      * 
                      */
                     std::vector<std::string> GetTargetNodeTypes() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A list of node types used to receive requests.
+                     * List of target node types that receive requests
                      */
                     std::vector<std::string> m_targetNodeTypes;
                     bool m_targetNodeTypesHasBeenSet;

@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InputInfos 
+                     * 获取Input information for a batch task.
+                     * @return InputInfos Input information for a batch task.
                      * 
                      */
                     std::vector<MediaInputInfo> GetInputInfos() const;
 
                     /**
-                     * 设置
-                     * @param _inputInfos 
+                     * 设置Input information for a batch task.
+                     * @param _inputInfos Input information for a batch task.
                      * 
                      */
                     void SetInputInfos(const std::vector<MediaInputInfo>& _inputInfos);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool InputInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Metadatas 
+                     * 获取Metadata of the original video.
+                     * @return Metadatas Metadata of the original video.
                      * 
                      */
                     std::vector<MediaMetaData> GetMetadatas() const;
 
                     /**
-                     * 设置
-                     * @param _metadatas 
+                     * 设置Metadata of the original video.
+                     * @param _metadatas Metadata of the original video.
                      * 
                      */
                     void SetMetadatas(const std::vector<MediaMetaData>& _metadatas);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool MetadatasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SmartSubtitlesTaskResult 
+                     * 获取Execution result of the smart subtitle task.
+                     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
                      * 
                      */
                     BatchSmartSubtitlesResult GetSmartSubtitlesTaskResult() const;
 
                     /**
-                     * 设置
-                     * @param _smartSubtitlesTaskResult 
+                     * 设置Execution result of the smart subtitle task.
+                     * @param _smartSubtitlesTaskResult Execution result of the smart subtitle task.
                      * 
                      */
                     void SetSmartSubtitlesTaskResult(const BatchSmartSubtitlesResult& _smartSubtitlesTaskResult);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Input information for a batch task.
                      */
                     std::vector<MediaInputInfo> m_inputInfos;
                     bool m_inputInfosHasBeenSet;
 
                     /**
-                     * 
+                     * Metadata of the original video.
                      */
                     std::vector<MediaMetaData> m_metadatas;
                     bool m_metadatasHasBeenSet;
 
                     /**
-                     * 
+                     * Execution result of the smart subtitle task.
                      */
                     BatchSmartSubtitlesResult m_smartSubtitlesTaskResult;
                     bool m_smartSubtitlesTaskResultHasBeenSet;

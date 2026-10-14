@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The real-time status information of a flow.
+                * Stream status information of the real-time stream status query API.
                 */
                 class FlowRealtimeStatusItem : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether it is an input or output. Valid values: Input, Output.
-                     * @return Type Whether it is an input or output. Valid values: Input, Output.
+                     * 获取Type. Valid values: `Input`, `Output`.
+                     * @return Type Type. Valid values: `Input`, `Output`.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Whether it is an input or output. Valid values: Input, Output.
-                     * @param _type Whether it is an input or output. Valid values: Input, Output.
+                     * 设置Type. Valid values: `Input`, `Output`.
+                     * @param _type Type. Valid values: `Input`, `Output`.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The input ID, which is not empty if `Type` is `Input`.
-                     * @return InputId The input ID, which is not empty if `Type` is `Input`.
+                     * 获取Input Id. If Type is Input, this field is not empty.
+                     * @return InputId Input Id. If Type is Input, this field is not empty.
                      * 
                      */
                     std::string GetInputId() const;
 
                     /**
-                     * 设置The input ID, which is not empty if `Type` is `Input`.
-                     * @param _inputId The input ID, which is not empty if `Type` is `Input`.
+                     * 设置Input Id. If Type is Input, this field is not empty.
+                     * @param _inputId Input Id. If Type is Input, this field is not empty.
                      * 
                      */
                     void SetInputId(const std::string& _inputId);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool InputIdHasBeenSet() const;
 
                     /**
-                     * 获取The output ID, which is not empty if `Type` is `Output`.
-                     * @return OutputId The output ID, which is not empty if `Type` is `Output`.
+                     * 获取Output Id. If Type is Output, this field is not empty.
+                     * @return OutputId Output Id. If Type is Output, this field is not empty.
                      * 
                      */
                     std::string GetOutputId() const;
 
                     /**
-                     * 设置The output ID, which is not empty if `Type` is `Output`.
-                     * @param _outputId The output ID, which is not empty if `Type` is `Output`.
+                     * 设置Output Id. If Type is Output, this field is not empty.
+                     * @param _outputId Output Id. If Type is Output, this field is not empty.
                      * 
                      */
                     void SetOutputId(const std::string& _outputId);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool OutputIdHasBeenSet() const;
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取Stream Id.
+                     * @return FlowId Stream Id.
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置Stream Id.
+                     * @param _flowId Stream Id.
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The protocol used. Valid values: SRT, RTP, RTMP.
-                     * @return Protocol The protocol used. Valid values: SRT, RTP, RTMP.
+                     * 获取Protocol. SRT | RTMP.
+                     * @return Protocol Protocol. SRT | RTMP.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置The protocol used. Valid values: SRT, RTP, RTMP.
-                     * @param _protocol The protocol used. Valid values: SRT, RTP, RTMP.
+                     * 设置Protocol. SRT | RTMP.
+                     * @param _protocol Protocol. SRT | RTMP.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The common status information.
-                     * @return CommonStatus The common status information.
+                     * 获取Common status information.
+                     * @return CommonStatus Common status information.
                      * 
                      */
                     FlowRealtimeStatusCommon GetCommonStatus() const;
 
                     /**
-                     * 设置The common status information.
-                     * @param _commonStatus The common status information.
+                     * 设置Common status information.
+                     * @param _commonStatus Common status information.
                      * 
                      */
                     void SetCommonStatus(const FlowRealtimeStatusCommon& _commonStatus);
@@ -177,19 +177,15 @@ namespace TencentCloud
                     bool CommonStatusHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SRTStatus This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取If it is the SRT Protocol, this field will be present.
+                     * @return SRTStatus If it is the SRT Protocol, this field will be present.
                      * 
                      */
                     FlowRealtimeStatusSRT GetSRTStatus() const;
 
                     /**
-                     * 设置This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _sRTStatus This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置If it is the SRT Protocol, this field will be present.
+                     * @param _sRTStatus If it is the SRT Protocol, this field will be present.
                      * 
                      */
                     void SetSRTStatus(const FlowRealtimeStatusSRT& _sRTStatus);
@@ -202,19 +198,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SRTStatusHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RTMPStatus This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取If it is the RTMP protocol, this field exists.
+                     * @return RTMPStatus If it is the RTMP protocol, this field exists.
                      * 
                      */
                     FlowRealtimeStatusRTMP GetRTMPStatus() const;
 
                     /**
-                     * 设置This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _rTMPStatus This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置If it is the RTMP protocol, this field exists.
+                     * @param _rTMPStatus If it is the RTMP protocol, this field exists.
                      * 
                      */
                     void SetRTMPStatus(const FlowRealtimeStatusRTMP& _rTMPStatus);
@@ -227,15 +219,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RTMPStatusHasBeenSet() const;
 
                     /**
-                     * 获取The server IP.
-                     * @return ConnectServerIP The server IP.
+                     * 获取Server IP address.
+                     * @return ConnectServerIP Server IP address.
                      * 
                      */
                     std::string GetConnectServerIP() const;
 
                     /**
-                     * 设置The server IP.
-                     * @param _connectServerIP The server IP.
+                     * 设置Server IP address.
+                     * @param _connectServerIP Server IP address.
                      * 
                      */
                     void SetConnectServerIP(const std::string& _connectServerIP);
@@ -248,19 +240,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ConnectServerIPHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RTPStatus This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取If it is the RTP protocol, this field exists.
+                     * @return RTPStatus If it is the RTP protocol, this field exists.
                      * 
                      */
                     FlowRealtimeStatusRTP GetRTPStatus() const;
 
                     /**
-                     * 设置This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _rTPStatus This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置If it is the RTP protocol, this field exists.
+                     * @param _rTPStatus If it is the RTP protocol, this field exists.
                      * 
                      */
                     void SetRTPStatus(const FlowRealtimeStatusRTP& _rTPStatus);
@@ -275,64 +263,61 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether it is an input or output. Valid values: Input, Output.
+                     * Type. Valid values: `Input`, `Output`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The input ID, which is not empty if `Type` is `Input`.
+                     * Input Id. If Type is Input, this field is not empty.
                      */
                     std::string m_inputId;
                     bool m_inputIdHasBeenSet;
 
                     /**
-                     * The output ID, which is not empty if `Type` is `Output`.
+                     * Output Id. If Type is Output, this field is not empty.
                      */
                     std::string m_outputId;
                     bool m_outputIdHasBeenSet;
 
                     /**
-                     * The flow ID.
+                     * Stream Id.
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The protocol used. Valid values: SRT, RTP, RTMP.
+                     * Protocol. SRT | RTMP.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The common status information.
+                     * Common status information.
                      */
                     FlowRealtimeStatusCommon m_commonStatus;
                     bool m_commonStatusHasBeenSet;
 
                     /**
-                     * This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * If it is the SRT Protocol, this field will be present.
                      */
                     FlowRealtimeStatusSRT m_sRTStatus;
                     bool m_sRTStatusHasBeenSet;
 
                     /**
-                     * This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * If it is the RTMP protocol, this field exists.
                      */
                     FlowRealtimeStatusRTMP m_rTMPStatus;
                     bool m_rTMPStatusHasBeenSet;
 
                     /**
-                     * The server IP.
+                     * Server IP address.
                      */
                     std::string m_connectServerIP;
                     bool m_connectServerIPHasBeenSet;
 
                     /**
-                     * This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * If it is the RTP protocol, this field exists.
                      */
                     FlowRealtimeStatusRTP m_rTPStatus;
                     bool m_rTPStatusHasBeenSet;

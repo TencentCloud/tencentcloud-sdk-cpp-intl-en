@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tag form of a dead letter queue topic mode
-                     * @return FilterType Tag form of a dead letter queue topic mode
+                     * 获取Tag format of the DLQ topic model
+                     * @return FilterType Tag format of the DLQ topic model
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置Tag form of a dead letter queue topic mode
-                     * @param _filterType Tag form of a dead letter queue topic mode
+                     * 设置Tag format of the DLQ topic model
+                     * @param _filterType Tag format of the DLQ topic model
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tag form of a dead letter queue topic mode
+                     * Tag format of the DLQ topic model
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;

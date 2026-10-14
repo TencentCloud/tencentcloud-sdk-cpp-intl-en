@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Ocr text pornographic information
+                * Pornographic information in Ocr text.
                 */
                 class AiReviewPornOcrTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
-                     * @return Confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+                     * 获取Ocr text porn score. Value range: 0-100.
+                     * @return Confidence Ocr text porn score. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
-                     * @param _confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+                     * 设置Ocr text porn score. Value range: 0-100.
+                     * @param _confidence Ocr text porn score. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Result Suggestions for Ocr text pornographic content, value ranges from...to...
+                     * 获取Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
+                     * @return Suggestion Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result Suggestions for Ocr text pornographic content, value ranges from...to...
+                     * 设置Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
+                     * @param _suggestion Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video segment list with suspect Ocr text pornographic information.
-                     * @return SegmentSet Video segment list with suspect Ocr text pornographic information.
+                     * 获取List of video segments where the Ocr text is suspected of containing pornographic content.
+                     * @return SegmentSet List of video segments where the Ocr text is suspected of containing pornographic content.
                      * 
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Video segment list with suspect Ocr text pornographic information.
-                     * @param _segmentSet Video segment list with suspect Ocr text pornographic information.
+                     * 设置List of video segments where the Ocr text is suspected of containing pornographic content.
+                     * @param _segmentSet List of video segments where the Ocr text is suspected of containing pornographic content.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
@@ -125,13 +125,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+                     * Ocr text porn score. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Result Suggestions for Ocr text pornographic content, value ranges from...to...
+                     * Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video segment list with suspect Ocr text pornographic information.
+                     * List of video segments where the Ocr text is suspected of containing pornographic content.
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

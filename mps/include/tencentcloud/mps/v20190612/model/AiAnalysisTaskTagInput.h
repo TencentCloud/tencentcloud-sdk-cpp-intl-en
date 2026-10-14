@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent tag task input type
+                * Intelligent tag task input type.
                 */
                 class AiAnalysisTaskTagInput : public AbstractModel
                 {

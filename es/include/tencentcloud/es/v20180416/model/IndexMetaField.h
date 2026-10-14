@@ -52,18 +52,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexType Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetIndexType() const;
 
                     /**
                      * 设置Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param _indexType Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetIndexType(const std::string& _indexType);
@@ -77,18 +73,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexName Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetIndexName() const;
 
                     /**
                      * 设置Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param _indexName Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetIndexName(const std::string& _indexName);
@@ -101,15 +93,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IndexMetaJson 
+                     * 获取JSON-formatted index metadata
+                     * @return IndexMetaJson JSON-formatted index metadata
                      * 
                      */
                     std::string GetIndexMetaJson() const;
 
                     /**
-                     * 设置
-                     * @param _indexMetaJson 
+                     * 设置JSON-formatted index metadata
+                     * @param _indexMetaJson JSON-formatted index metadata
                      * 
                      */
                     void SetIndexMetaJson(const std::string& _indexMetaJson);
@@ -123,18 +115,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexStatus Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetIndexStatus() const;
 
                     /**
                      * 设置Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param _indexStatus Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetIndexStatus(const std::string& _indexStatus);
@@ -147,19 +135,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexStatusHasBeenSet() const;
 
                     /**
-                     * 获取Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexStorage Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Index storage size in bytes
+                     * @return IndexStorage Index storage size in bytes
                      * 
                      */
                     int64_t GetIndexStorage() const;
 
                     /**
-                     * 设置Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexStorage Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Index storage size in bytes
+                     * @param _indexStorage Index storage size in bytes
                      * 
                      */
                     void SetIndexStorage(const int64_t& _indexStorage);
@@ -173,18 +157,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexCreateTime Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetIndexCreateTime() const;
 
                     /**
                      * 设置Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param _indexCreateTime Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetIndexCreateTime(const std::string& _indexCreateTime);
@@ -197,19 +177,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return BackingIndices Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Backup index
+                     * @return BackingIndices Backup index
                      * 
                      */
                     std::vector<BackingIndexMetaField> GetBackingIndices() const;
 
                     /**
-                     * 设置Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _backingIndices Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Backup index
+                     * @param _backingIndices Backup index
                      * 
                      */
                     void SetBackingIndices(const std::vector<BackingIndexMetaField>& _backingIndices);
@@ -222,19 +198,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool BackingIndicesHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ClusterId Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Cluster ID of the index
+                     * @return ClusterId Cluster ID of the index
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _clusterId Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Cluster ID of the index
+                     * @param _clusterId Cluster ID of the index
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -247,19 +219,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ClusterName Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Cluster name of the index
+                     * @return ClusterName Cluster name of the index
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _clusterName Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Cluster name of the index
+                     * @param _clusterName Cluster name of the index
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -272,19 +240,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ClusterVersion Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Version number of the cluster to which the index belongs
+                     * @return ClusterVersion Version number of the cluster to which the index belongs
                      * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
-                     * 设置Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _clusterVersion Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Version number of the cluster to which the index belongs
+                     * @param _clusterVersion Version number of the cluster to which the index belongs
                      * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
@@ -297,19 +261,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ClusterVersionHasBeenSet() const;
 
                     /**
-                     * 获取Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexPolicyField Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Index lifecycle field
+                     * @return IndexPolicyField Index lifecycle field
                      * 
                      */
                     IndexPolicyField GetIndexPolicyField() const;
 
                     /**
-                     * 设置Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexPolicyField Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Index lifecycle field
+                     * @param _indexPolicyField Index lifecycle field
                      * 
                      */
                     void SetIndexPolicyField(const IndexPolicyField& _indexPolicyField);
@@ -322,19 +282,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexPolicyFieldHasBeenSet() const;
 
                     /**
-                     * 获取Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexOptionsField Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Index autonomous field
+                     * @return IndexOptionsField Index autonomous field
                      * 
                      */
                     IndexOptionsField GetIndexOptionsField() const;
 
                     /**
-                     * 设置Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexOptionsField Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Index autonomous field
+                     * @param _indexOptionsField Index autonomous field
                      * 
                      */
                     void SetIndexOptionsField(const IndexOptionsField& _indexOptionsField);
@@ -347,19 +303,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexOptionsFieldHasBeenSet() const;
 
                     /**
-                     * 获取Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexSettingsField Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Index configuration field
+                     * @return IndexSettingsField Index configuration field
                      * 
                      */
                     IndexSettingsField GetIndexSettingsField() const;
 
                     /**
-                     * 设置Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexSettingsField Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Index configuration field
+                     * @param _indexSettingsField Index configuration field
                      * 
                      */
                     void SetIndexSettingsField(const IndexSettingsField& _indexSettingsField);
@@ -372,19 +324,36 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexSettingsFieldHasBeenSet() const;
 
                     /**
-                     * 获取Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return AppId Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Index alias field
+                     * @return IndexAliasesField Index alias field
+                     * 
+                     */
+                    std::vector<std::string> GetIndexAliasesField() const;
+
+                    /**
+                     * 设置Index alias field
+                     * @param _indexAliasesField Index alias field
+                     * 
+                     */
+                    void SetIndexAliasesField(const std::vector<std::string>& _indexAliasesField);
+
+                    /**
+                     * 判断参数 IndexAliasesField 是否已赋值
+                     * @return IndexAliasesField 是否已赋值
+                     * 
+                     */
+                    bool IndexAliasesFieldHasBeenSet() const;
+
+                    /**
+                     * 获取APP ID of the cluster to which the index belongs
+                     * @return AppId APP ID of the cluster to which the index belongs
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _appId Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置APP ID of the cluster to which the index belongs
+                     * @param _appId APP ID of the cluster to which the index belongs
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -397,19 +366,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IndexDocs The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of indexed documents
+                     * @return IndexDocs Number of indexed documents
                      * 
                      */
                     uint64_t GetIndexDocs() const;
 
                     /**
-                     * 设置The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _indexDocs The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of indexed documents
+                     * @param _indexDocs Number of indexed documents
                      * 
                      */
                     void SetIndexDocs(const uint64_t& _indexDocs);
@@ -425,104 +390,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_indexType;
                     bool m_indexTypeHasBeenSet;
 
                     /**
                      * Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
 
                     /**
-                     * 
+                     * JSON-formatted index metadata
                      */
                     std::string m_indexMetaJson;
                     bool m_indexMetaJsonHasBeenSet;
 
                     /**
                      * Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_indexStatus;
                     bool m_indexStatusHasBeenSet;
 
                     /**
-                     * Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Index storage size in bytes
                      */
                     int64_t m_indexStorage;
                     bool m_indexStorageHasBeenSet;
 
                     /**
                      * Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_indexCreateTime;
                     bool m_indexCreateTimeHasBeenSet;
 
                     /**
-                     * Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Backup index
                      */
                     std::vector<BackingIndexMetaField> m_backingIndices;
                     bool m_backingIndicesHasBeenSet;
 
                     /**
-                     * Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Cluster ID of the index
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Cluster name of the index
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Version number of the cluster to which the index belongs
                      */
                     std::string m_clusterVersion;
                     bool m_clusterVersionHasBeenSet;
 
                     /**
-                     * Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Index lifecycle field
                      */
                     IndexPolicyField m_indexPolicyField;
                     bool m_indexPolicyFieldHasBeenSet;
 
                     /**
-                     * Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Index autonomous field
                      */
                     IndexOptionsField m_indexOptionsField;
                     bool m_indexOptionsFieldHasBeenSet;
 
                     /**
-                     * Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Index configuration field
                      */
                     IndexSettingsField m_indexSettingsField;
                     bool m_indexSettingsFieldHasBeenSet;
 
                     /**
-                     * Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Index alias field
+                     */
+                    std::vector<std::string> m_indexAliasesField;
+                    bool m_indexAliasesFieldHasBeenSet;
+
+                    /**
+                     * APP ID of the cluster to which the index belongs
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of indexed documents
                      */
                     uint64_t m_indexDocs;
                     bool m_indexDocsHasBeenSet;

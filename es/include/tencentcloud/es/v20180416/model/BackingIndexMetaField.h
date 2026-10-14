@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Backing index metadata fields
+                * Backup index metadata field
                 */
                 class BackingIndexMetaField : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexName Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Backing index name</p>
+                     * @return IndexName <p>Backing index name</p>
                      * 
                      */
                     std::string GetIndexName() const;
 
                     /**
-                     * 设置Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexName Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Backing index name</p>
+                     * @param _indexName <p>Backing index name</p>
                      * 
                      */
                     void SetIndexName(const std::string& _indexName);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexNameHasBeenSet() const;
 
                     /**
-                     * 获取Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexStatus Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Backup index status</p>
+                     * @return IndexStatus <p>Backup index status</p>
                      * 
                      */
                     std::string GetIndexStatus() const;
 
                     /**
-                     * 设置Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexStatus Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Backup index status</p>
+                     * @param _indexStatus <p>Backup index status</p>
                      * 
                      */
                     void SetIndexStatus(const std::string& _indexStatus);
@@ -97,19 +89,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexStatusHasBeenSet() const;
 
                     /**
-                     * 获取Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexStorage Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Backup index storage size</p>
+                     * @return IndexStorage <p>Backup index storage size</p>
                      * 
                      */
                     int64_t GetIndexStorage() const;
 
                     /**
-                     * 设置Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexStorage Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Backup index storage size</p>
+                     * @param _indexStorage <p>Backup index storage size</p>
                      * 
                      */
                     void SetIndexStorage(const int64_t& _indexStorage);
@@ -122,19 +110,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexStorageHasBeenSet() const;
 
                     /**
-                     * 获取Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexPhrase Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Backup index current lifecycle</p>
+                     * @return IndexPhrase <p>Backup index current lifecycle</p>
                      * 
                      */
                     std::string GetIndexPhrase() const;
 
                     /**
-                     * 设置Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexPhrase Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Backup index current lifecycle</p>
+                     * @param _indexPhrase <p>Backup index current lifecycle</p>
                      * 
                      */
                     void SetIndexPhrase(const std::string& _indexPhrase);
@@ -147,19 +131,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexPhraseHasBeenSet() const;
 
                     /**
-                     * 获取Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IndexCreateTime Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Backup index creation time</p>
+                     * @return IndexCreateTime <p>Backup index creation time</p>
                      * 
                      */
                     std::string GetIndexCreateTime() const;
 
                     /**
-                     * 设置Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _indexCreateTime Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Backup index creation time</p>
+                     * @param _indexCreateTime <p>Backup index creation time</p>
                      * 
                      */
                     void SetIndexCreateTime(const std::string& _indexCreateTime);
@@ -171,42 +151,64 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool IndexCreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Index Uuid</p>
+                     * @return IndexUuid <p>Index Uuid</p>
+                     * 
+                     */
+                    std::string GetIndexUuid() const;
+
+                    /**
+                     * 设置<p>Index Uuid</p>
+                     * @param _indexUuid <p>Index Uuid</p>
+                     * 
+                     */
+                    void SetIndexUuid(const std::string& _indexUuid);
+
+                    /**
+                     * 判断参数 IndexUuid 是否已赋值
+                     * @return IndexUuid 是否已赋值
+                     * 
+                     */
+                    bool IndexUuidHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Backing index name</p>
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
 
                     /**
-                     * Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Backup index status</p>
                      */
                     std::string m_indexStatus;
                     bool m_indexStatusHasBeenSet;
 
                     /**
-                     * Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Backup index storage size</p>
                      */
                     int64_t m_indexStorage;
                     bool m_indexStorageHasBeenSet;
 
                     /**
-                     * Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Backup index current lifecycle</p>
                      */
                     std::string m_indexPhrase;
                     bool m_indexPhraseHasBeenSet;
 
                     /**
-                     * Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Backup index creation time</p>
                      */
                     std::string m_indexCreateTime;
                     bool m_indexCreateTimeHasBeenSet;
+
+                    /**
+                     * <p>Index Uuid</p>
+                     */
+                    std::string m_indexUuid;
+                    bool m_indexUuidHasBeenSet;
 
                 };
             }

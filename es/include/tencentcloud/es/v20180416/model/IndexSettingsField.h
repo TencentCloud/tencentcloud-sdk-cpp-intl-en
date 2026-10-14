@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Index configuration fields
+                * Index configuration field
                 */
                 class IndexSettingsField : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NumberOfShards Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Number of index primary shards
+                     * @return NumberOfShards Number of index primary shards
                      * 
                      */
                     std::string GetNumberOfShards() const;
 
                     /**
-                     * 设置Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _numberOfShards Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Number of index primary shards
+                     * @param _numberOfShards Number of index primary shards
                      * 
                      */
                     void SetNumberOfShards(const std::string& _numberOfShards);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool NumberOfShardsHasBeenSet() const;
 
                     /**
-                     * 获取Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NumberOfReplicas Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Replica shard count of an index
+                     * @return NumberOfReplicas Replica shard count of an index
                      * 
                      */
                     std::string GetNumberOfReplicas() const;
 
                     /**
-                     * 设置Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _numberOfReplicas Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Replica shard count of an index
+                     * @param _numberOfReplicas Replica shard count of an index
                      * 
                      */
                     void SetNumberOfReplicas(const std::string& _numberOfReplicas);
@@ -97,19 +89,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool NumberOfReplicasHasBeenSet() const;
 
                     /**
-                     * 获取Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RefreshInterval Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Index refresh frequency
+                     * @return RefreshInterval Index refresh frequency
                      * 
                      */
                     std::string GetRefreshInterval() const;
 
                     /**
-                     * 设置Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _refreshInterval Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Index refresh frequency
+                     * @param _refreshInterval Index refresh frequency
                      * 
                      */
                     void SetRefreshInterval(const std::string& _refreshInterval);
@@ -124,22 +112,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Number of index primary shards
                      */
                     std::string m_numberOfShards;
                     bool m_numberOfShardsHasBeenSet;
 
                     /**
-                     * Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Replica shard count of an index
                      */
                     std::string m_numberOfReplicas;
                     bool m_numberOfReplicasHasBeenSet;
 
                     /**
-                     * Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Index refresh frequency
                      */
                     std::string m_refreshInterval;
                     bool m_refreshIntervalHasBeenSet;

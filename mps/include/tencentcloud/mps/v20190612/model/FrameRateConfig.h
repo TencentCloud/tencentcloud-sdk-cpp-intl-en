@@ -48,12 +48,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * 
                      */
@@ -61,12 +61,12 @@ Default value: ON.
 
                     /**
                      * 设置Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * @param _switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * 
                      */
@@ -80,15 +80,23 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Fps 
+                     * 获取Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
+                     * @return Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
                      * 
                      */
                     uint64_t GetFps() const;
 
                     /**
-                     * 设置
-                     * @param _fps 
+                     * 设置Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
+                     * @param _fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
                      * 
                      */
                     void SetFps(const uint64_t& _fps);
@@ -104,15 +112,17 @@ Default value: ON.
 
                     /**
                      * Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
                      */
                     uint64_t m_fps;
                     bool m_fpsHasBeenSet;

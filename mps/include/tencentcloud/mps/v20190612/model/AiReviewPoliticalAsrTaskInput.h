@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Asr text sensitivity task input parameter type
+                * Input parameter type of the sensitive Asr text task in content review
                 */
                 class AiReviewPoliticalAsrTaskInput : public AbstractModel
                 {

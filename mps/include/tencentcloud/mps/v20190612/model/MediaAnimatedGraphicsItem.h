@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
-                     * @return Definition Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+                     * 获取ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+                     * @return Definition ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
-                     * @param _definition Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+                     * 设置ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+                     * @param _definition ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Animated image file format, for example gif.
-                     * @return Container Animated image file format, for example gif.
+                     * 获取Animated image file format, for example, gif.
+                     * @return Container Animated image file format, for example, gif.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Animated image file format, for example gif.
-                     * @param _container Animated image file format, for example gif.
+                     * 设置Animated image file format, for example, gif.
+                     * @param _container Animated image file format, for example, gif.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Height of the animated image, measurement unit: px.
-                     * @return Height Height of the animated image, measurement unit: px.
+                     * 获取Height of the animated image. Measurement unit: px.
+                     * @return Height Height of the animated image. Measurement unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height of the animated image, measurement unit: px.
-                     * @param _height Height of the animated image, measurement unit: px.
+                     * 设置Height of the animated image. Measurement unit: px.
+                     * @param _height Height of the animated image. Measurement unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Width of the animated image, measurement unit: px.
-                     * @return Width Width of the animated image, measurement unit: px.
+                     * 获取Width of the animated image in px.
+                     * @return Width Width of the animated image in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width of the animated image, measurement unit: px.
-                     * @param _width Width of the animated image, measurement unit: px.
+                     * 设置Width of the animated image in px.
+                     * @param _width Width of the animated image in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Animated image bitrate. Measurement unit: bps.
-                     * @return Bitrate Animated image bitrate. Measurement unit: bps.
+                     * 获取Animated image bitrate. Unit: bps.
+                     * @return Bitrate Animated image bitrate. Unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Animated image bitrate. Measurement unit: bps.
-                     * @param _bitrate Animated image bitrate. Measurement unit: bps.
+                     * 设置Animated image bitrate. Unit: bps.
+                     * @param _bitrate Animated image bitrate. Unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Animated image size, unit: byte.
-                     * @return Size Animated image size, unit: byte.
+                     * 获取Animation size. Unit: byte.
+                     * @return Size Animation size. Unit: byte.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Animated image size, unit: byte.
-                     * @param _size Animated image size, unit: byte.
+                     * 设置Animation size. Unit: byte.
+                     * @param _size Animation size. Unit: byte.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -293,37 +293,37 @@ namespace TencentCloud
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+                     * ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Animated image file format, for example gif.
+                     * Animated image file format, for example, gif.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Height of the animated image, measurement unit: px.
+                     * Height of the animated image. Measurement unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Width of the animated image, measurement unit: px.
+                     * Width of the animated image in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Animated image bitrate. Measurement unit: bps.
+                     * Animated image bitrate. Unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Animated image size, unit: byte.
+                     * Animation size. Unit: byte.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

@@ -54,7 +54,22 @@ UpdateInstanceRequest::UpdateInstanceRequest() :
     m_cerebroPrivateAccessHasBeenSet(false),
     m_esConfigSetHasBeenSet(false),
     m_operationDurationHasBeenSet(false),
-    m_kibanaAlteringPublicAccessHasBeenSet(false)
+    m_kibanaAlteringPublicAccessHasBeenSet(false),
+    m_kibanaPrivateDomainHasBeenSet(false),
+    m_cerebroPrivateDomainHasBeenSet(false),
+    m_protocolHasBeenSet(false),
+    m_outboundPublicAclsHasBeenSet(false),
+    m_outboundPublicAccessHasBeenSet(false),
+    m_cvmDelayOnlineTimeHasBeenSet(false),
+    m_shardAllocationConcurrentsHasBeenSet(false),
+    m_shardAllocationBytesHasBeenSet(false),
+    m_readWriteModeHasBeenSet(false),
+    m_enableScheduleRecoverGroupHasBeenSet(false),
+    m_enableScheduleOperationDurationHasBeenSet(false),
+    m_enableDestroyProtectionHasBeenSet(false),
+    m_autoScaleDiskInfoListHasBeenSet(false),
+    m_autoScaleDiskDeleteNodeTypeListHasBeenSet(false),
+    m_otherConfigHasBeenSet(false)
 {
 }
 
@@ -339,6 +354,147 @@ string UpdateInstanceRequest::ToJsonString() const
         string key = "KibanaAlteringPublicAccess";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_kibanaAlteringPublicAccess.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_kibanaPrivateDomainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KibanaPrivateDomain";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_kibanaPrivateDomain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cerebroPrivateDomainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CerebroPrivateDomain";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cerebroPrivateDomain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Protocol";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_outboundPublicAclsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutboundPublicAcls";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_outboundPublicAcls.begin(); itr != m_outboundPublicAcls.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_outboundPublicAccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutboundPublicAccess";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_outboundPublicAccess.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cvmDelayOnlineTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CvmDelayOnlineTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_cvmDelayOnlineTime, allocator);
+    }
+
+    if (m_shardAllocationConcurrentsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ShardAllocationConcurrents";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_shardAllocationConcurrents, allocator);
+    }
+
+    if (m_shardAllocationBytesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ShardAllocationBytes";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_shardAllocationBytes, allocator);
+    }
+
+    if (m_readWriteModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReadWriteMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_readWriteMode, allocator);
+    }
+
+    if (m_enableScheduleRecoverGroupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableScheduleRecoverGroup";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableScheduleRecoverGroup, allocator);
+    }
+
+    if (m_enableScheduleOperationDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableScheduleOperationDuration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_enableScheduleOperationDuration.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_enableDestroyProtectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableDestroyProtection";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_enableDestroyProtection.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoScaleDiskInfoListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoScaleDiskInfoList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_autoScaleDiskInfoList.begin(); itr != m_autoScaleDiskInfoList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_autoScaleDiskDeleteNodeTypeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoScaleDiskDeleteNodeTypeList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_autoScaleDiskDeleteNodeTypeList.begin(); itr != m_autoScaleDiskDeleteNodeTypeList.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_otherConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OtherConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_otherConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -859,6 +1015,246 @@ void UpdateInstanceRequest::SetKibanaAlteringPublicAccess(const string& _kibanaA
 bool UpdateInstanceRequest::KibanaAlteringPublicAccessHasBeenSet() const
 {
     return m_kibanaAlteringPublicAccessHasBeenSet;
+}
+
+string UpdateInstanceRequest::GetKibanaPrivateDomain() const
+{
+    return m_kibanaPrivateDomain;
+}
+
+void UpdateInstanceRequest::SetKibanaPrivateDomain(const string& _kibanaPrivateDomain)
+{
+    m_kibanaPrivateDomain = _kibanaPrivateDomain;
+    m_kibanaPrivateDomainHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::KibanaPrivateDomainHasBeenSet() const
+{
+    return m_kibanaPrivateDomainHasBeenSet;
+}
+
+string UpdateInstanceRequest::GetCerebroPrivateDomain() const
+{
+    return m_cerebroPrivateDomain;
+}
+
+void UpdateInstanceRequest::SetCerebroPrivateDomain(const string& _cerebroPrivateDomain)
+{
+    m_cerebroPrivateDomain = _cerebroPrivateDomain;
+    m_cerebroPrivateDomainHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::CerebroPrivateDomainHasBeenSet() const
+{
+    return m_cerebroPrivateDomainHasBeenSet;
+}
+
+string UpdateInstanceRequest::GetProtocol() const
+{
+    return m_protocol;
+}
+
+void UpdateInstanceRequest::SetProtocol(const string& _protocol)
+{
+    m_protocol = _protocol;
+    m_protocolHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::ProtocolHasBeenSet() const
+{
+    return m_protocolHasBeenSet;
+}
+
+vector<OutboundPublicAcl> UpdateInstanceRequest::GetOutboundPublicAcls() const
+{
+    return m_outboundPublicAcls;
+}
+
+void UpdateInstanceRequest::SetOutboundPublicAcls(const vector<OutboundPublicAcl>& _outboundPublicAcls)
+{
+    m_outboundPublicAcls = _outboundPublicAcls;
+    m_outboundPublicAclsHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::OutboundPublicAclsHasBeenSet() const
+{
+    return m_outboundPublicAclsHasBeenSet;
+}
+
+string UpdateInstanceRequest::GetOutboundPublicAccess() const
+{
+    return m_outboundPublicAccess;
+}
+
+void UpdateInstanceRequest::SetOutboundPublicAccess(const string& _outboundPublicAccess)
+{
+    m_outboundPublicAccess = _outboundPublicAccess;
+    m_outboundPublicAccessHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::OutboundPublicAccessHasBeenSet() const
+{
+    return m_outboundPublicAccessHasBeenSet;
+}
+
+uint64_t UpdateInstanceRequest::GetCvmDelayOnlineTime() const
+{
+    return m_cvmDelayOnlineTime;
+}
+
+void UpdateInstanceRequest::SetCvmDelayOnlineTime(const uint64_t& _cvmDelayOnlineTime)
+{
+    m_cvmDelayOnlineTime = _cvmDelayOnlineTime;
+    m_cvmDelayOnlineTimeHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::CvmDelayOnlineTimeHasBeenSet() const
+{
+    return m_cvmDelayOnlineTimeHasBeenSet;
+}
+
+uint64_t UpdateInstanceRequest::GetShardAllocationConcurrents() const
+{
+    return m_shardAllocationConcurrents;
+}
+
+void UpdateInstanceRequest::SetShardAllocationConcurrents(const uint64_t& _shardAllocationConcurrents)
+{
+    m_shardAllocationConcurrents = _shardAllocationConcurrents;
+    m_shardAllocationConcurrentsHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::ShardAllocationConcurrentsHasBeenSet() const
+{
+    return m_shardAllocationConcurrentsHasBeenSet;
+}
+
+uint64_t UpdateInstanceRequest::GetShardAllocationBytes() const
+{
+    return m_shardAllocationBytes;
+}
+
+void UpdateInstanceRequest::SetShardAllocationBytes(const uint64_t& _shardAllocationBytes)
+{
+    m_shardAllocationBytes = _shardAllocationBytes;
+    m_shardAllocationBytesHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::ShardAllocationBytesHasBeenSet() const
+{
+    return m_shardAllocationBytesHasBeenSet;
+}
+
+int64_t UpdateInstanceRequest::GetReadWriteMode() const
+{
+    return m_readWriteMode;
+}
+
+void UpdateInstanceRequest::SetReadWriteMode(const int64_t& _readWriteMode)
+{
+    m_readWriteMode = _readWriteMode;
+    m_readWriteModeHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::ReadWriteModeHasBeenSet() const
+{
+    return m_readWriteModeHasBeenSet;
+}
+
+bool UpdateInstanceRequest::GetEnableScheduleRecoverGroup() const
+{
+    return m_enableScheduleRecoverGroup;
+}
+
+void UpdateInstanceRequest::SetEnableScheduleRecoverGroup(const bool& _enableScheduleRecoverGroup)
+{
+    m_enableScheduleRecoverGroup = _enableScheduleRecoverGroup;
+    m_enableScheduleRecoverGroupHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::EnableScheduleRecoverGroupHasBeenSet() const
+{
+    return m_enableScheduleRecoverGroupHasBeenSet;
+}
+
+EnableScheduleOperationDuration UpdateInstanceRequest::GetEnableScheduleOperationDuration() const
+{
+    return m_enableScheduleOperationDuration;
+}
+
+void UpdateInstanceRequest::SetEnableScheduleOperationDuration(const EnableScheduleOperationDuration& _enableScheduleOperationDuration)
+{
+    m_enableScheduleOperationDuration = _enableScheduleOperationDuration;
+    m_enableScheduleOperationDurationHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::EnableScheduleOperationDurationHasBeenSet() const
+{
+    return m_enableScheduleOperationDurationHasBeenSet;
+}
+
+string UpdateInstanceRequest::GetEnableDestroyProtection() const
+{
+    return m_enableDestroyProtection;
+}
+
+void UpdateInstanceRequest::SetEnableDestroyProtection(const string& _enableDestroyProtection)
+{
+    m_enableDestroyProtection = _enableDestroyProtection;
+    m_enableDestroyProtectionHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::EnableDestroyProtectionHasBeenSet() const
+{
+    return m_enableDestroyProtectionHasBeenSet;
+}
+
+vector<AutoScaleDiskInfo> UpdateInstanceRequest::GetAutoScaleDiskInfoList() const
+{
+    return m_autoScaleDiskInfoList;
+}
+
+void UpdateInstanceRequest::SetAutoScaleDiskInfoList(const vector<AutoScaleDiskInfo>& _autoScaleDiskInfoList)
+{
+    m_autoScaleDiskInfoList = _autoScaleDiskInfoList;
+    m_autoScaleDiskInfoListHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::AutoScaleDiskInfoListHasBeenSet() const
+{
+    return m_autoScaleDiskInfoListHasBeenSet;
+}
+
+vector<string> UpdateInstanceRequest::GetAutoScaleDiskDeleteNodeTypeList() const
+{
+    return m_autoScaleDiskDeleteNodeTypeList;
+}
+
+void UpdateInstanceRequest::SetAutoScaleDiskDeleteNodeTypeList(const vector<string>& _autoScaleDiskDeleteNodeTypeList)
+{
+    m_autoScaleDiskDeleteNodeTypeList = _autoScaleDiskDeleteNodeTypeList;
+    m_autoScaleDiskDeleteNodeTypeListHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::AutoScaleDiskDeleteNodeTypeListHasBeenSet() const
+{
+    return m_autoScaleDiskDeleteNodeTypeListHasBeenSet;
+}
+
+OtherConfig UpdateInstanceRequest::GetOtherConfig() const
+{
+    return m_otherConfig;
+}
+
+void UpdateInstanceRequest::SetOtherConfig(const OtherConfig& _otherConfig)
+{
+    m_otherConfig = _otherConfig;
+    m_otherConfigHasBeenSet = true;
+}
+
+bool UpdateInstanceRequest::OtherConfigHasBeenSet() const
+{
+    return m_otherConfigHasBeenSet;
 }
 
 

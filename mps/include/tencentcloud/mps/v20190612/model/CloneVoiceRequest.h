@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioData 
+                     * 获取<p>Clone audio base64 code</p>
+                     * @return AudioData <p>Clone audio base64 code</p>
                      * 
                      */
                     std::string GetAudioData() const;
 
                     /**
-                     * 设置
-                     * @param _audioData 
+                     * 设置<p>Clone audio base64 code</p>
+                     * @param _audioData <p>Clone audio base64 code</p>
                      * 
                      */
                     void SetAudioData(const std::string& _audioData);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool AudioDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置
-                     * @param _audioUrl 
+                     * 设置<p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * @param _audioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioLang 
+                     * 获取<p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
+                     * @return AudioLang <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
                      * 
                      */
                     std::string GetAudioLang() const;
 
                     /**
-                     * 设置
-                     * @param _audioLang 
+                     * 设置<p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
+                     * @param _audioLang <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
                      * 
                      */
                     void SetAudioLang(const std::string& _audioLang);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool AudioLangHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceProfile 
+                     * 获取<p>Voice attribute. Use timbre for querying and matching.</p>
+                     * @return VoiceProfile <p>Voice attribute. Use timbre for querying and matching.</p>
                      * 
                      */
                     VoiceProfile GetVoiceProfile() const;
 
                     /**
-                     * 设置
-                     * @param _voiceProfile 
+                     * 设置<p>Voice attribute. Use timbre for querying and matching.</p>
+                     * @param _voiceProfile <p>Voice attribute. Use timbre for querying and matching.</p>
                      * 
                      */
                     void SetVoiceProfile(const VoiceProfile& _voiceProfile);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool VoiceProfileHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>Trial text</p>
+                     * @return Text <p>Trial text</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>Trial text</p>
+                     * @param _text <p>Trial text</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TextLang 
+                     * 获取<p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
+                     * @return TextLang <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
                      * 
                      */
                     std::string GetTextLang() const;
 
                     /**
-                     * 设置
-                     * @param _textLang 
+                     * 设置<p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
+                     * @param _textLang <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
                      * 
                      */
                     void SetTextLang(const std::string& _textLang);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool TextLangHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取<p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
+                     * @return Output <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
                      * 
                      */
                     SyncDubbingOutputOption GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置<p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
+                     * @param _output <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
                      * 
                      */
                     void SetOutput(const SyncDubbingOutputOption& _output);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters in the format of a JSON string.</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters in the format of a JSON string.</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -215,49 +215,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Clone audio base64 code</p>
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
                      */
                     std::string m_audioLang;
                     bool m_audioLangHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice attribute. Use timbre for querying and matching.</p>
                      */
                     VoiceProfile m_voiceProfile;
                     bool m_voiceProfileHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Trial text</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
                      */
                     std::string m_textLang;
                     bool m_textLangHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
                      */
                     SyncDubbingOutputOption m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters in the format of a JSON string.</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;

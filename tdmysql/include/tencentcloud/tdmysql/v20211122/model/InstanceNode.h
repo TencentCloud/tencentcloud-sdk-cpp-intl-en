@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ID 
+                     * 获取Primary key
+                     * @return ID Primary key
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置
-                     * @param _iD 
+                     * 设置Primary key
+                     * @param _iD Primary key
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Ip 
+                     * 获取Instance Ip
+                     * @return Ip Instance Ip
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置
-                     * @param _ip 
+                     * 设置Instance Ip
+                     * @param _ip Instance Ip
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EniIp 
+                     * 获取Instance EniIp
+                     * @return EniIp Instance EniIp
                      * 
                      */
                     std::string GetEniIp() const;
 
                     /**
-                     * 设置
-                     * @param _eniIp 
+                     * 设置Instance EniIp
+                     * @param _eniIp Instance EniIp
                      * 
                      */
                     void SetEniIp(const std::string& _eniIp);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EniIpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Port 
+                     * 获取Instance Port
+                     * @return Port Instance Port
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置
-                     * @param _port 
+                     * 设置Instance Port
+                     * @param _port Instance Port
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SpecCode 
+                     * 获取Instance SpecCode
+                     * @return SpecCode Instance SpecCode
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置
-                     * @param _specCode 
+                     * 设置Instance SpecCode
+                     * @param _specCode Instance SpecCode
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NodeName 
+                     * 获取Instance NodeName
+                     * @return NodeName Instance NodeName
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置
-                     * @param _nodeName 
+                     * 设置Instance NodeName
+                     * @param _nodeName Instance NodeName
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取Instance Cpu
+                     * @return Cpu Instance Cpu
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param _cpu 
+                     * 设置Instance Cpu
+                     * @param _cpu Instance Cpu
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Mem 
+                     * 获取Instance memory
+                     * @return Mem Instance memory
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置
-                     * @param _mem 
+                     * 设置Instance memory
+                     * @param _mem Instance memory
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Disk 
+                     * 获取Instance Disk
+                     * @return Disk Instance Disk
                      * 
                      */
                     int64_t GetDisk() const;
 
                     /**
-                     * 设置
-                     * @param _disk 
+                     * 设置Instance Disk
+                     * @param _disk Instance Disk
                      * 
                      */
                     void SetDisk(const int64_t& _disk);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool DiskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Instance type
+                     * @return Type Instance type
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Instance type
+                     * @param _type Instance type
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Instance status
+                     * @return Status Instance status
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Instance status
+                     * @param _status Instance status
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Version 
+                     * 获取Instance version
+                     * @return Version Instance version
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置
-                     * @param _version 
+                     * 设置Instance version
+                     * @param _version Instance version
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Zone 
+                     * 获取Instance region
+                     * @return Zone Instance region
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置
-                     * @param _zone 
+                     * 设置Instance region
+                     * @param _zone Instance region
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LocalDNS 
+                     * 获取Instance LocalDNS
+                     * @return LocalDNS Instance LocalDNS
                      * 
                      */
                     std::string GetLocalDNS() const;
 
                     /**
-                     * 设置
-                     * @param _localDNS 
+                     * 设置Instance LocalDNS
+                     * @param _localDNS Instance LocalDNS
                      * 
                      */
                     void SetLocalDNS(const std::string& _localDNS);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool LocalDNSHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Instance Region
+                     * @return Region Instance Region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Instance Region
+                     * @param _region Instance Region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogDisk 
+                     * 获取Instance log disk
+                     * @return LogDisk Instance log disk
                      * 
                      */
                     int64_t GetLogDisk() const;
 
                     /**
-                     * 设置
-                     * @param _logDisk 
+                     * 设置Instance log disk
+                     * @param _logDisk Instance log disk
                      * 
                      */
                     void SetLogDisk(const int64_t& _logDisk);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool LogDiskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataDisk 
+                     * 获取Instance data disk
+                     * @return DataDisk Instance data disk
                      * 
                      */
                     int64_t GetDataDisk() const;
 
                     /**
-                     * 设置
-                     * @param _dataDisk 
+                     * 设置Instance data disk
+                     * @param _dataDisk Instance data disk
                      * 
                      */
                     void SetDataDisk(const int64_t& _dataDisk);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool DataDiskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ZoneID 
+                     * 获取Instance Zone ID
+                     * @return ZoneID Instance Zone ID
                      * 
                      */
                     std::string GetZoneID() const;
 
                     /**
-                     * 设置
-                     * @param _zoneID 
+                     * 设置Instance Zone ID
+                     * @param _zoneID Instance Zone ID
                      * 
                      */
                     void SetZoneID(const std::string& _zoneID);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool ZoneIDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SpecName 
+                     * 获取Instance SpecName
+                     * @return SpecName Instance SpecName
                      * 
                      */
                     std::string GetSpecName() const;
 
                     /**
-                     * 设置
-                     * @param _specName 
+                     * 设置Instance SpecName
+                     * @param _specName Instance SpecName
                      * 
                      */
                     void SetSpecName(const std::string& _specName);
@@ -488,15 +488,15 @@ namespace TencentCloud
                     bool SpecNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Replicas 
+                     * 获取Instance Replicas
+                     * @return Replicas Instance Replicas
                      * 
                      */
                     int64_t GetReplicas() const;
 
                     /**
-                     * 设置
-                     * @param _replicas 
+                     * 设置Instance Replicas
+                     * @param _replicas Instance Replicas
                      * 
                      */
                     void SetReplicas(const int64_t& _replicas);
@@ -509,15 +509,15 @@ namespace TencentCloud
                     bool ReplicasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Shards 
+                     * 获取Instance Shards
+                     * @return Shards Instance Shards
                      * 
                      */
                     int64_t GetShards() const;
 
                     /**
-                     * 设置
-                     * @param _shards 
+                     * 设置Instance Shards
+                     * @param _shards Instance Shards
                      * 
                      */
                     void SetShards(const int64_t& _shards);
@@ -530,15 +530,15 @@ namespace TencentCloud
                     bool ShardsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataReplicas 
+                     * 获取Instance data replica
+                     * @return DataReplicas Instance data replica
                      * 
                      */
                     int64_t GetDataReplicas() const;
 
                     /**
-                     * 设置
-                     * @param _dataReplicas 
+                     * 设置Instance data replica
+                     * @param _dataReplicas Instance data replica
                      * 
                      */
                     void SetDataReplicas(const int64_t& _dataReplicas);
@@ -551,15 +551,15 @@ namespace TencentCloud
                     bool DataReplicasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Params 
+                     * 获取Instance initialization parameter
+                     * @return Params Instance initialization parameter
                      * 
                      */
                     std::string GetParams() const;
 
                     /**
-                     * 设置
-                     * @param _params 
+                     * 设置Instance initialization parameter
+                     * @param _params Instance initialization parameter
                      * 
                      */
                     void SetParams(const std::string& _params);
@@ -572,15 +572,15 @@ namespace TencentCloud
                     bool ParamsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageType 
+                     * 获取Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
+                     * @return StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置
-                     * @param _storageType 
+                     * 设置Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
+                     * @param _storageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -595,13 +595,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Primary key
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * 
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -613,139 +613,139 @@ namespace TencentCloud
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Ip
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * 
+                     * Instance EniIp
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Port
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * 
+                     * Instance SpecCode
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance NodeName
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Cpu
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Instance memory
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Disk
                      */
                     int64_t m_disk;
                     bool m_diskHasBeenSet;
 
                     /**
-                     * 
+                     * Instance type
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance status
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Instance version
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * 
+                     * Instance region
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * Instance LocalDNS
                      */
                     std::string m_localDNS;
                     bool m_localDNSHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Instance log disk
                      */
                     int64_t m_logDisk;
                     bool m_logDiskHasBeenSet;
 
                     /**
-                     * 
+                     * Instance data disk
                      */
                     int64_t m_dataDisk;
                     bool m_dataDiskHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Zone ID
                      */
                     std::string m_zoneID;
                     bool m_zoneIDHasBeenSet;
 
                     /**
-                     * 
+                     * Instance SpecName
                      */
                     std::string m_specName;
                     bool m_specNameHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Replicas
                      */
                     int64_t m_replicas;
                     bool m_replicasHasBeenSet;
 
                     /**
-                     * 
+                     * Instance Shards
                      */
                     int64_t m_shards;
                     bool m_shardsHasBeenSet;
 
                     /**
-                     * 
+                     * Instance data replica
                      */
                     int64_t m_dataReplicas;
                     bool m_dataReplicasHasBeenSet;
 
                     /**
-                     * 
+                     * Instance initialization parameter
                      */
                     std::string m_params;
                     bool m_paramsHasBeenSet;
 
                     /**
-                     * 
+                     * Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;

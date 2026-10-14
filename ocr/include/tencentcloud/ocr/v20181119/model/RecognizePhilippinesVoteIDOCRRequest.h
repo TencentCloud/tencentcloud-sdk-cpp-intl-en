@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to return the identity photo.
-                     * @return ReturnHeadImage Whether to return the identity photo.
+                     * 获取Whether to return the portrait photo.
+                     * @return ReturnHeadImage Whether to return the portrait photo.
                      * 
                      */
                     bool GetReturnHeadImage() const;
 
                     /**
-                     * 设置Whether to return the identity photo.
-                     * @param _returnHeadImage Whether to return the identity photo.
+                     * 设置Whether to return the portrait photo.
+                     * @param _returnHeadImage Whether to return the portrait photo.
                      * 
                      */
                     void SetReturnHeadImage(const bool& _returnHeadImage);
@@ -136,7 +136,7 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
                 private:
 
                     /**
-                     * Whether to return the identity photo.
+                     * Whether to return the portrait photo.
                      */
                     bool m_returnHeadImage;
                     bool m_returnHeadImageHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Smart subtitle input struct.
                 */
                 class SmartSubtitlesTaskInput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Smart subtitle template ID.	
+                     * @return Definition Smart subtitle template ID.	
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Smart subtitle template ID.	
+                     * @param _definition Smart subtitle template ID.	
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserExtPara 
+                     * 获取User extension field, which does not need to be filled in for general scenarios.
+                     * @return UserExtPara User extension field, which does not need to be filled in for general scenarios.
                      * 
                      */
                     std::string GetUserExtPara() const;
 
                     /**
-                     * 设置
-                     * @param _userExtPara 
+                     * 设置User extension field, which does not need to be filled in for general scenarios.
+                     * @param _userExtPara User extension field, which does not need to be filled in for general scenarios.
                      * 
                      */
                     void SetUserExtPara(const std::string& _userExtPara);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool UserExtParaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RawParameter 
+                     * 获取Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
+                     * @return RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
                      * 
                      */
                     RawSmartSubtitleParameter GetRawParameter() const;
 
                     /**
-                     * 设置
-                     * @param _rawParameter 
+                     * 设置Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
+                     * @param _rawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
                      * 
                      */
                     void SetRawParameter(const RawSmartSubtitleParameter& _rawParameter);
@@ -112,15 +112,19 @@ namespace TencentCloud
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取Target storage of media processing output files. If not specified, inherits the storage location in InputInfo. 
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+                     * @return OutputStorage Target storage of media processing output files. If not specified, inherits the storage location in InputInfo. 
+**Note**: This parameter is required when InputInfo.Type is set to URL.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置Target storage of media processing output files. If not specified, inherits the storage location in InputInfo. 
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+                     * @param _outputStorage Target storage of media processing output files. If not specified, inherits the storage location in InputInfo. 
+**Note**: This parameter is required when InputInfo.Type is set to URL.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -133,15 +137,55 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputObjectPath 
+                     * 获取Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+
+Relative path example:
+- File name_{variable name}.{format}.
+-File name.{format}
+
+Absolute path example:
+-/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     * @return OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+
+Relative path example:
+- File name_{variable name}.{format}.
+-File name.{format}
+
+Absolute path example:
+-/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置
-                     * @param _outputObjectPath 
+                     * 设置Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+
+Relative path example:
+- File name_{variable name}.{format}.
+-File name.{format}
+
+Absolute path example:
+-/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     * @param _outputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+
+Relative path example:
+- File name_{variable name}.{format}.
+-File name.{format}
+
+Absolute path example:
+-/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -156,31 +200,42 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Smart subtitle template ID.	
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * User extension field, which does not need to be filled in for general scenarios.
                      */
                     std::string m_userExtPara;
                     bool m_userExtParaHasBeenSet;
 
                     /**
-                     * 
+                     * Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
                      */
                     RawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * 
+                     * Target storage of media processing output files. If not specified, inherits the storage location in InputInfo. 
+**Note**: This parameter is required when InputInfo.Type is set to URL.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+
+Relative path example:
+- File name_{variable name}.{format}.
+-File name.{format}
+
+Absolute path example:
+-/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;

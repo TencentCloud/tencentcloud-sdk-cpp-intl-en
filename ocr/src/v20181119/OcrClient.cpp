@@ -90,6 +90,56 @@ OcrClient::ApplyCardVerificationExternalOutcomeCallable OcrClient::ApplyCardVeri
     return prom->get_future();
 }
 
+OcrClient::ApplyOcrTokenOutcome OcrClient::ApplyOcrToken(const ApplyOcrTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyOcrToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyOcrTokenResponse rsp = ApplyOcrTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyOcrTokenOutcome(rsp);
+        else
+            return ApplyOcrTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyOcrTokenOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::ApplyOcrTokenAsync(const ApplyOcrTokenRequest& request, const ApplyOcrTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApplyOcrTokenRequest&;
+    using Resp = ApplyOcrTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApplyOcrToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::ApplyOcrTokenOutcomeCallable OcrClient::ApplyOcrTokenCallable(const ApplyOcrTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApplyOcrTokenOutcome>>();
+    ApplyOcrTokenAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const ApplyOcrTokenRequest&,
+        ApplyOcrTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OcrClient::ExtractDocMultiOutcome OcrClient::ExtractDocMulti(const ExtractDocMultiRequest &request)
 {
     auto outcome = MakeRequest(request, "ExtractDocMulti");
@@ -282,6 +332,56 @@ OcrClient::GetCardVerificationExternalResultOutcomeCallable OcrClient::GetCardVe
         const OcrClient*,
         const GetCardVerificationExternalResultRequest&,
         GetCardVerificationExternalResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OcrClient::GetOcrVerificationResultOutcome OcrClient::GetOcrVerificationResult(const GetOcrVerificationResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetOcrVerificationResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetOcrVerificationResultResponse rsp = GetOcrVerificationResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetOcrVerificationResultOutcome(rsp);
+        else
+            return GetOcrVerificationResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetOcrVerificationResultOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::GetOcrVerificationResultAsync(const GetOcrVerificationResultRequest& request, const GetOcrVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GetOcrVerificationResultRequest&;
+    using Resp = GetOcrVerificationResultResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GetOcrVerificationResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::GetOcrVerificationResultOutcomeCallable OcrClient::GetOcrVerificationResultCallable(const GetOcrVerificationResultRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GetOcrVerificationResultOutcome>>();
+    GetOcrVerificationResultAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const GetOcrVerificationResultRequest&,
+        GetOcrVerificationResultOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

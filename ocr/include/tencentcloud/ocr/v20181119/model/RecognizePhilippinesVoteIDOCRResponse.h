@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The Base64-encoded identity photo.
-                     * @return HeadPortrait The Base64-encoded identity photo.
+                     * 获取Base64 encoded result of portrait photo.
+                     * @return HeadPortrait Base64 encoded result of portrait photo.
                      * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool FirstNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MiddleName 
+                     * 获取The middle name.
+                     * @return MiddleName The middle name.
                      * 
                      */
                     TextDetectionResult GetMiddleName() const;
@@ -187,7 +187,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The Base64-encoded identity photo.
+                     * Base64 encoded result of portrait photo.
                      */
                     TextDetectionResult m_headPortrait;
                     bool m_headPortraitHasBeenSet;
@@ -211,7 +211,7 @@ namespace TencentCloud
                     bool m_firstNameHasBeenSet;
 
                     /**
-                     * 
+                     * The middle name.
                      */
                     TextDetectionResult m_middleName;
                     bool m_middleNameHasBeenSet;

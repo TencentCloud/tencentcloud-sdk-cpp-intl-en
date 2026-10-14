@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent cover information
+                * Intelligent cover information.
                 */
                 class MediaAiAnalysisCoverItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CoverPathHasBeenSet() const;
 
                     /**
-                     * 获取Reliability of the intelligent cover, with a value range from 0 to -100.
-                     * @return Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
+                     * 获取Confidence of the intelligent cover, with a value range from 0 to 100.
+                     * @return Confidence Confidence of the intelligent cover, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Reliability of the intelligent cover, with a value range from 0 to -100.
-                     * @param _confidence Reliability of the intelligent cover, with a value range from 0 to -100.
+                     * 设置Confidence of the intelligent cover, with a value range from 0 to 100.
+                     * @param _confidence Confidence of the intelligent cover, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_coverPathHasBeenSet;
 
                     /**
-                     * Reliability of the intelligent cover, with a value range from 0 to -100.
+                     * Confidence of the intelligent cover, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence, with a value range from 0 to 100.
+                     * @return Confidence Confidence, with a value range from 0 to 100.
                      * 
                      */
                     int64_t GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence, with a value range from 0 to 100.
+                     * @param _confidence Confidence, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const int64_t& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Start time of occurrence, in seconds.
-                     * @return StartTimeOffset Start time of occurrence, in seconds.
+                     * 获取Start timestamp of the occurrence, in seconds.
+                     * @return StartTimeOffset Start timestamp of the occurrence, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time of occurrence, in seconds.
-                     * @param _startTimeOffset Start time of occurrence, in seconds.
+                     * 设置Start timestamp of the occurrence, in seconds.
+                     * @param _startTimeOffset Start timestamp of the occurrence, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AreaCoordSet 
+                     * 获取Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
+                     * @return AreaCoordSet Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置
-                     * @param _areaCoordSet 
+                     * 设置Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
+                     * @param _areaCoordSet Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Confidence, with a value range from 0 to 100.
                      */
                     int64_t m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Start time of occurrence, in seconds.
+                     * Start timestamp of the occurrence, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

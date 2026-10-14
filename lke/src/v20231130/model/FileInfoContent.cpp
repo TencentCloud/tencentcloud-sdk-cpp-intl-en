@@ -27,7 +27,9 @@ FileInfoContent::FileInfoContent() :
     m_fileSizeHasBeenSet(false),
     m_fileUrlHasBeenSet(false),
     m_docIdHasBeenSet(false),
-    m_createTimeHasBeenSet(false)
+    m_createTimeHasBeenSet(false),
+    m_localPathHasBeenSet(false),
+    m_auditStatusHasBeenSet(false)
 {
 }
 
@@ -106,6 +108,26 @@ CoreInternalOutcome FileInfoContent::Deserialize(const rapidjson::Value &value)
         m_createTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("LocalPath") && !value["LocalPath"].IsNull())
+    {
+        if (!value["LocalPath"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileInfoContent.LocalPath` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_localPath = string(value["LocalPath"].GetString());
+        m_localPathHasBeenSet = true;
+    }
+
+    if (value.HasMember("AuditStatus") && !value["AuditStatus"].IsNull())
+    {
+        if (!value["AuditStatus"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileInfoContent.AuditStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_auditStatus = value["AuditStatus"].GetUint64();
+        m_auditStatusHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -167,6 +189,22 @@ void FileInfoContent::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_localPathHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LocalPath";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_localPath.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_auditStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AuditStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_auditStatus, allocator);
     }
 
 }
@@ -282,5 +320,37 @@ void FileInfoContent::SetCreateTime(const string& _createTime)
 bool FileInfoContent::CreateTimeHasBeenSet() const
 {
     return m_createTimeHasBeenSet;
+}
+
+string FileInfoContent::GetLocalPath() const
+{
+    return m_localPath;
+}
+
+void FileInfoContent::SetLocalPath(const string& _localPath)
+{
+    m_localPath = _localPath;
+    m_localPathHasBeenSet = true;
+}
+
+bool FileInfoContent::LocalPathHasBeenSet() const
+{
+    return m_localPathHasBeenSet;
+}
+
+uint64_t FileInfoContent::GetAuditStatus() const
+{
+    return m_auditStatus;
+}
+
+void FileInfoContent::SetAuditStatus(const uint64_t& _auditStatus)
+{
+    m_auditStatus = _auditStatus;
+    m_auditStatusHasBeenSet = true;
+}
+
+bool FileInfoContent::AuditStatusHasBeenSet() const
+{
+    return m_auditStatusHasBeenSet;
 }
 

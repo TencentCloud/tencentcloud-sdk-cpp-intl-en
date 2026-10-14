@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image watermark template input parameters.
+                * Input parameter of an image watermark template
                 */
                 class RawImageWatermarkInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input content of the watermark image. jpeg and png image formats are supported.
-                     * @return ImageContent Input content of the watermark image. jpeg and png image formats are supported.
+                     * 获取Input content of the watermark image. Supports jpeg and png image formats.
+                     * @return ImageContent Input content of the watermark image. Supports jpeg and png image formats.
                      * 
                      */
                     MediaInputInfo GetImageContent() const;
 
                     /**
-                     * 设置Input content of the watermark image. jpeg and png image formats are supported.
-                     * @param _imageContent Input content of the watermark image. jpeg and png image formats are supported.
+                     * 设置Input content of the watermark image. Supports jpeg and png image formats.
+                     * @param _imageContent Input content of the watermark image. Supports jpeg and png image formats.
                      * 
                      */
                     void SetImageContent(const MediaInputInfo& _imageContent);
@@ -71,11 +71,11 @@ namespace TencentCloud
                     /**
                      * 获取Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
                      * @return Width Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
                      * 
                      */
@@ -84,11 +84,11 @@ Default value: 10%.
                     /**
                      * 设置Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
                      * @param _width Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
                      * 
                      */
@@ -102,11 +102,11 @@ Default value: 10%.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Height of a watermark. Supports two formats: % and px.
+                     * 获取Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
-                     * @return Height Height of a watermark. Supports two formats: % and px.
+                     * @return Height Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -115,11 +115,11 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
                     std::string GetHeight() const;
 
                     /**
-                     * 设置Height of a watermark. Supports two formats: % and px.
+                     * 设置Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
-                     * @param _height Height of a watermark. Supports two formats: % and px.
+                     * @param _height Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -135,27 +135,27 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
-                     * @return RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
+                     * 获取Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
+                     * @return RepeatType Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
                      * 
                      */
                     std::string GetRepeatType() const;
 
                     /**
-                     * 设置Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
-                     * @param _repeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
+                     * 设置Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
+                     * @param _repeatType Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
                      * 
                      */
                     void SetRepeatType(const std::string& _repeatType);
@@ -170,7 +170,7 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
                 private:
 
                     /**
-                     * Input content of the watermark image. jpeg and png image formats are supported.
+                     * Input content of the watermark image. Supports jpeg and png image formats.
                      */
                     MediaInputInfo m_imageContent;
                     bool m_imageContentHasBeenSet;
@@ -178,14 +178,14 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
                     /**
                      * Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
                      */
                     std::string m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Height of a watermark. Supports two formats: % and px.
+                     * Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -194,10 +194,10 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
+                     * Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
                      */
                     std::string m_repeatType;
                     bool m_repeatTypeHasBeenSet;

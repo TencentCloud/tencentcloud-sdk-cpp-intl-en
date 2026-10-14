@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Wordlist 
+                     * 获取<p>Word timestamp information.</p>
+                     * @return Wordlist <p>Word timestamp information.</p>
                      * 
                      */
                     std::vector<WordResult> GetWordlist() const;
 
                     /**
-                     * 设置
-                     * @param _wordlist 
+                     * 设置<p>Word timestamp information.</p>
+                     * @param _wordlist <p>Word timestamp information.</p>
                      * 
                      */
                     void SetWordlist(const std::vector<WordResult>& _wordlist);
@@ -227,7 +227,7 @@ namespace TencentCloud
                     bool m_transHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Word timestamp information.</p>
                      */
                     std::vector<WordResult> m_wordlist;
                     bool m_wordlistHasBeenSet;

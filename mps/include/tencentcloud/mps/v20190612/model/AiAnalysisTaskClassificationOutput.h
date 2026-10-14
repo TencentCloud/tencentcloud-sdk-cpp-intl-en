@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent classification results info
+                * Intelligent classification result information.
                 */
                 class AiAnalysisTaskClassificationOutput : public AbstractModel
                 {

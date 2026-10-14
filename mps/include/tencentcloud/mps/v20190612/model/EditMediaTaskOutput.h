@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of the video editing task
+                * Output of the video editing task.
                 */
                 class EditMediaTaskOutput : public AbstractModel
                 {
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取Metadata of the edited video file.
+                     * @return MetaData Metadata of the edited video file.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置Metadata of the edited video file.
+                     * @param _metaData Metadata of the edited video file.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -126,7 +126,7 @@ namespace TencentCloud
                     bool m_pathHasBeenSet;
 
                     /**
-                     * 
+                     * Metadata of the edited video file.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

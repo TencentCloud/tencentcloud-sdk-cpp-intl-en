@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
-                     * @return Confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * 获取Asr text violation score. Value range: 0-100.
+                     * @return Confidence Asr text violation score. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
-                     * @param _confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * 设置Asr text violation score. Value range: 0-100.
+                     * @param _confidence Asr text violation score. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Asr text prohibited result suggestion, value ranges from...to...
+                     * 获取Asr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Asr text prohibited result suggestion, value ranges from...to...
+                     * @return Suggestion Asr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Asr text prohibited result suggestion, value ranges from...to...
+                     * 设置Asr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Asr text prohibited result suggestion, value ranges from...to...
+                     * @param _suggestion Asr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video segment list with Asr text suspected of prohibition violations.
-                     * @return SegmentSet Video segment list with Asr text suspected of prohibition violations.
+                     * 获取List of video segments where the Asr text is suspected of prohibition violations.
+                     * @return SegmentSet List of video segments where the Asr text is suspected of prohibition violations.
                      * 
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Video segment list with Asr text suspected of prohibition violations.
-                     * @param _segmentSet Video segment list with Asr text suspected of prohibition violations.
+                     * 设置List of video segments where the Asr text is suspected of prohibition violations.
+                     * @param _segmentSet List of video segments where the Asr text is suspected of prohibition violations.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewAsrTextSegmentItem>& _segmentSet);
@@ -125,13 +125,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * Asr text violation score. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Asr text prohibited result suggestion, value ranges from...to...
+                     * Asr text violation result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video segment list with Asr text suspected of prohibition violations.
+                     * List of video segments where the Asr text is suspected of prohibition violations.
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

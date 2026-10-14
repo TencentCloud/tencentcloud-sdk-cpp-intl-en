@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of intelligent erasure task.
+                     * @return Output Output of intelligent erasure task.
                      * 
                      */
                     AiAnalysisTaskDelLogoOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of intelligent erasure task.
+                     * @param _output Output of intelligent erasure task.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDelLogoOutput& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of intelligent erasure task.
                      */
                     AiAnalysisTaskDelLogoOutput m_output;
                     bool m_outputHasBeenSet;

@@ -29,6 +29,10 @@
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 #include <tencentcloud/es/v20180416/model/EsConfigSetInfo.h>
 #include <tencentcloud/es/v20180416/model/OperationDurationUpdated.h>
+#include <tencentcloud/es/v20180416/model/OutboundPublicAcl.h>
+#include <tencentcloud/es/v20180416/model/EnableScheduleOperationDuration.h>
+#include <tencentcloud/es/v20180416/model/AutoScaleDiskInfo.h>
+#include <tencentcloud/es/v20180416/model/OtherConfig.h>
 
 
 namespace TencentCloud
@@ -72,15 +76,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-                     * @return InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+                     * 获取Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
+                     * @return InstanceName Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-                     * @param _instanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+                     * 设置Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
+                     * @param _instanceName Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -93,19 +97,19 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
-                     * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+                     * 获取Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
+                     * @return NodeNum Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
                      * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
-                     * @param _nodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+                     * 设置Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
+                     * @param _nodeNum Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
                      * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
@@ -118,15 +122,15 @@ Number of nodes (2-50)
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取ES configuration item (JSON string)
-                     * @return EsConfig ES configuration item (JSON string)
+                     * 获取ES configuration item (JSON format string)
+                     * @return EsConfig ES configuration item (JSON format string)
                      * 
                      */
                     std::string GetEsConfig() const;
 
                     /**
-                     * 设置ES configuration item (JSON string)
-                     * @param _esConfig ES configuration item (JSON string)
+                     * 设置ES configuration item (JSON format string)
+                     * @param _esConfig ES configuration item (JSON format string)
                      * 
                      */
                     void SetEsConfig(const std::string& _esConfig);
@@ -139,15 +143,15 @@ Number of nodes (2-50)
                     bool EsConfigHasBeenSet() const;
 
                     /**
-                     * 获取Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-                     * @return Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * 获取Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
+                     * @return Password Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-                     * @param _password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * 设置Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
+                     * @param _password Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -160,15 +164,15 @@ Number of nodes (2-50)
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取The policy for visual component (Kibana and Cerebro) access over public network.
-                     * @return EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
+                     * 获取Public access policy for visualization components (Kibana and Cerebro)
+                     * @return EsAcl Public access policy for visualization components (Kibana and Cerebro)
                      * 
                      */
                     EsAcl GetEsAcl() const;
 
                     /**
-                     * 设置The policy for visual component (Kibana and Cerebro) access over public network.
-                     * @param _esAcl The policy for visual component (Kibana and Cerebro) access over public network.
+                     * 设置Public access policy for visualization components (Kibana and Cerebro)
+                     * @param _esAcl Public access policy for visualization components (Kibana and Cerebro)
                      * 
                      */
                     void SetEsAcl(const EsAcl& _esAcl);
@@ -181,18 +185,18 @@ Number of nodes (2-50)
                     bool EsAclHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
+                     * 获取Abandoned. Please use NodeInfoList.
 Disk size in GB
-                     * @return DiskSize This parameter has been disused. Please use `NodeInfoList`
+                     * @return DiskSize Abandoned. Please use NodeInfoList.
 Disk size in GB
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
+                     * 设置Abandoned. Please use NodeInfoList.
 Disk size in GB
-                     * @param _diskSize This parameter has been disused. Please use `NodeInfoList`
+                     * @param _diskSize Abandoned. Please use NodeInfoList.
 Disk size in GB
                      * 
                      */
@@ -206,19 +210,19 @@ Disk size in GB
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @return NodeType This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 获取Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+                     * @return NodeType Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @param _nodeType This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 设置Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+                     * @param _nodeType Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -231,19 +235,19 @@ Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
-                     * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
+                     * 获取Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
+                     * @return MasterNodeNum Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
                      * 
                      */
                     uint64_t GetMasterNodeNum() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
-                     * @param _masterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
+                     * 设置Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
+                     * @param _masterNodeNum Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
                      * 
                      */
                     void SetMasterNodeNum(const uint64_t& _masterNodeNum);
@@ -256,19 +260,19 @@ Number of dedicated primary nodes (only 3 and 5 are supported)
                     bool MasterNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-                     * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * 获取Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
+                     * @return MasterNodeType Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
                      * 
                      */
                     std::string GetMasterNodeType() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-                     * @param _masterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * 设置Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
+                     * @param _masterNodeType Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
                      * 
                      */
                     void SetMasterNodeType(const std::string& _masterNodeType);
@@ -281,19 +285,19 @@ Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1
                     bool MasterNodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
-                     * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
+                     * 获取Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
+                     * @return MasterNodeDiskSize Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
                      * 
                      */
                     uint64_t GetMasterNodeDiskSize() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
-                     * @param _masterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
+                     * 设置Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
+                     * @param _masterNodeDiskSize Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
                      * 
                      */
                     void SetMasterNodeDiskSize(const uint64_t& _masterNodeDiskSize);
@@ -306,15 +310,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool MasterNodeDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
-                     * @return ForceRestart Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
+                     * 获取Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
+                     * @return ForceRestart Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
                      * 
                      */
                     bool GetForceRestart() const;
 
                     /**
-                     * 设置Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
-                     * @param _forceRestart Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
+                     * 设置Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
+                     * @param _forceRestart Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
                      * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
@@ -327,15 +331,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool ForceRestartHasBeenSet() const;
 
                     /**
-                     * 获取Auto-backup to COS
-                     * @return CosBackup Auto-backup to COS
+                     * 获取COS auto backup information
+                     * @return CosBackup COS auto backup information
                      * 
                      */
                     CosBackup GetCosBackup() const;
 
                     /**
-                     * 设置Auto-backup to COS
-                     * @param _cosBackup Auto-backup to COS
+                     * 设置COS auto backup information
+                     * @param _cosBackup COS auto backup information
                      * 
                      */
                     void SetCosBackup(const CosBackup& _cosBackup);
@@ -348,15 +352,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool CosBackupHasBeenSet() const;
 
                     /**
-                     * 获取Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
-                     * @return NodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+                     * 获取Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
+                     * @return NodeInfoList Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
                      * 
                      */
                     std::vector<NodeInfo> GetNodeInfoList() const;
 
                     /**
-                     * 设置Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
-                     * @param _nodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+                     * 设置Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
+                     * @param _nodeInfoList Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
                      * 
                      */
                     void SetNodeInfoList(const std::vector<NodeInfo>& _nodeInfoList);
@@ -369,23 +373,23 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool NodeInfoListHasBeenSet() const;
 
                     /**
-                     * 获取The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @return PublicAccess The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 获取Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @return PublicAccess Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     std::string GetPublicAccess() const;
 
                     /**
-                     * 设置The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @param _publicAccess The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 设置Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @param _publicAccess Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     void SetPublicAccess(const std::string& _publicAccess);
@@ -398,15 +402,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool PublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取Public network ACL
-                     * @return EsPublicAcl Public network ACL
+                     * 获取Public network access control list
+                     * @return EsPublicAcl Public network access control list
                      * 
                      */
                     EsPublicAcl GetEsPublicAcl() const;
 
                     /**
-                     * 设置Public network ACL
-                     * @param _esPublicAcl Public network ACL
+                     * 设置Public network access control list
+                     * @param _esPublicAcl Public network access control list
                      * 
                      */
                     void SetEsPublicAcl(const EsPublicAcl& _esPublicAcl);
@@ -419,23 +423,23 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool EsPublicAclHasBeenSet() const;
 
                     /**
-                     * 获取The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @return KibanaPublicAccess The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 获取Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @return KibanaPublicAccess Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     std::string GetKibanaPublicAccess() const;
 
                     /**
-                     * 设置The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @param _kibanaPublicAccess The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 设置Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @param _kibanaPublicAccess Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     void SetKibanaPublicAccess(const std::string& _kibanaPublicAccess);
@@ -448,23 +452,23 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool KibanaPublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @return KibanaPrivateAccess The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 获取Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @return KibanaPrivateAccess Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     std::string GetKibanaPrivateAccess() const;
 
                     /**
-                     * 设置The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @param _kibanaPrivateAccess The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 设置Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @param _kibanaPrivateAccess Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     void SetKibanaPrivateAccess(const std::string& _kibanaPrivateAccess);
@@ -477,15 +481,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool KibanaPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Enables or disables user authentication for ES Basic Edition v6.8 and above
-                     * @return BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
+                     * 获取Turn on or off user authentication for the basic version of ES 6.8 and above
+                     * @return BasicSecurityType Turn on or off user authentication for the basic version of ES 6.8 and above
                      * 
                      */
                     int64_t GetBasicSecurityType() const;
 
                     /**
-                     * 设置Enables or disables user authentication for ES Basic Edition v6.8 and above
-                     * @param _basicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
+                     * 设置Turn on or off user authentication for the basic version of ES 6.8 and above
+                     * @param _basicSecurityType Turn on or off user authentication for the basic version of ES 6.8 and above
                      * 
                      */
                     void SetBasicSecurityType(const int64_t& _basicSecurityType);
@@ -498,15 +502,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool BasicSecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Kibana private port
-                     * @return KibanaPrivatePort Kibana private port
+                     * 获取Kibana private network port
+                     * @return KibanaPrivatePort Kibana private network port
                      * 
                      */
                     uint64_t GetKibanaPrivatePort() const;
 
                     /**
-                     * 设置Kibana private port
-                     * @param _kibanaPrivatePort Kibana private port
+                     * 设置Kibana private network port
+                     * @param _kibanaPrivatePort Kibana private network port
                      * 
                      */
                     void SetKibanaPrivatePort(const uint64_t& _kibanaPrivatePort);
@@ -519,15 +523,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool KibanaPrivatePortHasBeenSet() const;
 
                     /**
-                     * 获取0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
-                     * @return ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     * 获取0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
+                     * @return ScaleType 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
                      * 
                      */
                     int64_t GetScaleType() const;
 
                     /**
-                     * 设置0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
-                     * @param _scaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     * 设置0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
+                     * @param _scaleType 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
                      * 
                      */
                     void SetScaleType(const int64_t& _scaleType);
@@ -561,15 +565,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool MultiZoneInfoHasBeenSet() const;
 
                     /**
-                     * 获取Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
-                     * @return SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     * 获取Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
+                     * @return SceneType Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
                      * 
                      */
                     int64_t GetSceneType() const;
 
                     /**
-                     * 设置Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
-                     * @param _sceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     * 设置Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
+                     * @param _sceneType Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
                      * 
                      */
                     void SetSceneType(const int64_t& _sceneType);
@@ -582,15 +586,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取Kibana configuration item (JSON string)
-                     * @return KibanaConfig Kibana configuration item (JSON string)
+                     * 获取Kibana configuration item (JSON format string)
+                     * @return KibanaConfig Kibana configuration item (JSON format string)
                      * 
                      */
                     std::string GetKibanaConfig() const;
 
                     /**
-                     * 设置Kibana configuration item (JSON string)
-                     * @param _kibanaConfig Kibana configuration item (JSON string)
+                     * 设置Kibana configuration item (JSON format string)
+                     * @param _kibanaConfig Kibana configuration item (JSON format string)
                      * 
                      */
                     void SetKibanaConfig(const std::string& _kibanaConfig);
@@ -603,15 +607,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool KibanaConfigHasBeenSet() const;
 
                     /**
-                     * 获取Visual node configuration
-                     * @return WebNodeTypeInfo Visual node configuration
+                     * 获取Visualize node configuration
+                     * @return WebNodeTypeInfo Visualize node configuration
                      * 
                      */
                     WebNodeTypeInfo GetWebNodeTypeInfo() const;
 
                     /**
-                     * 设置Visual node configuration
-                     * @param _webNodeTypeInfo Visual node configuration
+                     * 设置Visualize node configuration
+                     * @param _webNodeTypeInfo Visualize node configuration
                      * 
                      */
                     void SetWebNodeTypeInfo(const WebNodeTypeInfo& _webNodeTypeInfo);
@@ -624,15 +628,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool WebNodeTypeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to switch to the new network architecture
-                     * @return SwitchPrivateLink Whether to switch to the new network architecture
+                     * 获取Switch to the new network architecture
+                     * @return SwitchPrivateLink Switch to the new network architecture
                      * 
                      */
                     std::string GetSwitchPrivateLink() const;
 
                     /**
-                     * 设置Whether to switch to the new network architecture
-                     * @param _switchPrivateLink Whether to switch to the new network architecture
+                     * 设置Switch to the new network architecture
+                     * @param _switchPrivateLink Switch to the new network architecture
                      * 
                      */
                     void SetSwitchPrivateLink(const std::string& _switchPrivateLink);
@@ -645,15 +649,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool SwitchPrivateLinkHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable Cerebro
-                     * @return EnableCerebro Whether to enable Cerebro
+                     * 获取Enable Cerebro
+                     * @return EnableCerebro Enable Cerebro
                      * 
                      */
                     bool GetEnableCerebro() const;
 
                     /**
-                     * 设置Whether to enable Cerebro
-                     * @param _enableCerebro Whether to enable Cerebro
+                     * 设置Enable Cerebro
+                     * @param _enableCerebro Enable Cerebro
                      * 
                      */
                     void SetEnableCerebro(const bool& _enableCerebro);
@@ -666,23 +670,23 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool EnableCerebroHasBeenSet() const;
 
                     /**
-                     * 获取The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @return CerebroPublicAccess The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 获取Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @return CerebroPublicAccess Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     std::string GetCerebroPublicAccess() const;
 
                     /**
-                     * 设置The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @param _cerebroPublicAccess The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 设置Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @param _cerebroPublicAccess Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     void SetCerebroPublicAccess(const std::string& _cerebroPublicAccess);
@@ -695,23 +699,23 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool CerebroPublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @return CerebroPrivateAccess The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 获取Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @return CerebroPrivateAccess Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     std::string GetCerebroPrivateAccess() const;
 
                     /**
-                     * 设置The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @param _cerebroPrivateAccess The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 设置Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @param _cerebroPrivateAccess Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     void SetCerebroPrivateAccess(const std::string& _cerebroPrivateAccess);
@@ -724,15 +728,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool CerebroPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Added or modified configuration set information
-                     * @return EsConfigSet Added or modified configuration set information
+                     * 获取Newly-added or modified configuration group information
+                     * @return EsConfigSet Newly-added or modified configuration group information
                      * 
                      */
                     EsConfigSetInfo GetEsConfigSet() const;
 
                     /**
-                     * 设置Added or modified configuration set information
-                     * @param _esConfigSet Added or modified configuration set information
+                     * 设置Newly-added or modified configuration group information
+                     * @param _esConfigSet Newly-added or modified configuration group information
                      * 
                      */
                     void SetEsConfigSet(const EsConfigSetInfo& _esConfigSet);
@@ -745,15 +749,15 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool EsConfigSetHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance time slot
-                     * @return OperationDuration The maintenance time slot
+                     * 获取Maintenance time slot.
+                     * @return OperationDuration Maintenance time slot.
                      * 
                      */
                     OperationDurationUpdated GetOperationDuration() const;
 
                     /**
-                     * 设置The maintenance time slot
-                     * @param _operationDuration The maintenance time slot
+                     * 设置Maintenance time slot.
+                     * @param _operationDuration Maintenance time slot.
                      * 
                      */
                     void SetOperationDuration(const OperationDurationUpdated& _operationDuration);
@@ -766,23 +770,23 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool OperationDurationHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @return KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 获取Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @return KibanaAlteringPublicAccess Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     std::string GetKibanaAlteringPublicAccess() const;
 
                     /**
-                     * 设置Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
-                     * @param _kibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * 设置Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
+                     * @param _kibanaAlteringPublicAccess Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
                      * 
                      */
                     void SetKibanaAlteringPublicAccess(const std::string& _kibanaAlteringPublicAccess);
@@ -794,6 +798,333 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     bool KibanaAlteringPublicAccessHasBeenSet() const;
 
+                    /**
+                     * 获取Custom domain name of kibana on the private network
+                     * @return KibanaPrivateDomain Custom domain name of kibana on the private network
+                     * 
+                     */
+                    std::string GetKibanaPrivateDomain() const;
+
+                    /**
+                     * 设置Custom domain name of kibana on the private network
+                     * @param _kibanaPrivateDomain Custom domain name of kibana on the private network
+                     * 
+                     */
+                    void SetKibanaPrivateDomain(const std::string& _kibanaPrivateDomain);
+
+                    /**
+                     * 判断参数 KibanaPrivateDomain 是否已赋值
+                     * @return KibanaPrivateDomain 是否已赋值
+                     * 
+                     */
+                    bool KibanaPrivateDomainHasBeenSet() const;
+
+                    /**
+                     * 获取Custom domain name of cerebro on the private network
+                     * @return CerebroPrivateDomain Custom domain name of cerebro on the private network
+                     * 
+                     */
+                    std::string GetCerebroPrivateDomain() const;
+
+                    /**
+                     * 设置Custom domain name of cerebro on the private network
+                     * @param _cerebroPrivateDomain Custom domain name of cerebro on the private network
+                     * 
+                     */
+                    void SetCerebroPrivateDomain(const std::string& _cerebroPrivateDomain);
+
+                    /**
+                     * 判断参数 CerebroPrivateDomain 是否已赋值
+                     * @return CerebroPrivateDomain 是否已赋值
+                     * 
+                     */
+                    bool CerebroPrivateDomainHasBeenSet() const;
+
+                    /**
+                     * 获取Change to an https cluster. http is selected by default.
+                     * @return Protocol Change to an https cluster. http is selected by default.
+                     * 
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Change to an https cluster. http is selected by default.
+                     * @param _protocol Change to an https cluster. http is selected by default.
+                     * 
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     * 
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Outbound access details of the node
+
+                     * @return OutboundPublicAcls Outbound access details of the node
+
+                     * 
+                     */
+                    std::vector<OutboundPublicAcl> GetOutboundPublicAcls() const;
+
+                    /**
+                     * 设置Outbound access details of the node
+
+                     * @param _outboundPublicAcls Outbound access details of the node
+
+                     * 
+                     */
+                    void SetOutboundPublicAcls(const std::vector<OutboundPublicAcl>& _outboundPublicAcls);
+
+                    /**
+                     * 判断参数 OutboundPublicAcls 是否已赋值
+                     * @return OutboundPublicAcls 是否已赋值
+                     * 
+                     */
+                    bool OutboundPublicAclsHasBeenSet() const;
+
+                    /**
+                     * 获取Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+                     * @return OutboundPublicAccess Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+                     * 
+                     */
+                    std::string GetOutboundPublicAccess() const;
+
+                    /**
+                     * 设置Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+                     * @param _outboundPublicAccess Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+                     * 
+                     */
+                    void SetOutboundPublicAccess(const std::string& _outboundPublicAccess);
+
+                    /**
+                     * 判断参数 OutboundPublicAccess 是否已赋值
+                     * @return OutboundPublicAccess 是否已赋值
+                     * 
+                     */
+                    bool OutboundPublicAccessHasBeenSet() const;
+
+                    /**
+                     * 获取Parameter for delayed cvm launch
+                     * @return CvmDelayOnlineTime Parameter for delayed cvm launch
+                     * 
+                     */
+                    uint64_t GetCvmDelayOnlineTime() const;
+
+                    /**
+                     * 设置Parameter for delayed cvm launch
+                     * @param _cvmDelayOnlineTime Parameter for delayed cvm launch
+                     * 
+                     */
+                    void SetCvmDelayOnlineTime(const uint64_t& _cvmDelayOnlineTime);
+
+                    /**
+                     * 判断参数 CvmDelayOnlineTime 是否已赋值
+                     * @return CvmDelayOnlineTime 是否已赋值
+                     * 
+                     */
+                    bool CvmDelayOnlineTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of concurrent shard migrations
+                     * @return ShardAllocationConcurrents Number of concurrent shard migrations
+                     * 
+                     */
+                    uint64_t GetShardAllocationConcurrents() const;
+
+                    /**
+                     * 设置Number of concurrent shard migrations
+                     * @param _shardAllocationConcurrents Number of concurrent shard migrations
+                     * 
+                     */
+                    void SetShardAllocationConcurrents(const uint64_t& _shardAllocationConcurrents);
+
+                    /**
+                     * 判断参数 ShardAllocationConcurrents 是否已赋值
+                     * @return ShardAllocationConcurrents 是否已赋值
+                     * 
+                     */
+                    bool ShardAllocationConcurrentsHasBeenSet() const;
+
+                    /**
+                     * 获取Shard migration concurrency speed
+                     * @return ShardAllocationBytes Shard migration concurrency speed
+                     * 
+                     */
+                    uint64_t GetShardAllocationBytes() const;
+
+                    /**
+                     * 设置Shard migration concurrency speed
+                     * @param _shardAllocationBytes Shard migration concurrency speed
+                     * 
+                     */
+                    void SetShardAllocationBytes(const uint64_t& _shardAllocationBytes);
+
+                    /**
+                     * 判断参数 ShardAllocationBytes 是否已赋值
+                     * @return ShardAllocationBytes 是否已赋值
+                     * 
+                     */
+                    bool ShardAllocationBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+                     * @return ReadWriteMode Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+                     * 
+                     */
+                    int64_t GetReadWriteMode() const;
+
+                    /**
+                     * 设置Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+                     * @param _readWriteMode Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+                     * 
+                     */
+                    void SetReadWriteMode(const int64_t& _readWriteMode);
+
+                    /**
+                     * 判断参数 ReadWriteMode 是否已赋值
+                     * @return ReadWriteMode 是否已赋值
+                     * 
+                     */
+                    bool ReadWriteModeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the placement group async task
+                     * @return EnableScheduleRecoverGroup Whether to enable the placement group async task
+                     * 
+                     */
+                    bool GetEnableScheduleRecoverGroup() const;
+
+                    /**
+                     * 设置Whether to enable the placement group async task
+                     * @param _enableScheduleRecoverGroup Whether to enable the placement group async task
+                     * 
+                     */
+                    void SetEnableScheduleRecoverGroup(const bool& _enableScheduleRecoverGroup);
+
+                    /**
+                     * 判断参数 EnableScheduleRecoverGroup 是否已赋值
+                     * @return EnableScheduleRecoverGroup 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleRecoverGroupHasBeenSet() const;
+
+                    /**
+                     * 获取Placement group async task maintenance time slot
+                     * @return EnableScheduleOperationDuration Placement group async task maintenance time slot
+                     * 
+                     */
+                    EnableScheduleOperationDuration GetEnableScheduleOperationDuration() const;
+
+                    /**
+                     * 设置Placement group async task maintenance time slot
+                     * @param _enableScheduleOperationDuration Placement group async task maintenance time slot
+                     * 
+                     */
+                    void SetEnableScheduleOperationDuration(const EnableScheduleOperationDuration& _enableScheduleOperationDuration);
+
+                    /**
+                     * 判断参数 EnableScheduleOperationDuration 是否已赋值
+                     * @return EnableScheduleOperationDuration 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleOperationDurationHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster protection: OPEN: enable, CLOSE: disable
+                     * @return EnableDestroyProtection Cluster protection: OPEN: enable, CLOSE: disable
+                     * 
+                     */
+                    std::string GetEnableDestroyProtection() const;
+
+                    /**
+                     * 设置Cluster protection: OPEN: enable, CLOSE: disable
+                     * @param _enableDestroyProtection Cluster protection: OPEN: enable, CLOSE: disable
+                     * 
+                     */
+                    void SetEnableDestroyProtection(const std::string& _enableDestroyProtection);
+
+                    /**
+                     * 判断参数 EnableDestroyProtection 是否已赋值
+                     * @return EnableDestroyProtection 是否已赋值
+                     * 
+                     */
+                    bool EnableDestroyProtectionHasBeenSet() const;
+
+                    /**
+                     * 获取Auto capacity expansion parameter
+                     * @return AutoScaleDiskInfoList Auto capacity expansion parameter
+                     * 
+                     */
+                    std::vector<AutoScaleDiskInfo> GetAutoScaleDiskInfoList() const;
+
+                    /**
+                     * 设置Auto capacity expansion parameter
+                     * @param _autoScaleDiskInfoList Auto capacity expansion parameter
+                     * 
+                     */
+                    void SetAutoScaleDiskInfoList(const std::vector<AutoScaleDiskInfo>& _autoScaleDiskInfoList);
+
+                    /**
+                     * 判断参数 AutoScaleDiskInfoList 是否已赋值
+                     * @return AutoScaleDiskInfoList 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleDiskInfoListHasBeenSet() const;
+
+                    /**
+                     * 获取Auto-expansion delete parameter
+                     * @return AutoScaleDiskDeleteNodeTypeList Auto-expansion delete parameter
+                     * 
+                     */
+                    std::vector<std::string> GetAutoScaleDiskDeleteNodeTypeList() const;
+
+                    /**
+                     * 设置Auto-expansion delete parameter
+                     * @param _autoScaleDiskDeleteNodeTypeList Auto-expansion delete parameter
+                     * 
+                     */
+                    void SetAutoScaleDiskDeleteNodeTypeList(const std::vector<std::string>& _autoScaleDiskDeleteNodeTypeList);
+
+                    /**
+                     * 判断参数 AutoScaleDiskDeleteNodeTypeList 是否已赋值
+                     * @return AutoScaleDiskDeleteNodeTypeList 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleDiskDeleteNodeTypeListHasBeenSet() const;
+
+                    /**
+                     * 获取Other additional configuration, jvm or yml.
+                     * @return OtherConfig Other additional configuration, jvm or yml.
+                     * 
+                     */
+                    OtherConfig GetOtherConfig() const;
+
+                    /**
+                     * 设置Other additional configuration, jvm or yml.
+                     * @param _otherConfig Other additional configuration, jvm or yml.
+                     * 
+                     */
+                    void SetOtherConfig(const OtherConfig& _otherConfig);
+
+                    /**
+                     * 判断参数 OtherConfig 是否已赋值
+                     * @return OtherConfig 是否已赋值
+                     * 
+                     */
+                    bool OtherConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -803,133 +1134,133 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+                     * Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+                     * Abandoned. Please use NodeInfoList.
+Number of nodes (2-50).
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * ES configuration item (JSON string)
+                     * ES configuration item (JSON format string)
                      */
                     std::string m_esConfig;
                     bool m_esConfigHasBeenSet;
 
                     /**
-                     * Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * Password of the default user elastic (8–16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters [-!@#$%&^*+=_:;,.?])
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * The policy for visual component (Kibana and Cerebro) access over public network.
+                     * Public access policy for visualization components (Kibana and Cerebro)
                      */
                     EsAcl m_esAcl;
                     bool m_esAclHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
+                     * Abandoned. Please use NodeInfoList.
 Disk size in GB
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * Abandoned. Please use NodeInfoList.
+Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported)
+                     * Abandoned. Please use NodeInfoList.
+Number of dedicated primary nodes (supports only 3 or 5)
                      */
                     uint64_t m_masterNodeNum;
                     bool m_masterNodeNumHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * Abandoned. Please use NodeInfoList.
+Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li>
                      */
                     std::string m_masterNodeType;
                     bool m_masterNodeTypeHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
+                     * Abandoned. Please use NodeInfoList.
+Dedicated primary node disk size (in GB. The system default configuration is 50 GB. Customization is temporarily not supported.)
                      */
                     uint64_t m_masterNodeDiskSize;
                     bool m_masterNodeDiskSizeHasBeenSet;
 
                     /**
-                     * Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
+                     * Whether to force restart when updating the configuration <li>true: force restart</li><li>false: do not force restart</li>Currently, this needs to be set only when updating EsConfig. The default value is false.
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;
 
                     /**
-                     * Auto-backup to COS
+                     * COS auto backup information
                      */
                     CosBackup m_cosBackup;
                     bool m_cosBackupHasBeenSet;
 
                     /**
-                     * Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+                     * Node information list. You can transmit only the node to be updated and its corresponding specification information. Supported operations include <li>modifying the count of a node type</li><li>modifying the node specification and disk size of a node type</li><li>adding a node type (you need to simultaneously specify the node type, count, specification, disk, and other information)</li>. You can perform only one of the above operations at a time, and the disk type cannot be modified.
                      */
                     std::vector<NodeInfo> m_nodeInfoList;
                     bool m_nodeInfoListHasBeenSet;
 
                     /**
-                     * The status of ES cluster access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * Public access status of the ES cluster
+OPEN: enabled.
+-CLOSE: disabled.
                      */
                     std::string m_publicAccess;
                     bool m_publicAccessHasBeenSet;
 
                     /**
-                     * Public network ACL
+                     * Public network access control list
                      */
                     EsPublicAcl m_esPublicAcl;
                     bool m_esPublicAclHasBeenSet;
 
                     /**
-                     * The status of Kibana access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * Kibana public access status
+OPEN: enabled.
+-CLOSE: disabled.
                      */
                     std::string m_kibanaPublicAccess;
                     bool m_kibanaPublicAccessHasBeenSet;
 
                     /**
-                     * The status of Kibana access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * Kibana internal access status
+OPEN: enabled.
+-CLOSE: disabled.
                      */
                     std::string m_kibanaPrivateAccess;
                     bool m_kibanaPrivateAccessHasBeenSet;
 
                     /**
-                     * Enables or disables user authentication for ES Basic Edition v6.8 and above
+                     * Turn on or off user authentication for the basic version of ES 6.8 and above
                      */
                     int64_t m_basicSecurityType;
                     bool m_basicSecurityTypeHasBeenSet;
 
                     /**
-                     * Kibana private port
+                     * Kibana private network port
                      */
                     uint64_t m_kibanaPrivatePort;
                     bool m_kibanaPrivatePortHasBeenSet;
 
                     /**
-                     * 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     * 0: Scale out via blue-green change without restarting the cluster (default) 1: Scale out by unmounting disks with a cluster rolling restart
                      */
                     int64_t m_scaleType;
                     bool m_scaleTypeHasBeenSet;
@@ -941,70 +1272,163 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool m_multiZoneInfoHasBeenSet;
 
                     /**
-                     * Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     * Scenario template type. -1: not enabled. 1: common. 2: log. 3: search
                      */
                     int64_t m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * Kibana configuration item (JSON string)
+                     * Kibana configuration item (JSON format string)
                      */
                     std::string m_kibanaConfig;
                     bool m_kibanaConfigHasBeenSet;
 
                     /**
-                     * Visual node configuration
+                     * Visualize node configuration
                      */
                     WebNodeTypeInfo m_webNodeTypeInfo;
                     bool m_webNodeTypeInfoHasBeenSet;
 
                     /**
-                     * Whether to switch to the new network architecture
+                     * Switch to the new network architecture
                      */
                     std::string m_switchPrivateLink;
                     bool m_switchPrivateLinkHasBeenSet;
 
                     /**
-                     * Whether to enable Cerebro
+                     * Enable Cerebro
                      */
                     bool m_enableCerebro;
                     bool m_enableCerebroHasBeenSet;
 
                     /**
-                     * The status of Cerebro access over public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * Cerebro public access status
+OPEN: enabled.
+-CLOSE: disabled.
                      */
                     std::string m_cerebroPublicAccess;
                     bool m_cerebroPublicAccessHasBeenSet;
 
                     /**
-                     * The status of Cerebro access over private network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * Cerebro private network access status
+OPEN: enabled.
+-CLOSE: disabled.
                      */
                     std::string m_cerebroPrivateAccess;
                     bool m_cerebroPrivateAccessHasBeenSet;
 
                     /**
-                     * Added or modified configuration set information
+                     * Newly-added or modified configuration group information
                      */
                     EsConfigSetInfo m_esConfigSet;
                     bool m_esConfigSetHasBeenSet;
 
                     /**
-                     * The maintenance time slot
+                     * Maintenance time slot.
                      */
                     OperationDurationUpdated m_operationDuration;
                     bool m_operationDurationHasBeenSet;
 
                     /**
-                     * Whether to enable the option for sending alerting messages over the public network.
-`OPEN`: Enabled.
-`CLOSE`: Disabled.
+                     * Whether Alerting public network alert output is enabled:
+OPEN: enabled.
+-CLOSE: disabled.
                      */
                     std::string m_kibanaAlteringPublicAccess;
                     bool m_kibanaAlteringPublicAccessHasBeenSet;
+
+                    /**
+                     * Custom domain name of kibana on the private network
+                     */
+                    std::string m_kibanaPrivateDomain;
+                    bool m_kibanaPrivateDomainHasBeenSet;
+
+                    /**
+                     * Custom domain name of cerebro on the private network
+                     */
+                    std::string m_cerebroPrivateDomain;
+                    bool m_cerebroPrivateDomainHasBeenSet;
+
+                    /**
+                     * Change to an https cluster. http is selected by default.
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * Outbound access details of the node
+
+                     */
+                    std::vector<OutboundPublicAcl> m_outboundPublicAcls;
+                    bool m_outboundPublicAclsHasBeenSet;
+
+                    /**
+                     * Outbound access operations of the node
+OPEN
+-CLOSE: disabled.
+                     */
+                    std::string m_outboundPublicAccess;
+                    bool m_outboundPublicAccessHasBeenSet;
+
+                    /**
+                     * Parameter for delayed cvm launch
+                     */
+                    uint64_t m_cvmDelayOnlineTime;
+                    bool m_cvmDelayOnlineTimeHasBeenSet;
+
+                    /**
+                     * Number of concurrent shard migrations
+                     */
+                    uint64_t m_shardAllocationConcurrents;
+                    bool m_shardAllocationConcurrentsHasBeenSet;
+
+                    /**
+                     * Shard migration concurrency speed
+                     */
+                    uint64_t m_shardAllocationBytes;
+                    bool m_shardAllocationBytesHasBeenSet;
+
+                    /**
+                     * Read-write separation mode: -1: not enabled; 1: local read/write separation; 2: remote read/write separation.
+                     */
+                    int64_t m_readWriteMode;
+                    bool m_readWriteModeHasBeenSet;
+
+                    /**
+                     * Whether to enable the placement group async task
+                     */
+                    bool m_enableScheduleRecoverGroup;
+                    bool m_enableScheduleRecoverGroupHasBeenSet;
+
+                    /**
+                     * Placement group async task maintenance time slot
+                     */
+                    EnableScheduleOperationDuration m_enableScheduleOperationDuration;
+                    bool m_enableScheduleOperationDurationHasBeenSet;
+
+                    /**
+                     * Cluster protection: OPEN: enable, CLOSE: disable
+                     */
+                    std::string m_enableDestroyProtection;
+                    bool m_enableDestroyProtectionHasBeenSet;
+
+                    /**
+                     * Auto capacity expansion parameter
+                     */
+                    std::vector<AutoScaleDiskInfo> m_autoScaleDiskInfoList;
+                    bool m_autoScaleDiskInfoListHasBeenSet;
+
+                    /**
+                     * Auto-expansion delete parameter
+                     */
+                    std::vector<std::string> m_autoScaleDiskDeleteNodeTypeList;
+                    bool m_autoScaleDiskDeleteNodeTypeListHasBeenSet;
+
+                    /**
+                     * Other additional configuration, jvm or yml.
+                     */
+                    OtherConfig m_otherConfig;
+                    bool m_otherConfigHasBeenSet;
 
                 };
             }

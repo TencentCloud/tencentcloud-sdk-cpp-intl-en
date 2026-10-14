@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransTextTask 
+                     * 获取<p>Translation task output information.</p>
+                     * @return TransTextTask <p>Translation task output information.</p>
                      * 
                      */
                     SmartSubtitleTaskTransTextResultOutput GetTransTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _transTextTask 
+                     * 设置<p>Translation task output information.</p>
+                     * @param _transTextTask <p>Translation task output information.</p>
                      * 
                      */
                     void SetTransTextTask(const SmartSubtitleTaskTransTextResultOutput& _transTextTask);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool TransTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AsrFullTextTask 
+                     * 获取<p>Full speech recognition task output information.</p>
+                     * @return AsrFullTextTask <p>Full speech recognition task output information.</p>
                      * 
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput GetAsrFullTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _asrFullTextTask 
+                     * 设置<p>Full speech recognition task output information.</p>
+                     * @param _asrFullTextTask <p>Full speech recognition task output information.</p>
                      * 
                      */
                     void SetAsrFullTextTask(const SmartSubtitleTaskAsrFullTextResultOutput& _asrFullTextTask);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Translation task output information.</p>
                      */
                     SmartSubtitleTaskTransTextResultOutput m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Full speech recognition task output information.</p>
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;

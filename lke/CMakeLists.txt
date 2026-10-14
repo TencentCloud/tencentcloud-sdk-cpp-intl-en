@@ -96,6 +96,7 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/AgentProcedure.h
   include/tencentcloud/lke/v20231130/model/KnowledgeQaOutput.h
   include/tencentcloud/lke/v20231130/model/ModifyRejectedQuestionRequest.h
+  include/tencentcloud/lke/v20231130/model/ConversationResourceArtifact.h
   include/tencentcloud/lke/v20231130/model/ApiVarAttrInfo.h
   include/tencentcloud/lke/v20231130/model/AgentThought.h
   include/tencentcloud/lke/v20231130/model/GroupDocRequest.h
@@ -122,6 +123,7 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/DescribeDocRequest.h
   include/tencentcloud/lke/v20231130/model/AgentProcedureDebugging.h
   include/tencentcloud/lke/v20231130/model/DescribeTokenUsageGraphRequest.h
+  include/tencentcloud/lke/v20231130/model/ListReleaseItem.h
   include/tencentcloud/lke/v20231130/model/RetryDocAuditRequest.h
   include/tencentcloud/lke/v20231130/model/VoiceConfig.h
   include/tencentcloud/lke/v20231130/model/Widget.h
@@ -188,7 +190,7 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/RetryDocAuditResponse.h
   include/tencentcloud/lke/v20231130/model/ModifyDocCateRequest.h
   include/tencentcloud/lke/v20231130/model/RejectedQuestion.h
-  include/tencentcloud/lke/v20231130/model/GetLikeDataCountRequest.h
+  include/tencentcloud/lke/v20231130/model/ConversationMcpApp.h
   include/tencentcloud/lke/v20231130/model/DeleteRejectedQuestionResponse.h
   include/tencentcloud/lke/v20231130/model/Credentials.h
   include/tencentcloud/lke/v20231130/model/MsgFileInfo.h
@@ -260,6 +262,7 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/DeleteAppRequest.h
   include/tencentcloud/lke/v20231130/model/ModifyRejectedQuestionResponse.h
   include/tencentcloud/lke/v20231130/model/WorkFlowSummary.h
+  include/tencentcloud/lke/v20231130/model/ConversationWorkflowArtifact.h
   include/tencentcloud/lke/v20231130/model/TaskParams.h
   include/tencentcloud/lke/v20231130/model/DescribeStorageCredentialRequest.h
   include/tencentcloud/lke/v20231130/model/QAList.h
@@ -267,7 +270,8 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/ListReleaseResponse.h
   include/tencentcloud/lke/v20231130/model/ListModelResponse.h
   include/tencentcloud/lke/v20231130/model/ListAttributeLabelResponse.h
-  include/tencentcloud/lke/v20231130/model/ListReleaseItem.h
+  include/tencentcloud/lke/v20231130/model/ConversationAppArtifact.h
+  include/tencentcloud/lke/v20231130/model/GetLikeDataCountRequest.h
   include/tencentcloud/lke/v20231130/model/ModifyQAResponse.h
   include/tencentcloud/lke/v20231130/model/DeleteQAResponse.h
   include/tencentcloud/lke/v20231130/model/DescribeCallStatsGraphResponse.h
@@ -377,6 +381,7 @@ set(lke_src
   src/v20231130/model/AgentProcedure.cpp
   src/v20231130/model/KnowledgeQaOutput.cpp
   src/v20231130/model/ModifyRejectedQuestionRequest.cpp
+  src/v20231130/model/ConversationResourceArtifact.cpp
   src/v20231130/model/ApiVarAttrInfo.cpp
   src/v20231130/model/AgentThought.cpp
   src/v20231130/model/GroupDocRequest.cpp
@@ -403,6 +408,7 @@ set(lke_src
   src/v20231130/model/DescribeDocRequest.cpp
   src/v20231130/model/AgentProcedureDebugging.cpp
   src/v20231130/model/DescribeTokenUsageGraphRequest.cpp
+  src/v20231130/model/ListReleaseItem.cpp
   src/v20231130/model/RetryDocAuditRequest.cpp
   src/v20231130/model/VoiceConfig.cpp
   src/v20231130/model/Widget.cpp
@@ -469,7 +475,7 @@ set(lke_src
   src/v20231130/model/RetryDocAuditResponse.cpp
   src/v20231130/model/ModifyDocCateRequest.cpp
   src/v20231130/model/RejectedQuestion.cpp
-  src/v20231130/model/GetLikeDataCountRequest.cpp
+  src/v20231130/model/ConversationMcpApp.cpp
   src/v20231130/model/DeleteRejectedQuestionResponse.cpp
   src/v20231130/model/Credentials.cpp
   src/v20231130/model/MsgFileInfo.cpp
@@ -541,6 +547,7 @@ set(lke_src
   src/v20231130/model/DeleteAppRequest.cpp
   src/v20231130/model/ModifyRejectedQuestionResponse.cpp
   src/v20231130/model/WorkFlowSummary.cpp
+  src/v20231130/model/ConversationWorkflowArtifact.cpp
   src/v20231130/model/TaskParams.cpp
   src/v20231130/model/DescribeStorageCredentialRequest.cpp
   src/v20231130/model/QAList.cpp
@@ -548,7 +555,8 @@ set(lke_src
   src/v20231130/model/ListReleaseResponse.cpp
   src/v20231130/model/ListModelResponse.cpp
   src/v20231130/model/ListAttributeLabelResponse.cpp
-  src/v20231130/model/ListReleaseItem.cpp
+  src/v20231130/model/ConversationAppArtifact.cpp
+  src/v20231130/model/GetLikeDataCountRequest.cpp
   src/v20231130/model/ModifyQAResponse.cpp
   src/v20231130/model/DeleteQAResponse.cpp
   src/v20231130/model/DescribeCallStatsGraphResponse.cpp

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Filter flag bit for the document list
                 */
                 class DocFilterFlag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Flag 
+                     * 获取Identifier bit
+                     * @return Flag Identifier bit
                      * 
                      */
                     std::string GetFlag() const;
 
                     /**
-                     * 设置
-                     * @param _flag 
+                     * 设置Identifier bit
+                     * @param _flag Identifier bit
                      * 
                      */
                     void SetFlag(const std::string& _flag);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取Identifier value
+                     * @return Value Identifier value
                      * 
                      */
                     bool GetValue() const;
 
                     /**
-                     * 设置
-                     * @param _value 
+                     * 设置Identifier value
+                     * @param _value Identifier value
                      * 
                      */
                     void SetValue(const bool& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Identifier bit
                      */
                     std::string m_flag;
                     bool m_flagHasBeenSet;
 
                     /**
-                     * 
+                     * Identifier value
                      */
                     bool m_value;
                     bool m_valueHasBeenSet;

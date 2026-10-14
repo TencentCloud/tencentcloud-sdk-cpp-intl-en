@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取Transport stream ID.
+                     * @return FlowId Transport stream ID.
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置Transport stream ID.
+                     * @param _flowId Transport stream ID.
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to query the inputs or outputs. Valid values: input, output.
-                     * @return Type Whether to query the inputs or outputs. Valid values: input, output.
+                     * 获取Input or output type. Valid values: `input`, `output`.
+                     * @return Type Input or output type. Valid values: `input`, `output`.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Whether to query the inputs or outputs. Valid values: input, output.
-                     * @param _type Whether to query the inputs or outputs. Valid values: input, output.
+                     * 设置Input or output type. Valid values: `input`, `output`.
+                     * @param _type Input or output type. Valid values: `input`, `output`.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The input or output ID.
-                     * @return InputOutputId The input or output ID.
+                     * 获取Input or output Id.
+                     * @return InputOutputId Input or output Id.
                      * 
                      */
                     std::string GetInputOutputId() const;
 
                     /**
-                     * 设置The input or output ID.
-                     * @param _inputOutputId The input or output ID.
+                     * 设置Input or output Id.
+                     * @param _inputOutputId Input or output Id.
                      * 
                      */
                     void SetInputOutputId(const std::string& _inputOutputId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool InputOutputIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to query the primary or backup pipeline. Valid values: 0, 1.
-                     * @return Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+                     * 获取Primary or backup channel. Valid values: 0 and 1.
+                     * @return Pipeline Primary or backup channel. Valid values: 0 and 1.
                      * 
                      */
                     std::string GetPipeline() const;
 
                     /**
-                     * 设置Whether to query the primary or backup pipeline. Valid values: 0, 1.
-                     * @param _pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+                     * 设置Primary or backup channel. Valid values: 0 and 1.
+                     * @param _pipeline Primary or backup channel. Valid values: 0 and 1.
                      * 
                      */
                     void SetPipeline(const std::string& _pipeline);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PipelineHasBeenSet() const;
 
                     /**
-                     * 获取The query interval. Valid values: 5s, 1min, 5min, 15min.
-                     * @return Period The query interval. Valid values: 5s, 1min, 5min, 15min.
+                     * 获取Query interval. Options: [5s|1min|5min|15min].
+                     * @return Period Query interval. Options: [5s|1min|5min|15min].
                      * 
                      */
                     std::string GetPeriod() const;
 
                     /**
-                     * 设置The query interval. Valid values: 5s, 1min, 5min, 15min.
-                     * @param _period The query interval. Valid values: 5s, 1min, 5min, 15min.
+                     * 设置Query interval. Options: [5s|1min|5min|15min].
+                     * @param _period Query interval. Options: [5s|1min|5min|15min].
                      * 
                      */
                     void SetPeriod(const std::string& _period);
@@ -148,19 +148,19 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @return StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 获取Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+                     * @return StartTime Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @param _startTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 设置Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+                     * @param _startTime Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -173,19 +173,19 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @return EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 获取End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+                     * @return EndTime End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @param _endTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 设置End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+                     * @param _endTime End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -197,51 +197,78 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Peer IP address.
+                     * @return RemoteIp Peer IP address.
+                     * 
+                     */
+                    std::string GetRemoteIp() const;
+
+                    /**
+                     * 设置Peer IP address.
+                     * @param _remoteIp Peer IP address.
+                     * 
+                     */
+                    void SetRemoteIp(const std::string& _remoteIp);
+
+                    /**
+                     * 判断参数 RemoteIp 是否已赋值
+                     * @return RemoteIp 是否已赋值
+                     * 
+                     */
+                    bool RemoteIpHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The flow ID.
+                     * Transport stream ID.
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Whether to query the inputs or outputs. Valid values: input, output.
+                     * Input or output type. Valid values: `input`, `output`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The input or output ID.
+                     * Input or output Id.
                      */
                     std::string m_inputOutputId;
                     bool m_inputOutputIdHasBeenSet;
 
                     /**
-                     * Whether to query the primary or backup pipeline. Valid values: 0, 1.
+                     * Primary or backup channel. Valid values: 0 and 1.
                      */
                     std::string m_pipeline;
                     bool m_pipelineHasBeenSet;
 
                     /**
-                     * The query interval. Valid values: 5s, 1min, 5min, 15min.
+                     * Query interval. Options: [5s|1min|5min|15min].
                      */
                     std::string m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Peer IP address.
+                     */
+                    std::string m_remoteIp;
+                    bool m_remoteIpHasBeenSet;
 
                 };
             }

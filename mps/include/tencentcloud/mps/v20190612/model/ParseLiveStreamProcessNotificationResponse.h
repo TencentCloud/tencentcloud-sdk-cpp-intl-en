@@ -79,8 +79,8 @@ namespace TencentCloud
                     bool NotificationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task ID for video processing.
-                     * @return TaskId Task ID for video processing.
+                     * 获取Video processing task ID.
+                     * @return TaskId Video processing task ID.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -93,8 +93,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProcessEofInfo 
+                     * 获取Error information of live stream processing. Valid when NotificationType is ProcessEof.
+                     * @return ProcessEofInfo Error information of live stream processing. Valid when NotificationType is ProcessEof.
                      * 
                      */
                     LiveStreamProcessErrorInfo GetProcessEofInfo() const;
@@ -107,8 +107,8 @@ namespace TencentCloud
                     bool ProcessEofInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiReviewResultInfo 
+                     * 获取Content moderation result. Valid when NotificationType is AiReviewResult.
+                     * @return AiReviewResultInfo Content moderation result. Valid when NotificationType is AiReviewResult.
                      * 
                      */
                     LiveStreamAiReviewResultInfo GetAiReviewResultInfo() const;
@@ -121,8 +121,8 @@ namespace TencentCloud
                     bool AiReviewResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiRecognitionResultInfo 
+                     * 获取Content recognition result. Valid when NotificationType is AiRecognitionResult.
+                     * @return AiRecognitionResultInfo Content recognition result. Valid when NotificationType is AiRecognitionResult.
                      * 
                      */
                     LiveStreamAiRecognitionResultInfo GetAiRecognitionResultInfo() const;
@@ -135,8 +135,8 @@ namespace TencentCloud
                     bool AiRecognitionResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisResultInfo 
+                     * 获取Content analysis result. Valid when NotificationType is AiAnalysisResult.
+                     * @return AiAnalysisResultInfo Content analysis result. Valid when NotificationType is AiAnalysisResult.
                      * 
                      */
                     LiveStreamAiAnalysisResultInfo GetAiAnalysisResultInfo() const;
@@ -149,8 +149,8 @@ namespace TencentCloud
                     bool AiAnalysisResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiQualityControlResultInfo 
+                     * 获取Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
+                     * @return AiQualityControlResultInfo Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
                      * 
                      */
                     LiveStreamAiQualityControlResultInfo GetAiQualityControlResultInfo() const;
@@ -163,8 +163,8 @@ namespace TencentCloud
                     bool AiQualityControlResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LiveRecordResultInfo 
+                     * 获取Live streaming result is valid when NotificationType is LiveRecordResult.
+                     * @return LiveRecordResultInfo Live streaming result is valid when NotificationType is LiveRecordResult.
                      * 
                      */
                     LiveStreamRecordResultInfo GetLiveRecordResultInfo() const;
@@ -177,8 +177,8 @@ namespace TencentCloud
                     bool LiveRecordResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
-                     * @return AiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+                     * 获取Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
+                     * @return AiSmartSubtitleResultInfo Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
                      * 
                      */
                     LiveStreamAiSmartSubtitleResultInfo GetAiSmartSubtitleResultInfo() const;
@@ -219,8 +219,8 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取-Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
-                     * @return Timestamp -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+                     * 获取- Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
+                     * @return Timestamp - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
                      * 
                      */
                     int64_t GetTimestamp() const;
@@ -262,49 +262,49 @@ namespace TencentCloud
                     bool m_notificationTypeHasBeenSet;
 
                     /**
-                     * Task ID for video processing.
+                     * Video processing task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Error information of live stream processing. Valid when NotificationType is ProcessEof.
                      */
                     LiveStreamProcessErrorInfo m_processEofInfo;
                     bool m_processEofInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Content moderation result. Valid when NotificationType is AiReviewResult.
                      */
                     LiveStreamAiReviewResultInfo m_aiReviewResultInfo;
                     bool m_aiReviewResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Content recognition result. Valid when NotificationType is AiRecognitionResult.
                      */
                     LiveStreamAiRecognitionResultInfo m_aiRecognitionResultInfo;
                     bool m_aiRecognitionResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Content analysis result. Valid when NotificationType is AiAnalysisResult.
                      */
                     LiveStreamAiAnalysisResultInfo m_aiAnalysisResultInfo;
                     bool m_aiAnalysisResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
                      */
                     LiveStreamAiQualityControlResultInfo m_aiQualityControlResultInfo;
                     bool m_aiQualityControlResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Live streaming result is valid when NotificationType is LiveRecordResult.
                      */
                     LiveStreamRecordResultInfo m_liveRecordResultInfo;
                     bool m_liveRecordResultInfoHasBeenSet;
 
                     /**
-                     * Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+                     * Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
                      */
                     LiveStreamAiSmartSubtitleResultInfo m_aiSmartSubtitleResultInfo;
                     bool m_aiSmartSubtitleResultInfoHasBeenSet;
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+                     * - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;

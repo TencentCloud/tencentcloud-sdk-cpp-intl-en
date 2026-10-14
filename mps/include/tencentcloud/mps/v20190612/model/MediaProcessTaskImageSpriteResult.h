@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of image sprite
+                * Result type of an image sprite task for a video
                 */
                 class MediaProcessTaskImageSpriteResult : public AbstractModel
                 {
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the image sprite task for videos.
+                     * @return Output Output of the image sprite task for videos.
                      * 
                      */
                     MediaImageSpriteItem GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the image sprite task for videos.
+                     * @param _output Output of the image sprite task for videos.
                      * 
                      */
                     void SetOutput(const MediaImageSpriteItem& _output);
@@ -249,7 +249,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the image sprite task for videos.
                      */
                     MediaImageSpriteItem m_output;
                     bool m_outputHasBeenSet;

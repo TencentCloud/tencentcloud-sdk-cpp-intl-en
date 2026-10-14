@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Operation history
-                     * @return Operations Operation history
+                     * 获取Operation record
+                     * @return Operations Operation record
                      * 
                      */
                     std::vector<Operation> GetOperations() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Operation history
+                     * Operation record
                      */
                     std::vector<Operation> m_operations;
                     bool m_operationsHasBeenSet;

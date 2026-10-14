@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of the current page. Default value: `1`
-                     * @return PageNum Number of the current page. Default value: `1`
+                     * 获取Current page number. Default value: 1.
+                     * @return PageNum Current page number. Default value: 1.
                      * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
-                     * 设置Number of the current page. Default value: `1`
-                     * @param _pageNum Number of the current page. Default value: `1`
+                     * 设置Current page number. Default value: 1.
+                     * @param _pageNum Current page number. Default value: 1.
                      * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PageNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Default value: `10`
-                     * @return PageSize Number of entries per page. Default value: `10`
+                     * 获取Size per page. Default value: 10.
+                     * @return PageSize Size per page. Default value: 10.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Number of entries per page. Default value: `10`
-                     * @param _pageSize Number of entries per page. Default value: `10`
+                     * 设置Size per page. Default value: 10.
+                     * @param _pageSize Size per page. Default value: 10.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of the current page. Default value: `1`
+                     * Current page number. Default value: 1.
                      */
                     int64_t m_pageNum;
                     bool m_pageNumHasBeenSet;
 
                     /**
-                     * Number of entries per page. Default value: `10`
+                     * Size per page. Default value: 10.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

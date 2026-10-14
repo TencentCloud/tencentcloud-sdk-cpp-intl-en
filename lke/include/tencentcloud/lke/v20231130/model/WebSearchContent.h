@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Web page search content
                 */
                 class WebSearchContent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Content 
+                     * 获取Web search result, a string in json format
+                     * @return Content Web search result, a string in json format
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置
-                     * @param _content 
+                     * 设置Web search result, a string in json format
+                     * @param _content Web search result, a string in json format
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Web search result, a string in json format
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result type for screenshot taking at specified time points
+                * Type of the video time point screenshot job result
                 */
                 class MediaProcessTaskSnapshotByTimeOffsetResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input for screenshot taking at specified time points.
-                     * @return Input Task input for screenshot taking at specified time points.
+                     * 获取Input of the time point screenshot task for videos.
+                     * @return Input Input of the time point screenshot task for videos.
                      * 
                      */
                     SnapshotByTimeOffsetTaskInput GetInput() const;
 
                     /**
-                     * 设置Task input for screenshot taking at specified time points.
-                     * @param _input Task input for screenshot taking at specified time points.
+                     * 设置Input of the time point screenshot task for videos.
+                     * @param _input Input of the time point screenshot task for videos.
                      * 
                      */
                     void SetInput(const SnapshotByTimeOffsetTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the time point screenshot task for videos.
+                     * @return Output Output of the time point screenshot task for videos.
                      * 
                      */
                     MediaSnapshotByTimeOffsetItem GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the time point screenshot task for videos.
+                     * @param _output Output of the time point screenshot task for videos.
                      * 
                      */
                     void SetOutput(const MediaSnapshotByTimeOffsetItem& _output);
@@ -243,13 +243,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input for screenshot taking at specified time points.
+                     * Input of the time point screenshot task for videos.
                      */
                     SnapshotByTimeOffsetTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the time point screenshot task for videos.
                      */
                     MediaSnapshotByTimeOffsetItem m_output;
                     bool m_outputHasBeenSet;

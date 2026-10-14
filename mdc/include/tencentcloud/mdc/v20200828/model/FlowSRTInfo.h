@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The SRT streaming performance data.
+                * SRT quality data in the transport stream.
                 */
                 class FlowSRTInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The timestamp (seconds).
-                     * @return Timestamp The timestamp (seconds).
+                     * 获取<p>Timestamp in seconds.</p>
+                     * @return Timestamp <p>Timestamp in seconds.</p>
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置The timestamp (seconds).
-                     * @param _timestamp The timestamp (seconds).
+                     * 设置<p>Timestamp in seconds.</p>
+                     * @param _timestamp <p>Timestamp in seconds.</p>
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取The packet loss rate for sending.
-                     * @return SendPacketLossRate The packet loss rate for sending.
+                     * 获取<p>Packet loss rate on transmitting.</p>
+                     * @return SendPacketLossRate <p>Packet loss rate on transmitting.</p>
                      * 
                      */
                     int64_t GetSendPacketLossRate() const;
 
                     /**
-                     * 设置The packet loss rate for sending.
-                     * @param _sendPacketLossRate The packet loss rate for sending.
+                     * 设置<p>Packet loss rate on transmitting.</p>
+                     * @param _sendPacketLossRate <p>Packet loss rate on transmitting.</p>
                      * 
                      */
                     void SetSendPacketLossRate(const int64_t& _sendPacketLossRate);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SendPacketLossRateHasBeenSet() const;
 
                     /**
-                     * 获取The retry rate for sending.
-                     * @return SendRetransmissionRate The retry rate for sending.
+                     * 获取<p>Retransmission rate.</p>
+                     * @return SendRetransmissionRate <p>Retransmission rate.</p>
                      * 
                      */
                     int64_t GetSendRetransmissionRate() const;
 
                     /**
-                     * 设置The retry rate for sending.
-                     * @param _sendRetransmissionRate The retry rate for sending.
+                     * 设置<p>Retransmission rate.</p>
+                     * @param _sendRetransmissionRate <p>Retransmission rate.</p>
                      * 
                      */
                     void SetSendRetransmissionRate(const int64_t& _sendRetransmissionRate);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SendRetransmissionRateHasBeenSet() const;
 
                     /**
-                     * 获取The packet loss rate for receiving.
-                     * @return RecvPacketLossRate The packet loss rate for receiving.
+                     * 获取<p>Packet loss rate on receiving.</p>
+                     * @return RecvPacketLossRate <p>Packet loss rate on receiving.</p>
                      * 
                      */
                     int64_t GetRecvPacketLossRate() const;
 
                     /**
-                     * 设置The packet loss rate for receiving.
-                     * @param _recvPacketLossRate The packet loss rate for receiving.
+                     * 设置<p>Packet loss rate on receiving.</p>
+                     * @param _recvPacketLossRate <p>Packet loss rate on receiving.</p>
                      * 
                      */
                     void SetRecvPacketLossRate(const int64_t& _recvPacketLossRate);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RecvPacketLossRateHasBeenSet() const;
 
                     /**
-                     * 获取The retry rate for receiving.
-                     * @return RecvRetransmissionRate The retry rate for receiving.
+                     * 获取<p>Receiving retransmission rate.</p>
+                     * @return RecvRetransmissionRate <p>Receiving retransmission rate.</p>
                      * 
                      */
                     int64_t GetRecvRetransmissionRate() const;
 
                     /**
-                     * 设置The retry rate for receiving.
-                     * @param _recvRetransmissionRate The retry rate for receiving.
+                     * 设置<p>Receiving retransmission rate.</p>
+                     * @param _recvRetransmissionRate <p>Receiving retransmission rate.</p>
                      * 
                      */
                     void SetRecvRetransmissionRate(const int64_t& _recvRetransmissionRate);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RecvRetransmissionRateHasBeenSet() const;
 
                     /**
-                     * 获取The peer RTT.
-                     * @return RTT The peer RTT.
+                     * 获取<p>RTT latency to the peer.</p>
+                     * @return RTT <p>RTT latency to the peer.</p>
                      * 
                      */
                     int64_t GetRTT() const;
 
                     /**
-                     * 设置The peer RTT.
-                     * @param _rTT The peer RTT.
+                     * 设置<p>RTT latency to the peer.</p>
+                     * @param _rTT <p>RTT latency to the peer.</p>
                      * 
                      */
                     void SetRTT(const int64_t& _rTT);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RTTHasBeenSet() const;
 
                     /**
-                     * 获取The ID of a push session.
-                     * @return SessionId The ID of a push session.
+                     * 获取<p>Flag the same streaming session.</p>
+                     * @return SessionId <p>Flag the same streaming session.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID of a push session.
-                     * @param _sessionId The ID of a push session.
+                     * 设置<p>Flag the same streaming session.</p>
+                     * @param _sessionId <p>Flag the same streaming session.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of dropped packets for sending.
-                     * @return SendPacketDropNumber The number of dropped packets for sending.
+                     * 获取<p>Number of discarded packets on sending.</p>
+                     * @return SendPacketDropNumber <p>Number of discarded packets on sending.</p>
                      * 
                      */
                     int64_t GetSendPacketDropNumber() const;
 
                     /**
-                     * 设置The number of dropped packets for sending.
-                     * @param _sendPacketDropNumber The number of dropped packets for sending.
+                     * 设置<p>Number of discarded packets on sending.</p>
+                     * @param _sendPacketDropNumber <p>Number of discarded packets on sending.</p>
                      * 
                      */
                     void SetSendPacketDropNumber(const int64_t& _sendPacketDropNumber);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool SendPacketDropNumberHasBeenSet() const;
 
                     /**
-                     * 获取The number of dropped packets for receiving.
-                     * @return RecvPacketDropNumber The number of dropped packets for receiving.
+                     * 获取<p>Number of received dropped packets.</p>
+                     * @return RecvPacketDropNumber <p>Number of received dropped packets.</p>
                      * 
                      */
                     int64_t GetRecvPacketDropNumber() const;
 
                     /**
-                     * 设置The number of dropped packets for receiving.
-                     * @param _recvPacketDropNumber The number of dropped packets for receiving.
+                     * 设置<p>Number of received dropped packets.</p>
+                     * @param _recvPacketDropNumber <p>Number of received dropped packets.</p>
                      * 
                      */
                     void SetRecvPacketDropNumber(const int64_t& _recvPacketDropNumber);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RecvPacketDropNumberHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth
-                     * @return Bandwidth Bandwidth
+                     * 获取<p>Bandwidth.</p>
+                     * @return Bandwidth <p>Bandwidth.</p>
                      * 
                      */
                     double GetBandwidth() const;
 
                     /**
-                     * 设置Bandwidth
-                     * @param _bandwidth Bandwidth
+                     * 设置<p>Bandwidth.</p>
+                     * @param _bandwidth <p>Bandwidth.</p>
                      * 
                      */
                     void SetBandwidth(const double& _bandwidth);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取transmit bandwidth
-                     * @return SendBandwidth transmit bandwidth
+                     * 获取<p>Transmit bandwidth</p>
+                     * @return SendBandwidth <p>Transmit bandwidth</p>
                      * 
                      */
                     double GetSendBandwidth() const;
 
                     /**
-                     * 设置transmit bandwidth
-                     * @param _sendBandwidth transmit bandwidth
+                     * 设置<p>Transmit bandwidth</p>
+                     * @param _sendBandwidth <p>Transmit bandwidth</p>
                      * 
                      */
                     void SetSendBandwidth(const double& _sendBandwidth);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool SendBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Receiving bandwidth
-                     * @return RecvBandwidth Receiving bandwidth
+                     * 获取<p>Receiving bandwidth</p>
+                     * @return RecvBandwidth <p>Receiving bandwidth</p>
                      * 
                      */
                     double GetRecvBandwidth() const;
 
                     /**
-                     * 设置Receiving bandwidth
-                     * @param _recvBandwidth Receiving bandwidth
+                     * 设置<p>Receiving bandwidth</p>
+                     * @param _recvBandwidth <p>Receiving bandwidth</p>
                      * 
                      */
                     void SetRecvBandwidth(const double& _recvBandwidth);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool RecvBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Sent packet count
-                     * @return SendPackets Sent packet count
+                     * 获取<p>Sent packet count</p>
+                     * @return SendPackets <p>Sent packet count</p>
                      * 
                      */
                     int64_t GetSendPackets() const;
 
                     /**
-                     * 设置Sent packet count
-                     * @param _sendPackets Sent packet count
+                     * 设置<p>Sent packet count</p>
+                     * @param _sendPackets <p>Sent packet count</p>
                      * 
                      */
                     void SetSendPackets(const int64_t& _sendPackets);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool SendPacketsHasBeenSet() const;
 
                     /**
-                     * 获取Received packets
-                     * @return RecvPackets Received packets
+                     * 获取<p>Number of received packets</p>
+                     * @return RecvPackets <p>Number of received packets</p>
                      * 
                      */
                     int64_t GetRecvPackets() const;
 
                     /**
-                     * 设置Received packets
-                     * @param _recvPackets Received packets
+                     * 设置<p>Number of received packets</p>
+                     * @param _recvPackets <p>Number of received packets</p>
                      * 
                      */
                     void SetRecvPackets(const int64_t& _recvPackets);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool RecvPacketsHasBeenSet() const;
 
                     /**
-                     * 获取Sent lost packets
-                     * @return SendLostPackets Sent lost packets
+                     * 获取<p>Sending lost packets</p>
+                     * @return SendLostPackets <p>Sending lost packets</p>
                      * 
                      */
                     int64_t GetSendLostPackets() const;
 
                     /**
-                     * 设置Sent lost packets
-                     * @param _sendLostPackets Sent lost packets
+                     * 设置<p>Sending lost packets</p>
+                     * @param _sendLostPackets <p>Sending lost packets</p>
                      * 
                      */
                     void SetSendLostPackets(const int64_t& _sendLostPackets);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool SendLostPacketsHasBeenSet() const;
 
                     /**
-                     * 获取accept lost packets
-                     * @return RecvLostPackets accept lost packets
+                     * 获取<p>Accept lost packets</p>
+                     * @return RecvLostPackets <p>Accept lost packets</p>
                      * 
                      */
                     int64_t GetRecvLostPackets() const;
 
                     /**
-                     * 设置accept lost packets
-                     * @param _recvLostPackets accept lost packets
+                     * 设置<p>Accept lost packets</p>
+                     * @param _recvLostPackets <p>Accept lost packets</p>
                      * 
                      */
                     void SetRecvLostPackets(const int64_t& _recvLostPackets);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool RecvLostPacketsHasBeenSet() const;
 
                     /**
-                     * 获取Retransmitted packet count
-                     * @return SendRetransmitPackets Retransmitted packet count
+                     * 获取<p>Sent retransmission packet count</p>
+                     * @return SendRetransmitPackets <p>Sent retransmission packet count</p>
                      * 
                      */
                     int64_t GetSendRetransmitPackets() const;
 
                     /**
-                     * 设置Retransmitted packet count
-                     * @param _sendRetransmitPackets Retransmitted packet count
+                     * 设置<p>Sent retransmission packet count</p>
+                     * @param _sendRetransmitPackets <p>Sent retransmission packet count</p>
                      * 
                      */
                     void SetSendRetransmitPackets(const int64_t& _sendRetransmitPackets);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool SendRetransmitPacketsHasBeenSet() const;
 
                     /**
-                     * 获取Retransmitted packets received
-                     * @return RecvRetransmitPackets Retransmitted packets received
+                     * 获取<p>Number of received retransmission packets</p>
+                     * @return RecvRetransmitPackets <p>Number of received retransmission packets</p>
                      * 
                      */
                     int64_t GetRecvRetransmitPackets() const;
 
                     /**
-                     * 设置Retransmitted packets received
-                     * @param _recvRetransmitPackets Retransmitted packets received
+                     * 设置<p>Number of received retransmission packets</p>
+                     * @param _recvRetransmitPackets <p>Number of received retransmission packets</p>
                      * 
                      */
                     void SetRecvRetransmitPackets(const int64_t& _recvRetransmitPackets);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool RecvRetransmitPacketsHasBeenSet() const;
 
                     /**
-                     * 获取Window size
-                     * @return FlightSize Window size
+                     * 获取<p>Flight window size</p>
+                     * @return FlightSize <p>Flight window size</p>
                      * 
                      */
                     int64_t GetFlightSize() const;
 
                     /**
-                     * 设置Window size
-                     * @param _flightSize Window size
+                     * 设置<p>Flight window size</p>
+                     * @param _flightSize <p>Flight window size</p>
                      * 
                      */
                     void SetFlightSize(const int64_t& _flightSize);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool FlightSizeHasBeenSet() const;
 
                     /**
-                     * 获取Congestion window
-                     * @return CongestionWindow Congestion window
+                     * 获取<p>Congestion window.</p>
+                     * @return CongestionWindow <p>Congestion window.</p>
                      * 
                      */
                     int64_t GetCongestionWindow() const;
 
                     /**
-                     * 设置Congestion window
-                     * @param _congestionWindow Congestion window
+                     * 设置<p>Congestion window.</p>
+                     * @param _congestionWindow <p>Congestion window.</p>
                      * 
                      */
                     void SetCongestionWindow(const int64_t& _congestionWindow);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool CongestionWindowHasBeenSet() const;
 
                     /**
-                     * 获取Sending buffer (ms)
-                     * @return SendBuffer Sending buffer (ms)
+                     * 获取<p>Sending buffer (ms)</p>
+                     * @return SendBuffer <p>Sending buffer (ms)</p>
                      * 
                      */
                     int64_t GetSendBuffer() const;
 
                     /**
-                     * 设置Sending buffer (ms)
-                     * @param _sendBuffer Sending buffer (ms)
+                     * 设置<p>Sending buffer (ms)</p>
+                     * @param _sendBuffer <p>Sending buffer (ms)</p>
                      * 
                      */
                     void SetSendBuffer(const int64_t& _sendBuffer);
@@ -488,15 +488,15 @@ namespace TencentCloud
                     bool SendBufferHasBeenSet() const;
 
                     /**
-                     * 获取Receive buffer (ms)
-                     * @return RecvBuffer Receive buffer (ms)
+                     * 获取<p>Receive buffer (ms)</p>
+                     * @return RecvBuffer <p>Receive buffer (ms)</p>
                      * 
                      */
                     int64_t GetRecvBuffer() const;
 
                     /**
-                     * 设置Receive buffer (ms)
-                     * @param _recvBuffer Receive buffer (ms)
+                     * 设置<p>Receive buffer (ms)</p>
+                     * @param _recvBuffer <p>Receive buffer (ms)</p>
                      * 
                      */
                     void SetRecvBuffer(const int64_t& _recvBuffer);
@@ -509,15 +509,15 @@ namespace TencentCloud
                     bool RecvBufferHasBeenSet() const;
 
                     /**
-                     * 获取Send delay
-                     * @return SendLatency Send delay
+                     * 获取<p>Sending delay</p>
+                     * @return SendLatency <p>Sending delay</p>
                      * 
                      */
                     int64_t GetSendLatency() const;
 
                     /**
-                     * 设置Send delay
-                     * @param _sendLatency Send delay
+                     * 设置<p>Sending delay</p>
+                     * @param _sendLatency <p>Sending delay</p>
                      * 
                      */
                     void SetSendLatency(const int64_t& _sendLatency);
@@ -530,15 +530,15 @@ namespace TencentCloud
                     bool SendLatencyHasBeenSet() const;
 
                     /**
-                     * 获取receive latency
-                     * @return RecvLatency receive latency
+                     * 获取<p>Receive latency</p>
+                     * @return RecvLatency <p>Receive latency</p>
                      * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
-                     * 设置receive latency
-                     * @param _recvLatency receive latency
+                     * 设置<p>Receive latency</p>
+                     * @param _recvLatency <p>Receive latency</p>
                      * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
@@ -550,151 +550,205 @@ namespace TencentCloud
                      */
                     bool RecvLatencyHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Sent NAK packet count</p>
+                     * @return SendNAKPackets <p>Sent NAK packet count</p>
+                     * 
+                     */
+                    int64_t GetSendNAKPackets() const;
+
+                    /**
+                     * 设置<p>Sent NAK packet count</p>
+                     * @param _sendNAKPackets <p>Sent NAK packet count</p>
+                     * 
+                     */
+                    void SetSendNAKPackets(const int64_t& _sendNAKPackets);
+
+                    /**
+                     * 判断参数 SendNAKPackets 是否已赋值
+                     * @return SendNAKPackets 是否已赋值
+                     * 
+                     */
+                    bool SendNAKPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Number of received NAK packets</p>
+                     * @return RecvNAKPackets <p>Number of received NAK packets</p>
+                     * 
+                     */
+                    int64_t GetRecvNAKPackets() const;
+
+                    /**
+                     * 设置<p>Number of received NAK packets</p>
+                     * @param _recvNAKPackets <p>Number of received NAK packets</p>
+                     * 
+                     */
+                    void SetRecvNAKPackets(const int64_t& _recvNAKPackets);
+
+                    /**
+                     * 判断参数 RecvNAKPackets 是否已赋值
+                     * @return RecvNAKPackets 是否已赋值
+                     * 
+                     */
+                    bool RecvNAKPacketsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The timestamp (seconds).
+                     * <p>Timestamp in seconds.</p>
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * The packet loss rate for sending.
+                     * <p>Packet loss rate on transmitting.</p>
                      */
                     int64_t m_sendPacketLossRate;
                     bool m_sendPacketLossRateHasBeenSet;
 
                     /**
-                     * The retry rate for sending.
+                     * <p>Retransmission rate.</p>
                      */
                     int64_t m_sendRetransmissionRate;
                     bool m_sendRetransmissionRateHasBeenSet;
 
                     /**
-                     * The packet loss rate for receiving.
+                     * <p>Packet loss rate on receiving.</p>
                      */
                     int64_t m_recvPacketLossRate;
                     bool m_recvPacketLossRateHasBeenSet;
 
                     /**
-                     * The retry rate for receiving.
+                     * <p>Receiving retransmission rate.</p>
                      */
                     int64_t m_recvRetransmissionRate;
                     bool m_recvRetransmissionRateHasBeenSet;
 
                     /**
-                     * The peer RTT.
+                     * <p>RTT latency to the peer.</p>
                      */
                     int64_t m_rTT;
                     bool m_rTTHasBeenSet;
 
                     /**
-                     * The ID of a push session.
+                     * <p>Flag the same streaming session.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The number of dropped packets for sending.
+                     * <p>Number of discarded packets on sending.</p>
                      */
                     int64_t m_sendPacketDropNumber;
                     bool m_sendPacketDropNumberHasBeenSet;
 
                     /**
-                     * The number of dropped packets for receiving.
+                     * <p>Number of received dropped packets.</p>
                      */
                     int64_t m_recvPacketDropNumber;
                     bool m_recvPacketDropNumberHasBeenSet;
 
                     /**
-                     * Bandwidth
+                     * <p>Bandwidth.</p>
                      */
                     double m_bandwidth;
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * transmit bandwidth
+                     * <p>Transmit bandwidth</p>
                      */
                     double m_sendBandwidth;
                     bool m_sendBandwidthHasBeenSet;
 
                     /**
-                     * Receiving bandwidth
+                     * <p>Receiving bandwidth</p>
                      */
                     double m_recvBandwidth;
                     bool m_recvBandwidthHasBeenSet;
 
                     /**
-                     * Sent packet count
+                     * <p>Sent packet count</p>
                      */
                     int64_t m_sendPackets;
                     bool m_sendPacketsHasBeenSet;
 
                     /**
-                     * Received packets
+                     * <p>Number of received packets</p>
                      */
                     int64_t m_recvPackets;
                     bool m_recvPacketsHasBeenSet;
 
                     /**
-                     * Sent lost packets
+                     * <p>Sending lost packets</p>
                      */
                     int64_t m_sendLostPackets;
                     bool m_sendLostPacketsHasBeenSet;
 
                     /**
-                     * accept lost packets
+                     * <p>Accept lost packets</p>
                      */
                     int64_t m_recvLostPackets;
                     bool m_recvLostPacketsHasBeenSet;
 
                     /**
-                     * Retransmitted packet count
+                     * <p>Sent retransmission packet count</p>
                      */
                     int64_t m_sendRetransmitPackets;
                     bool m_sendRetransmitPacketsHasBeenSet;
 
                     /**
-                     * Retransmitted packets received
+                     * <p>Number of received retransmission packets</p>
                      */
                     int64_t m_recvRetransmitPackets;
                     bool m_recvRetransmitPacketsHasBeenSet;
 
                     /**
-                     * Window size
+                     * <p>Flight window size</p>
                      */
                     int64_t m_flightSize;
                     bool m_flightSizeHasBeenSet;
 
                     /**
-                     * Congestion window
+                     * <p>Congestion window.</p>
                      */
                     int64_t m_congestionWindow;
                     bool m_congestionWindowHasBeenSet;
 
                     /**
-                     * Sending buffer (ms)
+                     * <p>Sending buffer (ms)</p>
                      */
                     int64_t m_sendBuffer;
                     bool m_sendBufferHasBeenSet;
 
                     /**
-                     * Receive buffer (ms)
+                     * <p>Receive buffer (ms)</p>
                      */
                     int64_t m_recvBuffer;
                     bool m_recvBufferHasBeenSet;
 
                     /**
-                     * Send delay
+                     * <p>Sending delay</p>
                      */
                     int64_t m_sendLatency;
                     bool m_sendLatencyHasBeenSet;
 
                     /**
-                     * receive latency
+                     * <p>Receive latency</p>
                      */
                     int64_t m_recvLatency;
                     bool m_recvLatencyHasBeenSet;
+
+                    /**
+                     * <p>Sent NAK packet count</p>
+                     */
+                    int64_t m_sendNAKPackets;
+                    bool m_sendNAKPacketsHasBeenSet;
+
+                    /**
+                     * <p>Number of received NAK packets</p>
+                     */
+                    int64_t m_recvNAKPackets;
+                    bool m_recvNAKPacketsHasBeenSet;
 
                 };
             }

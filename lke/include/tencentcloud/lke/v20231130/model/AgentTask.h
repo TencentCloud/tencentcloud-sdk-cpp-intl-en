@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent Agent task information
                 */
                 class AgentTask : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Index 
+                     * 获取<p>Task serial number</p>
+                     * @return Index <p>Task serial number</p>
                      * 
                      */
                     int64_t GetIndex() const;
 
                     /**
-                     * 设置
-                     * @param _index 
+                     * 设置<p>Task serial number</p>
+                     * @param _index <p>Task serial number</p>
                      * 
                      */
                     void SetIndex(const int64_t& _index);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Content 
+                     * 获取<p>Task content</p>
+                     * @return Content <p>Task content</p>
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置
-                     * @param _content 
+                     * 设置<p>Task content</p>
+                     * @param _content <p>Task content</p>
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Task status.</p>
+                     * @return Status <p>Task status.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Task status.</p>
+                     * @param _status <p>Task status.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Task serial number</p>
                      */
                     int64_t m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task content</p>
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task status.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CovImgPathHasBeenSet() const;
 
                     /**
-                     * 获取Reliability of the intelligent highlights, with a value range from 0 to 100.
-                     * @return Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
+                     * 获取Confidence of the intelligent highlights, with a value range from 0 to 100.
+                     * @return Confidence Confidence of the intelligent highlights, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Reliability of the intelligent highlights, with a value range from 0 to 100.
-                     * @param _confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
+                     * 设置Confidence of the intelligent highlights, with a value range from 0 to 100.
+                     * @param _confidence Confidence of the intelligent highlights, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HighlightUrl 
+                     * 获取Intelligent highlight address.
+                     * @return HighlightUrl Intelligent highlight address.
                      * 
                      */
                     std::string GetHighlightUrl() const;
 
                     /**
-                     * 设置
-                     * @param _highlightUrl 
+                     * 设置Intelligent highlight address.
+                     * @param _highlightUrl Intelligent highlight address.
                      * 
                      */
                     void SetHighlightUrl(const std::string& _highlightUrl);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool HighlightUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CovImgUrl 
+                     * 获取Intelligent highlight cover address.
+                     * @return CovImgUrl Intelligent highlight cover address.
                      * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
-                     * 设置
-                     * @param _covImgUrl 
+                     * 设置Intelligent highlight cover address.
+                     * @param _covImgUrl Intelligent highlight cover address.
                      * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
@@ -209,7 +209,7 @@ namespace TencentCloud
                     bool m_covImgPathHasBeenSet;
 
                     /**
-                     * Reliability of the intelligent highlights, with a value range from 0 to 100.
+                     * Confidence of the intelligent highlights, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
@@ -227,13 +227,13 @@ namespace TencentCloud
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent highlight address.
                      */
                     std::string m_highlightUrl;
                     bool m_highlightUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent highlight cover address.
                      */
                     std::string m_covImgUrl;
                     bool m_covImgUrlHasBeenSet;

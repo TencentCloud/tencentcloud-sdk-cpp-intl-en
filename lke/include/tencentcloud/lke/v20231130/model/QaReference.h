@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Reference information of the Q&A pair
                 */
                 class QaReference : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return QaBizId 
+                     * 获取<p>QA business ID</p>
+                     * @return QaBizId <p>QA business ID</p>
                      * 
                      */
-                    uint64_t GetQaBizId() const;
+                    std::string GetQaBizId() const;
 
                     /**
-                     * 设置
-                     * @param _qaBizId 
+                     * 设置<p>QA business ID</p>
+                     * @param _qaBizId <p>QA business ID</p>
                      * 
                      */
-                    void SetQaBizId(const uint64_t& _qaBizId);
+                    void SetQaBizId(const std::string& _qaBizId);
 
                     /**
                      * 判断参数 QaBizId 是否已赋值
@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool QaBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReferBizId 
+                     * 获取<p>Document fragment reference ID</p>
+                     * @return ReferBizId <p>Document fragment reference ID</p>
                      * 
                      */
-                    uint64_t GetReferBizId() const;
+                    std::string GetReferBizId() const;
 
                     /**
-                     * 设置
-                     * @param _referBizId 
+                     * 设置<p>Document fragment reference ID</p>
+                     * @param _referBizId <p>Document fragment reference ID</p>
                      * 
                      */
-                    void SetReferBizId(const uint64_t& _referBizId);
+                    void SetReferBizId(const std::string& _referBizId);
 
                     /**
                      * 判断参数 ReferBizId 是否已赋值
@@ -89,18 +89,18 @@ namespace TencentCloud
                     bool ReferBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeBizId 
+                     * 获取<p>Business ID of the knowledge base where the QA resides</p>
+                     * @return KnowledgeBizId <p>Business ID of the knowledge base where the QA resides</p>
                      * 
                      */
-                    uint64_t GetKnowledgeBizId() const;
+                    std::string GetKnowledgeBizId() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBizId 
+                     * 设置<p>Business ID of the knowledge base where the QA resides</p>
+                     * @param _knowledgeBizId <p>Business ID of the knowledge base where the QA resides</p>
                      * 
                      */
-                    void SetKnowledgeBizId(const uint64_t& _knowledgeBizId);
+                    void SetKnowledgeBizId(const std::string& _knowledgeBizId);
 
                     /**
                      * 判断参数 KnowledgeBizId 是否已赋值
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool KnowledgeBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeName 
+                     * 获取<p>Name of the knowledge base where the QA resides</p>
+                     * @return KnowledgeName <p>Name of the knowledge base where the QA resides</p>
                      * 
                      */
                     std::string GetKnowledgeName() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeName 
+                     * 设置<p>Name of the knowledge base where the QA resides</p>
+                     * @param _knowledgeName <p>Name of the knowledge base where the QA resides</p>
                      * 
                      */
                     void SetKnowledgeName(const std::string& _knowledgeName);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>QA business ID</p>
                      */
-                    uint64_t m_qaBizId;
+                    std::string m_qaBizId;
                     bool m_qaBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Document fragment reference ID</p>
                      */
-                    uint64_t m_referBizId;
+                    std::string m_referBizId;
                     bool m_referBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Business ID of the knowledge base where the QA resides</p>
                      */
-                    uint64_t m_knowledgeBizId;
+                    std::string m_knowledgeBizId;
                     bool m_knowledgeBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Name of the knowledge base where the QA resides</p>
                      */
                     std::string m_knowledgeName;
                     bool m_knowledgeNameHasBeenSet;

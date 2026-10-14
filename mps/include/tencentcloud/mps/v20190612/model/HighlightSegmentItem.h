@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent highlight collection segments.
+                * List of intelligent highlight segments.
                 */
                 class HighlightSegmentItem : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of the recording clip.
-                     * @return EndTimeOffset End time offset of the recording clip.
+                     * 获取End time offset of a recording clip.
+                     * @return EndTimeOffset End time offset of a recording clip.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of the recording clip.
-                     * @param _endTimeOffset End time offset of the recording clip.
+                     * 设置End time offset of a recording clip.
+                     * @param _endTimeOffset End time offset of a recording clip.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentTags 
+                     * 获取Segment tag.
+                     * @return SegmentTags Segment tag.
                      * 
                      */
                     std::vector<std::string> GetSegmentTags() const;
 
                     /**
-                     * 设置
-                     * @param _segmentTags 
+                     * 设置Segment tag.
+                     * @param _segmentTags Segment tag.
                      * 
                      */
                     void SetSegmentTags(const std::vector<std::string>& _segmentTags);
@@ -229,13 +229,13 @@ namespace TencentCloud
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of the recording clip.
+                     * End time offset of a recording clip.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Segment tag.
                      */
                     std::vector<std::string> m_segmentTags;
                     bool m_segmentTagsHasBeenSet;

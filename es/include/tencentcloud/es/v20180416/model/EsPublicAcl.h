@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Public network ACL information of ES
+                * ES public network access control information
                 */
                 class EsPublicAcl : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access blocklist
-                     * @return BlackIpList Access blocklist
+                     * 获取Access the blocklist
+                     * @return BlackIpList Access the blocklist
                      * 
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
-                     * 设置Access blocklist
-                     * @param _blackIpList Access blocklist
+                     * 设置Access the blocklist
+                     * @param _blackIpList Access the blocklist
                      * 
                      */
                     void SetBlackIpList(const std::vector<std::string>& _blackIpList);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access blocklist
+                     * Access the blocklist
                      */
                     std::vector<std::string> m_blackIpList;
                     bool m_blackIpListHasBeenSet;

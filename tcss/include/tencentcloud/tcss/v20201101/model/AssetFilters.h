@@ -35,10 +35,10 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TCSS
-Key-value pair filter for conditional filtering queries, such as filter ID, name, and status
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If multiple values exist in one filter, the logical relationship between these values is `OR`.
+                * Container security
+Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
+If there are multiple Filters, the logical relationship between them is AND.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
                 */
                 class AssetFilters : public AbstractModel
                 {
@@ -50,15 +50,15 @@ If multiple values exist in one filter, the logical relationship between these v
 
 
                     /**
-                     * 获取Filter name
-                     * @return Name Filter name
+                     * 获取Name of the filter key
+                     * @return Name Name of the filter key
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Filter name
-                     * @param _name Filter name
+                     * 设置Name of the filter key
+                     * @param _name Name of the filter key
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -115,7 +115,7 @@ If multiple values exist in one filter, the logical relationship between these v
                 private:
 
                     /**
-                     * Filter name
+                     * Name of the filter key
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

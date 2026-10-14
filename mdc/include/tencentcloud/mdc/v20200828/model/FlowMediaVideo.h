@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The video data of a flow.
+                * Transmit video data of streaming media.
                 */
                 class FlowMediaVideo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The frame rate.
-                     * @return Fps The frame rate.
+                     * 获取Frame rate.
+                     * @return Fps Frame rate.
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置The frame rate.
-                     * @param _fps The frame rate.
+                     * 设置Frame rate.
+                     * @param _fps Frame rate.
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取The bitrate (bps).
-                     * @return Rate The bitrate (bps).
+                     * 获取Bitrate in bps.
+                     * @return Rate Bitrate in bps.
                      * 
                      */
                     int64_t GetRate() const;
 
                     /**
-                     * 设置The bitrate (bps).
-                     * @param _rate The bitrate (bps).
+                     * 设置Bitrate in bps.
+                     * @param _rate Bitrate in bps.
                      * 
                      */
                     void SetRate(const int64_t& _rate);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RateHasBeenSet() const;
 
                     /**
-                     * 获取The video PID.
-                     * @return Pid The video PID.
+                     * 获取Video Pid.
+                     * @return Pid Video Pid.
                      * 
                      */
                     int64_t GetPid() const;
 
                     /**
-                     * 设置The video PID.
-                     * @param _pid The video PID.
+                     * 设置Video Pid.
+                     * @param _pid Video Pid.
                      * 
                      */
                     void SetPid(const int64_t& _pid);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PidHasBeenSet() const;
 
                     /**
-                     * 获取The ID of a push session.
-                     * @return SessionId The ID of a push session.
+                     * 获取Flag of the same push.
+                     * @return SessionId Flag of the same push.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID of a push session.
-                     * @param _sessionId The ID of a push session.
+                     * 设置Flag of the same push.
+                     * @param _sessionId Flag of the same push.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The frame rate.
+                     * Frame rate.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * The bitrate (bps).
+                     * Bitrate in bps.
                      */
                     int64_t m_rate;
                     bool m_rateHasBeenSet;
 
                     /**
-                     * The video PID.
+                     * Video Pid.
                      */
                     int64_t m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
-                     * The ID of a push session.
+                     * Flag of the same push.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

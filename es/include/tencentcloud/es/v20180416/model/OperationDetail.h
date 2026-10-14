@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Operation details
+                * Operation details.
                 */
                 class OperationDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original instance configuration information
-                     * @return OldInfo Original instance configuration information
+                     * 获取Original configuration message of the instance
+                     * @return OldInfo Original configuration message of the instance
                      * 
                      */
                     std::vector<KeyValue> GetOldInfo() const;
 
                     /**
-                     * 设置Original instance configuration information
-                     * @param _oldInfo Original instance configuration information
+                     * 设置Original configuration message of the instance
+                     * @param _oldInfo Original configuration message of the instance
                      * 
                      */
                     void SetOldInfo(const std::vector<KeyValue>& _oldInfo);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool OldInfoHasBeenSet() const;
 
                     /**
-                     * 获取Updated instance configuration information
-                     * @return NewInfo Updated instance configuration information
+                     * 获取Configuration message after the instance update
+                     * @return NewInfo Configuration message after the instance update
                      * 
                      */
                     std::vector<KeyValue> GetNewInfo() const;
 
                     /**
-                     * 设置Updated instance configuration information
-                     * @param _newInfo Updated instance configuration information
+                     * 设置Configuration message after the instance update
+                     * @param _newInfo Configuration message after the instance update
                      * 
                      */
                     void SetNewInfo(const std::vector<KeyValue>& _newInfo);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Original instance configuration information
+                     * Original configuration message of the instance
                      */
                     std::vector<KeyValue> m_oldInfo;
                     bool m_oldInfoHasBeenSet;
 
                     /**
-                     * Updated instance configuration information
+                     * Configuration message after the instance update
                      */
                     std::vector<KeyValue> m_newInfo;
                     bool m_newInfoHasBeenSet;

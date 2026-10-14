@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Switch for segment duration at startup. Optional values:
+on: enable
+off: Turn off the switch
+Default value: off
+                     * @return Switch Switch for segment duration at startup. Optional values:
+on: enable
+off: Turn off the switch
+Default value: off
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Switch for segment duration at startup. Optional values:
+on: enable
+off: Turn off the switch
+Default value: off
+                     * @param _switch Switch for segment duration at startup. Optional values:
+on: enable
+off: Turn off the switch
+Default value: off
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +80,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FragmentTime 
+                     * 获取Segment duration at startup. Unit: second
+                     * @return FragmentTime Segment duration at startup. Unit: second
                      * 
                      */
                     int64_t GetFragmentTime() const;
 
                     /**
-                     * 设置
-                     * @param _fragmentTime 
+                     * 设置Segment duration at startup. Unit: second
+                     * @param _fragmentTime Segment duration at startup. Unit: second
                      * 
                      */
                     void SetFragmentTime(const int64_t& _fragmentTime);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool FragmentTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FragmentEndNum 
+                     * 获取Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+                     * @return FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
                      * 
                      */
                     int64_t GetFragmentEndNum() const;
 
                     /**
-                     * 设置
-                     * @param _fragmentEndNum 
+                     * 设置Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+                     * @param _fragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
                      * 
                      */
                     void SetFragmentEndNum(const int64_t& _fragmentEndNum);
@@ -112,19 +124,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Switch for segment duration at startup. Optional values:
+on: enable
+off: Turn off the switch
+Default value: off
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Segment duration at startup. Unit: second
                      */
                     int64_t m_fragmentTime;
                     bool m_fragmentTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
                      */
                     int64_t m_fragmentEndNum;
                     bool m_fragmentEndNumHasBeenSet;

@@ -48,11 +48,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * 
@@ -61,11 +61,11 @@ Default value: ON.
 
                     /**
                      * 设置Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * @param _switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      * 
@@ -80,15 +80,23 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Type. Valid values:
+<li>normal</li>
+Default value: normal.
+                     * @return Type Type. Valid values:
+<li>normal</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Type. Valid values:
+<li>normal</li>
+Default value: normal.
+                     * @param _type Type. Valid values:
+<li>normal</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -104,7 +112,7 @@ Default value: ON.
 
                     /**
                      * Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
                      */
@@ -112,7 +120,9 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Type. Valid values:
+<li>normal</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

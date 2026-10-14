@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters of the specified protocol
+                * Parameters for accessing an HTTP function over the WebSockets protocol
                 */
                 class WSParams : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return IdleTimeOut Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
+                     * @return IdleTimeOut Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
                      * 
                      */
                     uint64_t GetIdleTimeOut() const;
 
                     /**
-                     * 设置Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _idleTimeOut Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
+                     * @param _idleTimeOut Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
                      * 
                      */
                     void SetIdleTimeOut(const uint64_t& _idleTimeOut);
@@ -74,8 +70,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
                      */
                     uint64_t m_idleTimeOut;
                     bool m_idleTimeOutHasBeenSet;

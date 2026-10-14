@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Asr text prohibited content detection task result type
+                * Content review Asr text prohibited information recognition task result type
                 */
                 class AiReviewTaskProhibitedAsrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review Asr text prohibited task input.
-                     * @return Input Content review Asr text prohibited task input.
+                     * 获取Input of the prohibited task for content review of Asr text.
+                     * @return Input Input of the prohibited task for content review of Asr text.
                      * 
                      */
                     AiReviewProhibitedAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review Asr text prohibited task input.
-                     * @param _input Content review Asr text prohibited task input.
+                     * 设置Input of the prohibited task for content review of Asr text.
+                     * @param _input Input of the prohibited task for content review of Asr text.
                      * 
                      */
                     void SetInput(const AiReviewProhibitedAsrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the prohibited task for content review of Asr text.
+                     * @return Output Output of the prohibited task for content review of Asr text.
                      * 
                      */
                     AiReviewProhibitedAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the prohibited task for content review of Asr text.
+                     * @param _output Output of the prohibited task for content review of Asr text.
                      * 
                      */
                     void SetOutput(const AiReviewProhibitedAsrTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review Asr text prohibited task input.
+                     * Input of the prohibited task for content review of Asr text.
                      */
                     AiReviewProhibitedAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the prohibited task for content review of Asr text.
                      */
                     AiReviewProhibitedAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

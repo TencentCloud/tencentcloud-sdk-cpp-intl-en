@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream analysis result
+                * Live stream analysis result.
                 */
                 class LiveStreamAiAnalysisResultInfo : public AbstractModel
                 {
@@ -48,15 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResultSet 
+                     * 获取Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+                     * @return ResultSet Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
                      * 
                      */
                     std::vector<LiveStreamAiAnalysisResultItem> GetResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _resultSet 
+                     * 设置Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+                     * @param _resultSet Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
                      * 
                      */
                     void SetResultSet(const std::vector<LiveStreamAiAnalysisResultItem>& _resultSet);
@@ -71,7 +83,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
                      */
                     std::vector<LiveStreamAiAnalysisResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;

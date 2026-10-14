@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query the output RIST pull stream configuration message.
                 */
                 class DescribeOutputRISTSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Mode 
+                     * 获取RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
+                     * @return Mode RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置
-                     * @param _mode 
+                     * 设置RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
+                     * @param _mode RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Profile 
+                     * 获取RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+                     * @return Profile RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
                      * 
                      */
                     std::string GetProfile() const;
 
                     /**
-                     * 设置
-                     * @param _profile 
+                     * 设置RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+                     * @param _profile RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
                      * 
                      */
                     void SetProfile(const std::string& _profile);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ProfileHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Buffer 
+                     * 获取RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+                     * @return Buffer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
                      * 
                      */
                     int64_t GetBuffer() const;
 
                     /**
-                     * 设置
-                     * @param _buffer 
+                     * 设置RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+                     * @param _buffer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
                      * 
                      */
                     void SetBuffer(const int64_t& _buffer);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool BufferHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SourceAddresses 
+                     * 获取Server listening address, used when the RIST mode is LISTENER.
+                     * @return SourceAddresses Server listening address, used when the RIST mode is LISTENER.
                      * 
                      */
                     std::vector<OutputRISTSourceAddressResp> GetSourceAddresses() const;
 
                     /**
-                     * 设置
-                     * @param _sourceAddresses 
+                     * 设置Server listening address, used when the RIST mode is LISTENER.
+                     * @param _sourceAddresses Server listening address, used when the RIST mode is LISTENER.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<OutputRISTSourceAddressResp>& _sourceAddresses);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * 
+                     * RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
                      */
                     std::string m_profile;
                     bool m_profileHasBeenSet;
 
                     /**
-                     * 
+                     * RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
                      */
                     int64_t m_buffer;
                     bool m_bufferHasBeenSet;
 
                     /**
-                     * 
+                     * Server listening address, used when the RIST mode is LISTENER.
                      */
                     std::vector<OutputRISTSourceAddressResp> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;

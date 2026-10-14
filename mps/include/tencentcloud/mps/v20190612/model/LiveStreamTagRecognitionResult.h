@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live streaming AI timestamp recognition result
+                * Live streaming AI timestamp recognition result.
                 */
                 class LiveStreamTagRecognitionResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Timestamp events.
-                     * @return Id Timestamp events.
+                     * 获取Timestamp event.
+                     * @return Id Timestamp event.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Timestamp events.
-                     * @param _id Timestamp events.
+                     * 设置Timestamp event.
+                     * @param _id Timestamp event.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Timestamp events.
+                     * Timestamp event.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

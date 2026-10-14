@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ of the cluster instance. If this is not passed in, all AZs are used by default
-                     * @return Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
+                     * 获取<p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
+                     * @return Zone <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ of the cluster instance. If this is not passed in, all AZs are used by default
-                     * @param _zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
+                     * 设置<p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
+                     * @param _zone <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster instance IDs
-                     * @return InstanceIds List of cluster instance IDs
+                     * 获取<p>Cluster instance ID list</p>
+                     * @return InstanceIds <p>Cluster instance ID list</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of cluster instance IDs
-                     * @param _instanceIds List of cluster instance IDs
+                     * 设置<p>Cluster instance ID list</p>
+                     * @param _instanceIds <p>Cluster instance ID list</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster instance names
-                     * @return InstanceNames List of cluster instance names
+                     * 获取<p>Cluster instance name list.</p>
+                     * @return InstanceNames <p>Cluster instance name list.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceNames() const;
 
                     /**
-                     * 设置List of cluster instance names
-                     * @param _instanceNames List of cluster instance names
+                     * 设置<p>Cluster instance name list.</p>
+                     * @param _instanceNames <p>Cluster instance name list.</p>
                      * 
                      */
                     void SetInstanceNames(const std::vector<std::string>& _instanceNames);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool InstanceNamesHasBeenSet() const;
 
                     /**
-                     * 获取Pagination start value. Default value: 0
-                     * @return Offset Pagination start value. Default value: 0
+                     * 获取<p>Pagination starting value. Default value: 0</p>
+                     * @return Offset <p>Pagination starting value. Default value: 0</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination start value. Default value: 0
-                     * @param _offset Pagination start value. Default value: 0
+                     * 设置<p>Pagination starting value. Default value: 0</p>
+                     * @param _offset <p>Pagination starting value. Default value: 0</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Default value: 20
-                     * @return Limit Number of entries per page. Default value: 20
+                     * 获取<p>Page size. Default value: 20</p>
+                     * @return Limit <p>Page size. Default value: 20</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Default value: 20
-                     * @param _limit Number of entries per page. Default value: 20
+                     * 设置<p>Page size. Default value: 20</p>
+                     * @param _limit <p>Page size. Default value: 20</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
-                     * @return OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+                     * 获取<p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
+                     * @return OrderByKey <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
                      * 
                      */
                     uint64_t GetOrderByKey() const;
 
                     /**
-                     * 设置The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
-                     * @param _orderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+                     * 设置<p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
+                     * @param _orderByKey <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
                      * 
                      */
                     void SetOrderByKey(const uint64_t& _orderByKey);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool OrderByKeyHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
-                     * @return OrderByType Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
+                     * 获取<p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
+                     * @return OrderByType <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
                      * 
                      */
                     uint64_t GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
-                     * @param _orderByType Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
+                     * 设置<p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
+                     * @param _orderByType <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
                      * 
                      */
                     void SetOrderByType(const uint64_t& _orderByType);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node tag information list
-                     * @return TagList Node tag information list
+                     * 获取<p>Node tag information list</p>
+                     * @return TagList <p>Node tag information list</p>
                      * 
                      */
                     std::vector<TagInfo> GetTagList() const;
 
                     /**
-                     * 设置Node tag information list
-                     * @param _tagList Node tag information list
+                     * 设置<p>Node tag information list</p>
+                     * @param _tagList <p>Node tag information list</p>
                      * 
                      */
                     void SetTagList(const std::vector<TagInfo>& _tagList);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取VPC VIP list
-                     * @return IpList VPC VIP list
+                     * 获取<p>Private network vip list</p>
+                     * @return IpList <p>Private network vip list</p>
                      * 
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
-                     * 设置VPC VIP list
-                     * @param _ipList VPC VIP list
+                     * 设置<p>Private network vip list</p>
+                     * @param _ipList <p>Private network vip list</p>
                      * 
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
@@ -233,15 +233,36 @@ namespace TencentCloud
                     bool IpListHasBeenSet() const;
 
                     /**
-                     * 获取List of availability zones
-                     * @return ZoneList List of availability zones
+                     * 获取<p>IP list of cluster nodes</p>
+                     * @return NodeIps <p>IP list of cluster nodes</p>
+                     * 
+                     */
+                    std::vector<std::string> GetNodeIps() const;
+
+                    /**
+                     * 设置<p>IP list of cluster nodes</p>
+                     * @param _nodeIps <p>IP list of cluster nodes</p>
+                     * 
+                     */
+                    void SetNodeIps(const std::vector<std::string>& _nodeIps);
+
+                    /**
+                     * 判断参数 NodeIps 是否已赋值
+                     * @return NodeIps 是否已赋值
+                     * 
+                     */
+                    bool NodeIpsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Availability zone list</p>
+                     * @return ZoneList <p>Availability zone list</p>
                      * 
                      */
                     std::vector<std::string> GetZoneList() const;
 
                     /**
-                     * 设置List of availability zones
-                     * @param _zoneList List of availability zones
+                     * 设置<p>Availability zone list</p>
+                     * @param _zoneList <p>Availability zone list</p>
                      * 
                      */
                     void SetZoneList(const std::vector<std::string>& _zoneList);
@@ -254,15 +275,15 @@ namespace TencentCloud
                     bool ZoneListHasBeenSet() const;
 
                     /**
-                     * 获取The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
-                     * @return HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+                     * 获取<p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
+                     * @return HealthStatus <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
                      * 
                      */
                     std::vector<int64_t> GetHealthStatus() const;
 
                     /**
-                     * 设置The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
-                     * @param _healthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+                     * 设置<p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
+                     * @param _healthStatus <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
                      * 
                      */
                     void SetHealthStatus(const std::vector<int64_t>& _healthStatus);
@@ -275,15 +296,15 @@ namespace TencentCloud
                     bool HealthStatusHasBeenSet() const;
 
                     /**
-                     * 获取VPC IDs
-                     * @return VpcIds VPC IDs
+                     * 获取<p>Vpc list filter item</p>
+                     * @return VpcIds <p>Vpc list filter item</p>
                      * 
                      */
                     std::vector<std::string> GetVpcIds() const;
 
                     /**
-                     * 设置VPC IDs
-                     * @param _vpcIds VPC IDs
+                     * 设置<p>Vpc list filter item</p>
+                     * @param _vpcIds <p>Vpc list filter item</p>
                      * 
                      */
                     void SetVpcIds(const std::vector<std::string>& _vpcIds);
@@ -295,79 +316,112 @@ namespace TencentCloud
                      */
                     bool VpcIdsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>cdc cluster id</p>
+                     * @return CdcId <p>cdc cluster id</p>
+                     * 
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置<p>cdc cluster id</p>
+                     * @param _cdcId <p>cdc cluster id</p>
+                     * 
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     * 
+                     */
+                    bool CdcIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ of the cluster instance. If this is not passed in, all AZs are used by default
+                     * <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * List of cluster instance IDs
+                     * <p>Cluster instance ID list</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * List of cluster instance names
+                     * <p>Cluster instance name list.</p>
                      */
                     std::vector<std::string> m_instanceNames;
                     bool m_instanceNamesHasBeenSet;
 
                     /**
-                     * Pagination start value. Default value: 0
+                     * <p>Pagination starting value. Default value: 0</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page. Default value: 20
+                     * <p>Page size. Default value: 20</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+                     * <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
                      */
                     uint64_t m_orderByKey;
                     bool m_orderByKeyHasBeenSet;
 
                     /**
-                     * Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
+                     * <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
                      */
                     uint64_t m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Node tag information list
+                     * <p>Node tag information list</p>
                      */
                     std::vector<TagInfo> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * VPC VIP list
+                     * <p>Private network vip list</p>
                      */
                     std::vector<std::string> m_ipList;
                     bool m_ipListHasBeenSet;
 
                     /**
-                     * List of availability zones
+                     * <p>IP list of cluster nodes</p>
+                     */
+                    std::vector<std::string> m_nodeIps;
+                    bool m_nodeIpsHasBeenSet;
+
+                    /**
+                     * <p>Availability zone list</p>
                      */
                     std::vector<std::string> m_zoneList;
                     bool m_zoneListHasBeenSet;
 
                     /**
-                     * The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+                     * <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
                      */
                     std::vector<int64_t> m_healthStatus;
                     bool m_healthStatusHasBeenSet;
 
                     /**
-                     * VPC IDs
+                     * <p>Vpc list filter item</p>
                      */
                     std::vector<std::string> m_vpcIds;
                     bool m_vpcIdsHasBeenSet;
+
+                    /**
+                     * <p>cdc cluster id</p>
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
 
                 };
             }

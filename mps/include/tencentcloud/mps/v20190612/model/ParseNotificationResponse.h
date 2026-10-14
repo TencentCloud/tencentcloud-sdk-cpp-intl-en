@@ -52,11 +52,11 @@ namespace TencentCloud
                      * 获取Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
                      * @return EventType Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
                      * 
                      */
                     std::string GetEventType() const;
@@ -69,8 +69,8 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WorkflowTaskEvent 
+                     * 获取Video processing task information. This field has a value only when EventType is WorkflowTask.
+                     * @return WorkflowTaskEvent Video processing task information. This field has a value only when EventType is WorkflowTask.
                      * 
                      */
                     WorkflowTask GetWorkflowTaskEvent() const;
@@ -83,8 +83,8 @@ namespace TencentCloud
                     bool WorkflowTaskEventHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EditMediaTaskEvent 
+                     * 获取Video editing task information. This field has a value only when EventType is EditMediaTask.
+                     * @return EditMediaTaskEvent Video editing task information. This field has a value only when EventType is EditMediaTask.
                      * 
                      */
                     EditMediaTask GetEditMediaTaskEvent() const;
@@ -125,8 +125,8 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScheduleTaskEvent 
+                     * 获取Orchestration task information. This field has a value only when EventType is ScheduleTask.
+                     * @return ScheduleTaskEvent Orchestration task information. This field has a value only when EventType is ScheduleTask.
                      * 
                      */
                     ScheduleTask GetScheduleTaskEvent() const;
@@ -139,13 +139,13 @@ namespace TencentCloud
                     bool ScheduleTaskEventHasBeenSet() const;
 
                     /**
-                     * 获取-Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+                     * 获取-Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
-                     * @return Timestamp -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+                     * @return Timestamp -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
                      * 
                      */
@@ -173,8 +173,8 @@ namespace TencentCloud
                     bool SignHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BatchTaskEvent 
+                     * 获取Batch operation information. This field has a value only when EventType is BatchTask.
+                     * @return BatchTaskEvent Batch operation information. This field has a value only when EventType is BatchTask.
                      * 
                      */
                     BatchSubTaskResult GetBatchTaskEvent() const;
@@ -187,8 +187,8 @@ namespace TencentCloud
                     bool BatchTaskEventHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtractBlindWatermarkTask 
+                     * 获取Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
+                     * @return ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
                      * 
                      */
                     ExtractBlindWatermarkTask GetExtractBlindWatermarkTask() const;
@@ -206,19 +206,19 @@ namespace TencentCloud
                      * Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Video processing task information. This field has a value only when EventType is WorkflowTask.
                      */
                     WorkflowTask m_workflowTaskEvent;
                     bool m_workflowTaskEventHasBeenSet;
 
                     /**
-                     * 
+                     * Video editing task information. This field has a value only when EventType is EditMediaTask.
                      */
                     EditMediaTask m_editMediaTaskEvent;
                     bool m_editMediaTaskEventHasBeenSet;
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * Orchestration task information. This field has a value only when EventType is ScheduleTask.
                      */
                     ScheduleTask m_scheduleTaskEvent;
                     bool m_scheduleTaskEventHasBeenSet;
 
                     /**
-                     * -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+                     * -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
                      */
                     int64_t m_timestamp;
@@ -257,13 +257,13 @@ namespace TencentCloud
                     bool m_signHasBeenSet;
 
                     /**
-                     * 
+                     * Batch operation information. This field has a value only when EventType is BatchTask.
                      */
                     BatchSubTaskResult m_batchTaskEvent;
                     bool m_batchTaskEventHasBeenSet;
 
                     /**
-                     * 
+                     * Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
                      */
                     ExtractBlindWatermarkTask m_extractBlindWatermarkTask;
                     bool m_extractBlindWatermarkTaskHasBeenSet;

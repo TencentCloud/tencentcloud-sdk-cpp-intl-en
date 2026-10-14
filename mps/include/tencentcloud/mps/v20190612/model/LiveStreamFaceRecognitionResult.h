@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identification ID of a figure.
-                     * @return Id Unique identification ID of a figure.
+                     * 获取Unique identification ID of a person.
+                     * @return Id Unique identification ID of a person.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique identification ID of a figure.
-                     * @param _id Unique identification ID of a figure.
+                     * 设置Unique identification ID of a person.
+                     * @param _id Unique identification ID of a person.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Figure name.
-                     * @return Name Figure name.
+                     * 获取Character name.
+                     * @return Name Character name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Figure name.
-                     * @param _name Figure name.
+                     * 设置Character name.
+                     * @param _name Character name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,19 +89,19 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
-                     * @return Type Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+                     * 获取Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
+                     * @return Type Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
-                     * @param _type Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+                     * 设置Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
+                     * @param _type Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -200,20 +200,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identification ID of a figure.
+                     * Unique identification ID of a person.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Figure name.
+                     * Character name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+                     * Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

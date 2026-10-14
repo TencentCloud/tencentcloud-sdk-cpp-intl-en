@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取This field is disused.
-                     * @return SearchContext This field is disused.
+                     * 获取This field is offline.
+                     * @return SearchContext This field is offline.
                      * 
                      */
                     LogSearchContext GetSearchContext() const;
@@ -102,7 +102,7 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * This field is disused.
+                     * This field is offline.
                      */
                     LogSearchContext m_searchContext;
                     bool m_searchContextHasBeenSet;

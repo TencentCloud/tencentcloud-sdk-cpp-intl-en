@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Upper and lower limit of the hybrid node quantity allowed for adjustment for a Serverless instance
                 */
                 class ServerlessNodeNumSpec : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MinNodeNum 
+                     * 获取<p>Minimum number of nodes.</p>
+                     * @return MinNodeNum <p>Minimum number of nodes.</p>
                      * 
                      */
                     int64_t GetMinNodeNum() const;
 
                     /**
-                     * 设置
-                     * @param _minNodeNum 
+                     * 设置<p>Minimum number of nodes.</p>
+                     * @param _minNodeNum <p>Minimum number of nodes.</p>
                      * 
                      */
                     void SetMinNodeNum(const int64_t& _minNodeNum);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MinNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxNodeNum 
+                     * 获取<p>Maximum number of nodes.</p>
+                     * @return MaxNodeNum <p>Maximum number of nodes.</p>
                      * 
                      */
                     int64_t GetMaxNodeNum() const;
 
                     /**
-                     * 设置
-                     * @param _maxNodeNum 
+                     * 设置<p>Maximum number of nodes.</p>
+                     * @param _maxNodeNum <p>Maximum number of nodes.</p>
                      * 
                      */
                     void SetMaxNodeNum(const int64_t& _maxNodeNum);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Minimum number of nodes.</p>
                      */
                     int64_t m_minNodeNum;
                     bool m_minNodeNumHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Maximum number of nodes.</p>
                      */
                     int64_t m_maxNodeNum;
                     bool m_maxNodeNumHasBeenSet;

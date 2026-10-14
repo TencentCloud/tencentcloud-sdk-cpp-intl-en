@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task judgment conditions.
                 */
                 class Rules : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取Judgment condition id
+                     * @return Id Judgment condition id
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置Judgment condition id
+                     * @param _id Judgment condition id
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Conditions 
+                     * 获取Judgment condition configuration
+                     * @return Conditions Judgment condition configuration
                      * 
                      */
                     std::vector<RuleConditionItem> GetConditions() const;
 
                     /**
-                     * 设置
-                     * @param _conditions 
+                     * 设置Judgment condition configuration
+                     * @param _conditions Judgment condition configuration
                      * 
                      */
                     void SetConditions(const std::vector<RuleConditionItem>& _conditions);
@@ -90,15 +90,27 @@ namespace TencentCloud
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Linker 
+                     * 获取Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
+                     * @return Linker Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
                      * 
                      */
                     std::string GetLinker() const;
 
                     /**
-                     * 设置
-                     * @param _linker 
+                     * 设置Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
+                     * @param _linker Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
                      * 
                      */
                     void SetLinker(const std::string& _linker);
@@ -111,15 +123,15 @@ namespace TencentCloud
                     bool LinkerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RearDriveIndexs 
+                     * 获取Indexes of the nodes to execute if the judgment conditions are met.
+                     * @return RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
                      * 
                      */
                     std::vector<int64_t> GetRearDriveIndexs() const;
 
                     /**
-                     * 设置
-                     * @param _rearDriveIndexs 
+                     * 设置Indexes of the nodes to execute if the judgment conditions are met.
+                     * @param _rearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
                      * 
                      */
                     void SetRearDriveIndexs(const std::vector<int64_t>& _rearDriveIndexs);
@@ -134,25 +146,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Judgment condition id
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * Judgment condition configuration
                      */
                     std::vector<RuleConditionItem> m_conditions;
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * 
+                     * Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
                      */
                     std::string m_linker;
                     bool m_linkerHasBeenSet;
 
                     /**
-                     * 
+                     * Indexes of the nodes to execute if the judgment conditions are met.
                      */
                     std::vector<int64_t> m_rearDriveIndexs;
                     bool m_rearDriveIndexsHasBeenSet;

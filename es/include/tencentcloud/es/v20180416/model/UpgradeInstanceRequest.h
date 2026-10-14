@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/es/v20180416/model/EnableScheduleOperationDuration.h>
 
 
 namespace TencentCloud
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
-                     * @return EsVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
+                     * 获取Target ES version. Valid values: "6.4.3", "6.8.2", "7.5.1", "7.10.1", and "7.14.2".
+                     * @return EsVersion Target ES version. Valid values: "6.4.3", "6.8.2", "7.5.1", "7.10.1", and "7.14.2".
                      * 
                      */
                     std::string GetEsVersion() const;
 
                     /**
-                     * 设置Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
-                     * @param _esVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
+                     * 设置Target ES version. Valid values: "6.4.3", "6.8.2", "7.5.1", "7.10.1", and "7.14.2".
+                     * @param _esVersion Target ES version. Valid values: "6.4.3", "6.8.2", "7.5.1", "7.10.1", and "7.14.2".
                      * 
                      */
                     void SetEsVersion(const std::string& _esVersion);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool EsVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to check for upgrade only. Default value: false
-                     * @return CheckOnly Whether to check for upgrade only. Default value: false
+                     * 获取Whether to perform an upgrade check only. Default value: false.
+                     * @return CheckOnly Whether to perform an upgrade check only. Default value: false.
                      * 
                      */
                     bool GetCheckOnly() const;
 
                     /**
-                     * 设置Whether to check for upgrade only. Default value: false
-                     * @param _checkOnly Whether to check for upgrade only. Default value: false
+                     * 设置Whether to perform an upgrade check only. Default value: false.
+                     * @param _checkOnly Whether to perform an upgrade check only. Default value: false.
                      * 
                      */
                     void SetCheckOnly(const bool& _checkOnly);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool CheckOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
-                     * @return LicenseType Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
+                     * 获取Target business feature version: <li>oss open source edition</li><li>basic edition</li>Currently used only when upgrading from 5.6.4 to 6.x. Default value: basic
+                     * @return LicenseType Target business feature version: <li>oss open source edition</li><li>basic edition</li>Currently used only when upgrading from 5.6.4 to 6.x. Default value: basic
                      * 
                      */
                     std::string GetLicenseType() const;
 
                     /**
-                     * 设置Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
-                     * @param _licenseType Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
+                     * 设置Target business feature version: <li>oss open source edition</li><li>basic edition</li>Currently used only when upgrading from 5.6.4 to 6.x. Default value: basic
+                     * @param _licenseType Target business feature version: <li>oss open source edition</li><li>basic edition</li>Currently used only when upgrading from 5.6.4 to 6.x. Default value: basic
                      * 
                      */
                     void SetLicenseType(const std::string& _licenseType);
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool LicenseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-                     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * 获取Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li>
+                     * @return BasicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li>
                      * 
                      */
                     uint64_t GetBasicSecurityType() const;
 
                     /**
-                     * 设置Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-                     * @param _basicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * 设置Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li>
+                     * @param _basicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li>
                      * 
                      */
                     void SetBasicSecurityType(const uint64_t& _basicSecurityType);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool BasicSecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
-                     * @return UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     * 获取Upgrade method: <li>scale blue-green change</li><li>restart rolling restart</li>Default value: scale
+                     * @return UpgradeMode Upgrade method: <li>scale blue-green change</li><li>restart rolling restart</li>Default value: scale
                      * 
                      */
                     std::string GetUpgradeMode() const;
 
                     /**
-                     * 设置Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
-                     * @param _upgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     * 设置Upgrade method: <li>scale blue-green change</li><li>restart rolling restart</li>Default value: scale
+                     * @param _upgradeMode Upgrade method: <li>scale blue-green change</li><li>restart rolling restart</li>Default value: scale
                      * 
                      */
                     void SetUpgradeMode(const std::string& _upgradeMode);
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool UpgradeModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to back up the cluster before version upgrade (no backup by default)
-                     * @return CosBackup Whether to back up the cluster before version upgrade (no backup by default)
+                     * 获取Whether to back up the cluster before upgrading the version. By default, no backup is performed.
+                     * @return CosBackup Whether to back up the cluster before upgrading the version. By default, no backup is performed.
                      * 
                      */
                     bool GetCosBackup() const;
 
                     /**
-                     * 设置Whether to back up the cluster before version upgrade (no backup by default)
-                     * @param _cosBackup Whether to back up the cluster before version upgrade (no backup by default)
+                     * 设置Whether to back up the cluster before upgrading the version. By default, no backup is performed.
+                     * @param _cosBackup Whether to back up the cluster before upgrading the version. By default, no backup is performed.
                      * 
                      */
                     void SetCosBackup(const bool& _cosBackup);
@@ -190,15 +191,15 @@ namespace TencentCloud
                     bool CosBackupHasBeenSet() const;
 
                     /**
-                     * 获取Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
-                     * @return SkipCheckForceRestart Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     * 获取In rolling mode, whether to skip the check and perform a forced reboot. Default value: false
+                     * @return SkipCheckForceRestart In rolling mode, whether to skip the check and perform a forced reboot. Default value: false
                      * 
                      */
                     bool GetSkipCheckForceRestart() const;
 
                     /**
-                     * 设置Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
-                     * @param _skipCheckForceRestart Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     * 设置In rolling mode, whether to skip the check and perform a forced reboot. Default value: false
+                     * @param _skipCheckForceRestart In rolling mode, whether to skip the check and perform a forced reboot. Default value: false
                      * 
                      */
                     void SetSkipCheckForceRestart(const bool& _skipCheckForceRestart);
@@ -210,6 +211,111 @@ namespace TencentCloud
                      */
                     bool SkipCheckForceRestartHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter for delayed cvm launch
+                     * @return CvmDelayOnlineTime Parameter for delayed cvm launch
+                     * 
+                     */
+                    uint64_t GetCvmDelayOnlineTime() const;
+
+                    /**
+                     * 设置Parameter for delayed cvm launch
+                     * @param _cvmDelayOnlineTime Parameter for delayed cvm launch
+                     * 
+                     */
+                    void SetCvmDelayOnlineTime(const uint64_t& _cvmDelayOnlineTime);
+
+                    /**
+                     * 判断参数 CvmDelayOnlineTime 是否已赋值
+                     * @return CvmDelayOnlineTime 是否已赋值
+                     * 
+                     */
+                    bool CvmDelayOnlineTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of concurrent shard migrations
+                     * @return ShardAllocationConcurrents Number of concurrent shard migrations
+                     * 
+                     */
+                    uint64_t GetShardAllocationConcurrents() const;
+
+                    /**
+                     * 设置Number of concurrent shard migrations
+                     * @param _shardAllocationConcurrents Number of concurrent shard migrations
+                     * 
+                     */
+                    void SetShardAllocationConcurrents(const uint64_t& _shardAllocationConcurrents);
+
+                    /**
+                     * 判断参数 ShardAllocationConcurrents 是否已赋值
+                     * @return ShardAllocationConcurrents 是否已赋值
+                     * 
+                     */
+                    bool ShardAllocationConcurrentsHasBeenSet() const;
+
+                    /**
+                     * 获取Shard migration concurrency speed
+                     * @return ShardAllocationBytes Shard migration concurrency speed
+                     * 
+                     */
+                    uint64_t GetShardAllocationBytes() const;
+
+                    /**
+                     * 设置Shard migration concurrency speed
+                     * @param _shardAllocationBytes Shard migration concurrency speed
+                     * 
+                     */
+                    void SetShardAllocationBytes(const uint64_t& _shardAllocationBytes);
+
+                    /**
+                     * 判断参数 ShardAllocationBytes 是否已赋值
+                     * @return ShardAllocationBytes 是否已赋值
+                     * 
+                     */
+                    bool ShardAllocationBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the placement group asynchronous task
+                     * @return EnableScheduleRecoverGroup Whether to enable the placement group asynchronous task
+                     * 
+                     */
+                    bool GetEnableScheduleRecoverGroup() const;
+
+                    /**
+                     * 设置Whether to enable the placement group asynchronous task
+                     * @param _enableScheduleRecoverGroup Whether to enable the placement group asynchronous task
+                     * 
+                     */
+                    void SetEnableScheduleRecoverGroup(const bool& _enableScheduleRecoverGroup);
+
+                    /**
+                     * 判断参数 EnableScheduleRecoverGroup 是否已赋值
+                     * @return EnableScheduleRecoverGroup 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleRecoverGroupHasBeenSet() const;
+
+                    /**
+                     * 获取Time period of the async task for the placement group
+                     * @return EnableScheduleOperationDuration Time period of the async task for the placement group
+                     * 
+                     */
+                    EnableScheduleOperationDuration GetEnableScheduleOperationDuration() const;
+
+                    /**
+                     * 设置Time period of the async task for the placement group
+                     * @param _enableScheduleOperationDuration Time period of the async task for the placement group
+                     * 
+                     */
+                    void SetEnableScheduleOperationDuration(const EnableScheduleOperationDuration& _enableScheduleOperationDuration);
+
+                    /**
+                     * 判断参数 EnableScheduleOperationDuration 是否已赋值
+                     * @return EnableScheduleOperationDuration 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleOperationDurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -219,46 +325,76 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
+                     * Target ES version. Valid values: "6.4.3", "6.8.2", "7.5.1", "7.10.1", and "7.14.2".
                      */
                     std::string m_esVersion;
                     bool m_esVersionHasBeenSet;
 
                     /**
-                     * Whether to check for upgrade only. Default value: false
+                     * Whether to perform an upgrade check only. Default value: false.
                      */
                     bool m_checkOnly;
                     bool m_checkOnlyHasBeenSet;
 
                     /**
-                     * Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
+                     * Target business feature version: <li>oss open source edition</li><li>basic edition</li>Currently used only when upgrading from 5.6.4 to 6.x. Default value: basic
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
 
                     /**
-                     * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li>
                      */
                     uint64_t m_basicSecurityType;
                     bool m_basicSecurityTypeHasBeenSet;
 
                     /**
-                     * Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     * Upgrade method: <li>scale blue-green change</li><li>restart rolling restart</li>Default value: scale
                      */
                     std::string m_upgradeMode;
                     bool m_upgradeModeHasBeenSet;
 
                     /**
-                     * Whether to back up the cluster before version upgrade (no backup by default)
+                     * Whether to back up the cluster before upgrading the version. By default, no backup is performed.
                      */
                     bool m_cosBackup;
                     bool m_cosBackupHasBeenSet;
 
                     /**
-                     * Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     * In rolling mode, whether to skip the check and perform a forced reboot. Default value: false
                      */
                     bool m_skipCheckForceRestart;
                     bool m_skipCheckForceRestartHasBeenSet;
+
+                    /**
+                     * Parameter for delayed cvm launch
+                     */
+                    uint64_t m_cvmDelayOnlineTime;
+                    bool m_cvmDelayOnlineTimeHasBeenSet;
+
+                    /**
+                     * Number of concurrent shard migrations
+                     */
+                    uint64_t m_shardAllocationConcurrents;
+                    bool m_shardAllocationConcurrentsHasBeenSet;
+
+                    /**
+                     * Shard migration concurrency speed
+                     */
+                    uint64_t m_shardAllocationBytes;
+                    bool m_shardAllocationBytesHasBeenSet;
+
+                    /**
+                     * Whether to enable the placement group asynchronous task
+                     */
+                    bool m_enableScheduleRecoverGroup;
+                    bool m_enableScheduleRecoverGroupHasBeenSet;
+
+                    /**
+                     * Time period of the async task for the placement group
+                     */
+                    EnableScheduleOperationDuration m_enableScheduleOperationDuration;
+                    bool m_enableScheduleOperationDurationHasBeenSet;
 
                 };
             }

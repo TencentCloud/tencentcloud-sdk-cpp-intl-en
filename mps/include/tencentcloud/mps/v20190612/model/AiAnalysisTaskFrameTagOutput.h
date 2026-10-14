@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent frame tagging result information
+                * Intelligent frame tagging result information.
                 */
                 class AiAnalysisTaskFrameTagOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video frame tagging list.
-                     * @return SegmentSet Video frame tagging list.
+                     * 获取Frame-specific tag list of the video.
+                     * @return SegmentSet Frame-specific tag list of the video.
                      * 
                      */
                     std::vector<MediaAiAnalysisFrameTagSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Video frame tagging list.
-                     * @param _segmentSet Video frame tagging list.
+                     * 设置Frame-specific tag list of the video.
+                     * @param _segmentSet Frame-specific tag list of the video.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaAiAnalysisFrameTagSegmentItem>& _segmentSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video frame tagging list.
+                     * Frame-specific tag list of the video.
                      */
                     std::vector<MediaAiAnalysisFrameTagSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

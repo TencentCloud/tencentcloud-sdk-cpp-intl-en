@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Function name
-                     * @return FunctionName Function name
+                     * 获取Function name.
+                     * @return FunctionName Function name.
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Function name
-                     * @param _functionName Function name
+                     * 设置Function name.
+                     * @param _functionName Function name.
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Return value after the function is executed
-                     * @return RetMsg Return value after the function is executed
+                     * 获取Returned value after function execution
+                     * @return RetMsg Returned value after function execution
                      * 
                      */
                     std::string GetRetMsg() const;
 
                     /**
-                     * 设置Return value after the function is executed
-                     * @param _retMsg Return value after the function is executed
+                     * 设置Returned value after function execution
+                     * @param _retMsg Returned value after function execution
                      * 
                      */
                     void SetRetMsg(const std::string& _retMsg);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RetMsgHasBeenSet() const;
 
                     /**
-                     * 获取RequestId corresponding to the executed function
-                     * @return RequestId RequestId corresponding to the executed function
+                     * 获取requestId for executing the function
+                     * @return RequestId requestId for executing the function
                      * 
                      */
                     std::string GetRequestId() const;
 
                     /**
-                     * 设置RequestId corresponding to the executed function
-                     * @param _requestId RequestId corresponding to the executed function
+                     * 设置requestId for executing the function
+                     * @param _requestId requestId for executing the function
                      * 
                      */
                     void SetRequestId(const std::string& _requestId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the function execution
-                     * @return StartTime Start time of the function execution
+                     * 获取Time point when the function starts execution
+                     * @return StartTime Time point when the function starts execution
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the function execution
-                     * @param _startTime Start time of the function execution
+                     * 设置Time point when the function starts execution
+                     * @param _startTime Time point when the function starts execution
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Function execution result. `0` indicates successful execution and other values indicate failure.
-                     * @return RetCode Function execution result. `0` indicates successful execution and other values indicate failure.
+                     * 获取Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
+                     * @return RetCode Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
                      * 
                      */
                     int64_t GetRetCode() const;
 
                     /**
-                     * 设置Function execution result. `0` indicates successful execution and other values indicate failure.
-                     * @param _retCode Function execution result. `0` indicates successful execution and other values indicate failure.
+                     * 设置Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
+                     * @param _retCode Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
                      * 
                      */
                     void SetRetCode(const int64_t& _retCode);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RetCodeHasBeenSet() const;
 
                     /**
-                     * 获取It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
-                     * @return InvokeFinished It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+                     * 获取Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
+                     * @return InvokeFinished Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
                      * 
                      */
                     int64_t GetInvokeFinished() const;
 
                     /**
-                     * 设置It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
-                     * @param _invokeFinished It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+                     * 设置Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
+                     * @param _invokeFinished Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
                      * 
                      */
                     void SetInvokeFinished(const int64_t& _invokeFinished);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool InvokeFinishedHasBeenSet() const;
 
                     /**
-                     * 获取Duration of the function execution. The unit is millisecond (ms).
-                     * @return Duration Duration of the function execution. The unit is millisecond (ms).
+                     * 获取Function execution duration in milliseconds.
+                     * @return Duration Function execution duration in milliseconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Duration of the function execution. The unit is millisecond (ms).
-                     * @param _duration Duration of the function execution. The unit is millisecond (ms).
+                     * 设置Function execution duration in milliseconds.
+                     * @param _duration Function execution duration in milliseconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
-                     * @return BillDuration Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+                     * 获取Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
+                     * @return BillDuration Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
                      * 
                      */
                     int64_t GetBillDuration() const;
 
                     /**
-                     * 设置Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
-                     * @param _billDuration Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+                     * 设置Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
+                     * @param _billDuration Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
                      * 
                      */
                     void SetBillDuration(const int64_t& _billDuration);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool BillDurationHasBeenSet() const;
 
                     /**
-                     * 获取Actual memory size used during the function execution. The unit is byte.
-                     * @return MemUsage Actual memory size used during the function execution. The unit is byte.
+                     * 获取Memory size actually consumed during function execution, in bytes.
+                     * @return MemUsage Memory size actually consumed during function execution, in bytes.
                      * 
                      */
                     int64_t GetMemUsage() const;
 
                     /**
-                     * 设置Actual memory size used during the function execution. The unit is byte.
-                     * @param _memUsage Actual memory size used during the function execution. The unit is byte.
+                     * 设置Memory size actually consumed during function execution, in bytes.
+                     * @param _memUsage Memory size actually consumed during function execution, in bytes.
                      * 
                      */
                     void SetMemUsage(const int64_t& _memUsage);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool MemUsageHasBeenSet() const;
 
                     /**
-                     * 获取Function execution logs
-                     * @return Log Function execution logs
+                     * 获取Log output during function execution
+                     * @return Log Log output during function execution
                      * 
                      */
                     std::string GetLog() const;
 
                     /**
-                     * 设置Function execution logs
-                     * @param _log Function execution logs
+                     * 设置Log output during function execution
+                     * @param _log Log output during function execution
                      * 
                      */
                     void SetLog(const std::string& _log);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool LogHasBeenSet() const;
 
                     /**
-                     * 获取Log level
-                     * @return Level Log level
+                     * 获取Log level.
+                     * @return Level Log level.
                      * @deprecated
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Log level
-                     * @param _level Log level
+                     * 设置Log level.
+                     * @param _level Log level.
                      * @deprecated
                      */
                     void SetLevel(const std::string& _level);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取Number of retries
-                     * @return RetryNum Number of retries
+                     * 获取Number of retries.
+                     * @return RetryNum Number of retries.
                      * 
                      */
                     uint64_t GetRetryNum() const;
 
                     /**
-                     * 设置Number of retries
-                     * @param _retryNum Number of retries
+                     * 设置Number of retries.
+                     * @param _retryNum Number of retries.
                      * 
                      */
                     void SetRetryNum(const uint64_t& _retryNum);
@@ -322,67 +322,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Function name
+                     * Function name.
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Return value after the function is executed
+                     * Returned value after function execution
                      */
                     std::string m_retMsg;
                     bool m_retMsgHasBeenSet;
 
                     /**
-                     * RequestId corresponding to the executed function
+                     * requestId for executing the function
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
 
                     /**
-                     * Start time of the function execution
+                     * Time point when the function starts execution
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Function execution result. `0` indicates successful execution and other values indicate failure.
+                     * Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
                      */
                     int64_t m_retCode;
                     bool m_retCodeHasBeenSet;
 
                     /**
-                     * It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+                     * Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
                      */
                     int64_t m_invokeFinished;
                     bool m_invokeFinishedHasBeenSet;
 
                     /**
-                     * Duration of the function execution. The unit is millisecond (ms).
+                     * Function execution duration in milliseconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+                     * Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
                      */
                     int64_t m_billDuration;
                     bool m_billDurationHasBeenSet;
 
                     /**
-                     * Actual memory size used during the function execution. The unit is byte.
+                     * Memory size actually consumed during function execution, in bytes.
                      */
                     int64_t m_memUsage;
                     bool m_memUsageHasBeenSet;
 
                     /**
-                     * Function execution logs
+                     * Log output during function execution
                      */
                     std::string m_log;
                     bool m_logHasBeenSet;
 
                     /**
-                     * Log level
+                     * Log level.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -394,7 +394,7 @@ namespace TencentCloud
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * Number of retries
+                     * Number of retries.
                      */
                     uint64_t m_retryNum;
                     bool m_retryNumHasBeenSet;

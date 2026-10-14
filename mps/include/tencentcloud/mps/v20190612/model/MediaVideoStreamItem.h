@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Height of a video stream. Unit: px.
-                     * @return Height Height of a video stream. Unit: px.
+                     * 获取Height of the video stream. Unit: px.
+                     * @return Height Height of the video stream. Unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height of a video stream. Unit: px.
-                     * @param _height Height of a video stream. Unit: px.
+                     * 设置Height of the video stream. Unit: px.
+                     * @param _height Height of the video stream. Unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Video stream width in px.
-                     * @return Width Video stream width in px.
+                     * 获取Video stream width. Unit: px.
+                     * @return Width Video stream width. Unit: px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Video stream width in px.
-                     * @param _width Video stream width in px.
+                     * 设置Video stream width. Unit: px.
+                     * @param _width Video stream width. Unit: px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorPrimaries 
+                     * 获取Colorspace.
+                     * @return ColorPrimaries Colorspace.
                      * 
                      */
                     std::string GetColorPrimaries() const;
 
                     /**
-                     * 设置
-                     * @param _colorPrimaries 
+                     * 设置Colorspace.
+                     * @param _colorPrimaries Colorspace.
                      * 
                      */
                     void SetColorPrimaries(const std::string& _colorPrimaries);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ColorPrimariesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorSpace 
+                     * 获取Colorspace.
+                     * @return ColorSpace Colorspace.
                      * 
                      */
                     std::string GetColorSpace() const;
 
                     /**
-                     * 设置
-                     * @param _colorSpace 
+                     * 设置Colorspace.
+                     * @param _colorSpace Colorspace.
                      * 
                      */
                     void SetColorSpace(const std::string& _colorSpace);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ColorSpaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorTransfer 
+                     * 获取Colorspace.
+                     * @return ColorTransfer Colorspace.
                      * 
                      */
                     std::string GetColorTransfer() const;
 
                     /**
-                     * 设置
-                     * @param _colorTransfer 
+                     * 设置Colorspace.
+                     * @param _colorTransfer Colorspace.
                      * 
                      */
                     void SetColorTransfer(const std::string& _colorTransfer);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ColorTransferHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HdrType 
+                     * 获取HDR type.
+                     * @return HdrType HDR type.
                      * 
                      */
                     std::string GetHdrType() const;
 
                     /**
-                     * 设置
-                     * @param _hdrType 
+                     * 设置HDR type.
+                     * @param _hdrType HDR type.
                      * 
                      */
                     void SetHdrType(const std::string& _hdrType);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool HdrTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Codecs 
+                     * 获取Video Codecs.
+                     * @return Codecs Video Codecs.
                      * 
                      */
                     std::string GetCodecs() const;
 
                     /**
-                     * 设置
-                     * @param _codecs 
+                     * 设置Video Codecs.
+                     * @param _codecs Video Codecs.
                      * 
                      */
                     void SetCodecs(const std::string& _codecs);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CodecsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FpsNumerator 
+                     * 获取Numerator of the frame rate.
+                     * @return FpsNumerator Numerator of the frame rate.
                      * 
                      */
                     int64_t GetFpsNumerator() const;
 
                     /**
-                     * 设置
-                     * @param _fpsNumerator 
+                     * 设置Numerator of the frame rate.
+                     * @param _fpsNumerator Numerator of the frame rate.
                      * 
                      */
                     void SetFpsNumerator(const int64_t& _fpsNumerator);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool FpsNumeratorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FpsDenominator 
+                     * 获取Denominator of the frame rate.
+                     * @return FpsDenominator Denominator of the frame rate.
                      * 
                      */
                     int64_t GetFpsDenominator() const;
 
                     /**
-                     * 设置
-                     * @param _fpsDenominator 
+                     * 设置Denominator of the frame rate.
+                     * @param _fpsDenominator Denominator of the frame rate.
                      * 
                      */
                     void SetFpsDenominator(const int64_t& _fpsDenominator);
@@ -307,13 +307,13 @@ namespace TencentCloud
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Height of a video stream. Unit: px.
+                     * Height of the video stream. Unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Video stream width in px.
+                     * Video stream width. Unit: px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
@@ -331,43 +331,43 @@ namespace TencentCloud
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * 
+                     * Colorspace.
                      */
                     std::string m_colorPrimaries;
                     bool m_colorPrimariesHasBeenSet;
 
                     /**
-                     * 
+                     * Colorspace.
                      */
                     std::string m_colorSpace;
                     bool m_colorSpaceHasBeenSet;
 
                     /**
-                     * 
+                     * Colorspace.
                      */
                     std::string m_colorTransfer;
                     bool m_colorTransferHasBeenSet;
 
                     /**
-                     * 
+                     * HDR type.
                      */
                     std::string m_hdrType;
                     bool m_hdrTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Video Codecs.
                      */
                     std::string m_codecs;
                     bool m_codecsHasBeenSet;
 
                     /**
-                     * 
+                     * Numerator of the frame rate.
                      */
                     int64_t m_fpsNumerator;
                     bool m_fpsNumeratorHasBeenSet;
 
                     /**
-                     * 
+                     * Denominator of the frame rate.
                      */
                     int64_t m_fpsDenominator;
                     bool m_fpsDenominatorHasBeenSet;

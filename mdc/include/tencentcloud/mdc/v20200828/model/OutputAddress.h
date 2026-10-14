@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output destination address.
+                * Egress address of the output.
                 */
                 class OutputAddress : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output destination IP.
-                     * @return Ip Output destination IP.
+                     * 获取Outbound IP address.
+                     * @return Ip Outbound IP address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Output destination IP.
-                     * @param _ip Output destination IP.
+                     * 设置Outbound IP address.
+                     * @param _ip Outbound IP address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Output destination IP.
+                     * Outbound IP address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;

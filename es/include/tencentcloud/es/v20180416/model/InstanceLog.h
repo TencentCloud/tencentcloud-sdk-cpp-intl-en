@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Cluster node IP
-                     * @return Ip Cluster node IP
+                     * 获取Cluster node IP address.
+                     * @return Ip Cluster node IP address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Cluster node IP
-                     * @param _ip Cluster node IP
+                     * 设置Cluster node IP address.
+                     * @param _ip Cluster node IP address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -130,6 +130,90 @@ namespace TencentCloud
                      */
                     bool MessageHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster node ID.
+                     * @return NodeID Cluster node ID.
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置Cluster node ID.
+                     * @param _nodeID Cluster node ID.
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Slow log index name
+                     * @return IndexName Slow log index name
+                     * 
+                     */
+                    std::string GetIndexName() const;
+
+                    /**
+                     * 设置Slow log index name
+                     * @param _indexName Slow log index name
+                     * 
+                     */
+                    void SetIndexName(const std::string& _indexName);
+
+                    /**
+                     * 判断参数 IndexName 是否已赋值
+                     * @return IndexName 是否已赋值
+                     * 
+                     */
+                    bool IndexNameHasBeenSet() const;
+
+                    /**
+                     * 获取Slow log index shards
+                     * @return Shard Slow log index shards
+                     * 
+                     */
+                    std::string GetShard() const;
+
+                    /**
+                     * 设置Slow log index shards
+                     * @param _shard Slow log index shards
+                     * 
+                     */
+                    void SetShard(const std::string& _shard);
+
+                    /**
+                     * 判断参数 Shard 是否已赋值
+                     * @return Shard 是否已赋值
+                     * 
+                     */
+                    bool ShardHasBeenSet() const;
+
+                    /**
+                     * 获取Slow log index query time
+                     * @return QueryCost Slow log index query time
+                     * 
+                     */
+                    std::string GetQueryCost() const;
+
+                    /**
+                     * 设置Slow log index query time
+                     * @param _queryCost Slow log index query time
+                     * 
+                     */
+                    void SetQueryCost(const std::string& _queryCost);
+
+                    /**
+                     * 判断参数 QueryCost 是否已赋值
+                     * @return QueryCost 是否已赋值
+                     * 
+                     */
+                    bool QueryCostHasBeenSet() const;
+
                 private:
 
                     /**
@@ -145,7 +229,7 @@ namespace TencentCloud
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Cluster node IP
+                     * Cluster node IP address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
@@ -155,6 +239,30 @@ namespace TencentCloud
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
+
+                    /**
+                     * Cluster node ID.
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Slow log index name
+                     */
+                    std::string m_indexName;
+                    bool m_indexNameHasBeenSet;
+
+                    /**
+                     * Slow log index shards
+                     */
+                    std::string m_shard;
+                    bool m_shardHasBeenSet;
+
+                    /**
+                     * Slow log index query time
+                     */
+                    std::string m_queryCost;
+                    bool m_queryCostHasBeenSet;
 
                 };
             }

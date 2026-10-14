@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * File system (CFS) configuration description
+                * Configuration description of the file system (cfs)
                 */
                 class CfsConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system information list
-                     * @return CfsInsList File system information list
+                     * 获取List of file system information
+                     * @return CfsInsList List of file system information
                      * 
                      */
                     std::vector<CfsInsInfo> GetCfsInsList() const;
 
                     /**
-                     * 设置File system information list
-                     * @param _cfsInsList File system information list
+                     * 设置List of file system information
+                     * @param _cfsInsList List of file system information
                      * 
                      */
                     void SetCfsInsList(const std::vector<CfsInsInfo>& _cfsInsList);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system information list
+                     * List of file system information
                      */
                     std::vector<CfsInsInfo> m_cfsInsList;
                     bool m_cfsInsListHasBeenSet;

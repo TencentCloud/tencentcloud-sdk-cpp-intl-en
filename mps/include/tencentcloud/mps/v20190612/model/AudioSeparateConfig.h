@@ -47,11 +47,11 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Capability configuration switch. Available values:
+                     * 获取Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-                     * @return Switch Capability configuration switch. Available values:
+                     * @return Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -60,11 +60,11 @@ Default value: ON.
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Capability configuration switch. Available values:
+                     * 设置Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-                     * @param _switch Capability configuration switch. Available values:
+                     * @param _switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -80,15 +80,27 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+                     * @return Type Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+                     * @param _type Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -101,15 +113,27 @@ Default value: ON.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Track 
+                     * 获取Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
+                     * @return Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
                      * 
                      */
                     std::string GetTrack() const;
 
                     /**
-                     * 设置
-                     * @param _track 
+                     * 设置Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
+                     * @param _track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
                      * 
                      */
                     void SetTrack(const std::string& _track);
@@ -124,7 +148,7 @@ Default value: ON.
                 private:
 
                     /**
-                     * Capability configuration switch. Available values:
+                     * Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -133,13 +157,19 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Scenario type. Valid values:
+<li>normal: voice and background audio scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
                      */
                     std::string m_track;
                     bool m_trackHasBeenSet;

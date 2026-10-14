@@ -52,13 +52,13 @@ namespace TencentCloud
 
                     /**
                      * 获取Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * @return Type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * 
@@ -67,13 +67,13 @@ namespace TencentCloud
 
                     /**
                      * 设置Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * @param _type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * 
@@ -88,15 +88,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AsrFullTextTask 
+                     * 获取Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
+                     * @return AsrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
                      * 
                      */
                     SmartSubtitleTaskAsrFullTextResult GetAsrFullTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _asrFullTextTask 
+                     * 设置Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
+                     * @param _asrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
                      * 
                      */
                     void SetAsrFullTextTask(const SmartSubtitleTaskAsrFullTextResult& _asrFullTextTask);
@@ -109,15 +113,23 @@ namespace TencentCloud
                     bool AsrFullTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransTextTask 
+                     * 获取Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+                     * @return TransTextTask Translation result. When Type is
+
+Valid when set to TransTextRecognition.
                      * 
                      */
                     SmartSubtitleTaskTransTextResult GetTransTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _transTextTask 
+                     * 设置Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+                     * @param _transTextTask Translation result. When Type is
+
+Valid when set to TransTextRecognition.
                      * 
                      */
                     void SetTransTextTask(const SmartSubtitleTaskTransTextResult& _transTextTask);
@@ -130,15 +142,15 @@ namespace TencentCloud
                     bool TransTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PureSubtitleTransTask 
+                     * 获取The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+                     * @return PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
                      * 
                      */
                     PureSubtitleTransResult GetPureSubtitleTransTask() const;
 
                     /**
-                     * 设置
-                     * @param _pureSubtitleTransTask 
+                     * 设置The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+                     * @param _pureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
                      * 
                      */
                     void SetPureSubtitleTransTask(const PureSubtitleTransResult& _pureSubtitleTransTask);
@@ -151,15 +163,19 @@ namespace TencentCloud
                     bool PureSubtitleTransTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrFullTextTask 
+                     * 获取Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
+                     * @return OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
                      * 
                      */
                     SmartSubtitleTaskFullTextResult GetOcrFullTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _ocrFullTextTask 
+                     * 设置Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
+                     * @param _ocrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
                      * 
                      */
                     void SetOcrFullTextTask(const SmartSubtitleTaskFullTextResult& _ocrFullTextTask);
@@ -175,8 +191,8 @@ namespace TencentCloud
 
                     /**
                      * Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition
-- TransTextRecognition: speech translation
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      */
@@ -184,25 +200,29 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is set.
                      */
                     SmartSubtitleTaskAsrFullTextResult m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Translation result. When Type is
+
+Valid when set to TransTextRecognition.
                      */
                     SmartSubtitleTaskTransTextResult m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
 
                     /**
-                     * 
+                     * The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
                      */
                     PureSubtitleTransResult m_pureSubtitleTransTask;
                     bool m_pureSubtitleTransTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Text-based subtitle extraction result. This field is valid when the value of Type is
+Valid when OcrFullTextRecognition is set.
                      */
                     SmartSubtitleTaskFullTextResult m_ocrFullTextTask;
                     bool m_ocrFullTextTaskHasBeenSet;

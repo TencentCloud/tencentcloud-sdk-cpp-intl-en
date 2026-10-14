@@ -180,7 +180,7 @@ namespace TencentCloud
                 CreateAutoBackUpStrategyOutcomeCallable CreateAutoBackUpStrategyCallable(const Model::CreateAutoBackUpStrategyRequest& request);
 
                 /**
-                 *This API is used to create indices.
+                 *Create an index
                  * @param req CreateIndexRequest
                  * @return CreateIndexOutcome
                  */
@@ -189,7 +189,7 @@ namespace TencentCloud
                 CreateIndexOutcomeCallable CreateIndexCallable(const Model::CreateIndexRequest& request);
 
                 /**
-                 *This API is used to create an ES cluster instance with the specified specification.
+                 *Create an ES cluster instance with the specified specification.
                  * @param req CreateInstanceRequest
                  * @return CreateInstanceOutcome
                  */
@@ -207,7 +207,7 @@ namespace TencentCloud
                 DeleteAutoBackUpStrategyOutcomeCallable DeleteAutoBackUpStrategyCallable(const Model::DeleteAutoBackUpStrategyRequest& request);
 
                 /**
-                 *This API is used to delete indices.
+                 *Delete an index
                  * @param req DeleteIndexRequest
                  * @return DeleteIndexOutcome
                  */
@@ -216,7 +216,7 @@ namespace TencentCloud
                 DeleteIndexOutcomeCallable DeleteIndexCallable(const Model::DeleteIndexRequest& request);
 
                 /**
-                 *This API is used to terminate a cluster instance. 
+                 *Terminate cluster instances
                  * @param req DeleteInstanceRequest
                  * @return DeleteInstanceOutcome
                  */
@@ -243,7 +243,7 @@ namespace TencentCloud
                 DescribeIndexListOutcomeCallable DescribeIndexListCallable(const Model::DescribeIndexListRequest& request);
 
                 /**
-                 *This API is used to obtain index metadata.
+                 *This API is used to retrieve index metadata.
                  * @param req DescribeIndexMetaRequest
                  * @return DescribeIndexMetaOutcome
                  */
@@ -252,7 +252,7 @@ namespace TencentCloud
                 DescribeIndexMetaOutcomeCallable DescribeIndexMetaCallable(const Model::DescribeIndexMetaRequest& request);
 
                 /**
-                 *This API is used to query the eligible ES cluster logs in the current region.
+                 *Query the logs of eligible ES clusters in that region for the user.
                  * @param req DescribeInstanceLogsRequest
                  * @return DescribeInstanceLogsOutcome
                  */
@@ -261,7 +261,7 @@ namespace TencentCloud
                 DescribeInstanceLogsOutcomeCallable DescribeInstanceLogsCallable(const Model::DescribeInstanceLogsRequest& request);
 
                 /**
-                 *This API is used to query the operation history of an instance by specified criteria.
+                 *Query the operation records of an instance under specified conditions.
                  * @param req DescribeInstanceOperationsRequest
                  * @return DescribeInstanceOperationsOutcome
                  */
@@ -270,7 +270,7 @@ namespace TencentCloud
                 DescribeInstanceOperationsOutcomeCallable DescribeInstanceOperationsCallable(const Model::DescribeInstanceOperationsRequest& request);
 
                 /**
-                 *This API is used to query all eligible instances in the current region under the current account.
+                 *Query all instances meeting conditions for the user in that region
                  * @param req DescribeInstancesRequest
                  * @return DescribeInstancesOutcome
                  */
@@ -279,7 +279,7 @@ namespace TencentCloud
                 DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
 
                 /**
-                 *This API is used to query view data from three dimensions: cluster, node, and Kibana.
+                 *Query view data of a cluster, including cluster-level, node, and Kibana dimensions.
                  * @param req DescribeViewsRequest
                  * @return DescribeViewsOutcome
                  */
@@ -288,7 +288,7 @@ namespace TencentCloud
                 DescribeViewsOutcomeCallable DescribeViewsCallable(const Model::DescribeViewsRequest& request);
 
                 /**
-                 *This API is used to get the node types used to receive client requests.
+                 *Get the node type that receives client requests.
                  * @param req GetRequestTargetNodeTypesRequest
                  * @return GetRequestTargetNodeTypesOutcome
                  */
@@ -315,7 +315,7 @@ namespace TencentCloud
                 ModifyAutoBackUpStrategyOutcomeCallable ModifyAutoBackUpStrategyCallable(const Model::ModifyAutoBackUpStrategyRequest& request);
 
                 /**
-                 *This API is used to restart an ES cluster instance (for operations such as system update). 
+                 *Restart ES cluster instances for system version update.
                  * @param req RestartInstanceRequest
                  * @return RestartInstanceOutcome
                  */
@@ -324,7 +324,7 @@ namespace TencentCloud
                 RestartInstanceOutcomeCallable RestartInstanceCallable(const Model::RestartInstanceRequest& request);
 
                 /**
-                 *This API is used to restart Kibana. 
+                 *Restart Kibana
                  * @param req RestartKibanaRequest
                  * @return RestartKibanaOutcome
                  */
@@ -333,7 +333,7 @@ namespace TencentCloud
                 RestartKibanaOutcomeCallable RestartKibanaCallable(const Model::RestartKibanaRequest& request);
 
                 /**
-                 *This API is used to restart cluster nodes.
+                 *Used to restart cluster nodes.
                  * @param req RestartNodesRequest
                  * @return RestartNodesOutcome
                  */
@@ -342,7 +342,7 @@ namespace TencentCloud
                 RestartNodesOutcomeCallable RestartNodesCallable(const Model::RestartNodesRequest& request);
 
                 /**
-                 *This API is used to update ES cluster dictionaries.
+                 *Update the ES cluster dictionary
                  * @param req UpdateDictionariesRequest
                  * @return UpdateDictionariesOutcome
                  */
@@ -351,7 +351,7 @@ namespace TencentCloud
                 UpdateDictionariesOutcomeCallable UpdateDictionariesCallable(const Model::UpdateDictionariesRequest& request);
 
                 /**
-                 *This API is used to update indices.
+                 *Updates an index
                  * @param req UpdateIndexRequest
                  * @return UpdateIndexOutcome
                  */
@@ -360,14 +360,14 @@ namespace TencentCloud
                 UpdateIndexOutcomeCallable UpdateIndexCallable(const Model::UpdateIndexRequest& request);
 
                 /**
-                 *This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
-- InstanceName: renames an instance (only for instance identification)
-- NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)
-- EsConfig: modifies cluster configuration
-- Password: changes the password of the default user "elastic"
-- EsAcl: modifies the ACL
-- CosBackUp: sets auto-backup to COS for a cluster
-Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
+                 *Perform operations on the cluster, such as node specification change, instance name modification, configuration modification, password resetting, and Kibana blocklist/allowlist addition. InstanceId is a required parameter, while ForceRestart is optional. The remaining parameter combinations and their meanings are as follows:
+- InstanceName: Modify the instance name (only used to identify the instance)
+-NodeInfoList: Modify node configuration (horizontally scale nodes, vertically scale nodes, add primary nodes, add cold nodes, etc.)
+-EsConfig: modify cluster configuration
+-Password: Modify the password of the default user elastic
+-EsAcl: Modify an ACL
+-CosBackUp: Set cluster COS auto backup information
+Only one of the above parameters can be passed. Passing more or fewer will cause request failure.
                  * @param req UpdateInstanceRequest
                  * @return UpdateInstanceOutcome
                  */
@@ -376,7 +376,7 @@ Only one of the parameters or parameter combinations above can be passed in at a
                 UpdateInstanceOutcomeCallable UpdateInstanceCallable(const Model::UpdateInstanceRequest& request);
 
                 /**
-                 *This API is used to change the list of plugins.
+                 *Update the plug-in list
                  * @param req UpdatePluginsRequest
                  * @return UpdatePluginsOutcome
                  */
@@ -385,7 +385,7 @@ Only one of the parameters or parameter combinations above can be passed in at a
                 UpdatePluginsOutcomeCallable UpdatePluginsCallable(const Model::UpdatePluginsRequest& request);
 
                 /**
-                 *This API is used to update the node types used to receive client requests.
+                 *This API is used to update the node type that receives client requests.
                  * @param req UpdateRequestTargetNodeTypesRequest
                  * @return UpdateRequestTargetNodeTypesOutcome
                  */
@@ -394,7 +394,7 @@ Only one of the parameters or parameter combinations above can be passed in at a
                 UpdateRequestTargetNodeTypesOutcomeCallable UpdateRequestTargetNodeTypesCallable(const Model::UpdateRequestTargetNodeTypesRequest& request);
 
                 /**
-                 *This API is used to upgrade ES cluster version
+                 *Upgrades the edition of an ES cluster
                  * @param req UpgradeInstanceRequest
                  * @return UpgradeInstanceOutcome
                  */
@@ -403,7 +403,7 @@ Only one of the parameters or parameter combinations above can be passed in at a
                 UpgradeInstanceOutcomeCallable UpgradeInstanceCallable(const Model::UpgradeInstanceRequest& request);
 
                 /**
-                 *This API is used to upgrade ES X-Pack.
+                 *Upgrade ES commercial features
                  * @param req UpgradeLicenseRequest
                  * @return UpgradeLicenseOutcome
                  */

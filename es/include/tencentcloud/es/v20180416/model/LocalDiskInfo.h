@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Local disk information of node
+                * Local disk information of the node
                 */
                 class LocalDiskInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
-                     * @return LocalDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+                     * 获取Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
+                     * @return LocalDiskType Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
                      * 
                      */
                     std::string GetLocalDiskType() const;
 
                     /**
-                     * 设置Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
-                     * @param _localDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+                     * 设置Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
+                     * @param _localDiskType Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
                      * 
                      */
                     void SetLocalDiskType(const std::string& _localDiskType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LocalDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Size of a single local disk
-                     * @return LocalDiskSize Size of a single local disk
+                     * 获取Single local disk size
+                     * @return LocalDiskSize Single local disk size
                      * 
                      */
                     uint64_t GetLocalDiskSize() const;
 
                     /**
-                     * 设置Size of a single local disk
-                     * @param _localDiskSize Size of a single local disk
+                     * 设置Single local disk size
+                     * @param _localDiskSize Single local disk size
                      * 
                      */
                     void SetLocalDiskSize(const uint64_t& _localDiskSize);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LocalDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of local disks
-                     * @return LocalDiskCount Number of local disks
+                     * 获取Number of local disk blocks
+                     * @return LocalDiskCount Number of local disk blocks
                      * 
                      */
                     uint64_t GetLocalDiskCount() const;
 
                     /**
-                     * 设置Number of local disks
-                     * @param _localDiskCount Number of local disks
+                     * 设置Number of local disk blocks
+                     * @param _localDiskCount Number of local disk blocks
                      * 
                      */
                     void SetLocalDiskCount(const uint64_t& _localDiskCount);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+                     * Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
                      */
                     std::string m_localDiskType;
                     bool m_localDiskTypeHasBeenSet;
 
                     /**
-                     * Size of a single local disk
+                     * Single local disk size
                      */
                     uint64_t m_localDiskSize;
                     bool m_localDiskSizeHasBeenSet;
 
                     /**
-                     * Number of local disks
+                     * Number of local disk blocks
                      */
                     uint64_t m_localDiskCount;
                     bool m_localDiskCountHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI narration and video re-creation result type
+                * Result type for AI narration and video re-creation
                 */
                 class AiAnalysisTaskReelResult : public AbstractModel
                 {
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取AI narration and video re-creation task input.
-                     * @return Input AI narration and video re-creation task input.
+                     * 获取Task input for AI narration and video re-creation.
+                     * @return Input Task input for AI narration and video re-creation.
                      * 
                      */
                     AiAnalysisTaskReelInput GetInput() const;
 
                     /**
-                     * 设置AI narration and video re-creation task input.
-                     * @param _input AI narration and video re-creation task input.
+                     * 设置Task input for AI narration and video re-creation.
+                     * @param _input Task input for AI narration and video re-creation.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskReelInput& _input);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Task output for AI narration and video re-creation.
+                     * @return Output Task output for AI narration and video re-creation.
                      * 
                      */
                     AiAnalysisTaskReelOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Task output for AI narration and video re-creation.
+                     * @param _output Task output for AI narration and video re-creation.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskReelOutput& _output);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCodeExt 
+                     * 获取Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
+                     * @return ErrCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置
-                     * @param _errCodeExt 
+                     * 设置Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
+                     * @param _errCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Task progress.
+                     * @return Progress Task progress.
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Task progress.
+                     * @param _progress Task progress.
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BeginProcessTime 
+                     * 获取Starting time of task execution, in ISO date and time format.
+                     * @return BeginProcessTime Starting time of task execution, in ISO date and time format.
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置
-                     * @param _beginProcessTime 
+                     * 设置Starting time of task execution, in ISO date and time format.
+                     * @param _beginProcessTime Starting time of task execution, in ISO date and time format.
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FinishTime 
+                     * 获取Task completion time, in ISO date and time format.
+                     * @return FinishTime Task completion time, in ISO date and time format.
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置
-                     * @param _finishTime 
+                     * 设置Task completion time, in ISO date and time format.
+                     * @param _finishTime Task completion time, in ISO date and time format.
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -258,37 +258,37 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * AI narration and video re-creation task input.
+                     * Task input for AI narration and video re-creation.
                      */
                     AiAnalysisTaskReelInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Task output for AI narration and video re-creation.
                      */
                     AiAnalysisTaskReelOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * 
+                     * Task progress.
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * 
+                     * Starting time of task execution, in ISO date and time format.
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Task completion time, in ISO date and time format.
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

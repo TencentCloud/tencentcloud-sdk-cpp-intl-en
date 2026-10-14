@@ -22,6 +22,7 @@ using namespace std;
 
 CreateOutputSrtSettings::CreateOutputSrtSettings() :
     m_destinationsHasBeenSet(false),
+    m_modeHasBeenSet(false),
     m_streamIdHasBeenSet(false),
     m_latencyHasBeenSet(false),
     m_recvLatencyHasBeenSet(false),
@@ -29,7 +30,7 @@ CreateOutputSrtSettings::CreateOutputSrtSettings() :
     m_peerIdleTimeoutHasBeenSet(false),
     m_passphraseHasBeenSet(false),
     m_pbKeyLenHasBeenSet(false),
-    m_modeHasBeenSet(false)
+    m_fECHasBeenSet(false)
 {
 }
 
@@ -56,6 +57,16 @@ CoreInternalOutcome CreateOutputSrtSettings::Deserialize(const rapidjson::Value 
             m_destinations.push_back(item);
         }
         m_destinationsHasBeenSet = true;
+    }
+
+    if (value.HasMember("Mode") && !value["Mode"].IsNull())
+    {
+        if (!value["Mode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateOutputSrtSettings.Mode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_mode = string(value["Mode"].GetString());
+        m_modeHasBeenSet = true;
     }
 
     if (value.HasMember("StreamId") && !value["StreamId"].IsNull())
@@ -128,14 +139,21 @@ CoreInternalOutcome CreateOutputSrtSettings::Deserialize(const rapidjson::Value 
         m_pbKeyLenHasBeenSet = true;
     }
 
-    if (value.HasMember("Mode") && !value["Mode"].IsNull())
+    if (value.HasMember("FEC") && !value["FEC"].IsNull())
     {
-        if (!value["Mode"].IsString())
+        if (!value["FEC"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `CreateOutputSrtSettings.Mode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateOutputSrtSettings.FEC` is not object type").SetRequestId(requestId));
         }
-        m_mode = string(value["Mode"].GetString());
-        m_modeHasBeenSet = true;
+
+        CoreInternalOutcome outcome = m_fEC.Deserialize(value["FEC"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_fECHasBeenSet = true;
     }
 
 
@@ -158,6 +176,14 @@ void CreateOutputSrtSettings::ToJsonObject(rapidjson::Value &value, rapidjson::D
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_modeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Mode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_streamIdHasBeenSet)
@@ -216,12 +242,13 @@ void CreateOutputSrtSettings::ToJsonObject(rapidjson::Value &value, rapidjson::D
         value.AddMember(iKey, m_pbKeyLen, allocator);
     }
 
-    if (m_modeHasBeenSet)
+    if (m_fECHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Mode";
+        string key = "FEC";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_mode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_fEC.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -241,6 +268,22 @@ void CreateOutputSrtSettings::SetDestinations(const vector<CreateOutputSrtSettin
 bool CreateOutputSrtSettings::DestinationsHasBeenSet() const
 {
     return m_destinationsHasBeenSet;
+}
+
+string CreateOutputSrtSettings::GetMode() const
+{
+    return m_mode;
+}
+
+void CreateOutputSrtSettings::SetMode(const string& _mode)
+{
+    m_mode = _mode;
+    m_modeHasBeenSet = true;
+}
+
+bool CreateOutputSrtSettings::ModeHasBeenSet() const
+{
+    return m_modeHasBeenSet;
 }
 
 string CreateOutputSrtSettings::GetStreamId() const
@@ -355,19 +398,19 @@ bool CreateOutputSrtSettings::PbKeyLenHasBeenSet() const
     return m_pbKeyLenHasBeenSet;
 }
 
-string CreateOutputSrtSettings::GetMode() const
+SRTFECFullOptions CreateOutputSrtSettings::GetFEC() const
 {
-    return m_mode;
+    return m_fEC;
 }
 
-void CreateOutputSrtSettings::SetMode(const string& _mode)
+void CreateOutputSrtSettings::SetFEC(const SRTFECFullOptions& _fEC)
 {
-    m_mode = _mode;
-    m_modeHasBeenSet = true;
+    m_fEC = _fEC;
+    m_fECHasBeenSet = true;
 }
 
-bool CreateOutputSrtSettings::ModeHasBeenSet() const
+bool CreateOutputSrtSettings::FECHasBeenSet() const
 {
-    return m_modeHasBeenSet;
+    return m_fECHasBeenSet;
 }
 

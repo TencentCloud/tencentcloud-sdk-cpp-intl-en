@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Filter criteria.
                 */
                 class FilterItem : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FilterKey 
+                     * 获取Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
+                     * @return FilterKey Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
                      * 
                      */
                     std::string GetFilterKey() const;
 
                     /**
-                     * 设置
-                     * @param _filterKey 
+                     * 设置Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
+                     * @param _filterKey Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
                      * 
                      */
                     void SetFilterKey(const std::string& _filterKey);
@@ -68,15 +72,31 @@ namespace TencentCloud
                     bool FilterKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterValue 
+                     * 获取Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
+                     * @return FilterValue Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
                      * 
                      */
                     std::vector<std::string> GetFilterValue() const;
 
                     /**
-                     * 设置
-                     * @param _filterValue 
+                     * 设置Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
+                     * @param _filterValue Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
                      * 
                      */
                     void SetFilterValue(const std::vector<std::string>& _filterValue);
@@ -91,13 +111,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
                      */
                     std::string m_filterKey;
                     bool m_filterKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
                      */
                     std::vector<std::string> m_filterValue;
                     bool m_filterValueHasBeenSet;

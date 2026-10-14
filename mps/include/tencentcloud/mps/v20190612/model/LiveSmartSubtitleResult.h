@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream smart subtitle result
+                * Smart subtitle result of the live stream.
                 */
                 class LiveSmartSubtitleResult : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Start PTS time of a translated recording clip, in seconds.
-                     * @return StartPTSTime Start PTS time of a translated recording clip, in seconds.
+                     * 获取Start PTS time of a translated segment, in seconds.
+                     * @return StartPTSTime Start PTS time of a translated segment, in seconds.
                      * 
                      */
                     double GetStartPTSTime() const;
 
                     /**
-                     * 设置Start PTS time of a translated recording clip, in seconds.
-                     * @param _startPTSTime Start PTS time of a translated recording clip, in seconds.
+                     * 设置Start PTS time of a translated segment, in seconds.
+                     * @param _startPTSTime Start PTS time of a translated segment, in seconds.
                      * 
                      */
                     void SetStartPTSTime(const double& _startPTSTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartPTSTimeHasBeenSet() const;
 
                     /**
-                     * 获取End PTS time of a translated recording clip, in seconds.
-                     * @return EndPTSTime End PTS time of a translated recording clip, in seconds.
+                     * 获取End PTS time of a translated segment, in seconds.
+                     * @return EndPTSTime End PTS time of a translated segment, in seconds.
                      * 
                      */
                     double GetEndPTSTime() const;
 
                     /**
-                     * 设置End PTS time of a translated recording clip, in seconds.
-                     * @param _endPTSTime End PTS time of a translated recording clip, in seconds.
+                     * 设置End PTS time of a translated segment, in seconds.
+                     * @param _endPTSTime End PTS time of a translated segment, in seconds.
                      * 
                      */
                     void SetEndPTSTime(const double& _endPTSTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Translation start UTC time.
+                     * @return StartTime Translation start UTC time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Translation start UTC time.
+                     * @param _startTime Translation start UTC time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取UTC time when translation is completed.
+                     * @return EndTime UTC time when translation is completed.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置UTC time when translation is completed.
+                     * @param _endTime UTC time when translation is completed.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SteadyState 
+                     * 获取Steady-state tag.
+                     * @return SteadyState Steady-state tag.
                      * 
                      */
                     bool GetSteadyState() const;
 
                     /**
-                     * 设置
-                     * @param _steadyState 
+                     * 设置Steady-state tag.
+                     * @param _steadyState Steady-state tag.
                      * 
                      */
                     void SetSteadyState(const bool& _steadyState);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SteadyStateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserId 
+                     * 获取UserId for real-time translation over websocket and trtc
+                     * @return UserId UserId for real-time translation over websocket and trtc
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置
-                     * @param _userId 
+                     * 设置UserId for real-time translation over websocket and trtc
+                     * @param _userId UserId for real-time translation over websocket and trtc
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -223,13 +223,13 @@ namespace TencentCloud
                     bool m_textHasBeenSet;
 
                     /**
-                     * Start PTS time of a translated recording clip, in seconds.
+                     * Start PTS time of a translated segment, in seconds.
                      */
                     double m_startPTSTime;
                     bool m_startPTSTimeHasBeenSet;
 
                     /**
-                     * End PTS time of a translated recording clip, in seconds.
+                     * End PTS time of a translated segment, in seconds.
                      */
                     double m_endPTSTime;
                     bool m_endPTSTimeHasBeenSet;
@@ -241,25 +241,25 @@ namespace TencentCloud
                     bool m_transHasBeenSet;
 
                     /**
-                     * 
+                     * Translation start UTC time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * UTC time when translation is completed.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Steady-state tag.
                      */
                     bool m_steadyState;
                     bool m_steadyStateHasBeenSet;
 
                     /**
-                     * 
+                     * UserId for real-time translation over websocket and trtc
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

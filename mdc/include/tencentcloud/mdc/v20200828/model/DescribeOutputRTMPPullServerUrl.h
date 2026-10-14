@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTMP pull URL of the output
+                * Query the RTMP pull URL information in the output.
                 */
                 class DescribeOutputRTMPPullServerUrl : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`tcUrl` of the RTMP pull URL
-                     * @return TcUrl `tcUrl` of the RTMP pull URL
+                     * 获取tcUrl of the RTMP pull address.
+                     * @return TcUrl tcUrl of the RTMP pull address.
                      * 
                      */
                     std::string GetTcUrl() const;
 
                     /**
-                     * 设置`tcUrl` of the RTMP pull URL
-                     * @param _tcUrl `tcUrl` of the RTMP pull URL
+                     * 设置tcUrl of the RTMP pull address.
+                     * @param _tcUrl tcUrl of the RTMP pull address.
                      * 
                      */
                     void SetTcUrl(const std::string& _tcUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TcUrlHasBeenSet() const;
 
                     /**
-                     * 获取Stream key of the RTMP pull URL
-                     * @return StreamKey Stream key of the RTMP pull URL
+                     * 获取Stream key of the RTMP pull address.
+                     * @return StreamKey Stream key of the RTMP pull address.
                      * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
-                     * 设置Stream key of the RTMP pull URL
-                     * @param _streamKey Stream key of the RTMP pull URL
+                     * 设置Stream key of the RTMP pull address.
+                     * @param _streamKey Stream key of the RTMP pull address.
                      * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `tcUrl` of the RTMP pull URL
+                     * tcUrl of the RTMP pull address.
                      */
                     std::string m_tcUrl;
                     bool m_tcUrlHasBeenSet;
 
                     /**
-                     * Stream key of the RTMP pull URL
+                     * Stream key of the RTMP pull address.
                      */
                     std::string m_streamKey;
                     bool m_streamKeyHasBeenSet;

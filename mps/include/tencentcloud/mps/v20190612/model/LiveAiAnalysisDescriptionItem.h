@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Paragraphs 
+                     * 获取Segmentation result.
+                     * @return Paragraphs Segmentation result.
                      * 
                      */
                     std::vector<LiveAiParagraphInfo> GetParagraphs() const;
 
                     /**
-                     * 设置
-                     * @param _paragraphs 
+                     * 设置Segmentation result.
+                     * @param _paragraphs Segmentation result.
                      * 
                      */
                     void SetParagraphs(const std::vector<LiveAiParagraphInfo>& _paragraphs);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Segmentation result.
                      */
                     std::vector<LiveAiParagraphInfo> m_paragraphs;
                     bool m_paragraphsHasBeenSet;

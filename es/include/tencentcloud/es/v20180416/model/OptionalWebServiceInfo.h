@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of optional web components
+                * Optional web component information
                 */
                 class OptionalWebServiceInfo : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Type.
+                     * @return Type Type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Type.
+                     * @param _type Type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicUrl Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Public url
+                     * @return PublicUrl Public url
                      * 
                      */
                     std::string GetPublicUrl() const;
 
                     /**
-                     * 设置Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publicUrl Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Public url
+                     * @param _publicUrl Public url
                      * 
                      */
                     void SetPublicUrl(const std::string& _publicUrl);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicUrlHasBeenSet() const;
 
                     /**
-                     * 获取Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateUrl Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Private network url
+                     * @return PrivateUrl Private network url
                      * 
                      */
                     std::string GetPrivateUrl() const;
 
                     /**
-                     * 设置Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privateUrl Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Private network url
+                     * @param _privateUrl Private network url
                      * 
                      */
                     void SetPrivateUrl(const std::string& _privateUrl);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivateUrlHasBeenSet() const;
 
                     /**
-                     * 获取Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicAccess Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Public access permissions
+                     * @return PublicAccess Public access permissions
                      * 
                      */
                     std::string GetPublicAccess() const;
 
                     /**
-                     * 设置Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publicAccess Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Public access permissions
+                     * @param _publicAccess Public access permissions
                      * 
                      */
                     void SetPublicAccess(const std::string& _publicAccess);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateAccess Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Private network access permission
+                     * @return PrivateAccess Private network access permission
                      * 
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privateAccess Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Private network access permission
+                     * @param _privateAccess Private network access permission
                      * 
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Version
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Version
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _version Version
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -221,56 +193,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VersionHasBeenSet() const;
 
+                    /**
+                     * 获取Intranet vip of the web service
+                     * @return PrivateVip Intranet vip of the web service
+                     * 
+                     */
+                    std::string GetPrivateVip() const;
+
+                    /**
+                     * 设置Intranet vip of the web service
+                     * @param _privateVip Intranet vip of the web service
+                     * 
+                     */
+                    void SetPrivateVip(const std::string& _privateVip);
+
+                    /**
+                     * 判断参数 PrivateVip 是否已赋值
+                     * @return PrivateVip 是否已赋值
+                     * 
+                     */
+                    bool PrivateVipHasBeenSet() const;
+
+                    /**
+                     * 获取Custom url of cerebro on the private network
+                     * @return CustomPrivateUrl Custom url of cerebro on the private network
+                     * 
+                     */
+                    std::string GetCustomPrivateUrl() const;
+
+                    /**
+                     * 设置Custom url of cerebro on the private network
+                     * @param _customPrivateUrl Custom url of cerebro on the private network
+                     * 
+                     */
+                    void SetCustomPrivateUrl(const std::string& _customPrivateUrl);
+
+                    /**
+                     * 判断参数 CustomPrivateUrl 是否已赋值
+                     * @return CustomPrivateUrl 是否已赋值
+                     * 
+                     */
+                    bool CustomPrivateUrlHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Public url
                      */
                     std::string m_publicUrl;
                     bool m_publicUrlHasBeenSet;
 
                     /**
-                     * Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Private network url
                      */
                     std::string m_privateUrl;
                     bool m_privateUrlHasBeenSet;
 
                     /**
-                     * Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Public access permissions
                      */
                     std::string m_publicAccess;
                     bool m_publicAccessHasBeenSet;
 
                     /**
-                     * Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Private network access permission
                      */
                     std::string m_privateAccess;
                     bool m_privateAccessHasBeenSet;
 
                     /**
                      * Version
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
+
+                    /**
+                     * Intranet vip of the web service
+                     */
+                    std::string m_privateVip;
+                    bool m_privateVipHasBeenSet;
+
+                    /**
+                     * Custom url of cerebro on the private network
+                     */
+                    std::string m_customPrivateUrl;
+                    bool m_customPrivateUrlHasBeenSet;
 
                 };
             }

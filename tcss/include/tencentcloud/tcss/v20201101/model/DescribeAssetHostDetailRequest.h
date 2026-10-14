@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server ID
-                     * @return HostId Server ID
+                     * 获取Host ID
+                     * @return HostId Host ID
                      * 
                      */
                     std::string GetHostId() const;
 
                     /**
-                     * 设置Server ID
-                     * @param _hostId Server ID
+                     * 设置Host ID
+                     * @param _hostId Host ID
                      * 
                      */
                     void SetHostId(const std::string& _hostId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Server ID
+                     * Host ID
                      */
                     std::string m_hostId;
                     bool m_hostIdHasBeenSet;

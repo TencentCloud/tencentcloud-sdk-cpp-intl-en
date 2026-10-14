@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Asr text sensitivity task result type
+                * Result type of the sensitive Asr text task in content review
                 */
                 class AiReviewTaskPoliticalAsrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review Asr text sensitivity task input.
-                     * @return Input Content review Asr text sensitivity task input.
+                     * 获取Input of the sensitive Asr text task in content review.
+                     * @return Input Input of the sensitive Asr text task in content review.
                      * 
                      */
                     AiReviewPoliticalAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review Asr text sensitivity task input.
-                     * @param _input Content review Asr text sensitivity task input.
+                     * 设置Input of the sensitive Asr text task in content review.
+                     * @param _input Input of the sensitive Asr text task in content review.
                      * 
                      */
                     void SetInput(const AiReviewPoliticalAsrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the Asr text sensitive task in content review.
+                     * @return Output Output of the Asr text sensitive task in content review.
                      * 
                      */
                     AiReviewPoliticalAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the Asr text sensitive task in content review.
+                     * @param _output Output of the Asr text sensitive task in content review.
                      * 
                      */
                     void SetOutput(const AiReviewPoliticalAsrTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review Asr text sensitivity task input.
+                     * Input of the sensitive Asr text task in content review.
                      */
                     AiReviewPoliticalAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the Asr text sensitive task in content review.
                      */
                     AiReviewPoliticalAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

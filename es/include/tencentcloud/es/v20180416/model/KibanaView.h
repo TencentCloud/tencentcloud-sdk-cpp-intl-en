@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kibana node IP
-                     * @return Ip Kibana node IP
+                     * 获取<p>Kibana node IP</p>
+                     * @return Ip <p>Kibana node IP</p>
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Kibana node IP
-                     * @param _ip Kibana node IP
+                     * 设置<p>Kibana node IP</p>
+                     * @param _ip <p>Kibana node IP</p>
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Node disk size
-                     * @return DiskSize Node disk size
+                     * 获取<p>Total node disk size</p>
+                     * @return DiskSize <p>Total node disk size</p>
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Node disk size
-                     * @param _diskSize Node disk size
+                     * 设置<p>Total node disk size</p>
+                     * @param _diskSize <p>Total node disk size</p>
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk usage
-                     * @return DiskUsage Disk usage
+                     * 获取<p>Disk utilization rate</p>
+                     * @return DiskUsage <p>Disk utilization rate</p>
                      * 
                      */
                     double GetDiskUsage() const;
 
                     /**
-                     * 设置Disk usage
-                     * @param _diskUsage Disk usage
+                     * 设置<p>Disk utilization rate</p>
+                     * @param _diskUsage <p>Disk utilization rate</p>
                      * 
                      */
                     void SetDiskUsage(const double& _diskUsage);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DiskUsageHasBeenSet() const;
 
                     /**
-                     * 获取Node memory size
-                     * @return MemSize Node memory size
+                     * 获取<p>Node memory size</p>
+                     * @return MemSize <p>Node memory size</p>
                      * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
-                     * 设置Node memory size
-                     * @param _memSize Node memory size
+                     * 设置<p>Node memory size</p>
+                     * @param _memSize <p>Node memory size</p>
                      * 
                      */
                     void SetMemSize(const int64_t& _memSize);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Memory usage
-                     * @return MemUsage Memory usage
+                     * 获取<p>Memory usage rate</p>
+                     * @return MemUsage <p>Memory usage rate</p>
                      * 
                      */
                     double GetMemUsage() const;
 
                     /**
-                     * 设置Memory usage
-                     * @param _memUsage Memory usage
+                     * 设置<p>Memory usage rate</p>
+                     * @param _memUsage <p>Memory usage rate</p>
                      * 
                      */
                     void SetMemUsage(const double& _memUsage);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MemUsageHasBeenSet() const;
 
                     /**
-                     * 获取Number of node CPUs
-                     * @return CpuNum Number of node CPUs
+                     * 获取<p>Number of CPUs on the node</p>
+                     * @return CpuNum <p>Number of CPUs on the node</p>
                      * 
                      */
                     int64_t GetCpuNum() const;
 
                     /**
-                     * 设置Number of node CPUs
-                     * @param _cpuNum Number of node CPUs
+                     * 设置<p>Number of CPUs on the node</p>
+                     * @param _cpuNum <p>Number of CPUs on the node</p>
                      * 
                      */
                     void SetCpuNum(const int64_t& _cpuNum);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool CpuNumHasBeenSet() const;
 
                     /**
-                     * 获取CPU usage
-                     * @return CpuUsage CPU usage
+                     * 获取<p>cpu utilization</p>
+                     * @return CpuUsage <p>cpu utilization</p>
                      * 
                      */
                     double GetCpuUsage() const;
 
                     /**
-                     * 设置CPU usage
-                     * @param _cpuUsage CPU usage
+                     * 设置<p>cpu utilization</p>
+                     * @param _cpuUsage <p>cpu utilization</p>
                      * 
                      */
                     void SetCpuUsage(const double& _cpuUsage);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool CpuUsageHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone
-                     * @return Zone Availability zone
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone
-                     * @param _zone Availability zone
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -214,55 +214,109 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取<p>ts-0noqayxu-az6-hot-03222010-0</p>
+                     * @return NodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
+                     * 
+                     */
+                    std::string GetNodeId() const;
+
+                    /**
+                     * 设置<p>ts-0noqayxu-az6-hot-03222010-0</p>
+                     * @param _nodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
+                     * 
+                     */
+                    void SetNodeId(const std::string& _nodeId);
+
+                    /**
+                     * 判断参数 NodeId 是否已赋值
+                     * @return NodeId 是否已赋值
+                     * 
+                     */
+                    bool NodeIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Client-side Ip info</p>
+                     * @return UserIp <p>Client-side Ip info</p>
+                     * 
+                     */
+                    std::string GetUserIp() const;
+
+                    /**
+                     * 设置<p>Client-side Ip info</p>
+                     * @param _userIp <p>Client-side Ip info</p>
+                     * 
+                     */
+                    void SetUserIp(const std::string& _userIp);
+
+                    /**
+                     * 判断参数 UserIp 是否已赋值
+                     * @return UserIp 是否已赋值
+                     * 
+                     */
+                    bool UserIpHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Kibana node IP
+                     * <p>Kibana node IP</p>
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Node disk size
+                     * <p>Total node disk size</p>
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Disk usage
+                     * <p>Disk utilization rate</p>
                      */
                     double m_diskUsage;
                     bool m_diskUsageHasBeenSet;
 
                     /**
-                     * Node memory size
+                     * <p>Node memory size</p>
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Memory usage
+                     * <p>Memory usage rate</p>
                      */
                     double m_memUsage;
                     bool m_memUsageHasBeenSet;
 
                     /**
-                     * Number of node CPUs
+                     * <p>Number of CPUs on the node</p>
                      */
                     int64_t m_cpuNum;
                     bool m_cpuNumHasBeenSet;
 
                     /**
-                     * CPU usage
+                     * <p>cpu utilization</p>
                      */
                     double m_cpuUsage;
                     bool m_cpuUsageHasBeenSet;
 
                     /**
-                     * Availability zone
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * <p>ts-0noqayxu-az6-hot-03222010-0</p>
+                     */
+                    std::string m_nodeId;
+                    bool m_nodeIdHasBeenSet;
+
+                    /**
+                     * <p>Client-side Ip info</p>
+                     */
+                    std::string m_userIp;
+                    bool m_userIpHasBeenSet;
 
                 };
             }

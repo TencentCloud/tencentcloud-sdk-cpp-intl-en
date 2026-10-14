@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle removal configuration for the smart erasing template.
                 */
                 class UpdateSmartEraseSubtitleConfig : public AbstractModel
                 {
@@ -49,15 +49,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubtitleEraseMethod 
+                     * 获取Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
+                     * @return SubtitleEraseMethod Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
                      * 
                      */
                     std::string GetSubtitleEraseMethod() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleEraseMethod 
+                     * 设置Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
+                     * @param _subtitleEraseMethod Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
                      * 
                      */
                     void SetSubtitleEraseMethod(const std::string& _subtitleEraseMethod);
@@ -70,15 +98,31 @@ namespace TencentCloud
                     bool SubtitleEraseMethodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleModel 
+                     * 获取Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
+                     * @return SubtitleModel Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
                      * 
                      */
                     std::string GetSubtitleModel() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleModel 
+                     * 设置Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
+                     * @param _subtitleModel Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
                      * 
                      */
                     void SetSubtitleModel(const std::string& _subtitleModel);
@@ -91,15 +135,27 @@ namespace TencentCloud
                     bool SubtitleModelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrSwitch 
+                     * 获取Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
+                     * @return OcrSwitch Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
                      * 
                      */
                     std::string GetOcrSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _ocrSwitch 
+                     * 设置Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
+                     * @param _ocrSwitch Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
                      * 
                      */
                     void SetOcrSwitch(const std::string& _ocrSwitch);
@@ -112,15 +168,39 @@ namespace TencentCloud
                     bool OcrSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleLang 
+                     * 获取Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
+                     * @return SubtitleLang Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
                      * 
                      */
                     std::string GetSubtitleLang() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleLang 
+                     * 设置Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
+                     * @param _subtitleLang Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
                      * 
                      */
                     void SetSubtitleLang(const std::string& _subtitleLang);
@@ -133,15 +213,23 @@ namespace TencentCloud
                     bool SubtitleLangHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleFormat 
+                     * 获取Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
+                     * @return SubtitleFormat Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleFormat 
+                     * 设置Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
+                     * @param _subtitleFormat Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -154,15 +242,23 @@ namespace TencentCloud
                     bool SubtitleFormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransSwitch 
+                     * 获取Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
+                     * @return TransSwitch Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
                      * 
                      */
                     std::string GetTransSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _transSwitch 
+                     * 设置Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
+                     * @param _transSwitch Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
                      * 
                      */
                     void SetTransSwitch(const std::string& _transSwitch);
@@ -175,15 +271,87 @@ namespace TencentCloud
                     bool TransSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransDstLang 
+                     * 获取Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
+                     * @return TransDstLang Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
                      * 
                      */
                     std::string GetTransDstLang() const;
 
                     /**
-                     * 设置
-                     * @param _transDstLang 
+                     * 设置Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
+                     * @param _transDstLang Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
                      * 
                      */
                     void SetTransDstLang(const std::string& _transDstLang);
@@ -196,15 +364,23 @@ namespace TencentCloud
                     bool TransDstLangHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoAreas 
+                     * 获取Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @return AutoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     std::vector<EraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置
-                     * @param _autoAreas 
+                     * 设置Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @param _autoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     void SetAutoAreas(const std::vector<EraseArea>& _autoAreas);
@@ -217,15 +393,23 @@ namespace TencentCloud
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CustomAreas 
+                     * 获取Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @return CustomAreas Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     std::vector<EraseTimeArea> GetCustomAreas() const;
 
                     /**
-                     * 设置
-                     * @param _customAreas 
+                     * 设置Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @param _customAreas Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     void SetCustomAreas(const std::vector<EraseTimeArea>& _customAreas);
@@ -240,55 +424,101 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
                      */
                     std::string m_subtitleEraseMethod;
                     bool m_subtitleEraseMethodHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
                      */
                     std::string m_subtitleModel;
                     bool m_subtitleModelHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
                      */
                     std::string m_ocrSwitch;
                     bool m_ocrSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
                      */
                     std::string m_subtitleLang;
                     bool m_subtitleLangHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
                      */
                     std::string m_transSwitch;
                     bool m_transSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
                      */
                     std::string m_transDstLang;
                     bool m_transDstLangHasBeenSet;
 
                     /**
-                     * 
+                     * Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      */
                     std::vector<EraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * 
+                     * Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      */
                     std::vector<EraseTimeArea> m_customAreas;
                     bool m_customAreasHasBeenSet;

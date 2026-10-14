@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle suppression configuration for a dubbing task
+                * Subtitle configuration for dubbing task suppression
                 */
                 class DubbingEmbedSubtitleConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>id of the suppressed subtitles.</p>
-                     * @return SubtitleEmbedId <p>id of the suppressed subtitles.</p>
+                     * 获取<p>Subtitle suppression id.</p>
+                     * @return SubtitleEmbedId <p>Subtitle suppression id.</p>
                      * 
                      */
                     int64_t GetSubtitleEmbedId() const;
 
                     /**
-                     * 设置<p>id of the suppressed subtitles.</p>
-                     * @param _subtitleEmbedId <p>id of the suppressed subtitles.</p>
+                     * 设置<p>Subtitle suppression id.</p>
+                     * @param _subtitleEmbedId <p>Subtitle suppression id.</p>
                      * 
                      */
                     void SetSubtitleEmbedId(const int64_t& _subtitleEmbedId);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>id of the suppressed subtitles.</p>
+                     * <p>Subtitle suppression id.</p>
                      */
                     int64_t m_subtitleEmbedId;
                     bool m_subtitleEmbedIdHasBeenSet;

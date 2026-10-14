@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexMetaField Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     IndexMetaField GetIndexMetaField() const;
@@ -64,7 +62,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     IndexMetaField m_indexMetaField;
                     bool m_indexMetaFieldHasBeenSet;

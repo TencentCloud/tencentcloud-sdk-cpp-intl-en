@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the opening and closing credits task.
+                     * @return Output Output of the opening and closing credits task.
                      * 
                      */
                     AiAnalysisTaskHeadTailOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the opening and closing credits task.
+                     * @param _output Output of the opening and closing credits task.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskHeadTailOutput& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the opening and closing credits task.
                      */
                     AiAnalysisTaskHeadTailOutput m_output;
                     bool m_outputHasBeenSet;

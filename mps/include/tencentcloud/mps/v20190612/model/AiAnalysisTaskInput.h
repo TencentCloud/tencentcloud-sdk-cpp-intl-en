@@ -68,15 +68,35 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtendedParameter 
+                     * 获取Extended parameter, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. References:
+[Smart Erase Tutorial]: https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+                     * @return ExtendedParameter Extended parameter, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. References:
+[Smart Erase Tutorial]: https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
                      * 
                      */
                     std::string GetExtendedParameter() const;
 
                     /**
-                     * 设置
-                     * @param _extendedParameter 
+                     * 设置Extended parameter, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. References:
+[Smart Erase Tutorial]: https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+                     * @param _extendedParameter Extended parameter, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. References:
+[Smart Erase Tutorial]: https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
                      * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
@@ -97,7 +117,12 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Extended parameter, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. References:
+[Smart Erase Tutorial]: https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
                      */
                     std::string m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;

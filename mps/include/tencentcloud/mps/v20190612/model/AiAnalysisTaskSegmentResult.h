@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Splitting task output.
+                     * @return Output Splitting task output.
                      * 
                      */
                     AiAnalysisTaskSegmentOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Splitting task output.
+                     * @param _output Splitting task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskSegmentOutput& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Splitting task output.
                      */
                     AiAnalysisTaskSegmentOutput m_output;
                     bool m_outputHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asr text pornographic information
+                * Pornographic information in Asr text
                 */
                 class AiReviewPornAsrTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Asr text porn score, ranging from 0 to 100.
-                     * @return Confidence Asr text porn score, ranging from 0 to 100.
+                     * 获取Porn score of the Asr text. The score ranges from 0 to 100.
+                     * @return Confidence Porn score of the Asr text. The score ranges from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Asr text porn score, ranging from 0 to 100.
-                     * @param _confidence Asr text porn score, ranging from 0 to 100.
+                     * 设置Porn score of the Asr text. The score ranges from 0 to 100.
+                     * @param _confidence Porn score of the Asr text. The score ranges from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Asr text pornographic result suggestion, value ranges from...to...
+                     * 获取Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Asr text pornographic result suggestion, value ranges from...to...
+                     * @return Suggestion Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Asr text pornographic result suggestion, value ranges from...to...
+                     * 设置Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Asr text pornographic result suggestion, value ranges from...to...
+                     * @param _suggestion Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video segment list with suspect Asr text pornographic information.
-                     * @return SegmentSet Video segment list with suspect Asr text pornographic information.
+                     * 获取List of video segments whose Asr text is suspected of involving pornography.
+                     * @return SegmentSet List of video segments whose Asr text is suspected of involving pornography.
                      * 
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Video segment list with suspect Asr text pornographic information.
-                     * @param _segmentSet Video segment list with suspect Asr text pornographic information.
+                     * 设置List of video segments whose Asr text is suspected of involving pornography.
+                     * @param _segmentSet List of video segments whose Asr text is suspected of involving pornography.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewAsrTextSegmentItem>& _segmentSet);
@@ -125,13 +125,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Asr text porn score, ranging from 0 to 100.
+                     * Porn score of the Asr text. The score ranges from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Asr text pornographic result suggestion, value ranges from...to...
+                     * Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video segment list with suspect Asr text pornographic information.
+                     * List of video segments whose Asr text is suspected of involving pornography.
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

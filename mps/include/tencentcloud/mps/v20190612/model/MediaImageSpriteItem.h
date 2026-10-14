@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 获取Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 设置Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Height of small images in sprite sheet.
-                     * @return Height Height of small images in sprite sheet.
+                     * 获取Height of small images in sprite image.
+                     * @return Height Height of small images in sprite image.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height of small images in sprite sheet.
-                     * @param _height Height of small images in sprite sheet.
+                     * 设置Height of small images in sprite image.
+                     * @param _height Height of small images in sprite image.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Width of small images in sprite sheet.
-                     * @return Width Width of small images in sprite sheet.
+                     * 获取Width of a small image in the sprite sheet.
+                     * @return Width Width of a small image in the sprite sheet.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width of small images in sprite sheet.
-                     * @param _width Width of small images in sprite sheet.
+                     * 设置Width of a small image in the sprite sheet.
+                     * @param _width Width of a small image in the sprite sheet.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Number of small images in each sprite sheet.
-                     * @return TotalCount Number of small images in each sprite sheet.
+                     * 获取Number of small images in each sprite image.
+                     * @return TotalCount Number of small images in each sprite image.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Number of small images in each sprite sheet.
-                     * @param _totalCount Number of small images in each sprite sheet.
+                     * 设置Number of small images in each sprite image.
+                     * @param _totalCount Number of small images in each sprite image.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ImagePathSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebVttPath 
+                     * 获取Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
+                     * @return WebVttPath Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
                      * 
                      */
                     std::string GetWebVttPath() const;
 
                     /**
-                     * 设置
-                     * @param _webVttPath 
+                     * 设置Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
+                     * @param _webVttPath Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
                      * 
                      */
                     void SetWebVttPath(const std::string& _webVttPath);
@@ -197,25 +197,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Height of small images in sprite sheet.
+                     * Height of small images in sprite image.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Width of small images in sprite sheet.
+                     * Width of a small image in the sprite sheet.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Number of small images in each sprite sheet.
+                     * Number of small images in each sprite image.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -227,7 +227,7 @@ namespace TencentCloud
                     bool m_imagePathSetHasBeenSet;
 
                     /**
-                     * 
+                     * Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
                      */
                     std::string m_webVttPath;
                     bool m_webVttPathHasBeenSet;

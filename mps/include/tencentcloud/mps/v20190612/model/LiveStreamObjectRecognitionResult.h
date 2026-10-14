@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Screenshot link.
+                     * @return Url Screenshot link.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Screenshot link.
+                     * @param _url Screenshot link.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * 
+                     * Screenshot link.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

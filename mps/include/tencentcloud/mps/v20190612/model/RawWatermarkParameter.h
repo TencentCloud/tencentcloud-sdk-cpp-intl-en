@@ -76,13 +76,13 @@ namespace TencentCloud
                      * 获取Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
                      * @return CoordinateOrigin Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
                      * 
@@ -93,13 +93,13 @@ Default value: TopLeft.
                      * 设置Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
                      * @param _coordinateOrigin Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
                      * 
@@ -114,11 +114,11 @@ Default value: TopLeft.
                     bool CoordinateOriginHasBeenSet() const;
 
                     /**
-                     * 获取Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+                     * 获取Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-                     * @return XPos Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+                     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -127,11 +127,11 @@ Default value: 0px.
                     std::string GetXPos() const;
 
                     /**
-                     * 设置Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+                     * 设置Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-                     * @param _xPos Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+                     * @param _xPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -180,15 +180,15 @@ Default value: 0px.
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取Image watermark template. This field is required when Type is image, and invalid when Type is text.
-                     * @return ImageTemplate Image watermark template. This field is required when Type is image, and invalid when Type is text.
+                     * 获取Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
+                     * @return ImageTemplate Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
                      * 
                      */
                     RawImageWatermarkInput GetImageTemplate() const;
 
                     /**
-                     * 设置Image watermark template. This field is required when Type is image, and invalid when Type is text.
-                     * @param _imageTemplate Image watermark template. This field is required when Type is image, and invalid when Type is text.
+                     * 设置Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
+                     * @param _imageTemplate Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
                      * 
                      */
                     void SetImageTemplate(const RawImageWatermarkInput& _imageTemplate);
@@ -213,7 +213,7 @@ Default value: 0px.
                      * Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
                      */
@@ -221,7 +221,7 @@ Default value: TopLeft.
                     bool m_coordinateOriginHasBeenSet;
 
                     /**
-                     * Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+                     * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -239,7 +239,7 @@ Default value: 0px.
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * Image watermark template. This field is required when Type is image, and invalid when Type is text.
+                     * Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
                      */
                     RawImageWatermarkInput m_imageTemplate;
                     bool m_imageTemplateHasBeenSet;

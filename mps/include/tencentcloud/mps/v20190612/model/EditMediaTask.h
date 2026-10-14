@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edit video task info
+                * Video editing task information
                 */
                 class EditMediaTask : public AbstractModel
                 {
@@ -100,22 +100,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      * @return ErrCode Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      * @param _errCode Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for video editing tasks.
-                     * @return Input Input for video editing tasks.
+                     * 获取Input for a video editing task.
+                     * @return Input Input for a video editing task.
                      * 
                      */
                     EditMediaTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for video editing tasks.
-                     * @param _input Input for video editing tasks.
+                     * 设置Input for a video editing task.
+                     * @param _input Input for a video editing task.
                      * 
                      */
                     void SetInput(const EditMediaTaskInput& _input);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the video editing task.
+                     * @return Output Output of the video editing task.
                      * 
                      */
                     EditMediaTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the video editing task.
+                     * @param _output Output of the video editing task.
                      * 
                      */
                     void SetOutput(const EditMediaTaskOutput& _output);
@@ -208,8 +208,8 @@ namespace TencentCloud
 
                     /**
                      * Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -221,13 +221,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for video editing tasks.
+                     * Input for a video editing task.
                      */
                     EditMediaTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the video editing task.
                      */
                     EditMediaTaskOutput m_output;
                     bool m_outputHasBeenSet;

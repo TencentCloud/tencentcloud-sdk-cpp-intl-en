@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * dubbing task output configuration
+                * Output configuration of a dubbing task
                 */
                 class DubbingOutputConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
-                     * @return OutputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+                     * 获取<p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
+                     * @return OutputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
                      * 
                      */
                     std::string GetOutputMode() const;
 
                     /**
-                     * 设置<p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
-                     * @param _outputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+                     * 设置<p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
+                     * @param _outputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
                      * 
                      */
                     void SetOutputMode(const std::string& _outputMode);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool OutputFinalVideoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
-                     * @return OutputSubtitle <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+                     * 获取<p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
+                     * @return OutputSubtitle <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
                      * 
                      */
                     std::string GetOutputSubtitle() const;
 
                     /**
-                     * 设置<p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
-                     * @param _outputSubtitle <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+                     * 设置<p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
+                     * @param _outputSubtitle <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
                      * 
                      */
                     void SetOutputSubtitle(const std::string& _outputSubtitle);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool OutputSubtitleHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
-                     * @return OutputDstAudio <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+                     * 获取<p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+                     * @return OutputDstAudio <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
                      * 
                      */
                     std::string GetOutputDstAudio() const;
 
                     /**
-                     * 设置<p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
-                     * @param _outputDstAudio <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+                     * 设置<p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+                     * @param _outputDstAudio <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
                      * 
                      */
                     void SetOutputDstAudio(const std::string& _outputDstAudio);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool OutputDstAudioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle suppression configuration message.</p>
-                     * @return EmbedSubtitleConfig <p>Subtitle suppression configuration message.</p>
+                     * 获取<p>Suppression subtitle configuration message.</p>
+                     * @return EmbedSubtitleConfig <p>Suppression subtitle configuration message.</p>
                      * 
                      */
                     DubbingEmbedSubtitleConfig GetEmbedSubtitleConfig() const;
 
                     /**
-                     * 设置<p>Subtitle suppression configuration message.</p>
-                     * @param _embedSubtitleConfig <p>Subtitle suppression configuration message.</p>
+                     * 设置<p>Suppression subtitle configuration message.</p>
+                     * @param _embedSubtitleConfig <p>Suppression subtitle configuration message.</p>
                      * 
                      */
                     void SetEmbedSubtitleConfig(const DubbingEmbedSubtitleConfig& _embedSubtitleConfig);
@@ -155,7 +155,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+                     * <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
                      */
                     std::string m_outputMode;
                     bool m_outputModeHasBeenSet;
@@ -167,19 +167,19 @@ namespace TencentCloud
                     bool m_outputFinalVideoHasBeenSet;
 
                     /**
-                     * <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+                     * <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
                      */
                     std::string m_outputSubtitle;
                     bool m_outputSubtitleHasBeenSet;
 
                     /**
-                     * <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+                     * <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
                      */
                     std::string m_outputDstAudio;
                     bool m_outputDstAudioHasBeenSet;
 
                     /**
-                     * <p>Subtitle suppression configuration message.</p>
+                     * <p>Suppression subtitle configuration message.</p>
                      */
                     DubbingEmbedSubtitleConfig m_embedSubtitleConfig;
                     bool m_embedSubtitleConfigHasBeenSet;

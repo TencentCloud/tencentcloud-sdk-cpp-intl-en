@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Fixed IP configuration for public network access
+                * Public network access fixed ip configuration
                 */
                 class EipConfigIn : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status of the EIP. Values: ['ENABLE','DISABLE']
-                     * @return EipStatus Status of the EIP. Values: ['ENABLE','DISABLE']
+                     * 获取Eip status. Valid values: `ENABLE` and `DISABLE`
+                     * @return EipStatus Eip status. Valid values: `ENABLE` and `DISABLE`
                      * 
                      */
                     std::string GetEipStatus() const;
 
                     /**
-                     * 设置Status of the EIP. Values: ['ENABLE','DISABLE']
-                     * @param _eipStatus Status of the EIP. Values: ['ENABLE','DISABLE']
+                     * 设置Eip status. Valid values: `ENABLE` and `DISABLE`
+                     * @param _eipStatus Eip status. Valid values: `ENABLE` and `DISABLE`
                      * 
                      */
                     void SetEipStatus(const std::string& _eipStatus);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status of the EIP. Values: ['ENABLE','DISABLE']
+                     * Eip status. Valid values: `ENABLE` and `DISABLE`
                      */
                     std::string m_eipStatus;
                     bool m_eipStatusHasBeenSet;

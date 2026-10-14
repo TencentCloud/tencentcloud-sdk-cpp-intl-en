@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Ocr text audit suspected segment
+                * Suspected segment of Ocr text audit in content review
                 */
                 class MediaContentReviewOcrTextSegmentItem : public AbstractModel
                 {
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Result Suggestions for suspected segment review, value ranges from...to...
+                     * 获取Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Result Suggestions for suspected segment review, value ranges from...to...
+                     * @return Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result Suggestions for suspected segment review, value ranges from...to...
+                     * 设置Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Result Suggestions for suspected segment review, value ranges from...to...
+                     * @param _suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Suspicious keyword list.
-                     * @return KeywordSet Suspicious keyword list.
+                     * 获取List of suspicious keywords.
+                     * @return KeywordSet List of suspicious keywords.
                      * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
-                     * 设置Suspicious keyword list.
-                     * @param _keywordSet Suspicious keyword list.
+                     * 设置List of suspicious keywords.
+                     * @param _keywordSet List of suspicious keywords.
                      * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
@@ -164,15 +164,15 @@ namespace TencentCloud
                     bool KeywordSetHasBeenSet() const;
 
                     /**
-                     * 获取Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-                     * @return AreaCoordSet Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * 获取Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * @return AreaCoordSet Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-                     * @param _areaCoordSet Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * 设置Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * @param _areaCoordSet Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -185,19 +185,19 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @return Url Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 获取Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @return Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @param _url Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 设置Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @param _url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -210,15 +210,15 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -251,7 +251,7 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Result Suggestions for suspected segment review, value ranges from...to...
+                     * Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -260,26 +260,26 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Suspicious keyword list.
+                     * List of suspicious keywords.
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;
 
                     /**
-                     * Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
+                     * Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

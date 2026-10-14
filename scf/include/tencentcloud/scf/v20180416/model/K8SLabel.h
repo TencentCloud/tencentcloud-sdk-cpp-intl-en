@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Key 
+                     * 获取Name of the label
+                     * @return Key Name of the label
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置
-                     * @param _key 
+                     * 设置Name of the label
+                     * @param _key Name of the label
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取Value of the label
+                     * @return Value Value of the label
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置
-                     * @param _value 
+                     * 设置Value of the label
+                     * @param _value Value of the label
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Name of the label
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * 
+                     * Value of the label
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

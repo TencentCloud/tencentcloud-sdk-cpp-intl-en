@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return QualityControlResults 
+                     * 获取Content quality inspection result list.
+                     * @return QualityControlResults Content quality inspection result list.
                      * @deprecated
                      */
                     std::vector<QualityControlResult> GetQualityControlResults() const;
 
                     /**
-                     * 设置
-                     * @param _qualityControlResults 
+                     * 设置Content quality inspection result list.
+                     * @param _qualityControlResults Content quality inspection result list.
                      * @deprecated
                      */
                     void SetQualityControlResults(const std::vector<QualityControlResult>& _qualityControlResults);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool QualityControlResultsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiagnoseResults 
+                     * 获取Format diagnostic result list.
+                     * @return DiagnoseResults Format diagnostic result list.
                      * @deprecated
                      */
                     std::vector<DiagnoseResult> GetDiagnoseResults() const;
 
                     /**
-                     * 设置
-                     * @param _diagnoseResults 
+                     * 设置Format diagnostic result list.
+                     * @param _diagnoseResults Format diagnostic result list.
                      * @deprecated
                      */
                     void SetDiagnoseResults(const std::vector<DiagnoseResult>& _diagnoseResults);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool DiagnoseResultsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QualityControlResultSet 
+                     * 获取Content quality inspection result list.
+                     * @return QualityControlResultSet Content quality inspection result list.
                      * 
                      */
                     std::vector<QualityControlResult> GetQualityControlResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _qualityControlResultSet 
+                     * 设置Content quality inspection result list.
+                     * @param _qualityControlResultSet Content quality inspection result list.
                      * 
                      */
                     void SetQualityControlResultSet(const std::vector<QualityControlResult>& _qualityControlResultSet);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool QualityControlResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiagnoseResultSet 
+                     * 获取Format diagnostic result list.
+                     * @return DiagnoseResultSet Format diagnostic result list.
                      * 
                      */
                     std::vector<DiagnoseResult> GetDiagnoseResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _diagnoseResultSet 
+                     * 设置Format diagnostic result list.
+                     * @param _diagnoseResultSet Format diagnostic result list.
                      * 
                      */
                     void SetDiagnoseResultSet(const std::vector<DiagnoseResult>& _diagnoseResultSet);
@@ -135,25 +135,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Content quality inspection result list.
                      */
                     std::vector<QualityControlResult> m_qualityControlResults;
                     bool m_qualityControlResultsHasBeenSet;
 
                     /**
-                     * 
+                     * Format diagnostic result list.
                      */
                     std::vector<DiagnoseResult> m_diagnoseResults;
                     bool m_diagnoseResultsHasBeenSet;
 
                     /**
-                     * 
+                     * Content quality inspection result list.
                      */
                     std::vector<QualityControlResult> m_qualityControlResultSet;
                     bool m_qualityControlResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Format diagnostic result list.
                      */
                     std::vector<DiagnoseResult> m_diagnoseResultSet;
                     bool m_diagnoseResultSetHasBeenSet;

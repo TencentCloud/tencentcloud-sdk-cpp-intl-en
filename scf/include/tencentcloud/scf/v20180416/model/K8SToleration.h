@@ -35,7 +35,8 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Kubernetes taint and toleration. Please note the supported fields for your Kubernetes version during use.
+See https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
                 */
                 class K8SToleration : public AbstractModel
                 {
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Key 
+                     * 获取Matched taint name
+                     * @return Key Matched taint name
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置
-                     * @param _key 
+                     * 设置Matched taint name
+                     * @param _key Matched taint name
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operator 
+                     * 获取Match mode. Default value: Equal.
+                     * @return Operator Match mode. Default value: Equal.
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置
-                     * @param _operator 
+                     * 设置Match mode. Default value: Equal.
+                     * @param _operator Match mode. Default value: Equal.
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Effect 
+                     * 获取Execution policy
+                     * @return Effect Execution policy
                      * 
                      */
                     std::string GetEffect() const;
 
                     /**
-                     * 设置
-                     * @param _effect 
+                     * 设置Execution policy
+                     * @param _effect Execution policy
                      * 
                      */
                     void SetEffect(const std::string& _effect);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool EffectHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取Taint value to match. Required when Operator is Equal.
+                     * @return Value Taint value to match. Required when Operator is Equal.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置
-                     * @param _value 
+                     * 设置Taint value to match. Required when Operator is Equal.
+                     * @param _value Taint value to match. Required when Operator is Equal.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TolerationSeconds 
+                     * 获取How long a Pod can still run on a node when the taint is not tolerated
+                     * @return TolerationSeconds How long a Pod can still run on a node when the taint is not tolerated
                      * 
                      */
                     uint64_t GetTolerationSeconds() const;
 
                     /**
-                     * 设置
-                     * @param _tolerationSeconds 
+                     * 设置How long a Pod can still run on a node when the taint is not tolerated
+                     * @param _tolerationSeconds How long a Pod can still run on a node when the taint is not tolerated
                      * 
                      */
                     void SetTolerationSeconds(const uint64_t& _tolerationSeconds);
@@ -154,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Matched taint name
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * 
+                     * Match mode. Default value: Equal.
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * 
+                     * Execution policy
                      */
                     std::string m_effect;
                     bool m_effectHasBeenSet;
 
                     /**
-                     * 
+                     * Taint value to match. Required when Operator is Equal.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * 
+                     * How long a Pod can still run on a node when the taint is not tolerated
                      */
                     uint64_t m_tolerationSeconds;
                     bool m_tolerationSecondsHasBeenSet;

@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Input information on the full speech recognition task.
+                     * @return Input Input information on the full speech recognition task.
                      * 
                      */
                     SmartSubtitleTaskResultInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置Input information on the full speech recognition task.
+                     * @param _input Input information on the full speech recognition task.
                      * 
                      */
                     void SetInput(const SmartSubtitleTaskResultInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output information on the full speech recognition task.
+                     * @return Output Output information on the full speech recognition task.
                      * 
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output information on the full speech recognition task.
+                     * @param _output Output information on the full speech recognition task.
                      * 
                      */
                     void SetOutput(const SmartSubtitleTaskAsrFullTextResultOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Task progress.
+                     * @return Progress Task progress.
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Task progress.
+                     * @param _progress Task progress.
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -222,19 +222,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Input information on the full speech recognition task.
                      */
                     SmartSubtitleTaskResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output information on the full speech recognition task.
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * Task progress.
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input address IP.
-                     * @return Ip Input address IP.
+                     * 获取IP of the input address.
+                     * @return Ip IP of the input address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Input address IP.
-                     * @param _ip Input address IP.
+                     * 设置IP of the input address.
+                     * @param _ip IP of the input address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Input address port.
-                     * @return Port Input address port.
+                     * 获取The port of the input address.
+                     * @return Port The port of the input address.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Input address port.
-                     * @param _port Input address port.
+                     * 设置The port of the input address.
+                     * @param _port The port of the input address.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input address IP.
+                     * IP of the input address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Input address port.
+                     * The port of the input address.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

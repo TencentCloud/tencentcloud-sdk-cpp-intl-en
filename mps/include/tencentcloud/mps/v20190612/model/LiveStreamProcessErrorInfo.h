@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream processing error information
+                * Error information of live stream processing
                 */
                 class LiveStreamProcessErrorInfo : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
                      * @return ErrCode Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
                      * @param _errCode Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -100,8 +100,8 @@ namespace TencentCloud
 
                     /**
                      * Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

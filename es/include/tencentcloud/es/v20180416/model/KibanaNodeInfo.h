@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Kibana node information
+                * Kibana node-related information of the instance
                 */
                 class KibanaNodeInfo : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool KibanaNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of Kibana node's CPUs
-                     * @return KibanaNodeCpuNum Number of Kibana node's CPUs
+                     * 获取Number of CPUs of the Kibana node
+                     * @return KibanaNodeCpuNum Number of CPUs of the Kibana node
                      * 
                      */
                     uint64_t GetKibanaNodeCpuNum() const;
 
                     /**
-                     * 设置Number of Kibana node's CPUs
-                     * @param _kibanaNodeCpuNum Number of Kibana node's CPUs
+                     * 设置Number of CPUs of the Kibana node
+                     * @param _kibanaNodeCpuNum Number of CPUs of the Kibana node
                      * 
                      */
                     void SetKibanaNodeCpuNum(const uint64_t& _kibanaNodeCpuNum);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool KibanaNodeCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Kibana node's memory in GB
-                     * @return KibanaNodeMemSize Kibana node's memory in GB
+                     * 获取Kibana node memory in GB
+                     * @return KibanaNodeMemSize Kibana node memory in GB
                      * 
                      */
                     uint64_t GetKibanaNodeMemSize() const;
 
                     /**
-                     * 设置Kibana node's memory in GB
-                     * @param _kibanaNodeMemSize Kibana node's memory in GB
+                     * 设置Kibana node memory in GB
+                     * @param _kibanaNodeMemSize Kibana node memory in GB
                      * 
                      */
                     void SetKibanaNodeMemSize(const uint64_t& _kibanaNodeMemSize);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool KibanaNodeMemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Kibana node's disk type
-                     * @return KibanaNodeDiskType Kibana node's disk type
+                     * 获取Kibana node disk type
+                     * @return KibanaNodeDiskType Kibana node disk type
                      * 
                      */
                     std::string GetKibanaNodeDiskType() const;
 
                     /**
-                     * 设置Kibana node's disk type
-                     * @param _kibanaNodeDiskType Kibana node's disk type
+                     * 设置Kibana node disk type
+                     * @param _kibanaNodeDiskType Kibana node disk type
                      * 
                      */
                     void SetKibanaNodeDiskType(const std::string& _kibanaNodeDiskType);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool KibanaNodeDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Kibana node's disk size
-                     * @return KibanaNodeDiskSize Kibana node's disk size
+                     * 获取Kibana node disk size
+                     * @return KibanaNodeDiskSize Kibana node disk size
                      * 
                      */
                     uint64_t GetKibanaNodeDiskSize() const;
 
                     /**
-                     * 设置Kibana node's disk size
-                     * @param _kibanaNodeDiskSize Kibana node's disk size
+                     * 设置Kibana node disk size
+                     * @param _kibanaNodeDiskSize Kibana node disk size
                      * 
                      */
                     void SetKibanaNodeDiskSize(const uint64_t& _kibanaNodeDiskSize);
@@ -187,25 +187,25 @@ namespace TencentCloud
                     bool m_kibanaNodeNumHasBeenSet;
 
                     /**
-                     * Number of Kibana node's CPUs
+                     * Number of CPUs of the Kibana node
                      */
                     uint64_t m_kibanaNodeCpuNum;
                     bool m_kibanaNodeCpuNumHasBeenSet;
 
                     /**
-                     * Kibana node's memory in GB
+                     * Kibana node memory in GB
                      */
                     uint64_t m_kibanaNodeMemSize;
                     bool m_kibanaNodeMemSizeHasBeenSet;
 
                     /**
-                     * Kibana node's disk type
+                     * Kibana node disk type
                      */
                     std::string m_kibanaNodeDiskType;
                     bool m_kibanaNodeDiskTypeHasBeenSet;
 
                     /**
-                     * Kibana node's disk size
+                     * Kibana node disk size
                      */
                     uint64_t m_kibanaNodeDiskSize;
                     bool m_kibanaNodeDiskSizeHasBeenSet;

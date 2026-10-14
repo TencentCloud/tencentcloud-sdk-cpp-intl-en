@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SpecCode 
+                     * 获取<p>Specification code</p>
+                     * @return SpecCode <p>Specification code</p>
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置
-                     * @param _specCode 
+                     * 设置<p>Specification code</p>
+                     * @param _specCode <p>Specification code</p>
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StorageNodeMinDiskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageType 
+                     * 获取<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+                     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置
-                     * @param _storageType 
+                     * 设置<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+                     * @param _storageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageNodeDefaultDisk 
+                     * 获取<p>Default disk size of storage node for frontend display</p>
+                     * @return StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
                      * 
                      */
                     int64_t GetStorageNodeDefaultDisk() const;
 
                     /**
-                     * 设置
-                     * @param _storageNodeDefaultDisk 
+                     * 设置<p>Default disk size of storage node for frontend display</p>
+                     * @param _storageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
                      * 
                      */
                     void SetStorageNodeDefaultDisk(const int64_t& _storageNodeDefaultDisk);
@@ -280,7 +280,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Specification code</p>
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
@@ -322,13 +322,13 @@ namespace TencentCloud
                     bool m_storageNodeMinDiskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Default disk size of storage node for frontend display</p>
                      */
                     int64_t m_storageNodeDefaultDisk;
                     bool m_storageNodeDefaultDiskHasBeenSet;

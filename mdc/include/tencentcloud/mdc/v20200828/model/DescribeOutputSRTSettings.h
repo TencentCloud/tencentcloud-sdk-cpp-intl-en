@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdc/v20200828/model/SRTAddressDestination.h>
 #include <tencentcloud/mdc/v20200828/model/OutputSRTSourceAddressResp.h>
+#include <tencentcloud/mdc/v20200828/model/SRTFECFullOptions.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * SRT configuration information of the queried output.
+                * Query the output SRT configuration information.
                 */
                 class DescribeOutputSRTSettings : public AbstractModel
                 {
@@ -49,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Destination address list. Used when the SRT mode is CALLER.
+                     * @return Destinations Destination address list. Used when the SRT mode is CALLER.
                      * 
                      */
                     std::vector<SRTAddressDestination> GetDestinations() const;
 
                     /**
-                     * 设置A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Destination address list. Used when the SRT mode is CALLER.
+                     * @param _destinations Destination address list. Used when the SRT mode is CALLER.
                      * 
                      */
                     void SetDestinations(const std::vector<SRTAddressDestination>& _destinations);
@@ -74,19 +71,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DestinationsHasBeenSet() const;
 
                     /**
-                     * 获取Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StreamId Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Stream Id.
+                     * @return StreamId Stream Id.
                      * 
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _streamId Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Stream Id.
+                     * @param _streamId Stream Id.
                      * 
                      */
                     void SetStreamId(const std::string& _streamId);
@@ -99,19 +92,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Latency Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Delay.
+                     * @return Latency Delay.
                      * 
                      */
                     int64_t GetLatency() const;
 
                     /**
-                     * 设置Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _latency Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Delay.
+                     * @param _latency Delay.
                      * 
                      */
                     void SetLatency(const int64_t& _latency);
@@ -124,19 +113,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LatencyHasBeenSet() const;
 
                     /**
-                     * 获取Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RecvLatency Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Receive delay.
+                     * @return RecvLatency Receive delay.
                      * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
-                     * 设置Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _recvLatency Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Receive delay.
+                     * @param _recvLatency Receive delay.
                      * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
@@ -149,19 +134,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RecvLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PeerLatency Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Peer delay.
+                     * @return PeerLatency Peer delay.
                      * 
                      */
                     int64_t GetPeerLatency() const;
 
                     /**
-                     * 设置Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _peerLatency Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Peer delay.
+                     * @param _peerLatency Peer delay.
                      * 
                      */
                     void SetPeerLatency(const int64_t& _peerLatency);
@@ -174,19 +155,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PeerLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PeerIdleTimeout Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Idle timeout period of the peer.
+                     * @return PeerIdleTimeout Idle timeout period of the peer.
                      * 
                      */
                     int64_t GetPeerIdleTimeout() const;
 
                     /**
-                     * 设置Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _peerIdleTimeout Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Idle timeout period of the peer.
+                     * @param _peerIdleTimeout Idle timeout period of the peer.
                      * 
                      */
                     void SetPeerIdleTimeout(const int64_t& _peerIdleTimeout);
@@ -200,18 +177,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Passphrase Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPassphrase() const;
 
                     /**
                      * 设置Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _passphrase Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPassphrase(const std::string& _passphrase);
@@ -225,18 +198,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PbKeyLen Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPbKeyLen() const;
 
                     /**
                      * 设置Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _pbKeyLen Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPbKeyLen(const int64_t& _pbKeyLen);
@@ -249,19 +218,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PbKeyLenHasBeenSet() const;
 
                     /**
-                     * 获取The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取SRT mode.
+                     * @return Mode SRT mode.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置SRT mode.
+                     * @param _mode SRT mode.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -274,19 +239,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Server listening address, used when the SRT mode is LISTENER.
+                     * @return SourceAddresses Server listening address, used when the SRT mode is LISTENER.
                      * 
                      */
                     std::vector<OutputSRTSourceAddressResp> GetSourceAddresses() const;
 
                     /**
-                     * 设置The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _sourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Server listening address, used when the SRT mode is LISTENER.
+                     * @param _sourceAddresses Server listening address, used when the SRT mode is LISTENER.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<OutputSRTSourceAddressResp>& _sourceAddresses);
@@ -298,77 +259,94 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool SourceAddressesHasBeenSet() const;
 
+                    /**
+                     * 获取SRT FEC configuration
+                     * @return FEC SRT FEC configuration
+                     * 
+                     */
+                    SRTFECFullOptions GetFEC() const;
+
+                    /**
+                     * 设置SRT FEC configuration
+                     * @param _fEC SRT FEC configuration
+                     * 
+                     */
+                    void SetFEC(const SRTFECFullOptions& _fEC);
+
+                    /**
+                     * 判断参数 FEC 是否已赋值
+                     * @return FEC 是否已赋值
+                     * 
+                     */
+                    bool FECHasBeenSet() const;
+
                 private:
 
                     /**
-                     * A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Destination address list. Used when the SRT mode is CALLER.
                      */
                     std::vector<SRTAddressDestination> m_destinations;
                     bool m_destinationsHasBeenSet;
 
                     /**
-                     * Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Stream Id.
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Delay.
                      */
                     int64_t m_latency;
                     bool m_latencyHasBeenSet;
 
                     /**
-                     * Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Receive delay.
                      */
                     int64_t m_recvLatency;
                     bool m_recvLatencyHasBeenSet;
 
                     /**
-                     * Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Peer delay.
                      */
                     int64_t m_peerLatency;
                     bool m_peerLatencyHasBeenSet;
 
                     /**
-                     * Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Idle timeout period of the peer.
                      */
                     int64_t m_peerIdleTimeout;
                     bool m_peerIdleTimeoutHasBeenSet;
 
                     /**
                      * Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_passphrase;
                     bool m_passphraseHasBeenSet;
 
                     /**
                      * Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_pbKeyLen;
                     bool m_pbKeyLenHasBeenSet;
 
                     /**
-                     * The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * SRT mode.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Server listening address, used when the SRT mode is LISTENER.
                      */
                     std::vector<OutputSRTSourceAddressResp> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;
+
+                    /**
+                     * SRT FEC configuration
+                     */
+                    SRTFECFullOptions m_fEC;
+                    bool m_fECHasBeenSet;
 
                 };
             }

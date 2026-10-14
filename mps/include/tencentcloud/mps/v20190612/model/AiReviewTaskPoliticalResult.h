@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review sensitive task input.
-                     * @return Input Content review sensitive task input.
+                     * 获取Sensitive task input for content review.
+                     * @return Input Sensitive task input for content review.
                      * 
                      */
                     AiReviewPoliticalTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review sensitive task input.
-                     * @param _input Content review sensitive task input.
+                     * 设置Sensitive task input for content review.
+                     * @param _input Sensitive task input for content review.
                      * 
                      */
                     void SetInput(const AiReviewPoliticalTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of sensitive tasks in content review.
+                     * @return Output Output of sensitive tasks in content review.
                      * 
                      */
                     AiReviewPoliticalTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of sensitive tasks in content review.
+                     * @param _output Output of sensitive tasks in content review.
                      * 
                      */
                     void SetOutput(const AiReviewPoliticalTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review sensitive task input.
+                     * Sensitive task input for content review.
                      */
                     AiReviewPoliticalTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of sensitive tasks in content review.
                      */
                     AiReviewPoliticalTaskOutput m_output;
                     bool m_outputHasBeenSet;

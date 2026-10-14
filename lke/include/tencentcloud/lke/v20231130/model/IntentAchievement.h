@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Method to attain the intent
                 */
                 class IntentAchievement : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
+                     * @return Name Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
+                     * @param _name Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Desc 
+                     * 获取Description of the method to attain the intent
+                     * @return Desc Description of the method to attain the intent
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置
-                     * @param _desc 
+                     * 设置Description of the method to attain the intent
+                     * @param _desc Description of the method to attain the intent
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Description of the method to attain the intent
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID
+                     * @return InstanceId Instance ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID
+                     * @param _instanceId Instance ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取A list of node types used to receive requests.
-                     * @return TargetNodeTypes A list of node types used to receive requests.
+                     * 获取List of target node types that receive requests
+                     * @return TargetNodeTypes List of target node types that receive requests
                      * 
                      */
                     std::vector<std::string> GetTargetNodeTypes() const;
 
                     /**
-                     * 设置A list of node types used to receive requests.
-                     * @param _targetNodeTypes A list of node types used to receive requests.
+                     * 设置List of target node types that receive requests
+                     * @param _targetNodeTypes List of target node types that receive requests
                      * 
                      */
                     void SetTargetNodeTypes(const std::vector<std::string>& _targetNodeTypes);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * A list of node types used to receive requests.
+                     * List of target node types that receive requests
                      */
                     std::vector<std::string> m_targetNodeTypes;
                     bool m_targetNodeTypesHasBeenSet;

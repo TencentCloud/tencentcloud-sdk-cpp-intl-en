@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom parameters for AI Dubbing
+                * Custom parameter for AI dubbing
                 */
                 class OverrideAIDubbingParameter : public AbstractModel
                 {
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool DubbingConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output configuration information.</p>
-                     * @return OutputConfig <p>Output configuration information.</p>
+                     * 获取<p>Outputs configuration message.</p>
+                     * @return OutputConfig <p>Outputs configuration message.</p>
                      * 
                      */
                     DubbingOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output configuration information.</p>
-                     * @param _outputConfig <p>Output configuration information.</p>
+                     * 设置<p>Outputs configuration message.</p>
+                     * @param _outputConfig <p>Outputs configuration message.</p>
                      * 
                      */
                     void SetOutputConfig(const DubbingOutputConfig& _outputConfig);
@@ -155,7 +155,7 @@ namespace TencentCloud
                     bool m_dubbingConfigHasBeenSet;
 
                     /**
-                     * <p>Output configuration information.</p>
+                     * <p>Outputs configuration message.</p>
                      */
                     DubbingOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

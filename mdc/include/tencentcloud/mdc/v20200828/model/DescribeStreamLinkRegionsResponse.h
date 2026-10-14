@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取StreamLink region information
-                     * @return Info StreamLink region information
+                     * 获取Media transmission region information.
+                     * @return Info Media transmission region information.
                      * 
                      */
                     StreamLinkRegionInfo GetInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * StreamLink region information
+                     * Media transmission region information.
                      */
                     StreamLinkRegionInfo m_info;
                     bool m_infoHasBeenSet;

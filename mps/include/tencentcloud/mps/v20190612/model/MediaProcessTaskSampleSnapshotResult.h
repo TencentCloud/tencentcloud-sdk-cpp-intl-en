@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for the sampling screenshot task on a video.
-                     * @return Input Input for the sampling screenshot task on a video.
+                     * 获取Input of the sampling screenshot task for videos.
+                     * @return Input Input of the sampling screenshot task for videos.
                      * 
                      */
                     SampleSnapshotTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for the sampling screenshot task on a video.
-                     * @param _input Input for the sampling screenshot task on a video.
+                     * 设置Input of the sampling screenshot task for videos.
+                     * @param _input Input of the sampling screenshot task for videos.
                      * 
                      */
                     void SetInput(const SampleSnapshotTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the sampling screenshot task for videos.
+                     * @return Output Output of the sampling screenshot task for videos.
                      * 
                      */
                     MediaSampleSnapshotItem GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the sampling screenshot task for videos.
+                     * @param _output Output of the sampling screenshot task for videos.
                      * 
                      */
                     void SetOutput(const MediaSampleSnapshotItem& _output);
@@ -243,13 +243,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for the sampling screenshot task on a video.
+                     * Input of the sampling screenshot task for videos.
                      */
                     SampleSnapshotTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the sampling screenshot task for videos.
                      */
                     MediaSampleSnapshotItem m_output;
                     bool m_outputHasBeenSet;

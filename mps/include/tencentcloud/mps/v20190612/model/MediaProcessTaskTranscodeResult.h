@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Transcoding task result type
+                * Result type of the transcoding task
                 */
                 class MediaProcessTaskTranscodeResult : public AbstractModel
                 {
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Transcoding task output.
+                     * @return Output Transcoding task output.
                      * 
                      */
                     MediaTranscodeItem GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Transcoding task output.
+                     * @param _output Transcoding task output.
                      * 
                      */
                     void SetOutput(const MediaTranscodeItem& _output);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Transcoding task output.
                      */
                     MediaTranscodeItem m_output;
                     bool m_outputHasBeenSet;

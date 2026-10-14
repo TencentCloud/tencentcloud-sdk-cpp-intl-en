@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool KeywordsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Paragraphs 
+                     * 获取Segmentation result.
+                     * @return Paragraphs Segmentation result.
                      * 
                      */
                     std::vector<AiParagraphInfo> GetParagraphs() const;
 
                     /**
-                     * 设置
-                     * @param _paragraphs 
+                     * 设置Segmentation result.
+                     * @param _paragraphs Segmentation result.
                      * 
                      */
                     void SetParagraphs(const std::vector<AiParagraphInfo>& _paragraphs);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ParagraphsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MindMapUrl 
+                     * 获取Address of the mind map of a summary task.
+                     * @return MindMapUrl Address of the mind map of a summary task.
                      * 
                      */
                     std::string GetMindMapUrl() const;
 
                     /**
-                     * 设置
-                     * @param _mindMapUrl 
+                     * 设置Address of the mind map of a summary task.
+                     * @param _mindMapUrl Address of the mind map of a summary task.
                      * 
                      */
                     void SetMindMapUrl(const std::string& _mindMapUrl);
@@ -264,13 +264,13 @@ namespace TencentCloud
                     bool m_keywordsHasBeenSet;
 
                     /**
-                     * 
+                     * Segmentation result.
                      */
                     std::vector<AiParagraphInfo> m_paragraphs;
                     bool m_paragraphsHasBeenSet;
 
                     /**
-                     * 
+                     * Address of the mind map of a summary task.
                      */
                     std::string m_mindMapUrl;
                     bool m_mindMapUrlHasBeenSet;

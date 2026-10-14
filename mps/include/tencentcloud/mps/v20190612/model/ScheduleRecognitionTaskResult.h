@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Orchestrate the result type of a video recognition task
+                * Result type of the orchestration video recognition task
                 */
                 class ScheduleRecognitionTaskResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Recognition task input.
-                     * @return Input Recognition task input.
+                     * 获取Input of the recognition task.
+                     * @return Input Input of the recognition task.
                      * 
                      */
                     AiRecognitionTaskInput GetInput() const;
 
                     /**
-                     * 设置Recognition task input.
-                     * @param _input Recognition task input.
+                     * 设置Input of the recognition task.
+                     * @param _input Input of the recognition task.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Recognition task output.
-                     * @return Output Recognition task output.
+                     * 获取Output of the identification task.
+                     * @return Output Output of the identification task.
                      * 
                      */
                     std::vector<AiRecognitionResult> GetOutput() const;
 
                     /**
-                     * 设置Recognition task output.
-                     * @param _output Recognition task output.
+                     * 设置Output of the identification task.
+                     * @param _output Output of the identification task.
                      * 
                      */
                     void SetOutput(const std::vector<AiRecognitionResult>& _output);
@@ -243,13 +243,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Recognition task input.
+                     * Input of the recognition task.
                      */
                     AiRecognitionTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Recognition task output.
+                     * Output of the identification task.
                      */
                     std::vector<AiRecognitionResult> m_output;
                     bool m_outputHasBeenSet;

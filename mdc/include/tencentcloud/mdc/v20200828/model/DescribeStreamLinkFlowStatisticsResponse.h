@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A list of the media data.
-                     * @return Infos A list of the media data.
+                     * 获取List of media data in the transport stream.
+                     * @return Infos List of media data in the transport stream.
                      * 
                      */
                     std::vector<FlowStatisticsArray> GetInfos() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A list of the media data.
+                     * List of media data in the transport stream.
                      */
                     std::vector<FlowStatisticsArray> m_infos;
                     bool m_infosHasBeenSet;

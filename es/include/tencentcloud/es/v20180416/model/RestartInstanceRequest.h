@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
-                     * @return ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+                     * 获取<p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
+                     * @return ForceRestart <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
                      * 
                      */
                     bool GetForceRestart() const;
 
                     /**
-                     * 设置Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
-                     * @param _forceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+                     * 设置<p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
+                     * @param _forceRestart <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
                      * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ForceRestartHasBeenSet() const;
 
                     /**
-                     * 获取Restart mode. `0`: rolling restart; `1`: full restart
-                     * @return RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     * 获取<p>Restart mode: 0 rolling restart; 1 full restart</p>
+                     * @return RestartMode <p>Restart mode: 0 rolling restart; 1 full restart</p>
                      * 
                      */
                     int64_t GetRestartMode() const;
 
                     /**
-                     * 设置Restart mode. `0`: rolling restart; `1`: full restart
-                     * @param _restartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     * 设置<p>Restart mode: 0 rolling restart; 1 full restart</p>
+                     * @param _restartMode <p>Restart mode: 0 rolling restart; 1 full restart</p>
                      * 
                      */
                     void SetRestartMode(const int64_t& _restartMode);
@@ -105,25 +105,52 @@ namespace TencentCloud
                      */
                     bool RestartModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Select whether to upgrade the kernel patch version upon restart</p>
+                     * @return UpgradeKernel <p>Select whether to upgrade the kernel patch version upon restart</p>
+                     * 
+                     */
+                    bool GetUpgradeKernel() const;
+
+                    /**
+                     * 设置<p>Select whether to upgrade the kernel patch version upon restart</p>
+                     * @param _upgradeKernel <p>Select whether to upgrade the kernel patch version upon restart</p>
+                     * 
+                     */
+                    void SetUpgradeKernel(const bool& _upgradeKernel);
+
+                    /**
+                     * 判断参数 UpgradeKernel 是否已赋值
+                     * @return UpgradeKernel 是否已赋值
+                     * 
+                     */
+                    bool UpgradeKernelHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+                     * <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;
 
                     /**
-                     * Restart mode. `0`: rolling restart; `1`: full restart
+                     * <p>Restart mode: 0 rolling restart; 1 full restart</p>
                      */
                     int64_t m_restartMode;
                     bool m_restartModeHasBeenSet;
+
+                    /**
+                     * <p>Select whether to upgrade the kernel patch version upon restart</p>
+                     */
+                    bool m_upgradeKernel;
+                    bool m_upgradeKernelHasBeenSet;
 
                 };
             }

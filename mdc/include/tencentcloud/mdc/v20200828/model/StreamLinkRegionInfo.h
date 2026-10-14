@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * StreamLink region information
+                * Region information for media transmission.
                 */
                 class StreamLinkRegionInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of StreamLink regions
-                     * @return Regions List of StreamLink regions
+                     * 获取List of region information for media direct transmission.
+                     * @return Regions List of region information for media direct transmission.
                      * 
                      */
                     std::vector<RegionInfo> GetRegions() const;
 
                     /**
-                     * 设置List of StreamLink regions
-                     * @param _regions List of StreamLink regions
+                     * 设置List of region information for media direct transmission.
+                     * @param _regions List of region information for media direct transmission.
                      * 
                      */
                     void SetRegions(const std::vector<RegionInfo>& _regions);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of StreamLink regions
+                     * List of region information for media direct transmission.
                      */
                     std::vector<RegionInfo> m_regions;
                     bool m_regionsHasBeenSet;

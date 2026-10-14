@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
-                     * @return Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+                     * 获取Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
+                     * @return Size Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
-                     * @param _size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+                     * 设置Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
+                     * @param _size Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum height of a video stream. Unit: px.
-                     * @return Height Maximum height of a video stream. Unit: px.
+                     * 获取Maximum height of the video stream. Measurement unit: px.
+                     * @return Height Maximum height of the video stream. Measurement unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum height of a video stream. Unit: px.
-                     * @param _height Maximum height of a video stream. Unit: px.
+                     * 设置Maximum height of the video stream. Measurement unit: px.
+                     * @param _height Maximum height of the video stream. Measurement unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Selection angle during video shooting. Unit: degree.
-                     * @return Rotate Selection angle during video shooting. Unit: degree.
+                     * 获取Selection angle during video shooting. Measurement unit: degree.
+                     * @return Rotate Selection angle during video shooting. Measurement unit: degree.
                      * 
                      */
                     int64_t GetRotate() const;
 
                     /**
-                     * 设置Selection angle during video shooting. Unit: degree.
-                     * @param _rotate Selection angle during video shooting. Unit: degree.
+                     * 设置Selection angle during video shooting. Measurement unit: degree.
+                     * @param _rotate Selection angle during video shooting. Measurement unit: degree.
                      * 
                      */
                     void SetRotate(const int64_t& _rotate);
@@ -282,7 +282,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+                     * Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
@@ -300,7 +300,7 @@ namespace TencentCloud
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Maximum height of a video stream. Unit: px.
+                     * Maximum height of the video stream. Measurement unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
@@ -318,7 +318,7 @@ namespace TencentCloud
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Selection angle during video shooting. Unit: degree.
+                     * Selection angle during video shooting. Measurement unit: degree.
                      */
                     int64_t m_rotate;
                     bool m_rotateHasBeenSet;

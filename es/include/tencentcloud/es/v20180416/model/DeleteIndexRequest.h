@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ES cluster ID
-                     * @return InstanceId ES cluster ID
+                     * 获取<p>ES cluster ID</p>
+                     * @return InstanceId <p>ES cluster ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ES cluster ID
-                     * @param _instanceId ES cluster ID
+                     * 设置<p>ES cluster ID</p>
+                     * @param _instanceId <p>ES cluster ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of the index to delete. `auto`: Automated; `normal`: General.
-                     * @return IndexType Type of the index to delete. `auto`: Automated; `normal`: General.
+                     * 获取<p>Deleted index type. auto: autonomous index; normal: general index</p>
+                     * @return IndexType <p>Deleted index type. auto: autonomous index; normal: general index</p>
                      * 
                      */
                     std::string GetIndexType() const;
 
                     /**
-                     * 设置Type of the index to delete. `auto`: Automated; `normal`: General.
-                     * @param _indexType Type of the index to delete. `auto`: Automated; `normal`: General.
+                     * 设置<p>Deleted index type. auto: autonomous index; normal: general index</p>
+                     * @param _indexType <p>Deleted index type. auto: autonomous index; normal: general index</p>
                      * 
                      */
                     void SetIndexType(const std::string& _indexType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IndexTypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the index to delete
-                     * @return IndexName Name of the index to delete
+                     * 获取<p>Name of the deleted index</p>
+                     * @return IndexName <p>Name of the deleted index</p>
                      * 
                      */
                     std::string GetIndexName() const;
 
                     /**
-                     * 设置Name of the index to delete
-                     * @param _indexName Name of the index to delete
+                     * 设置<p>Name of the deleted index</p>
+                     * @param _indexName <p>Name of the deleted index</p>
                      * 
                      */
                     void SetIndexName(const std::string& _indexName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IndexNameHasBeenSet() const;
 
                     /**
-                     * 获取Username for cluster access
-                     * @return Username Username for cluster access
+                     * 获取<p>Cluster access username.</p>
+                     * @return Username <p>Cluster access username.</p>
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username for cluster access
-                     * @param _username Username for cluster access
+                     * 设置<p>Cluster access username.</p>
+                     * @param _username <p>Cluster access username.</p>
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Password for cluster access
-                     * @return Password Password for cluster access
+                     * 获取<p>Cluster access password</p>
+                     * @return Password <p>Cluster access password</p>
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password for cluster access
-                     * @param _password Password for cluster access
+                     * 设置<p>Cluster access password</p>
+                     * @param _password <p>Cluster access password</p>
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Backing index name
-                     * @return BackingIndexName Backing index name
+                     * 获取<p>Backing index name</p>
+                     * @return BackingIndexName <p>Backing index name</p>
                      * 
                      */
                     std::string GetBackingIndexName() const;
 
                     /**
-                     * 设置Backing index name
-                     * @param _backingIndexName Backing index name
+                     * 设置<p>Backing index name</p>
+                     * @param _backingIndexName <p>Backing index name</p>
                      * 
                      */
                     void SetBackingIndexName(const std::string& _backingIndexName);
@@ -168,43 +168,70 @@ namespace TencentCloud
                      */
                     bool BackingIndexNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Index life cycle</p>
+                     * @return IndexPhrase <p>Index life cycle</p>
+                     * 
+                     */
+                    std::string GetIndexPhrase() const;
+
+                    /**
+                     * 设置<p>Index life cycle</p>
+                     * @param _indexPhrase <p>Index life cycle</p>
+                     * 
+                     */
+                    void SetIndexPhrase(const std::string& _indexPhrase);
+
+                    /**
+                     * 判断参数 IndexPhrase 是否已赋值
+                     * @return IndexPhrase 是否已赋值
+                     * 
+                     */
+                    bool IndexPhraseHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ES cluster ID
+                     * <p>ES cluster ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Type of the index to delete. `auto`: Automated; `normal`: General.
+                     * <p>Deleted index type. auto: autonomous index; normal: general index</p>
                      */
                     std::string m_indexType;
                     bool m_indexTypeHasBeenSet;
 
                     /**
-                     * Name of the index to delete
+                     * <p>Name of the deleted index</p>
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
 
                     /**
-                     * Username for cluster access
+                     * <p>Cluster access username.</p>
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Password for cluster access
+                     * <p>Cluster access password</p>
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Backing index name
+                     * <p>Backing index name</p>
                      */
                     std::string m_backingIndexName;
                     bool m_backingIndexNameHasBeenSet;
+
+                    /**
+                     * <p>Index life cycle</p>
+                     */
+                    std::string m_indexPhrase;
+                    bool m_indexPhraseHasBeenSet;
 
                 };
             }

@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceEnv 
+                     * 获取Resource pool configuration
+                     * @return ResourceEnv Resource pool configuration
                      * 
                      */
                     NamespaceResourceEnv GetResourceEnv() const;
 
                     /**
-                     * 设置
-                     * @param _resourceEnv 
+                     * 设置Resource pool configuration
+                     * @param _resourceEnv Resource pool configuration
                      * 
                      */
                     void SetResourceEnv(const NamespaceResourceEnv& _resourceEnv);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * Resource pool configuration
                      */
                     NamespaceResourceEnv m_resourceEnv;
                     bool m_resourceEnvHasBeenSet;

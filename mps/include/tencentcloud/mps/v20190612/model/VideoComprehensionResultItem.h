@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video shot recognition result
+                * Video storyboard recognition result.
                 */
                 class VideoComprehensionResultItem : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Segment start time (unit: seconds)
+                     * 获取Start time of the storyboard segment, in seconds.
 
-                     * @return StartTime Segment start time (unit: seconds)
+                     * @return StartTime Start time of the storyboard segment, in seconds.
 
                      * 
                      */
                     double GetStartTime() const;
 
                     /**
-                     * 设置Segment start time (unit: seconds)
+                     * 设置Start time of the storyboard segment, in seconds.
 
-                     * @param _startTime Segment start time (unit: seconds)
+                     * @param _startTime Start time of the storyboard segment, in seconds.
 
                      * 
                      */
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Segment end time (unit: seconds)
-                     * @return EndTime Segment end time (unit: seconds)
+                     * 获取Segment end time (unit: second)
+                     * @return EndTime Segment end time (unit: second)
                      * 
                      */
                     double GetEndTime() const;
 
                     /**
-                     * 设置Segment end time (unit: seconds)
-                     * @param _endTime Segment end time (unit: seconds)
+                     * 设置Segment end time (unit: second)
+                     * @param _endTime Segment end time (unit: second)
                      * 
                      */
                     void SetEndTime(const double& _endTime);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Storyboard clip title
-                     * @return Title Storyboard clip title
+                     * 获取Segment title.
+                     * @return Title Segment title.
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置Storyboard clip title
-                     * @param _title Storyboard clip title
+                     * 设置Segment title.
+                     * @param _title Segment title.
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取Segment information description
-                     * @return Description Segment information description
+                     * 获取Description of the storyboard segment information
+                     * @return Description Description of the storyboard segment information
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Segment information description
-                     * @param _description Segment information description
+                     * 设置Description of the storyboard segment information
+                     * @param _description Description of the storyboard segment information
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Storyboard clip keywords
-                     * @return Keywords Storyboard clip keywords
+                     * 获取Segment keywords.
+                     * @return Keywords Segment keywords.
                      * 
                      */
                     std::vector<std::string> GetKeywords() const;
 
                     /**
-                     * 设置Storyboard clip keywords
-                     * @param _keywords Storyboard clip keywords
+                     * 设置Segment keywords.
+                     * @param _keywords Segment keywords.
                      * 
                      */
                     void SetKeywords(const std::vector<std::string>& _keywords);
@@ -158,32 +158,32 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Segment start time (unit: seconds)
+                     * Start time of the storyboard segment, in seconds.
 
                      */
                     double m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Segment end time (unit: seconds)
+                     * Segment end time (unit: second)
                      */
                     double m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Storyboard clip title
+                     * Segment title.
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
-                     * Segment information description
+                     * Description of the storyboard segment information
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Storyboard clip keywords
+                     * Segment keywords.
                      */
                     std::vector<std::string> m_keywords;
                     bool m_keywordsHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ErrMsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message.
+                     * @return Message Error message.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error message.
+                     * @param _message Error message.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Transcoding task output.
+                     * @return Output Transcoding task output.
                      * 
                      */
                     ImageProcessTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Transcoding task output.
+                     * @param _output Transcoding task output.
                      * 
                      */
                     void SetOutput(const ImageProcessTaskOutput& _output);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Transcoding progress, with a value range of [0-100].
+                     * @return Progress Transcoding progress, with a value range of [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Transcoding progress, with a value range of [0-100].
+                     * @param _progress Transcoding progress, with a value range of [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -155,7 +155,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -167,19 +167,19 @@ namespace TencentCloud
                     bool m_errMsgHasBeenSet;
 
                     /**
-                     * 
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Transcoding task output.
                      */
                     ImageProcessTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * Transcoding progress, with a value range of [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

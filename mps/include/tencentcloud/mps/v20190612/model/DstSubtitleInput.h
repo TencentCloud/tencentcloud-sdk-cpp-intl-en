@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI Dubbing external translation subtitle information
+                * External translation subtitle information for AI dubbing
                 */
                 class DstSubtitleInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>External translation subtitle information.</p>
-                     * @return DstSubtitleInfo <p>External translation subtitle information.</p>
+                     * 获取<p>External translated subtitle info.</p>
+                     * @return DstSubtitleInfo <p>External translated subtitle info.</p>
                      * 
                      */
                     MediaInputInfo GetDstSubtitleInfo() const;
 
                     /**
-                     * 设置<p>External translation subtitle information.</p>
-                     * @param _dstSubtitleInfo <p>External translation subtitle information.</p>
+                     * 设置<p>External translated subtitle info.</p>
+                     * @param _dstSubtitleInfo <p>External translated subtitle info.</p>
                      * 
                      */
                     void SetDstSubtitleInfo(const MediaInputInfo& _dstSubtitleInfo);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>External translation subtitle information.</p>
+                     * <p>External translated subtitle info.</p>
                      */
                     MediaInputInfo m_dstSubtitleInfo;
                     bool m_dstSubtitleInfoHasBeenSet;

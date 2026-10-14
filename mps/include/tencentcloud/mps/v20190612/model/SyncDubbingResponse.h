@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioData 
+                     * 获取<p>base64-encoded synthetic audio in wav format.</p>
+                     * @return AudioData <p>base64-encoded synthetic audio in wav format.</p>
                      * 
                      */
                     std::string GetAudioData() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Id of the cloned voice type.</p>
+                     * @return VoiceId <p>Id of the cloned voice type.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_msgHasBeenSet;
 
                     /**
-                     * 
+                     * <p>base64-encoded synthetic audio in wav format.</p>
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
@@ -154,7 +154,7 @@ namespace TencentCloud
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Id of the cloned voice type.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;

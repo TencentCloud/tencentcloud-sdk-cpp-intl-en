@@ -27,7 +27,10 @@ RecognizePhilippinesSssIDOCRResponse::RecognizePhilippinesSssIDOCRResponse() :
     m_headPortraitHasBeenSet(false),
     m_licenseNumberHasBeenSet(false),
     m_fullNameHasBeenSet(false),
-    m_birthdayHasBeenSet(false)
+    m_birthdayHasBeenSet(false),
+    m_givenNameHasBeenSet(false),
+    m_surnameHasBeenSet(false),
+    m_middleNameHasBeenSet(false)
 {
 }
 
@@ -133,6 +136,57 @@ CoreInternalOutcome RecognizePhilippinesSssIDOCRResponse::Deserialize(const stri
         m_birthdayHasBeenSet = true;
     }
 
+    if (rsp.HasMember("GivenName") && !rsp["GivenName"].IsNull())
+    {
+        if (!rsp["GivenName"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `GivenName` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_givenName.Deserialize(rsp["GivenName"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_givenNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Surname") && !rsp["Surname"].IsNull())
+    {
+        if (!rsp["Surname"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Surname` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_surname.Deserialize(rsp["Surname"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_surnameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("MiddleName") && !rsp["MiddleName"].IsNull())
+    {
+        if (!rsp["MiddleName"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MiddleName` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_middleName.Deserialize(rsp["MiddleName"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_middleNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -177,6 +231,33 @@ string RecognizePhilippinesSssIDOCRResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_birthday.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_givenNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GivenName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_givenName.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_surnameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Surname";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_surname.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_middleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MiddleName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_middleName.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -229,6 +310,36 @@ TextDetectionResult RecognizePhilippinesSssIDOCRResponse::GetBirthday() const
 bool RecognizePhilippinesSssIDOCRResponse::BirthdayHasBeenSet() const
 {
     return m_birthdayHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesSssIDOCRResponse::GetGivenName() const
+{
+    return m_givenName;
+}
+
+bool RecognizePhilippinesSssIDOCRResponse::GivenNameHasBeenSet() const
+{
+    return m_givenNameHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesSssIDOCRResponse::GetSurname() const
+{
+    return m_surname;
+}
+
+bool RecognizePhilippinesSssIDOCRResponse::SurnameHasBeenSet() const
+{
+    return m_surnameHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesSssIDOCRResponse::GetMiddleName() const
+{
+    return m_middleName;
+}
+
+bool RecognizePhilippinesSssIDOCRResponse::MiddleNameHasBeenSet() const
+{
+    return m_middleNameHasBeenSet;
 }
 
 

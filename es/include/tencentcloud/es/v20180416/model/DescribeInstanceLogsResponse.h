@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of returned logs
-                     * @return TotalCount Number of returned logs
+                     * 获取Number of returned log entries
+                     * @return TotalCount Number of returned log entries
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Log details list
-                     * @return InstanceLogList Log details list
+                     * 获取List of log details
+                     * @return InstanceLogList List of log details
                      * 
                      */
                     std::vector<InstanceLog> GetInstanceLogList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of returned logs
+                     * Number of returned log entries
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Log details list
+                     * List of log details
                      */
                     std::vector<InstanceLog> m_instanceLogList;
                     bool m_instanceLogListHasBeenSet;

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool VideoComprehensionAnalysisResultHasBeenSet() const;
 
                     /**
-                     * 获取Video (Audio) understanding extended information
-                     * @return VideoComprehensionExtInfo Video (Audio) understanding extended information
+                     * 获取Extended information for video (audio) understanding.
+                     * @return VideoComprehensionExtInfo Extended information for video (audio) understanding.
                      * 
                      */
                     std::string GetVideoComprehensionExtInfo() const;
 
                     /**
-                     * 设置Video (Audio) understanding extended information
-                     * @param _videoComprehensionExtInfo Video (Audio) understanding extended information
+                     * 设置Extended information for video (audio) understanding.
+                     * @param _videoComprehensionExtInfo Extended information for video (audio) understanding.
                      * 
                      */
                     void SetVideoComprehensionExtInfo(const std::string& _videoComprehensionExtInfo);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool VideoComprehensionExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取Video shot understanding result
-                     * @return VideoComprehensionResultList Video shot understanding result
+                     * 获取Video storyboard understanding result
+                     * @return VideoComprehensionResultList Video storyboard understanding result
                      * 
                      */
                     std::vector<VideoComprehensionResultItem> GetVideoComprehensionResultList() const;
 
                     /**
-                     * 设置Video shot understanding result
-                     * @param _videoComprehensionResultList Video shot understanding result
+                     * 设置Video storyboard understanding result
+                     * @param _videoComprehensionResultList Video storyboard understanding result
                      * 
                      */
                     void SetVideoComprehensionResultList(const std::vector<VideoComprehensionResultItem>& _videoComprehensionResultList);
@@ -119,13 +119,13 @@ namespace TencentCloud
                     bool m_videoComprehensionAnalysisResultHasBeenSet;
 
                     /**
-                     * Video (Audio) understanding extended information
+                     * Extended information for video (audio) understanding.
                      */
                     std::string m_videoComprehensionExtInfo;
                     bool m_videoComprehensionExtInfoHasBeenSet;
 
                     /**
-                     * Video shot understanding result
+                     * Video storyboard understanding result
                      */
                     std::vector<VideoComprehensionResultItem> m_videoComprehensionResultList;
                     bool m_videoComprehensionResultListHasBeenSet;

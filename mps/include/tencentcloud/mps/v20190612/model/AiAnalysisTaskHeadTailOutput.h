@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HeadTimeOffset 
+                     * 获取Opening pts.
+                     * @return HeadTimeOffset Opening pts.
                      * 
                      */
                     double GetHeadTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _headTimeOffset 
+                     * 设置Opening pts.
+                     * @param _headTimeOffset Opening pts.
                      * 
                      */
                     void SetHeadTimeOffset(const double& _headTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HeadTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TailTimeOffset 
+                     * 获取Outro pts.
+                     * @return TailTimeOffset Outro pts.
                      * 
                      */
                     double GetTailTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _tailTimeOffset 
+                     * 设置Outro pts.
+                     * @param _tailTimeOffset Outro pts.
                      * 
                      */
                     void SetTailTimeOffset(const double& _tailTimeOffset);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Opening pts.
                      */
                     double m_headTimeOffset;
                     bool m_headTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Outro pts.
                      */
                     double m_tailTimeOffset;
                     bool m_tailTimeOffsetHasBeenSet;

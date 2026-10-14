@@ -35,6 +35,8 @@
 #include <tencentcloud/lke/v20231130/model/WidgetAction.h>
 #include <tencentcloud/lke/v20231130/model/AgentTask.h>
 #include <tencentcloud/lke/v20231130/model/Questionnaire.h>
+#include <tencentcloud/lke/v20231130/model/ConversationMcpApp.h>
+#include <tencentcloud/lke/v20231130/model/ConversationResourceArtifact.h>
 
 
 namespace TencentCloud
@@ -46,7 +48,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Dialogue record content details
                 */
                 class Content : public AbstractModel
                 {
@@ -58,15 +60,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
+                     * @return Type <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
+                     * @param _type <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -79,15 +81,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>Text content</p>
+                     * @return Text <p>Text content</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>Text content</p>
+                     * @param _text <p>Text content</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -100,15 +102,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QuoteInfos 
+                     * 获取<p>Reference info.</p>
+                     * @return QuoteInfos <p>Reference info.</p>
                      * 
                      */
                     std::vector<QuoteInfo> GetQuoteInfos() const;
 
                     /**
-                     * 设置
-                     * @param _quoteInfos 
+                     * 设置<p>Reference info.</p>
+                     * @param _quoteInfos <p>Reference info.</p>
                      * 
                      */
                     void SetQuoteInfos(const std::vector<QuoteInfo>& _quoteInfos);
@@ -121,15 +123,15 @@ namespace TencentCloud
                     bool QuoteInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return References 
+                     * 获取<p>Reference information</p>
+                     * @return References <p>Reference information</p>
                      * 
                      */
                     std::vector<ContentReference> GetReferences() const;
 
                     /**
-                     * 设置
-                     * @param _references 
+                     * 设置<p>Reference information</p>
+                     * @param _references <p>Reference information</p>
                      * 
                      */
                     void SetReferences(const std::vector<ContentReference>& _references);
@@ -142,15 +144,15 @@ namespace TencentCloud
                     bool ReferencesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Image 
+                     * 获取<p>Image information.</p>
+                     * @return Image <p>Image information.</p>
                      * 
                      */
                     ImageInfoContent GetImage() const;
 
                     /**
-                     * 设置
-                     * @param _image 
+                     * 设置<p>Image information.</p>
+                     * @param _image <p>Image information.</p>
                      * 
                      */
                     void SetImage(const ImageInfoContent& _image);
@@ -163,15 +165,15 @@ namespace TencentCloud
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return File 
+                     * 获取<p>File information</p>
+                     * @return File <p>File information</p>
                      * 
                      */
                     FileInfoContent GetFile() const;
 
                     /**
-                     * 设置
-                     * @param _file 
+                     * 设置<p>File information</p>
+                     * @param _file <p>File information</p>
                      * 
                      */
                     void SetFile(const FileInfoContent& _file);
@@ -184,15 +186,15 @@ namespace TencentCloud
                     bool FileHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OptionCards 
+                     * 获取<p>Tab info.</p>
+                     * @return OptionCards <p>Tab info.</p>
                      * 
                      */
                     std::vector<std::string> GetOptionCards() const;
 
                     /**
-                     * 设置
-                     * @param _optionCards 
+                     * 设置<p>Tab info.</p>
+                     * @param _optionCards <p>Tab info.</p>
                      * 
                      */
                     void SetOptionCards(const std::vector<std::string>& _optionCards);
@@ -205,15 +207,15 @@ namespace TencentCloud
                     bool OptionCardsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CustomParams 
+                     * 获取<p>User-customized business parameter information.</p>
+                     * @return CustomParams <p>User-customized business parameter information.</p>
                      * 
                      */
                     std::vector<std::string> GetCustomParams() const;
 
                     /**
-                     * 设置
-                     * @param _customParams 
+                     * 设置<p>User-customized business parameter information.</p>
+                     * @param _customParams <p>User-customized business parameter information.</p>
                      * 
                      */
                     void SetCustomParams(const std::vector<std::string>& _customParams);
@@ -226,15 +228,15 @@ namespace TencentCloud
                     bool CustomParamsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CustomVariables 
+                     * 获取<p>Custom Variable</p>
+                     * @return CustomVariables <p>Custom Variable</p>
                      * 
                      */
                     std::vector<std::string> GetCustomVariables() const;
 
                     /**
-                     * 设置
-                     * @param _customVariables 
+                     * 设置<p>Custom Variable</p>
+                     * @param _customVariables <p>Custom Variable</p>
                      * 
                      */
                     void SetCustomVariables(const std::vector<std::string>& _customVariables);
@@ -247,15 +249,15 @@ namespace TencentCloud
                     bool CustomVariablesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sandbox 
+                     * 获取<p>Sandbox information</p>
+                     * @return Sandbox <p>Sandbox information</p>
                      * 
                      */
                     SandboxContent GetSandbox() const;
 
                     /**
-                     * 设置
-                     * @param _sandbox 
+                     * 设置<p>Sandbox information</p>
+                     * @param _sandbox <p>Sandbox information</p>
                      * 
                      */
                     void SetSandbox(const SandboxContent& _sandbox);
@@ -268,15 +270,15 @@ namespace TencentCloud
                     bool SandboxHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebSearch 
+                     * 获取<p>Web page search content</p>
+                     * @return WebSearch <p>Web page search content</p>
                      * 
                      */
                     WebSearchContent GetWebSearch() const;
 
                     /**
-                     * 设置
-                     * @param _webSearch 
+                     * 设置<p>Web page search content</p>
+                     * @param _webSearch <p>Web page search content</p>
                      * 
                      */
                     void SetWebSearch(const WebSearchContent& _webSearch);
@@ -289,15 +291,15 @@ namespace TencentCloud
                     bool WebSearchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileCollection 
+                     * 获取<p>File information collection</p>
+                     * @return FileCollection <p>File information collection</p>
                      * 
                      */
                     FileCollection GetFileCollection() const;
 
                     /**
-                     * 设置
-                     * @param _fileCollection 
+                     * 设置<p>File information collection</p>
+                     * @param _fileCollection <p>File information collection</p>
                      * 
                      */
                     void SetFileCollection(const FileCollection& _fileCollection);
@@ -310,15 +312,15 @@ namespace TencentCloud
                     bool FileCollectionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Widget 
+                     * 获取<p>Widget information.</p>
+                     * @return Widget <p>Widget information.</p>
                      * 
                      */
                     Widget GetWidget() const;
 
                     /**
-                     * 设置
-                     * @param _widget 
+                     * 设置<p>Widget information.</p>
+                     * @param _widget <p>Widget information.</p>
                      * 
                      */
                     void SetWidget(const Widget& _widget);
@@ -331,15 +333,15 @@ namespace TencentCloud
                     bool WidgetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WidgetAction 
+                     * 获取<p>Widget action information</p>
+                     * @return WidgetAction <p>Widget action information</p>
                      * 
                      */
                     WidgetAction GetWidgetAction() const;
 
                     /**
-                     * 设置
-                     * @param _widgetAction 
+                     * 设置<p>Widget action information</p>
+                     * @param _widgetAction <p>Widget action information</p>
                      * 
                      */
                     void SetWidgetAction(const WidgetAction& _widgetAction);
@@ -352,15 +354,15 @@ namespace TencentCloud
                     bool WidgetActionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tasks 
+                     * 获取<p>Task List</p>
+                     * @return Tasks <p>Task List</p>
                      * 
                      */
                     std::vector<AgentTask> GetTasks() const;
 
                     /**
-                     * 设置
-                     * @param _tasks 
+                     * 设置<p>Task List</p>
+                     * @param _tasks <p>Task List</p>
                      * 
                      */
                     void SetTasks(const std::vector<AgentTask>& _tasks);
@@ -373,15 +375,15 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Questionnaire 
+                     * 获取<p>Questionnaire information</p>
+                     * @return Questionnaire <p>Questionnaire information</p>
                      * 
                      */
                     Questionnaire GetQuestionnaire() const;
 
                     /**
-                     * 设置
-                     * @param _questionnaire 
+                     * 设置<p>Questionnaire information</p>
+                     * @param _questionnaire <p>Questionnaire information</p>
                      * 
                      */
                     void SetQuestionnaire(const Questionnaire& _questionnaire);
@@ -394,15 +396,15 @@ namespace TencentCloud
                     bool QuestionnaireHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OptionMode 
+                     * 获取<p>Tab mode</p>
+                     * @return OptionMode <p>Tab mode</p>
                      * 
                      */
                     int64_t GetOptionMode() const;
 
                     /**
-                     * 设置
-                     * @param _optionMode 
+                     * 设置<p>Tab mode</p>
+                     * @param _optionMode <p>Tab mode</p>
                      * 
                      */
                     void SetOptionMode(const int64_t& _optionMode);
@@ -414,109 +416,163 @@ namespace TencentCloud
                      */
                     bool OptionModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>MCP APP information returned</p>
+                     * @return McpApp <p>MCP APP information returned</p>
+                     * 
+                     */
+                    ConversationMcpApp GetMcpApp() const;
+
+                    /**
+                     * 设置<p>MCP APP information returned</p>
+                     * @param _mcpApp <p>MCP APP information returned</p>
+                     * 
+                     */
+                    void SetMcpApp(const ConversationMcpApp& _mcpApp);
+
+                    /**
+                     * 判断参数 McpApp 是否已赋值
+                     * @return McpApp 是否已赋值
+                     * 
+                     */
+                    bool McpAppHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Application or workflow resource product</p>
+                     * @return Resource <p>Application or workflow resource product</p>
+                     * 
+                     */
+                    ConversationResourceArtifact GetResource() const;
+
+                    /**
+                     * 设置<p>Application or workflow resource product</p>
+                     * @param _resource <p>Application or workflow resource product</p>
+                     * 
+                     */
+                    void SetResource(const ConversationResourceArtifact& _resource);
+
+                    /**
+                     * 判断参数 Resource 是否已赋值
+                     * @return Resource 是否已赋值
+                     * 
+                     */
+                    bool ResourceHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text content</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reference info.</p>
                      */
                     std::vector<QuoteInfo> m_quoteInfos;
                     bool m_quoteInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reference information</p>
                      */
                     std::vector<ContentReference> m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Image information.</p>
                      */
                     ImageInfoContent m_image;
                     bool m_imageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File information</p>
                      */
                     FileInfoContent m_file;
                     bool m_fileHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tab info.</p>
                      */
                     std::vector<std::string> m_optionCards;
                     bool m_optionCardsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>User-customized business parameter information.</p>
                      */
                     std::vector<std::string> m_customParams;
                     bool m_customParamsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Custom Variable</p>
                      */
                     std::vector<std::string> m_customVariables;
                     bool m_customVariablesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sandbox information</p>
                      */
                     SandboxContent m_sandbox;
                     bool m_sandboxHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Web page search content</p>
                      */
                     WebSearchContent m_webSearch;
                     bool m_webSearchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File information collection</p>
                      */
                     FileCollection m_fileCollection;
                     bool m_fileCollectionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Widget information.</p>
                      */
                     Widget m_widget;
                     bool m_widgetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Widget action information</p>
                      */
                     WidgetAction m_widgetAction;
                     bool m_widgetActionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task List</p>
                      */
                     std::vector<AgentTask> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Questionnaire information</p>
                      */
                     Questionnaire m_questionnaire;
                     bool m_questionnaireHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tab mode</p>
                      */
                     int64_t m_optionMode;
                     bool m_optionModeHasBeenSet;
+
+                    /**
+                     * <p>MCP APP information returned</p>
+                     */
+                    ConversationMcpApp m_mcpApp;
+                    bool m_mcpAppHasBeenSet;
+
+                    /**
+                     * <p>Application or workflow resource product</p>
+                     */
+                    ConversationResourceArtifact m_resource;
+                    bool m_resourceHasBeenSet;
 
                 };
             }

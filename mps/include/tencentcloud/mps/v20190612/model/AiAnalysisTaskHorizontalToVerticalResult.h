@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * @return Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * @param _status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code. 0: successful; other values: failed.
+                     * @return ErrCode Error code. 0: successful; other values: failed.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code. 0: successful; other values: failed.
+                     * @param _errCode Error code. 0: successful; other values: failed.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message
+                     * @return Message Error message
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error message
+                     * @param _message Error message
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Intelligent horizontal-to-vertical task input.
+                     * @return Input Intelligent horizontal-to-vertical task input.
                      * 
                      */
                     AiAnalysisTaskHorizontalToVerticalInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置Intelligent horizontal-to-vertical task input.
+                     * @param _input Intelligent horizontal-to-vertical task input.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskHorizontalToVerticalInput& _input);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Intelligent horizontal-to-vertical task output.
+                     * @return Output Intelligent horizontal-to-vertical task output.
                      * 
                      */
                     AiAnalysisTaskHorizontalToVerticalOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Intelligent horizontal-to-vertical task output.
+                     * @param _output Intelligent horizontal-to-vertical task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskHorizontalToVerticalOutput& _output);
@@ -156,31 +156,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Error code. 0: successful; other values: failed.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent horizontal-to-vertical task input.
                      */
                     AiAnalysisTaskHorizontalToVerticalInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent horizontal-to-vertical task output.
                      */
                     AiAnalysisTaskHorizontalToVerticalOutput m_output;
                     bool m_outputHasBeenSet;

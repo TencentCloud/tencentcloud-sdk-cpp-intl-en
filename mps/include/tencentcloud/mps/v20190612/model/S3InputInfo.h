@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取S3 bucket。
-                     * @return S3Bucket S3 bucket。
+                     * 获取S3 bucket.
+                     * @return S3Bucket S3 bucket.
                      * 
                      */
                     std::string GetS3Bucket() const;
 
                     /**
-                     * 设置S3 bucket。
-                     * @param _s3Bucket S3 bucket。
+                     * 设置S3 bucket.
+                     * @param _s3Bucket S3 bucket.
                      * 
                      */
                     void SetS3Bucket(const std::string& _s3Bucket);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool S3BucketHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3Region 
+                     * 获取Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
+                     * @return S3Region Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
                      * 
                      */
                     std::string GetS3Region() const;
 
                     /**
-                     * 设置
-                     * @param _s3Region 
+                     * 设置Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
+                     * @param _s3Region Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
                      * 
                      */
                     void SetS3Region(const std::string& _s3Region);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool S3RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3Object 
+                     * 获取Media resource path in the S3 bucket.
+                     * @return S3Object Media resource path in the S3 bucket.
                      * 
                      */
                     std::string GetS3Object() const;
 
                     /**
-                     * 设置
-                     * @param _s3Object 
+                     * 设置Media resource path in the S3 bucket.
+                     * @param _s3Object Media resource path in the S3 bucket.
                      * 
                      */
                     void SetS3Object(const std::string& _s3Object);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool S3ObjectHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3SecretId 
+                     * 获取AWS private network access key id for media content.
+                     * @return S3SecretId AWS private network access key id for media content.
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置
-                     * @param _s3SecretId 
+                     * 设置AWS private network access key id for media content.
+                     * @param _s3SecretId AWS private network access key id for media content.
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -131,15 +143,15 @@ namespace TencentCloud
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3SecretKey 
+                     * 获取key for accessing media content over the AWS private network.
+                     * @return S3SecretKey key for accessing media content over the AWS private network.
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _s3SecretKey 
+                     * 设置key for accessing media content over the AWS private network.
+                     * @param _s3SecretKey key for accessing media content over the AWS private network.
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -154,31 +166,34 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * S3 bucket。
+                     * S3 bucket.
                      */
                     std::string m_s3Bucket;
                     bool m_s3BucketHasBeenSet;
 
                     /**
-                     * 
+                     * Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
                      */
                     std::string m_s3Region;
                     bool m_s3RegionHasBeenSet;
 
                     /**
-                     * 
+                     * Media resource path in the S3 bucket.
                      */
                     std::string m_s3Object;
                     bool m_s3ObjectHasBeenSet;
 
                     /**
-                     * 
+                     * AWS private network access key id for media content.
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * 
+                     * key for accessing media content over the AWS private network.
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;

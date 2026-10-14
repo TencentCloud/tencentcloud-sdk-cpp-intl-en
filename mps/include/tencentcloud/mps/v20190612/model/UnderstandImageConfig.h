@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
-                     * @return Model <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+                     * 获取<p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
+                     * @return Model <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置<p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
-                     * @param _model <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+                     * 设置<p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
+                     * @param _model <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ModelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Image understanding directive</p>
-                     * @return Prompt <p>Image understanding directive</p>
+                     * 获取<p>Image understanding instruction</p>
+                     * @return Prompt <p>Image understanding instruction</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Image understanding directive</p>
-                     * @param _prompt <p>Image understanding directive</p>
+                     * 设置<p>Image understanding instruction</p>
+                     * @param _prompt <p>Image understanding instruction</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -88,19 +88,46 @@ namespace TencentCloud
                      */
                     bool PromptHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Image understanding model parameters, of JSON string type.</p>
+                     * @return Parameters <p>Image understanding model parameters, of JSON string type.</p>
+                     * 
+                     */
+                    std::string GetParameters() const;
+
+                    /**
+                     * 设置<p>Image understanding model parameters, of JSON string type.</p>
+                     * @param _parameters <p>Image understanding model parameters, of JSON string type.</p>
+                     * 
+                     */
+                    void SetParameters(const std::string& _parameters);
+
+                    /**
+                     * 判断参数 Parameters 是否已赋值
+                     * @return Parameters 是否已赋值
+                     * 
+                     */
+                    bool ParametersHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+                     * <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;
 
                     /**
-                     * <p>Image understanding directive</p>
+                     * <p>Image understanding instruction</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
+
+                    /**
+                     * <p>Image understanding model parameters, of JSON string type.</p>
+                     */
+                    std::string m_parameters;
+                    bool m_parametersHasBeenSet;
 
                 };
             }

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTMP pull configuration of the output
+                * Query the output RTMP pull stream configuration message.
                 */
                 class DescribeOutputRTMPPullSettings : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ServerUrls List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取List of pull addresses.
+                     * @return ServerUrls List of pull addresses.
                      * 
                      */
                     std::vector<DescribeOutputRTMPPullServerUrl> GetServerUrls() const;
 
                     /**
-                     * 设置List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _serverUrls List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置List of pull addresses.
+                     * @param _serverUrls List of pull addresses.
                      * 
                      */
                     void SetServerUrls(const std::vector<DescribeOutputRTMPPullServerUrl>& _serverUrls);
@@ -75,8 +71,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+                     * List of pull addresses.
                      */
                     std::vector<DescribeOutputRTMPPullServerUrl> m_serverUrls;
                     bool m_serverUrlsHasBeenSet;

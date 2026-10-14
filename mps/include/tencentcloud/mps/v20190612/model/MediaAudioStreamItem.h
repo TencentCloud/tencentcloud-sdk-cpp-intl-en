@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Channel 
+                     * 获取Number of audio channels, for example, 2.
+                     * @return Channel Number of audio channels, for example, 2.
                      * 
                      */
                     int64_t GetChannel() const;
 
                     /**
-                     * 设置
-                     * @param _channel 
+                     * 设置Number of audio channels, for example, 2.
+                     * @param _channel Number of audio channels, for example, 2.
                      * 
                      */
                     void SetChannel(const int64_t& _channel);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Codecs 
+                     * 获取Audio Codecs.
+                     * @return Codecs Audio Codecs.
                      * 
                      */
                     std::string GetCodecs() const;
 
                     /**
-                     * 设置
-                     * @param _codecs 
+                     * 设置Audio Codecs.
+                     * @param _codecs Audio Codecs.
                      * 
                      */
                     void SetCodecs(const std::string& _codecs);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CodecsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Loudness 
+                     * 获取Audio loudness.
+                     * @return Loudness Audio loudness.
                      * 
                      */
                     double GetLoudness() const;
 
                     /**
-                     * 设置
-                     * @param _loudness 
+                     * 设置Audio loudness.
+                     * @param _loudness Audio loudness.
                      * 
                      */
                     void SetLoudness(const double& _loudness);
@@ -193,19 +193,19 @@ namespace TencentCloud
                     bool m_codecHasBeenSet;
 
                     /**
-                     * 
+                     * Number of audio channels, for example, 2.
                      */
                     int64_t m_channel;
                     bool m_channelHasBeenSet;
 
                     /**
-                     * 
+                     * Audio Codecs.
                      */
                     std::string m_codecs;
                     bool m_codecsHasBeenSet;
 
                     /**
-                     * 
+                     * Audio loudness.
                      */
                     double m_loudness;
                     bool m_loudnessHasBeenSet;

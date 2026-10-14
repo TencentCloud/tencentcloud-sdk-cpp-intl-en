@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task judgment conditions.
                 */
                 class ExecRulesTask : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Rules 
+                     * 获取Conditional judgment information.
+                     * @return Rules Conditional judgment information.
                      * 
                      */
                     std::vector<Rules> GetRules() const;
 
                     /**
-                     * 设置
-                     * @param _rules 
+                     * 设置Conditional judgment information.
+                     * @param _rules Conditional judgment information.
                      * 
                      */
                     void SetRules(const std::vector<Rules>& _rules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Conditional judgment information.
                      */
                     std::vector<Rules> m_rules;
                     bool m_rulesHasBeenSet;

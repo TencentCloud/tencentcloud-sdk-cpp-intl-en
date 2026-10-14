@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Smart subtitle hotword parameter.
                 */
                 class AsrHotWordsConfigure : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Hotword switch.
+                     * @return Switch Hotword switch.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Hotword switch.
+                     * @param _switch Hotword switch.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LibraryId 
+                     * 获取Hotword lexicon ID
+                     * @return LibraryId Hotword lexicon ID
                      * 
                      */
                     std::string GetLibraryId() const;
 
                     /**
-                     * 设置
-                     * @param _libraryId 
+                     * 设置Hotword lexicon ID
+                     * @param _libraryId Hotword lexicon ID
                      * 
                      */
                     void SetLibraryId(const std::string& _libraryId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Hotword switch.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Hotword lexicon ID
                      */
                     std::string m_libraryId;
                     bool m_libraryIdHasBeenSet;

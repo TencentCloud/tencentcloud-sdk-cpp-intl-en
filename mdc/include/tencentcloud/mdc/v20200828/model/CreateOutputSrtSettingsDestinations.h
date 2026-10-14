@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The SRT destination address of the output to create.
+                * Create the SRT destination address for the output of a media transmission stream.
                 */
                 class CreateOutputSrtSettingsDestinations : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The output IP.
-                     * @return Ip The output IP.
+                     * 获取Output IP or domain.
+                     * @return Ip Output IP or domain.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置The output IP.
-                     * @param _ip The output IP.
+                     * 设置Output IP or domain.
+                     * @param _ip Output IP or domain.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取The output port.
-                     * @return Port The output port.
+                     * 获取Output port.
+                     * @return Port Output port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置The output port.
-                     * @param _port The output port.
+                     * 设置Output port.
+                     * @param _port Output port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The output IP.
+                     * Output IP or domain.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * The output port.
+                     * Output port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

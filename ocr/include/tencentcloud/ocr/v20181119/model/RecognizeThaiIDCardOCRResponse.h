@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Laser ID on the back of the card.
-                     * @return LaserID Laser ID on the back of the card.
+                     * 获取Laser ID on the back of the card
+                     * @return LaserID Laser ID on the back of the card
                      * 
                      */
                     std::string GetLaserID() const;
@@ -261,7 +261,7 @@ namespace TencentCloud
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
 -9107 Alarm for reflective certificate
--9108 Alarm for blurry certificate 
+-9108 Alarm for blurry certificate
 -9109 This capability is not enabled. Please contact customer support to activate the alert service
                      * @return WarnCardInfos Card Warning Information
 
@@ -270,7 +270,7 @@ namespace TencentCloud
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
 -9107 Alarm for reflective certificate
--9108 Alarm for blurry certificate 
+-9108 Alarm for blurry certificate
 -9109 This capability is not enabled. Please contact customer support to activate the alert service
                      * 
                      */
@@ -284,8 +284,8 @@ namespace TencentCloud
                     bool WarnCardInfosHasBeenSet() const;
 
                     /**
-                     * 获取This field is deprecated and will always return "1". Usage is not recommended.
-                     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+                     * 获取<p>This field is deprecated and will always return "1". It is not recommended for use.</p>
+                     * @return AdvancedInfo <p>This field is deprecated and will always return "1". It is not recommended for use.</p>
                      * @deprecated
                      */
                     std::string GetAdvancedInfo() const;
@@ -326,6 +326,34 @@ true: complete; false: incomplete
                      * 
                      */
                     bool IsCompleteHasBeenSet() const;
+
+                    /**
+                     * 获取First name in Thai
+                     * @return ThaiFirstName First name in Thai
+                     * 
+                     */
+                    std::string GetThaiFirstName() const;
+
+                    /**
+                     * 判断参数 ThaiFirstName 是否已赋值
+                     * @return ThaiFirstName 是否已赋值
+                     * 
+                     */
+                    bool ThaiFirstNameHasBeenSet() const;
+
+                    /**
+                     * 获取Last name in Thai
+                     * @return ThaiLastName Last name in Thai
+                     * 
+                     */
+                    std::string GetThaiLastName() const;
+
+                    /**
+                     * 判断参数 ThaiLastName 是否已赋值
+                     * @return ThaiLastName 是否已赋值
+                     * 
+                     */
+                    bool ThaiLastNameHasBeenSet() const;
 
                 private:
 
@@ -408,7 +436,7 @@ true: complete; false: incomplete
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Laser ID on the back of the card.
+                     * Laser ID on the back of the card
                      */
                     std::string m_laserID;
                     bool m_laserIDHasBeenSet;
@@ -427,14 +455,14 @@ true: complete; false: incomplete
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
 -9107 Alarm for reflective certificate
--9108 Alarm for blurry certificate 
+-9108 Alarm for blurry certificate
 -9109 This capability is not enabled. Please contact customer support to activate the alert service
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;
 
                     /**
-                     * This field is deprecated and will always return "1". Usage is not recommended.
+                     * <p>This field is deprecated and will always return "1". It is not recommended for use.</p>
                      */
                     std::string m_advancedInfo;
                     bool m_advancedInfoHasBeenSet;
@@ -451,6 +479,18 @@ true: complete; false: incomplete
                      */
                     bool m_isComplete;
                     bool m_isCompleteHasBeenSet;
+
+                    /**
+                     * First name in Thai
+                     */
+                    std::string m_thaiFirstName;
+                    bool m_thaiFirstNameHasBeenSet;
+
+                    /**
+                     * Last name in Thai
+                     */
+                    std::string m_thaiLastName;
+                    bool m_thaiLastNameHasBeenSet;
 
                 };
             }

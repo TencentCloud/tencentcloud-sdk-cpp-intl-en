@@ -190,6 +190,56 @@ MdcClient::CreateStreamLinkOutputInfoOutcomeCallable MdcClient::CreateStreamLink
     return prom->get_future();
 }
 
+MdcClient::CreateStreamLinkSecurityGroupOutcome MdcClient::CreateStreamLinkSecurityGroup(const CreateStreamLinkSecurityGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamLinkSecurityGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamLinkSecurityGroupResponse rsp = CreateStreamLinkSecurityGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamLinkSecurityGroupOutcome(rsp);
+        else
+            return CreateStreamLinkSecurityGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamLinkSecurityGroupOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::CreateStreamLinkSecurityGroupAsync(const CreateStreamLinkSecurityGroupRequest& request, const CreateStreamLinkSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateStreamLinkSecurityGroupRequest&;
+    using Resp = CreateStreamLinkSecurityGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLinkSecurityGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MdcClient::CreateStreamLinkSecurityGroupOutcomeCallable MdcClient::CreateStreamLinkSecurityGroupCallable(const CreateStreamLinkSecurityGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateStreamLinkSecurityGroupOutcome>>();
+    CreateStreamLinkSecurityGroupAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const CreateStreamLinkSecurityGroupRequest&,
+        CreateStreamLinkSecurityGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MdcClient::DeleteStreamLinkFlowOutcome MdcClient::DeleteStreamLinkFlow(const DeleteStreamLinkFlowRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamLinkFlow");

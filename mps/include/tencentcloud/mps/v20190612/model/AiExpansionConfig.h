@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-                     * @return Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * 获取<p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * @return Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置<p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-                     * @param _switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * 设置<p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * @param _switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target ratio, for example "16:9"</p>
-                     * @return AspectRatio <p>Target ratio, for example "16:9"</p>
+                     * 获取<p>Target ratio, for example, "16:9"</p>
+                     * @return AspectRatio <p>Target ratio, for example, "16:9"</p>
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置<p>Target ratio, for example "16:9"</p>
-                     * @param _aspectRatio <p>Target ratio, for example "16:9"</p>
+                     * 设置<p>Target ratio, for example, "16:9"</p>
+                     * @param _aspectRatio <p>Target ratio, for example, "16:9"</p>
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
-                     * @return Width <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+                     * 获取<p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
+                     * @return Width <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置<p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
-                     * @param _width <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+                     * 设置<p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
+                     * @param _width <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
-                     * @return Height <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+                     * 获取<p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
+                     * @return Height <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置<p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
-                     * @param _height <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+                     * 设置<p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
+                     * @param _height <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * <p>Target ratio, for example "16:9"</p>
+                     * <p>Target ratio, for example, "16:9"</p>
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+                     * <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+                     * <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;

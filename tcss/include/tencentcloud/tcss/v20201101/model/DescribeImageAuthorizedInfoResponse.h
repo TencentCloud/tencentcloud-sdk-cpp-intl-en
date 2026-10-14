@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of valid image licenses
-                     * @return TotalAuthorizedCnt Total number of valid image licenses
+                     * 获取Total number of effective image licenses.
+                     * @return TotalAuthorizedCnt Total number of effective image licenses.
                      * 
                      */
                     uint64_t GetTotalAuthorizedCnt() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of used image licenses
-                     * @return UsedAuthorizedCnt Number of used image licenses
+                     * 获取Used image licenses
+                     * @return UsedAuthorizedCnt Used image licenses
                      * 
                      */
                     uint64_t GetUsedAuthorizedCnt() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool UsedAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of images with scan enabled
-                     * @return ScannedImageCnt Number of images with scan enabled
+                     * 获取Scan image count enabled
+                     * @return ScannedImageCnt Scan image count enabled
                      * 
                      */
                     uint64_t GetScannedImageCnt() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool ScannedImageCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of images with scan not enabled
-                     * @return NotScannedImageCnt Number of images with scan not enabled
+                     * 获取Scan image count when not enabled
+                     * @return NotScannedImageCnt Scan image count when not enabled
                      * 
                      */
                     uint64_t GetNotScannedImageCnt() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool NotScannedImageCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of local images with scan not enabled
-                     * @return NotScannedLocalImageCnt Number of local images with scan not enabled
+                     * 获取Number of Local Images with Scans Not Enabled
+                     * @return NotScannedLocalImageCnt Number of Local Images with Scans Not Enabled
                      * 
                      */
                     uint64_t GetNotScannedLocalImageCnt() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool NotScannedLocalImageCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TrialAuthorizedCnt 
+                     * 获取Number of licensed trial images.
+                     * @return TrialAuthorizedCnt Number of licensed trial images.
                      * 
                      */
                     uint64_t GetTrialAuthorizedCnt() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool TrialAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UsedTrialAuthorizedCnt 
+                     * 获取Number of licensed trial images that have been used.
+                     * @return UsedTrialAuthorizedCnt Number of licensed trial images that have been used.
                      * 
                      */
                     uint64_t GetUsedTrialAuthorizedCnt() const;
@@ -143,8 +143,8 @@ namespace TencentCloud
                     bool UsedTrialAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PurchasedAuthorizedCnt 
+                     * 获取Number of purchased image authorizations
+                     * @return PurchasedAuthorizedCnt Number of purchased image authorizations
                      * 
                      */
                     uint64_t GetPurchasedAuthorizedCnt() const;
@@ -157,8 +157,8 @@ namespace TencentCloud
                     bool PurchasedAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UsedPurchasedAuthorizedCnt 
+                     * 获取Number of purchased licensed images that have been used.
+                     * @return UsedPurchasedAuthorizedCnt Number of purchased licensed images that have been used.
                      * 
                      */
                     uint64_t GetUsedPurchasedAuthorizedCnt() const;
@@ -171,8 +171,8 @@ namespace TencentCloud
                     bool UsedPurchasedAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CanApplyFreeImageAuthorize 
+                     * 获取Whether the free image licenses can be collected.
+                     * @return CanApplyFreeImageAuthorize Whether the free image licenses can be collected.
                      * 
                      */
                     bool GetCanApplyFreeImageAuthorize() const;
@@ -215,61 +215,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of valid image licenses
+                     * Total number of effective image licenses.
                      */
                     uint64_t m_totalAuthorizedCnt;
                     bool m_totalAuthorizedCntHasBeenSet;
 
                     /**
-                     * Number of used image licenses
+                     * Used image licenses
                      */
                     uint64_t m_usedAuthorizedCnt;
                     bool m_usedAuthorizedCntHasBeenSet;
 
                     /**
-                     * Number of images with scan enabled
+                     * Scan image count enabled
                      */
                     uint64_t m_scannedImageCnt;
                     bool m_scannedImageCntHasBeenSet;
 
                     /**
-                     * Number of images with scan not enabled
+                     * Scan image count when not enabled
                      */
                     uint64_t m_notScannedImageCnt;
                     bool m_notScannedImageCntHasBeenSet;
 
                     /**
-                     * Number of local images with scan not enabled
+                     * Number of Local Images with Scans Not Enabled
                      */
                     uint64_t m_notScannedLocalImageCnt;
                     bool m_notScannedLocalImageCntHasBeenSet;
 
                     /**
-                     * 
+                     * Number of licensed trial images.
                      */
                     uint64_t m_trialAuthorizedCnt;
                     bool m_trialAuthorizedCntHasBeenSet;
 
                     /**
-                     * 
+                     * Number of licensed trial images that have been used.
                      */
                     uint64_t m_usedTrialAuthorizedCnt;
                     bool m_usedTrialAuthorizedCntHasBeenSet;
 
                     /**
-                     * 
+                     * Number of purchased image authorizations
                      */
                     uint64_t m_purchasedAuthorizedCnt;
                     bool m_purchasedAuthorizedCntHasBeenSet;
 
                     /**
-                     * 
+                     * Number of purchased licensed images that have been used.
                      */
                     uint64_t m_usedPurchasedAuthorizedCnt;
                     bool m_usedPurchasedAuthorizedCntHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the free image licenses can be collected.
                      */
                     bool m_canApplyFreeImageAuthorize;
                     bool m_canApplyFreeImageAuthorizeHasBeenSet;

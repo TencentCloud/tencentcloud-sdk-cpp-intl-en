@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Flow ID
-                     * @return FlowId Flow ID
+                     * 获取<p>Stream Id.</p>
+                     * @return FlowId <p>Stream Id.</p>
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置Flow ID
-                     * @param _flowId Flow ID
+                     * 设置<p>Stream Id.</p>
+                     * @param _flowId <p>Stream Id.</p>
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Flow ID
+                     * <p>Stream Id.</p>
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;

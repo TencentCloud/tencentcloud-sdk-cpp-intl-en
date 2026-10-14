@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A list of the SRT streaming performance data.
-                     * @return Infos A list of the SRT streaming performance data.
+                     * 获取List of SRT quality data in the transport stream.
+                     * @return Infos List of SRT quality data in the transport stream.
                      * 
                      */
                     std::vector<FlowSRTInfo> GetInfos() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A list of the SRT streaming performance data.
+                     * List of SRT quality data in the transport stream.
                      */
                     std::vector<FlowSRTInfo> m_infos;
                     bool m_infosHasBeenSet;

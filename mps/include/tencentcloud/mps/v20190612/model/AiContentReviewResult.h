@@ -58,23 +58,23 @@ namespace TencentCloud
 
                     /**
                      * 获取Task type. Valid values:
-<li>Porn: porn detection.</li>
-<li>Terrorism: sensitive image.</li>
-<li>Political: sensitive image.</li>
-<li>Porn.Asr: Pornography detection in ASR text</li>
-<li>Porn.Ocr: Pornography detection in OCR text</li>
-<li>Political.Asr: ASR text sensitivity</li>
+<li>Porn: image porn detection.</li>
+<li>Terrorism: sensitive image</li>
+<li>Political: sensitive image</li>
+<li>Porn.Asr: ASR text-based porn detection</li>
+<li>Porn.Ocr: OCR text-based porn detection</li>
+<li>Political.Asr: ASR text sensitive</li>
 <li>Political.Ocr: OCR text sensitivity</li>
 <li>Terrorism.Ocr: OCR text sensitivity</li>
 <li>Prohibited.Asr: ASR text prohibited information recognition</li>
 <li>Prohibited.Ocr: OCR text prohibited information recognition</li>
                      * @return Type Task type. Valid values:
-<li>Porn: porn detection.</li>
-<li>Terrorism: sensitive image.</li>
-<li>Political: sensitive image.</li>
-<li>Porn.Asr: Pornography detection in ASR text</li>
-<li>Porn.Ocr: Pornography detection in OCR text</li>
-<li>Political.Asr: ASR text sensitivity</li>
+<li>Porn: image porn detection.</li>
+<li>Terrorism: sensitive image</li>
+<li>Political: sensitive image</li>
+<li>Porn.Asr: ASR text-based porn detection</li>
+<li>Porn.Ocr: OCR text-based porn detection</li>
+<li>Political.Asr: ASR text sensitive</li>
 <li>Political.Ocr: OCR text sensitivity</li>
 <li>Terrorism.Ocr: OCR text sensitivity</li>
 <li>Prohibited.Asr: ASR text prohibited information recognition</li>
@@ -85,23 +85,23 @@ namespace TencentCloud
 
                     /**
                      * 设置Task type. Valid values:
-<li>Porn: porn detection.</li>
-<li>Terrorism: sensitive image.</li>
-<li>Political: sensitive image.</li>
-<li>Porn.Asr: Pornography detection in ASR text</li>
-<li>Porn.Ocr: Pornography detection in OCR text</li>
-<li>Political.Asr: ASR text sensitivity</li>
+<li>Porn: image porn detection.</li>
+<li>Terrorism: sensitive image</li>
+<li>Political: sensitive image</li>
+<li>Porn.Asr: ASR text-based porn detection</li>
+<li>Porn.Ocr: OCR text-based porn detection</li>
+<li>Political.Asr: ASR text sensitive</li>
 <li>Political.Ocr: OCR text sensitivity</li>
 <li>Terrorism.Ocr: OCR text sensitivity</li>
 <li>Prohibited.Asr: ASR text prohibited information recognition</li>
 <li>Prohibited.Ocr: OCR text prohibited information recognition</li>
                      * @param _type Task type. Valid values:
-<li>Porn: porn detection.</li>
-<li>Terrorism: sensitive image.</li>
-<li>Political: sensitive image.</li>
-<li>Porn.Asr: Pornography detection in ASR text</li>
-<li>Porn.Ocr: Pornography detection in OCR text</li>
-<li>Political.Asr: ASR text sensitivity</li>
+<li>Porn: image porn detection.</li>
+<li>Terrorism: sensitive image</li>
+<li>Political: sensitive image</li>
+<li>Porn.Asr: ASR text-based porn detection</li>
+<li>Porn.Ocr: OCR text-based porn detection</li>
+<li>Political.Asr: ASR text sensitive</li>
 <li>Political.Ocr: OCR text sensitivity</li>
 <li>Terrorism.Ocr: OCR text sensitivity</li>
 <li>Prohibited.Asr: ASR text prohibited information recognition</li>
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Sampling frequency, i.e., the number of frames captured per second for video review.
-                     * @return SampleRate Sampling frequency, i.e., the number of frames captured per second for video review.
+                     * 获取Sampling frequency, i.e., the number of frames captured per second from the video for review.
+                     * @return SampleRate Sampling frequency, i.e., the number of frames captured per second from the video for review.
                      * 
                      */
                     double GetSampleRate() const;
 
                     /**
-                     * 设置Sampling frequency, i.e., the number of frames captured per second for video review.
-                     * @param _sampleRate Sampling frequency, i.e., the number of frames captured per second for video review.
+                     * 设置Sampling frequency, i.e., the number of frames captured per second from the video for review.
+                     * @param _sampleRate Sampling frequency, i.e., the number of frames captured per second from the video for review.
                      * 
                      */
                     void SetSampleRate(const double& _sampleRate);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool SampleRateHasBeenSet() const;
 
                     /**
-                     * 获取Video duration for review, in seconds.
-                     * @return Duration Video duration for review, in seconds.
+                     * 获取Video duration reviewed, in seconds.
+                     * @return Duration Video duration reviewed, in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video duration for review, in seconds.
-                     * @param _duration Video duration for review, in seconds.
+                     * 设置Video duration reviewed, in seconds.
+                     * @param _duration Video duration reviewed, in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornTask 
+                     * 获取Query result of the intelligent porn detection in image task for video content review. Valid when the task type is Porn.
+                     * @return PornTask Query result of the intelligent porn detection in image task for video content review. Valid when the task type is Porn.
                      * 
                      */
                     AiReviewTaskPornResult GetPornTask() const;
 
                     /**
-                     * 设置
-                     * @param _pornTask 
+                     * 设置Query result of the intelligent porn detection in image task for video content review. Valid when the task type is Porn.
+                     * @param _pornTask Query result of the intelligent porn detection in image task for video content review. Valid when the task type is Porn.
                      * 
                      */
                     void SetPornTask(const AiReviewTaskPornResult& _pornTask);
@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool PornTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismTask 
+                     * 获取Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is `Terrorism`.
+                     * @return TerrorismTask Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is `Terrorism`.
                      * 
                      */
                     AiReviewTaskTerrorismResult GetTerrorismTask() const;
 
                     /**
-                     * 设置
-                     * @param _terrorismTask 
+                     * 设置Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is `Terrorism`.
+                     * @param _terrorismTask Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is `Terrorism`.
                      * 
                      */
                     void SetTerrorismTask(const AiReviewTaskTerrorismResult& _terrorismTask);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool TerrorismTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalTask 
+                     * 获取Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is Political.
+                     * @return PoliticalTask Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is Political.
                      * 
                      */
                     AiReviewTaskPoliticalResult GetPoliticalTask() const;
 
                     /**
-                     * 设置
-                     * @param _politicalTask 
+                     * 设置Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is Political.
+                     * @param _politicalTask Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is Political.
                      * 
                      */
                     void SetPoliticalTask(const AiReviewTaskPoliticalResult& _politicalTask);
@@ -223,15 +223,15 @@ namespace TencentCloud
                     bool PoliticalTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornAsrTask 
+                     * 获取Query result of the ASR text pornography detection task for video content review. Valid when TaskType is Porn.Asr.
+                     * @return PornAsrTask Query result of the ASR text pornography detection task for video content review. Valid when TaskType is Porn.Asr.
                      * 
                      */
                     AiReviewTaskPornAsrResult GetPornAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param _pornAsrTask 
+                     * 设置Query result of the ASR text pornography detection task for video content review. Valid when TaskType is Porn.Asr.
+                     * @param _pornAsrTask Query result of the ASR text pornography detection task for video content review. Valid when TaskType is Porn.Asr.
                      * 
                      */
                     void SetPornAsrTask(const AiReviewTaskPornAsrResult& _pornAsrTask);
@@ -244,15 +244,15 @@ namespace TencentCloud
                     bool PornAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornOcrTask 
+                     * 获取Query result of the OCR text pornography detection task for video content review. Valid when the task type is Porn.Ocr.
+                     * @return PornOcrTask Query result of the OCR text pornography detection task for video content review. Valid when the task type is Porn.Ocr.
                      * 
                      */
                     AiReviewTaskPornOcrResult GetPornOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _pornOcrTask 
+                     * 设置Query result of the OCR text pornography detection task for video content review. Valid when the task type is Porn.Ocr.
+                     * @param _pornOcrTask Query result of the OCR text pornography detection task for video content review. Valid when the task type is Porn.Ocr.
                      * 
                      */
                     void SetPornOcrTask(const AiReviewTaskPornOcrResult& _pornOcrTask);
@@ -265,15 +265,15 @@ namespace TencentCloud
                     bool PornOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalAsrTask 
+                     * 获取Query result of the sensitive task for ASR text in video content review. Valid when the task type is Political.Asr.
+                     * @return PoliticalAsrTask Query result of the sensitive task for ASR text in video content review. Valid when the task type is Political.Asr.
                      * 
                      */
                     AiReviewTaskPoliticalAsrResult GetPoliticalAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param _politicalAsrTask 
+                     * 设置Query result of the sensitive task for ASR text in video content review. Valid when the task type is Political.Asr.
+                     * @param _politicalAsrTask Query result of the sensitive task for ASR text in video content review. Valid when the task type is Political.Asr.
                      * 
                      */
                     void SetPoliticalAsrTask(const AiReviewTaskPoliticalAsrResult& _politicalAsrTask);
@@ -286,15 +286,15 @@ namespace TencentCloud
                     bool PoliticalAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalOcrTask 
+                     * 获取Query result of sensitive tasks for OCR text in video content review. Valid when the task type is Political.Ocr.
+                     * @return PoliticalOcrTask Query result of sensitive tasks for OCR text in video content review. Valid when the task type is Political.Ocr.
                      * 
                      */
                     AiReviewTaskPoliticalOcrResult GetPoliticalOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _politicalOcrTask 
+                     * 设置Query result of sensitive tasks for OCR text in video content review. Valid when the task type is Political.Ocr.
+                     * @param _politicalOcrTask Query result of sensitive tasks for OCR text in video content review. Valid when the task type is Political.Ocr.
                      * 
                      */
                     void SetPoliticalOcrTask(const AiReviewTaskPoliticalOcrResult& _politicalOcrTask);
@@ -307,15 +307,15 @@ namespace TencentCloud
                     bool PoliticalOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismOcrTask 
+                     * 获取Query result of the OCR text sensitive task for video content review. Valid when the task type is Terrorism.Ocr.
+                     * @return TerrorismOcrTask Query result of the OCR text sensitive task for video content review. Valid when the task type is Terrorism.Ocr.
                      * 
                      */
                     AiReviewTaskTerrorismOcrResult GetTerrorismOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _terrorismOcrTask 
+                     * 设置Query result of the OCR text sensitive task for video content review. Valid when the task type is Terrorism.Ocr.
+                     * @param _terrorismOcrTask Query result of the OCR text sensitive task for video content review. Valid when the task type is Terrorism.Ocr.
                      * 
                      */
                     void SetTerrorismOcrTask(const AiReviewTaskTerrorismOcrResult& _terrorismOcrTask);
@@ -328,15 +328,15 @@ namespace TencentCloud
                     bool TerrorismOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedAsrTask 
+                     * 获取Query result of the ASR text prohibited content detection task for video content review. Valid when TaskType is Prohibited.Asr.
+                     * @return ProhibitedAsrTask Query result of the ASR text prohibited content detection task for video content review. Valid when TaskType is Prohibited.Asr.
                      * 
                      */
                     AiReviewTaskProhibitedAsrResult GetProhibitedAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param _prohibitedAsrTask 
+                     * 设置Query result of the ASR text prohibited content detection task for video content review. Valid when TaskType is Prohibited.Asr.
+                     * @param _prohibitedAsrTask Query result of the ASR text prohibited content detection task for video content review. Valid when TaskType is Prohibited.Asr.
                      * 
                      */
                     void SetProhibitedAsrTask(const AiReviewTaskProhibitedAsrResult& _prohibitedAsrTask);
@@ -349,15 +349,15 @@ namespace TencentCloud
                     bool ProhibitedAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedOcrTask 
+                     * 获取Query result of the OCR text prohibited content detection task for video content review. Valid when the task type is Prohibited.Ocr.
+                     * @return ProhibitedOcrTask Query result of the OCR text prohibited content detection task for video content review. Valid when the task type is Prohibited.Ocr.
                      * 
                      */
                     AiReviewTaskProhibitedOcrResult GetProhibitedOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _prohibitedOcrTask 
+                     * 设置Query result of the OCR text prohibited content detection task for video content review. Valid when the task type is Prohibited.Ocr.
+                     * @param _prohibitedOcrTask Query result of the OCR text prohibited content detection task for video content review. Valid when the task type is Prohibited.Ocr.
                      * 
                      */
                     void SetProhibitedOcrTask(const AiReviewTaskProhibitedOcrResult& _prohibitedOcrTask);
@@ -373,12 +373,12 @@ namespace TencentCloud
 
                     /**
                      * Task type. Valid values:
-<li>Porn: porn detection.</li>
-<li>Terrorism: sensitive image.</li>
-<li>Political: sensitive image.</li>
-<li>Porn.Asr: Pornography detection in ASR text</li>
-<li>Porn.Ocr: Pornography detection in OCR text</li>
-<li>Political.Asr: ASR text sensitivity</li>
+<li>Porn: image porn detection.</li>
+<li>Terrorism: sensitive image</li>
+<li>Political: sensitive image</li>
+<li>Porn.Asr: ASR text-based porn detection</li>
+<li>Porn.Ocr: OCR text-based porn detection</li>
+<li>Political.Asr: ASR text sensitive</li>
 <li>Political.Ocr: OCR text sensitivity</li>
 <li>Terrorism.Ocr: OCR text sensitivity</li>
 <li>Prohibited.Asr: ASR text prohibited information recognition</li>
@@ -388,73 +388,73 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Sampling frequency, i.e., the number of frames captured per second for video review.
+                     * Sampling frequency, i.e., the number of frames captured per second from the video for review.
                      */
                     double m_sampleRate;
                     bool m_sampleRateHasBeenSet;
 
                     /**
-                     * Video duration for review, in seconds.
+                     * Video duration reviewed, in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the intelligent porn detection in image task for video content review. Valid when the task type is Porn.
                      */
                     AiReviewTaskPornResult m_pornTask;
                     bool m_pornTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is `Terrorism`.
                      */
                     AiReviewTaskTerrorismResult m_terrorismTask;
                     bool m_terrorismTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is Political.
                      */
                     AiReviewTaskPoliticalResult m_politicalTask;
                     bool m_politicalTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the ASR text pornography detection task for video content review. Valid when TaskType is Porn.Asr.
                      */
                     AiReviewTaskPornAsrResult m_pornAsrTask;
                     bool m_pornAsrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the OCR text pornography detection task for video content review. Valid when the task type is Porn.Ocr.
                      */
                     AiReviewTaskPornOcrResult m_pornOcrTask;
                     bool m_pornOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the sensitive task for ASR text in video content review. Valid when the task type is Political.Asr.
                      */
                     AiReviewTaskPoliticalAsrResult m_politicalAsrTask;
                     bool m_politicalAsrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of sensitive tasks for OCR text in video content review. Valid when the task type is Political.Ocr.
                      */
                     AiReviewTaskPoliticalOcrResult m_politicalOcrTask;
                     bool m_politicalOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the OCR text sensitive task for video content review. Valid when the task type is Terrorism.Ocr.
                      */
                     AiReviewTaskTerrorismOcrResult m_terrorismOcrTask;
                     bool m_terrorismOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the ASR text prohibited content detection task for video content review. Valid when TaskType is Prohibited.Asr.
                      */
                     AiReviewTaskProhibitedAsrResult m_prohibitedAsrTask;
                     bool m_prohibitedAsrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the OCR text prohibited content detection task for video content review. Valid when the task type is Prohibited.Ocr.
                      */
                     AiReviewTaskProhibitedOcrResult m_prohibitedOcrTask;
                     bool m_prohibitedOcrTaskHasBeenSet;

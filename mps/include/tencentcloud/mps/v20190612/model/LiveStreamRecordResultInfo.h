@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RecordOver 
+                     * 获取Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
+                     * @return RecordOver Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
                      * 
                      */
                     uint64_t GetRecordOver() const;
 
                     /**
-                     * 设置
-                     * @param _recordOver 
+                     * 设置Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
+                     * @param _recordOver Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
                      * 
                      */
                     void SetRecordOver(const uint64_t& _recordOver);
@@ -69,15 +77,15 @@ namespace TencentCloud
                     bool RecordOverHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileResults 
+                     * 获取File list.
+                     * @return FileResults File list.
                      * 
                      */
                     std::vector<LiveRecordFile> GetFileResults() const;
 
                     /**
-                     * 设置
-                     * @param _fileResults 
+                     * 设置File list.
+                     * @param _fileResults File list.
                      * 
                      */
                     void SetFileResults(const std::vector<LiveRecordFile>& _fileResults);
@@ -92,13 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
                      */
                     uint64_t m_recordOver;
                     bool m_recordOverHasBeenSet;
 
                     /**
-                     * 
+                     * File list.
                      */
                     std::vector<LiveRecordFile> m_fileResults;
                     bool m_fileResultsHasBeenSet;

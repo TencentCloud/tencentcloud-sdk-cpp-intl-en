@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task input for deduplication
-                     * @return Input Task input for deduplication
+                     * 获取Input of the deduplication task.
+                     * @return Input Input of the deduplication task.
                      * 
                      */
                     AiAnalysisTaskVideoRemakeInput GetInput() const;
 
                     /**
-                     * 设置Task input for deduplication
-                     * @param _input Task input for deduplication
+                     * 设置Input of the deduplication task.
+                     * @param _input Input of the deduplication task.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskVideoRemakeInput& _input);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the deduplication task.
+                     * @return Output Output of the deduplication task.
                      * 
                      */
                     AiAnalysisTaskVideoRemakeOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the deduplication task.
+                     * @param _output Output of the deduplication task.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskVideoRemakeOutput& _output);
@@ -174,13 +174,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task input for deduplication
+                     * Input of the deduplication task.
                      */
                     AiAnalysisTaskVideoRemakeInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the deduplication task.
                      */
                     AiAnalysisTaskVideoRemakeOutput m_output;
                     bool m_outputHasBeenSet;

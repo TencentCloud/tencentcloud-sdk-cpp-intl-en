@@ -80,15 +80,27 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+                     * @return Type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+                     * @param _type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,7 +124,10 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

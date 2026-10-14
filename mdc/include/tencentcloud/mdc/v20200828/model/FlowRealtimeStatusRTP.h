@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The real-time RTP streaming information of a flow.
+                * RTP stream status information of the real-time stream status query API.
                 */
                 class FlowRealtimeStatusRTP : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of packets transmitted.
-                     * @return Packets The number of packets transmitted.
+                     * 获取Number of transmitted packets
+                     * @return Packets Number of transmitted packets
                      * 
                      */
                     int64_t GetPackets() const;
 
                     /**
-                     * 设置The number of packets transmitted.
-                     * @param _packets The number of packets transmitted.
+                     * 设置Number of transmitted packets
+                     * @param _packets Number of transmitted packets
                      * 
                      */
                     void SetPackets(const int64_t& _packets);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of packets transmitted.
+                     * Number of transmitted packets
                      */
                     int64_t m_packets;
                     bool m_packetsHasBeenSet;

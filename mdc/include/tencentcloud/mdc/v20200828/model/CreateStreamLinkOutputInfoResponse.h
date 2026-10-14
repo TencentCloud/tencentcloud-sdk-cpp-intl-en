@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The information of the created output.
-                     * @return Info The information of the created output.
+                     * 获取Output information after creation.
+                     * @return Info Output information after creation.
                      * 
                      */
                     DescribeOutput GetInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The information of the created output.
+                     * Output information after creation.
                      */
                     DescribeOutput m_info;
                     bool m_infoHasBeenSet;

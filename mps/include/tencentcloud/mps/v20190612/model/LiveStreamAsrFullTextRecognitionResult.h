@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Recognition start UTC time.
+                     * @return StartTime Recognition start UTC time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Recognition start UTC time.
+                     * @param _startTime Recognition start UTC time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取UTC time when recognition is completed.
+                     * @return EndTime UTC time when recognition is completed.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置UTC time when recognition is completed.
+                     * @param _endTime UTC time when recognition is completed.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SteadyState 
+                     * 获取Steady-state tag.
+                     * @return SteadyState Steady-state tag.
                      * 
                      */
                     bool GetSteadyState() const;
 
                     /**
-                     * 设置
-                     * @param _steadyState 
+                     * 设置Steady-state tag.
+                     * @param _steadyState Steady-state tag.
                      * 
                      */
                     void SetSteadyState(const bool& _steadyState);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SteadyStateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserId 
+                     * 获取UserId of the websocket and trtc recognition result
+                     * @return UserId UserId of the websocket and trtc recognition result
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置
-                     * @param _userId 
+                     * 设置UserId of the websocket and trtc recognition result
+                     * @param _userId UserId of the websocket and trtc recognition result
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -241,25 +241,25 @@ namespace TencentCloud
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Recognition start UTC time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * UTC time when recognition is completed.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Steady-state tag.
                      */
                     bool m_steadyState;
                     bool m_steadyStateHasBeenSet;
 
                     /**
-                     * 
+                     * UserId of the websocket and trtc recognition result
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

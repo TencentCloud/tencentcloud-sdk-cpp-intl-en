@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The RTP configuration of the output to create.
+                * Create the RTP configuration for the output of a media transmission stream.
                 */
                 class CreateOutputInfoRTPSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The relay destination addresses. One or two addresses are allowed.
-                     * @return Destinations The relay destination addresses. One or two addresses are allowed.
+                     * 获取Destination address. You can enter 1 to 2 addresses.
+                     * @return Destinations Destination address. You can enter 1 to 2 addresses.
                      * 
                      */
                     std::vector<CreateOutputRTPSettingsDestinations> GetDestinations() const;
 
                     /**
-                     * 设置The relay destination addresses. One or two addresses are allowed.
-                     * @param _destinations The relay destination addresses. One or two addresses are allowed.
+                     * 设置Destination address. You can enter 1 to 2 addresses.
+                     * @param _destinations Destination address. You can enter 1 to 2 addresses.
                      * 
                      */
                     void SetDestinations(const std::vector<CreateOutputRTPSettingsDestinations>& _destinations);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DestinationsHasBeenSet() const;
 
                     /**
-                     * 获取This parameter must be set to `none`.
-                     * @return FEC This parameter must be set to `none`.
+                     * 获取Can only be filled in with none.
+                     * @return FEC Can only be filled in with none.
                      * 
                      */
                     std::string GetFEC() const;
 
                     /**
-                     * 设置This parameter must be set to `none`.
-                     * @param _fEC This parameter must be set to `none`.
+                     * 设置Can only be filled in with none.
+                     * @param _fEC Can only be filled in with none.
                      * 
                      */
                     void SetFEC(const std::string& _fEC);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool FECHasBeenSet() const;
 
                     /**
-                     * 获取The timeout period (ms).
-                     * @return IdleTimeout The timeout period (ms).
+                     * 获取Idle timeout period, in milliseconds.
+                     * @return IdleTimeout Idle timeout period, in milliseconds.
                      * 
                      */
                     int64_t GetIdleTimeout() const;
 
                     /**
-                     * 设置The timeout period (ms).
-                     * @param _idleTimeout The timeout period (ms).
+                     * 设置Idle timeout period, in milliseconds.
+                     * @param _idleTimeout Idle timeout period, in milliseconds.
                      * 
                      */
                     void SetIdleTimeout(const int64_t& _idleTimeout);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The relay destination addresses. One or two addresses are allowed.
+                     * Destination address. You can enter 1 to 2 addresses.
                      */
                     std::vector<CreateOutputRTPSettingsDestinations> m_destinations;
                     bool m_destinationsHasBeenSet;
 
                     /**
-                     * This parameter must be set to `none`.
+                     * Can only be filled in with none.
                      */
                     std::string m_fEC;
                     bool m_fECHasBeenSet;
 
                     /**
-                     * The timeout period (ms).
+                     * Idle timeout period, in milliseconds.
                      */
                     int64_t m_idleTimeout;
                     bool m_idleTimeoutHasBeenSet;

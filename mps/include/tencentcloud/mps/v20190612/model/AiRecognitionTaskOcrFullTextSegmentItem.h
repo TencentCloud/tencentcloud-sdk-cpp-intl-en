@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Full text recognition recording clip.
+                * Segment undergone full text recognition.
                 */
                 class AiRecognitionTaskOcrFullTextSegmentItem : public AbstractModel
                 {

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
-                     * @return Bucket Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
+                     * 获取Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
+                     * @return Bucket Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
-                     * @param _bucket Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
+                     * 设置Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
+                     * @param _bucket Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
-                     * @return Region Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
+                     * 获取Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
+                     * @return Region Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
-                     * @param _region Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
+                     * 设置Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
+                     * @param _region Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
-                     * @return Object Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
+                     * 获取Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
+                     * @return Object Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
                      * 
                      */
                     std::string GetObject() const;
 
                     /**
-                     * 设置Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
-                     * @param _object Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
+                     * 设置Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
+                     * @param _object Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
                      * 
                      */
                     void SetObject(const std::string& _object);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of the COS Bucket where the media processing object file resides, for example, TopRankVideo-125xxx88.
+                     * Name of the COS Bucket where the media processing object file is located, for example, TopRankVideo-125xxx88.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Region of the COS Bucket where the media processing object file resides, for example, ap-chongqing.
+                     * Park where the COS Bucket of the media processing object file is located, for example, ap-chongqing.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Input path of the media processing object file, for example `/movie/201907/WildAnimal.mov`.
+                     * Input path of the MPS object file, for example `/movie/201907/WildAnimal.mov`.
                      */
                     std::string m_object;
                     bool m_objectHasBeenSet;

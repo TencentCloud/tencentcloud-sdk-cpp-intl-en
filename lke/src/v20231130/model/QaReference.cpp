@@ -35,31 +35,31 @@ CoreInternalOutcome QaReference::Deserialize(const rapidjson::Value &value)
 
     if (value.HasMember("QaBizId") && !value["QaBizId"].IsNull())
     {
-        if (!value["QaBizId"].IsUint64())
+        if (!value["QaBizId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `QaReference.QaBizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `QaReference.QaBizId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_qaBizId = value["QaBizId"].GetUint64();
+        m_qaBizId = string(value["QaBizId"].GetString());
         m_qaBizIdHasBeenSet = true;
     }
 
     if (value.HasMember("ReferBizId") && !value["ReferBizId"].IsNull())
     {
-        if (!value["ReferBizId"].IsUint64())
+        if (!value["ReferBizId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `QaReference.ReferBizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `QaReference.ReferBizId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_referBizId = value["ReferBizId"].GetUint64();
+        m_referBizId = string(value["ReferBizId"].GetString());
         m_referBizIdHasBeenSet = true;
     }
 
     if (value.HasMember("KnowledgeBizId") && !value["KnowledgeBizId"].IsNull())
     {
-        if (!value["KnowledgeBizId"].IsUint64())
+        if (!value["KnowledgeBizId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `QaReference.KnowledgeBizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `QaReference.KnowledgeBizId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_knowledgeBizId = value["KnowledgeBizId"].GetUint64();
+        m_knowledgeBizId = string(value["KnowledgeBizId"].GetString());
         m_knowledgeBizIdHasBeenSet = true;
     }
 
@@ -85,7 +85,7 @@ void QaReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QaBizId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_qaBizId, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_qaBizId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_referBizIdHasBeenSet)
@@ -93,7 +93,7 @@ void QaReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReferBizId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_referBizId, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_referBizId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_knowledgeBizIdHasBeenSet)
@@ -101,7 +101,7 @@ void QaReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KnowledgeBizId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_knowledgeBizId, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_knowledgeBizId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_knowledgeNameHasBeenSet)
@@ -115,12 +115,12 @@ void QaReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
 }
 
 
-uint64_t QaReference::GetQaBizId() const
+string QaReference::GetQaBizId() const
 {
     return m_qaBizId;
 }
 
-void QaReference::SetQaBizId(const uint64_t& _qaBizId)
+void QaReference::SetQaBizId(const string& _qaBizId)
 {
     m_qaBizId = _qaBizId;
     m_qaBizIdHasBeenSet = true;
@@ -131,12 +131,12 @@ bool QaReference::QaBizIdHasBeenSet() const
     return m_qaBizIdHasBeenSet;
 }
 
-uint64_t QaReference::GetReferBizId() const
+string QaReference::GetReferBizId() const
 {
     return m_referBizId;
 }
 
-void QaReference::SetReferBizId(const uint64_t& _referBizId)
+void QaReference::SetReferBizId(const string& _referBizId)
 {
     m_referBizId = _referBizId;
     m_referBizIdHasBeenSet = true;
@@ -147,12 +147,12 @@ bool QaReference::ReferBizIdHasBeenSet() const
     return m_referBizIdHasBeenSet;
 }
 
-uint64_t QaReference::GetKnowledgeBizId() const
+string QaReference::GetKnowledgeBizId() const
 {
     return m_knowledgeBizId;
 }
 
-void QaReference::SetKnowledgeBizId(const uint64_t& _knowledgeBizId)
+void QaReference::SetKnowledgeBizId(const string& _knowledgeBizId)
 {
     m_knowledgeBizId = _knowledgeBizId;
     m_knowledgeBizIdHasBeenSet = true;

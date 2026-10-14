@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Translation task input information.
+                     * @return Input Translation task input information.
                      * 
                      */
                     SmartSubtitleTaskResultInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置Translation task input information.
+                     * @param _input Translation task input information.
                      * 
                      */
                     void SetInput(const SmartSubtitleTaskResultInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Translation task output information.
+                     * @return Output Translation task output information.
                      * 
                      */
                     SmartSubtitleTaskTransTextResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Translation task output information.
+                     * @param _output Translation task output information.
                      * 
                      */
                     void SetOutput(const SmartSubtitleTaskTransTextResultOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Task progress.
+                     * @return Progress Task progress.
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Task progress.
+                     * @param _progress Task progress.
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -222,19 +222,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Translation task input information.
                      */
                     SmartSubtitleTaskResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Translation task output information.
                      */
                     SmartSubtitleTaskTransTextResultOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * Task progress.
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;

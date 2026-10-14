@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取01937702ecc509dc0f3269ca3420
+                     * @return FlowId 01937702ecc509dc0f3269ca3420
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置01937702ecc509dc0f3269ca3420
+                     * @param _flowId 01937702ecc509dc0f3269ca3420
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The output configuration to modify.
-                     * @return Output The output configuration to modify.
+                     * 获取Output configuration that needs to be modified.
+                     * @return Output Output configuration that needs to be modified.
                      * 
                      */
                     ModifyOutputInfo GetOutput() const;
 
                     /**
-                     * 设置The output configuration to modify.
-                     * @param _output The output configuration to modify.
+                     * 设置Output configuration that needs to be modified.
+                     * @param _output Output configuration that needs to be modified.
                      * 
                      */
                     void SetOutput(const ModifyOutputInfo& _output);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The flow ID.
+                     * 01937702ecc509dc0f3269ca3420
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The output configuration to modify.
+                     * Output configuration that needs to be modified.
                      */
                     ModifyOutputInfo m_output;
                     bool m_outputHasBeenSet;

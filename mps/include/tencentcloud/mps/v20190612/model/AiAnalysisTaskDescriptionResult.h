@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Intelligent description task output.
+                     * @return Output Intelligent description task output.
                      * 
                      */
                     AiAnalysisTaskDescriptionOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Intelligent description task output.
+                     * @param _output Intelligent description task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDescriptionOutput& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent description task output.
                      */
                     AiAnalysisTaskDescriptionOutput m_output;
                     bool m_outputHasBeenSet;

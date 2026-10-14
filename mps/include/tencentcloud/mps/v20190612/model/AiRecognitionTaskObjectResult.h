@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Object recognition task output information.
+                     * @return Output Object recognition task output information.
                      * 
                      */
                     AiRecognitionTaskObjectResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Object recognition task output information.
+                     * @param _output Object recognition task output information.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskObjectResultOutput& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Object recognition task output information.
                      */
                     AiRecognitionTaskObjectResultOutput m_output;
                     bool m_outputHasBeenSet;

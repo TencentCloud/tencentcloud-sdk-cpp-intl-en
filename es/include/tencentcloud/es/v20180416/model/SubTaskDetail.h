@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of subtask in workflow task in the instance operation history (such as each check item in a upgrade check task)
+                * Subtask information in the process task of the instance operation record (for example, each check item in the upgrade check task)
                 */
                 class SubTaskDetail : public AbstractModel
                 {
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Subtask status. 0: processing, 1: succeeded, -1: failed
-                     * @return Status Subtask status. 0: processing, 1: succeeded, -1: failed
+                     * 获取Subtask status. 0: processing, 1: success, -1: failure
+                     * @return Status Subtask status. 0: processing, 1: success, -1: failure
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Subtask status. 0: processing, 1: succeeded, -1: failed
-                     * @param _status Subtask status. 0: processing, 1: succeeded, -1: failed
+                     * 设置Subtask status. 0: processing, 1: success, -1: failure
+                     * @param _status Subtask status. 0: processing, 1: success, -1: failure
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Name of the index for which the check for upgrade failed
-                     * @return FailedIndices Name of the index for which the check for upgrade failed
+                     * 获取Index name that failed the upgrade check
+                     * @return FailedIndices Index name that failed the upgrade check
                      * 
                      */
                     std::vector<std::string> GetFailedIndices() const;
 
                     /**
-                     * 设置Name of the index for which the check for upgrade failed
-                     * @param _failedIndices Name of the index for which the check for upgrade failed
+                     * 设置Index name that failed the upgrade check
+                     * @param _failedIndices Index name that failed the upgrade check
                      * 
                      */
                     void SetFailedIndices(const std::vector<std::string>& _failedIndices);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Subtask level. 1: warning, 2: failed
-                     * @return Level Subtask level. 1: warning, 2: failed
+                     * 获取Subtask level. 1: warning; 2: failure
+                     * @return Level Subtask level. 1: warning; 2: failure
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
-                     * 设置Subtask level. 1: warning, 2: failed
-                     * @param _level Subtask level. 1: warning, 2: failed
+                     * 设置Subtask level. 1: warning; 2: failure
+                     * @param _level Subtask level. 1: warning; 2: failure
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -241,13 +241,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Subtask status. 0: processing, 1: succeeded, -1: failed
+                     * Subtask status. 0: processing, 1: success, -1: failure
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Name of the index for which the check for upgrade failed
+                     * Index name that failed the upgrade check
                      */
                     std::vector<std::string> m_failedIndices;
                     bool m_failedIndicesHasBeenSet;
@@ -259,7 +259,7 @@ namespace TencentCloud
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Subtask level. 1: warning, 2: failed
+                     * Subtask level. 1: warning; 2: failure
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Overseas document recognition address information.
+                * Overseas document recognition address information
                 */
                 class AddressInfo : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Country.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Country Country.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Country</p>
+                     * @return Country <p>Country</p>
                      * 
                      */
                     std::string GetCountry() const;
 
                     /**
-                     * 设置Country.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _country Country.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Country</p>
+                     * @param _country <p>Country</p>
                      * 
                      */
                     void SetCountry(const std::string& _country);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CountryHasBeenSet() const;
 
                     /**
-                     * 获取Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PostalCode Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Postal code</p>
+                     * @return PostalCode <p>Postal code</p>
                      * 
                      */
                     std::string GetPostalCode() const;
 
                     /**
-                     * 设置Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _postalCode Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Postal code</p>
+                     * @param _postalCode <p>Postal code</p>
                      * 
                      */
                     void SetPostalCode(const std::string& _postalCode);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PostalCodeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Subdivision Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sub-region</p>
+                     * @return Subdivision <p>Sub-region</p>
                      * 
                      */
                     std::string GetSubdivision() const;
 
                     /**
-                     * 设置Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subdivision Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sub-region</p>
+                     * @param _subdivision <p>Sub-region</p>
                      * 
                      */
                     void SetSubdivision(const std::string& _subdivision);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubdivisionHasBeenSet() const;
 
                     /**
-                     * 获取District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return District District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>District</p>
+                     * @return District <p>District</p>
                      * 
                      */
                     std::string GetDistrict() const;
 
                     /**
-                     * 设置District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _district District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>District</p>
+                     * @param _district <p>District</p>
                      * 
                      */
                     void SetDistrict(const std::string& _district);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DistrictHasBeenSet() const;
 
                     /**
-                     * 获取City name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return City City name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>City</p>
+                     * @return City <p>City</p>
                      * 
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置City name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _city City name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>City</p>
+                     * @param _city <p>City</p>
                      * 
                      */
                     void SetCity(const std::string& _city);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CityHasBeenSet() const;
 
                     /**
-                     * 获取Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Subdistrict Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sub-district office</p>
+                     * @return Subdistrict <p>Sub-district office</p>
                      * 
                      */
                     std::string GetSubdistrict() const;
 
                     /**
-                     * 设置Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subdistrict Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sub-district office</p>
+                     * @param _subdistrict <p>Sub-district office</p>
                      * 
                      */
                     void SetSubdistrict(const std::string& _subdistrict);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubdistrictHasBeenSet() const;
 
                     /**
-                     * 获取Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FormattedAddress Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Complete address</p>
+                     * @return FormattedAddress <p>Complete address</p>
                      * 
                      */
                     std::string GetFormattedAddress() const;
 
                     /**
-                     * 设置Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _formattedAddress Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Complete address</p>
+                     * @param _formattedAddress <p>Complete address</p>
                      * 
                      */
                     void SetFormattedAddress(const std::string& _formattedAddress);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FormattedAddressHasBeenSet() const;
 
                     /**
-                     * 获取First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LineOne First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>First line of the address bar</p>
+                     * @return LineOne <p>First line of the address bar</p>
                      * 
                      */
                     std::string GetLineOne() const;
 
                     /**
-                     * 设置First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lineOne First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>First line of the address bar</p>
+                     * @param _lineOne <p>First line of the address bar</p>
                      * 
                      */
                     void SetLineOne(const std::string& _lineOne);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LineOneHasBeenSet() const;
 
                     /**
-                     * 获取Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LineTwo Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Second line of the address bar</p>
+                     * @return LineTwo <p>Second line of the address bar</p>
                      * 
                      */
                     std::string GetLineTwo() const;
 
                     /**
-                     * 设置Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lineTwo Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Second line of the address bar</p>
+                     * @param _lineTwo <p>Second line of the address bar</p>
                      * 
                      */
                     void SetLineTwo(const std::string& _lineTwo);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LineTwoHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LineThree Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Third line of the address bar</p>
+                     * @return LineThree <p>Third line of the address bar</p>
                      * 
                      */
                     std::string GetLineThree() const;
 
                     /**
-                     * 设置Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lineThree Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Third line of the address bar</p>
+                     * @param _lineThree <p>Third line of the address bar</p>
                      * 
                      */
                     void SetLineThree(const std::string& _lineThree);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LineThreeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LineFour Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Fourth line of the address bar</p>
+                     * @return LineFour <p>Fourth line of the address bar</p>
                      * 
                      */
                     std::string GetLineFour() const;
 
                     /**
-                     * 设置Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lineFour Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Fourth line of the address bar</p>
+                     * @param _lineFour <p>Fourth line of the address bar</p>
                      * 
                      */
                     void SetLineFour(const std::string& _lineFour);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LineFourHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LineFive Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Fifth line of the address bar</p>
+                     * @return LineFive <p>Fifth line of the address bar</p>
                      * 
                      */
                     std::string GetLineFive() const;
 
                     /**
-                     * 设置Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lineFive Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Fifth line of the address bar</p>
+                     * @param _lineFive <p>Fifth line of the address bar</p>
                      * 
                      */
                     void SetLineFive(const std::string& _lineFive);
@@ -349,85 +301,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Country.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Country</p>
                      */
                     std::string m_country;
                     bool m_countryHasBeenSet;
 
                     /**
-                     * Postal code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Postal code</p>
                      */
                     std::string m_postalCode;
                     bool m_postalCodeHasBeenSet;
 
                     /**
-                     * Sub-region or state/province.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Sub-region</p>
                      */
                     std::string m_subdivision;
                     bool m_subdivisionHasBeenSet;
 
                     /**
-                     * District or county.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>District</p>
                      */
                     std::string m_district;
                     bool m_districtHasBeenSet;
 
                     /**
-                     * City name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>City</p>
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;
 
                     /**
-                     * Subdistrict or township.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Sub-district office</p>
                      */
                     std::string m_subdistrict;
                     bool m_subdistrictHasBeenSet;
 
                     /**
-                     * Formatted complete address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Complete address</p>
                      */
                     std::string m_formattedAddress;
                     bool m_formattedAddressHasBeenSet;
 
                     /**
-                     * First line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>First line of the address bar</p>
                      */
                     std::string m_lineOne;
                     bool m_lineOneHasBeenSet;
 
                     /**
-                     * Second line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Second line of the address bar</p>
                      */
                     std::string m_lineTwo;
                     bool m_lineTwoHasBeenSet;
 
                     /**
-                     * Specifies the third line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Third line of the address bar</p>
                      */
                     std::string m_lineThree;
                     bool m_lineThreeHasBeenSet;
 
                     /**
-                     * Specifies the fourth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Fourth line of the address bar</p>
                      */
                     std::string m_lineFour;
                     bool m_lineFourHasBeenSet;
 
                     /**
-                     * Specifies the fifth line of the address bar.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Fifth line of the address bar</p>
                      */
                     std::string m_lineFive;
                     bool m_lineFiveHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-                     * @return LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * 获取License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
+                     * @return LicenseType License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
                      * 
                      */
                     std::string GetLicenseType() const;
 
                     /**
-                     * 设置License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-                     * @param _licenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * 设置License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
+                     * @param _licenseType License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
                      * 
                      */
                     void SetLicenseType(const std::string& _licenseType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LicenseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-                     * @return AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+                     * 获取Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
+                     * @return AutoVoucher Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-                     * @param _autoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+                     * 设置Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
+                     * @param _autoVoucher Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取List of voucher IDs (only one voucher can be specified at a time currently)
-                     * @return VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
+                     * 获取Voucher ID list. Only one voucher can be specified.
+                     * @return VoucherIds Voucher ID list. Only one voucher can be specified.
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置List of voucher IDs (only one voucher can be specified at a time currently)
-                     * @param _voucherIds List of voucher IDs (only one voucher can be specified at a time currently)
+                     * 设置Voucher ID list. Only one voucher can be specified.
+                     * @param _voucherIds Voucher ID list. Only one voucher can be specified.
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-                     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * 获取Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
+                     * @return BasicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
                      * 
                      */
                     uint64_t GetBasicSecurityType() const;
 
                     /**
-                     * 设置Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-                     * @param _basicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * 设置Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
+                     * @param _basicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
                      * 
                      */
                     void SetBasicSecurityType(const uint64_t& _basicSecurityType);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool BasicSecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
-                     * @return ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+                     * 获取Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
+                     * @return ForceRestart Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
                      * 
                      */
                     bool GetForceRestart() const;
 
                     /**
-                     * 设置Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
-                     * @param _forceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+                     * 设置Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
+                     * @param _forceRestart Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
                      * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
@@ -177,31 +177,31 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
 
                     /**
-                     * Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+                     * Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * List of voucher IDs (only one voucher can be specified at a time currently)
+                     * Voucher ID list. Only one voucher can be specified.
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
                      */
                     uint64_t m_basicSecurityType;
                     bool m_basicSecurityTypeHasBeenSet;
 
                     /**
-                     * Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+                     * Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;

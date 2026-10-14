@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Orchestrate the task result type of video analysis
+                * Result type of the orchestration video analysis task
                 */
                 class ScheduleAnalysisTaskResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Analyze the input of the task.
-                     * @return Input Analyze the input of the task.
+                     * 获取Input of the analysis task.
+                     * @return Input Input of the analysis task.
                      * 
                      */
                     AiAnalysisTaskInput GetInput() const;
 
                     /**
-                     * 设置Analyze the input of the task.
-                     * @param _input Analyze the input of the task.
+                     * 设置Input of the analysis task.
+                     * @param _input Input of the analysis task.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskInput& _input);
@@ -243,7 +243,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Analyze the input of the task.
+                     * Input of the analysis task.
                      */
                     AiAnalysisTaskInput m_input;
                     bool m_inputHasBeenSet;

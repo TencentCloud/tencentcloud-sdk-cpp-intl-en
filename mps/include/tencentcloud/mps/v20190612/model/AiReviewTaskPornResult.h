@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review porn detection task result type
+                * Result type of the porn detection task during content review.
                 */
                 class AiReviewTaskPornResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review porn task input.
-                     * @return Input Content review porn task input.
+                     * 获取Input for the content review pornography detection task.
+                     * @return Input Input for the content review pornography detection task.
                      * 
                      */
                     AiReviewPornTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review porn task input.
-                     * @param _input Content review porn task input.
+                     * 设置Input for the content review pornography detection task.
+                     * @param _input Input for the content review pornography detection task.
                      * 
                      */
                     void SetInput(const AiReviewPornTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Pornography detection task output of content review.
+                     * @return Output Pornography detection task output of content review.
                      * 
                      */
                     AiReviewPornTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Pornography detection task output of content review.
+                     * @param _output Pornography detection task output of content review.
                      * 
                      */
                     void SetOutput(const AiReviewPornTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review porn task input.
+                     * Input for the content review pornography detection task.
                      */
                     AiReviewPornTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Pornography detection task output of content review.
                      */
                     AiReviewPornTaskOutput m_output;
                     bool m_outputHasBeenSet;

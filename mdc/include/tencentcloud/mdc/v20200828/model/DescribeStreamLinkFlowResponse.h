@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration information of a flow
-                     * @return Info Configuration information of a flow
+                     * 获取<p>Configuration information of the stream.</p>
+                     * @return Info <p>Configuration information of the stream.</p>
                      * 
                      */
                     DescribeFlow GetInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration information of a flow
+                     * <p>Configuration information of the stream.</p>
                      */
                     DescribeFlow m_info;
                     bool m_infoHasBeenSet;

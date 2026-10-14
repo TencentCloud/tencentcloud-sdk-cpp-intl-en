@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full speech recognition segment list.
-                     * @return SegmentSet Full speech recognition segment list.
+                     * 获取List of segments for full speech recognition.
+                     * @return SegmentSet List of segments for full speech recognition.
                      * 
                      */
                     std::vector<AiRecognitionTaskAsrFullTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Full speech recognition segment list.
-                     * @param _segmentSet Full speech recognition segment list.
+                     * 设置List of segments for full speech recognition.
+                     * @param _segmentSet List of segments for full speech recognition.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskAsrFullTextSegmentItem>& _segmentSet);
@@ -114,7 +114,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Full speech recognition segment list.
+                     * List of segments for full speech recognition.
                      */
                     std::vector<AiRecognitionTaskAsrFullTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

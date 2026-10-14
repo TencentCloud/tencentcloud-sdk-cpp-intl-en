@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Connectivity Check Configuration
                 */
                 class ConnDetectConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Quuid 
+                     * 获取Host QUUID
+                     * @return Quuid Host QUUID
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置
-                     * @param _quuid 
+                     * 设置Host QUUID
+                     * @param _quuid Host QUUID
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uuid 
+                     * 获取Host UUID
+                     * @return Uuid Host UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置
-                     * @param _uuid 
+                     * 设置Host UUID
+                     * @param _uuid Host UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Host QUUID
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * 
+                     * Host UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;

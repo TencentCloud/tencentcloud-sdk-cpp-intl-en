@@ -166,15 +166,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Translation output result of pure subtitle files.
+                     * @return Output Translation output result of pure subtitle files.
                      * 
                      */
                     PureSubtitleTransResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Translation output result of pure subtitle files.
+                     * @param _output Translation output result of pure subtitle files.
                      * 
                      */
                     void SetOutput(const PureSubtitleTransResultOutput& _output);
@@ -243,7 +243,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Translation output result of pure subtitle files.
                      */
                     PureSubtitleTransResultOutput m_output;
                     bool m_outputHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster view data
+                * Cluster dimension view data
                 */
                 class ClusterView : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VisibleHasBeenSet() const;
 
                     /**
-                     * 获取Whether the cluster encounters circuit breaking
-                     * @return Break Whether the cluster encounters circuit breaking
+                     * 获取Whether to fuse the cluster
+                     * @return Break Whether to fuse the cluster
                      * 
                      */
                     double GetBreak() const;
 
                     /**
-                     * 设置Whether the cluster encounters circuit breaking
-                     * @param _break Whether the cluster encounters circuit breaking
+                     * 设置Whether to fuse the cluster
+                     * @param _break Whether to fuse the cluster
                      * 
                      */
                     void SetBreak(const double& _break);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BreakHasBeenSet() const;
 
                     /**
-                     * 获取Average disk usage
-                     * @return AvgDiskUsage Average disk usage
+                     * 获取Average Disk Usage
+                     * @return AvgDiskUsage Average Disk Usage
                      * 
                      */
                     double GetAvgDiskUsage() const;
 
                     /**
-                     * 设置Average disk usage
-                     * @param _avgDiskUsage Average disk usage
+                     * 设置Average Disk Usage
+                     * @param _avgDiskUsage Average Disk Usage
                      * 
                      */
                     void SetAvgDiskUsage(const double& _avgDiskUsage);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AvgDiskUsageHasBeenSet() const;
 
                     /**
-                     * 获取Average memory usage
-                     * @return AvgMemUsage Average memory usage
+                     * 获取Average memory utilization
+                     * @return AvgMemUsage Average memory utilization
                      * 
                      */
                     double GetAvgMemUsage() const;
 
                     /**
-                     * 设置Average memory usage
-                     * @param _avgMemUsage Average memory usage
+                     * 设置Average memory utilization
+                     * @param _avgMemUsage Average memory utilization
                      * 
                      */
                     void SetAvgMemUsage(const double& _avgMemUsage);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool AvgMemUsageHasBeenSet() const;
 
                     /**
-                     * 获取Average CPU usage
-                     * @return AvgCpuUsage Average CPU usage
+                     * 获取Average CPU Usage
+                     * @return AvgCpuUsage Average CPU Usage
                      * 
                      */
                     double GetAvgCpuUsage() const;
 
                     /**
-                     * 设置Average CPU usage
-                     * @param _avgCpuUsage Average CPU usage
+                     * 设置Average CPU Usage
+                     * @param _avgCpuUsage Average CPU Usage
                      * 
                      */
                     void SetAvgCpuUsage(const double& _avgCpuUsage);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool AvgCpuUsageHasBeenSet() const;
 
                     /**
-                     * 获取Total disk size of the cluster
-                     * @return TotalDiskSize Total disk size of the cluster
+                     * 获取Total storage size of a cluster.
+                     * @return TotalDiskSize Total storage size of a cluster.
                      * 
                      */
                     uint64_t GetTotalDiskSize() const;
 
                     /**
-                     * 设置Total disk size of the cluster
-                     * @param _totalDiskSize Total disk size of the cluster
+                     * 设置Total storage size of a cluster.
+                     * @param _totalDiskSize Total storage size of a cluster.
                      * 
                      */
                     void SetTotalDiskSize(const uint64_t& _totalDiskSize);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool TotalDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Types of nodes to receive client requests
-                     * @return TargetNodeTypes Types of nodes to receive client requests
+                     * 获取Client request node
+                     * @return TargetNodeTypes Client request node
                      * 
                      */
                     std::vector<std::string> GetTargetNodeTypes() const;
 
                     /**
-                     * 设置Types of nodes to receive client requests
-                     * @param _targetNodeTypes Types of nodes to receive client requests
+                     * 设置Client request node
+                     * @param _targetNodeTypes Client request node
                      * 
                      */
                     void SetTargetNodeTypes(const std::vector<std::string>& _targetNodeTypes);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool TotalNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of data nodes
-                     * @return DataNodeNum Number of data nodes
+                     * 获取Number of Data Nodes
+                     * @return DataNodeNum Number of Data Nodes
                      * 
                      */
                     int64_t GetDataNodeNum() const;
 
                     /**
-                     * 设置Number of data nodes
-                     * @param _dataNodeNum Number of data nodes
+                     * 设置Number of Data Nodes
+                     * @param _dataNodeNum Number of Data Nodes
                      * 
                      */
                     void SetDataNodeNum(const int64_t& _dataNodeNum);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool DataNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of indices
-                     * @return IndexNum Number of indices
+                     * 获取Index count
+                     * @return IndexNum Index count
                      * 
                      */
                     int64_t GetIndexNum() const;
 
                     /**
-                     * 设置Number of indices
-                     * @param _indexNum Number of indices
+                     * 设置Index count
+                     * @param _indexNum Index count
                      * 
                      */
                     void SetIndexNum(const int64_t& _indexNum);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool DocNumHasBeenSet() const;
 
                     /**
-                     * 获取Used disk size (in bytes)
-                     * @return DiskUsedInBytes Used disk size (in bytes)
+                     * 获取Used bytes of the disk
+                     * @return DiskUsedInBytes Used bytes of the disk
                      * 
                      */
                     int64_t GetDiskUsedInBytes() const;
 
                     /**
-                     * 设置Used disk size (in bytes)
-                     * @param _diskUsedInBytes Used disk size (in bytes)
+                     * 设置Used bytes of the disk
+                     * @param _diskUsedInBytes Used bytes of the disk
                      * 
                      */
                     void SetDiskUsedInBytes(const int64_t& _diskUsedInBytes);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool PrimaryShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of relocating shards
-                     * @return RelocatingShardNum Number of relocating shards
+                     * 获取Number of migrating shards
+                     * @return RelocatingShardNum Number of migrating shards
                      * 
                      */
                     int64_t GetRelocatingShardNum() const;
 
                     /**
-                     * 设置Number of relocating shards
-                     * @param _relocatingShardNum Number of relocating shards
+                     * 设置Number of migrating shards
+                     * @param _relocatingShardNum Number of migrating shards
                      * 
                      */
                     void SetRelocatingShardNum(const int64_t& _relocatingShardNum);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool RelocatingShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of initializing shards
-                     * @return InitializingShardNum Number of initializing shards
+                     * 获取Number of initializing shards.
+                     * @return InitializingShardNum Number of initializing shards.
                      * 
                      */
                     int64_t GetInitializingShardNum() const;
 
                     /**
-                     * 设置Number of initializing shards
-                     * @param _initializingShardNum Number of initializing shards
+                     * 设置Number of initializing shards.
+                     * @param _initializingShardNum Number of initializing shards.
                      * 
                      */
                     void SetInitializingShardNum(const int64_t& _initializingShardNum);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool UnassignedShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Total COS storage of an enterprise cluster, in GB
-                     * @return TotalCosStorage Total COS storage of an enterprise cluster, in GB
+                     * 获取Enterprise Edition COS storage capacity size in GB
+                     * @return TotalCosStorage Enterprise Edition COS storage capacity size in GB
                      * 
                      */
                     int64_t GetTotalCosStorage() const;
 
                     /**
-                     * 设置Total COS storage of an enterprise cluster, in GB
-                     * @param _totalCosStorage Total COS storage of an enterprise cluster, in GB
+                     * 设置Enterprise Edition COS storage capacity size in GB
+                     * @param _totalCosStorage Enterprise Edition COS storage capacity size in GB
                      * 
                      */
                     void SetTotalCosStorage(const int64_t& _totalCosStorage);
@@ -467,19 +467,15 @@ namespace TencentCloud
                     bool TotalCosStorageHasBeenSet() const;
 
                     /**
-                     * 获取Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return SearchableSnapshotCosBucket Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
+                     * @return SearchableSnapshotCosBucket bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
                      * 
                      */
                     std::string GetSearchableSnapshotCosBucket() const;
 
                     /**
-                     * 设置Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _searchableSnapshotCosBucket Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
+                     * @param _searchableSnapshotCosBucket bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
                      * 
                      */
                     void SetSearchableSnapshotCosBucket(const std::string& _searchableSnapshotCosBucket);
@@ -492,19 +488,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool SearchableSnapshotCosBucketHasBeenSet() const;
 
                     /**
-                     * 获取COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return SearchableSnapshotCosAppId COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
+                     * @return SearchableSnapshotCosAppId App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
                      * 
                      */
                     std::string GetSearchableSnapshotCosAppId() const;
 
                     /**
-                     * 设置COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _searchableSnapshotCosAppId COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
+                     * @param _searchableSnapshotCosAppId App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
                      * 
                      */
                     void SetSearchableSnapshotCosAppId(const std::string& _searchableSnapshotCosAppId);
@@ -531,37 +523,37 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_visibleHasBeenSet;
 
                     /**
-                     * Whether the cluster encounters circuit breaking
+                     * Whether to fuse the cluster
                      */
                     double m_break;
                     bool m_breakHasBeenSet;
 
                     /**
-                     * Average disk usage
+                     * Average Disk Usage
                      */
                     double m_avgDiskUsage;
                     bool m_avgDiskUsageHasBeenSet;
 
                     /**
-                     * Average memory usage
+                     * Average memory utilization
                      */
                     double m_avgMemUsage;
                     bool m_avgMemUsageHasBeenSet;
 
                     /**
-                     * Average CPU usage
+                     * Average CPU Usage
                      */
                     double m_avgCpuUsage;
                     bool m_avgCpuUsageHasBeenSet;
 
                     /**
-                     * Total disk size of the cluster
+                     * Total storage size of a cluster.
                      */
                     uint64_t m_totalDiskSize;
                     bool m_totalDiskSizeHasBeenSet;
 
                     /**
-                     * Types of nodes to receive client requests
+                     * Client request node
                      */
                     std::vector<std::string> m_targetNodeTypes;
                     bool m_targetNodeTypesHasBeenSet;
@@ -579,13 +571,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_totalNodeNumHasBeenSet;
 
                     /**
-                     * Number of data nodes
+                     * Number of Data Nodes
                      */
                     int64_t m_dataNodeNum;
                     bool m_dataNodeNumHasBeenSet;
 
                     /**
-                     * Number of indices
+                     * Index count
                      */
                     int64_t m_indexNum;
                     bool m_indexNumHasBeenSet;
@@ -597,7 +589,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_docNumHasBeenSet;
 
                     /**
-                     * Used disk size (in bytes)
+                     * Used bytes of the disk
                      */
                     int64_t m_diskUsedInBytes;
                     bool m_diskUsedInBytesHasBeenSet;
@@ -615,13 +607,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_primaryShardNumHasBeenSet;
 
                     /**
-                     * Number of relocating shards
+                     * Number of migrating shards
                      */
                     int64_t m_relocatingShardNum;
                     bool m_relocatingShardNumHasBeenSet;
 
                     /**
-                     * Number of initializing shards
+                     * Number of initializing shards.
                      */
                     int64_t m_initializingShardNum;
                     bool m_initializingShardNumHasBeenSet;
@@ -633,21 +625,19 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_unassignedShardNumHasBeenSet;
 
                     /**
-                     * Total COS storage of an enterprise cluster, in GB
+                     * Enterprise Edition COS storage capacity size in GB
                      */
                     int64_t m_totalCosStorage;
                     bool m_totalCosStorageHasBeenSet;
 
                     /**
-                     * Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
                      */
                     std::string m_searchableSnapshotCosBucket;
                     bool m_searchableSnapshotCosBucketHasBeenSet;
 
                     /**
-                     * COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
                      */
                     std::string m_searchableSnapshotCosAppId;
                     bool m_searchableSnapshotCosAppIdHasBeenSet;

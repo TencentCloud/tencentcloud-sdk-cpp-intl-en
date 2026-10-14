@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream real-time translation result
+                * Real-time translation result of the live stream
                 */
                 class LiveStreamTransTextRecognitionResult : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Start PTS time of a translated fragment, in seconds.
-                     * @return StartPtsTime Start PTS time of a translated fragment, in seconds.
+                     * 获取Start PTS time of a translated segment, in seconds.
+                     * @return StartPtsTime Start PTS time of a translated segment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of a translated fragment, in seconds.
-                     * @param _startPtsTime Start PTS time of a translated fragment, in seconds.
+                     * 设置Start PTS time of a translated segment, in seconds.
+                     * @param _startPtsTime Start PTS time of a translated segment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Translation start UTC time.
+                     * @return StartTime Translation start UTC time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Translation start UTC time.
+                     * @param _startTime Translation start UTC time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取UTC time when translation is completed.
+                     * @return EndTime UTC time when translation is completed.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置UTC time when translation is completed.
+                     * @param _endTime UTC time when translation is completed.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SteadyState 
+                     * 获取Steady-state tag.
+                     * @return SteadyState Steady-state tag.
                      * 
                      */
                     bool GetSteadyState() const;
 
                     /**
-                     * 设置
-                     * @param _steadyState 
+                     * 设置Steady-state tag.
+                     * @param _steadyState Steady-state tag.
                      * 
                      */
                     void SetSteadyState(const bool& _steadyState);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool SteadyStateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserId 
+                     * 获取UserId for real-time translation over websocket and trtc
+                     * @return UserId UserId for real-time translation over websocket and trtc
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置
-                     * @param _userId 
+                     * 设置UserId for real-time translation over websocket and trtc
+                     * @param _userId UserId for real-time translation over websocket and trtc
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -244,7 +244,7 @@ namespace TencentCloud
                     bool m_textHasBeenSet;
 
                     /**
-                     * Start PTS time of a translated fragment, in seconds.
+                     * Start PTS time of a translated segment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
@@ -268,25 +268,25 @@ namespace TencentCloud
                     bool m_transHasBeenSet;
 
                     /**
-                     * 
+                     * Translation start UTC time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * UTC time when translation is completed.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Steady-state tag.
                      */
                     bool m_steadyState;
                     bool m_steadyStateHasBeenSet;
 
                     /**
-                     * 
+                     * UserId for real-time translation over websocket and trtc
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

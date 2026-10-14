@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent classification result
+                * Intelligent classification result.
                 */
                 class MediaAiAnalysisClassificationItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClassificationHasBeenSet() const;
 
                     /**
-                     * 获取Reliability of intelligent classification, with a value range from 0 to 100.
-                     * @return Confidence Reliability of intelligent classification, with a value range from 0 to 100.
+                     * 获取Confidence of the intelligent categorization, with a value range from 0 to 100.
+                     * @return Confidence Confidence of the intelligent categorization, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Reliability of intelligent classification, with a value range from 0 to 100.
-                     * @param _confidence Reliability of intelligent classification, with a value range from 0 to 100.
+                     * 设置Confidence of the intelligent categorization, with a value range from 0 to 100.
+                     * @param _confidence Confidence of the intelligent categorization, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_classificationHasBeenSet;
 
                     /**
-                     * Reliability of intelligent classification, with a value range from 0 to 100.
+                     * Confidence of the intelligent categorization, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

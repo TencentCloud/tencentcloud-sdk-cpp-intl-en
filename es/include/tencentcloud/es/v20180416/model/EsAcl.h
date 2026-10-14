@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kibana access blocklist
-                     * @return BlackIpList Kibana access blocklist
+                     * 获取kibana access blocklist
+                     * @return BlackIpList kibana access blocklist
                      * 
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
-                     * 设置Kibana access blocklist
-                     * @param _blackIpList Kibana access blocklist
+                     * 设置kibana access blocklist
+                     * @param _blackIpList kibana access blocklist
                      * 
                      */
                     void SetBlackIpList(const std::vector<std::string>& _blackIpList);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BlackIpListHasBeenSet() const;
 
                     /**
-                     * 获取Kibana access allowlist
-                     * @return WhiteIpList Kibana access allowlist
+                     * 获取kibana access allowlist
+                     * @return WhiteIpList kibana access allowlist
                      * 
                      */
                     std::vector<std::string> GetWhiteIpList() const;
 
                     /**
-                     * 设置Kibana access allowlist
-                     * @param _whiteIpList Kibana access allowlist
+                     * 设置kibana access allowlist
+                     * @param _whiteIpList kibana access allowlist
                      * 
                      */
                     void SetWhiteIpList(const std::vector<std::string>& _whiteIpList);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Kibana access blocklist
+                     * kibana access blocklist
                      */
                     std::vector<std::string> m_blackIpList;
                     bool m_blackIpListHasBeenSet;
 
                     /**
-                     * Kibana access allowlist
+                     * kibana access allowlist
                      */
                     std::vector<std::string> m_whiteIpList;
                     bool m_whiteIpListHasBeenSet;

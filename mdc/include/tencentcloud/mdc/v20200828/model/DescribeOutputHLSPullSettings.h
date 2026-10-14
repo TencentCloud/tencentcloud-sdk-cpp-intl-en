@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query the configuration message of the output HLS pull.
                 */
                 class DescribeOutputHLSPullSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ServerUrls 
+                     * 获取List of HLS pull addresses.
+                     * @return ServerUrls List of HLS pull addresses.
                      * 
                      */
                     std::vector<DescribeOutputHLSPullServerUrl> GetServerUrls() const;
 
                     /**
-                     * 设置
-                     * @param _serverUrls 
+                     * 设置List of HLS pull addresses.
+                     * @param _serverUrls List of HLS pull addresses.
                      * 
                      */
                     void SetServerUrls(const std::vector<DescribeOutputHLSPullServerUrl>& _serverUrls);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * List of HLS pull addresses.
                      */
                     std::vector<DescribeOutputHLSPullServerUrl> m_serverUrls;
                     bool m_serverUrlsHasBeenSet;

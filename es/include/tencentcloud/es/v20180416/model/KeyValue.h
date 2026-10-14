@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * `OperationDetail` uses an array of this structure to describe the old and new configuration information
+                * OperationDetail uses an array of this structure to describe the old and new configuration
                 */
                 class KeyValue : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key
-                     * @return Key Key
+                     * 获取Key.
+                     * @return Key Key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key
-                     * @param _key Key
+                     * 设置Key.
+                     * @param _key Key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Value
-                     * @return Value Value
+                     * 获取Value.
+                     * @return Value Value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Value
-                     * @param _value Value
+                     * 设置Value.
+                     * @param _value Value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Key
+                     * Key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Value
+                     * Value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

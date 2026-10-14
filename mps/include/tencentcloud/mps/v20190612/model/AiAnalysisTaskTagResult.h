@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent tag result type
+                * Intelligent tag result type.
                 */
                 class AiAnalysisTaskTagResult : public AbstractModel
                 {
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Intelligent tag task output.
+                     * @return Output Intelligent tag task output.
                      * 
                      */
                     AiAnalysisTaskTagOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Intelligent tag task output.
+                     * @param _output Intelligent tag task output.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskTagOutput& _output);
@@ -207,7 +207,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent tag task output.
                      */
                     AiAnalysisTaskTagOutput m_output;
                     bool m_outputHasBeenSet;

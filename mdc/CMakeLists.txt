@@ -19,8 +19,8 @@ set(mdc_public_header
   )
 
 set(mdc_public_header_model
+  include/tencentcloud/mdc/v20200828/model/ModifyStreamLinkFlowResponse.h
   include/tencentcloud/mdc/v20200828/model/OutputAddress.h
-  include/tencentcloud/mdc/v20200828/model/DescribeOutputRTMPPullServerUrl.h
   include/tencentcloud/mdc/v20200828/model/DescribeInputRTPSettings.h
   include/tencentcloud/mdc/v20200828/model/FlowRealtimeStatusRTP.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkRegionsRequest.h
@@ -44,15 +44,17 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoResponse.h
   include/tencentcloud/mdc/v20200828/model/RTPAddressDestination.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowLogsResponse.h
+  include/tencentcloud/mdc/v20200828/model/SRTFECSimpleOptions.h
   include/tencentcloud/mdc/v20200828/model/DescribeOutput.h
   include/tencentcloud/mdc/v20200828/model/CreateInputHLSPullSettings.h
   include/tencentcloud/mdc/v20200828/model/FailOverOption.h
   include/tencentcloud/mdc/v20200828/model/CreateOutputSrtSettings.h
-  include/tencentcloud/mdc/v20200828/model/ModifyStreamLinkFlowResponse.h
+  include/tencentcloud/mdc/v20200828/model/DescribeOutputRTMPPullServerUrl.h
   include/tencentcloud/mdc/v20200828/model/StartStreamLinkFlowRequest.h
   include/tencentcloud/mdc/v20200828/model/StartStreamLinkFlowResponse.h
   include/tencentcloud/mdc/v20200828/model/DescribeOutputRISTSettings.h
   include/tencentcloud/mdc/v20200828/model/CreateOutputRTPSettingsDestinations.h
+  include/tencentcloud/mdc/v20200828/model/SRTFECFullOptions.h
   include/tencentcloud/mdc/v20200828/model/CreateOutputInfo.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowRealtimeStatusResponse.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowsResponse.h
@@ -83,11 +85,13 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowSRTStatisticsRequest.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowRequest.h
   include/tencentcloud/mdc/v20200828/model/DescribeOutputHLSPullSettings.h
+  include/tencentcloud/mdc/v20200828/model/CreateStreamLinkSecurityGroupResponse.h
   include/tencentcloud/mdc/v20200828/model/FlowStatisticsArray.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkRegionsResponse.h
   include/tencentcloud/mdc/v20200828/model/StreamUrlDetail.h
   include/tencentcloud/mdc/v20200828/model/DescribeInputSRTSettings.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowStatisticsResponse.h
+  include/tencentcloud/mdc/v20200828/model/CreateStreamLinkSecurityGroupRequest.h
   include/tencentcloud/mdc/v20200828/model/CreateStreamLinkFlowResponse.h
   include/tencentcloud/mdc/v20200828/model/DescribeInputHLSPullSettings.h
   include/tencentcloud/mdc/v20200828/model/SRTAddressDestination.h
@@ -117,6 +121,7 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/CreateOutputRtmpSettingsDestinations.h
   include/tencentcloud/mdc/v20200828/model/FlowLogInfo.h
   include/tencentcloud/mdc/v20200828/model/DeleteStreamLinkOutputResponse.h
+  include/tencentcloud/mdc/v20200828/model/CreateInputRISTSettings.h
   include/tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoRequest.h
   include/tencentcloud/mdc/v20200828/model/ModifyStreamLinkInputRequest.h
   include/tencentcloud/mdc/v20200828/model/ResilientStreamConf.h
@@ -132,8 +137,8 @@ set(mdc_public_header_model
 
 set(mdc_src
   src/v20200828/MdcClient.cpp
+  src/v20200828/model/ModifyStreamLinkFlowResponse.cpp
   src/v20200828/model/OutputAddress.cpp
-  src/v20200828/model/DescribeOutputRTMPPullServerUrl.cpp
   src/v20200828/model/DescribeInputRTPSettings.cpp
   src/v20200828/model/FlowRealtimeStatusRTP.cpp
   src/v20200828/model/DescribeStreamLinkRegionsRequest.cpp
@@ -157,15 +162,17 @@ set(mdc_src
   src/v20200828/model/CreateStreamLinkOutputInfoResponse.cpp
   src/v20200828/model/RTPAddressDestination.cpp
   src/v20200828/model/DescribeStreamLinkFlowLogsResponse.cpp
+  src/v20200828/model/SRTFECSimpleOptions.cpp
   src/v20200828/model/DescribeOutput.cpp
   src/v20200828/model/CreateInputHLSPullSettings.cpp
   src/v20200828/model/FailOverOption.cpp
   src/v20200828/model/CreateOutputSrtSettings.cpp
-  src/v20200828/model/ModifyStreamLinkFlowResponse.cpp
+  src/v20200828/model/DescribeOutputRTMPPullServerUrl.cpp
   src/v20200828/model/StartStreamLinkFlowRequest.cpp
   src/v20200828/model/StartStreamLinkFlowResponse.cpp
   src/v20200828/model/DescribeOutputRISTSettings.cpp
   src/v20200828/model/CreateOutputRTPSettingsDestinations.cpp
+  src/v20200828/model/SRTFECFullOptions.cpp
   src/v20200828/model/CreateOutputInfo.cpp
   src/v20200828/model/DescribeStreamLinkFlowRealtimeStatusResponse.cpp
   src/v20200828/model/DescribeStreamLinkFlowsResponse.cpp
@@ -196,11 +203,13 @@ set(mdc_src
   src/v20200828/model/DescribeStreamLinkFlowSRTStatisticsRequest.cpp
   src/v20200828/model/DescribeStreamLinkFlowRequest.cpp
   src/v20200828/model/DescribeOutputHLSPullSettings.cpp
+  src/v20200828/model/CreateStreamLinkSecurityGroupResponse.cpp
   src/v20200828/model/FlowStatisticsArray.cpp
   src/v20200828/model/DescribeStreamLinkRegionsResponse.cpp
   src/v20200828/model/StreamUrlDetail.cpp
   src/v20200828/model/DescribeInputSRTSettings.cpp
   src/v20200828/model/DescribeStreamLinkFlowStatisticsResponse.cpp
+  src/v20200828/model/CreateStreamLinkSecurityGroupRequest.cpp
   src/v20200828/model/CreateStreamLinkFlowResponse.cpp
   src/v20200828/model/DescribeInputHLSPullSettings.cpp
   src/v20200828/model/SRTAddressDestination.cpp
@@ -230,6 +239,7 @@ set(mdc_src
   src/v20200828/model/CreateOutputRtmpSettingsDestinations.cpp
   src/v20200828/model/FlowLogInfo.cpp
   src/v20200828/model/DeleteStreamLinkOutputResponse.cpp
+  src/v20200828/model/CreateInputRISTSettings.cpp
   src/v20200828/model/CreateStreamLinkOutputInfoRequest.cpp
   src/v20200828/model/ModifyStreamLinkInputRequest.cpp
   src/v20200828/model/ResilientStreamConf.cpp

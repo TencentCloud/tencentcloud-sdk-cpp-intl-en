@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters of the protocol
+                * Parameters for HTTP function support of other access protocols
                 */
                 class ProtocolParams : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return WSParams Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Supported parameters of the WebSockets protocol
+                     * @return WSParams Supported parameters of the WebSockets protocol
                      * 
                      */
                     WSParams GetWSParams() const;
 
                     /**
-                     * 设置Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _wSParams Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Supported parameters of the WebSockets protocol
+                     * @param _wSParams Supported parameters of the WebSockets protocol
                      * 
                      */
                     void SetWSParams(const WSParams& _wSParams);
@@ -75,8 +71,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Supported parameters of the WebSockets protocol
                      */
                     WSParams m_wSParams;
                     bool m_wSParamsHasBeenSet;

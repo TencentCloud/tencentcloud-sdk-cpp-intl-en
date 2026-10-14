@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool EngineTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderBy 
+                     * 获取<p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
+                     * @return OrderBy <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置
-                     * @param _orderBy 
+                     * 设置<p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
+                     * @param _orderBy <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderDirection 
+                     * 获取<p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
+                     * @return OrderDirection <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
                      * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
-                     * 设置
-                     * @param _orderDirection 
+                     * 设置<p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
+                     * @param _orderDirection <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
                      * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
@@ -196,13 +196,13 @@ namespace TencentCloud
                     bool m_engineTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;

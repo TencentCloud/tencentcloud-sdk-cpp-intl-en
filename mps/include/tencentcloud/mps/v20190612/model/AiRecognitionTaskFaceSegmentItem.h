@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face Recognition result fragment
+                * Face recognition result fragment
                 */
                 class AiRecognitionTaskFaceSegmentItem : public AbstractModel
                 {

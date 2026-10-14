@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video URL.
-                     * @return Url Video URL.
+                     * 获取URL of the video.
+                     * @return Url URL of the video.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Video URL.
-                     * @param _url Video URL.
+                     * 设置URL of the video.
+                     * @param _url URL of the video.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video URL.
+                     * URL of the video.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

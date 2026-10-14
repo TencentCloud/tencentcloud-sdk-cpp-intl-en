@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom parameters for AI Dubbing
+                * Custom parameter for AI dubbing
                 */
                 class RawAIDubbingParameter : public AbstractModel
                 {
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool TranslateConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle configuration information.</p>
-                     * @return SubtitleConfig <p>Subtitle configuration information.</p>
+                     * 获取<p>Subtitle configuration message.</p>
+                     * @return SubtitleConfig <p>Subtitle configuration message.</p>
                      * 
                      */
                     DubbingSubtitleConfig GetSubtitleConfig() const;
 
                     /**
-                     * 设置<p>Subtitle configuration information.</p>
-                     * @param _subtitleConfig <p>Subtitle configuration information.</p>
+                     * 设置<p>Subtitle configuration message.</p>
+                     * @param _subtitleConfig <p>Subtitle configuration message.</p>
                      * 
                      */
                     void SetSubtitleConfig(const DubbingSubtitleConfig& _subtitleConfig);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool DubbingConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output configuration message.</p>
-                     * @return OutputConfig <p>Output configuration message.</p>
+                     * 获取<p>Outputs configuration message.</p>
+                     * @return OutputConfig <p>Outputs configuration message.</p>
                      * 
                      */
                     DubbingOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output configuration message.</p>
-                     * @param _outputConfig <p>Output configuration message.</p>
+                     * 设置<p>Outputs configuration message.</p>
+                     * @param _outputConfig <p>Outputs configuration message.</p>
                      * 
                      */
                     void SetOutputConfig(const DubbingOutputConfig& _outputConfig);
@@ -143,7 +143,7 @@ namespace TencentCloud
                     bool m_translateConfigHasBeenSet;
 
                     /**
-                     * <p>Subtitle configuration information.</p>
+                     * <p>Subtitle configuration message.</p>
                      */
                     DubbingSubtitleConfig m_subtitleConfig;
                     bool m_subtitleConfigHasBeenSet;
@@ -155,7 +155,7 @@ namespace TencentCloud
                     bool m_dubbingConfigHasBeenSet;
 
                     /**
-                     * <p>Output configuration message.</p>
+                     * <p>Outputs configuration message.</p>
                      */
                     DubbingOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

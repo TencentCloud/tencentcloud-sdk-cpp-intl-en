@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
-                     * @return State Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+                     * 获取<p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
+                     * @return State <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
                      * 
                      */
                     int64_t GetState() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AllCoresCnt 
+                     * 获取<p>Total resource cores = total protected cores + unprotected cores</p>
+                     * @return AllCoresCnt <p>Total resource cores = total protected cores + unprotected cores</p>
                      * 
                      */
                     uint64_t GetAllCoresCnt() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AllCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
-                     * @return CoresCnt Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+                     * 获取<p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
+                     * @return CoresCnt <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
                      * 
                      */
                     uint64_t GetCoresCnt() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool CoresCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UndefendCoresCnt 
+                     * 获取<p>Unprotected cores (number of resource cores with protection not enabled)</p>
+                     * @return UndefendCoresCnt <p>Unprotected cores (number of resource cores with protection not enabled)</p>
                      * 
                      */
                     uint64_t GetUndefendCoresCnt() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool UndefendCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of purchased cores
-                     * @return AuthorizedCoresCnt Number of purchased cores
+                     * 获取<p>Number of purchased cores</p>
+                     * @return AuthorizedCoresCnt <p>Number of purchased cores</p>
                      * 
                      */
                     uint64_t GetAuthorizedCoresCnt() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool AuthorizedCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of free trial cores for Pro Edition.
-                     * @return GivenAuthorizedCoresCnt Number of free trial cores for Pro Edition.
+                     * 获取<p>Trial giveaway of Pro Edition cores</p>
+                     * @return GivenAuthorizedCoresCnt <p>Trial giveaway of Pro Edition cores</p>
                      * 
                      */
                     int64_t GetGivenAuthorizedCoresCnt() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool GivenAuthorizedCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CurrentFlexibleCoresCnt 
+                     * 获取<p>Current number of elastic billing cores</p>
+                     * @return CurrentFlexibleCoresCnt <p>Current number of elastic billing cores</p>
                      * 
                      */
                     uint64_t GetCurrentFlexibleCoresCnt() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool CurrentFlexibleCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取Image count
-                     * @return ImageCnt Image count
+                     * 获取<p>Number of images.</p>
+                     * @return ImageCnt <p>Number of images.</p>
                      * 
                      */
                     uint64_t GetImageCnt() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool ImageCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of licensed images
-                     * @return AuthorizedImageCnt Number of licensed images
+                     * 获取<p>Number of licensed images</p>
+                     * @return AuthorizedImageCnt <p>Number of licensed images</p>
                      * 
                      */
                     uint64_t GetAuthorizedImageCnt() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool AuthorizedImageCntHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time
-                     * @return ExpirationTime Expiration time
+                     * 获取<p>Expiration time.</p>
+                     * @return ExpirationTime <p>Expiration time.</p>
                      * 
                      */
                     std::string GetExpirationTime() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool ExpirationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of purchased image licenses
-                     * @return PurchasedAuthorizedCnt Number of purchased image licenses
+                     * 获取<p>Number of purchased image licenses</p>
+                     * @return PurchasedAuthorizedCnt <p>Number of purchased image licenses</p>
                      * 
                      */
                     uint64_t GetPurchasedAuthorizedCnt() const;
@@ -198,8 +198,8 @@ namespace TencentCloud
                     bool PurchasedAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
-                     * @return AutomaticRenewal 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+                     * 获取<p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
+                     * @return AutomaticRenewal <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
                      * 
                      */
                     int64_t GetAutomaticRenewal() const;
@@ -212,8 +212,8 @@ namespace TencentCloud
                     bool AutomaticRenewalHasBeenSet() const;
 
                     /**
-                     * 获取Complimentary image licenses during the trial period may expire.
-                     * @return GivenAuthorizedCnt Complimentary image licenses during the trial period may expire.
+                     * 获取<p>Complimentary image licenses during the trial period may expire.</p>
+                     * @return GivenAuthorizedCnt <p>Complimentary image licenses during the trial period may expire.</p>
                      * 
                      */
                     uint64_t GetGivenAuthorizedCnt() const;
@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool GivenAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取Start time.
-                     * @return BeginTime Start time.
+                     * 获取<p>Start time</p>
+                     * @return BeginTime <p>Start time</p>
                      * 
                      */
                     std::string GetBeginTime() const;
@@ -240,10 +240,8 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
-                     * @return SubState Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
+                     * 获取<p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
+                     * @return SubState <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
                      * 
                      */
                     std::string GetSubState() const;
@@ -256,8 +254,8 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                     bool SubStateHasBeenSet() const;
 
                     /**
-                     * 获取Billing key.
-                     * @return InquireKey Billing key.
+                     * 获取<p>Billing key</p>
+                     * @return InquireKey <p>Billing key</p>
                      * 
                      */
                     std::string GetInquireKey() const;
@@ -270,8 +268,8 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                     bool InquireKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DefendPolicy 
+                     * 获取<p>Protection policy</p>
+                     * @return DefendPolicy <p>Protection policy</p>
                      * 
                      */
                     std::string GetDefendPolicy() const;
@@ -284,8 +282,8 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                     bool DefendPolicyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FlexibleCoresLimit 
+                     * 获取<p>Upper limit of elastic billing cores</p>
+                     * @return FlexibleCoresLimit <p>Upper limit of elastic billing cores</p>
                      * 
                      */
                     uint64_t GetFlexibleCoresLimit() const;
@@ -298,8 +296,8 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                     bool FlexibleCoresLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DefendClusterCoresCnt 
+                     * 获取<p>Number of cores in the protected cluster</p>
+                     * @return DefendClusterCoresCnt <p>Number of cores in the protected cluster</p>
                      * 
                      */
                     uint64_t GetDefendClusterCoresCnt() const;
@@ -312,8 +310,8 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                     bool DefendClusterCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DefendHostCoresCnt 
+                     * 获取<p>Protected host cores</p>
+                     * @return DefendHostCoresCnt <p>Protected host cores</p>
                      * 
                      */
                     uint64_t GetDefendHostCoresCnt() const;
@@ -326,8 +324,8 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                     bool DefendHostCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of trial cores for Pro Edition.
-                     * @return TrialCoresCnt Number of trial cores for Pro Edition.
+                     * 获取<p>Number of cores of the Pro Edition for trial use</p>
+                     * @return TrialCoresCnt <p>Number of cores of the Pro Edition for trial use</p>
                      * 
                      */
                     uint64_t GetTrialCoresCnt() const;
@@ -339,134 +337,153 @@ Valid values when State is 4: ISOLATE, TERMINATED.
                      */
                     bool TrialCoresCntHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Number of machines with zero protection containers.</p>
+                     * @return NoContainerCoresCnt <p>Number of machines with zero protection containers.</p>
+                     * 
+                     */
+                    uint64_t GetNoContainerCoresCnt() const;
+
+                    /**
+                     * 判断参数 NoContainerCoresCnt 是否已赋值
+                     * @return NoContainerCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool NoContainerCoresCntHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+                     * <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
                      */
                     int64_t m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Total resource cores = total protected cores + unprotected cores</p>
                      */
                     uint64_t m_allCoresCnt;
                     bool m_allCoresCntHasBeenSet;
 
                     /**
-                     * Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+                     * <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
                      */
                     uint64_t m_coresCnt;
                     bool m_coresCntHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Unprotected cores (number of resource cores with protection not enabled)</p>
                      */
                     uint64_t m_undefendCoresCnt;
                     bool m_undefendCoresCntHasBeenSet;
 
                     /**
-                     * Number of purchased cores
+                     * <p>Number of purchased cores</p>
                      */
                     uint64_t m_authorizedCoresCnt;
                     bool m_authorizedCoresCntHasBeenSet;
 
                     /**
-                     * Number of free trial cores for Pro Edition.
+                     * <p>Trial giveaway of Pro Edition cores</p>
                      */
                     int64_t m_givenAuthorizedCoresCnt;
                     bool m_givenAuthorizedCoresCntHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Current number of elastic billing cores</p>
                      */
                     uint64_t m_currentFlexibleCoresCnt;
                     bool m_currentFlexibleCoresCntHasBeenSet;
 
                     /**
-                     * Image count
+                     * <p>Number of images.</p>
                      */
                     uint64_t m_imageCnt;
                     bool m_imageCntHasBeenSet;
 
                     /**
-                     * Number of licensed images
+                     * <p>Number of licensed images</p>
                      */
                     uint64_t m_authorizedImageCnt;
                     bool m_authorizedImageCntHasBeenSet;
 
                     /**
-                     * Expiration time
+                     * <p>Expiration time.</p>
                      */
                     std::string m_expirationTime;
                     bool m_expirationTimeHasBeenSet;
 
                     /**
-                     * Number of purchased image licenses
+                     * <p>Number of purchased image licenses</p>
                      */
                     uint64_t m_purchasedAuthorizedCnt;
                     bool m_purchasedAuthorizedCntHasBeenSet;
 
                     /**
-                     * 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+                     * <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
                      */
                     int64_t m_automaticRenewal;
                     bool m_automaticRenewalHasBeenSet;
 
                     /**
-                     * Complimentary image licenses during the trial period may expire.
+                     * <p>Complimentary image licenses during the trial period may expire.</p>
                      */
                     uint64_t m_givenAuthorizedCnt;
                     bool m_givenAuthorizedCntHasBeenSet;
 
                     /**
-                     * Start time.
+                     * <p>Start time</p>
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
+                     * <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
                      */
                     std::string m_subState;
                     bool m_subStateHasBeenSet;
 
                     /**
-                     * Billing key.
+                     * <p>Billing key</p>
                      */
                     std::string m_inquireKey;
                     bool m_inquireKeyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Protection policy</p>
                      */
                     std::string m_defendPolicy;
                     bool m_defendPolicyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Upper limit of elastic billing cores</p>
                      */
                     uint64_t m_flexibleCoresLimit;
                     bool m_flexibleCoresLimitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of cores in the protected cluster</p>
                      */
                     uint64_t m_defendClusterCoresCnt;
                     bool m_defendClusterCoresCntHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Protected host cores</p>
                      */
                     uint64_t m_defendHostCoresCnt;
                     bool m_defendHostCoresCntHasBeenSet;
 
                     /**
-                     * Number of trial cores for Pro Edition.
+                     * <p>Number of cores of the Pro Edition for trial use</p>
                      */
                     uint64_t m_trialCoresCnt;
                     bool m_trialCoresCntHasBeenSet;
+
+                    /**
+                     * <p>Number of machines with zero protection containers.</p>
+                     */
+                    uint64_t m_noContainerCoresCnt;
+                    bool m_noContainerCoresCntHasBeenSet;
 
                 };
             }

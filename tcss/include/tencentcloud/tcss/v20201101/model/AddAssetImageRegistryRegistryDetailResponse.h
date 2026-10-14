@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Connection error message
-                     * @return HealthCheckErr Connection error message
+                     * 获取Connection error information
+                     * @return HealthCheckErr Connection error information
                      * 
                      */
                     std::string GetHealthCheckErr() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool HealthCheckErrHasBeenSet() const;
 
                     /**
-                     * 获取Error message of the name
-                     * @return NameRepeatErr Error message of the name
+                     * 获取Incorrect name message
+                     * @return NameRepeatErr Incorrect name message
                      * 
                      */
                     std::string GetNameRepeatErr() const;
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Connection error message
+                     * Connection error information
                      */
                     std::string m_healthCheckErr;
                     bool m_healthCheckErrHasBeenSet;
 
                     /**
-                     * Error message of the name
+                     * Incorrect name message
                      */
                     std::string m_nameRepeatErr;
                     bool m_nameRepeatErrHasBeenSet;

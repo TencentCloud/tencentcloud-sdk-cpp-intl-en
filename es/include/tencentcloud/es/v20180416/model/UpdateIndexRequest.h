@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ES cluster ID
-                     * @return InstanceId ES cluster ID
+                     * 获取<p>ES cluster ID</p>
+                     * @return InstanceId <p>ES cluster ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ES cluster ID
-                     * @param _instanceId ES cluster ID
+                     * 设置<p>ES cluster ID</p>
+                     * @param _instanceId <p>ES cluster ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of the index to update. `auto`: Automated; `normal`: General.
-                     * @return IndexType Type of the index to update. `auto`: Automated; `normal`: General.
+                     * 获取<p>Updated index type. auto: autonomous index; normal: general index</p>
+                     * @return IndexType <p>Updated index type. auto: autonomous index; normal: general index</p>
                      * 
                      */
                     std::string GetIndexType() const;
 
                     /**
-                     * 设置Type of the index to update. `auto`: Automated; `normal`: General.
-                     * @param _indexType Type of the index to update. `auto`: Automated; `normal`: General.
+                     * 设置<p>Updated index type. auto: autonomous index; normal: general index</p>
+                     * @param _indexType <p>Updated index type. auto: autonomous index; normal: general index</p>
                      * 
                      */
                     void SetIndexType(const std::string& _indexType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IndexTypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the index to update
-                     * @return IndexName Name of the index to update
+                     * 获取<p>Updated index name</p>
+                     * @return IndexName <p>Updated index name</p>
                      * 
                      */
                     std::string GetIndexName() const;
 
                     /**
-                     * 设置Name of the index to update
-                     * @param _indexName Name of the index to update
+                     * 设置<p>Updated index name</p>
+                     * @param _indexName <p>Updated index name</p>
                      * 
                      */
                     void SetIndexName(const std::string& _indexName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IndexNameHasBeenSet() const;
 
                     /**
-                     * 获取JSON-formatted index metadata to update, such as `mappings` and `settings`.
-                     * @return UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+                     * 获取<p>Updated JSON-formatted index metadata, such as mappings and settings</p>
+                     * @return UpdateMetaJson <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
                      * 
                      */
                     std::string GetUpdateMetaJson() const;
 
                     /**
-                     * 设置JSON-formatted index metadata to update, such as `mappings` and `settings`.
-                     * @param _updateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+                     * 设置<p>Updated JSON-formatted index metadata, such as mappings and settings</p>
+                     * @param _updateMetaJson <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
                      * 
                      */
                     void SetUpdateMetaJson(const std::string& _updateMetaJson);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool UpdateMetaJsonHasBeenSet() const;
 
                     /**
-                     * 获取Username for cluster access
-                     * @return Username Username for cluster access
+                     * 获取<p>Cluster access username.</p>
+                     * @return Username <p>Cluster access username.</p>
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username for cluster access
-                     * @param _username Username for cluster access
+                     * 设置<p>Cluster access username.</p>
+                     * @param _username <p>Cluster access username.</p>
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Password for cluster access
-                     * @return Password Password for cluster access
+                     * 获取<p>Cluster access password</p>
+                     * @return Password <p>Cluster access password</p>
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password for cluster access
-                     * @param _password Password for cluster access
+                     * 设置<p>Cluster access password</p>
+                     * @param _password <p>Cluster access password</p>
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Whether to roll over the backup index
-                     * @return RolloverBackingIndex Whether to roll over the backup index
+                     * 获取<p>Whether to scroll the backup index</p>
+                     * @return RolloverBackingIndex <p>Whether to scroll the backup index</p>
                      * 
                      */
                     bool GetRolloverBackingIndex() const;
 
                     /**
-                     * 设置Whether to roll over the backup index
-                     * @param _rolloverBackingIndex Whether to roll over the backup index
+                     * 设置<p>Whether to scroll the backup index</p>
+                     * @param _rolloverBackingIndex <p>Whether to scroll the backup index</p>
                      * 
                      */
                     void SetRolloverBackingIndex(const bool& _rolloverBackingIndex);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool RolloverBackingIndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MountIndex 
+                     * 获取<p>Whether to retrieve the full uninstall index</p>
+                     * @return MountIndex <p>Whether to retrieve the full uninstall index</p>
                      * 
                      */
                     bool GetMountIndex() const;
 
                     /**
-                     * 设置
-                     * @param _mountIndex 
+                     * 设置<p>Whether to retrieve the full uninstall index</p>
+                     * @param _mountIndex <p>Whether to retrieve the full uninstall index</p>
                      * 
                      */
                     void SetMountIndex(const bool& _mountIndex);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool MountIndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IndexUuid 
+                     * 获取<p>Index Uuid</p>
+                     * @return IndexUuid <p>Index Uuid</p>
                      * 
                      */
                     std::string GetIndexUuid() const;
 
                     /**
-                     * 设置
-                     * @param _indexUuid 
+                     * 设置<p>Index Uuid</p>
+                     * @param _indexUuid <p>Index Uuid</p>
                      * 
                      */
                     void SetIndexUuid(const std::string& _indexUuid);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool IndexUuidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackingIndexName 
+                     * 获取<p>Backing index name</p>
+                     * @return BackingIndexName <p>Backing index name</p>
                      * 
                      */
                     std::string GetBackingIndexName() const;
 
                     /**
-                     * 设置
-                     * @param _backingIndexName 
+                     * 设置<p>Backing index name</p>
+                     * @param _backingIndexName <p>Backing index name</p>
                      * 
                      */
                     void SetBackingIndexName(const std::string& _backingIndexName);
@@ -255,61 +255,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ES cluster ID
+                     * <p>ES cluster ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Type of the index to update. `auto`: Automated; `normal`: General.
+                     * <p>Updated index type. auto: autonomous index; normal: general index</p>
                      */
                     std::string m_indexType;
                     bool m_indexTypeHasBeenSet;
 
                     /**
-                     * Name of the index to update
+                     * <p>Updated index name</p>
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
 
                     /**
-                     * JSON-formatted index metadata to update, such as `mappings` and `settings`.
+                     * <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
                      */
                     std::string m_updateMetaJson;
                     bool m_updateMetaJsonHasBeenSet;
 
                     /**
-                     * Username for cluster access
+                     * <p>Cluster access username.</p>
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Password for cluster access
+                     * <p>Cluster access password</p>
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Whether to roll over the backup index
+                     * <p>Whether to scroll the backup index</p>
                      */
                     bool m_rolloverBackingIndex;
                     bool m_rolloverBackingIndexHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to retrieve the full uninstall index</p>
                      */
                     bool m_mountIndex;
                     bool m_mountIndexHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Index Uuid</p>
                      */
                     std::string m_indexUuid;
                     bool m_indexUuidHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Backing index name</p>
                      */
                     std::string m_backingIndexName;
                     bool m_backingIndexNameHasBeenSet;

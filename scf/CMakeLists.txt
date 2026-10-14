@@ -24,6 +24,7 @@ set(scf_public_header_model
   include/tencentcloud/scf/v20180416/model/GetProvisionedConcurrencyConfigRequest.h
   include/tencentcloud/scf/v20180416/model/ListAliasesResponse.h
   include/tencentcloud/scf/v20180416/model/DeleteLayerVersionResponse.h
+  include/tencentcloud/scf/v20180416/model/SessionConfig.h
   include/tencentcloud/scf/v20180416/model/GetReservedConcurrencyConfigResponse.h
   include/tencentcloud/scf/v20180416/model/ProtocolParams.h
   include/tencentcloud/scf/v20180416/model/RoutingConfig.h
@@ -75,6 +76,7 @@ set(scf_public_header_model
   include/tencentcloud/scf/v20180416/model/CfsConfig.h
   include/tencentcloud/scf/v20180416/model/ListFunctionsRequest.h
   include/tencentcloud/scf/v20180416/model/CreateTriggerRequest.h
+  include/tencentcloud/scf/v20180416/model/MixNodeConfig.h
   include/tencentcloud/scf/v20180416/model/UpdateNamespaceResponse.h
   include/tencentcloud/scf/v20180416/model/GetLayerVersionRequest.h
   include/tencentcloud/scf/v20180416/model/DeleteFunctionResponse.h
@@ -123,6 +125,7 @@ set(scf_public_header_model
   include/tencentcloud/scf/v20180416/model/RetryConfig.h
   include/tencentcloud/scf/v20180416/model/GetFunctionAddressResponse.h
   include/tencentcloud/scf/v20180416/model/CfsInsInfo.h
+  include/tencentcloud/scf/v20180416/model/InstanceConcurrencyConfig.h
   include/tencentcloud/scf/v20180416/model/UpdateTriggerStatusRequest.h
   include/tencentcloud/scf/v20180416/model/TriggerAction.h
   include/tencentcloud/scf/v20180416/model/LimitsInfo.h
@@ -143,6 +146,7 @@ set(scf_public_header_model
   include/tencentcloud/scf/v20180416/model/Alias.h
   include/tencentcloud/scf/v20180416/model/GetAccountResponse.h
   include/tencentcloud/scf/v20180416/model/GetFunctionLogsResponse.h
+  include/tencentcloud/scf/v20180416/model/IntranetConfigIn.h
   include/tencentcloud/scf/v20180416/model/ImageConfig.h
   include/tencentcloud/scf/v20180416/model/DeleteTriggerResponse.h
   include/tencentcloud/scf/v20180416/model/SearchKey.h
@@ -162,6 +166,7 @@ set(scf_src
   src/v20180416/model/GetProvisionedConcurrencyConfigRequest.cpp
   src/v20180416/model/ListAliasesResponse.cpp
   src/v20180416/model/DeleteLayerVersionResponse.cpp
+  src/v20180416/model/SessionConfig.cpp
   src/v20180416/model/GetReservedConcurrencyConfigResponse.cpp
   src/v20180416/model/ProtocolParams.cpp
   src/v20180416/model/RoutingConfig.cpp
@@ -213,6 +218,7 @@ set(scf_src
   src/v20180416/model/CfsConfig.cpp
   src/v20180416/model/ListFunctionsRequest.cpp
   src/v20180416/model/CreateTriggerRequest.cpp
+  src/v20180416/model/MixNodeConfig.cpp
   src/v20180416/model/UpdateNamespaceResponse.cpp
   src/v20180416/model/GetLayerVersionRequest.cpp
   src/v20180416/model/DeleteFunctionResponse.cpp
@@ -261,6 +267,7 @@ set(scf_src
   src/v20180416/model/RetryConfig.cpp
   src/v20180416/model/GetFunctionAddressResponse.cpp
   src/v20180416/model/CfsInsInfo.cpp
+  src/v20180416/model/InstanceConcurrencyConfig.cpp
   src/v20180416/model/UpdateTriggerStatusRequest.cpp
   src/v20180416/model/TriggerAction.cpp
   src/v20180416/model/LimitsInfo.cpp
@@ -281,6 +288,7 @@ set(scf_src
   src/v20180416/model/Alias.cpp
   src/v20180416/model/GetAccountResponse.cpp
   src/v20180416/model/GetFunctionLogsResponse.cpp
+  src/v20180416/model/IntranetConfigIn.cpp
   src/v20180416/model/ImageConfig.cpp
   src/v20180416/model/DeleteTriggerResponse.cpp
   src/v20180416/model/SearchKey.cpp

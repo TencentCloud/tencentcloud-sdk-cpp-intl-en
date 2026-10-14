@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A list of the logs.
-                     * @return Infos A list of the logs.
+                     * 获取<p>Log information list.</p>
+                     * @return Infos <p>Log information list.</p>
                      * 
                      */
                     std::vector<FlowLogInfo> GetInfos() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool InfosHasBeenSet() const;
 
                     /**
-                     * 获取The current page number.
-                     * @return PageNum The current page number.
+                     * 获取<p>Current page.</p>
+                     * @return PageNum <p>Current page.</p>
                      * 
                      */
                     int64_t GetPageNum() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool PageNumHasBeenSet() const;
 
                     /**
-                     * 获取The number of records per page.
-                     * @return PageSize The number of records per page.
+                     * 获取<p>Size per page.</p>
+                     * @return PageSize <p>Size per page.</p>
                      * 
                      */
                     int64_t GetPageSize() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取The total number of records.
-                     * @return TotalNum The total number of records.
+                     * 获取<p>Total quantity.</p>
+                     * @return TotalNum <p>Total quantity.</p>
                      * 
                      */
                     int64_t GetTotalNum() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool TotalNumHasBeenSet() const;
 
                     /**
-                     * 获取The total number of pages.
-                     * @return TotalPage The total number of pages.
+                     * 获取<p>Total number of pages.</p>
+                     * @return TotalPage <p>Total number of pages.</p>
                      * 
                      */
                     int64_t GetTotalPage() const;
@@ -117,31 +117,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A list of the logs.
+                     * <p>Log information list.</p>
                      */
                     std::vector<FlowLogInfo> m_infos;
                     bool m_infosHasBeenSet;
 
                     /**
-                     * The current page number.
+                     * <p>Current page.</p>
                      */
                     int64_t m_pageNum;
                     bool m_pageNumHasBeenSet;
 
                     /**
-                     * The number of records per page.
+                     * <p>Size per page.</p>
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * The total number of records.
+                     * <p>Total quantity.</p>
                      */
                     int64_t m_totalNum;
                     bool m_totalNumHasBeenSet;
 
                     /**
-                     * The total number of pages.
+                     * <p>Total number of pages.</p>
                      */
                     int64_t m_totalPage;
                     bool m_totalPageHasBeenSet;

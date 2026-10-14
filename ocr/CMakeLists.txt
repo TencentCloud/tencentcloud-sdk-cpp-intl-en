@@ -19,6 +19,7 @@ set(ocr_public_header
   )
 
 set(ocr_public_header_model
+  include/tencentcloud/ocr/v20181119/model/GetOcrVerificationResultRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeMexicoVTIDResponse.h
   include/tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/ExtractDocMultiRequest.h
@@ -52,6 +53,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/HmtResidentPermitOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/PortraitImageInfo.h
+  include/tencentcloud/ocr/v20181119/model/ApplyOcrTokenResponse.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/PermitOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRRequest.h
@@ -63,6 +65,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/ExtractDocMultiResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/ApplyOcrTokenRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/PassportRecognizeInfos.h
@@ -97,6 +100,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/ImageCoordinates.h
   include/tencentcloud/ocr/v20181119/model/RecognizeMexicoVTIDRequest.h
   include/tencentcloud/ocr/v20181119/model/PODAuditAIResponse.h
+  include/tencentcloud/ocr/v20181119/model/GetOcrVerificationResultResponse.h
   include/tencentcloud/ocr/v20181119/model/MainlandTravelPermitBackInfos.h
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
   include/tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.h
@@ -116,6 +120,7 @@ set(ocr_public_header_model
 
 set(ocr_src
   src/v20181119/OcrClient.cpp
+  src/v20181119/model/GetOcrVerificationResultRequest.cpp
   src/v20181119/model/RecognizeMexicoVTIDResponse.cpp
   src/v20181119/model/HKIDCardOCRRequest.cpp
   src/v20181119/model/ExtractDocMultiRequest.cpp
@@ -149,6 +154,7 @@ set(ocr_src
   src/v20181119/model/GeneralAccurateOCRResponse.cpp
   src/v20181119/model/HmtResidentPermitOCRRequest.cpp
   src/v20181119/model/PortraitImageInfo.cpp
+  src/v20181119/model/ApplyOcrTokenResponse.cpp
   src/v20181119/model/GeneralBasicOCRResponse.cpp
   src/v20181119/model/PermitOCRRequest.cpp
   src/v20181119/model/RecognizePhilippinesUMIDOCRRequest.cpp
@@ -160,6 +166,7 @@ set(ocr_src
   src/v20181119/model/RecognizeThaiIDCardOCRResponse.cpp
   src/v20181119/model/ExtractDocMultiResponse.cpp
   src/v20181119/model/RecognizePhilippinesSssIDOCRResponse.cpp
+  src/v20181119/model/ApplyOcrTokenRequest.cpp
   src/v20181119/model/RecognizePhilippinesUMIDOCRResponse.cpp
   src/v20181119/model/RecognizeThaiIDCardOCRRequest.cpp
   src/v20181119/model/PassportRecognizeInfos.cpp
@@ -194,6 +201,7 @@ set(ocr_src
   src/v20181119/model/ImageCoordinates.cpp
   src/v20181119/model/RecognizeMexicoVTIDRequest.cpp
   src/v20181119/model/PODAuditAIResponse.cpp
+  src/v20181119/model/GetOcrVerificationResultResponse.cpp
   src/v20181119/model/MainlandTravelPermitBackInfos.cpp
   src/v20181119/model/DetectedWordCoordPoint.cpp
   src/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.cpp

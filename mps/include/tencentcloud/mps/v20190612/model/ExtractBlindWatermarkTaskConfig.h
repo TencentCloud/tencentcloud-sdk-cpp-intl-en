@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Extracts the digital watermark task configuration for video transcoding.
+                * Extraction task configuration of video transcoding digital watermark
                 */
                 class ExtractBlindWatermarkTaskConfig : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+                     * 获取Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
-                     * @return SegmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+                     * @return SegmentDuration Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
                      * 
                      */
                     int64_t GetSegmentDuration() const;
 
                     /**
-                     * 设置Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+                     * 设置Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
-                     * @param _segmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+                     * @param _segmentDuration Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
                      * 
                      */
@@ -74,7 +74,7 @@ If left empty, the default segment duration is 5 seconds.
                 private:
 
                     /**
-                     * Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+                     * Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
                      */
                     int64_t m_segmentDuration;

@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>AI Dubbing template id.</p>
-                     * @return Definition <p>AI Dubbing template id.</p>
+                     * 获取<p>AI dubbing template id.</p>
+                     * @return Definition <p>AI dubbing template id.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>AI Dubbing template id.</p>
-                     * @param _definition <p>AI Dubbing template id.</p>
+                     * 设置<p>AI dubbing template id.</p>
+                     * @param _definition <p>AI dubbing template id.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取<p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
-                     * @return OverrideParameter <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+                     * 获取<p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+                     * @return OverrideParameter <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
                      * 
                      */
                     OverrideAIDubbingParameter GetOverrideParameter() const;
 
                     /**
-                     * 设置<p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
-                     * @param _overrideParameter <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+                     * 设置<p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+                     * @param _overrideParameter <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
                      * 
                      */
                     void SetOverrideParameter(const OverrideAIDubbingParameter& _overrideParameter);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool OverrideParameterHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-                     * @return OutputStorage <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+                     * 获取<p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * @return OutputStorage <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-                     * @param _outputStorage <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+                     * 设置<p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * @param _outputStorage <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool SrcSubtitleInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>External subtitle file information, translated subtitles.</p>
-                     * @return DstSubtitleInfos <p>External subtitle file information, translated subtitles.</p>
+                     * 获取<p>External subtitle file info, translated subtitles.</p>
+                     * @return DstSubtitleInfos <p>External subtitle file info, translated subtitles.</p>
                      * 
                      */
                     std::vector<DstSubtitleInput> GetDstSubtitleInfos() const;
 
                     /**
-                     * 设置<p>External subtitle file information, translated subtitles.</p>
-                     * @param _dstSubtitleInfos <p>External subtitle file information, translated subtitles.</p>
+                     * 设置<p>External subtitle file info, translated subtitles.</p>
+                     * @param _dstSubtitleInfos <p>External subtitle file info, translated subtitles.</p>
                      * 
                      */
                     void SetDstSubtitleInfos(const std::vector<DstSubtitleInput>& _dstSubtitleInfos);
@@ -199,15 +199,15 @@ namespace TencentCloud
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Additional parameters for AI Dubbing, serialized json string.</p>
-                     * @return ExtendedParameter <p>Additional parameters for AI Dubbing, serialized json string.</p>
+                     * 获取<p>AI dubbing extension parameter, serialized json string.</p>
+                     * @return ExtendedParameter <p>AI dubbing extension parameter, serialized json string.</p>
                      * 
                      */
                     std::string GetExtendedParameter() const;
 
                     /**
-                     * 设置<p>Additional parameters for AI Dubbing, serialized json string.</p>
-                     * @param _extendedParameter <p>Additional parameters for AI Dubbing, serialized json string.</p>
+                     * 设置<p>AI dubbing extension parameter, serialized json string.</p>
+                     * @param _extendedParameter <p>AI dubbing extension parameter, serialized json string.</p>
                      * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
@@ -220,15 +220,15 @@ namespace TencentCloud
                     bool ExtendedParameterHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
-                     * @return DramaId <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+                     * 获取<p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
+                     * @return DramaId <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
                      * 
                      */
                     std::string GetDramaId() const;
 
                     /**
-                     * 设置<p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
-                     * @param _dramaId <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+                     * 设置<p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
+                     * @param _dramaId <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
                      * 
                      */
                     void SetDramaId(const std::string& _dramaId);
@@ -243,7 +243,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>AI Dubbing template id.</p>
+                     * <p>AI dubbing template id.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -255,13 +255,13 @@ namespace TencentCloud
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+                     * <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
                      */
                     OverrideAIDubbingParameter m_overrideParameter;
                     bool m_overrideParameterHasBeenSet;
 
                     /**
-                     * <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+                     * <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -273,7 +273,7 @@ namespace TencentCloud
                     bool m_srcSubtitleInfoHasBeenSet;
 
                     /**
-                     * <p>External subtitle file information, translated subtitles.</p>
+                     * <p>External subtitle file info, translated subtitles.</p>
                      */
                     std::vector<DstSubtitleInput> m_dstSubtitleInfos;
                     bool m_dstSubtitleInfosHasBeenSet;
@@ -285,13 +285,13 @@ namespace TencentCloud
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * <p>Additional parameters for AI Dubbing, serialized json string.</p>
+                     * <p>AI dubbing extension parameter, serialized json string.</p>
                      */
                     std::string m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;
 
                     /**
-                     * <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+                     * <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
                      */
                     std::string m_dramaId;
                     bool m_dramaIdHasBeenSet;

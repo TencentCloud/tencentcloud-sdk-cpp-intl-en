@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Region information
+                * Region information.
                 */
                 class RegionInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region name
-                     * @return Name Region name
+                     * 获取Zone name.
+                     * @return Name Zone name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Region name
-                     * @param _name Region name
+                     * 设置Zone name.
+                     * @param _name Zone name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region name
+                     * Zone name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

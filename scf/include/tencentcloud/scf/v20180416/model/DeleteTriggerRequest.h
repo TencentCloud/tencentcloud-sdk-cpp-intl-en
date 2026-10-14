@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the trigger to be deleted
-                     * @return TriggerName Name of the trigger to be deleted
+                     * 获取Trigger name to delete
+                     * @return TriggerName Trigger name to delete
                      * 
                      */
                     std::string GetTriggerName() const;
 
                     /**
-                     * 设置Name of the trigger to be deleted
-                     * @param _triggerName Name of the trigger to be deleted
+                     * 设置Trigger name to delete
+                     * @param _triggerName Trigger name to delete
                      * 
                      */
                     void SetTriggerName(const std::string& _triggerName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TriggerNameHasBeenSet() const;
 
                     /**
-                     * 获取Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-                     * @return Type Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+                     * 获取Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
+                     * @return Type Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-                     * @param _type Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+                     * 设置Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
+                     * @param _type Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Function namespace
-                     * @return Namespace Function namespace
+                     * 获取Namespace of the function
+                     * @return Namespace Namespace of the function
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Function namespace
-                     * @param _namespace Function namespace
+                     * 设置Namespace of the function
+                     * @param _namespace Namespace of the function
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
-                     * @return TriggerDesc This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+                     * 获取If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
+                     * @return TriggerDesc If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
                      * 
                      */
                     std::string GetTriggerDesc() const;
 
                     /**
-                     * 设置This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
-                     * @param _triggerDesc This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+                     * 设置If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
+                     * @param _triggerDesc If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
                      * 
                      */
                     void SetTriggerDesc(const std::string& _triggerDesc);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TriggerDescHasBeenSet() const;
 
                     /**
-                     * 获取Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
-                     * @return Qualifier Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+                     * 获取The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
+                     * @return Qualifier The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
                      * 
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
-                     * @param _qualifier Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+                     * 设置The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
+                     * @param _qualifier The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
                      * 
                      */
                     void SetQualifier(const std::string& _qualifier);
@@ -177,31 +177,31 @@ namespace TencentCloud
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Name of the trigger to be deleted
+                     * Trigger name to delete
                      */
                     std::string m_triggerName;
                     bool m_triggerNameHasBeenSet;
 
                     /**
-                     * Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+                     * Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Function namespace
+                     * Namespace of the function
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+                     * If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
                      */
                     std::string m_triggerDesc;
                     bool m_triggerDescHasBeenSet;
 
                     /**
-                     * Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+                     * The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;

@@ -655,15 +655,15 @@ namespace TencentCloud
                     bool SQLModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoScaleConfig 
+                     * 获取<p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
+                     * @return AutoScaleConfig <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
                      * 
                      */
                     AutoScalingConfig GetAutoScaleConfig() const;
 
                     /**
-                     * 设置
-                     * @param _autoScaleConfig 
+                     * 设置<p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
+                     * @param _autoScaleConfig <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
                      * 
                      */
                     void SetAutoScaleConfig(const AutoScalingConfig& _autoScaleConfig);
@@ -676,15 +676,15 @@ namespace TencentCloud
                     bool AutoScaleConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Security group binding list</p>
-                     * @return SecurityGroupIds <p>Security group binding list</p>
+                     * 获取<p>List of bound security groups</p>
+                     * @return SecurityGroupIds <p>List of bound security groups</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置<p>Security group binding list</p>
-                     * @param _securityGroupIds <p>Security group binding list</p>
+                     * 设置<p>List of bound security groups</p>
+                     * @param _securityGroupIds <p>List of bound security groups</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -697,15 +697,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-                     * @return UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+                     * 获取<p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
+                     * @return UserName <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置<p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-                     * @param _userName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+                     * 设置<p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
+                     * @param _userName <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -739,15 +739,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
-                     * @return EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+                     * 获取<p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
+                     * @return EncryptionEnable <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
                      * 
                      */
                     int64_t GetEncryptionEnable() const;
 
                     /**
-                     * 设置<p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
-                     * @param _encryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+                     * 设置<p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
+                     * @param _encryptionEnable <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
                      * 
                      */
                     void SetEncryptionEnable(const int64_t& _encryptionEnable);
@@ -760,15 +760,15 @@ namespace TencentCloud
                     bool EncryptionEnableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoScaleConfigs 
+                     * 获取<p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
+                     * @return AutoScaleConfigs <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
                      * 
                      */
                     std::vector<AutoScalingConfig> GetAutoScaleConfigs() const;
 
                     /**
-                     * 设置
-                     * @param _autoScaleConfigs 
+                     * 设置<p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
+                     * @param _autoScaleConfigs <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
                      * 
                      */
                     void SetAutoScaleConfigs(const std::vector<AutoScalingConfig>& _autoScaleConfigs);
@@ -957,19 +957,19 @@ namespace TencentCloud
                     bool m_sQLModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
                      */
                     AutoScalingConfig m_autoScaleConfig;
                     bool m_autoScaleConfigHasBeenSet;
 
                     /**
-                     * <p>Security group binding list</p>
+                     * <p>List of bound security groups</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+                     * <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
@@ -981,13 +981,13 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+                     * <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
                      */
                     int64_t m_encryptionEnable;
                     bool m_encryptionEnableHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
                      */
                     std::vector<AutoScalingConfig> m_autoScaleConfigs;
                     bool m_autoScaleConfigsHasBeenSet;

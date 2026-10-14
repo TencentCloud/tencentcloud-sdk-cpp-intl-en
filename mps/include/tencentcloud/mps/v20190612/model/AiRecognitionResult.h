@@ -99,15 +99,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceTask 
+                     * 获取Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
+                     * @return FaceTask Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
                      * 
                      */
                     AiRecognitionTaskFaceResult GetFaceTask() const;
 
                     /**
-                     * 设置
-                     * @param _faceTask 
+                     * 设置Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
+                     * @param _faceTask Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
                      * 
                      */
                     void SetFaceTask(const AiRecognitionTaskFaceResult& _faceTask);
@@ -120,15 +124,19 @@ namespace TencentCloud
                     bool FaceTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AsrWordsTask 
+                     * 获取Speech keyword recognition result, which is valid when Type is
+Valid when set to AsrWordsRecognition.
+                     * @return AsrWordsTask Speech keyword recognition result, which is valid when Type is
+Valid when set to AsrWordsRecognition.
                      * 
                      */
                     AiRecognitionTaskAsrWordsResult GetAsrWordsTask() const;
 
                     /**
-                     * 设置
-                     * @param _asrWordsTask 
+                     * 设置Speech keyword recognition result, which is valid when Type is
+Valid when set to AsrWordsRecognition.
+                     * @param _asrWordsTask Speech keyword recognition result, which is valid when Type is
+Valid when set to AsrWordsRecognition.
                      * 
                      */
                     void SetAsrWordsTask(const AiRecognitionTaskAsrWordsResult& _asrWordsTask);
@@ -141,15 +149,19 @@ namespace TencentCloud
                     bool AsrWordsTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AsrFullTextTask 
+                     * 获取Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
+                     * @return AsrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
                      * 
                      */
                     AiRecognitionTaskAsrFullTextResult GetAsrFullTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _asrFullTextTask 
+                     * 设置Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
+                     * @param _asrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
                      * 
                      */
                     void SetAsrFullTextTask(const AiRecognitionTaskAsrFullTextResult& _asrFullTextTask);
@@ -162,15 +174,19 @@ namespace TencentCloud
                     bool AsrFullTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrWordsTask 
+                     * 获取Text keyword recognition result. When Type is
+Valid when set to OcrWordsRecognition.
+                     * @return OcrWordsTask Text keyword recognition result. When Type is
+Valid when set to OcrWordsRecognition.
                      * 
                      */
                     AiRecognitionTaskOcrWordsResult GetOcrWordsTask() const;
 
                     /**
-                     * 设置
-                     * @param _ocrWordsTask 
+                     * 设置Text keyword recognition result. When Type is
+Valid when set to OcrWordsRecognition.
+                     * @param _ocrWordsTask Text keyword recognition result. When Type is
+Valid when set to OcrWordsRecognition.
                      * 
                      */
                     void SetOcrWordsTask(const AiRecognitionTaskOcrWordsResult& _ocrWordsTask);
@@ -183,15 +199,19 @@ namespace TencentCloud
                     bool OcrWordsTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrFullTextTask 
+                     * 获取Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
+                     * @return OcrFullTextTask Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
                      * 
                      */
                     AiRecognitionTaskOcrFullTextResult GetOcrFullTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _ocrFullTextTask 
+                     * 设置Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
+                     * @param _ocrFullTextTask Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
                      * 
                      */
                     void SetOcrFullTextTask(const AiRecognitionTaskOcrFullTextResult& _ocrFullTextTask);
@@ -204,15 +224,23 @@ namespace TencentCloud
                     bool OcrFullTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransTextTask 
+                     * 获取Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+                     * @return TransTextTask Translation result. When Type is
+
+Valid when set to TransTextRecognition.
                      * 
                      */
                     AiRecognitionTaskTransTextResult GetTransTextTask() const;
 
                     /**
-                     * 设置
-                     * @param _transTextTask 
+                     * 设置Translation result. When Type is
+
+Valid when set to TransTextRecognition.
+                     * @param _transTextTask Translation result. When Type is
+
+Valid when set to TransTextRecognition.
                      * 
                      */
                     void SetTransTextTask(const AiRecognitionTaskTransTextResult& _transTextTask);
@@ -225,15 +253,23 @@ namespace TencentCloud
                     bool TransTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ObjectTask 
+                     * 获取Object recognition result, which is valid when Type is
+
+Valid for ObjectRecognition.
+                     * @return ObjectTask Object recognition result, which is valid when Type is
+
+Valid for ObjectRecognition.
                      * 
                      */
                     AiRecognitionTaskObjectResult GetObjectTask() const;
 
                     /**
-                     * 设置
-                     * @param _objectTask 
+                     * 设置Object recognition result, which is valid when Type is
+
+Valid for ObjectRecognition.
+                     * @param _objectTask Object recognition result, which is valid when Type is
+
+Valid for ObjectRecognition.
                      * 
                      */
                     void SetObjectTask(const AiRecognitionTaskObjectResult& _objectTask);
@@ -260,43 +296,52 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
                      */
                     AiRecognitionTaskFaceResult m_faceTask;
                     bool m_faceTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Speech keyword recognition result, which is valid when Type is
+Valid when set to AsrWordsRecognition.
                      */
                     AiRecognitionTaskAsrWordsResult m_asrWordsTask;
                     bool m_asrWordsTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
                      */
                     AiRecognitionTaskAsrFullTextResult m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Text keyword recognition result. When Type is
+Valid when set to OcrWordsRecognition.
                      */
                     AiRecognitionTaskOcrWordsResult m_ocrWordsTask;
                     bool m_ocrWordsTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
                      */
                     AiRecognitionTaskOcrFullTextResult m_ocrFullTextTask;
                     bool m_ocrFullTextTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Translation result. When Type is
+
+Valid when set to TransTextRecognition.
                      */
                     AiRecognitionTaskTransTextResult m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Object recognition result, which is valid when Type is
+
+Valid for ObjectRecognition.
                      */
                     AiRecognitionTaskObjectResult m_objectTask;
                     bool m_objectTaskHasBeenSet;

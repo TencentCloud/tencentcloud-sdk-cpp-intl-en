@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Log record number
-                     * @return Limit Log record number
+                     * 获取Number of logs.
+                     * @return Limit Number of logs.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Log record number
-                     * @param _limit Log record number
+                     * 设置Number of logs.
+                     * @param _limit Number of logs.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取Log type. The value is `Application` (default) or `Platform`.
-                     * @return Type Log type. The value is `Application` (default) or `Platform`.
+                     * 获取Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
+                     * @return Type Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Log type. The value is `Application` (default) or `Platform`.
-                     * @param _type Log type. The value is `Application` (default) or `Platform`.
+                     * 设置Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
+                     * @param _type Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Log record number
+                     * Number of logs.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * Log type. The value is `Application` (default) or `Platform`.
+                     * Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

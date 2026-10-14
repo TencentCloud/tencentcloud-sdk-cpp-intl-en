@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration set information
+                * Configuration group information
                 */
                 class EsConfigSetInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration set type, such as `LDAP` and `AD`.
-                     * @return Type Configuration set type, such as `LDAP` and `AD`.
+                     * 获取Configuration group type, for example, ldap and ad
+                     * @return Type Configuration group type, for example, ldap and ad
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Configuration set type, such as `LDAP` and `AD`.
-                     * @param _type Configuration set type, such as `LDAP` and `AD`.
+                     * 设置Configuration group type, for example, ldap and ad
+                     * @param _type Configuration group type, for example, ldap and ad
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration set type, such as `LDAP` and `AD`.
+                     * Configuration group type, for example, ldap and ad
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

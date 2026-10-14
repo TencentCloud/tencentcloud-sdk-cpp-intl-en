@@ -415,8 +415,8 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireAt 
+                     * 获取<p>Expiration time.</p>
+                     * @return ExpireAt <p>Expiration time.</p>
                      * 
                      */
                     std::string GetExpireAt() const;
@@ -429,8 +429,8 @@ namespace TencentCloud
                     bool ExpireAtHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsolatedAt 
+                     * 获取<p>Isolation time</p>
+                     * @return IsolatedAt <p>Isolation time</p>
                      * 
                      */
                     std::string GetIsolatedAt() const;
@@ -443,8 +443,8 @@ namespace TencentCloud
                     bool IsolatedAtHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取<p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+                     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
                      * 
                      */
                     std::string GetInstanceType() const;
@@ -457,8 +457,8 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageType 
+                     * 获取<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+                     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      * 
                      */
                     std::string GetStorageType() const;
@@ -485,8 +485,8 @@ namespace TencentCloud
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiskUsage 
+                     * 获取<p>Disk usage of the largest node</p>
+                     * @return DiskUsage <p>Disk usage of the largest node</p>
                      * 
                      */
                     int64_t GetDiskUsage() const;
@@ -891,8 +891,8 @@ namespace TencentCloud
                     bool EncryptionEnableHasBeenSet() const;
 
                     /**
-                     * 获取<p>Real use kms region for subsequent call to kms service</p>
-                     * @return EncryptionKmsRegion <p>Real use kms region for subsequent call to kms service</p>
+                     * 获取<p>Real use kms region for subsequent calls to the kms service</p>
+                     * @return EncryptionKmsRegion <p>Real use kms region for subsequent calls to the kms service</p>
                      * 
                      */
                     std::string GetEncryptionKmsRegion() const;
@@ -905,8 +905,8 @@ namespace TencentCloud
                     bool EncryptionKmsRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoScaleConfigs 
+                     * 获取<p>serverless automatic configuration adjustment configuration</p>
+                     * @return AutoScaleConfigs <p>serverless automatic configuration adjustment configuration</p>
                      * 
                      */
                     std::vector<AutoScalingConfig> GetAutoScaleConfigs() const;
@@ -1077,25 +1077,25 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiration time.</p>
                      */
                     std::string m_expireAt;
                     bool m_expireAtHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Isolation time</p>
                      */
                     std::string m_isolatedAt;
                     bool m_isolatedAtHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
@@ -1107,7 +1107,7 @@ namespace TencentCloud
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Disk usage of the largest node</p>
                      */
                     int64_t m_diskUsage;
                     bool m_diskUsageHasBeenSet;
@@ -1281,13 +1281,13 @@ namespace TencentCloud
                     bool m_encryptionEnableHasBeenSet;
 
                     /**
-                     * <p>Real use kms region for subsequent call to kms service</p>
+                     * <p>Real use kms region for subsequent calls to the kms service</p>
                      */
                     std::string m_encryptionKmsRegion;
                     bool m_encryptionKmsRegionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>serverless automatic configuration adjustment configuration</p>
                      */
                     std::vector<AutoScalingConfig> m_autoScaleConfigs;
                     bool m_autoScaleConfigsHasBeenSet;

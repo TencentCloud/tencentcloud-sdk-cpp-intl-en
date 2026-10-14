@@ -42,7 +42,11 @@ UpdateFunctionConfigurationRequest::UpdateFunctionConfigurationRequest() :
     m_publicNetConfigHasBeenSet(false),
     m_cfsConfigHasBeenSet(false),
     m_initTimeoutHasBeenSet(false),
-    m_protocolParamsHasBeenSet(false)
+    m_protocolParamsHasBeenSet(false),
+    m_instanceConcurrencyConfigHasBeenSet(false),
+    m_dnsCacheHasBeenSet(false),
+    m_intranetConfigHasBeenSet(false),
+    m_ignoreSysLogHasBeenSet(false)
 {
 }
 
@@ -224,6 +228,40 @@ string UpdateFunctionConfigurationRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_protocolParams.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_instanceConcurrencyConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceConcurrencyConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceConcurrencyConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_dnsCacheHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DnsCache";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dnsCache.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_intranetConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IntranetConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_intranetConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_ignoreSysLogHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IgnoreSysLog";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_ignoreSysLog, allocator);
     }
 
 
@@ -552,6 +590,70 @@ void UpdateFunctionConfigurationRequest::SetProtocolParams(const ProtocolParams&
 bool UpdateFunctionConfigurationRequest::ProtocolParamsHasBeenSet() const
 {
     return m_protocolParamsHasBeenSet;
+}
+
+InstanceConcurrencyConfig UpdateFunctionConfigurationRequest::GetInstanceConcurrencyConfig() const
+{
+    return m_instanceConcurrencyConfig;
+}
+
+void UpdateFunctionConfigurationRequest::SetInstanceConcurrencyConfig(const InstanceConcurrencyConfig& _instanceConcurrencyConfig)
+{
+    m_instanceConcurrencyConfig = _instanceConcurrencyConfig;
+    m_instanceConcurrencyConfigHasBeenSet = true;
+}
+
+bool UpdateFunctionConfigurationRequest::InstanceConcurrencyConfigHasBeenSet() const
+{
+    return m_instanceConcurrencyConfigHasBeenSet;
+}
+
+string UpdateFunctionConfigurationRequest::GetDnsCache() const
+{
+    return m_dnsCache;
+}
+
+void UpdateFunctionConfigurationRequest::SetDnsCache(const string& _dnsCache)
+{
+    m_dnsCache = _dnsCache;
+    m_dnsCacheHasBeenSet = true;
+}
+
+bool UpdateFunctionConfigurationRequest::DnsCacheHasBeenSet() const
+{
+    return m_dnsCacheHasBeenSet;
+}
+
+IntranetConfigIn UpdateFunctionConfigurationRequest::GetIntranetConfig() const
+{
+    return m_intranetConfig;
+}
+
+void UpdateFunctionConfigurationRequest::SetIntranetConfig(const IntranetConfigIn& _intranetConfig)
+{
+    m_intranetConfig = _intranetConfig;
+    m_intranetConfigHasBeenSet = true;
+}
+
+bool UpdateFunctionConfigurationRequest::IntranetConfigHasBeenSet() const
+{
+    return m_intranetConfigHasBeenSet;
+}
+
+bool UpdateFunctionConfigurationRequest::GetIgnoreSysLog() const
+{
+    return m_ignoreSysLog;
+}
+
+void UpdateFunctionConfigurationRequest::SetIgnoreSysLog(const bool& _ignoreSysLog)
+{
+    m_ignoreSysLog = _ignoreSysLog;
+    m_ignoreSysLogHasBeenSet = true;
+}
+
+bool UpdateFunctionConfigurationRequest::IgnoreSysLogHasBeenSet() const
+{
+    return m_ignoreSysLogHasBeenSet;
 }
 
 

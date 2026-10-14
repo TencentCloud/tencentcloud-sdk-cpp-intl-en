@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Listening address for RIST output.
                 */
                 class OutputRISTSourceAddressResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Ip 
+                     * 获取Listening IP.
+                     * @return Ip Listening IP.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置
-                     * @param _ip 
+                     * 设置Listening IP.
+                     * @param _ip Listening IP.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Port 
+                     * 获取Listening port.
+                     * @return Port Listening port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置
-                     * @param _port 
+                     * 设置Listening port.
+                     * @param _port Listening port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Listening IP.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * 
+                     * Listening port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

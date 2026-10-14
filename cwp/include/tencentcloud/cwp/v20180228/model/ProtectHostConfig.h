@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Machine protection information
                 */
                 class ProtectHostConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Quuid 
+                     * 获取Unique host ID.
+                     * @return Quuid Unique host ID.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置
-                     * @param _quuid 
+                     * 设置Unique host ID.
+                     * @param _quuid Unique host ID.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProtectSwitch 
+                     * 获取Protection switch: 0 - off; 1 - on
+                     * @return ProtectSwitch Protection switch: 0 - off; 1 - on
                      * 
                      */
                     uint64_t GetProtectSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _protectSwitch 
+                     * 设置Protection switch: 0 - off; 1 - on
+                     * @param _protectSwitch Protection switch: 0 - off; 1 - on
                      * 
                      */
                     void SetProtectSwitch(const uint64_t& _protectSwitch);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProtectSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoRecovery 
+                     * 获取Auto recovery switch. 0: disabled. 1: enabled.
+                     * @return AutoRecovery Auto recovery switch. 0: disabled. 1: enabled.
                      * 
                      */
                     uint64_t GetAutoRecovery() const;
 
                     /**
-                     * 设置
-                     * @param _autoRecovery 
+                     * 设置Auto recovery switch. 0: disabled. 1: enabled.
+                     * @param _autoRecovery Auto recovery switch. 0: disabled. 1: enabled.
                      * 
                      */
                     void SetAutoRecovery(const uint64_t& _autoRecovery);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique host ID.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * 
+                     * Protection switch: 0 - off; 1 - on
                      */
                     uint64_t m_protectSwitch;
                     bool m_protectSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Auto recovery switch. 0: disabled. 1: enabled.
                      */
                     uint64_t m_autoRecovery;
                     bool m_autoRecoveryHasBeenSet;

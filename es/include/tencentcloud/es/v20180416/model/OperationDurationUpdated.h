@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The maintenance time slot of the cluster
+                * Cluster maintainability time
                 */
                 class OperationDurationUpdated : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-                     * @return Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+                     * 获取Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+                     * @return Periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
                      * 
                      */
                     std::vector<uint64_t> GetPeriods() const;
 
                     /**
-                     * 设置Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-                     * @param _periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+                     * 设置Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+                     * @param _periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
                      * 
                      */
                     void SetPeriods(const std::vector<uint64_t>& _periods);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PeriodsHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance start time
-                     * @return TimeStart The maintenance start time
+                     * 获取Maintenance start time
+                     * @return TimeStart Maintenance start time
                      * 
                      */
                     std::string GetTimeStart() const;
 
                     /**
-                     * 设置The maintenance start time
-                     * @param _timeStart The maintenance start time
+                     * 设置Maintenance start time
+                     * @param _timeStart Maintenance start time
                      * 
                      */
                     void SetTimeStart(const std::string& _timeStart);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TimeStartHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance end time
-                     * @return TimeEnd The maintenance end time
+                     * 获取Maintenance end time.
+                     * @return TimeEnd Maintenance end time.
                      * 
                      */
                     std::string GetTimeEnd() const;
 
                     /**
-                     * 设置The maintenance end time
-                     * @param _timeEnd The maintenance end time
+                     * 设置Maintenance end time.
+                     * @param _timeEnd Maintenance end time.
                      * 
                      */
                     void SetTimeEnd(const std::string& _timeEnd);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TimeEndHasBeenSet() const;
 
                     /**
-                     * 获取The time zone expressed in UTC.
-                     * @return TimeZone The time zone expressed in UTC.
+                     * 获取Time zone in UTC format
+                     * @return TimeZone Time zone in UTC format
                      * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置The time zone expressed in UTC.
-                     * @param _timeZone The time zone expressed in UTC.
+                     * 设置Time zone in UTC format
+                     * @param _timeZone Time zone in UTC format
                      * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TimeZoneHasBeenSet() const;
 
                     /**
-                     * 获取The array of ES cluster IDs
-                     * @return MoreInstances The array of ES cluster IDs
+                     * 获取ES cluster ID array
+                     * @return MoreInstances ES cluster ID array
                      * 
                      */
                     std::vector<std::string> GetMoreInstances() const;
 
                     /**
-                     * 设置The array of ES cluster IDs
-                     * @param _moreInstances The array of ES cluster IDs
+                     * 设置ES cluster ID array
+                     * @param _moreInstances ES cluster ID array
                      * 
                      */
                     void SetMoreInstances(const std::vector<std::string>& _moreInstances);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+                     * Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
                      */
                     std::vector<uint64_t> m_periods;
                     bool m_periodsHasBeenSet;
 
                     /**
-                     * The maintenance start time
+                     * Maintenance start time
                      */
                     std::string m_timeStart;
                     bool m_timeStartHasBeenSet;
 
                     /**
-                     * The maintenance end time
+                     * Maintenance end time.
                      */
                     std::string m_timeEnd;
                     bool m_timeEndHasBeenSet;
 
                     /**
-                     * The time zone expressed in UTC.
+                     * Time zone in UTC format
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;
 
                     /**
-                     * The array of ES cluster IDs
+                     * ES cluster ID array
                      */
                     std::vector<std::string> m_moreInstances;
                     bool m_moreInstancesHasBeenSet;

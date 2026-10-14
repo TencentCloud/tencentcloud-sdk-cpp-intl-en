@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Repository name
-                     * @return Name Repository name
+                     * 获取Repository Name
+                     * @return Name Repository Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Repository name
-                     * @param _name Repository name
+                     * 设置Repository Name
+                     * @param _name Repository Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Username
-                     * @return Username Username
+                     * 获取Username.
+                     * @return Username Username.
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username
-                     * @param _username Username
+                     * 设置Username.
+                     * @param _username Username.
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Password
-                     * @return Password Password
+                     * 获取Password.
+                     * @return Password Password.
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password
-                     * @param _password Password
+                     * 设置Password.
+                     * @param _password Password.
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Repository URL
-                     * @return Url Repository URL
+                     * 获取Warehouse url
+                     * @return Url Warehouse url
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Repository URL
-                     * @param _url Repository URL
+                     * 设置Warehouse url
+                     * @param _url Warehouse url
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
-                     * 获取Network type, which can be `public` (public network).
-                     * @return NetType Network type, which can be `public` (public network).
+                     * 获取Network type. List: public
+                     * @return NetType Network type. List: public
                      * 
                      */
                     std::string GetNetType() const;
 
                     /**
-                     * 设置Network type, which can be `public` (public network).
-                     * @param _netType Network type, which can be `public` (public network).
+                     * 设置Network type. List: public
+                     * @param _netType Network type. List: public
                      * 
                      */
                     void SetNetType(const std::string& _netType);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool NetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Repository version
-                     * @return RegistryVersion Repository version
+                     * 获取Warehouse version
+                     * @return RegistryVersion Warehouse version
                      * 
                      */
                     std::string GetRegistryVersion() const;
 
                     /**
-                     * 设置Repository version
-                     * @param _registryVersion Repository version
+                     * 设置Warehouse version
+                     * @param _registryVersion Warehouse version
                      * 
                      */
                     void SetRegistryVersion(const std::string& _registryVersion);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool RegistryVersionHasBeenSet() const;
 
                     /**
-                     * 获取Region. Default value: `default`.
-                     * @return RegistryRegion Region. Default value: `default`.
+                     * 获取Region, list: default.
+                     * @return RegistryRegion Region, list: default.
                      * 
                      */
                     std::string GetRegistryRegion() const;
 
                     /**
-                     * 设置Region. Default value: `default`.
-                     * @param _registryRegion Region. Default value: `default`.
+                     * 设置Region, list: default.
+                     * @param _registryRegion Region, list: default.
                      * 
                      */
                     void SetRegistryRegion(const std::string& _registryRegion);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool SpeedLimitHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-                     * @return Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+                     * 获取0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+                     * @return Insecure 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
                      * 
                      */
                     uint64_t GetInsecure() const;
 
                     /**
-                     * 设置Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-                     * @param _insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+                     * 设置0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+                     * @param _insecure 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
                      * 
                      */
                     void SetInsecure(const uint64_t& _insecure);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool InsecureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnDetectConfig 
+                     * 获取Record ID of Connectivity Check
+                     * @return ConnDetectConfig Record ID of Connectivity Check
                      * 
                      */
                     std::vector<ConnDetectConfig> GetConnDetectConfig() const;
 
                     /**
-                     * 设置
-                     * @param _connDetectConfig 
+                     * 设置Record ID of Connectivity Check
+                     * @param _connDetectConfig Record ID of Connectivity Check
                      * 
                      */
                     void SetConnDetectConfig(const std::vector<ConnDetectConfig>& _connDetectConfig);
@@ -382,25 +382,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Repository name
+                     * Repository Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Username
+                     * Username.
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Password
+                     * Password.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Repository URL
+                     * Warehouse url
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
@@ -412,19 +412,19 @@ namespace TencentCloud
                     bool m_registryTypeHasBeenSet;
 
                     /**
-                     * Network type, which can be `public` (public network).
+                     * Network type. List: public
                      */
                     std::string m_netType;
                     bool m_netTypeHasBeenSet;
 
                     /**
-                     * Repository version
+                     * Warehouse version
                      */
                     std::string m_registryVersion;
                     bool m_registryVersionHasBeenSet;
 
                     /**
-                     * Region. Default value: `default`.
+                     * Region, list: default.
                      */
                     std::string m_registryRegion;
                     bool m_registryRegionHasBeenSet;
@@ -436,13 +436,13 @@ namespace TencentCloud
                     bool m_speedLimitHasBeenSet;
 
                     /**
-                     * Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+                     * 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
                      */
                     uint64_t m_insecure;
                     bool m_insecureHasBeenSet;
 
                     /**
-                     * 
+                     * Record ID of Connectivity Check
                      */
                     std::vector<ConnDetectConfig> m_connDetectConfig;
                     bool m_connDetectConfigHasBeenSet;

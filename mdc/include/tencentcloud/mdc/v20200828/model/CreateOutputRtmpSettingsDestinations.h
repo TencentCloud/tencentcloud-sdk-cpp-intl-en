@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The RTMP destination address of the output to create.
+                * RTMP destination address for creating the output of a media transmission stream.
                 */
                 class CreateOutputRtmpSettingsDestinations : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The relay URL. Format: `rtmp://domain/live`.
-                     * @return Url The relay URL. Format: `rtmp://domain/live`.
+                     * 获取URL for push forwarding, in the format of rtmp://domain/live.
+                     * @return Url URL for push forwarding, in the format of rtmp://domain/live.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The relay URL. Format: `rtmp://domain/live`.
-                     * @param _url The relay URL. Format: `rtmp://domain/live`.
+                     * 设置URL for push forwarding, in the format of rtmp://domain/live.
+                     * @param _url URL for push forwarding, in the format of rtmp://domain/live.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取The `StreamKey` for relay. Format: `stream?key=value`.
-                     * @return StreamKey The `StreamKey` for relay. Format: `stream?key=value`.
+                     * 获取StreamKey for republishing, in the format of: stream?key=value.
+                     * @return StreamKey StreamKey for republishing, in the format of: stream?key=value.
                      * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
-                     * 设置The `StreamKey` for relay. Format: `stream?key=value`.
-                     * @param _streamKey The `StreamKey` for relay. Format: `stream?key=value`.
+                     * 设置StreamKey for republishing, in the format of: stream?key=value.
+                     * @param _streamKey StreamKey for republishing, in the format of: stream?key=value.
                      * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The relay URL. Format: `rtmp://domain/live`.
+                     * URL for push forwarding, in the format of rtmp://domain/live.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * The `StreamKey` for relay. Format: `stream?key=value`.
+                     * StreamKey for republishing, in the format of: stream?key=value.
                      */
                     std::string m_streamKey;
                     bool m_streamKeyHasBeenSet;

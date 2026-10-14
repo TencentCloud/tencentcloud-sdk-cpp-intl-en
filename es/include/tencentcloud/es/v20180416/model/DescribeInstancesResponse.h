@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of returned instances
-                     * @return TotalCount Number of returned instances
+                     * 获取<p>Number of returned instances</p>
+                     * @return TotalCount <p>Number of returned instances</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of instance details
-                     * @return InstanceList List of instance details
+                     * 获取<p>Instance detail list</p>
+                     * @return InstanceList <p>Instance detail list</p>
                      * 
                      */
                     std::vector<InstanceInfo> GetInstanceList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of returned instances
+                     * <p>Number of returned instances</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of instance details
+                     * <p>Instance detail list</p>
                      */
                     std::vector<InstanceInfo> m_instanceList;
                     bool m_instanceListHasBeenSet;

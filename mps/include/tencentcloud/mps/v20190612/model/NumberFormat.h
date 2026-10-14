@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InitialValueHasBeenSet() const;
 
                     /**
-                     * 获取The growth step length of the `{number}` variable, with a default value of 1.
-                     * @return Increment The growth step length of the `{number}` variable, with a default value of 1.
+                     * 获取The increase step length of the `{number}` variable. Default value: 1.
+                     * @return Increment The increase step length of the `{number}` variable. Default value: 1.
                      * 
                      */
                     uint64_t GetIncrement() const;
 
                     /**
-                     * 设置The growth step length of the `{number}` variable, with a default value of 1.
-                     * @param _increment The growth step length of the `{number}` variable, with a default value of 1.
+                     * 设置The increase step length of the `{number}` variable. Default value: 1.
+                     * @param _increment The increase step length of the `{number}` variable. Default value: 1.
                      * 
                      */
                     void SetIncrement(const uint64_t& _increment);
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_initialValueHasBeenSet;
 
                     /**
-                     * The growth step length of the `{number}` variable, with a default value of 1.
+                     * The increase step length of the `{number}` variable. Default value: 1.
                      */
                     uint64_t m_increment;
                     bool m_incrementHasBeenSet;

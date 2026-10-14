@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/es/v20180416/model/SubTaskDetail.h>
+#include <tencentcloud/es/v20180416/model/ProcessDetail.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of workflow task in instance operation history
+                * Process task information in the instance operation record
                 */
                 class TaskDetail : public AbstractModel
                 {
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task name
-                     * @return Name Task name
+                     * 获取Task Name
+                     * @return Name Task Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task name
-                     * @param _name Task name
+                     * 设置Task Name
+                     * @param _name Task Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -132,19 +133,15 @@ namespace TencentCloud
                     bool SubTasksHasBeenSet() const;
 
                     /**
-                     * 获取The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ElapsedTime The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time taken by the task
+                     * @return ElapsedTime Time taken by the task
                      * 
                      */
                     int64_t GetElapsedTime() const;
 
                     /**
-                     * 设置The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _elapsedTime The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time taken by the task
+                     * @param _elapsedTime Time taken by the task
                      * 
                      */
                     void SetElapsedTime(const int64_t& _elapsedTime);
@@ -156,10 +153,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ElapsedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Task progress details
+                     * @return ProcessInfo Task progress details
+                     * 
+                     */
+                    ProcessDetail GetProcessInfo() const;
+
+                    /**
+                     * 设置Task progress details
+                     * @param _processInfo Task progress details
+                     * 
+                     */
+                    void SetProcessInfo(const ProcessDetail& _processInfo);
+
+                    /**
+                     * 判断参数 ProcessInfo 是否已赋值
+                     * @return ProcessInfo 是否已赋值
+                     * 
+                     */
+                    bool ProcessInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task name
+                     * Task Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -183,11 +201,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subTasksHasBeenSet;
 
                     /**
-                     * The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time taken by the task
                      */
                     int64_t m_elapsedTime;
                     bool m_elapsedTimeHasBeenSet;
+
+                    /**
+                     * Task progress details
+                     */
+                    ProcessDetail m_processInfo;
+                    bool m_processInfoHasBeenSet;
 
                 };
             }

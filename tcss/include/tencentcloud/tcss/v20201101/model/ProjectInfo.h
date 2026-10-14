@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The project to which the host belongs
+                * Host Project Ownership
                 */
                 class ProjectInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project name
-                     * @return ProjectName Project name
+                     * 获取Project name.
+                     * @return ProjectName Project name.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name
-                     * @param _projectName Project name
+                     * 设置Project name.
+                     * @param _projectName Project name.
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectID Project ID
+                     * 获取Project ID.
+                     * @return ProjectID Project ID.
                      * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectID Project ID
+                     * 设置Project ID.
+                     * @param _projectID Project ID.
                      * 
                      */
                     void SetProjectID(const int64_t& _projectID);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Project name
+                     * Project name.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectID;
                     bool m_projectIDHasBeenSet;

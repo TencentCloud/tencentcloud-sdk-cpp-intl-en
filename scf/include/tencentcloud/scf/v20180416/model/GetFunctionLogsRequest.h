@@ -46,22 +46,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      * @return FunctionName Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      * @param _functionName Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
-                     * @return Offset Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+                     * 获取Offset of the data. Offset + Limit cannot be greater than 10000.
+                     * @return Offset Offset of the data. Offset + Limit cannot be greater than 10000.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
-                     * @param _offset Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+                     * 设置Offset of the data. Offset + Limit cannot be greater than 10000.
+                     * @param _offset Offset of the data. Offset + Limit cannot be greater than 10000.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
-                     * @return Limit Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+                     * 获取Length of the returned data. Offset + Limit cannot be greater than 10000.
+                     * @return Limit Length of the returned data. Offset + Limit cannot be greater than 10000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
-                     * @param _limit Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+                     * 设置Length of the returned data. Offset + Limit cannot be greater than 10000.
+                     * @param _limit Length of the returned data. Offset + Limit cannot be greater than 10000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
-                     * @return Order It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+                     * 获取Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
+                     * @return Order Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
-                     * @param _order It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+                     * 设置Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
+                     * @param _order Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
-                     * @return OrderBy It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+                     * 获取Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
+                     * @return OrderBy Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
-                     * @param _orderBy It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+                     * 设置Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
+                     * @param _orderBy Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
-                     * @return Filter Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+                     * 获取Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
+                     * @return Filter Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
                      * 
                      */
                     LogFilter GetFilter() const;
 
                     /**
-                     * 设置Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
-                     * @param _filter Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+                     * 设置Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
+                     * @param _filter Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
                      * 
                      */
                     void SetFilter(const LogFilter& _filter);
@@ -179,15 +179,15 @@ namespace TencentCloud
                     bool FilterHasBeenSet() const;
 
                     /**
-                     * 获取Function namespace
-                     * @return Namespace Function namespace
+                     * 获取Namespace of the function
+                     * @return Namespace Namespace of the function
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Function namespace
-                     * @param _namespace Function namespace
+                     * 设置Namespace of the function
+                     * @param _namespace Namespace of the function
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -221,15 +221,15 @@ namespace TencentCloud
                     bool QualifierHasBeenSet() const;
 
                     /**
-                     * 获取RequestId corresponding to the executed function
-                     * @return FunctionRequestId RequestId corresponding to the executed function
+                     * 获取Request ID for executing the function
+                     * @return FunctionRequestId Request ID for executing the function
                      * 
                      */
                     std::string GetFunctionRequestId() const;
 
                     /**
-                     * 设置RequestId corresponding to the executed function
-                     * @param _functionRequestId RequestId corresponding to the executed function
+                     * 设置Request ID for executing the function
+                     * @param _functionRequestId Request ID for executing the function
                      * 
                      */
                     void SetFunctionRequestId(const std::string& _functionRequestId);
@@ -242,15 +242,15 @@ namespace TencentCloud
                     bool FunctionRequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
-                     * @return StartTime Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+                     * 获取Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
+                     * @return StartTime Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
-                     * @param _startTime Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+                     * 设置Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
+                     * @param _startTime Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
-                     * @return EndTime Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+                     * 获取Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
+                     * @return EndTime Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
-                     * @param _endTime Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+                     * 设置Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
+                     * @param _endTime Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -284,15 +284,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取This field is disused.
-                     * @return SearchContext This field is disused.
+                     * 获取This field is offline.
+                     * @return SearchContext This field is offline.
                      * 
                      */
                     LogSearchContext GetSearchContext() const;
 
                     /**
-                     * 设置This field is disused.
-                     * @param _searchContext This field is disused.
+                     * 设置This field is offline.
+                     * @param _searchContext This field is offline.
                      * 
                      */
                     void SetSearchContext(const LogSearchContext& _searchContext);
@@ -308,44 +308,44 @@ namespace TencentCloud
 
                     /**
                      * Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+                     * Offset of the data. Offset + Limit cannot be greater than 10000.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+                     * Length of the returned data. Offset + Limit cannot be greater than 10000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+                     * Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+                     * Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+                     * Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
                      */
                     LogFilter m_filter;
                     bool m_filterHasBeenSet;
 
                     /**
-                     * Function namespace
+                     * Namespace of the function
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
@@ -357,25 +357,25 @@ namespace TencentCloud
                     bool m_qualifierHasBeenSet;
 
                     /**
-                     * RequestId corresponding to the executed function
+                     * Request ID for executing the function
                      */
                     std::string m_functionRequestId;
                     bool m_functionRequestIdHasBeenSet;
 
                     /**
-                     * Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+                     * Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+                     * Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * This field is disused.
+                     * This field is offline.
                      */
                     LogSearchContext m_searchContext;
                     bool m_searchContextHasBeenSet;

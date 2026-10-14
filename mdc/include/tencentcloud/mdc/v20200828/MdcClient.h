@@ -29,6 +29,8 @@
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkInputResponse.h>
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoRequest.h>
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoResponse.h>
+#include <tencentcloud/mdc/v20200828/model/CreateStreamLinkSecurityGroupRequest.h>
+#include <tencentcloud/mdc/v20200828/model/CreateStreamLinkSecurityGroupResponse.h>
 #include <tencentcloud/mdc/v20200828/model/DeleteStreamLinkFlowRequest.h>
 #include <tencentcloud/mdc/v20200828/model/DeleteStreamLinkFlowResponse.h>
 #include <tencentcloud/mdc/v20200828/model/DeleteStreamLinkOutputRequest.h>
@@ -82,6 +84,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamLinkOutputInfoResponse> CreateStreamLinkOutputInfoOutcome;
                 typedef std::future<CreateStreamLinkOutputInfoOutcome> CreateStreamLinkOutputInfoOutcomeCallable;
                 typedef std::function<void(const MdcClient*, const Model::CreateStreamLinkOutputInfoRequest&, CreateStreamLinkOutputInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLinkOutputInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamLinkSecurityGroupResponse> CreateStreamLinkSecurityGroupOutcome;
+                typedef std::future<CreateStreamLinkSecurityGroupOutcome> CreateStreamLinkSecurityGroupOutcomeCallable;
+                typedef std::function<void(const MdcClient*, const Model::CreateStreamLinkSecurityGroupRequest&, CreateStreamLinkSecurityGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLinkSecurityGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamLinkFlowResponse> DeleteStreamLinkFlowOutcome;
                 typedef std::future<DeleteStreamLinkFlowOutcome> DeleteStreamLinkFlowOutcomeCallable;
                 typedef std::function<void(const MdcClient*, const Model::DeleteStreamLinkFlowRequest&, DeleteStreamLinkFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamLinkFlowAsyncHandler;
@@ -156,6 +161,15 @@ namespace TencentCloud
                 CreateStreamLinkOutputInfoOutcome CreateStreamLinkOutputInfo(const Model::CreateStreamLinkOutputInfoRequest &request);
                 void CreateStreamLinkOutputInfoAsync(const Model::CreateStreamLinkOutputInfoRequest& request, const CreateStreamLinkOutputInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateStreamLinkOutputInfoOutcomeCallable CreateStreamLinkOutputInfoCallable(const Model::CreateStreamLinkOutputInfoRequest& request);
+
+                /**
+                 *Create security group.
+                 * @param req CreateStreamLinkSecurityGroupRequest
+                 * @return CreateStreamLinkSecurityGroupOutcome
+                 */
+                CreateStreamLinkSecurityGroupOutcome CreateStreamLinkSecurityGroup(const Model::CreateStreamLinkSecurityGroupRequest &request);
+                void CreateStreamLinkSecurityGroupAsync(const Model::CreateStreamLinkSecurityGroupRequest& request, const CreateStreamLinkSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamLinkSecurityGroupOutcomeCallable CreateStreamLinkSecurityGroupCallable(const Model::CreateStreamLinkSecurityGroupRequest& request);
 
                 /**
                  *This API is used to delete a StreamLink flow.

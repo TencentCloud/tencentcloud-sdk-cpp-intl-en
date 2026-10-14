@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Ocr text prohibited content detection task result type
+                * Result type of the prohibited Ocr text task in content review
                 */
                 class AiReviewTaskProhibitedOcrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review Ocr text prohibited task input.
-                     * @return Input Content review Ocr text prohibited task input.
+                     * 获取Input of the prohibited Ocr text task in content review.
+                     * @return Input Input of the prohibited Ocr text task in content review.
                      * 
                      */
                     AiReviewProhibitedOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review Ocr text prohibited task input.
-                     * @param _input Content review Ocr text prohibited task input.
+                     * 设置Input of the prohibited Ocr text task in content review.
+                     * @param _input Input of the prohibited Ocr text task in content review.
                      * 
                      */
                     void SetInput(const AiReviewProhibitedOcrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Content review Ocr text prohibited information recognition task output.
+                     * @return Output Content review Ocr text prohibited information recognition task output.
                      * 
                      */
                     AiReviewProhibitedOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Content review Ocr text prohibited information recognition task output.
+                     * @param _output Content review Ocr text prohibited information recognition task output.
                      * 
                      */
                     void SetOutput(const AiReviewProhibitedOcrTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review Ocr text prohibited task input.
+                     * Input of the prohibited Ocr text task in content review.
                      */
                     AiReviewProhibitedOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Content review Ocr text prohibited information recognition task output.
                      */
                     AiReviewProhibitedOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

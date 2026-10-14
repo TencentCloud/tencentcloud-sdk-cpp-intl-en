@@ -101,15 +101,23 @@ This parameter is used in high customization scenarios. It is recommended that y
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OverrideParameter 
+                     * 获取Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+                     * @return OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
                      * 
                      */
                     OverrideTranscodeParameter GetOverrideParameter() const;
 
                     /**
-                     * 设置
-                     * @param _overrideParameter 
+                     * 设置Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+                     * @param _overrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
                      * 
                      */
                     void SetOverrideParameter(const OverrideTranscodeParameter& _overrideParameter);
@@ -143,15 +151,15 @@ This parameter is used in high customization scenarios. It is recommended that y
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlindWatermark 
+                     * 获取Digital watermark parameter.
+                     * @return BlindWatermark Digital watermark parameter.
                      * 
                      */
                     BlindWatermarkInput GetBlindWatermark() const;
 
                     /**
-                     * 设置
-                     * @param _blindWatermark 
+                     * 设置Digital watermark parameter.
+                     * @param _blindWatermark Digital watermark parameter.
                      * 
                      */
                     void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
@@ -164,15 +172,15 @@ This parameter is used in high customization scenarios. It is recommended that y
                     bool BlindWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取Mosaic list. A maximum of 10 images is supported.
-                     * @return MosaicSet Mosaic list. A maximum of 10 images is supported.
+                     * 获取Mosaic list. Up to 10 images supported.
+                     * @return MosaicSet Mosaic list. Up to 10 images supported.
                      * 
                      */
                     std::vector<MosaicInput> GetMosaicSet() const;
 
                     /**
-                     * 设置Mosaic list. A maximum of 10 images is supported.
-                     * @param _mosaicSet Mosaic list. A maximum of 10 images is supported.
+                     * 设置Mosaic list. Up to 10 images supported.
+                     * @param _mosaicSet Mosaic list. Up to 10 images supported.
                      * 
                      */
                     void SetMosaicSet(const std::vector<MosaicInput>& _mosaicSet);
@@ -186,26 +194,26 @@ This parameter is used in high customization scenarios. It is recommended that y
 
                     /**
                      * 获取Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
                      * @return StartTimeOffset Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
                      * @param _startTimeOffset Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -220,12 +228,12 @@ This parameter is used in high customization scenarios. It is recommended that y
                     /**
                      * 获取End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
                      * @return EndTimeOffset End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
                      * 
                      */
                     double GetEndTimeOffset() const;
@@ -233,12 +241,12 @@ This parameter is used in high customization scenarios. It is recommended that y
                     /**
                      * 设置End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
                      * @param _endTimeOffset End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -251,15 +259,15 @@ This parameter is used in high customization scenarios. It is recommended that y
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
+                     * @return OutputStorage Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
+                     * @param _outputStorage Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -275,20 +283,20 @@ This parameter is used in high customization scenarios. It is recommended that y
                      * 获取Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
                      * @return OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
                      * 
                      */
@@ -298,20 +306,20 @@ If left empty, the default relative path is `{inputName}_transcode_{definition}.
                      * 设置Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
                      * @param _outputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
                      * 
                      */
@@ -325,15 +333,15 @@ If left empty, the default relative path is `{inputName}_transcode_{definition}.
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
-                     * @return SegmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
+                     * 获取Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
+                     * @return SegmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
                      * 
                      */
                     std::string GetSegmentObjectName() const;
 
                     /**
-                     * 设置Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
-                     * @param _segmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
+                     * 设置Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
+                     * @param _segmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
                      * 
                      */
                     void SetSegmentObjectName(const std::string& _segmentObjectName);
@@ -346,15 +354,15 @@ If left empty, the default relative path is `{inputName}_transcode_{definition}.
                     bool SegmentObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ObjectNumberFormat 
+                     * 获取Rule of the `{number}` variable in the output path after transcoding.
+                     * @return ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置
-                     * @param _objectNumberFormat 
+                     * 设置Rule of the `{number}` variable in the output path after transcoding.
+                     * @param _objectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
                      * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
@@ -367,15 +375,15 @@ If left empty, the default relative path is `{inputName}_transcode_{definition}.
                     bool ObjectNumberFormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeadTailParameter 
+                     * 获取Opening and ending content parameters.
+                     * @return HeadTailParameter Opening and ending content parameters.
                      * 
                      */
                     HeadTailParameter GetHeadTailParameter() const;
 
                     /**
-                     * 设置
-                     * @param _headTailParameter 
+                     * 设置Opening and ending content parameters.
+                     * @param _headTailParameter Opening and ending content parameters.
                      * 
                      */
                     void SetHeadTailParameter(const HeadTailParameter& _headTailParameter);
@@ -403,7 +411,9 @@ This parameter is used in high customization scenarios. It is recommended that y
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * 
+                     * Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
                      */
                     OverrideTranscodeParameter m_overrideParameter;
                     bool m_overrideParameterHasBeenSet;
@@ -415,22 +425,22 @@ This parameter is used in high customization scenarios. It is recommended that y
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * 
+                     * Digital watermark parameter.
                      */
                     BlindWatermarkInput m_blindWatermark;
                     bool m_blindWatermarkHasBeenSet;
 
                     /**
-                     * Mosaic list. A maximum of 10 images is supported.
+                     * Mosaic list. Up to 10 images supported.
                      */
                     std::vector<MosaicInput> m_mosaicSet;
                     bool m_mosaicSetHasBeenSet;
 
                     /**
                      * Start time offset of the transcoded video, in seconds.
-<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
@@ -438,14 +448,14 @@ This parameter is used in high customization scenarios. It is recommended that y
                     /**
                      * End time offset of the transcoded video, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -454,30 +464,30 @@ This parameter is used in high customization scenarios. It is recommended that y
                      * Output path of the main file after transcoding, which can be a relative or absolute path.
 To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
 <li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
 
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
+                     * Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
                      */
                     std::string m_segmentObjectName;
                     bool m_segmentObjectNameHasBeenSet;
 
                     /**
-                     * 
+                     * Rule of the `{number}` variable in the output path after transcoding.
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;
 
                     /**
-                     * 
+                     * Opening and ending content parameters.
                      */
                     HeadTailParameter m_headTailParameter;
                     bool m_headTailParameterHasBeenSet;

@@ -32,6 +32,9 @@
 #include <tencentcloud/mps/v20190612/model/AiExpansionConfig.h>
 #include <tencentcloud/mps/v20190612/model/AiStoryboardConfig.h>
 #include <tencentcloud/mps/v20190612/model/UnderstandImageConfig.h>
+#include <tencentcloud/mps/v20190612/model/ImageQualityConfig.h>
+#include <tencentcloud/mps/v20190612/model/AiComposeConfig.h>
+#include <tencentcloud/mps/v20190612/model/AiDecomposeConfig.h>
 
 
 namespace TencentCloud
@@ -139,15 +142,15 @@ namespace TencentCloud
                     bool AiPosterSuiteConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Ai image cutout configuration</p>
-                     * @return AiCutoutConfig <p>Ai image cutout configuration</p>
+                     * 获取<p>Ai cutout configuration</p>
+                     * @return AiCutoutConfig <p>Ai cutout configuration</p>
                      * 
                      */
                     AiCutoutConfig GetAiCutoutConfig() const;
 
                     /**
-                     * 设置<p>Ai image cutout configuration</p>
-                     * @param _aiCutoutConfig <p>Ai image cutout configuration</p>
+                     * 设置<p>Ai cutout configuration</p>
+                     * @param _aiCutoutConfig <p>Ai cutout configuration</p>
                      * 
                      */
                     void SetAiCutoutConfig(const AiCutoutConfig& _aiCutoutConfig);
@@ -160,15 +163,15 @@ namespace TencentCloud
                     bool AiCutoutConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Ai Image Expansion Configuration</p>
-                     * @return AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+                     * 获取<p>Ai outpainting configuration</p>
+                     * @return AiExpansionConfig <p>Ai outpainting configuration</p>
                      * 
                      */
                     AiExpansionConfig GetAiExpansionConfig() const;
 
                     /**
-                     * 设置<p>Ai Image Expansion Configuration</p>
-                     * @param _aiExpansionConfig <p>Ai Image Expansion Configuration</p>
+                     * 设置<p>Ai outpainting configuration</p>
+                     * @param _aiExpansionConfig <p>Ai outpainting configuration</p>
                      * 
                      */
                     void SetAiExpansionConfig(const AiExpansionConfig& _aiExpansionConfig);
@@ -202,15 +205,15 @@ namespace TencentCloud
                     bool AiStoryboardConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Image understanding configuration.</p>
-                     * @return UnderstandImageConfig <p>Image understanding configuration.</p>
+                     * 获取<p>Image understanding configuration</p>
+                     * @return UnderstandImageConfig <p>Image understanding configuration</p>
                      * 
                      */
                     UnderstandImageConfig GetUnderstandImageConfig() const;
 
                     /**
-                     * 设置<p>Image understanding configuration.</p>
-                     * @param _understandImageConfig <p>Image understanding configuration.</p>
+                     * 设置<p>Image understanding configuration</p>
+                     * @param _understandImageConfig <p>Image understanding configuration</p>
                      * 
                      */
                     void SetUnderstandImageConfig(const UnderstandImageConfig& _understandImageConfig);
@@ -221,6 +224,69 @@ namespace TencentCloud
                      * 
                      */
                     bool UnderstandImageConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Image quality assessment configuration</p>
+                     * @return ImageQualityConfig <p>Image quality assessment configuration</p>
+                     * 
+                     */
+                    ImageQualityConfig GetImageQualityConfig() const;
+
+                    /**
+                     * 设置<p>Image quality assessment configuration</p>
+                     * @param _imageQualityConfig <p>Image quality assessment configuration</p>
+                     * 
+                     */
+                    void SetImageQualityConfig(const ImageQualityConfig& _imageQualityConfig);
+
+                    /**
+                     * 判断参数 ImageQualityConfig 是否已赋值
+                     * @return ImageQualityConfig 是否已赋值
+                     * 
+                     */
+                    bool ImageQualityConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Layer fusion configuration.</p>
+                     * @return AiComposeConfig <p>Layer fusion configuration.</p>
+                     * 
+                     */
+                    AiComposeConfig GetAiComposeConfig() const;
+
+                    /**
+                     * 设置<p>Layer fusion configuration.</p>
+                     * @param _aiComposeConfig <p>Layer fusion configuration.</p>
+                     * 
+                     */
+                    void SetAiComposeConfig(const AiComposeConfig& _aiComposeConfig);
+
+                    /**
+                     * 判断参数 AiComposeConfig 是否已赋值
+                     * @return AiComposeConfig 是否已赋值
+                     * 
+                     */
+                    bool AiComposeConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Layer separation configuration.</p>
+                     * @return AiDecomposeConfig <p>Layer separation configuration.</p>
+                     * 
+                     */
+                    AiDecomposeConfig GetAiDecomposeConfig() const;
+
+                    /**
+                     * 设置<p>Layer separation configuration.</p>
+                     * @param _aiDecomposeConfig <p>Layer separation configuration.</p>
+                     * 
+                     */
+                    void SetAiDecomposeConfig(const AiDecomposeConfig& _aiDecomposeConfig);
+
+                    /**
+                     * 判断参数 AiDecomposeConfig 是否已赋值
+                     * @return AiDecomposeConfig 是否已赋值
+                     * 
+                     */
+                    bool AiDecomposeConfigHasBeenSet() const;
 
                 private:
 
@@ -249,13 +315,13 @@ namespace TencentCloud
                     bool m_aiPosterSuiteConfigHasBeenSet;
 
                     /**
-                     * <p>Ai image cutout configuration</p>
+                     * <p>Ai cutout configuration</p>
                      */
                     AiCutoutConfig m_aiCutoutConfig;
                     bool m_aiCutoutConfigHasBeenSet;
 
                     /**
-                     * <p>Ai Image Expansion Configuration</p>
+                     * <p>Ai outpainting configuration</p>
                      */
                     AiExpansionConfig m_aiExpansionConfig;
                     bool m_aiExpansionConfigHasBeenSet;
@@ -267,10 +333,28 @@ namespace TencentCloud
                     bool m_aiStoryboardConfigHasBeenSet;
 
                     /**
-                     * <p>Image understanding configuration.</p>
+                     * <p>Image understanding configuration</p>
                      */
                     UnderstandImageConfig m_understandImageConfig;
                     bool m_understandImageConfigHasBeenSet;
+
+                    /**
+                     * <p>Image quality assessment configuration</p>
+                     */
+                    ImageQualityConfig m_imageQualityConfig;
+                    bool m_imageQualityConfigHasBeenSet;
+
+                    /**
+                     * <p>Layer fusion configuration.</p>
+                     */
+                    AiComposeConfig m_aiComposeConfig;
+                    bool m_aiComposeConfigHasBeenSet;
+
+                    /**
+                     * <p>Layer separation configuration.</p>
+                     */
+                    AiDecomposeConfig m_aiDecomposeConfig;
+                    bool m_aiDecomposeConfigHasBeenSet;
 
                 };
             }

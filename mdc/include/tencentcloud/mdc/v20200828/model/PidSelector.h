@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * For streams with multiple audio/video tracks, you can specify the tracks to use.
                 */
                 class PidSelector : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioPID 
+                     * 获取For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
+                     * @return AudioPID For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
                      * 
                      */
                     std::vector<int64_t> GetAudioPID() const;
 
                     /**
-                     * 设置
-                     * @param _audioPID 
+                     * 设置For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
+                     * @param _audioPID For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
                      * 
                      */
                     void SetAudioPID(const std::vector<int64_t>& _audioPID);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AudioPIDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoPID 
+                     * 获取For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
+                     * @return VideoPID For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
                      * 
                      */
                     std::vector<int64_t> GetVideoPID() const;
 
                     /**
-                     * 设置
-                     * @param _videoPID 
+                     * 设置For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
+                     * @param _videoPID For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
                      * 
                      */
                     void SetVideoPID(const std::vector<int64_t>& _videoPID);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
                      */
                     std::vector<int64_t> m_audioPID;
                     bool m_audioPIDHasBeenSet;
 
                     /**
-                     * 
+                     * For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
                      */
                     std::vector<int64_t> m_videoPID;
                     bool m_videoPIDHasBeenSet;

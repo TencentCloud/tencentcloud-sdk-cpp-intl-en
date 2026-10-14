@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Questionnaire information
                 */
                 class Questionnaire : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Title 
+                     * 获取<p>Questionnaire title</p>
+                     * @return Title <p>Questionnaire title</p>
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置
-                     * @param _title 
+                     * 设置<p>Questionnaire title</p>
+                     * @param _title <p>Questionnaire title</p>
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Questions 
+                     * 获取<p>Question list of the questionnaire</p>
+                     * @return Questions <p>Question list of the questionnaire</p>
                      * 
                      */
                     std::vector<QuestionnaireQuestion> GetQuestions() const;
 
                     /**
-                     * 设置
-                     * @param _questions 
+                     * 设置<p>Question list of the questionnaire</p>
+                     * @param _questions <p>Question list of the questionnaire</p>
                      * 
                      */
                     void SetQuestions(const std::vector<QuestionnaireQuestion>& _questions);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool QuestionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Answers 
+                     * 获取<p>List of answers to the questionnaire</p>
+                     * @return Answers <p>List of answers to the questionnaire</p>
                      * 
                      */
                     std::vector<QuestionnaireQuestionAnswer> GetAnswers() const;
 
                     /**
-                     * 设置
-                     * @param _answers 
+                     * 设置<p>List of answers to the questionnaire</p>
+                     * @param _answers <p>List of answers to the questionnaire</p>
                      * 
                      */
                     void SetAnswers(const std::vector<QuestionnaireQuestionAnswer>& _answers);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Questionnaire title</p>
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Question list of the questionnaire</p>
                      */
                     std::vector<QuestionnaireQuestion> m_questions;
                     bool m_questionsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>List of answers to the questionnaire</p>
                      */
                     std::vector<QuestionnaireQuestionAnswer> m_answers;
                     bool m_answersHasBeenSet;

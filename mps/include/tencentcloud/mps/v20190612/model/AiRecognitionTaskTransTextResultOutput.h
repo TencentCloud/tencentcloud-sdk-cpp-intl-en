@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Translate segments.
-                     * @return SegmentSet Translate segments.
+                     * 获取<p>List of segments for translation.</p>
+                     * @return SegmentSet <p>List of segments for translation.</p>
                      * 
                      */
                     std::vector<AiRecognitionTaskTransTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Translate segments.
-                     * @param _segmentSet Translate segments.
+                     * 设置<p>List of segments for translation.</p>
+                     * @param _segmentSet <p>List of segments for translation.</p>
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskTransTextSegmentItem>& _segmentSet);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle file path.
-                     * @return SubtitlePath Subtitle file path.
+                     * 获取<p>Subtitle file URL.</p>
+                     * @return SubtitlePath <p>Subtitle file URL.</p>
                      * 
                      */
                     std::string GetSubtitlePath() const;
 
                     /**
-                     * 设置Subtitle file path.
-                     * @param _subtitlePath Subtitle file path.
+                     * 设置<p>Subtitle file URL.</p>
+                     * @param _subtitlePath <p>Subtitle file URL.</p>
                      * 
                      */
                     void SetSubtitlePath(const std::string& _subtitlePath);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Translate segments.
+                     * <p>List of segments for translation.</p>
                      */
                     std::vector<AiRecognitionTaskTransTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * Subtitle file path.
+                     * <p>Subtitle file URL.</p>
                      */
                     std::string m_subtitlePath;
                     bool m_subtitlePathHasBeenSet;

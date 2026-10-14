@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Input information for smart subtitle tasks.
+                     * @return Input Input information for smart subtitle tasks.
                      * 
                      */
                     SmartSubtitleTaskResultInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置Input information for smart subtitle tasks.
+                     * @param _input Input information for smart subtitle tasks.
                      * 
                      */
                     void SetInput(const SmartSubtitleTaskResultInput& _input);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Outputs 
+                     * 获取Output information for smart subtitle tasks.
+                     * @return Outputs Output information for smart subtitle tasks.
                      * 
                      */
                     std::vector<SmartSubtitleTaskBatchOutput> GetOutputs() const;
 
                     /**
-                     * 设置
-                     * @param _outputs 
+                     * 设置Output information for smart subtitle tasks.
+                     * @param _outputs Output information for smart subtitle tasks.
                      * 
                      */
                     void SetOutputs(const std::vector<SmartSubtitleTaskBatchOutput>& _outputs);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Input information for smart subtitle tasks.
                      */
                     SmartSubtitleTaskResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output information for smart subtitle tasks.
                      */
                     std::vector<SmartSubtitleTaskBatchOutput> m_outputs;
                     bool m_outputsHasBeenSet;

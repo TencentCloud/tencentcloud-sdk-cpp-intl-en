@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the conditional judgment task.
+                     * @return Output Output of the conditional judgment task.
                      * 
                      */
                     ExecRuleTaskData GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the conditional judgment task.
+                     * @param _output Output of the conditional judgment task.
                      * 
                      */
                     void SetOutput(const ExecRuleTaskData& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the conditional judgment task.
                      */
                     ExecRuleTaskData m_output;
                     bool m_outputHasBeenSet;

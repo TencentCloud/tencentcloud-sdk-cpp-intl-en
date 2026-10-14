@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sprite sheet capturing task input parameter type
+                * Task input parameter type for sprite screenshot taking of a video.
                 */
                 class ImageSpriteTaskInput : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取<p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+                     * @return OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置<p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+                     * @param _outputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool WebVttObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ObjectNumberFormat 
+                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
+                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置
-                     * @param _objectNumberFormat 
+                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
+                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
                      * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_webVttObjectNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;

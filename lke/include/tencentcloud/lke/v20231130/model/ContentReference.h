@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Session content reference information
                 */
                 class ContentReference : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Index 
+                     * 获取Source index ID
+                     * @return Index Source index ID
                      * 
                      */
                     int64_t GetIndex() const;
 
                     /**
-                     * 设置
-                     * @param _index 
+                     * 设置Source index ID
+                     * @param _index Source index ID
                      * 
                      */
                     void SetIndex(const int64_t& _index);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Reference source name
+                     * @return Name Reference source name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Reference source name
+                     * @param _name Reference source name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -92,15 +92,27 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
+                     * @return Type Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
+                     * @param _type Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -113,15 +125,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DocRefer 
+                     * 获取Document fragment reference
+                     * @return DocRefer Document fragment reference
                      * 
                      */
                     DocReference GetDocRefer() const;
 
                     /**
-                     * 设置
-                     * @param _docRefer 
+                     * 设置Document fragment reference
+                     * @param _docRefer Document fragment reference
                      * 
                      */
                     void SetDocRefer(const DocReference& _docRefer);
@@ -134,15 +146,15 @@ namespace TencentCloud
                     bool DocReferHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QaRefer 
+                     * 获取QA reference
+                     * @return QaRefer QA reference
                      * 
                      */
                     QaReference GetQaRefer() const;
 
                     /**
-                     * 设置
-                     * @param _qaRefer 
+                     * 设置QA reference
+                     * @param _qaRefer QA reference
                      * 
                      */
                     void SetQaRefer(const QaReference& _qaRefer);
@@ -155,15 +167,15 @@ namespace TencentCloud
                     bool QaReferHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebSearchRefer 
+                     * 获取Reference information for online retrieval content
+                     * @return WebSearchRefer Reference information for online retrieval content
                      * 
                      */
                     WebSearchReference GetWebSearchRefer() const;
 
                     /**
-                     * 设置
-                     * @param _webSearchRefer 
+                     * 设置Reference information for online retrieval content
+                     * @param _webSearchRefer Reference information for online retrieval content
                      * 
                      */
                     void SetWebSearchRefer(const WebSearchReference& _webSearchRefer);
@@ -178,37 +190,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Source index ID
                      */
                     int64_t m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * 
+                     * Reference source name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Document fragment reference
                      */
                     DocReference m_docRefer;
                     bool m_docReferHasBeenSet;
 
                     /**
-                     * 
+                     * QA reference
                      */
                     QaReference m_qaRefer;
                     bool m_qaReferHasBeenSet;
 
                     /**
-                     * 
+                     * Reference information for online retrieval content
                      */
                     WebSearchReference m_webSearchRefer;
                     bool m_webSearchReferHasBeenSet;

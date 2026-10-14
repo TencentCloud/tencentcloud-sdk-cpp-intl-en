@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取<p>Query page started</p>
-                     * @return PageNum <p>Query page started</p>
+                     * 获取<p>Start query page</p>
+                     * @return PageNum <p>Start query page</p>
                      * 
                      */
                     int64_t GetPageNum() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task detail data</p>
-                     * @return Tasks <p>Task detail data</p>
+                     * 获取<p>Task detail data.</p>
+                     * @return Tasks <p>Task detail data.</p>
                      * 
                      */
                     std::vector<AigcTaskListItem> GetTasks() const;
@@ -109,7 +109,7 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * <p>Query page started</p>
+                     * <p>Start query page</p>
                      */
                     int64_t m_pageNum;
                     bool m_pageNumHasBeenSet;
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * <p>Task detail data</p>
+                     * <p>Task detail data.</p>
                      */
                     std::vector<AigcTaskListItem> m_tasks;
                     bool m_tasksHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取<p>Stream ID.</p>
+                     * @return FlowId <p>Stream ID.</p>
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置<p>Stream ID.</p>
+                     * @param _flowId <p>Stream ID.</p>
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-                     * @return InputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 获取<p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
+                     * @return InputIds <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
                      * 
                      */
                     std::vector<std::string> GetInputIds() const;
 
                     /**
-                     * 设置The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-                     * @param _inputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 设置<p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
+                     * @param _inputIds <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
                      * 
                      */
                     void SetInputIds(const std::vector<std::string>& _inputIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InputIdsHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-                     * @return OutputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 获取<p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
+                     * @return OutputIds <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
                      * 
                      */
                     std::vector<std::string> GetOutputIds() const;
 
                     /**
-                     * 设置The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-                     * @param _outputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 设置<p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
+                     * @param _outputIds <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
                      * 
                      */
                     void SetOutputIds(const std::vector<std::string>& _outputIds);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The flow ID.
+                     * <p>Stream ID.</p>
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
                      */
                     std::vector<std::string> m_inputIds;
                     bool m_inputIdsHasBeenSet;
 
                     /**
-                     * The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
                      */
                     std::vector<std::string> m_outputIds;
                     bool m_outputIdsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI content review sound pornographic result
+                * Live stream AI content moderation pornographic result of sound
                 */
                 class LiveStreamAiReviewVoicePornResult : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Suspected segment porn score.
-                     * @return Confidence Suspected segment porn score.
+                     * 获取Porn score of the suspected segment.
+                     * @return Confidence Porn score of the suspected segment.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Suspected segment porn score.
-                     * @param _confidence Suspected segment porn score.
+                     * 设置Porn score of the suspected segment.
+                     * @param _confidence Porn score of the suspected segment.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * 获取Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * @return Suggestion Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * 设置Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param _suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * @param _suggestion Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -143,19 +143,19 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
-                     * @return Label Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+                     * 获取Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
+                     * @return Label Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
-                     * @param _label Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+                     * 设置Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
+                     * @param _label Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -182,13 +182,13 @@ namespace TencentCloud
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Suspected segment porn score.
+                     * Porn score of the suspected segment.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -197,8 +197,8 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+                     * Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

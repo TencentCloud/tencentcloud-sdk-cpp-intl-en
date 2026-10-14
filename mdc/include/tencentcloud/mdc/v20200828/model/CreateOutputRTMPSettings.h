@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The RTMP configuration of the output to create.
+                * RTMP configuration for creating the output of a media transmission stream.
                 */
                 class CreateOutputRTMPSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The relay destination addresses. One or two addresses are allowed.
-                     * @return Destinations The relay destination addresses. One or two addresses are allowed.
+                     * 获取Target address for repost. You can enter 1 to 2 addresses.
+                     * @return Destinations Target address for repost. You can enter 1 to 2 addresses.
                      * 
                      */
                     std::vector<CreateOutputRtmpSettingsDestinations> GetDestinations() const;
 
                     /**
-                     * 设置The relay destination addresses. One or two addresses are allowed.
-                     * @param _destinations The relay destination addresses. One or two addresses are allowed.
+                     * 设置Target address for repost. You can enter 1 to 2 addresses.
+                     * @param _destinations Target address for repost. You can enter 1 to 2 addresses.
                      * 
                      */
                     void SetDestinations(const std::vector<CreateOutputRtmpSettingsDestinations>& _destinations);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DestinationsHasBeenSet() const;
 
                     /**
-                     * 获取The RTMP chunk size. Value range: [4096, 40960].
-                     * @return ChunkSize The RTMP chunk size. Value range: [4096, 40960].
+                     * 获取Chunk size of RTMP, ranging from 4096 to 40960.
+                     * @return ChunkSize Chunk size of RTMP, ranging from 4096 to 40960.
                      * 
                      */
                     int64_t GetChunkSize() const;
 
                     /**
-                     * 设置The RTMP chunk size. Value range: [4096, 40960].
-                     * @param _chunkSize The RTMP chunk size. Value range: [4096, 40960].
+                     * 设置Chunk size of RTMP, ranging from 4096 to 40960.
+                     * @param _chunkSize Chunk size of RTMP, ranging from 4096 to 40960.
                      * 
                      */
                     void SetChunkSize(const int64_t& _chunkSize);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The relay destination addresses. One or two addresses are allowed.
+                     * Target address for repost. You can enter 1 to 2 addresses.
                      */
                     std::vector<CreateOutputRtmpSettingsDestinations> m_destinations;
                     bool m_destinationsHasBeenSet;
 
                     /**
-                     * The RTMP chunk size. Value range: [4096, 40960].
+                     * Chunk size of RTMP, ranging from 4096 to 40960.
                      */
                     int64_t m_chunkSize;
                     bool m_chunkSizeHasBeenSet;

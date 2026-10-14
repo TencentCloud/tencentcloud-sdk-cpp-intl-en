@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Destination address information of RTP push.
+                * Target address information for RTP repush.
                 */
                 class RTPAddressDestination : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Push destination address IP.
-                     * @return Ip Push destination address IP.
+                     * 获取IP of the destination address for repush.
+                     * @return Ip IP of the destination address for repush.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Push destination address IP.
-                     * @param _ip Push destination address IP.
+                     * 设置IP of the destination address for repush.
+                     * @param _ip IP of the destination address for repush.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Push destination address port.
-                     * @return Port Push destination address port.
+                     * 获取Port of the destination address for push.
+                     * @return Port Port of the destination address for push.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Push destination address port.
-                     * @param _port Push destination address port.
+                     * 设置Port of the destination address for push.
+                     * @param _port Port of the destination address for push.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Push destination address IP.
+                     * IP of the destination address for repush.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Push destination address port.
+                     * Port of the destination address for push.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

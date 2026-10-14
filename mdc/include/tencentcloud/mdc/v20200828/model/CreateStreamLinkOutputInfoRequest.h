@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取Transport stream Id.
+                     * @return FlowId Transport stream Id.
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置Transport stream Id.
+                     * @param _flowId Transport stream Id.
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The output configuration of the flow.
-                     * @return Output The output configuration of the flow.
+                     * 获取Output configuration of the transport stream.
+                     * @return Output Output configuration of the transport stream.
                      * 
                      */
                     CreateOutputInfo GetOutput() const;
 
                     /**
-                     * 设置The output configuration of the flow.
-                     * @param _output The output configuration of the flow.
+                     * 设置Output configuration of the transport stream.
+                     * @param _output Output configuration of the transport stream.
                      * 
                      */
                     void SetOutput(const CreateOutputInfo& _output);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The flow ID.
+                     * Transport stream Id.
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The output configuration of the flow.
+                     * Output configuration of the transport stream.
                      */
                     CreateOutputInfo m_output;
                     bool m_outputHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Last asset sync time
-                     * @return AssetSyncLastTime Last asset sync time
+                     * 获取Last Synchronization Time of Assets
+                     * @return AssetSyncLastTime Last Synchronization Time of Assets
                      * 
                      */
                     std::string GetAssetSyncLastTime() const;
@@ -58,8 +58,14 @@ namespace TencentCloud
                     bool AssetSyncLastTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskStatus 
+                     * 获取Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
+                     * @return TaskStatus Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
                      * 
                      */
                     std::string GetTaskStatus() const;
@@ -72,8 +78,8 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskProcess 
+                     * 获取Task Progress (Percentage)
+                     * @return TaskProcess Task Progress (Percentage)
                      * 
                      */
                     int64_t GetTaskProcess() const;
@@ -116,19 +122,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Last asset sync time
+                     * Last Synchronization Time of Assets
                      */
                     std::string m_assetSyncLastTime;
                     bool m_assetSyncLastTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Task Progress (Percentage)
                      */
                     int64_t m_taskProcess;
                     bool m_taskProcessHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Namespace resource pool configuration
                 */
                 class NamespaceResourceEnv : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TKE 
+                     * 获取Resource pool based on a TKE cluster
+                     * @return TKE Resource pool based on a TKE cluster
                      * 
                      */
                     NamespaceResourceEnvTKE GetTKE() const;
 
                     /**
-                     * 设置
-                     * @param _tKE 
+                     * 设置Resource pool based on a TKE cluster
+                     * @param _tKE Resource pool based on a TKE cluster
                      * 
                      */
                     void SetTKE(const NamespaceResourceEnvTKE& _tKE);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TKEHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OFFLINE 
+                     * 获取Namespace of the near-offline computing type
+                     * @return OFFLINE Namespace of the near-offline computing type
                      * 
                      */
                     bool GetOFFLINE() const;
 
                     /**
-                     * 设置
-                     * @param _oFFLINE 
+                     * 设置Namespace of the near-offline computing type
+                     * @param _oFFLINE Namespace of the near-offline computing type
                      * 
                      */
                     void SetOFFLINE(const bool& _oFFLINE);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Resource pool based on a TKE cluster
                      */
                     NamespaceResourceEnvTKE m_tKE;
                     bool m_tKEHasBeenSet;
 
                     /**
-                     * 
+                     * Namespace of the near-offline computing type
                      */
                     bool m_oFFLINE;
                     bool m_oFFLINEHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ES dictionary information
+                * ES library information
                 */
                 class EsDictionaryInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of non-stop words
-                     * @return MainDict List of non-stop words
+                     * 获取List of enabled word dictionaries
+                     * @return MainDict List of enabled word dictionaries
                      * 
                      */
                     std::vector<DictInfo> GetMainDict() const;
 
                     /**
-                     * 设置List of non-stop words
-                     * @param _mainDict List of non-stop words
+                     * 设置List of enabled word dictionaries
+                     * @param _mainDict List of enabled word dictionaries
                      * 
                      */
                     void SetMainDict(const std::vector<DictInfo>& _mainDict);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MainDictHasBeenSet() const;
 
                     /**
-                     * 获取List of stop words
-                     * @return Stopwords List of stop words
+                     * 获取List of stopword dictionaries
+                     * @return Stopwords List of stopword dictionaries
                      * 
                      */
                     std::vector<DictInfo> GetStopwords() const;
 
                     /**
-                     * 设置List of stop words
-                     * @param _stopwords List of stop words
+                     * 设置List of stopword dictionaries
+                     * @param _stopwords List of stopword dictionaries
                      * 
                      */
                     void SetStopwords(const std::vector<DictInfo>& _stopwords);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StopwordsHasBeenSet() const;
 
                     /**
-                     * 获取QQ dictionary list
-                     * @return QQDict QQ dictionary list
+                     * 获取List of QQ word segmentation dictionaries
+                     * @return QQDict List of QQ word segmentation dictionaries
                      * 
                      */
                     std::vector<DictInfo> GetQQDict() const;
 
                     /**
-                     * 设置QQ dictionary list
-                     * @param _qQDict QQ dictionary list
+                     * 设置List of QQ word segmentation dictionaries
+                     * @param _qQDict List of QQ word segmentation dictionaries
                      * 
                      */
                     void SetQQDict(const std::vector<DictInfo>& _qQDict);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool QQDictHasBeenSet() const;
 
                     /**
-                     * 获取Synonym dictionary list
-                     * @return Synonym Synonym dictionary list
+                     * 获取List of synonym dictionaries
+                     * @return Synonym List of synonym dictionaries
                      * 
                      */
                     std::vector<DictInfo> GetSynonym() const;
 
                     /**
-                     * 设置Synonym dictionary list
-                     * @param _synonym Synonym dictionary list
+                     * 设置List of synonym dictionaries
+                     * @param _synonym List of synonym dictionaries
                      * 
                      */
                     void SetSynonym(const std::vector<DictInfo>& _synonym);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool SynonymHasBeenSet() const;
 
                     /**
-                     * 获取Update dictionary type
-                     * @return UpdateType Update dictionary type
+                     * 获取Update the dictionary type
+                     * @return UpdateType Update the dictionary type
                      * 
                      */
                     std::string GetUpdateType() const;
 
                     /**
-                     * 设置Update dictionary type
-                     * @param _updateType Update dictionary type
+                     * 设置Update the dictionary type
+                     * @param _updateType Update the dictionary type
                      * 
                      */
                     void SetUpdateType(const std::string& _updateType);
@@ -152,37 +152,145 @@ namespace TencentCloud
                      */
                     bool UpdateTypeHasBeenSet() const;
 
+                    /**
+                     * 获取List of ansj enabled word dictionaries
+                     * @return AnsjMain List of ansj enabled word dictionaries
+                     * 
+                     */
+                    std::vector<DictInfo> GetAnsjMain() const;
+
+                    /**
+                     * 设置List of ansj enabled word dictionaries
+                     * @param _ansjMain List of ansj enabled word dictionaries
+                     * 
+                     */
+                    void SetAnsjMain(const std::vector<DictInfo>& _ansjMain);
+
+                    /**
+                     * 判断参数 AnsjMain 是否已赋值
+                     * @return AnsjMain 是否已赋值
+                     * 
+                     */
+                    bool AnsjMainHasBeenSet() const;
+
+                    /**
+                     * 获取List of ansj stopword dictionaries
+                     * @return AnsjStop List of ansj stopword dictionaries
+                     * 
+                     */
+                    std::vector<DictInfo> GetAnsjStop() const;
+
+                    /**
+                     * 设置List of ansj stopword dictionaries
+                     * @param _ansjStop List of ansj stopword dictionaries
+                     * 
+                     */
+                    void SetAnsjStop(const std::vector<DictInfo>& _ansjStop);
+
+                    /**
+                     * 判断参数 AnsjStop 是否已赋值
+                     * @return AnsjStop 是否已赋值
+                     * 
+                     */
+                    bool AnsjStopHasBeenSet() const;
+
+                    /**
+                     * 获取List of ansj ambiguity lexicons
+                     * @return AnsjAmbiguity List of ansj ambiguity lexicons
+                     * 
+                     */
+                    std::vector<DictInfo> GetAnsjAmbiguity() const;
+
+                    /**
+                     * 设置List of ansj ambiguity lexicons
+                     * @param _ansjAmbiguity List of ansj ambiguity lexicons
+                     * 
+                     */
+                    void SetAnsjAmbiguity(const std::vector<DictInfo>& _ansjAmbiguity);
+
+                    /**
+                     * 判断参数 AnsjAmbiguity 是否已赋值
+                     * @return AnsjAmbiguity 是否已赋值
+                     * 
+                     */
+                    bool AnsjAmbiguityHasBeenSet() const;
+
+                    /**
+                     * 获取List of ansj synonym dictionaries
+                     * @return AnsjSynonyms List of ansj synonym dictionaries
+                     * 
+                     */
+                    std::vector<DictInfo> GetAnsjSynonyms() const;
+
+                    /**
+                     * 设置List of ansj synonym dictionaries
+                     * @param _ansjSynonyms List of ansj synonym dictionaries
+                     * 
+                     */
+                    void SetAnsjSynonyms(const std::vector<DictInfo>& _ansjSynonyms);
+
+                    /**
+                     * 判断参数 AnsjSynonyms 是否已赋值
+                     * @return AnsjSynonyms 是否已赋值
+                     * 
+                     */
+                    bool AnsjSynonymsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of non-stop words
+                     * List of enabled word dictionaries
                      */
                     std::vector<DictInfo> m_mainDict;
                     bool m_mainDictHasBeenSet;
 
                     /**
-                     * List of stop words
+                     * List of stopword dictionaries
                      */
                     std::vector<DictInfo> m_stopwords;
                     bool m_stopwordsHasBeenSet;
 
                     /**
-                     * QQ dictionary list
+                     * List of QQ word segmentation dictionaries
                      */
                     std::vector<DictInfo> m_qQDict;
                     bool m_qQDictHasBeenSet;
 
                     /**
-                     * Synonym dictionary list
+                     * List of synonym dictionaries
                      */
                     std::vector<DictInfo> m_synonym;
                     bool m_synonymHasBeenSet;
 
                     /**
-                     * Update dictionary type
+                     * Update the dictionary type
                      */
                     std::string m_updateType;
                     bool m_updateTypeHasBeenSet;
+
+                    /**
+                     * List of ansj enabled word dictionaries
+                     */
+                    std::vector<DictInfo> m_ansjMain;
+                    bool m_ansjMainHasBeenSet;
+
+                    /**
+                     * List of ansj stopword dictionaries
+                     */
+                    std::vector<DictInfo> m_ansjStop;
+                    bool m_ansjStopHasBeenSet;
+
+                    /**
+                     * List of ansj ambiguity lexicons
+                     */
+                    std::vector<DictInfo> m_ansjAmbiguity;
+                    bool m_ansjAmbiguityHasBeenSet;
+
+                    /**
+                     * List of ansj synonym dictionaries
+                     */
+                    std::vector<DictInfo> m_ansjSynonyms;
+                    bool m_ansjSynonymsHasBeenSet;
 
                 };
             }

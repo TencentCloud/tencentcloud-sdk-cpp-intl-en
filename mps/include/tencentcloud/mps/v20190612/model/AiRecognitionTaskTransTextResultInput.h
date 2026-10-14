@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Translate the input.
+                * Input for translation.
                 */
                 class AiRecognitionTaskTransTextResultInput : public AbstractModel
                 {

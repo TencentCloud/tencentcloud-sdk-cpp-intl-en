@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return IP 
+                     * 获取<p>Node IP information</p>
+                     * @return IP <p>Node IP information</p>
                      * 
                      */
                     std::string GetIP() const;
 
                     /**
-                     * 设置
-                     * @param _iP 
+                     * 设置<p>Node IP information</p>
+                     * @param _iP <p>Node IP information</p>
                      * 
                      */
                     void SetIP(const std::string& _iP);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IPHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Node types, such as sqlengine, tdstore, mc</p>
+                     * @return Type <p>Node types, such as sqlengine, tdstore, mc</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Node types, such as sqlengine, tdstore, mc</p>
+                     * @param _type <p>Node types, such as sqlengine, tdstore, mc</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NodeId 
+                     * 获取<p>Unique identifier of the node</p>
+                     * @return NodeId <p>Unique identifier of the node</p>
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
-                     * 设置
-                     * @param _nodeId 
+                     * 设置<p>Unique identifier of the node</p>
+                     * @param _nodeId <p>Unique identifier of the node</p>
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Port 
+                     * 获取<p>Node port information</p>
+                     * @return Port <p>Node port information</p>
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置
-                     * @param _port 
+                     * 设置<p>Node port information</p>
+                     * @param _port <p>Node port information</p>
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Zone 
+                     * 获取<p>Availability zone of the node</p>
+                     * @return Zone <p>Availability zone of the node</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置
-                     * @param _zone 
+                     * 设置<p>Availability zone of the node</p>
+                     * @param _zone <p>Availability zone of the node</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Host 
+                     * 获取<p>Machine ip of the node</p>
+                     * @return Host <p>Machine ip of the node</p>
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置
-                     * @param _host 
+                     * 设置<p>Machine ip of the node</p>
+                     * @param _host <p>Machine ip of the node</p>
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -260,37 +260,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Node IP information</p>
                      */
                     std::string m_iP;
                     bool m_iPHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Node types, such as sqlengine, tdstore, mc</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Unique identifier of the node</p>
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Node port information</p>
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Availability zone of the node</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Machine ip of the node</p>
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Visual node configuration
+                * Visualize node configuration
                 */
                 class WebNodeTypeInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of visual nodes. The value is always `1`.
-                     * @return NodeNum Number of visual nodes. The value is always `1`.
+                     * 获取Number of nodes to visualize, fixed as 1
+                     * @return NodeNum Number of nodes to visualize, fixed as 1
                      * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
-                     * 设置Number of visual nodes. The value is always `1`.
-                     * @param _nodeNum Number of visual nodes. The value is always `1`.
+                     * 设置Number of nodes to visualize, fixed as 1
+                     * @param _nodeNum Number of nodes to visualize, fixed as 1
                      * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Visual node specification
-                     * @return NodeType Visual node specification
+                     * 获取Visualize node specifications
+                     * @return NodeType Visualize node specifications
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Visual node specification
-                     * @param _nodeType Visual node specification
+                     * 设置Visualize node specifications
+                     * @param _nodeType Visualize node specifications
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of visual nodes. The value is always `1`.
+                     * Number of nodes to visualize, fixed as 1
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * Visual node specification
+                     * Visualize node specifications
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;

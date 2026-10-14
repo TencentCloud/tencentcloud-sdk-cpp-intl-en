@@ -44,18 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
                      * @return ImageBase64 The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
                      * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
                      * 设置The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
                      * @param _imageBase64 The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
                      * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
@@ -135,19 +135,19 @@ We recommend that you store the image in Tencent Cloud for higher download speed
                     bool BackImageUrlHasBeenSet() const;
 
                     /**
-                     * 获取Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
-                     * @return CropPortrait Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+                     * 获取Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+                     * @return CropPortrait Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
                      * 
                      */
                     bool GetCropPortrait() const;
 
                     /**
-                     * 设置Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
-                     * @param _cropPortrait Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+                     * 设置Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+                     * @param _cropPortrait Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
                      * 
                      */
                     void SetCropPortrait(const bool& _cropPortrait);
@@ -163,7 +163,7 @@ When this parameter is set to `true`, the Base64-encoded value of the profile ph
 
                     /**
                      * The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
@@ -188,8 +188,8 @@ We recommend that you store the image in Tencent Cloud for higher download speed
                     bool m_backImageUrlHasBeenSet;
 
                     /**
-                     * Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+                     * Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
                      */
                     bool m_cropPortrait;
                     bool m_cropPortraitHasBeenSet;

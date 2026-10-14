@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for the speech keyword recognition task.
-                     * @return Input Input for the speech keyword recognition task.
+                     * 获取Input information on the speech keyword recognition task.
+                     * @return Input Input information on the speech keyword recognition task.
                      * 
                      */
                     AiRecognitionTaskAsrWordsResultInput GetInput() const;
 
                     /**
-                     * 设置Input for the speech keyword recognition task.
-                     * @param _input Input for the speech keyword recognition task.
+                     * 设置Input information on the speech keyword recognition task.
+                     * @param _input Input information on the speech keyword recognition task.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskAsrWordsResultInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output information on the speech keyword recognition task.
+                     * @return Output Output information on the speech keyword recognition task.
                      * 
                      */
                     AiRecognitionTaskAsrWordsResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output information on the speech keyword recognition task.
+                     * @param _output Output information on the speech keyword recognition task.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskAsrWordsResultOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for the speech keyword recognition task.
+                     * Input information on the speech keyword recognition task.
                      */
                     AiRecognitionTaskAsrWordsResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output information on the speech keyword recognition task.
                      */
                     AiRecognitionTaskAsrWordsResultOutput m_output;
                     bool m_outputHasBeenSet;

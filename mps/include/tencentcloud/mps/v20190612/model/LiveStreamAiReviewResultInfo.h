@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI review result
+                * AI review result of the live stream
                 */
                 class LiveStreamAiReviewResultInfo : public AbstractModel
                 {

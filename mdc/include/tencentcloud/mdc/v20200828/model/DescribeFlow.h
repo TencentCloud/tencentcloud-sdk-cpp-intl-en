@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of the queried flow.
+                * Query the Flow configuration information.
                 */
                 class DescribeFlow : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Flow ID.
-                     * @return FlowId Flow ID.
+                     * 获取Stream Id.
+                     * @return FlowId Stream Id.
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置Flow ID.
-                     * @param _flowId Flow ID.
+                     * 设置Stream Id.
+                     * @param _flowId Stream Id.
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Flow name.
-                     * @return FlowName Flow name.
+                     * 获取Stream name.
+                     * @return FlowName Stream name.
                      * 
                      */
                     std::string GetFlowName() const;
 
                     /**
-                     * 设置Flow name.
-                     * @param _flowName Flow name.
+                     * 设置Stream name.
+                     * @param _flowName Stream name.
                      * 
                      */
                     void SetFlowName(const std::string& _flowName);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool FlowNameHasBeenSet() const;
 
                     /**
-                     * 获取Flow status. Valid values: `IDLE`, `RUNNING`
-                     * @return State Flow status. Valid values: `IDLE`, `RUNNING`
+                     * 获取Stream status. Valid values: IDLE, RUNNING.
+                     * @return State Stream status. Valid values: IDLE, RUNNING.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Flow status. Valid values: `IDLE`, `RUNNING`
-                     * @param _state Flow status. Valid values: `IDLE`, `RUNNING`
+                     * 设置Stream status. Valid values: IDLE, RUNNING.
+                     * @param _state Stream status. Valid values: IDLE, RUNNING.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum bandwidth value.
-                     * @return MaxBandwidth Maximum bandwidth value.
+                     * 获取Maximum bandwidth.
+                     * @return MaxBandwidth Maximum bandwidth.
                      * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
-                     * 设置Maximum bandwidth value.
-                     * @param _maxBandwidth Maximum bandwidth value.
+                     * 设置Maximum bandwidth.
+                     * @param _maxBandwidth Maximum bandwidth.
                      * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
@@ -155,18 +155,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OutputGroup Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DescribeOutput> GetOutputGroup() const;
 
                     /**
                      * 设置Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _outputGroup Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutputGroup(const std::vector<DescribeOutput>& _outputGroup);
@@ -179,15 +175,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OutputGroupHasBeenSet() const;
 
                     /**
-                     * 获取EventId of the StreamLink event associated with this Flow.
-                     * @return EventId EventId of the StreamLink event associated with this Flow.
+                     * 获取EventId of the media transmission event associated with this Flow.
+                     * @return EventId EventId of the media transmission event associated with this Flow.
                      * 
                      */
                     std::string GetEventId() const;
 
                     /**
-                     * 设置EventId of the StreamLink event associated with this Flow.
-                     * @param _eventId EventId of the StreamLink event associated with this Flow.
+                     * 设置EventId of the media transmission event associated with this Flow.
+                     * @param _eventId EventId of the media transmission event associated with this Flow.
                      * 
                      */
                     void SetEventId(const std::string& _eventId);
@@ -199,28 +195,91 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool EventIdHasBeenSet() const;
 
+                    /**
+                     * 获取Creation time of the Flow in UTC format.
+                     * @return CreateTime Creation time of the Flow in UTC format.
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Creation time of the Flow in UTC format.
+                     * @param _createTime Creation time of the Flow in UTC format.
+                     * 
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Input protocols that can be created for this Flow.
+                     * @return AllowedInputProtocols Input protocols that can be created for this Flow.
+                     * 
+                     */
+                    std::vector<std::string> GetAllowedInputProtocols() const;
+
+                    /**
+                     * 设置Input protocols that can be created for this Flow.
+                     * @param _allowedInputProtocols Input protocols that can be created for this Flow.
+                     * 
+                     */
+                    void SetAllowedInputProtocols(const std::vector<std::string>& _allowedInputProtocols);
+
+                    /**
+                     * 判断参数 AllowedInputProtocols 是否已赋值
+                     * @return AllowedInputProtocols 是否已赋值
+                     * 
+                     */
+                    bool AllowedInputProtocolsHasBeenSet() const;
+
+                    /**
+                     * 获取Output protocols allowed to be created by this Flow
+                     * @return AllowedOutputProtocols Output protocols allowed to be created by this Flow
+                     * 
+                     */
+                    std::vector<std::string> GetAllowedOutputProtocols() const;
+
+                    /**
+                     * 设置Output protocols allowed to be created by this Flow
+                     * @param _allowedOutputProtocols Output protocols allowed to be created by this Flow
+                     * 
+                     */
+                    void SetAllowedOutputProtocols(const std::vector<std::string>& _allowedOutputProtocols);
+
+                    /**
+                     * 判断参数 AllowedOutputProtocols 是否已赋值
+                     * @return AllowedOutputProtocols 是否已赋值
+                     * 
+                     */
+                    bool AllowedOutputProtocolsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Flow ID.
+                     * Stream Id.
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Flow name.
+                     * Stream name.
                      */
                     std::string m_flowName;
                     bool m_flowNameHasBeenSet;
 
                     /**
-                     * Flow status. Valid values: `IDLE`, `RUNNING`
+                     * Stream status. Valid values: IDLE, RUNNING.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Maximum bandwidth value.
+                     * Maximum bandwidth.
                      */
                     int64_t m_maxBandwidth;
                     bool m_maxBandwidthHasBeenSet;
@@ -233,16 +292,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DescribeOutput> m_outputGroup;
                     bool m_outputGroupHasBeenSet;
 
                     /**
-                     * EventId of the StreamLink event associated with this Flow.
+                     * EventId of the media transmission event associated with this Flow.
                      */
                     std::string m_eventId;
                     bool m_eventIdHasBeenSet;
+
+                    /**
+                     * Creation time of the Flow in UTC format.
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Input protocols that can be created for this Flow.
+                     */
+                    std::vector<std::string> m_allowedInputProtocols;
+                    bool m_allowedInputProtocolsHasBeenSet;
+
+                    /**
+                     * Output protocols allowed to be created by this Flow
+                     */
+                    std::vector<std::string> m_allowedOutputProtocols;
+                    bool m_allowedOutputProtocolsHasBeenSet;
 
                 };
             }

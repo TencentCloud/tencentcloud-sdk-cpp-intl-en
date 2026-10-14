@@ -44,7 +44,9 @@ FlowSRTInfo::FlowSRTInfo() :
     m_sendBufferHasBeenSet(false),
     m_recvBufferHasBeenSet(false),
     m_sendLatencyHasBeenSet(false),
-    m_recvLatencyHasBeenSet(false)
+    m_recvLatencyHasBeenSet(false),
+    m_sendNAKPacketsHasBeenSet(false),
+    m_recvNAKPacketsHasBeenSet(false)
 {
 }
 
@@ -293,6 +295,26 @@ CoreInternalOutcome FlowSRTInfo::Deserialize(const rapidjson::Value &value)
         m_recvLatencyHasBeenSet = true;
     }
 
+    if (value.HasMember("SendNAKPackets") && !value["SendNAKPackets"].IsNull())
+    {
+        if (!value["SendNAKPackets"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FlowSRTInfo.SendNAKPackets` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_sendNAKPackets = value["SendNAKPackets"].GetInt64();
+        m_sendNAKPacketsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RecvNAKPackets") && !value["RecvNAKPackets"].IsNull())
+    {
+        if (!value["RecvNAKPackets"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FlowSRTInfo.RecvNAKPackets` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_recvNAKPackets = value["RecvNAKPackets"].GetInt64();
+        m_recvNAKPacketsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -490,6 +512,22 @@ void FlowSRTInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "RecvLatency";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_recvLatency, allocator);
+    }
+
+    if (m_sendNAKPacketsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SendNAKPackets";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sendNAKPackets, allocator);
+    }
+
+    if (m_recvNAKPacketsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecvNAKPackets";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_recvNAKPackets, allocator);
     }
 
 }
@@ -877,5 +915,37 @@ void FlowSRTInfo::SetRecvLatency(const int64_t& _recvLatency)
 bool FlowSRTInfo::RecvLatencyHasBeenSet() const
 {
     return m_recvLatencyHasBeenSet;
+}
+
+int64_t FlowSRTInfo::GetSendNAKPackets() const
+{
+    return m_sendNAKPackets;
+}
+
+void FlowSRTInfo::SetSendNAKPackets(const int64_t& _sendNAKPackets)
+{
+    m_sendNAKPackets = _sendNAKPackets;
+    m_sendNAKPacketsHasBeenSet = true;
+}
+
+bool FlowSRTInfo::SendNAKPacketsHasBeenSet() const
+{
+    return m_sendNAKPacketsHasBeenSet;
+}
+
+int64_t FlowSRTInfo::GetRecvNAKPackets() const
+{
+    return m_recvNAKPackets;
+}
+
+void FlowSRTInfo::SetRecvNAKPackets(const int64_t& _recvNAKPackets)
+{
+    m_recvNAKPackets = _recvNAKPackets;
+    m_recvNAKPacketsHasBeenSet = true;
+}
+
+bool FlowSRTInfo::RecvNAKPacketsHasBeenSet() const
+{
+    return m_recvNAKPacketsHasBeenSet;
 }
 

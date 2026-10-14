@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File collection information
                 */
                 class FileCollection : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxFileCount 
+                     * 获取Maximum number of files to be uploaded
+                     * @return MaxFileCount Maximum number of files to be uploaded
                      * 
                      */
                     int64_t GetMaxFileCount() const;
 
                     /**
-                     * 设置
-                     * @param _maxFileCount 
+                     * 设置Maximum number of files to be uploaded
+                     * @param _maxFileCount Maximum number of files to be uploaded
                      * 
                      */
                     void SetMaxFileCount(const int64_t& _maxFileCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaxFileCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SupportedFileTypes 
+                     * 获取Supported upload file types
+                     * @return SupportedFileTypes Supported upload file types
                      * 
                      */
                     std::vector<std::string> GetSupportedFileTypes() const;
 
                     /**
-                     * 设置
-                     * @param _supportedFileTypes 
+                     * 设置Supported upload file types
+                     * @param _supportedFileTypes Supported upload file types
                      * 
                      */
                     void SetSupportedFileTypes(const std::vector<std::string>& _supportedFileTypes);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Maximum number of files to be uploaded
                      */
                     int64_t m_maxFileCount;
                     bool m_maxFileCountHasBeenSet;
 
                     /**
-                     * 
+                     * Supported upload file types
                      */
                     std::vector<std::string> m_supportedFileTypes;
                     bool m_supportedFileTypesHasBeenSet;

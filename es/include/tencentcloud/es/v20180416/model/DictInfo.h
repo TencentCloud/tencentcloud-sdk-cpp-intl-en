@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the IK plugin dictionary
+                * ik plug-in dictionary information
                 */
                 class DictInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dictionary key value
-                     * @return Key Dictionary key value
+                     * 获取Dictionary key-value
+                     * @return Key Dictionary key-value
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Dictionary key value
-                     * @param _key Dictionary key value
+                     * 设置Dictionary key-value
+                     * @param _key Dictionary key-value
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Dictionary size in B
-                     * @return Size Dictionary size in B
+                     * 获取Dictionary size. Unit: B.
+                     * @return Size Dictionary size. Unit: B.
                      * 
                      */
                     uint64_t GetSize() const;
 
                     /**
-                     * 设置Dictionary size in B
-                     * @param _size Dictionary size in B
+                     * 设置Dictionary size. Unit: B.
+                     * @param _size Dictionary size. Unit: B.
                      * 
                      */
                     void SetSize(const uint64_t& _size);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dictionary key value
+                     * Dictionary key-value
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Dictionary size in B
+                     * Dictionary size. Unit: B.
                      */
                     uint64_t m_size;
                     bool m_sizeHasBeenSet;

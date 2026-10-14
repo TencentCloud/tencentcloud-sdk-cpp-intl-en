@@ -35,7 +35,14 @@ RecognizePhilippinesDrivingLicenseOCRResponse::RecognizePhilippinesDrivingLicens
     m_licenseNoHasBeenSet(false),
     m_expiresDateHasBeenSet(false),
     m_agencyCodeHasBeenSet(false),
-    m_birthdayHasBeenSet(false)
+    m_birthdayHasBeenSet(false),
+    m_bloodTypeHasBeenSet(false),
+    m_heightHasBeenSet(false),
+    m_weightHasBeenSet(false),
+    m_eyeColorHasBeenSet(false),
+    m_dLCodesHasBeenSet(false),
+    m_restrictionsHasBeenSet(false),
+    m_conditionsHasBeenSet(false)
 {
 }
 
@@ -277,6 +284,125 @@ CoreInternalOutcome RecognizePhilippinesDrivingLicenseOCRResponse::Deserialize(c
         m_birthdayHasBeenSet = true;
     }
 
+    if (rsp.HasMember("BloodType") && !rsp["BloodType"].IsNull())
+    {
+        if (!rsp["BloodType"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `BloodType` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_bloodType.Deserialize(rsp["BloodType"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_bloodTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Height") && !rsp["Height"].IsNull())
+    {
+        if (!rsp["Height"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Height` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_height.Deserialize(rsp["Height"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_heightHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Weight") && !rsp["Weight"].IsNull())
+    {
+        if (!rsp["Weight"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Weight` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_weight.Deserialize(rsp["Weight"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_weightHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EyeColor") && !rsp["EyeColor"].IsNull())
+    {
+        if (!rsp["EyeColor"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EyeColor` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_eyeColor.Deserialize(rsp["EyeColor"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_eyeColorHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DLCodes") && !rsp["DLCodes"].IsNull())
+    {
+        if (!rsp["DLCodes"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DLCodes` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_dLCodes.Deserialize(rsp["DLCodes"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_dLCodesHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Restrictions") && !rsp["Restrictions"].IsNull())
+    {
+        if (!rsp["Restrictions"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Restrictions` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_restrictions.Deserialize(rsp["Restrictions"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_restrictionsHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Conditions") && !rsp["Conditions"].IsNull())
+    {
+        if (!rsp["Conditions"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Conditions` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_conditions.Deserialize(rsp["Conditions"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_conditionsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -393,6 +519,69 @@ string RecognizePhilippinesDrivingLicenseOCRResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_birthday.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_bloodTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BloodType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_bloodType.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_heightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Height";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_height.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_weightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Weight";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_weight.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_eyeColorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EyeColor";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_eyeColor.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_dLCodesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DLCodes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dLCodes.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_restrictionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Restrictions";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_restrictions.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_conditionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Conditions";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_conditions.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -525,6 +714,76 @@ TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetBirthday()
 bool RecognizePhilippinesDrivingLicenseOCRResponse::BirthdayHasBeenSet() const
 {
     return m_birthdayHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetBloodType() const
+{
+    return m_bloodType;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::BloodTypeHasBeenSet() const
+{
+    return m_bloodTypeHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetHeight() const
+{
+    return m_height;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::HeightHasBeenSet() const
+{
+    return m_heightHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetWeight() const
+{
+    return m_weight;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::WeightHasBeenSet() const
+{
+    return m_weightHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetEyeColor() const
+{
+    return m_eyeColor;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::EyeColorHasBeenSet() const
+{
+    return m_eyeColorHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetDLCodes() const
+{
+    return m_dLCodes;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::DLCodesHasBeenSet() const
+{
+    return m_dLCodesHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetRestrictions() const
+{
+    return m_restrictions;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::RestrictionsHasBeenSet() const
+{
+    return m_restrictionsHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesDrivingLicenseOCRResponse::GetConditions() const
+{
+    return m_conditions;
+}
+
+bool RecognizePhilippinesDrivingLicenseOCRResponse::ConditionsHasBeenSet() const
+{
+    return m_conditionsHasBeenSet;
 }
 
 

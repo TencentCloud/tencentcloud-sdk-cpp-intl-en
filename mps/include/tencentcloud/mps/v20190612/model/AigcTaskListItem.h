@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
-                     * @return TaskType <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+                     * 获取<p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+                     * @return TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置<p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
-                     * @param _taskType <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+                     * 设置<p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+                     * @param _taskType <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
-                     * @return TaskStatus <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * 获取<p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * @return TaskStatus <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
-                     * 设置<p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
-                     * @param _taskStatus <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * 设置<p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * @param _taskStatus <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool TaskResultMsgHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output video resolution</p>
-                     * @return Resolution <p>Output video resolution</p>
+                     * 获取<p>Resolution of the output video</p>
+                     * @return Resolution <p>Resolution of the output video</p>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置<p>Output video resolution</p>
-                     * @param _resolution <p>Output video resolution</p>
+                     * 设置<p>Resolution of the output video</p>
+                     * @param _resolution <p>Resolution of the output video</p>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool RatioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task request package</p>
-                     * @return RequestBody <p>Task request package</p>
+                     * 获取<p>Task request packet</p>
+                     * @return RequestBody <p>Task request packet</p>
                      * 
                      */
                     std::string GetRequestBody() const;
 
                     /**
-                     * 设置<p>Task request package</p>
-                     * @param _requestBody <p>Task request package</p>
+                     * 设置<p>Task request packet</p>
+                     * @param _requestBody <p>Task request packet</p>
                      * 
                      */
                     void SetRequestBody(const std::string& _requestBody);
@@ -298,6 +298,48 @@ namespace TencentCloud
                      */
                     bool RequestBodyHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Other task information.</p>
+                     * @return TaskInfo <p>Other task information.</p>
+                     * 
+                     */
+                    std::string GetTaskInfo() const;
+
+                    /**
+                     * 设置<p>Other task information.</p>
+                     * @param _taskInfo <p>Other task information.</p>
+                     * 
+                     */
+                    void SetTaskInfo(const std::string& _taskInfo);
+
+                    /**
+                     * 判断参数 TaskInfo 是否已赋值
+                     * @return TaskInfo 是否已赋值
+                     * 
+                     */
+                    bool TaskInfoHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task sub-status.</p>
+                     * @return Stage <p>Task sub-status.</p>
+                     * 
+                     */
+                    std::string GetStage() const;
+
+                    /**
+                     * 设置<p>Task sub-status.</p>
+                     * @param _stage <p>Task sub-status.</p>
+                     * 
+                     */
+                    void SetStage(const std::string& _stage);
+
+                    /**
+                     * 判断参数 Stage 是否已赋值
+                     * @return Stage 是否已赋值
+                     * 
+                     */
+                    bool StageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -307,13 +349,13 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+                     * <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -355,7 +397,7 @@ namespace TencentCloud
                     bool m_taskResultMsgHasBeenSet;
 
                     /**
-                     * <p>Output video resolution</p>
+                     * <p>Resolution of the output video</p>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
@@ -367,10 +409,22 @@ namespace TencentCloud
                     bool m_ratioHasBeenSet;
 
                     /**
-                     * <p>Task request package</p>
+                     * <p>Task request packet</p>
                      */
                     std::string m_requestBody;
                     bool m_requestBodyHasBeenSet;
+
+                    /**
+                     * <p>Other task information.</p>
+                     */
+                    std::string m_taskInfo;
+                    bool m_taskInfoHasBeenSet;
+
+                    /**
+                     * <p>Task sub-status.</p>
+                     */
+                    std::string m_stage;
+                    bool m_stageHasBeenSet;
 
                 };
             }

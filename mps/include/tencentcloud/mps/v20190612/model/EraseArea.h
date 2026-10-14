@@ -35,7 +35,15 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Smart erasing, coordinate configuration of the removal area.
+The region is determined by the coordinates of the top-left and bottom-right corners.
+The coordinate origin is the top-left corner of the frame. Coordinate points can be specified in pixel values or percentage units.
+For the auto erase area:
+When the unit is %, the coordinate range is [0,1];
+When the unit is px, the X value ranges from 0 to the video image width, and the Y value ranges from 0 to the video image height.
+For the specified removal area:
+When the unit is %, the coordinate range is [0,1);
+When the unit is px, the X value range is [0, video image width], and the Y value range is [0, video image height].
                 */
                 class EraseArea : public AbstractModel
                 {
@@ -47,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Top-left X-axis coordinate of the area.<br>For example, when Unit is 1, meaning percentage is used, 0.05 indicates the horizontal distance from the top-left corner of the area to the top-left corner of the entire frame is 5% of the frame width.</p>
-                     * @return LeftTopX <p>Top-left X-axis coordinate of the area.<br>For example, when Unit is 1, meaning percentage is used, 0.05 indicates the horizontal distance from the top-left corner of the area to the top-left corner of the entire frame is 5% of the frame width.</p>
+                     * 获取<p>Top-left X-axis coordinate of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.05 indicates the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.</p>
+                     * @return LeftTopX <p>Top-left X-axis coordinate of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.05 indicates the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.</p>
                      * 
                      */
                     double GetLeftTopX() const;
 
                     /**
-                     * 设置<p>Top-left X-axis coordinate of the area.<br>For example, when Unit is 1, meaning percentage is used, 0.05 indicates the horizontal distance from the top-left corner of the area to the top-left corner of the entire frame is 5% of the frame width.</p>
-                     * @param _leftTopX <p>Top-left X-axis coordinate of the area.<br>For example, when Unit is 1, meaning percentage is used, 0.05 indicates the horizontal distance from the top-left corner of the area to the top-left corner of the entire frame is 5% of the frame width.</p>
+                     * 设置<p>Top-left X-axis coordinate of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.05 indicates the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.</p>
+                     * @param _leftTopX <p>Top-left X-axis coordinate of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.05 indicates the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.</p>
                      * 
                      */
                     void SetLeftTopX(const double& _leftTopX);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool LeftTopXHasBeenSet() const;
 
                     /**
-                     * 获取<p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.1 indicates the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
-                     * @return LeftTopY <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.1 indicates the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
+                     * 获取<p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, i.e., using percentage as the measurement unit, 0.1 means the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
+                     * @return LeftTopY <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, i.e., using percentage as the measurement unit, 0.1 means the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
                      * 
                      */
                     double GetLeftTopY() const;
 
                     /**
-                     * 设置<p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.1 indicates the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
-                     * @param _leftTopY <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.1 indicates the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
+                     * 设置<p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, i.e., using percentage as the measurement unit, 0.1 means the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
+                     * @param _leftTopY <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, i.e., using percentage as the measurement unit, 0.1 means the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
                      * 
                      */
                     void SetLeftTopY(const double& _leftTopY);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool LeftTopYHasBeenSet() const;
 
                     /**
-                     * 获取<p>X-coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1, meaning percentage is used, 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
-                     * @return RightBottomX <p>X-coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1, meaning percentage is used, 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+                     * 获取<p>X-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.75 means the horizontal distance from the bottom-right corner of the region to the upper left corner of the entire frame is 75% of the frame width.</p>
+                     * @return RightBottomX <p>X-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.75 means the horizontal distance from the bottom-right corner of the region to the upper left corner of the entire frame is 75% of the frame width.</p>
                      * 
                      */
                     double GetRightBottomX() const;
 
                     /**
-                     * 设置<p>X-coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1, meaning percentage is used, 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
-                     * @param _rightBottomX <p>X-coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1, meaning percentage is used, 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+                     * 设置<p>X-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.75 means the horizontal distance from the bottom-right corner of the region to the upper left corner of the entire frame is 75% of the frame width.</p>
+                     * @param _rightBottomX <p>X-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.75 means the horizontal distance from the bottom-right corner of the region to the upper left corner of the entire frame is 75% of the frame width.</p>
                      * 
                      */
                     void SetRightBottomX(const double& _rightBottomX);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool RightBottomXHasBeenSet() const;
 
                     /**
-                     * 获取<p>Y-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
-                     * @return RightBottomY <p>Y-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
+                     * 获取<p>Y-axis coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1 (usage percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
+                     * @return RightBottomY <p>Y-axis coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1 (usage percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
                      * 
                      */
                     double GetRightBottomY() const;
 
                     /**
-                     * 设置<p>Y-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
-                     * @param _rightBottomY <p>Y-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
+                     * 设置<p>Y-axis coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1 (usage percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
+                     * @param _rightBottomY <p>Y-axis coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1 (usage percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
                      * 
                      */
                     void SetRightBottomY(const double& _rightBottomY);
@@ -154,25 +162,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Top-left X-axis coordinate of the area.<br>For example, when Unit is 1, meaning percentage is used, 0.05 indicates the horizontal distance from the top-left corner of the area to the top-left corner of the entire frame is 5% of the frame width.</p>
+                     * <p>Top-left X-axis coordinate of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.05 indicates the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.</p>
                      */
                     double m_leftTopX;
                     bool m_leftTopXHasBeenSet;
 
                     /**
-                     * <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.1 indicates the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
+                     * <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, i.e., using percentage as the measurement unit, 0.1 means the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
                      */
                     double m_leftTopY;
                     bool m_leftTopYHasBeenSet;
 
                     /**
-                     * <p>X-coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1, meaning percentage is used, 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+                     * <p>X-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.75 means the horizontal distance from the bottom-right corner of the region to the upper left corner of the entire frame is 75% of the frame width.</p>
                      */
                     double m_rightBottomX;
                     bool m_rightBottomXHasBeenSet;
 
                     /**
-                     * <p>Y-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
+                     * <p>Y-axis coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1 (usage percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
                      */
                     double m_rightBottomY;
                     bool m_rightBottomYHasBeenSet;

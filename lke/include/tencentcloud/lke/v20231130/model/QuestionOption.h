@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Optional issue
                 */
                 class QuestionOption : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取<p>Tag of the option</p>
+                     * @return Label <p>Tag of the option</p>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置<p>Tag of the option</p>
+                     * @param _label <p>Tag of the option</p>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取<p>Description of the option.</p>
+                     * @return Description <p>Description of the option.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置<p>Description of the option.</p>
+                     * @param _description <p>Description of the option.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Tag of the option</p>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Description of the option.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

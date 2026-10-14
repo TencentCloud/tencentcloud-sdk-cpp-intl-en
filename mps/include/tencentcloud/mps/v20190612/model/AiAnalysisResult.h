@@ -39,6 +39,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoComprehensionResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskCutoutResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskReelResult.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskGenericResult.h>
 
 
 namespace TencentCloud
@@ -62,63 +63,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
-                     * @return Type Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
+                     * 获取<p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
+                     * @return Type <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
-                     * @param _type Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
+                     * 设置<p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
+                     * @param _type <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -131,15 +84,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassificationTask 
+                     * 获取<p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
+                     * @return ClassificationTask <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
                      * 
                      */
                     AiAnalysisTaskClassificationResult GetClassificationTask() const;
 
                     /**
-                     * 设置
-                     * @param _classificationTask 
+                     * 设置<p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
+                     * @param _classificationTask <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
                      * 
                      */
                     void SetClassificationTask(const AiAnalysisTaskClassificationResult& _classificationTask);
@@ -152,15 +105,15 @@ namespace TencentCloud
                     bool ClassificationTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverTask 
+                     * 获取<p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
+                     * @return CoverTask <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
                      * 
                      */
                     AiAnalysisTaskCoverResult GetCoverTask() const;
 
                     /**
-                     * 设置
-                     * @param _coverTask 
+                     * 设置<p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
+                     * @param _coverTask <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
                      * 
                      */
                     void SetCoverTask(const AiAnalysisTaskCoverResult& _coverTask);
@@ -173,15 +126,15 @@ namespace TencentCloud
                     bool CoverTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagTask 
+                     * 获取<p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
+                     * @return TagTask <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
                      * 
                      */
                     AiAnalysisTaskTagResult GetTagTask() const;
 
                     /**
-                     * 设置
-                     * @param _tagTask 
+                     * 设置<p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
+                     * @param _tagTask <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
                      * 
                      */
                     void SetTagTask(const AiAnalysisTaskTagResult& _tagTask);
@@ -194,15 +147,15 @@ namespace TencentCloud
                     bool TagTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FrameTagTask 
+                     * 获取<p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
+                     * @return FrameTagTask <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
                      * 
                      */
                     AiAnalysisTaskFrameTagResult GetFrameTagTask() const;
 
                     /**
-                     * 设置
-                     * @param _frameTagTask 
+                     * 设置<p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
+                     * @param _frameTagTask <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
                      * 
                      */
                     void SetFrameTagTask(const AiAnalysisTaskFrameTagResult& _frameTagTask);
@@ -215,15 +168,15 @@ namespace TencentCloud
                     bool FrameTagTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HighlightTask 
+                     * 获取<p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
+                     * @return HighlightTask <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
                      * 
                      */
                     AiAnalysisTaskHighlightResult GetHighlightTask() const;
 
                     /**
-                     * 设置
-                     * @param _highlightTask 
+                     * 设置<p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
+                     * @param _highlightTask <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
                      * 
                      */
                     void SetHighlightTask(const AiAnalysisTaskHighlightResult& _highlightTask);
@@ -236,15 +189,15 @@ namespace TencentCloud
                     bool HighlightTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeLogoTask 
+                     * 获取<p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
+                     * @return DeLogoTask <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
                      * 
                      */
                     AiAnalysisTaskDelLogoResult GetDeLogoTask() const;
 
                     /**
-                     * 设置
-                     * @param _deLogoTask 
+                     * 设置<p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
+                     * @param _deLogoTask <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
                      * 
                      */
                     void SetDeLogoTask(const AiAnalysisTaskDelLogoResult& _deLogoTask);
@@ -257,15 +210,15 @@ namespace TencentCloud
                     bool DeLogoTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentTask 
+                     * 获取<p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
+                     * @return SegmentTask <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
                      * 
                      */
                     AiAnalysisTaskSegmentResult GetSegmentTask() const;
 
                     /**
-                     * 设置
-                     * @param _segmentTask 
+                     * 设置<p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
+                     * @param _segmentTask <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
                      * 
                      */
                     void SetSegmentTask(const AiAnalysisTaskSegmentResult& _segmentTask);
@@ -278,15 +231,15 @@ namespace TencentCloud
                     bool SegmentTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeadTailTask 
+                     * 获取<p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
+                     * @return HeadTailTask <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
                      * 
                      */
                     AiAnalysisTaskHeadTailResult GetHeadTailTask() const;
 
                     /**
-                     * 设置
-                     * @param _headTailTask 
+                     * 设置<p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
+                     * @param _headTailTask <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
                      * 
                      */
                     void SetHeadTailTask(const AiAnalysisTaskHeadTailResult& _headTailTask);
@@ -299,15 +252,15 @@ namespace TencentCloud
                     bool HeadTailTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DescriptionTask 
+                     * 获取<p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
+                     * @return DescriptionTask <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
                      * 
                      */
                     AiAnalysisTaskDescriptionResult GetDescriptionTask() const;
 
                     /**
-                     * 设置
-                     * @param _descriptionTask 
+                     * 设置<p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
+                     * @param _descriptionTask <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
                      * 
                      */
                     void SetDescriptionTask(const AiAnalysisTaskDescriptionResult& _descriptionTask);
@@ -320,15 +273,15 @@ namespace TencentCloud
                     bool DescriptionTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HorizontalToVerticalTask 
+                     * 获取<p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
+                     * @return HorizontalToVerticalTask <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
                      * 
                      */
                     AiAnalysisTaskHorizontalToVerticalResult GetHorizontalToVerticalTask() const;
 
                     /**
-                     * 设置
-                     * @param _horizontalToVerticalTask 
+                     * 设置<p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
+                     * @param _horizontalToVerticalTask <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
                      * 
                      */
                     void SetHorizontalToVerticalTask(const AiAnalysisTaskHorizontalToVerticalResult& _horizontalToVerticalTask);
@@ -341,15 +294,15 @@ namespace TencentCloud
                     bool HorizontalToVerticalTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DubbingTask 
+                     * 获取<p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
+                     * @return DubbingTask <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
                      * 
                      */
                     AiAnalysisTaskDubbingResult GetDubbingTask() const;
 
                     /**
-                     * 设置
-                     * @param _dubbingTask 
+                     * 设置<p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
+                     * @param _dubbingTask <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
                      * 
                      */
                     void SetDubbingTask(const AiAnalysisTaskDubbingResult& _dubbingTask);
@@ -362,15 +315,15 @@ namespace TencentCloud
                     bool DubbingTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoRemakeTask 
+                     * 获取<p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
+                     * @return VideoRemakeTask <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
                      * 
                      */
                     AiAnalysisTaskVideoRemakeResult GetVideoRemakeTask() const;
 
                     /**
-                     * 设置
-                     * @param _videoRemakeTask 
+                     * 设置<p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
+                     * @param _videoRemakeTask <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
                      * 
                      */
                     void SetVideoRemakeTask(const AiAnalysisTaskVideoRemakeResult& _videoRemakeTask);
@@ -383,15 +336,15 @@ namespace TencentCloud
                     bool VideoRemakeTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoComprehensionTask 
+                     * 获取<p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
+                     * @return VideoComprehensionTask <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
                      * 
                      */
                     AiAnalysisTaskVideoComprehensionResult GetVideoComprehensionTask() const;
 
                     /**
-                     * 设置
-                     * @param _videoComprehensionTask 
+                     * 设置<p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
+                     * @param _videoComprehensionTask <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
                      * 
                      */
                     void SetVideoComprehensionTask(const AiAnalysisTaskVideoComprehensionResult& _videoComprehensionTask);
@@ -404,15 +357,15 @@ namespace TencentCloud
                     bool VideoComprehensionTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CutoutTask 
+                     * 获取<p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
+                     * @return CutoutTask <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
                      * 
                      */
                     AiAnalysisTaskCutoutResult GetCutoutTask() const;
 
                     /**
-                     * 设置
-                     * @param _cutoutTask 
+                     * 设置<p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
+                     * @param _cutoutTask <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
                      * 
                      */
                     void SetCutoutTask(const AiAnalysisTaskCutoutResult& _cutoutTask);
@@ -425,15 +378,15 @@ namespace TencentCloud
                     bool CutoutTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReelTask 
+                     * 获取<p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
+                     * @return ReelTask <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
                      * 
                      */
                     AiAnalysisTaskReelResult GetReelTask() const;
 
                     /**
-                     * 设置
-                     * @param _reelTask 
+                     * 设置<p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
+                     * @param _reelTask <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
                      * 
                      */
                     void SetReelTask(const AiAnalysisTaskReelResult& _reelTask);
@@ -445,115 +398,130 @@ namespace TencentCloud
                      */
                     bool ReelTaskHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+                     * @return GenericTask <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+                     * 
+                     */
+                    AiAnalysisTaskGenericResult GetGenericTask() const;
+
+                    /**
+                     * 设置<p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+                     * @param _genericTask <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+                     * 
+                     */
+                    void SetGenericTask(const AiAnalysisTaskGenericResult& _genericTask);
+
+                    /**
+                     * 判断参数 GenericTask 是否已赋值
+                     * @return GenericTask 是否已赋值
+                     * 
+                     */
+                    bool GenericTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent cover</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame tagging.</li>
-<li>Highlight: Intelligent Highlights</li>
-<li>DeLogo: intelligent removal.</li>
-<li>Description: large model summarization.</li>
-<li>Dubbing: Intelligent Dubbing</li>
-<li>VideoRemake: Video deduplication</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: Video matting</li>
-<li>Reel: intelligent video editing.</li>
+                     * <p>Task type. Valid values:</p><li>Classification: intelligent classification</li><li>Cover: intelligent cover</li><li>Tag: intelligent tag</li><li>FrameTag: intelligent frame tagging</li><li>Highlight: intelligent highlights</li><li>DeLogo: smart erasing</li><li>Description: LLM summarization</li><li>Dubbing: intelligent dubbing</li><li>VideoRemake: video deduplication</li><li>VideoComprehension: video (audio) understanding</li><li>Cutout: video matting</li><li>Reel: intelligent video creation</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis intelligent categorization task. Valid when the task type is Classification.</p>
                      */
                     AiAnalysisTaskClassificationResult m_classificationTask;
                     bool m_classificationTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis Intelligent Cover Task. Valid when the task type is Cover.</p>
                      */
                     AiAnalysisTaskCoverResult m_coverTask;
                     bool m_coverTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis intelligent tag task. Valid when the task type is Tag.</p>
                      */
                     AiAnalysisTaskTagResult m_tagTask;
                     bool m_tagTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the intelligent frame tagging task for video content analysis. Valid when the task type is FrameTag.</p>
                      */
                     AiAnalysisTaskFrameTagResult m_frameTagTask;
                     bool m_frameTagTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis highlight task. Valid when the task type is Highlight.</p>
                      */
                     AiAnalysisTaskHighlightResult m_highlightTask;
                     bool m_highlightTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis smart erasing task. Valid when the task type is DeLogo.</p>
                      */
                     AiAnalysisTaskDelLogoResult m_deLogoTask;
                     bool m_deLogoTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.</p>
                      */
                     AiAnalysisTaskSegmentResult m_segmentTask;
                     bool m_segmentTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.</p>
                      */
                     AiAnalysisTaskHeadTailResult m_headTailTask;
                     bool m_headTailTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The query result of a video content analysis summary task, valid when the task type is Description.</p>
                      */
                     AiAnalysisTaskDescriptionResult m_descriptionTask;
                     bool m_descriptionTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The query result of a landscape-to-portrait task for video content analysis, which is valid when the task type is HorizontalToVertical.</p>
                      */
                     AiAnalysisTaskHorizontalToVerticalResult m_horizontalToVerticalTask;
                     bool m_horizontalToVerticalTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis dubbing task. Valid when the task type is Dubbing.</p>
                      */
                     AiAnalysisTaskDubbingResult m_dubbingTask;
                     bool m_dubbingTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The query result of a deduplication task for video content analysis, which is valid when the task type is VideoRemake.</p>
                      */
                     AiAnalysisTaskVideoRemakeResult m_videoRemakeTask;
                     bool m_videoRemakeTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video (audio) understanding task. This parameter is valid when the task type is VideoComprehension.</p>
                      */
                     AiAnalysisTaskVideoComprehensionResult m_videoComprehensionTask;
                     bool m_videoComprehensionTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis intelligent image masking task. Valid when the task type is Cutout.</p>
                      */
                     AiAnalysisTaskCutoutResult m_cutoutTask;
                     bool m_cutoutTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query result of the video content analysis AI narration and video re-creation task. Valid when the task type is Reel.</p>
                      */
                     AiAnalysisTaskReelResult m_reelTask;
                     bool m_reelTaskHasBeenSet;
+
+                    /**
+                     * <p>Query result of the intelligent analysis common task. Valid when the task type is Generic.</p>
+                     */
+                    AiAnalysisTaskGenericResult m_genericTask;
+                    bool m_genericTaskHasBeenSet;
 
                 };
             }

@@ -47,11 +47,11 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the box selection area in the image. Valid values:
+                     * 获取Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-                     * @return Type Type of the box selection area in the image. Valid values:
+                     * @return Type Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
@@ -60,11 +60,11 @@ Default value: logo.
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of the box selection area in the image. Valid values:
+                     * 设置Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-                     * @param _type Type of the box selection area in the image. Valid values:
+                     * @param _type Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
@@ -81,18 +81,18 @@ Default value: logo.
 
                     /**
                      * 获取Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
                      * @return AreaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
                      * 设置Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
                      * @param _areaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -105,10 +105,10 @@ For example, [101, 85, 111, —].
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * 获取Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-                     * @return BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * @return BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
                      * 
@@ -116,10 +116,10 @@ For example, [101, 85, 111, —].
                     std::vector<double> GetBoundingBox() const;
 
                     /**
-                     * 设置Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * 设置Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-                     * @param _boundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * @param _boundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
                      * 
@@ -157,7 +157,7 @@ For example, [101, 85, 111, —].
                 private:
 
                     /**
-                     * Type of the box selection area in the image. Valid values:
+                     * Type of the box selection area in the image. Available values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
@@ -167,13 +167,13 @@ Default value: logo.
 
                     /**
                      * Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, —].
+For example, [101, 85, 111, 95].
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top-left corner and the bottom-right corner. This field is valid only when AreaCoordSet is not specified. When it represents pixels, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
                      */

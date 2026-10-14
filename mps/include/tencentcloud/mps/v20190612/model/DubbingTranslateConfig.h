@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TranslateDstLanguageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
-                     * @return SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+                     * 获取<p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+                     * @return SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
                      * 
                      */
                     std::string GetSimplifyTranslation() const;
 
                     /**
-                     * 设置<p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
-                     * @param _simplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+                     * 设置<p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+                     * @param _simplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
                      * 
                      */
                     void SetSimplifyTranslation(const std::string& _simplifyTranslation);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_translateDstLanguageHasBeenSet;
 
                     /**
-                     * <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+                     * <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
                      */
                     std::string m_simplifyTranslation;
                     bool m_simplifyTranslationHasBeenSet;

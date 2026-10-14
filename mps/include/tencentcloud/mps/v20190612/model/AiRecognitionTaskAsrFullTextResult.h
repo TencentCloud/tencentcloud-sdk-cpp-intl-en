@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output information on the full speech recognition task.
+                     * @return Output Output information on the full speech recognition task.
                      * 
                      */
                     AiRecognitionTaskAsrFullTextResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output information on the full speech recognition task.
+                     * @param _output Output information on the full speech recognition task.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskAsrFullTextResultOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Task progress.
+                     * @return Progress Task progress.
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Task progress.
+                     * @param _progress Task progress.
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -228,13 +228,13 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output information on the full speech recognition task.
                      */
                     AiRecognitionTaskAsrFullTextResultOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * Task progress.
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;

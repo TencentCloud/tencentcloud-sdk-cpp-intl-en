@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTMP configuration information of the queried output.
+                * Query the output RTMP configuration message.
                 */
                 class DescribeOutputRTMPSettings : public AbstractModel
                 {
@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIdleTimeout() const;
 
                     /**
                      * 设置Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _idleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdleTimeout(const int64_t& _idleTimeout);
@@ -74,18 +70,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ChunkSize Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetChunkSize() const;
 
                     /**
                      * 设置Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _chunkSize Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetChunkSize(const int64_t& _chunkSize);
@@ -98,19 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ChunkSizeHasBeenSet() const;
 
                     /**
-                     * 获取Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Destinations Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of target address information for RTMP repush.
+                     * @return Destinations List of target address information for RTMP repush.
                      * 
                      */
                     std::vector<RTMPAddressDestination> GetDestinations() const;
 
                     /**
-                     * 设置Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _destinations Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of target address information for RTMP repush.
+                     * @param _destinations List of target address information for RTMP repush.
                      * 
                      */
                     void SetDestinations(const std::vector<RTMPAddressDestination>& _destinations);
@@ -126,21 +114,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_idleTimeout;
                     bool m_idleTimeoutHasBeenSet;
 
                     /**
                      * Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_chunkSize;
                     bool m_chunkSizeHasBeenSet;
 
                     /**
-                     * Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of target address information for RTMP repush.
                      */
                     std::vector<RTMPAddressDestination> m_destinations;
                     bool m_destinationsHasBeenSet;

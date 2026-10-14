@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Order ID
-Note: This field may return `null`, indicating that no valid value was found.
                      * @return DealName Order ID
-Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     std::string GetDealName() const;
@@ -63,7 +61,6 @@ Note: This field may return `null`, indicating that no valid value was found.
 
                     /**
                      * Order ID
-Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;

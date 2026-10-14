@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Description of the complete URL information
                 */
                 class StreamUrlDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取Describes carrier information and other details.
+                     * @return Label Describes carrier information and other details.
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置Describes carrier information and other details.
+                     * @param _label Describes carrier information and other details.
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -89,15 +89,19 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
+                     * @return Type Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
+                     * @param _type Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,7 +116,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Describes carrier information and other details.
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
@@ -124,7 +128,8 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

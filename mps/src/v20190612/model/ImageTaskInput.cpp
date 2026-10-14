@@ -28,7 +28,10 @@ ImageTaskInput::ImageTaskInput() :
     m_aiCutoutConfigHasBeenSet(false),
     m_aiExpansionConfigHasBeenSet(false),
     m_aiStoryboardConfigHasBeenSet(false),
-    m_understandImageConfigHasBeenSet(false)
+    m_understandImageConfigHasBeenSet(false),
+    m_imageQualityConfigHasBeenSet(false),
+    m_aiComposeConfigHasBeenSet(false),
+    m_aiDecomposeConfigHasBeenSet(false)
 {
 }
 
@@ -173,6 +176,57 @@ CoreInternalOutcome ImageTaskInput::Deserialize(const rapidjson::Value &value)
         m_understandImageConfigHasBeenSet = true;
     }
 
+    if (value.HasMember("ImageQualityConfig") && !value["ImageQualityConfig"].IsNull())
+    {
+        if (!value["ImageQualityConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageTaskInput.ImageQualityConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_imageQualityConfig.Deserialize(value["ImageQualityConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_imageQualityConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("AiComposeConfig") && !value["AiComposeConfig"].IsNull())
+    {
+        if (!value["AiComposeConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageTaskInput.AiComposeConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_aiComposeConfig.Deserialize(value["AiComposeConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_aiComposeConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("AiDecomposeConfig") && !value["AiDecomposeConfig"].IsNull())
+    {
+        if (!value["AiDecomposeConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageTaskInput.AiDecomposeConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_aiDecomposeConfig.Deserialize(value["AiDecomposeConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_aiDecomposeConfigHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -250,6 +304,33 @@ void ImageTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_understandImageConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_imageQualityConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageQualityConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_imageQualityConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aiComposeConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiComposeConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiComposeConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aiDecomposeConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiDecomposeConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiDecomposeConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -381,5 +462,53 @@ void ImageTaskInput::SetUnderstandImageConfig(const UnderstandImageConfig& _unde
 bool ImageTaskInput::UnderstandImageConfigHasBeenSet() const
 {
     return m_understandImageConfigHasBeenSet;
+}
+
+ImageQualityConfig ImageTaskInput::GetImageQualityConfig() const
+{
+    return m_imageQualityConfig;
+}
+
+void ImageTaskInput::SetImageQualityConfig(const ImageQualityConfig& _imageQualityConfig)
+{
+    m_imageQualityConfig = _imageQualityConfig;
+    m_imageQualityConfigHasBeenSet = true;
+}
+
+bool ImageTaskInput::ImageQualityConfigHasBeenSet() const
+{
+    return m_imageQualityConfigHasBeenSet;
+}
+
+AiComposeConfig ImageTaskInput::GetAiComposeConfig() const
+{
+    return m_aiComposeConfig;
+}
+
+void ImageTaskInput::SetAiComposeConfig(const AiComposeConfig& _aiComposeConfig)
+{
+    m_aiComposeConfig = _aiComposeConfig;
+    m_aiComposeConfigHasBeenSet = true;
+}
+
+bool ImageTaskInput::AiComposeConfigHasBeenSet() const
+{
+    return m_aiComposeConfigHasBeenSet;
+}
+
+AiDecomposeConfig ImageTaskInput::GetAiDecomposeConfig() const
+{
+    return m_aiDecomposeConfig;
+}
+
+void ImageTaskInput::SetAiDecomposeConfig(const AiDecomposeConfig& _aiDecomposeConfig)
+{
+    m_aiDecomposeConfig = _aiDecomposeConfig;
+    m_aiDecomposeConfigHasBeenSet = true;
+}
+
+bool ImageTaskInput::AiDecomposeConfigHasBeenSet() const
+{
+    return m_aiDecomposeConfigHasBeenSet;
 }
 

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent cover result type
+                * Result type of intelligent cover
                 */
                 class AiAnalysisTaskCoverResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-                     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * 获取<p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+                     * @return Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-                     * @param _status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * 设置<p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+                     * @param _status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取<p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+                     * @return ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 设置<p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+                     * @param _errCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
-                     * @return ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+                     * 获取<p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+                     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
-                     * @param _errCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+                     * 设置<p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+                     * @param _errCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取<p>Error message.</p>
+                     * @return Message <p>Error message.</p>
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置<p>Error message.</p>
+                     * @param _message <p>Error message.</p>
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of the intelligent cover task.
-                     * @return Input Input of the intelligent cover task.
+                     * 获取<p>Intelligent Cover Task input.</p>
+                     * @return Input <p>Intelligent Cover Task input.</p>
                      * 
                      */
                     AiAnalysisTaskCoverInput GetInput() const;
 
                     /**
-                     * 设置Input of the intelligent cover task.
-                     * @param _input Input of the intelligent cover task.
+                     * 设置<p>Intelligent Cover Task input.</p>
+                     * @param _input <p>Intelligent Cover Task input.</p>
                      * 
                      */
                     void SetInput(const AiAnalysisTaskCoverInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取<p>Output of the intelligent cover task.</p>
+                     * @return Output <p>Output of the intelligent cover task.</p>
                      * 
                      */
                     AiAnalysisTaskCoverOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置<p>Output of the intelligent cover task.</p>
+                     * @param _output <p>Output of the intelligent cover task.</p>
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskCoverOutput& _output);
@@ -177,37 +177,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+                     * <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
+                     * <p>Error message.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of the intelligent cover task.
+                     * <p>Intelligent Cover Task input.</p>
                      */
                     AiAnalysisTaskCoverInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output of the intelligent cover task.</p>
                      */
                     AiAnalysisTaskCoverOutput m_output;
                     bool m_outputHasBeenSet;

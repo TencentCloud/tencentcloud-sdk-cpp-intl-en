@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Flow ID
-                     * @return FlowId Flow ID
+                     * 获取Stream Id.
+                     * @return FlowId Stream Id.
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置Flow ID
-                     * @param _flowId Flow ID
+                     * 设置Stream Id.
+                     * @param _flowId Stream Id.
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the flow to modify
-                     * @return FlowName Name of the flow to modify
+                     * 获取Stream name to be modified.
+                     * @return FlowName Stream name to be modified.
                      * 
                      */
                     std::string GetFlowName() const;
 
                     /**
-                     * 设置Name of the flow to modify
-                     * @param _flowName Name of the flow to modify
+                     * 设置Stream name to be modified.
+                     * @param _flowName Stream name to be modified.
                      * 
                      */
                     void SetFlowName(const std::string& _flowName);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Flow ID
+                     * Stream Id.
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Name of the flow to modify
+                     * Stream name to be modified.
                      */
                     std::string m_flowName;
                     bool m_flowNameHasBeenSet;

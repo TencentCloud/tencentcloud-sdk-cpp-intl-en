@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The real-time SRT streaming information of a flow.
+                * SRT information of the real-time stream status query API.
                 */
                 class FlowRealtimeStatusSRT : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The latency (ms).
-                     * @return Latency The latency (ms).
+                     * 获取Delay in ms.
+                     * @return Latency Delay in ms.
                      * 
                      */
                     int64_t GetLatency() const;
 
                     /**
-                     * 设置The latency (ms).
-                     * @param _latency The latency (ms).
+                     * 设置Delay in ms.
+                     * @param _latency Delay in ms.
                      * 
                      */
                     void SetLatency(const int64_t& _latency);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LatencyHasBeenSet() const;
 
                     /**
-                     * 获取RTT (ms).
-                     * @return RTT RTT (ms).
+                     * 获取RTT in ms.
+                     * @return RTT RTT in ms.
                      * 
                      */
                     int64_t GetRTT() const;
 
                     /**
-                     * 设置RTT (ms).
-                     * @param _rTT RTT (ms).
+                     * 设置RTT in ms.
+                     * @param _rTT RTT in ms.
                      * 
                      */
                     void SetRTT(const int64_t& _rTT);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RTTHasBeenSet() const;
 
                     /**
-                     * 获取The number of packets sent or received.
-                     * @return Packets The number of packets sent or received.
+                     * 获取Number of packets sent or received in real time.
+                     * @return Packets Number of packets sent or received in real time.
                      * 
                      */
                     int64_t GetPackets() const;
 
                     /**
-                     * 设置The number of packets sent or received.
-                     * @param _packets The number of packets sent or received.
+                     * 设置Number of packets sent or received in real time.
+                     * @param _packets Number of packets sent or received in real time.
                      * 
                      */
                     void SetPackets(const int64_t& _packets);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PacketsHasBeenSet() const;
 
                     /**
-                     * 获取The packet loss rate.
-                     * @return PacketLossRate The packet loss rate.
+                     * 获取Packet loss rate.
+                     * @return PacketLossRate Packet loss rate.
                      * 
                      */
                     double GetPacketLossRate() const;
 
                     /**
-                     * 设置The packet loss rate.
-                     * @param _packetLossRate The packet loss rate.
+                     * 设置Packet loss rate.
+                     * @param _packetLossRate Packet loss rate.
                      * 
                      */
                     void SetPacketLossRate(const double& _packetLossRate);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PacketLossRateHasBeenSet() const;
 
                     /**
-                     * 获取The retransmission rate.
-                     * @return RetransmitRate The retransmission rate.
+                     * 获取Retransmission rate.
+                     * @return RetransmitRate Retransmission rate.
                      * 
                      */
                     double GetRetransmitRate() const;
 
                     /**
-                     * 设置The retransmission rate.
-                     * @param _retransmitRate The retransmission rate.
+                     * 设置Retransmission rate.
+                     * @param _retransmitRate Retransmission rate.
                      * 
                      */
                     void SetRetransmitRate(const double& _retransmitRate);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RetransmitRateHasBeenSet() const;
 
                     /**
-                     * 获取The number of packets dropped.
-                     * @return DroppedPackets The number of packets dropped.
+                     * 获取Real-time packet loss count.
+                     * @return DroppedPackets Real-time packet loss count.
                      * 
                      */
                     int64_t GetDroppedPackets() const;
 
                     /**
-                     * 设置The number of packets dropped.
-                     * @param _droppedPackets The number of packets dropped.
+                     * 设置Real-time packet loss count.
+                     * @param _droppedPackets Real-time packet loss count.
                      * 
                      */
                     void SetDroppedPackets(const int64_t& _droppedPackets);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DroppedPacketsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to encrypt the stream. Valid values: On, Off.
-                     * @return Encryption Whether to encrypt the stream. Valid values: On, Off.
+                     * 获取Whether to encrypt. On | Off.
+                     * @return Encryption Whether to encrypt. On | Off.
                      * 
                      */
                     std::string GetEncryption() const;
 
                     /**
-                     * 设置Whether to encrypt the stream. Valid values: On, Off.
-                     * @param _encryption Whether to encrypt the stream. Valid values: On, Off.
+                     * 设置Whether to encrypt. On | Off.
+                     * @param _encryption Whether to encrypt. On | Off.
                      * 
                      */
                     void SetEncryption(const std::string& _encryption);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The latency (ms).
+                     * Delay in ms.
                      */
                     int64_t m_latency;
                     bool m_latencyHasBeenSet;
 
                     /**
-                     * RTT (ms).
+                     * RTT in ms.
                      */
                     int64_t m_rTT;
                     bool m_rTTHasBeenSet;
 
                     /**
-                     * The number of packets sent or received.
+                     * Number of packets sent or received in real time.
                      */
                     int64_t m_packets;
                     bool m_packetsHasBeenSet;
 
                     /**
-                     * The packet loss rate.
+                     * Packet loss rate.
                      */
                     double m_packetLossRate;
                     bool m_packetLossRateHasBeenSet;
 
                     /**
-                     * The retransmission rate.
+                     * Retransmission rate.
                      */
                     double m_retransmitRate;
                     bool m_retransmitRateHasBeenSet;
 
                     /**
-                     * The number of packets dropped.
+                     * Real-time packet loss count.
                      */
                     int64_t m_droppedPackets;
                     bool m_droppedPacketsHasBeenSet;
 
                     /**
-                     * Whether to encrypt the stream. Valid values: On, Off.
+                     * Whether to encrypt. On | Off.
                      */
                     std::string m_encryption;
                     bool m_encryptionHasBeenSet;

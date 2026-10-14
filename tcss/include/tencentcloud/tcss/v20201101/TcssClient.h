@@ -1808,7 +1808,7 @@ Create a YAML network policy and distribute tasks for the container network.
                 AddAndPublishNetworkFirewallPolicyYamlDetailOutcomeCallable AddAndPublishNetworkFirewallPolicyYamlDetailCallable(const Model::AddAndPublishNetworkFirewallPolicyYamlDetailRequest& request);
 
                 /**
-                 *This API is used to add the details of an image repository.
+                 *This example shows you how to add details for an image repository.
                  * @param req AddAssetImageRegistryRegistryDetailRequest
                  * @return AddAssetImageRegistryRegistryDetailOutcome
                  */
@@ -2016,7 +2016,7 @@ Create a network policy and confirm tasks for the container network.
                 CreateAssetImageRegistryScanTaskOutcomeCallable CreateAssetImageRegistryScanTaskCallable(const Model::CreateAssetImageRegistryScanTaskRequest& request);
 
                 /**
-                 *This API is used to create a quick image scan task for an image repository.
+                 *Creating a Task to Scan Images in an Image Repository with One Click
                  * @param req CreateAssetImageRegistryScanTaskOneKeyRequest
                  * @return CreateAssetImageRegistryScanTaskOneKeyOutcome
                  */
@@ -2731,7 +2731,7 @@ Create a network policy and delete tasks for the container network.
                 DescribeAssetDBServiceListOutcomeCallable DescribeAssetDBServiceListCallable(const Model::DescribeAssetDBServiceListRequest& request);
 
                 /**
-                 *This API is used to query the details of a server.
+                 *This example shows you how to query host details.
                  * @param req DescribeAssetHostDetailRequest
                  * @return DescribeAssetHostDetailOutcome
                  */
@@ -2866,7 +2866,7 @@ Create a network policy and delete tasks for the container network.
                 DescribeAssetImageRegistryScanStatusOneKeyOutcomeCallable DescribeAssetImageRegistryScanStatusOneKeyCallable(const Model::DescribeAssetImageRegistryScanStatusOneKeyRequest& request);
 
                 /**
-                 *This API is used to query the image statistics of an image repository.
+                 *Querying the Image Statistics of an Image Repository
                  * @param req DescribeAssetImageRegistrySummaryRequest
                  * @return DescribeAssetImageRegistrySummaryOutcome
                  */
@@ -3028,7 +3028,7 @@ Create a network policy and delete tasks for the container network.
                 DescribeAssetSummaryOutcomeCallable DescribeAssetSummaryCallable(const Model::DescribeAssetSummaryRequest& request);
 
                 /**
-                 *This API is used to query the last asset sync time.
+                 *Query the latest time for asset synchronization.
                  * @param req DescribeAssetSyncLastTimeRequest
                  * @return DescribeAssetSyncLastTimeOutcome
                  */
@@ -3307,7 +3307,7 @@ Create a network policy and delete tasks for the container network.
                 DescribeExportJobResultOutcomeCallable DescribeExportJobResultCallable(const Model::DescribeExportJobResultRequest& request);
 
                 /**
-                 *This API is used to query the image licensing information.
+                 *This API is used to query image authorization info.
                  * @param req DescribeImageAuthorizedInfoRequest
                  * @return DescribeImageAuthorizedInfoOutcome
                  */
@@ -3325,7 +3325,7 @@ Create a network policy and delete tasks for the container network.
                 DescribeImageAutoAuthorizedLogListOutcomeCallable DescribeImageAutoAuthorizedLogListCallable(const Model::DescribeImageAutoAuthorizedLogListRequest& request);
 
                 /**
-                 *This API is used to query an automatic licensing rule for local images.
+                 *Query local image auto-authorization rules.
                  * @param req DescribeImageAutoAuthorizedRuleRequest
                  * @return DescribeImageAutoAuthorizedRuleOutcome
                  */
@@ -3712,7 +3712,7 @@ View YAML network policy details of clusters for the container network.
                 DescribePublicKeyOutcomeCallable DescribePublicKeyCallable(const Model::DescribePublicKeyRequest& request);
 
                 /**
-                 *This API is used to check whether TCSS is purchased.
+                 *This API is used to query the purchase information on the container security service.
                  * @param req DescribePurchaseStateInfoRequest
                  * @return DescribePurchaseStateInfoOutcome
                  */
@@ -4949,7 +4949,7 @@ Update the YAML network policy and distribute tasks for the container network.
                 UpdateAssetImageRegistryRegistryDetailOutcomeCallable UpdateAssetImageRegistryRegistryDetailCallable(const Model::UpdateAssetImageRegistryRegistryDetailRequest& request);
 
                 /**
-                 *This API is used to update a scheduled task for an image repository.
+                 *Update scheduled tasks in the mirror repository
                  * @param req UpdateImageRegistryTimingScanTaskRequest
                  * @return UpdateImageRegistryTimingScanTaskOutcome
                  */

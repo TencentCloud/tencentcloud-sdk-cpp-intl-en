@@ -27,6 +27,9 @@
 #include <tencentcloud/mdc/v20200828/model/CreateOutputSrtSettings.h>
 #include <tencentcloud/mdc/v20200828/model/CreateOutputRTMPSettings.h>
 #include <tencentcloud/mdc/v20200828/model/CreateOutputInfoRTPSettings.h>
+#include <tencentcloud/mdc/v20200828/model/CreateOutputRistSettings.h>
+#include <tencentcloud/mdc/v20200828/model/PidSelector.h>
+#include <tencentcloud/mdc/v20200828/model/StreamSelector.h>
 
 
 namespace TencentCloud
@@ -38,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of the output to create.
+                * Configuration message for creating an output.
                 */
                 class CreateOutputInfo : public AbstractModel
                 {
@@ -50,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The output name.
-                     * @return OutputName The output name.
+                     * 获取Output name.
+                     * @return OutputName Output name.
                      * 
                      */
                     std::string GetOutputName() const;
 
                     /**
-                     * 设置The output name.
-                     * @param _outputName The output name.
+                     * 设置Output name.
+                     * @param _outputName Output name.
                      * 
                      */
                     void SetOutputName(const std::string& _outputName);
@@ -71,15 +74,15 @@ namespace TencentCloud
                     bool OutputNameHasBeenSet() const;
 
                     /**
-                     * 获取Description of the output.
-                     * @return Description Description of the output.
+                     * 获取Output description.
+                     * @return Description Output description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description of the output.
-                     * @param _description Description of the output.
+                     * 设置Output description.
+                     * @param _description Output description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -92,15 +95,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
-                     * @return Protocol The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+                     * 获取Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+                     * @return Protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
-                     * @param _protocol The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+                     * 设置Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+                     * @param _protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -113,15 +116,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The output region.
-                     * @return OutputRegion The output region.
+                     * 获取Output region.
+                     * @return OutputRegion Output region.
                      * 
                      */
                     std::string GetOutputRegion() const;
 
                     /**
-                     * 设置The output region.
-                     * @param _outputRegion The output region.
+                     * 设置Output region.
+                     * @param _outputRegion Output region.
                      * 
                      */
                     void SetOutputRegion(const std::string& _outputRegion);
@@ -134,15 +137,15 @@ namespace TencentCloud
                     bool OutputRegionHasBeenSet() const;
 
                     /**
-                     * 获取The SRT configuration.
-                     * @return SRTSettings The SRT configuration.
+                     * 获取Configuration of the output SRT.
+                     * @return SRTSettings Configuration of the output SRT.
                      * 
                      */
                     CreateOutputSrtSettings GetSRTSettings() const;
 
                     /**
-                     * 设置The SRT configuration.
-                     * @param _sRTSettings The SRT configuration.
+                     * 设置Configuration of the output SRT.
+                     * @param _sRTSettings Configuration of the output SRT.
                      * 
                      */
                     void SetSRTSettings(const CreateOutputSrtSettings& _sRTSettings);
@@ -155,15 +158,15 @@ namespace TencentCloud
                     bool SRTSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The RTMP configuration.
-                     * @return RTMPSettings The RTMP configuration.
+                     * 获取Configuration of the output RTMP.
+                     * @return RTMPSettings Configuration of the output RTMP.
                      * 
                      */
                     CreateOutputRTMPSettings GetRTMPSettings() const;
 
                     /**
-                     * 设置The RTMP configuration.
-                     * @param _rTMPSettings The RTMP configuration.
+                     * 设置Configuration of the output RTMP.
+                     * @param _rTMPSettings Configuration of the output RTMP.
                      * 
                      */
                     void SetRTMPSettings(const CreateOutputRTMPSettings& _rTMPSettings);
@@ -176,15 +179,15 @@ namespace TencentCloud
                     bool RTMPSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The RTP configuration.
-                     * @return RTPSettings The RTP configuration.
+                     * 获取Configuration of the output RTP.
+                     * @return RTPSettings Configuration of the output RTP.
                      * 
                      */
                     CreateOutputInfoRTPSettings GetRTPSettings() const;
 
                     /**
-                     * 设置The RTP configuration.
-                     * @param _rTPSettings The RTP configuration.
+                     * 设置Configuration of the output RTP.
+                     * @param _rTPSettings Configuration of the output RTP.
                      * 
                      */
                     void SetRTPSettings(const CreateOutputInfoRTPSettings& _rTPSettings);
@@ -197,15 +200,19 @@ namespace TencentCloud
                     bool RTPSettingsHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
-                     * @return AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+                     * 获取IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+                     * @return AllowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
                      * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
-                     * 设置IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
-                     * @param _allowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+                     * 设置IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+                     * @param _allowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
                      * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
@@ -218,15 +225,15 @@ namespace TencentCloud
                     bool AllowIpListHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of concurrent stream pulls is 4, and the default value is 4.
-                     * @return MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
+                     * 获取Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+                     * @return MaxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
                      * 
                      */
                     uint64_t GetMaxConcurrent() const;
 
                     /**
-                     * 设置The maximum number of concurrent stream pulls is 4, and the default value is 4.
-                     * @param _maxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
+                     * 设置Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+                     * @param _maxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
                      * 
                      */
                     void SetMaxConcurrent(const uint64_t& _maxConcurrent);
@@ -239,15 +246,15 @@ namespace TencentCloud
                     bool MaxConcurrentHasBeenSet() const;
 
                     /**
-                     * 获取The bound security group IDs.
-                     * @return SecurityGroupIds The bound security group IDs.
+                     * 获取ID of the bound input security group.
+                     * @return SecurityGroupIds ID of the bound input security group.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The bound security group IDs.
-                     * @param _securityGroupIds The bound security group IDs.
+                     * 设置ID of the bound input security group.
+                     * @param _securityGroupIds ID of the bound input security group.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -260,15 +267,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone: output supports at most one availability zone as input.
-                     * @return Zones Availability zone: output supports at most one availability zone as input.
+                     * 获取Availability zone. output supports a maximum of one user-submitted input availability zone.
+                     * @return Zones Availability zone. output supports a maximum of one user-submitted input availability zone.
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置Availability zone: output supports at most one availability zone as input.
-                     * @param _zones Availability zone: output supports at most one availability zone as input.
+                     * 设置Availability zone. output supports a maximum of one user-submitted input availability zone.
+                     * @param _zones Availability zone. output supports a maximum of one user-submitted input availability zone.
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -280,73 +287,209 @@ namespace TencentCloud
                      */
                     bool ZonesHasBeenSet() const;
 
+                    /**
+                     * 获取Output type: Internet/TencentCSS/StreamLive
+                     * @return OutputType Output type: Internet/TencentCSS/StreamLive
+                     * 
+                     */
+                    std::string GetOutputType() const;
+
+                    /**
+                     * 设置Output type: Internet/TencentCSS/StreamLive
+                     * @param _outputType Output type: Internet/TencentCSS/StreamLive
+                     * 
+                     */
+                    void SetOutputType(const std::string& _outputType);
+
+                    /**
+                     * 判断参数 OutputType 是否已赋值
+                     * @return OutputType 是否已赋值
+                     * 
+                     */
+                    bool OutputTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Output RIST configuration.
+                     * @return RISTSettings Output RIST configuration.
+                     * 
+                     */
+                    CreateOutputRistSettings GetRISTSettings() const;
+
+                    /**
+                     * 设置Output RIST configuration.
+                     * @param _rISTSettings Output RIST configuration.
+                     * 
+                     */
+                    void SetRISTSettings(const CreateOutputRistSettings& _rISTSettings);
+
+                    /**
+                     * 判断参数 RISTSettings 是否已赋值
+                     * @return RISTSettings 是否已赋值
+                     * 
+                     */
+                    bool RISTSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取For streams with multiple audio/video tracks, you can specify the track to be used
+                     * @return PidSelector For streams with multiple audio/video tracks, you can specify the track to be used
+                     * @deprecated
+                     */
+                    PidSelector GetPidSelector() const;
+
+                    /**
+                     * 设置For streams with multiple audio/video tracks, you can specify the track to be used
+                     * @param _pidSelector For streams with multiple audio/video tracks, you can specify the track to be used
+                     * @deprecated
+                     */
+                    void SetPidSelector(const PidSelector& _pidSelector);
+
+                    /**
+                     * 判断参数 PidSelector 是否已赋值
+                     * @return PidSelector 是否已赋值
+                     * @deprecated
+                     */
+                    bool PidSelectorHasBeenSet() const;
+
+                    /**
+                     * 获取Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+                     * @return OutputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+                     * 
+                     */
+                    std::string GetOutputKind() const;
+
+                    /**
+                     * 设置Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+                     * @param _outputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+                     * 
+                     */
+                    void SetOutputKind(const std::string& _outputKind);
+
+                    /**
+                     * 判断参数 OutputKind 是否已赋值
+                     * @return OutputKind 是否已赋值
+                     * 
+                     */
+                    bool OutputKindHasBeenSet() const;
+
+                    /**
+                     * 获取For streams with multiple audio/video tracks, you can specify the track to be used
+                     * @return StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used
+                     * 
+                     */
+                    StreamSelector GetStreamSelector() const;
+
+                    /**
+                     * 设置For streams with multiple audio/video tracks, you can specify the track to be used
+                     * @param _streamSelector For streams with multiple audio/video tracks, you can specify the track to be used
+                     * 
+                     */
+                    void SetStreamSelector(const StreamSelector& _streamSelector);
+
+                    /**
+                     * 判断参数 StreamSelector 是否已赋值
+                     * @return StreamSelector 是否已赋值
+                     * 
+                     */
+                    bool StreamSelectorHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The output name.
+                     * Output name.
                      */
                     std::string m_outputName;
                     bool m_outputNameHasBeenSet;
 
                     /**
-                     * Description of the output.
+                     * Output description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+                     * Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The output region.
+                     * Output region.
                      */
                     std::string m_outputRegion;
                     bool m_outputRegionHasBeenSet;
 
                     /**
-                     * The SRT configuration.
+                     * Configuration of the output SRT.
                      */
                     CreateOutputSrtSettings m_sRTSettings;
                     bool m_sRTSettingsHasBeenSet;
 
                     /**
-                     * The RTMP configuration.
+                     * Configuration of the output RTMP.
                      */
                     CreateOutputRTMPSettings m_rTMPSettings;
                     bool m_rTMPSettingsHasBeenSet;
 
                     /**
-                     * The RTP configuration.
+                     * Configuration of the output RTP.
                      */
                     CreateOutputInfoRTPSettings m_rTPSettings;
                     bool m_rTPSettingsHasBeenSet;
 
                     /**
-                     * IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+                     * IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
 
                     /**
-                     * The maximum number of concurrent stream pulls is 4, and the default value is 4.
+                     * Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
                      */
                     uint64_t m_maxConcurrent;
                     bool m_maxConcurrentHasBeenSet;
 
                     /**
-                     * The bound security group IDs.
+                     * ID of the bound input security group.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Availability zone: output supports at most one availability zone as input.
+                     * Availability zone. output supports a maximum of one user-submitted input availability zone.
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
+
+                    /**
+                     * Output type: Internet/TencentCSS/StreamLive
+                     */
+                    std::string m_outputType;
+                    bool m_outputTypeHasBeenSet;
+
+                    /**
+                     * Output RIST configuration.
+                     */
+                    CreateOutputRistSettings m_rISTSettings;
+                    bool m_rISTSettingsHasBeenSet;
+
+                    /**
+                     * For streams with multiple audio/video tracks, you can specify the track to be used
+                     */
+                    PidSelector m_pidSelector;
+                    bool m_pidSelectorHasBeenSet;
+
+                    /**
+                     * Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+                     */
+                    std::string m_outputKind;
+                    bool m_outputKindHasBeenSet;
+
+                    /**
+                     * For streams with multiple audio/video tracks, you can specify the track to be used
+                     */
+                    StreamSelector m_streamSelector;
+                    bool m_streamSelectorHasBeenSet;
 
                 };
             }

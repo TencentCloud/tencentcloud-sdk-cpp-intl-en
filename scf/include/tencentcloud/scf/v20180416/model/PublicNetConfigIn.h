@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
-                     * @return PublicNetStatus Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+                     * 获取Whether to enable public network access. Valid values: DISABLE, ENABLE.
+                     * @return PublicNetStatus Whether to enable public network access. Valid values: DISABLE, ENABLE.
                      * 
                      */
                     std::string GetPublicNetStatus() const;
 
                     /**
-                     * 设置Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
-                     * @param _publicNetStatus Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+                     * 设置Whether to enable public network access. Valid values: DISABLE, ENABLE.
+                     * @param _publicNetStatus Whether to enable public network access. Valid values: DISABLE, ENABLE.
                      * 
                      */
                     void SetPublicNetStatus(const std::string& _publicNetStatus);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PublicNetStatusHasBeenSet() const;
 
                     /**
-                     * 获取EIP configuration
-                     * @return EipConfig EIP configuration
+                     * 获取Eip configuration
+                     * @return EipConfig Eip configuration
                      * 
                      */
                     EipConfigIn GetEipConfig() const;
 
                     /**
-                     * 设置EIP configuration
-                     * @param _eipConfig EIP configuration
+                     * 设置Eip configuration
+                     * @param _eipConfig Eip configuration
                      * 
                      */
                     void SetEipConfig(const EipConfigIn& _eipConfig);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+                     * Whether to enable public network access. Valid values: DISABLE, ENABLE.
                      */
                     std::string m_publicNetStatus;
                     bool m_publicNetStatusHasBeenSet;
 
                     /**
-                     * EIP configuration
+                     * Eip configuration
                      */
                     EipConfigIn m_eipConfig;
                     bool m_eipConfigHasBeenSet;

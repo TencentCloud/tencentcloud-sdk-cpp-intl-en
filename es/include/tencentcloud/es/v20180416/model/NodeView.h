@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node view data
+                * Node dimension view data
                 */
                 class NodeView : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node ID
-                     * @return NodeId Node ID
+                     * 获取Node ID.
+                     * @return NodeId Node ID.
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
-                     * 设置Node ID
-                     * @param _nodeId Node ID
+                     * 设置Node ID.
+                     * @param _nodeId Node ID.
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VisibleHasBeenSet() const;
 
                     /**
-                     * 获取Whether the node encounters circuit breaking
-                     * @return Break Whether the node encounters circuit breaking
+                     * 获取Whether to fuse
+                     * @return Break Whether to fuse
                      * 
                      */
                     double GetBreak() const;
 
                     /**
-                     * 设置Whether the node encounters circuit breaking
-                     * @param _break Whether the node encounters circuit breaking
+                     * 设置Whether to fuse
+                     * @param _break Whether to fuse
                      * 
                      */
                     void SetBreak(const double& _break);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool BreakHasBeenSet() const;
 
                     /**
-                     * 获取Node disk size
-                     * @return DiskSize Node disk size
+                     * 获取Total node disk size
+                     * @return DiskSize Total node disk size
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Node disk size
-                     * @param _diskSize Node disk size
+                     * 设置Total node disk size
+                     * @param _diskSize Total node disk size
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk usage
-                     * @return DiskUsage Disk usage
+                     * 获取Disk utilization rate
+                     * @return DiskUsage Disk utilization rate
                      * 
                      */
                     double GetDiskUsage() const;
 
                     /**
-                     * 设置Disk usage
-                     * @param _diskUsage Disk usage
+                     * 设置Disk utilization rate
+                     * @param _diskUsage Disk utilization rate
                      * 
                      */
                     void SetDiskUsage(const double& _diskUsage);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DiskUsageHasBeenSet() const;
 
                     /**
-                     * 获取Node memory size (in GB)
-                     * @return MemSize Node memory size (in GB)
+                     * 获取Node memory size (unit: GB)
+                     * @return MemSize Node memory size (unit: GB)
                      * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
-                     * 设置Node memory size (in GB)
-                     * @param _memSize Node memory size (in GB)
+                     * 设置Node memory size (unit: GB)
+                     * @param _memSize Node memory size (unit: GB)
                      * 
                      */
                     void SetMemSize(const int64_t& _memSize);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Memory usage
-                     * @return MemUsage Memory usage
+                     * 获取Memory usage rate
+                     * @return MemUsage Memory usage rate
                      * 
                      */
                     double GetMemUsage() const;
 
                     /**
-                     * 设置Memory usage
-                     * @param _memUsage Memory usage
+                     * 设置Memory usage rate
+                     * @param _memUsage Memory usage rate
                      * 
                      */
                     void SetMemUsage(const double& _memUsage);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool MemUsageHasBeenSet() const;
 
                     /**
-                     * 获取Number of node CPUs
-                     * @return CpuNum Number of node CPUs
+                     * 获取Number of CPUs on the node
+                     * @return CpuNum Number of CPUs on the node
                      * 
                      */
                     int64_t GetCpuNum() const;
 
                     /**
-                     * 设置Number of node CPUs
-                     * @param _cpuNum Number of node CPUs
+                     * 设置Number of CPUs on the node
+                     * @param _cpuNum Number of CPUs on the node
                      * 
                      */
                     void SetCpuNum(const int64_t& _cpuNum);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CpuNumHasBeenSet() const;
 
                     /**
-                     * 获取CPU usage
-                     * @return CpuUsage CPU usage
+                     * 获取CPU utilization
+                     * @return CpuUsage CPU utilization
                      * 
                      */
                     double GetCpuUsage() const;
 
                     /**
-                     * 设置CPU usage
-                     * @param _cpuUsage CPU usage
+                     * 设置CPU utilization
+                     * @param _cpuUsage CPU utilization
                      * 
                      */
                     void SetCpuUsage(const double& _cpuUsage);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CpuUsageHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone
-                     * @return Zone Availability zone
+                     * 获取AZ.
+                     * @return Zone AZ.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone
-                     * @param _zone Availability zone
+                     * 设置AZ.
+                     * @param _zone AZ.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool NodeHttpIpHasBeenSet() const;
 
                     /**
-                     * 获取JVM memory usage
-                     * @return JvmMemUsage JVM memory usage
+                     * 获取JVM memory usage rate
+                     * @return JvmMemUsage JVM memory usage rate
                      * 
                      */
                     double GetJvmMemUsage() const;
 
                     /**
-                     * 设置JVM memory usage
-                     * @param _jvmMemUsage JVM memory usage
+                     * 设置JVM memory usage rate
+                     * @param _jvmMemUsage JVM memory usage rate
                      * 
                      */
                     void SetJvmMemUsage(const double& _jvmMemUsage);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool JvmMemUsageHasBeenSet() const;
 
                     /**
-                     * 获取Number of node shards
-                     * @return ShardNum Number of node shards
+                     * 获取Number of shards per node
+                     * @return ShardNum Number of shards per node
                      * 
                      */
                     int64_t GetShardNum() const;
 
                     /**
-                     * 设置Number of node shards
-                     * @param _shardNum Number of node shards
+                     * 设置Number of shards per node
+                     * @param _shardNum Number of shards per node
                      * 
                      */
                     void SetShardNum(const int64_t& _shardNum);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool ShardNumHasBeenSet() const;
 
                     /**
-                     * 获取ID list of node disks
-                     * @return DiskIds ID list of node disks
+                     * 获取Disk ID list on node
+                     * @return DiskIds Disk ID list on node
                      * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置ID list of node disks
-                     * @param _diskIds ID list of node disks
+                     * 设置Disk ID list on node
+                     * @param _diskIds Disk ID list on node
                      * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether a hidden availability zone
-                     * @return Hidden Whether a hidden availability zone
+                     * 获取Whether it is a hidden AZ
+                     * @return Hidden Whether it is a hidden AZ
                      * 
                      */
                     bool GetHidden() const;
 
                     /**
-                     * 设置Whether a hidden availability zone
-                     * @param _hidden Whether a hidden availability zone
+                     * 设置Whether it is a hidden AZ
+                     * @param _hidden Whether it is a hidden AZ
                      * 
                      */
                     void SetHidden(const bool& _hidden);
@@ -403,10 +403,94 @@ namespace TencentCloud
                      */
                     bool HiddenHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to act as the coordination node role
+                     * @return IsCoordinationNode Whether to act as the coordination node role
+                     * 
+                     */
+                    bool GetIsCoordinationNode() const;
+
+                    /**
+                     * 设置Whether to act as the coordination node role
+                     * @param _isCoordinationNode Whether to act as the coordination node role
+                     * 
+                     */
+                    void SetIsCoordinationNode(const bool& _isCoordinationNode);
+
+                    /**
+                     * 判断参数 IsCoordinationNode 是否已赋值
+                     * @return IsCoordinationNode 是否已赋值
+                     * 
+                     */
+                    bool IsCoordinationNodeHasBeenSet() const;
+
+                    /**
+                     * 获取CVM running state
+                     * @return CVMStatus CVM running state
+                     * 
+                     */
+                    std::string GetCVMStatus() const;
+
+                    /**
+                     * 设置CVM running state
+                     * @param _cVMStatus CVM running state
+                     * 
+                     */
+                    void SetCVMStatus(const std::string& _cVMStatus);
+
+                    /**
+                     * 判断参数 CVMStatus 是否已赋值
+                     * @return CVMStatus 是否已赋值
+                     * 
+                     */
+                    bool CVMStatusHasBeenSet() const;
+
+                    /**
+                     * 获取id of the placement group bound to the cvm
+                     * @return CVMDisasterRecoverGroupId id of the placement group bound to the cvm
+                     * 
+                     */
+                    std::string GetCVMDisasterRecoverGroupId() const;
+
+                    /**
+                     * 设置id of the placement group bound to the cvm
+                     * @param _cVMDisasterRecoverGroupId id of the placement group bound to the cvm
+                     * 
+                     */
+                    void SetCVMDisasterRecoverGroupId(const std::string& _cVMDisasterRecoverGroupId);
+
+                    /**
+                     * 判断参数 CVMDisasterRecoverGroupId 是否已赋值
+                     * @return CVMDisasterRecoverGroupId 是否已赋值
+                     * 
+                     */
+                    bool CVMDisasterRecoverGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+                     * @return CVMDisasterRecoverGroupStatus Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+                     * 
+                     */
+                    int64_t GetCVMDisasterRecoverGroupStatus() const;
+
+                    /**
+                     * 设置Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+                     * @param _cVMDisasterRecoverGroupStatus Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+                     * 
+                     */
+                    void SetCVMDisasterRecoverGroupStatus(const int64_t& _cVMDisasterRecoverGroupStatus);
+
+                    /**
+                     * 判断参数 CVMDisasterRecoverGroupStatus 是否已赋值
+                     * @return CVMDisasterRecoverGroupStatus 是否已赋值
+                     * 
+                     */
+                    bool CVMDisasterRecoverGroupStatusHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Node ID
+                     * Node ID.
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
@@ -424,49 +508,49 @@ namespace TencentCloud
                     bool m_visibleHasBeenSet;
 
                     /**
-                     * Whether the node encounters circuit breaking
+                     * Whether to fuse
                      */
                     double m_break;
                     bool m_breakHasBeenSet;
 
                     /**
-                     * Node disk size
+                     * Total node disk size
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Disk usage
+                     * Disk utilization rate
                      */
                     double m_diskUsage;
                     bool m_diskUsageHasBeenSet;
 
                     /**
-                     * Node memory size (in GB)
+                     * Node memory size (unit: GB)
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Memory usage
+                     * Memory usage rate
                      */
                     double m_memUsage;
                     bool m_memUsageHasBeenSet;
 
                     /**
-                     * Number of node CPUs
+                     * Number of CPUs on the node
                      */
                     int64_t m_cpuNum;
                     bool m_cpuNumHasBeenSet;
 
                     /**
-                     * CPU usage
+                     * CPU utilization
                      */
                     double m_cpuUsage;
                     bool m_cpuUsageHasBeenSet;
 
                     /**
-                     * Availability zone
+                     * AZ.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -484,28 +568,52 @@ namespace TencentCloud
                     bool m_nodeHttpIpHasBeenSet;
 
                     /**
-                     * JVM memory usage
+                     * JVM memory usage rate
                      */
                     double m_jvmMemUsage;
                     bool m_jvmMemUsageHasBeenSet;
 
                     /**
-                     * Number of node shards
+                     * Number of shards per node
                      */
                     int64_t m_shardNum;
                     bool m_shardNumHasBeenSet;
 
                     /**
-                     * ID list of node disks
+                     * Disk ID list on node
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;
 
                     /**
-                     * Whether a hidden availability zone
+                     * Whether it is a hidden AZ
                      */
                     bool m_hidden;
                     bool m_hiddenHasBeenSet;
+
+                    /**
+                     * Whether to act as the coordination node role
+                     */
+                    bool m_isCoordinationNode;
+                    bool m_isCoordinationNodeHasBeenSet;
+
+                    /**
+                     * CVM running state
+                     */
+                    std::string m_cVMStatus;
+                    bool m_cVMStatusHasBeenSet;
+
+                    /**
+                     * id of the placement group bound to the cvm
+                     */
+                    std::string m_cVMDisasterRecoverGroupId;
+                    bool m_cVMDisasterRecoverGroupIdHasBeenSet;
+
+                    /**
+                     * Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+                     */
+                    int64_t m_cVMDisasterRecoverGroupStatus;
+                    bool m_cVMDisasterRecoverGroupStatusHasBeenSet;
 
                 };
             }

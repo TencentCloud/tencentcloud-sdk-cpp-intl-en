@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live streaming AI analysis result
+                * Live stream AI analysis result.
                 */
                 class LiveStreamAiAnalysisResultItem : public AbstractModel
                 {
@@ -83,15 +83,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentResultSet 
+                     * 获取Split result. When `Type` is
+Valid for SegmentRecognition.
+                     * @return SegmentResultSet Split result. When `Type` is
+Valid for SegmentRecognition.
                      * 
                      */
                     std::vector<SegmentRecognitionItem> GetSegmentResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _segmentResultSet 
+                     * 设置Split result. When `Type` is
+Valid for SegmentRecognition.
+                     * @param _segmentResultSet Split result. When `Type` is
+Valid for SegmentRecognition.
                      * 
                      */
                     void SetSegmentResultSet(const std::vector<SegmentRecognitionItem>& _segmentResultSet);
@@ -104,15 +108,15 @@ namespace TencentCloud
                     bool SegmentResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HighlightResultSet 
+                     * 获取Highlight result. This field is valid when Type is set to Highlight.
+                     * @return HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
                      * 
                      */
                     std::vector<MediaAiAnalysisHighlightItem> GetHighlightResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _highlightResultSet 
+                     * 设置Highlight result. This field is valid when Type is set to Highlight.
+                     * @param _highlightResultSet Highlight result. This field is valid when Type is set to Highlight.
                      * 
                      */
                     void SetHighlightResultSet(const std::vector<MediaAiAnalysisHighlightItem>& _highlightResultSet);
@@ -157,13 +161,14 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Split result. When `Type` is
+Valid for SegmentRecognition.
                      */
                     std::vector<SegmentRecognitionItem> m_segmentResultSet;
                     bool m_segmentResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Highlight result. This field is valid when Type is set to Highlight.
                      */
                     std::vector<MediaAiAnalysisHighlightItem> m_highlightResultSet;
                     bool m_highlightResultSetHasBeenSet;

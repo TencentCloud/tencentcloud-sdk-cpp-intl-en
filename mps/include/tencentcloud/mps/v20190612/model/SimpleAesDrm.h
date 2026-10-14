@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Uri 
+                     * 获取Request decryption key uri address.
+                     * @return Uri Request decryption key uri address.
                      * 
                      */
                     std::string GetUri() const;
 
                     /**
-                     * 设置
-                     * @param _uri 
+                     * 设置Request decryption key uri address.
+                     * @param _uri Request decryption key uri address.
                      * 
                      */
                     void SetUri(const std::string& _uri);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UriHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Key 
+                     * 获取Encryption key (32-byte hexadecimal string).
+                     * @return Key Encryption key (32-byte hexadecimal string).
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置
-                     * @param _key 
+                     * 设置Encryption key (32-byte hexadecimal string).
+                     * @param _key Encryption key (32-byte hexadecimal string).
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vector 
+                     * 获取Encryption initialization vector (32-byte hexadecimal string).
+                     * @return Vector Encryption initialization vector (32-byte hexadecimal string).
                      * 
                      */
                     std::string GetVector() const;
 
                     /**
-                     * 设置
-                     * @param _vector 
+                     * 设置Encryption initialization vector (32-byte hexadecimal string).
+                     * @param _vector Encryption initialization vector (32-byte hexadecimal string).
                      * 
                      */
                     void SetVector(const std::string& _vector);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Request decryption key uri address.
                      */
                     std::string m_uri;
                     bool m_uriHasBeenSet;
 
                     /**
-                     * 
+                     * Encryption key (32-byte hexadecimal string).
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * 
+                     * Encryption initialization vector (32-byte hexadecimal string).
                      */
                     std::string m_vector;
                     bool m_vectorHasBeenSet;

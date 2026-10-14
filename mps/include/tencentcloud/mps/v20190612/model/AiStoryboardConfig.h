@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent shot deconstruction configuration.
+                * Intelligent storyboard deconstruct configuration.
                 */
                 class AiStoryboardConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-                     * @return Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * 获取<p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * @return Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置<p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-                     * @param _switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * 设置<p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * @param _switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
-                     * @return ProcessIndex <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+                     * 获取<p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
+                     * @return ProcessIndex <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
                      * 
                      */
                     int64_t GetProcessIndex() const;
 
                     /**
-                     * 设置<p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
-                     * @param _processIndex <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+                     * 设置<p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
+                     * @param _processIndex <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
                      * 
                      */
                     void SetProcessIndex(const int64_t& _processIndex);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+                     * <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
                      */
                     int64_t m_processIndex;
                     bool m_processIndexHasBeenSet;

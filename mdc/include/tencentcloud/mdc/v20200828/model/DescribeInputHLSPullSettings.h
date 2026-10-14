@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query the configuration message of the input HLS.
                 */
                 class DescribeInputHLSPullSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SourceAddresses 
+                     * 获取HLS origin server address information.
+                     * @return SourceAddresses HLS origin server address information.
                      * 
                      */
                     std::vector<DescribeHLSPullSourceAddress> GetSourceAddresses() const;
 
                     /**
-                     * 设置
-                     * @param _sourceAddresses 
+                     * 设置HLS origin server address information.
+                     * @param _sourceAddresses HLS origin server address information.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<DescribeHLSPullSourceAddress>& _sourceAddresses);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * HLS origin server address information.
                      */
                     std::vector<DescribeHLSPullSourceAddress> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;

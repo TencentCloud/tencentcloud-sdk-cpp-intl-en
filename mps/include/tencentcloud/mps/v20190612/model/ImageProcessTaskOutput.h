@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Path 
+                     * 获取<p>Path of the output file.</p>
+                     * @return Path <p>Path of the output file.</p>
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置
-                     * @param _path 
+                     * 设置<p>Path of the output file.</p>
+                     * @param _path <p>Path of the output file.</p>
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取<p>Storage location of the output file.</p>
+                     * @return OutputStorage <p>Storage location of the output file.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置<p>Storage location of the output file.</p>
+                     * @param _outputStorage <p>Storage location of the output file.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -134,13 +134,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Path of the output file.</p>
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Storage location of the output file.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

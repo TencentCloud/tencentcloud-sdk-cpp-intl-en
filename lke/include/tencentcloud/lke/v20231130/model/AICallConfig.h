@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent call
                 */
                 class AICallConfig : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EnableVoiceInteract 
+                     * 获取Enable the voice interaction feature
+                     * @return EnableVoiceInteract Enable the voice interaction feature
                      * 
                      */
                     bool GetEnableVoiceInteract() const;
 
                     /**
-                     * 设置
-                     * @param _enableVoiceInteract 
+                     * 设置Enable the voice interaction feature
+                     * @param _enableVoiceInteract Enable the voice interaction feature
                      * 
                      */
                     void SetEnableVoiceInteract(const bool& _enableVoiceInteract);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool EnableVoiceInteractHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnableVoiceCall 
+                     * 获取Enable voice call
+                     * @return EnableVoiceCall Enable voice call
                      * 
                      */
                     bool GetEnableVoiceCall() const;
 
                     /**
-                     * 设置
-                     * @param _enableVoiceCall 
+                     * 设置Enable voice call
+                     * @param _enableVoiceCall Enable voice call
                      * 
                      */
                     void SetEnableVoiceCall(const bool& _enableVoiceCall);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool EnableVoiceCallHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnableDigitalHuman 
+                     * 获取Enable digital human
+                     * @return EnableDigitalHuman Enable digital human
                      * 
                      */
                     bool GetEnableDigitalHuman() const;
 
                     /**
-                     * 设置
-                     * @param _enableDigitalHuman 
+                     * 设置Enable digital human
+                     * @param _enableDigitalHuman Enable digital human
                      * 
                      */
                     void SetEnableDigitalHuman(const bool& _enableDigitalHuman);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool EnableDigitalHumanHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Voice 
+                     * 获取Voice type configuration
+                     * @return Voice Voice type configuration
                      * 
                      */
                     VoiceConfig GetVoice() const;
 
                     /**
-                     * 设置
-                     * @param _voice 
+                     * 设置Voice type configuration
+                     * @param _voice Voice type configuration
                      * 
                      */
                     void SetVoice(const VoiceConfig& _voice);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool VoiceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DigitalHuman 
+                     * 获取Digital human configuration
+                     * @return DigitalHuman Digital human configuration
                      * 
                      */
                     DigitalHumanConfig GetDigitalHuman() const;
 
                     /**
-                     * 设置
-                     * @param _digitalHuman 
+                     * 设置Digital human configuration
+                     * @param _digitalHuman Digital human configuration
                      * 
                      */
                     void SetDigitalHuman(const DigitalHumanConfig& _digitalHuman);
@@ -156,31 +156,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Enable the voice interaction feature
                      */
                     bool m_enableVoiceInteract;
                     bool m_enableVoiceInteractHasBeenSet;
 
                     /**
-                     * 
+                     * Enable voice call
                      */
                     bool m_enableVoiceCall;
                     bool m_enableVoiceCallHasBeenSet;
 
                     /**
-                     * 
+                     * Enable digital human
                      */
                     bool m_enableDigitalHuman;
                     bool m_enableDigitalHumanHasBeenSet;
 
                     /**
-                     * 
+                     * Voice type configuration
                      */
                     VoiceConfig m_voice;
                     bool m_voiceHasBeenSet;
 
                     /**
-                     * 
+                     * Digital human configuration
                      */
                     DigitalHumanConfig m_digitalHuman;
                     bool m_digitalHumanHasBeenSet;

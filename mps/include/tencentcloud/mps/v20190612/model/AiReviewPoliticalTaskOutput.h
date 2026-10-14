@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video sensitive content score, ranging from 0 to 100.
-                     * @return Confidence Video sensitive content score, ranging from 0 to 100.
+                     * 获取Sensitive score of the video. The score ranges from 0 to 100.
+                     * @return Confidence Sensitive score of the video. The score ranges from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Video sensitive content score, ranging from 0 to 100.
-                     * @param _confidence Video sensitive content score, ranging from 0 to 100.
+                     * 设置Sensitive score of the video. The score ranges from 0 to 100.
+                     * @param _confidence Sensitive score of the video. The score ranges from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Result Suggestions for sensitive content, value ranges from...to...
+                     * 获取Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Result Suggestions for sensitive content, value ranges from...to...
+                     * @return Suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result Suggestions for sensitive content, value ranges from...to...
+                     * 设置Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Result Suggestions for sensitive content, value ranges from...to...
+                     * @param _suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,30 +102,30 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+                     * 获取Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
-                     * @return Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+                     * @return Label Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+                     * 设置Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
-                     * @param _label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+                     * @param _label Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
                      * 
                      */
@@ -162,13 +162,13 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
                 private:
 
                     /**
-                     * Video sensitive content score, ranging from 0 to 100.
+                     * Sensitive score of the video. The score ranges from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Result Suggestions for sensitive content, value ranges from...to...
+                     * Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -177,10 +177,10 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+                     * Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
                      */
                     std::string m_label;

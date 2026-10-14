@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input object information for media processing.
+                * Information of the media processing input object.
                 */
                 class MediaInputInfo : public AbstractModel
                 {
@@ -52,12 +52,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
                      * @return Type Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
@@ -67,12 +67,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
                      * @param _type Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Required when `Type` is `COS`. It represents the COS object information for media processing.
-                     * @return CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
+                     * 获取Required when Type is COS. It refers to the COS object information for media processing.
+                     * @return CosInputInfo Required when Type is COS. It refers to the COS object information for media processing.
                      * 
                      */
                     CosInputInfo GetCosInputInfo() const;
 
                     /**
-                     * 设置Required when `Type` is `COS`. It represents the COS object information for media processing.
-                     * @param _cosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
+                     * 设置Required when Type is COS. It refers to the COS object information for media processing.
+                     * @param _cosInputInfo Required when Type is COS. It refers to the COS object information for media processing.
                      * 
                      */
                     void SetCosInputInfo(const CosInputInfo& _cosInputInfo);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool CosInputInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UrlInputInfo 
+                     * 获取Valid when Type is URL. This item is required and refers to media processing URL object information.
+                     * @return UrlInputInfo Valid when Type is URL. This item is required and refers to media processing URL object information.
                      * 
                      */
                     UrlInputInfo GetUrlInputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _urlInputInfo 
+                     * 设置Valid when Type is URL. This item is required and refers to media processing URL object information.
+                     * @param _urlInputInfo Valid when Type is URL. This item is required and refers to media processing URL object information.
                      * 
                      */
                     void SetUrlInputInfo(const UrlInputInfo& _urlInputInfo);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool UrlInputInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3InputInfo 
+                     * 获取Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
+                     * @return S3InputInfo Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
                      * 
                      */
                     S3InputInfo GetS3InputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _s3InputInfo 
+                     * 设置Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
+                     * @param _s3InputInfo Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
                      * 
                      */
                     void SetS3InputInfo(const S3InputInfo& _s3InputInfo);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool S3InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VODInputInfo 
+                     * 获取Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
+                     * @return VODInputInfo Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
                      * 
                      */
                     VODInputInfo GetVODInputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _vODInputInfo 
+                     * 设置Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
+                     * @param _vODInputInfo Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
                      * 
                      */
                     void SetVODInputInfo(const VODInputInfo& _vODInputInfo);
@@ -175,7 +175,7 @@ namespace TencentCloud
 
                     /**
                      * Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
@@ -184,25 +184,25 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Required when `Type` is `COS`. It represents the COS object information for media processing.
+                     * Required when Type is COS. It refers to the COS object information for media processing.
                      */
                     CosInputInfo m_cosInputInfo;
                     bool m_cosInputInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Valid when Type is URL. This item is required and refers to media processing URL object information.
                      */
                     UrlInputInfo m_urlInputInfo;
                     bool m_urlInputInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
                      */
                     S3InputInfo m_s3InputInfo;
                     bool m_s3InputInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
                      */
                     VODInputInfo m_vODInputInfo;
                     bool m_vODInputInfoHasBeenSet;

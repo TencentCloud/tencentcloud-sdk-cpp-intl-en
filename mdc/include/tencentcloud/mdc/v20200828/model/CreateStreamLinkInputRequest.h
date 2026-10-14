@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取StreamLink stream ID.
-                     * @return FlowId StreamLink stream ID.
+                     * 获取<p>Media transmission stream ID.</p>
+                     * @return FlowId <p>Media transmission stream ID.</p>
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置StreamLink stream ID.
-                     * @param _flowId StreamLink stream ID.
+                     * 设置<p>Media transmission stream ID.</p>
+                     * @param _flowId <p>Media transmission stream ID.</p>
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The input group of the Flow.
-                     * @return InputGroup The input group of the Flow.
+                     * 获取<p>Input group of a stream.</p>
+                     * @return InputGroup <p>Input group of a stream.</p>
                      * 
                      */
                     std::vector<CreateInput> GetInputGroup() const;
 
                     /**
-                     * 设置The input group of the Flow.
-                     * @param _inputGroup The input group of the Flow.
+                     * 设置<p>Input group of a stream.</p>
+                     * @param _inputGroup <p>Input group of a stream.</p>
                      * 
                      */
                     void SetInputGroup(const std::vector<CreateInput>& _inputGroup);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * StreamLink stream ID.
+                     * <p>Media transmission stream ID.</p>
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The input group of the Flow.
+                     * <p>Input group of a stream.</p>
                      */
                     std::vector<CreateInput> m_inputGroup;
                     bool m_inputGroupHasBeenSet;

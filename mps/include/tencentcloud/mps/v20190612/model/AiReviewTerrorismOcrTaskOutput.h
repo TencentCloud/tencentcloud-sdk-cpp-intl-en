@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Ocr text sensitive content score, ranging from 0 to III.
-                     * @return Confidence Ocr text sensitive content score, ranging from 0 to III.
+                     * 获取Sensitive score of the Ocr text. The score ranges from 0 to 100.
+                     * @return Confidence Sensitive score of the Ocr text. The score ranges from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Ocr text sensitive content score, ranging from 0 to III.
-                     * @param _confidence Ocr text sensitive content score, ranging from 0 to III.
+                     * 设置Sensitive score of the Ocr text. The score ranges from 0 to 100.
+                     * @param _confidence Sensitive score of the Ocr text. The score ranges from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Ocr text sensitive result suggestion, value ranges from...to...
+                     * 获取Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Ocr text sensitive result suggestion, value ranges from...to...
+                     * @return Suggestion Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Ocr text sensitive result suggestion, value ranges from...to...
+                     * 设置Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Ocr text sensitive result suggestion, value ranges from...to...
+                     * @param _suggestion Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments suspected of containing sensitive content in Ocr text.
-                     * @return SegmentSet List of video segments suspected of containing sensitive content in Ocr text.
+                     * 获取List of video segments whose Ocr text is suspected of containing sensitive content.
+                     * @return SegmentSet List of video segments whose Ocr text is suspected of containing sensitive content.
                      * 
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments suspected of containing sensitive content in Ocr text.
-                     * @param _segmentSet List of video segments suspected of containing sensitive content in Ocr text.
+                     * 设置List of video segments whose Ocr text is suspected of containing sensitive content.
+                     * @param _segmentSet List of video segments whose Ocr text is suspected of containing sensitive content.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
@@ -125,13 +125,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Ocr text sensitive content score, ranging from 0 to III.
+                     * Sensitive score of the Ocr text. The score ranges from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Ocr text sensitive result suggestion, value ranges from...to...
+                     * Sensitive data detection result suggestion for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of video segments suspected of containing sensitive content in Ocr text.
+                     * List of video segments whose Ocr text is suspected of containing sensitive content.
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

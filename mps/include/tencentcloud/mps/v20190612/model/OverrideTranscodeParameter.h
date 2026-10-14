@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specification parameters for custom transcoding. Used to overwrite the corresponding parameter values in the template.
+                * Specification parameters for custom transcoding. Used to override the corresponding parameter values in the template.
                 */
                 class OverrideTranscodeParameter : public AbstractModel
                 {
@@ -75,10 +75,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * @return RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * 
                      */
@@ -86,10 +86,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * @param _removeVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * 
                      */
@@ -104,10 +104,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * @return RemoveAudio Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * 
                      */
@@ -115,10 +115,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * @param _removeAudio Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      * 
                      */
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TEHDConfig 
+                     * 获取Top Speed Codec transcoding parameters.
+                     * @return TEHDConfig Top Speed Codec transcoding parameters.
                      * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
-                     * 设置
-                     * @param _tEHDConfig 
+                     * 设置Top Speed Codec transcoding parameters.
+                     * @param _tEHDConfig Top Speed Codec transcoding parameters.
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
@@ -288,7 +288,7 @@ namespace TencentCloud
 
                     /**
                      * Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      */
                     uint64_t m_removeVideo;
@@ -296,7 +296,7 @@ namespace TencentCloud
 
                     /**
                      * Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
                      */
                     uint64_t m_removeAudio;
@@ -315,7 +315,7 @@ namespace TencentCloud
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * Top Speed Codec transcoding parameters.
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;

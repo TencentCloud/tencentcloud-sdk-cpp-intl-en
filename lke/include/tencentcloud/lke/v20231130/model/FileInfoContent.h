@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File information content
                 */
                 class FileInfoContent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DocBizId 
+                     * 获取<p>DocBizId returned by the real-time document parsing API</p>
+                     * @return DocBizId <p>DocBizId returned by the real-time document parsing API</p>
                      * @deprecated
                      */
                     std::string GetDocBizId() const;
 
                     /**
-                     * 设置
-                     * @param _docBizId 
+                     * 设置<p>DocBizId returned by the real-time document parsing API</p>
+                     * @param _docBizId <p>DocBizId returned by the real-time document parsing API</p>
                      * @deprecated
                      */
                     void SetDocBizId(const std::string& _docBizId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DocBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileName 
+                     * 获取<p>File name.</p>
+                     * @return FileName <p>File name.</p>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置
-                     * @param _fileName 
+                     * 设置<p>File name.</p>
+                     * @param _fileName <p>File name.</p>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取<p>File type</p>
+                     * @return FileType <p>File type</p>
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置<p>File type</p>
+                     * @param _fileType <p>File type</p>
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileSize 
+                     * 获取<p>File size in bytes</p>
+                     * @return FileSize <p>File size in bytes</p>
                      * 
                      */
                     std::string GetFileSize() const;
 
                     /**
-                     * 设置
-                     * @param _fileSize 
+                     * 设置<p>File size in bytes</p>
+                     * @param _fileSize <p>File size in bytes</p>
                      * 
                      */
                     void SetFileSize(const std::string& _fileSize);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取<p>File URL</p>
+                     * @return FileUrl <p>File URL</p>
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置<p>File URL</p>
+                     * @param _fileUrl <p>File URL</p>
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DocId 
+                     * 获取<p>doc_id returned by the real-time document parsing API.</p>
+                     * @return DocId <p>doc_id returned by the real-time document parsing API.</p>
                      * 
                      */
                     std::string GetDocId() const;
 
                     /**
-                     * 设置
-                     * @param _docId 
+                     * 设置<p>doc_id returned by the real-time document parsing API.</p>
+                     * @param _docId <p>doc_id returned by the real-time document parsing API.</p>
                      * 
                      */
                     void SetDocId(const std::string& _docId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DocIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>File creation time</p>
+                     * @return CreateTime <p>File creation time</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>File creation time</p>
+                     * @param _createTime <p>File creation time</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -193,49 +193,103 @@ namespace TencentCloud
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Local path of the file in the sandbox</p>
+                     * @return LocalPath <p>Local path of the file in the sandbox</p>
+                     * 
+                     */
+                    std::string GetLocalPath() const;
+
+                    /**
+                     * 设置<p>Local path of the file in the sandbox</p>
+                     * @param _localPath <p>Local path of the file in the sandbox</p>
+                     * 
+                     */
+                    void SetLocalPath(const std::string& _localPath);
+
+                    /**
+                     * 判断参数 LocalPath 是否已赋值
+                     * @return LocalPath 是否已赋值
+                     * 
+                     */
+                    bool LocalPathHasBeenSet() const;
+
+                    /**
+                     * 获取<p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+                     * @return AuditStatus <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+                     * 
+                     */
+                    uint64_t GetAuditStatus() const;
+
+                    /**
+                     * 设置<p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+                     * @param _auditStatus <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+                     * 
+                     */
+                    void SetAuditStatus(const uint64_t& _auditStatus);
+
+                    /**
+                     * 判断参数 AuditStatus 是否已赋值
+                     * @return AuditStatus 是否已赋值
+                     * 
+                     */
+                    bool AuditStatusHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>DocBizId returned by the real-time document parsing API</p>
                      */
                     std::string m_docBizId;
                     bool m_docBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File name.</p>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File type</p>
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File size in bytes</p>
                      */
                     std::string m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File URL</p>
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>doc_id returned by the real-time document parsing API.</p>
                      */
                     std::string m_docId;
                     bool m_docIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File creation time</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * <p>Local path of the file in the sandbox</p>
+                     */
+                    std::string m_localPath;
+                    bool m_localPathHasBeenSet;
+
+                    /**
+                     * <p>File moderation status</p><p>Enumeration values:</p><ul><li>1: under review</li><li>2: pass review</li><li>3: fail review</li></ul>
+                     */
+                    uint64_t m_auditStatus;
+                    bool m_auditStatusHasBeenSet;
 
                 };
             }

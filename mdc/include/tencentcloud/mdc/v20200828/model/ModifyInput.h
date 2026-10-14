@@ -30,6 +30,8 @@
 #include <tencentcloud/mdc/v20200828/model/CreateInputRTSPPullSettings.h>
 #include <tencentcloud/mdc/v20200828/model/CreateInputHLSPullSettings.h>
 #include <tencentcloud/mdc/v20200828/model/ResilientStreamConf.h>
+#include <tencentcloud/mdc/v20200828/model/CreateInputRISTSettings.h>
+#include <tencentcloud/mdc/v20200828/model/FailOverOption.h>
 
 
 namespace TencentCloud
@@ -41,7 +43,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The new input configuration.
+                * Modify the parameters of the input.
                 */
                 class ModifyInput : public AbstractModel
                 {
@@ -53,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The input ID.
-                     * @return InputId The input ID.
+                     * 获取Input Id.
+                     * @return InputId Input Id.
                      * 
                      */
                     std::string GetInputId() const;
 
                     /**
-                     * 设置The input ID.
-                     * @param _inputId The input ID.
+                     * 设置Input Id.
+                     * @param _inputId Input Id.
                      * 
                      */
                     void SetInputId(const std::string& _inputId);
@@ -74,15 +76,15 @@ namespace TencentCloud
                     bool InputIdHasBeenSet() const;
 
                     /**
-                     * 获取The input name.
-                     * @return InputName The input name.
+                     * 获取Enter a name.
+                     * @return InputName Enter a name.
                      * 
                      */
                     std::string GetInputName() const;
 
                     /**
-                     * 设置The input name.
-                     * @param _inputName The input name.
+                     * 设置Enter a name.
+                     * @param _inputName Enter a name.
                      * 
                      */
                     void SetInputName(const std::string& _inputName);
@@ -95,15 +97,15 @@ namespace TencentCloud
                     bool InputNameHasBeenSet() const;
 
                     /**
-                     * 获取The description of the input.
-                     * @return Description The description of the input.
+                     * 获取Input description.
+                     * @return Description Input description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置The description of the input.
-                     * @param _description The description of the input.
+                     * 设置Input description.
+                     * @param _description Input description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -116,15 +118,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取The IP addresses (CIDR) allowed to push streams.
-                     * @return AllowIpList The IP addresses (CIDR) allowed to push streams.
+                     * 获取IPs allowed for push, in CIDR format.
+                     * @return AllowIpList IPs allowed for push, in CIDR format.
                      * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
-                     * 设置The IP addresses (CIDR) allowed to push streams.
-                     * @param _allowIpList The IP addresses (CIDR) allowed to push streams.
+                     * 设置IPs allowed for push, in CIDR format.
+                     * @param _allowIpList IPs allowed for push, in CIDR format.
                      * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
@@ -137,15 +139,15 @@ namespace TencentCloud
                     bool AllowIpListHasBeenSet() const;
 
                     /**
-                     * 获取The SRT configuration information.
-                     * @return SRTSettings The SRT configuration information.
+                     * 获取Configuration of SRT.
+                     * @return SRTSettings Configuration of SRT.
                      * 
                      */
                     CreateInputSRTSettings GetSRTSettings() const;
 
                     /**
-                     * 设置The SRT configuration information.
-                     * @param _sRTSettings The SRT configuration information.
+                     * 设置Configuration of SRT.
+                     * @param _sRTSettings Configuration of SRT.
                      * 
                      */
                     void SetSRTSettings(const CreateInputSRTSettings& _sRTSettings);
@@ -158,15 +160,15 @@ namespace TencentCloud
                     bool SRTSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The RTP configuration information.
-                     * @return RTPSettings The RTP configuration information.
+                     * 获取Configuration message of RTP.
+                     * @return RTPSettings Configuration message of RTP.
                      * 
                      */
                     CreateInputRTPSettings GetRTPSettings() const;
 
                     /**
-                     * 设置The RTP configuration information.
-                     * @param _rTPSettings The RTP configuration information.
+                     * 设置Configuration message of RTP.
+                     * @param _rTPSettings Configuration message of RTP.
                      * 
                      */
                     void SetRTPSettings(const CreateInputRTPSettings& _rTPSettings);
@@ -179,27 +181,15 @@ namespace TencentCloud
                     bool RTPSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
-                     * @return Protocol The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
+                     * 获取Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
+                     * @return Protocol Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
-                     * @param _protocol The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
+                     * 设置Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
+                     * @param _protocol Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -212,15 +202,15 @@ If there is an SRT input, the output must be SRT.
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable input failover. Valid values: OPEN, CLOSE.
-                     * @return FailOver Whether to enable input failover. Valid values: OPEN, CLOSE.
+                     * 获取Input primary/replica switch. Option: [OPEN|CLOSE].
+                     * @return FailOver Input primary/replica switch. Option: [OPEN|CLOSE].
                      * 
                      */
                     std::string GetFailOver() const;
 
                     /**
-                     * 设置Whether to enable input failover. Valid values: OPEN, CLOSE.
-                     * @param _failOver Whether to enable input failover. Valid values: OPEN, CLOSE.
+                     * 设置Input primary/replica switch. Option: [OPEN|CLOSE].
+                     * @param _failOver Input primary/replica switch. Option: [OPEN|CLOSE].
                      * 
                      */
                     void SetFailOver(const std::string& _failOver);
@@ -233,15 +223,15 @@ If there is an SRT input, the output must be SRT.
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information for RTMP_PULL.
-                     * @return RTMPPullSettings Configuration information for RTMP_PULL.
+                     * 获取Configuration message of RTMP_PULL.
+                     * @return RTMPPullSettings Configuration message of RTMP_PULL.
                      * 
                      */
                     CreateInputRTMPPullSettings GetRTMPPullSettings() const;
 
                     /**
-                     * 设置Configuration information for RTMP_PULL.
-                     * @param _rTMPPullSettings Configuration information for RTMP_PULL.
+                     * 设置Configuration message of RTMP_PULL.
+                     * @param _rTMPPullSettings Configuration message of RTMP_PULL.
                      * 
                      */
                     void SetRTMPPullSettings(const CreateInputRTMPPullSettings& _rTMPPullSettings);
@@ -254,15 +244,15 @@ If there is an SRT input, the output must be SRT.
                     bool RTMPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of RTSP_PULL.
-                     * @return RTSPPullSettings Configuration information of RTSP_PULL.
+                     * 获取Configuration message of RTSP_PULL.
+                     * @return RTSPPullSettings Configuration message of RTSP_PULL.
                      * 
                      */
                     CreateInputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置Configuration information of RTSP_PULL.
-                     * @param _rTSPPullSettings Configuration information of RTSP_PULL.
+                     * 设置Configuration message of RTSP_PULL.
+                     * @param _rTSPPullSettings Configuration message of RTSP_PULL.
                      * 
                      */
                     void SetRTSPPullSettings(const CreateInputRTSPPullSettings& _rTSPPullSettings);
@@ -275,15 +265,15 @@ If there is an SRT input, the output must be SRT.
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取HLS_PULL configuration information.
-                     * @return HLSPullSettings HLS_PULL configuration information.
+                     * 获取Configuration message of HLS_PULL.
+                     * @return HLSPullSettings Configuration message of HLS_PULL.
                      * 
                      */
                     CreateInputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置HLS_PULL configuration information.
-                     * @param _hLSPullSettings HLS_PULL configuration information.
+                     * 设置Configuration message of HLS_PULL.
+                     * @param _hLSPullSettings Configuration message of HLS_PULL.
                      * 
                      */
                     void SetHLSPullSettings(const CreateInputHLSPullSettings& _hLSPullSettings);
@@ -296,15 +286,15 @@ If there is an SRT input, the output must be SRT.
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Delayed broadcast smooth streaming configuration information.
-                     * @return ResilientStream Delayed broadcast smooth streaming configuration information.
+                     * 获取Configuration message for smooth stream output during delayed playback.
+                     * @return ResilientStream Configuration message for smooth stream output during delayed playback.
                      * 
                      */
                     ResilientStreamConf GetResilientStream() const;
 
                     /**
-                     * 设置Delayed broadcast smooth streaming configuration information.
-                     * @param _resilientStream Delayed broadcast smooth streaming configuration information.
+                     * 设置Configuration message for smooth stream output during delayed playback.
+                     * @param _resilientStream Configuration message for smooth stream output during delayed playback.
                      * 
                      */
                     void SetResilientStream(const ResilientStreamConf& _resilientStream);
@@ -317,15 +307,15 @@ If there is an SRT input, the output must be SRT.
                     bool ResilientStreamHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the input security group to bind. Only one security group can be associated.
-                     * @return SecurityGroupIds The ID of the input security group to bind. Only one security group can be associated.
+                     * 获取ID of the bound input security group. Only one security group can be associated.
+                     * @return SecurityGroupIds ID of the bound input security group. Only one security group can be associated.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The ID of the input security group to bind. Only one security group can be associated.
-                     * @param _securityGroupIds The ID of the input security group to bind. Only one security group can be associated.
+                     * 设置ID of the bound input security group. Only one security group can be associated.
+                     * @param _securityGroupIds ID of the bound input security group. Only one security group can be associated.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -338,15 +328,15 @@ If there is an SRT input, the output must be SRT.
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
-                     * @return Zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * 获取Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
+                     * @return Zones Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
-                     * @param _zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * 设置Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
+                     * @param _zones Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -358,94 +348,172 @@ If there is an SRT input, the output must be SRT.
                      */
                     bool ZonesHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration information of RIST.
+                     * @return RISTSettings Configuration information of RIST.
+                     * 
+                     */
+                    CreateInputRISTSettings GetRISTSettings() const;
+
+                    /**
+                     * 设置Configuration information of RIST.
+                     * @param _rISTSettings Configuration information of RIST.
+                     * 
+                     */
+                    void SetRISTSettings(const CreateInputRISTSettings& _rISTSettings);
+
+                    /**
+                     * 判断参数 RISTSettings 是否已赋值
+                     * @return RISTSettings 是否已赋值
+                     * 
+                     */
+                    bool RISTSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Region of the input node.
+                     * @return InputRegion Region of the input node.
+                     * 
+                     */
+                    std::string GetInputRegion() const;
+
+                    /**
+                     * 设置Region of the input node.
+                     * @param _inputRegion Region of the input node.
+                     * 
+                     */
+                    void SetInputRegion(const std::string& _inputRegion);
+
+                    /**
+                     * 判断参数 InputRegion 是否已赋值
+                     * @return InputRegion 是否已赋值
+                     * 
+                     */
+                    bool InputRegionHasBeenSet() const;
+
+                    /**
+                     * 获取Hot/cold backup related
+                     * @return FailOverOption Hot/cold backup related
+                     * 
+                     */
+                    FailOverOption GetFailOverOption() const;
+
+                    /**
+                     * 设置Hot/cold backup related
+                     * @param _failOverOption Hot/cold backup related
+                     * 
+                     */
+                    void SetFailOverOption(const FailOverOption& _failOverOption);
+
+                    /**
+                     * 判断参数 FailOverOption 是否已赋值
+                     * @return FailOverOption 是否已赋值
+                     * 
+                     */
+                    bool FailOverOptionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The input ID.
+                     * Input Id.
                      */
                     std::string m_inputId;
                     bool m_inputIdHasBeenSet;
 
                     /**
-                     * The input name.
+                     * Enter a name.
                      */
                     std::string m_inputName;
                     bool m_inputNameHasBeenSet;
 
                     /**
-                     * The description of the input.
+                     * Input description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * The IP addresses (CIDR) allowed to push streams.
+                     * IPs allowed for push, in CIDR format.
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
 
                     /**
-                     * The SRT configuration information.
+                     * Configuration of SRT.
                      */
                     CreateInputSRTSettings m_sRTSettings;
                     bool m_sRTSettingsHasBeenSet;
 
                     /**
-                     * The RTP configuration information.
+                     * Configuration message of RTP.
                      */
                     CreateInputRTPSettings m_rTPSettings;
                     bool m_rTPSettingsHasBeenSet;
 
                     /**
-                     * The input protocol. Valid values: SRT, RTP, RTMP.
-If there is an RTP input, the output must be RTP.
-If there is an RTMP input, the output must be SRT or RTMP.
-If there is an SRT input, the output must be SRT.
+                     * Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Whether to enable input failover. Valid values: OPEN, CLOSE.
+                     * Input primary/replica switch. Option: [OPEN|CLOSE].
                      */
                     std::string m_failOver;
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Configuration information for RTMP_PULL.
+                     * Configuration message of RTMP_PULL.
                      */
                     CreateInputRTMPPullSettings m_rTMPPullSettings;
                     bool m_rTMPPullSettingsHasBeenSet;
 
                     /**
-                     * Configuration information of RTSP_PULL.
+                     * Configuration message of RTSP_PULL.
                      */
                     CreateInputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * HLS_PULL configuration information.
+                     * Configuration message of HLS_PULL.
                      */
                     CreateInputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * Delayed broadcast smooth streaming configuration information.
+                     * Configuration message for smooth stream output during delayed playback.
                      */
                     ResilientStreamConf m_resilientStream;
                     bool m_resilientStreamHasBeenSet;
 
                     /**
-                     * The ID of the input security group to bind. Only one security group can be associated.
+                     * ID of the bound input security group. Only one security group can be associated.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
+
+                    /**
+                     * Configuration information of RIST.
+                     */
+                    CreateInputRISTSettings m_rISTSettings;
+                    bool m_rISTSettingsHasBeenSet;
+
+                    /**
+                     * Region of the input node.
+                     */
+                    std::string m_inputRegion;
+                    bool m_inputRegionHasBeenSet;
+
+                    /**
+                     * Hot/cold backup related
+                     */
+                    FailOverOption m_failOverOption;
+                    bool m_failOverOptionHasBeenSet;
 
                 };
             }

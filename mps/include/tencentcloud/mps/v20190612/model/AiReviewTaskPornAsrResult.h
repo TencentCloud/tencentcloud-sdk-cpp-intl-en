@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Asr text porn detection task result kind
+                * Result type of the Asr text pornography detection task in content review
                 */
                 class AiReviewTaskPornAsrResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Content review Asr text pornography detection task input.
-                     * @return Input Content review Asr text pornography detection task input.
+                     * 获取Input for the Asr text pornography detection task in content review.
+                     * @return Input Input for the Asr text pornography detection task in content review.
                      * 
                      */
                     AiReviewPornAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Content review Asr text pornography detection task input.
-                     * @param _input Content review Asr text pornography detection task input.
+                     * 设置Input for the Asr text pornography detection task in content review.
+                     * @param _input Input for the Asr text pornography detection task in content review.
                      * 
                      */
                     void SetInput(const AiReviewPornAsrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Content review Asr text porn detection task output.
+                     * @return Output Content review Asr text porn detection task output.
                      * 
                      */
                     AiReviewPornAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Content review Asr text porn detection task output.
+                     * @param _output Content review Asr text porn detection task output.
                      * 
                      */
                     void SetOutput(const AiReviewPornAsrTaskOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Content review Asr text pornography detection task input.
+                     * Input for the Asr text pornography detection task in content review.
                      */
                     AiReviewPornAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Content review Asr text porn detection task output.
                      */
                     AiReviewPornAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

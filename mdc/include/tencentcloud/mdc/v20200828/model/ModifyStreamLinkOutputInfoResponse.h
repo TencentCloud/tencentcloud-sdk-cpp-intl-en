@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The output configuration after modification.
-                     * @return Info The output configuration after modification.
+                     * 获取Output configuration after modification.
+                     * @return Info Output configuration after modification.
                      * 
                      */
                     DescribeOutput GetInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The output configuration after modification.
+                     * Output configuration after modification.
                      */
                     DescribeOutput m_info;
                     bool m_infoHasBeenSet;

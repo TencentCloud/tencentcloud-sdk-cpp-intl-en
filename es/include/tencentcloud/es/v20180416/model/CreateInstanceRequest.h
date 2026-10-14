@@ -26,6 +26,8 @@
 #include <tencentcloud/es/v20180416/model/TagInfo.h>
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 #include <tencentcloud/es/v20180416/model/OperationDuration.h>
+#include <tencentcloud/es/v20180416/model/EnableScheduleOperationDuration.h>
+#include <tencentcloud/es/v20180416/model/AutoScaleDiskInfo.h>
 
 
 namespace TencentCloud
@@ -48,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability Zone
-                     * @return Zone Availability Zone
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability Zone
-                     * @param _zone Availability Zone
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -69,15 +71,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
-                     * @return EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+                     * 获取<p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
+                     * @return EsVersion <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
                      * 
                      */
                     std::string GetEsVersion() const;
 
                     /**
-                     * 设置Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
-                     * @param _esVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+                     * 设置<p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
+                     * @param _esVersion <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
                      * 
                      */
                     void SetEsVersion(const std::string& _esVersion);
@@ -90,15 +92,15 @@ namespace TencentCloud
                     bool EsVersionHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取<p>VPC ID</p>
+                     * @return VpcId <p>VPC ID</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置<p>VPC ID</p>
+                     * @param _vpcId <p>VPC ID</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -111,15 +113,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取<p>Subnet ID.</p>
+                     * @return SubnetId <p>Subnet ID.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置<p>Subnet ID.</p>
+                     * @param _subnetId <p>Subnet ID.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -132,15 +134,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-                     * @return Password Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * 获取<p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
+                     * @return Password <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-                     * @param _password Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * 设置<p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
+                     * @param _password <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -153,15 +155,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-                     * @return InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+                     * 获取<p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
+                     * @return InstanceName <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
-                     * @param _instanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+                     * 设置<p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
+                     * @param _instanceName <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -174,19 +176,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
-                     * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
+                     * @return NodeNum <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
                      * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
-                     * @param _nodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
+                     * @param _nodeNum <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
                      * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
@@ -199,15 +197,15 @@ Number of nodes (2-50)
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
-                     * @return ChargeType Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
+                     * 获取<p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
+                     * @return ChargeType <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
                      * 
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
-                     * @param _chargeType Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
+                     * 设置<p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
+                     * @param _chargeType <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
                      * 
                      */
                     void SetChargeType(const std::string& _chargeType);
@@ -220,15 +218,15 @@ Number of nodes (2-50)
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not used on the global website
-                     * @return ChargePeriod This parameter is not used on the global website
+                     * 获取<p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
+                     * @return ChargePeriod <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
                      * 
                      */
                     uint64_t GetChargePeriod() const;
 
                     /**
-                     * 设置This parameter is not used on the global website
-                     * @param _chargePeriod This parameter is not used on the global website
+                     * 设置<p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
+                     * @param _chargePeriod <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
                      * 
                      */
                     void SetChargePeriod(const uint64_t& _chargePeriod);
@@ -241,15 +239,15 @@ Number of nodes (2-50)
                     bool ChargePeriodHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not used on the global website
-                     * @return RenewFlag This parameter is not used on the global website
+                     * 获取<p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
+                     * @return RenewFlag <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置This parameter is not used on the global website
-                     * @param _renewFlag This parameter is not used on the global website
+                     * 设置<p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
+                     * @param _renewFlag <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -262,19 +260,15 @@ Number of nodes (2-50)
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @return NodeType This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @return NodeType <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @param _nodeType This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @param _nodeType <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -287,19 +281,15 @@ Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
-                     * @return DiskType This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
+                     * @return DiskType <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
-                     * @param _diskType This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
+                     * @param _diskType <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -312,19 +302,15 @@ Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premi
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
-                     * @return DiskSize This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
+                     * @return DiskSize <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
-                     * @param _diskSize This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
+                     * @param _diskSize <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -337,15 +323,15 @@ Node disk size in GB
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not used on the global website
-                     * @return TimeUnit This parameter is not used on the global website
+                     * 获取<p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
+                     * @return TimeUnit <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置This parameter is not used on the global website
-                     * @param _timeUnit This parameter is not used on the global website
+                     * 设置<p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
+                     * @param _timeUnit <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -358,15 +344,15 @@ Node disk size in GB
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-                     * @return AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+                     * 获取<p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
+                     * @return AutoVoucher <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-                     * @param _autoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+                     * 设置<p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
+                     * @param _autoVoucher <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -379,15 +365,15 @@ Node disk size in GB
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取List of voucher IDs (only one voucher can be specified at a time currently)
-                     * @return VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
+                     * 获取<p>Voucher ID list. Only one voucher can be specified.</p>
+                     * @return VoucherIds <p>Voucher ID list. Only one voucher can be specified.</p>
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置List of voucher IDs (only one voucher can be specified at a time currently)
-                     * @param _voucherIds List of voucher IDs (only one voucher can be specified at a time currently)
+                     * 设置<p>Voucher ID list. Only one voucher can be specified.</p>
+                     * @param _voucherIds <p>Voucher ID list. Only one voucher can be specified.</p>
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -400,19 +386,15 @@ Node disk size in GB
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
-                     * @return EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
+                     * @return EnableDedicatedMaster <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
                      * 
                      */
                     bool GetEnableDedicatedMaster() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
-                     * @param _enableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
+                     * @param _enableDedicatedMaster <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
                      * 
                      */
                     void SetEnableDedicatedMaster(const bool& _enableDedicatedMaster);
@@ -425,19 +407,15 @@ Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li
                     bool EnableDedicatedMasterHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
-                     * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
+                     * @return MasterNodeNum <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
                      * 
                      */
                     uint64_t GetMasterNodeNum() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
-                     * @param _masterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
+                     * @param _masterNodeNum <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
                      * 
                      */
                     void SetMasterNodeNum(const uint64_t& _masterNodeNum);
@@ -450,19 +428,15 @@ Number of dedicated primary nodes (only 3 and 5 are supported. This value must b
                     bool MasterNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-                     * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @return MasterNodeType <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     std::string GetMasterNodeType() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-                     * @param _masterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @param _masterNodeType <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     void SetMasterNodeType(const std::string& _masterNodeType);
@@ -475,19 +449,15 @@ Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` 
                     bool MasterNodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
-                     * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+                     * 获取<p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
+                     * @return MasterNodeDiskSize <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
                      * 
                      */
                     uint64_t GetMasterNodeDiskSize() const;
 
                     /**
-                     * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
-                     * @param _masterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+                     * 设置<p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
+                     * @param _masterNodeDiskSize <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
                      * 
                      */
                     void SetMasterNodeDiskSize(const uint64_t& _masterNodeDiskSize);
@@ -500,15 +470,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool MasterNodeDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
-                     * @return ClusterNameInConf ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
+                     * 获取<p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
+                     * @return ClusterNameInConf <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
                      * 
                      */
                     std::string GetClusterNameInConf() const;
 
                     /**
-                     * 设置ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
-                     * @param _clusterNameInConf ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
+                     * 设置<p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
+                     * @param _clusterNameInConf <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
                      * 
                      */
                     void SetClusterNameInConf(const std::string& _clusterNameInConf);
@@ -521,15 +491,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool ClusterNameInConfHasBeenSet() const;
 
                     /**
-                     * 获取Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
-                     * @return DeployMode Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
+                     * 获取<p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
+                     * @return DeployMode <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
                      * 
                      */
                     uint64_t GetDeployMode() const;
 
                     /**
-                     * 设置Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
-                     * @param _deployMode Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
+                     * 设置<p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
+                     * @param _deployMode <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
                      * 
                      */
                     void SetDeployMode(const uint64_t& _deployMode);
@@ -542,15 +512,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
-                     * @return MultiZoneInfo Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
+                     * 获取<p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
+                     * @return MultiZoneInfo <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
                      * 
                      */
                     std::vector<ZoneDetail> GetMultiZoneInfo() const;
 
                     /**
-                     * 设置Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
-                     * @param _multiZoneInfo Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
+                     * 设置<p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
+                     * @param _multiZoneInfo <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
                      * 
                      */
                     void SetMultiZoneInfo(const std::vector<ZoneDetail>& _multiZoneInfo);
@@ -563,15 +533,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool MultiZoneInfoHasBeenSet() const;
 
                     /**
-                     * 获取License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-                     * @return LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * 获取<p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+                     * @return LicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
                      * 
                      */
                     std::string GetLicenseType() const;
 
                     /**
-                     * 设置License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-                     * @param _licenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * 设置<p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+                     * @param _licenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
                      * 
                      */
                     void SetLicenseType(const std::string& _licenseType);
@@ -584,15 +554,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool LicenseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
-                     * @return NodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+                     * 获取<p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
+                     * @return NodeInfoList <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
                      * 
                      */
                     std::vector<NodeInfo> GetNodeInfoList() const;
 
                     /**
-                     * 设置Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
-                     * @param _nodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+                     * 设置<p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
+                     * @param _nodeInfoList <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
                      * 
                      */
                     void SetNodeInfoList(const std::vector<NodeInfo>& _nodeInfoList);
@@ -605,15 +575,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool NodeInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Node tag information list
-                     * @return TagList Node tag information list
+                     * 获取<p>Node tag information list</p>
+                     * @return TagList <p>Node tag information list</p>
                      * 
                      */
                     std::vector<TagInfo> GetTagList() const;
 
                     /**
-                     * 设置Node tag information list
-                     * @param _tagList Node tag information list
+                     * 设置<p>Node tag information list</p>
+                     * @param _tagList <p>Node tag information list</p>
                      * 
                      */
                     void SetTagList(const std::vector<TagInfo>& _tagList);
@@ -626,15 +596,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-                     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * 获取<p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+                     * @return BasicSecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
                      * 
                      */
                     uint64_t GetBasicSecurityType() const;
 
                     /**
-                     * 设置Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-                     * @param _basicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * 设置<p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+                     * @param _basicSecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
                      * 
                      */
                     void SetBasicSecurityType(const uint64_t& _basicSecurityType);
@@ -647,15 +617,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool BasicSecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
-                     * @return SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     * 获取<p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
+                     * @return SceneType <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
                      * 
                      */
                     int64_t GetSceneType() const;
 
                     /**
-                     * 设置Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
-                     * @param _sceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     * 设置<p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
+                     * @param _sceneType <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
                      * 
                      */
                     void SetSceneType(const int64_t& _sceneType);
@@ -668,15 +638,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取Visual node configuration
-                     * @return WebNodeTypeInfo Visual node configuration
+                     * 获取<p>Visualize node configuration</p>
+                     * @return WebNodeTypeInfo <p>Visualize node configuration</p>
                      * 
                      */
                     WebNodeTypeInfo GetWebNodeTypeInfo() const;
 
                     /**
-                     * 设置Visual node configuration
-                     * @param _webNodeTypeInfo Visual node configuration
+                     * 设置<p>Visualize node configuration</p>
+                     * @param _webNodeTypeInfo <p>Visualize node configuration</p>
                      * 
                      */
                     void SetWebNodeTypeInfo(const WebNodeTypeInfo& _webNodeTypeInfo);
@@ -689,15 +659,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool WebNodeTypeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `https`, `http` (default)
-                     * @return Protocol Valid values: `https`, `http` (default)
+                     * 获取<p>Create an https cluster. http is selected by default.</p>
+                     * @return Protocol <p>Create an https cluster. http is selected by default.</p>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Valid values: `https`, `http` (default)
-                     * @param _protocol Valid values: `https`, `http` (default)
+                     * 设置<p>Create an https cluster. http is selected by default.</p>
+                     * @param _protocol <p>Create an https cluster. http is selected by default.</p>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -710,15 +680,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance time slot
-                     * @return OperationDuration The maintenance time slot
+                     * 获取<p>Maintenance time slot</p>
+                     * @return OperationDuration <p>Maintenance time slot</p>
                      * 
                      */
                     OperationDuration GetOperationDuration() const;
 
                     /**
-                     * 设置The maintenance time slot
-                     * @param _operationDuration The maintenance time slot
+                     * 设置<p>Maintenance time slot</p>
+                     * @param _operationDuration <p>Maintenance time slot</p>
                      * 
                      */
                     void SetOperationDuration(const OperationDuration& _operationDuration);
@@ -731,15 +701,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool OperationDurationHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the storage-computing separation feature.
-                     * @return EnableHybridStorage Whether to enable the storage-computing separation feature.
+                     * 获取<p>Whether storage-compute separation is enabled</p>
+                     * @return EnableHybridStorage <p>Whether storage-compute separation is enabled</p>
                      * 
                      */
                     bool GetEnableHybridStorage() const;
 
                     /**
-                     * 设置Whether to enable the storage-computing separation feature.
-                     * @param _enableHybridStorage Whether to enable the storage-computing separation feature.
+                     * 设置<p>Whether storage-compute separation is enabled</p>
+                     * @param _enableHybridStorage <p>Whether storage-compute separation is enabled</p>
                      * 
                      */
                     void SetEnableHybridStorage(const bool& _enableHybridStorage);
@@ -752,15 +722,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool EnableHybridStorageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable enhanced SSD
-                     * @return DiskEnhance Whether to enable enhanced SSD
+                     * 获取<p>Additional hard disk performance</p>
+                     * @return DiskEnhance <p>Additional hard disk performance</p>
                      * 
                      */
                     uint64_t GetDiskEnhance() const;
 
                     /**
-                     * 设置Whether to enable enhanced SSD
-                     * @param _diskEnhance Whether to enable enhanced SSD
+                     * 设置<p>Additional hard disk performance</p>
+                     * @param _diskEnhance <p>Additional hard disk performance</p>
                      * 
                      */
                     void SetDiskEnhance(const uint64_t& _diskEnhance);
@@ -773,15 +743,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                     bool DiskEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable smart inspection.
-                     * @return EnableDiagnose Whether to enable smart inspection.
+                     * 获取<p>Whether intelligent check is enabled</p>
+                     * @return EnableDiagnose <p>Whether intelligent check is enabled</p>
                      * 
                      */
                     bool GetEnableDiagnose() const;
 
                     /**
-                     * 设置Whether to enable smart inspection.
-                     * @param _enableDiagnose Whether to enable smart inspection.
+                     * 设置<p>Whether intelligent check is enabled</p>
+                     * @param _enableDiagnose <p>Whether intelligent check is enabled</p>
                      * 
                      */
                     void SetEnableDiagnose(const bool& _enableDiagnose);
@@ -793,219 +763,481 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     bool EnableDiagnoseHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to enable automatic backup</p>
+                     * @return EnableCosBackup <p>Whether to enable automatic backup</p>
+                     * 
+                     */
+                    bool GetEnableCosBackup() const;
+
+                    /**
+                     * 设置<p>Whether to enable automatic backup</p>
+                     * @param _enableCosBackup <p>Whether to enable automatic backup</p>
+                     * 
+                     */
+                    void SetEnableCosBackup(const bool& _enableCosBackup);
+
+                    /**
+                     * 判断参数 EnableCosBackup 是否已赋值
+                     * @return EnableCosBackup 是否已赋值
+                     * 
+                     */
+                    bool EnableCosBackupHasBeenSet() const;
+
+                    /**
+                     * 获取<p>cdcId, pass it when using a CDC subnet</p>
+                     * @return CdcId <p>cdcId, pass it when using a CDC subnet</p>
+                     * 
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置<p>cdcId, pass it when using a CDC subnet</p>
+                     * @param _cdcId <p>cdcId, pass it when using a CDC subnet</p>
+                     * 
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     * 
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+                     * @return DisasterRecoverGroupAffinity <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+                     * 
+                     */
+                    uint64_t GetDisasterRecoverGroupAffinity() const;
+
+                    /**
+                     * 设置<p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+                     * @param _disasterRecoverGroupAffinity <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+                     * 
+                     */
+                    void SetDisasterRecoverGroupAffinity(const uint64_t& _disasterRecoverGroupAffinity);
+
+                    /**
+                     * 判断参数 DisasterRecoverGroupAffinity 是否已赋值
+                     * @return DisasterRecoverGroupAffinity 是否已赋值
+                     * 
+                     */
+                    bool DisasterRecoverGroupAffinityHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * @return SubProductCode <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * 
+                     */
+                    std::string GetSubProductCode() const;
+
+                    /**
+                     * 设置<p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * @param _subProductCode <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * 
+                     */
+                    void SetSubProductCode(const std::string& _subProductCode);
+
+                    /**
+                     * 判断参数 SubProductCode 是否已赋值
+                     * @return SubProductCode 是否已赋值
+                     * 
+                     */
+                    bool SubProductCodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * @return ReadWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * 
+                     */
+                    int64_t GetReadWriteMode() const;
+
+                    /**
+                     * 设置<p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * @param _readWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * 
+                     */
+                    void SetReadWriteMode(const int64_t& _readWriteMode);
+
+                    /**
+                     * 判断参数 ReadWriteMode 是否已赋值
+                     * @return ReadWriteMode 是否已赋值
+                     * 
+                     */
+                    bool ReadWriteModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether the placement group has asynchronous tasks enabled</p>
+                     * @return EnableScheduleRecoverGroup <p>Whether the placement group has asynchronous tasks enabled</p>
+                     * 
+                     */
+                    bool GetEnableScheduleRecoverGroup() const;
+
+                    /**
+                     * 设置<p>Whether the placement group has asynchronous tasks enabled</p>
+                     * @param _enableScheduleRecoverGroup <p>Whether the placement group has asynchronous tasks enabled</p>
+                     * 
+                     */
+                    void SetEnableScheduleRecoverGroup(const bool& _enableScheduleRecoverGroup);
+
+                    /**
+                     * 判断参数 EnableScheduleRecoverGroup 是否已赋值
+                     * @return EnableScheduleRecoverGroup 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleRecoverGroupHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Maintenance time slot for enabling async tasks in a placement group</p>
+                     * @return EnableScheduleOperationDuration <p>Maintenance time slot for enabling async tasks in a placement group</p>
+                     * 
+                     */
+                    EnableScheduleOperationDuration GetEnableScheduleOperationDuration() const;
+
+                    /**
+                     * 设置<p>Maintenance time slot for enabling async tasks in a placement group</p>
+                     * @param _enableScheduleOperationDuration <p>Maintenance time slot for enabling async tasks in a placement group</p>
+                     * 
+                     */
+                    void SetEnableScheduleOperationDuration(const EnableScheduleOperationDuration& _enableScheduleOperationDuration);
+
+                    /**
+                     * 判断参数 EnableScheduleOperationDuration 是否已赋值
+                     * @return EnableScheduleOperationDuration 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleOperationDurationHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Auto capacity expansion parameter list</p>
+                     * @return AutoScaleDiskInfoList <p>Auto capacity expansion parameter list</p>
+                     * 
+                     */
+                    std::vector<AutoScaleDiskInfo> GetAutoScaleDiskInfoList() const;
+
+                    /**
+                     * 设置<p>Auto capacity expansion parameter list</p>
+                     * @param _autoScaleDiskInfoList <p>Auto capacity expansion parameter list</p>
+                     * 
+                     */
+                    void SetAutoScaleDiskInfoList(const std::vector<AutoScaleDiskInfo>& _autoScaleDiskInfoList);
+
+                    /**
+                     * 判断参数 AutoScaleDiskInfoList 是否已赋值
+                     * @return AutoScaleDiskInfoList 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleDiskInfoListHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+                     * @return EnableKibanaPublicAccess <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+                     * 
+                     */
+                    std::string GetEnableKibanaPublicAccess() const;
+
+                    /**
+                     * 设置<p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+                     * @param _enableKibanaPublicAccess <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+                     * 
+                     */
+                    void SetEnableKibanaPublicAccess(const std::string& _enableKibanaPublicAccess);
+
+                    /**
+                     * 判断参数 EnableKibanaPublicAccess 是否已赋值
+                     * @return EnableKibanaPublicAccess 是否已赋值
+                     * 
+                     */
+                    bool EnableKibanaPublicAccessHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Existing cloud monitoring and alarm policy ID</p>
+                     * @return AlarmPolicyIds <p>Existing cloud monitoring and alarm policy ID</p>
+                     * 
+                     */
+                    std::vector<std::string> GetAlarmPolicyIds() const;
+
+                    /**
+                     * 设置<p>Existing cloud monitoring and alarm policy ID</p>
+                     * @param _alarmPolicyIds <p>Existing cloud monitoring and alarm policy ID</p>
+                     * 
+                     */
+                    void SetAlarmPolicyIds(const std::vector<std::string>& _alarmPolicyIds);
+
+                    /**
+                     * 判断参数 AlarmPolicyIds 是否已赋值
+                     * @return AlarmPolicyIds 是否已赋值
+                     * 
+                     */
+                    bool AlarmPolicyIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Availability Zone
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+                     * <p>Instance version (supported: "5.6.4", "6.4.3", "6.8.2", "7.5.1", "7.10.1")</p>
                      */
                     std::string m_esVersion;
                     bool m_esVersionHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * <p>VPC ID</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * <p>Subnet ID.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * <p>Access password (8-16 characters, including at least two of the following: [a-z,A-Z], [0-9], and special characters in [-!@#$%&amp;^*+=_:;,.?])</p>
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+                     * <p>Instance name (1-50 English letters, Chinese characters, digits, hyphens -, or underscores _)</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2-50)
+                     * <p>Abandoned. Please use NodeInfoList<br>Node quantity (2-50)</p>
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
+                     * <p>Billing type<li>PREPAID: prepaid, i.e., monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour</li>Default value: POSTPAID_BY_HOUR</p>
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
 
                     /**
-                     * This parameter is not used on the global website
+                     * <p>Annual and monthly subscription duration (unit determined by the TimeUnit parameter)</p>
                      */
                     uint64_t m_chargePeriod;
                     bool m_chargePeriodHasBeenSet;
 
                     /**
-                     * This parameter is not used on the global website
+                     * <p>Auto-renewal flag<li>RENEW_FLAG_AUTO: auto renewal</li><li>RENEW_FLAG_MANUAL: no auto-renewal, user renews manually</li>This needs to be set when ChargeType is PREPAID. If this parameter is not passed, no automatic renewal by default for general users, and auto renewal for SVIP users</p>
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * <p>Abandoned. Please use NodeInfoList<br>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+                     * <p>Abandoned. Please use NodeInfoList<br>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_BSSD: universal type SSD cloud disk</li>Default value: CLOUD_SSD</p>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Node disk size in GB
+                     * <p>Abandoned. Please use NodeInfoList<br>Node disk capacity (unit: GB)</p>
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * This parameter is not used on the global website
+                     * <p>Billing duration unit (needs to be set when ChargeType is PREPAID. Default value: "m", which means month. Currently only support "m")</p>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+                     * <p>Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.</p>
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * List of voucher IDs (only one voucher can be specified at a time currently)
+                     * <p>Voucher ID list. Only one voucher can be specified.</p>
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
+                     * <p>Abandoned. Please use NodeInfoList<br>Whether to create a dedicated master node<li>true: enable a dedicated master node</li><li>false: disable a dedicated master node</li>Default value: false</p>
                      */
                     bool m_enableDedicatedMaster;
                     bool m_enableDedicatedMasterHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+                     * <p>Abandoned. Please use NodeInfoList<br>Number of dedicated primary nodes (supports only 3 or 5. Required if EnableDedicatedMaster is true)</p>
                      */
                     uint64_t m_masterNodeNum;
                     bool m_masterNodeNumHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+                     * <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node type (required if EnableDedicatedMaster is true)<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      */
                     std::string m_masterNodeType;
                     bool m_masterNodeTypeHasBeenSet;
 
                     /**
-                     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+                     * <p>Abandoned. Please use NodeInfoList<br>Dedicated primary node disk size (in GB, optional; if transmitted, it must be 50. Customization is not supported temporarily)</p>
                      */
                     uint64_t m_masterNodeDiskSize;
                     bool m_masterNodeDiskSizeHasBeenSet;
 
                     /**
-                     * ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
+                     * <p>ClusterName in the cluster configuration file (system default configuration is the instance ID, customization is not supported temporarily)</p>
                      */
                     std::string m_clusterNameInConf;
                     bool m_clusterNameInConfHasBeenSet;
 
                     /**
-                     * Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
+                     * <p>Cluster deployment method<li>0: single-AZ deployment</li><li>1: multi-AZ deployment, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li>Default value: 0</p>
                      */
                     uint64_t m_deployMode;
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
+                     * <p>Detailed information of availability zones in multi-AZ deployment (required when DeployMode is 1)</p>
                      */
                     std::vector<ZoneDetail> m_multiZoneInfo;
                     bool m_multiZoneInfoHasBeenSet;
 
                     /**
-                     * License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
 
                     /**
-                     * Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+                     * <p>Node information list, for description of the specification information of various types of nodes in the cluster, such as node type, number of nodes, node specification, disk type, and disk size</p>
                      */
                     std::vector<NodeInfo> m_nodeInfoList;
                     bool m_nodeInfoListHasBeenSet;
 
                     /**
-                     * Node tag information list
+                     * <p>Node tag information list</p>
                      */
                     std::vector<TagInfo> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+                     * <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
                      */
                     uint64_t m_basicSecurityType;
                     bool m_basicSecurityTypeHasBeenSet;
 
                     /**
-                     * Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     * <p>Scenario template type 0: disabled 1: common 2: log 3: search</p>
                      */
                     int64_t m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * Visual node configuration
+                     * <p>Visualize node configuration</p>
                      */
                     WebNodeTypeInfo m_webNodeTypeInfo;
                     bool m_webNodeTypeInfoHasBeenSet;
 
                     /**
-                     * Valid values: `https`, `http` (default)
+                     * <p>Create an https cluster. http is selected by default.</p>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The maintenance time slot
+                     * <p>Maintenance time slot</p>
                      */
                     OperationDuration m_operationDuration;
                     bool m_operationDurationHasBeenSet;
 
                     /**
-                     * Whether to enable the storage-computing separation feature.
+                     * <p>Whether storage-compute separation is enabled</p>
                      */
                     bool m_enableHybridStorage;
                     bool m_enableHybridStorageHasBeenSet;
 
                     /**
-                     * Whether to enable enhanced SSD
+                     * <p>Additional hard disk performance</p>
                      */
                     uint64_t m_diskEnhance;
                     bool m_diskEnhanceHasBeenSet;
 
                     /**
-                     * Whether to enable smart inspection.
+                     * <p>Whether intelligent check is enabled</p>
                      */
                     bool m_enableDiagnose;
                     bool m_enableDiagnoseHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable automatic backup</p>
+                     */
+                    bool m_enableCosBackup;
+                    bool m_enableCosBackupHasBeenSet;
+
+                    /**
+                     * <p>cdcId, pass it when using a CDC subnet</p>
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * <p>Placement group affinity. Value range: [0,10]. 0 indicates disabled.</p>
+                     */
+                    uint64_t m_disasterRecoverGroupAffinity;
+                    bool m_disasterRecoverGroupAffinityHasBeenSet;
+
+                    /**
+                     * <p>Enumeration values of sub-product ID: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     */
+                    std::string m_subProductCode;
+                    bool m_subProductCodeHasBeenSet;
+
+                    /**
+                     * <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     */
+                    int64_t m_readWriteMode;
+                    bool m_readWriteModeHasBeenSet;
+
+                    /**
+                     * <p>Whether the placement group has asynchronous tasks enabled</p>
+                     */
+                    bool m_enableScheduleRecoverGroup;
+                    bool m_enableScheduleRecoverGroupHasBeenSet;
+
+                    /**
+                     * <p>Maintenance time slot for enabling async tasks in a placement group</p>
+                     */
+                    EnableScheduleOperationDuration m_enableScheduleOperationDuration;
+                    bool m_enableScheduleOperationDurationHasBeenSet;
+
+                    /**
+                     * <p>Auto capacity expansion parameter list</p>
+                     */
+                    std::vector<AutoScaleDiskInfo> m_autoScaleDiskInfoList;
+                    bool m_autoScaleDiskInfoListHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable public network access to kibana. Enabled by default if not passed</p>
+                     */
+                    std::string m_enableKibanaPublicAccess;
+                    bool m_enableKibanaPublicAccessHasBeenSet;
+
+                    /**
+                     * <p>Existing cloud monitoring and alarm policy ID</p>
+                     */
+                    std::vector<std::string> m_alarmPolicyIds;
+                    bool m_alarmPolicyIdsHasBeenSet;
 
                 };
             }

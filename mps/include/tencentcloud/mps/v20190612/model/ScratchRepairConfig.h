@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Remove scratch configuration
+                * Scratch removal configuration
                 */
                 class ScratchRepairConfig : public AbstractModel
                 {
@@ -47,26 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Capability configuration switch. Valid values:
+                     * 获取Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-                     * @return Switch Capability configuration switch. Valid values:
+                     * @return Switch Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Capability configuration switch. Valid values:
+                     * 设置Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-                     * @param _switch Capability configuration switch. Valid values:
+                     * @param _switch Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      * 
                      */
@@ -80,15 +80,19 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Intensity 
+                     * 获取Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
+                     * @return Intensity Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
                      * 
                      */
                     double GetIntensity() const;
 
                     /**
-                     * 设置
-                     * @param _intensity 
+                     * 设置Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
+                     * @param _intensity Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
                      * 
                      */
                     void SetIntensity(const double& _intensity);
@@ -103,16 +107,17 @@ Default value: ON.
                 private:
 
                     /**
-                     * Capability configuration switch. Valid values:
+                     * Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
                      */
                     double m_intensity;
                     bool m_intensityHasBeenSet;

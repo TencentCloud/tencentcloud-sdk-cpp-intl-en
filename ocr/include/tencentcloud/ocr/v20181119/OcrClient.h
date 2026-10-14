@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/ocr/v20181119/model/ApplyCardVerificationExternalRequest.h>
 #include <tencentcloud/ocr/v20181119/model/ApplyCardVerificationExternalResponse.h>
+#include <tencentcloud/ocr/v20181119/model/ApplyOcrTokenRequest.h>
+#include <tencentcloud/ocr/v20181119/model/ApplyOcrTokenResponse.h>
 #include <tencentcloud/ocr/v20181119/model/ExtractDocMultiRequest.h>
 #include <tencentcloud/ocr/v20181119/model/ExtractDocMultiResponse.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h>
@@ -33,6 +35,8 @@
 #include <tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/GetCardVerificationExternalResultRequest.h>
 #include <tencentcloud/ocr/v20181119/model/GetCardVerificationExternalResultResponse.h>
+#include <tencentcloud/ocr/v20181119/model/GetOcrVerificationResultRequest.h>
+#include <tencentcloud/ocr/v20181119/model/GetOcrVerificationResultResponse.h>
 #include <tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/HmtResidentPermitOCRRequest.h>
@@ -104,6 +108,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApplyCardVerificationExternalResponse> ApplyCardVerificationExternalOutcome;
                 typedef std::future<ApplyCardVerificationExternalOutcome> ApplyCardVerificationExternalOutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::ApplyCardVerificationExternalRequest&, ApplyCardVerificationExternalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyCardVerificationExternalAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApplyOcrTokenResponse> ApplyOcrTokenOutcome;
+                typedef std::future<ApplyOcrTokenOutcome> ApplyOcrTokenOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::ApplyOcrTokenRequest&, ApplyOcrTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyOcrTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExtractDocMultiResponse> ExtractDocMultiOutcome;
                 typedef std::future<ExtractDocMultiOutcome> ExtractDocMultiOutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::ExtractDocMultiRequest&, ExtractDocMultiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExtractDocMultiAsyncHandler;
@@ -116,6 +123,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetCardVerificationExternalResultResponse> GetCardVerificationExternalResultOutcome;
                 typedef std::future<GetCardVerificationExternalResultOutcome> GetCardVerificationExternalResultOutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::GetCardVerificationExternalResultRequest&, GetCardVerificationExternalResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCardVerificationExternalResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetOcrVerificationResultResponse> GetOcrVerificationResultOutcome;
+                typedef std::future<GetOcrVerificationResultOutcome> GetOcrVerificationResultOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::GetOcrVerificationResultRequest&, GetOcrVerificationResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetOcrVerificationResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::HKIDCardOCRResponse> HKIDCardOCROutcome;
                 typedef std::future<HKIDCardOCROutcome> HKIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::HKIDCardOCRRequest&, HKIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> HKIDCardOCRAsyncHandler;
@@ -210,6 +220,15 @@ namespace TencentCloud
                 ApplyCardVerificationExternalOutcomeCallable ApplyCardVerificationExternalCallable(const Model::ApplyCardVerificationExternalRequest& request);
 
                 /**
+                 *This API retrieves a token before each call to the OCR SDK verification service. Save the token to initiate the verification process and retrieve the verification result after the process completes.
+                 * @param req ApplyOcrTokenRequest
+                 * @return ApplyOcrTokenOutcome
+                 */
+                ApplyOcrTokenOutcome ApplyOcrToken(const Model::ApplyOcrTokenRequest &request);
+                void ApplyOcrTokenAsync(const Model::ApplyOcrTokenRequest& request, const ApplyOcrTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyOcrTokenOutcomeCallable ApplyOcrTokenCallable(const Model::ApplyOcrTokenRequest& request);
+
+                /**
                  *This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
 This API is used to set the alias SmartStructuralPro.
 
@@ -259,6 +278,15 @@ This API is not fully available for the time being. For more information, please
                 GetCardVerificationExternalResultOutcome GetCardVerificationExternalResult(const Model::GetCardVerificationExternalResultRequest &request);
                 void GetCardVerificationExternalResultAsync(const Model::GetCardVerificationExternalResultRequest& request, const GetCardVerificationExternalResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetCardVerificationExternalResultOutcomeCallable GetCardVerificationExternalResultCallable(const Model::GetCardVerificationExternalResultRequest& request);
+
+                /**
+                 *This API retrieves the SDK verification result.
+                 * @param req GetOcrVerificationResultRequest
+                 * @return GetOcrVerificationResultOutcome
+                 */
+                GetOcrVerificationResultOutcome GetOcrVerificationResult(const Model::GetOcrVerificationResultRequest &request);
+                void GetOcrVerificationResultAsync(const Model::GetOcrVerificationResultRequest& request, const GetOcrVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetOcrVerificationResultOutcomeCallable GetOcrVerificationResultCallable(const Model::GetOcrVerificationResultRequest& request);
 
                 /**
                  *This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute.
@@ -486,7 +514,9 @@ As shown in the table below. <table style="width:650px"> <thead> <tr> <th width=
                 RecognizeSingaporeIDCardOCROutcomeCallable RecognizeSingaporeIDCardOCRCallable(const Model::RecognizeSingaporeIDCardOCRRequest& request);
 
                 /**
-                 *This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+                 *Domain name for API request: ocr.intl.tencentcloudapi.com.
+
+This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
 
 A maximum of 10 requests can be initiated per second for this API.
                  * @param req RecognizeThaiIDCardOCRRequest

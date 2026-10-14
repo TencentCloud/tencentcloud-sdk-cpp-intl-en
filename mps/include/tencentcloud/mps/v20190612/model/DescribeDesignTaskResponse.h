@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Msg 
+                     * 获取<p>Error message. success is returned if the request is successful.</p>
+                     * @return Msg <p>Error message. success is returned if the request is successful.</p>
                      * 
                      */
                     std::string GetMsg() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+                     * @return Status <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
                      * 
                      */
                     std::string GetStatus() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice type id</p>
+                     * @return VoiceId <p>Voice type id</p>
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Audition audio URL.</p>
+                     * @return AudioUrl <p>Audition audio URL.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Extended information.</p>
+                     * @return ExtInfo <p>Extended information.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
@@ -136,31 +136,31 @@ namespace TencentCloud
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Error message. success is returned if the request is successful.</p>
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice type id</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audition audio URL.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended information.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

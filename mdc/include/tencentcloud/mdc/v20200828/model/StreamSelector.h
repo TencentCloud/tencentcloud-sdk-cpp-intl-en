@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Select the specified audio track or video output
                 */
                 class StreamSelector : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SelectorType 
+                     * 获取Selection type: PID | TRACK
+                     * @return SelectorType Selection type: PID | TRACK
                      * 
                      */
                     std::string GetSelectorType() const;
 
                     /**
-                     * 设置
-                     * @param _selectorType 
+                     * 设置Selection type: PID | TRACK
+                     * @param _selectorType Selection type: PID | TRACK
                      * 
                      */
                     void SetSelectorType(const std::string& _selectorType);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool SelectorTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PidSelector 
+                     * 获取Based on the PID configuration selector
+                     * @return PidSelector Based on the PID configuration selector
                      * 
                      */
                     PidSelector GetPidSelector() const;
 
                     /**
-                     * 设置
-                     * @param _pidSelector 
+                     * 设置Based on the PID configuration selector
+                     * @param _pidSelector Based on the PID configuration selector
                      * 
                      */
                     void SetPidSelector(const PidSelector& _pidSelector);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool PidSelectorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TrackSelector 
+                     * 获取Select a selector based on the Track configuration
+                     * @return TrackSelector Select a selector based on the Track configuration
                      * 
                      */
                     TrackSelector GetTrackSelector() const;
 
                     /**
-                     * 设置
-                     * @param _trackSelector 
+                     * 设置Select a selector based on the Track configuration
+                     * @param _trackSelector Select a selector based on the Track configuration
                      * 
                      */
                     void SetTrackSelector(const TrackSelector& _trackSelector);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Selection type: PID | TRACK
                      */
                     std::string m_selectorType;
                     bool m_selectorTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Based on the PID configuration selector
                      */
                     PidSelector m_pidSelector;
                     bool m_pidSelectorHasBeenSet;
 
                     /**
-                     * 
+                     * Select a selector based on the Track configuration
                      */
                     TrackSelector m_trackSelector;
                     bool m_trackSelectorHasBeenSet;

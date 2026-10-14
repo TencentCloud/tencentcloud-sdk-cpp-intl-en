@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The media data of a flow.
+                * Media data in the transport stream.
                 */
                 class FlowMediaInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The timestamp (seconds).
-                     * @return Timestamp The timestamp (seconds).
+                     * 获取Timestamp in seconds.
+                     * @return Timestamp Timestamp in seconds.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置The timestamp (seconds).
-                     * @param _timestamp The timestamp (seconds).
+                     * 设置Timestamp in seconds.
+                     * @param _timestamp Timestamp in seconds.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取The total bandwidth.
-                     * @return Network The total bandwidth.
+                     * 获取Total bandwidth.
+                     * @return Network Total bandwidth.
                      * 
                      */
                     int64_t GetNetwork() const;
 
                     /**
-                     * 设置The total bandwidth.
-                     * @param _network The total bandwidth.
+                     * 设置Total bandwidth.
+                     * @param _network Total bandwidth.
                      * 
                      */
                     void SetNetwork(const int64_t& _network);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool NetworkHasBeenSet() const;
 
                     /**
-                     * 获取The video data of the flow.
-                     * @return Video The video data of the flow.
+                     * 获取Video data of the transport stream.
+                     * @return Video Video data of the transport stream.
                      * 
                      */
                     std::vector<FlowMediaVideo> GetVideo() const;
 
                     /**
-                     * 设置The video data of the flow.
-                     * @param _video The video data of the flow.
+                     * 设置Video data of the transport stream.
+                     * @param _video Video data of the transport stream.
                      * 
                      */
                     void SetVideo(const std::vector<FlowMediaVideo>& _video);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取The audio data of the flow.
-                     * @return Audio The audio data of the flow.
+                     * 获取Audio data of the transport stream.
+                     * @return Audio Audio data of the transport stream.
                      * 
                      */
                     std::vector<FlowMediaAudio> GetAudio() const;
 
                     /**
-                     * 设置The audio data of the flow.
-                     * @param _audio The audio data of the flow.
+                     * 设置Audio data of the transport stream.
+                     * @param _audio Audio data of the transport stream.
                      * 
                      */
                     void SetAudio(const std::vector<FlowMediaAudio>& _audio);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool AudioHasBeenSet() const;
 
                     /**
-                     * 获取The ID of a push session.
-                     * @return SessionId The ID of a push session.
+                     * 获取Flag of the same push.
+                     * @return SessionId Flag of the same push.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID of a push session.
-                     * @param _sessionId The ID of a push session.
+                     * 设置Flag of the same push.
+                     * @param _sessionId Flag of the same push.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The client IP.
-                     * @return ClientIp The client IP.
+                     * 获取Client IP.
+                     * @return ClientIp Client IP.
                      * 
                      */
                     std::string GetClientIp() const;
 
                     /**
-                     * 设置The client IP.
-                     * @param _clientIp The client IP.
+                     * 设置Client IP.
+                     * @param _clientIp Client IP.
                      * 
                      */
                     void SetClientIp(const std::string& _clientIp);
@@ -177,37 +177,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The timestamp (seconds).
+                     * Timestamp in seconds.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * The total bandwidth.
+                     * Total bandwidth.
                      */
                     int64_t m_network;
                     bool m_networkHasBeenSet;
 
                     /**
-                     * The video data of the flow.
+                     * Video data of the transport stream.
                      */
                     std::vector<FlowMediaVideo> m_video;
                     bool m_videoHasBeenSet;
 
                     /**
-                     * The audio data of the flow.
+                     * Audio data of the transport stream.
                      */
                     std::vector<FlowMediaAudio> m_audio;
                     bool m_audioHasBeenSet;
 
                     /**
-                     * The ID of a push session.
+                     * Flag of the same push.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The client IP.
+                     * Client IP.
                      */
                     std::string m_clientIp;
                     bool m_clientIpHasBeenSet;

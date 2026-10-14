@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Widget structure of the dialogue side
                 */
                 class Widget : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return WidgetId 
+                     * 获取Widget configuration ID
+
+                     * @return WidgetId Widget configuration ID
+
                      * 
                      */
                     std::string GetWidgetId() const;
 
                     /**
-                     * 设置
-                     * @param _widgetId 
+                     * 设置Widget configuration ID
+
+                     * @param _widgetId Widget configuration ID
+
                      * 
                      */
                     void SetWidgetId(const std::string& _widgetId);
@@ -68,15 +72,15 @@ namespace TencentCloud
                     bool WidgetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WidgetRunId 
+                     * 获取Widget instance ID
+                     * @return WidgetRunId Widget instance ID
                      * 
                      */
                     std::string GetWidgetRunId() const;
 
                     /**
-                     * 设置
-                     * @param _widgetRunId 
+                     * 设置Widget instance ID
+                     * @param _widgetRunId Widget instance ID
                      * 
                      */
                     void SetWidgetRunId(const std::string& _widgetRunId);
@@ -89,15 +93,15 @@ namespace TencentCloud
                     bool WidgetRunIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return View 
+                     * 获取Widget display data
+                     * @return View Widget display data
                      * 
                      */
                     std::string GetView() const;
 
                     /**
-                     * 设置
-                     * @param _view 
+                     * 设置Widget display data
+                     * @param _view Widget display data
                      * 
                      */
                     void SetView(const std::string& _view);
@@ -110,15 +114,15 @@ namespace TencentCloud
                     bool ViewHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return State 
+                     * 获取Widget status information
+                     * @return State Widget status information
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置
-                     * @param _state 
+                     * 设置Widget status information
+                     * @param _state Widget status information
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -131,15 +135,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Position 
+                     * 获取Widget position
+                     * @return Position Widget position
                      * 
                      */
                     int64_t GetPosition() const;
 
                     /**
-                     * 设置
-                     * @param _position 
+                     * 设置Widget position
+                     * @param _position Widget position
                      * 
                      */
                     void SetPosition(const int64_t& _position);
@@ -152,15 +156,15 @@ namespace TencentCloud
                     bool PositionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EncodedWidget 
+                     * 获取Base64-encoded Widget information.
+                     * @return EncodedWidget Base64-encoded Widget information.
                      * 
                      */
                     std::string GetEncodedWidget() const;
 
                     /**
-                     * 设置
-                     * @param _encodedWidget 
+                     * 设置Base64-encoded Widget information.
+                     * @param _encodedWidget Base64-encoded Widget information.
                      * 
                      */
                     void SetEncodedWidget(const std::string& _encodedWidget);
@@ -173,15 +177,15 @@ namespace TencentCloud
                     bool EncodedWidgetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Payload 
+                     * 获取payload of the user's last submission
+                     * @return Payload payload of the user's last submission
                      * 
                      */
                     std::string GetPayload() const;
 
                     /**
-                     * 设置
-                     * @param _payload 
+                     * 设置payload of the user's last submission
+                     * @param _payload payload of the user's last submission
                      * 
                      */
                     void SetPayload(const std::string& _payload);
@@ -196,43 +200,44 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Widget configuration ID
+
                      */
                     std::string m_widgetId;
                     bool m_widgetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Widget instance ID
                      */
                     std::string m_widgetRunId;
                     bool m_widgetRunIdHasBeenSet;
 
                     /**
-                     * 
+                     * Widget display data
                      */
                     std::string m_view;
                     bool m_viewHasBeenSet;
 
                     /**
-                     * 
+                     * Widget status information
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * 
+                     * Widget position
                      */
                     int64_t m_position;
                     bool m_positionHasBeenSet;
 
                     /**
-                     * 
+                     * Base64-encoded Widget information.
                      */
                     std::string m_encodedWidget;
                     bool m_encodedWidgetHasBeenSet;
 
                     /**
-                     * 
+                     * payload of the user's last submission
                      */
                     std::string m_payload;
                     bool m_payloadHasBeenSet;

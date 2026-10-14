@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return DealName Order ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Order ID.</p>
+                     * @return DealName <p>Order ID.</p>
                      * 
                      */
                     std::string GetDealName() const;
@@ -76,14 +74,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Order ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Order ID.</p>
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;

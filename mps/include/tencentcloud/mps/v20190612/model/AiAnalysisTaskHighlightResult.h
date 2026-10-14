@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of the intelligent highlight
+                * Type of the intelligent highlight result.
                 */
                 class AiAnalysisTaskHighlightResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the intelligent highlight task.
+                     * @return Output Output of the intelligent highlight task.
                      * 
                      */
                     AiAnalysisTaskHighlightOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the intelligent highlight task.
+                     * @param _output Output of the intelligent highlight task.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskHighlightOutput& _output);
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the intelligent highlight task.
                      */
                     AiAnalysisTaskHighlightOutput m_output;
                     bool m_outputHasBeenSet;

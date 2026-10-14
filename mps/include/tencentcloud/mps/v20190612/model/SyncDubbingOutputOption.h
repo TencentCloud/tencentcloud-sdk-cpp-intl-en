@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output parameter setting for synchronous dubbing.
                 */
                 class SyncDubbingOutputOption : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>data: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
+                     * @return Type <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>data: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>data: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
+                     * @param _type <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>data: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>data: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

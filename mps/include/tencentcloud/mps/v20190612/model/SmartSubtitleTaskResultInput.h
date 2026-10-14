@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RawParameter 
+                     * 获取<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+                     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
                      * 
                      */
                     RawSmartSubtitleParameter GetRawParameter() const;
 
                     /**
-                     * 设置
-                     * @param _rawParameter 
+                     * 设置<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+                     * @param _rawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
                      * 
                      */
                     void SetRawParameter(const RawSmartSubtitleParameter& _rawParameter);
@@ -119,7 +119,7 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
                      */
                     RawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;

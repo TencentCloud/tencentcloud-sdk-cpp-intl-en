@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI review result
+                * AI review result of the live stream
                 */
                 class LiveStreamAiReviewResultItem : public AbstractModel
                 {
@@ -51,31 +51,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Review result type. Valid values:
-<li>ImagePorn: image porn detection.</li>
-<li>ImageTerrorism: image terrorism.</li>
-<li>ImagePolitical: image political sensitivity.</li>
-<li>VoicePorn: sound rule violation.</li>
-                     * @return Type Review result type. Valid values:
-<li>ImagePorn: image porn detection.</li>
-<li>ImageTerrorism: image terrorism.</li>
-<li>ImagePolitical: image political sensitivity.</li>
-<li>VoicePorn: sound rule violation.</li>
+                     * 获取Type of the review result. Valid values:
+<li>ImagePorn: image moderation.</li>
+<li>ImageTerrorism: image involving sensitive content.</li>
+<li>ImagePolitical: politically sensitive image.</li>
+<li>VoicePorn: sound violation.</li>
+                     * @return Type Type of the review result. Valid values:
+<li>ImagePorn: image moderation.</li>
+<li>ImageTerrorism: image involving sensitive content.</li>
+<li>ImagePolitical: politically sensitive image.</li>
+<li>VoicePorn: sound violation.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Review result type. Valid values:
-<li>ImagePorn: image porn detection.</li>
-<li>ImageTerrorism: image terrorism.</li>
-<li>ImagePolitical: image political sensitivity.</li>
-<li>VoicePorn: sound rule violation.</li>
-                     * @param _type Review result type. Valid values:
-<li>ImagePorn: image porn detection.</li>
-<li>ImageTerrorism: image terrorism.</li>
-<li>ImagePolitical: image political sensitivity.</li>
-<li>VoicePorn: sound rule violation.</li>
+                     * 设置Type of the review result. Valid values:
+<li>ImagePorn: image moderation.</li>
+<li>ImageTerrorism: image involving sensitive content.</li>
+<li>ImagePolitical: politically sensitive image.</li>
+<li>VoicePorn: sound violation.</li>
+                     * @param _type Type of the review result. Valid values:
+<li>ImagePorn: image moderation.</li>
+<li>ImageTerrorism: image involving sensitive content.</li>
+<li>ImagePolitical: politically sensitive image.</li>
+<li>VoicePorn: sound violation.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Image porn detection result, valid when Type is ImagePorn.
-                     * @return ImagePornResultSet Image porn detection result, valid when Type is ImagePorn.
+                     * 获取Result of porn detection on the image. Valid when Type is ImagePorn.
+                     * @return ImagePornResultSet Result of porn detection on the image. Valid when Type is ImagePorn.
                      * 
                      */
                     std::vector<LiveStreamAiReviewImagePornResult> GetImagePornResultSet() const;
 
                     /**
-                     * 设置Image porn detection result, valid when Type is ImagePorn.
-                     * @param _imagePornResultSet Image porn detection result, valid when Type is ImagePorn.
+                     * 设置Result of porn detection on the image. Valid when Type is ImagePorn.
+                     * @param _imagePornResultSet Result of porn detection on the image. Valid when Type is ImagePorn.
                      * 
                      */
                     void SetImagePornResultSet(const std::vector<LiveStreamAiReviewImagePornResult>& _imagePornResultSet);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool ImagePornResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Result of image terrorism detection, valid when Type is ImageTerrorism.
-                     * @return ImageTerrorismResultSet Result of image terrorism detection, valid when Type is ImageTerrorism.
+                     * 获取Image moderation result. Valid when Type is ImageTerrorism.
+                     * @return ImageTerrorismResultSet Image moderation result. Valid when Type is ImageTerrorism.
                      * 
                      */
                     std::vector<LiveStreamAiReviewImageTerrorismResult> GetImageTerrorismResultSet() const;
 
                     /**
-                     * 设置Result of image terrorism detection, valid when Type is ImageTerrorism.
-                     * @param _imageTerrorismResultSet Result of image terrorism detection, valid when Type is ImageTerrorism.
+                     * 设置Image moderation result. Valid when Type is ImageTerrorism.
+                     * @param _imageTerrorismResultSet Image moderation result. Valid when Type is ImageTerrorism.
                      * 
                      */
                     void SetImageTerrorismResultSet(const std::vector<LiveStreamAiReviewImageTerrorismResult>& _imageTerrorismResultSet);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool ImageTerrorismResultSetHasBeenSet() const;
 
                     /**
-                     * 获取The result of image sensitivity, valid when Type is ImagePolitical.
-                     * @return ImagePoliticalResultSet The result of image sensitivity, valid when Type is ImagePolitical.
+                     * 获取Image moderation result. Valid when Type is ImagePolitical.
+                     * @return ImagePoliticalResultSet Image moderation result. Valid when Type is ImagePolitical.
                      * 
                      */
                     std::vector<LiveStreamAiReviewImagePoliticalResult> GetImagePoliticalResultSet() const;
 
                     /**
-                     * 设置The result of image sensitivity, valid when Type is ImagePolitical.
-                     * @param _imagePoliticalResultSet The result of image sensitivity, valid when Type is ImagePolitical.
+                     * 设置Image moderation result. Valid when Type is ImagePolitical.
+                     * @param _imagePoliticalResultSet Image moderation result. Valid when Type is ImagePolitical.
                      * 
                      */
                     void SetImagePoliticalResultSet(const std::vector<LiveStreamAiReviewImagePoliticalResult>& _imagePoliticalResultSet);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool ImagePoliticalResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Result of sound rule violation, valid when Type is VoicePorn.
-                     * @return VoicePornResultSet Result of sound rule violation, valid when Type is VoicePorn.
+                     * 获取Result of sound rule violation. Valid when `Type` is `VoicePorn`.
+                     * @return VoicePornResultSet Result of sound rule violation. Valid when `Type` is `VoicePorn`.
                      * 
                      */
                     std::vector<LiveStreamAiReviewVoicePornResult> GetVoicePornResultSet() const;
 
                     /**
-                     * 设置Result of sound rule violation, valid when Type is VoicePorn.
-                     * @param _voicePornResultSet Result of sound rule violation, valid when Type is VoicePorn.
+                     * 设置Result of sound rule violation. Valid when `Type` is `VoicePorn`.
+                     * @param _voicePornResultSet Result of sound rule violation. Valid when `Type` is `VoicePorn`.
                      * 
                      */
                     void SetVoicePornResultSet(const std::vector<LiveStreamAiReviewVoicePornResult>& _voicePornResultSet);
@@ -174,35 +174,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Review result type. Valid values:
-<li>ImagePorn: image porn detection.</li>
-<li>ImageTerrorism: image terrorism.</li>
-<li>ImagePolitical: image political sensitivity.</li>
-<li>VoicePorn: sound rule violation.</li>
+                     * Type of the review result. Valid values:
+<li>ImagePorn: image moderation.</li>
+<li>ImageTerrorism: image involving sensitive content.</li>
+<li>ImagePolitical: politically sensitive image.</li>
+<li>VoicePorn: sound violation.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Image porn detection result, valid when Type is ImagePorn.
+                     * Result of porn detection on the image. Valid when Type is ImagePorn.
                      */
                     std::vector<LiveStreamAiReviewImagePornResult> m_imagePornResultSet;
                     bool m_imagePornResultSetHasBeenSet;
 
                     /**
-                     * Result of image terrorism detection, valid when Type is ImageTerrorism.
+                     * Image moderation result. Valid when Type is ImageTerrorism.
                      */
                     std::vector<LiveStreamAiReviewImageTerrorismResult> m_imageTerrorismResultSet;
                     bool m_imageTerrorismResultSetHasBeenSet;
 
                     /**
-                     * The result of image sensitivity, valid when Type is ImagePolitical.
+                     * Image moderation result. Valid when Type is ImagePolitical.
                      */
                     std::vector<LiveStreamAiReviewImagePoliticalResult> m_imagePoliticalResultSet;
                     bool m_imagePoliticalResultSetHasBeenSet;
 
                     /**
-                     * Result of sound rule violation, valid when Type is VoicePorn.
+                     * Result of sound rule violation. Valid when `Type` is `VoicePorn`.
                      */
                     std::vector<LiveStreamAiReviewVoicePornResult> m_voicePornResultSet;
                     bool m_voicePornResultSetHasBeenSet;

@@ -28,7 +28,9 @@ KibanaView::KibanaView() :
     m_memUsageHasBeenSet(false),
     m_cpuNumHasBeenSet(false),
     m_cpuUsageHasBeenSet(false),
-    m_zoneHasBeenSet(false)
+    m_zoneHasBeenSet(false),
+    m_nodeIdHasBeenSet(false),
+    m_userIpHasBeenSet(false)
 {
 }
 
@@ -117,6 +119,26 @@ CoreInternalOutcome KibanaView::Deserialize(const rapidjson::Value &value)
         m_zoneHasBeenSet = true;
     }
 
+    if (value.HasMember("NodeId") && !value["NodeId"].IsNull())
+    {
+        if (!value["NodeId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `KibanaView.NodeId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nodeId = string(value["NodeId"].GetString());
+        m_nodeIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("UserIp") && !value["UserIp"].IsNull())
+    {
+        if (!value["UserIp"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `KibanaView.UserIp` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_userIp = string(value["UserIp"].GetString());
+        m_userIpHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -186,6 +208,22 @@ void KibanaView::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_userIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserIp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userIp.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -317,5 +355,37 @@ void KibanaView::SetZone(const string& _zone)
 bool KibanaView::ZoneHasBeenSet() const
 {
     return m_zoneHasBeenSet;
+}
+
+string KibanaView::GetNodeId() const
+{
+    return m_nodeId;
+}
+
+void KibanaView::SetNodeId(const string& _nodeId)
+{
+    m_nodeId = _nodeId;
+    m_nodeIdHasBeenSet = true;
+}
+
+bool KibanaView::NodeIdHasBeenSet() const
+{
+    return m_nodeIdHasBeenSet;
+}
+
+string KibanaView::GetUserIp() const
+{
+    return m_userIp;
+}
+
+void KibanaView::SetUserIp(const string& _userIp)
+{
+    m_userIp = _userIp;
+    m_userIpHasBeenSet = true;
+}
+
+bool KibanaView::UserIpHasBeenSet() const
+{
+    return m_userIpHasBeenSet;
 }
 

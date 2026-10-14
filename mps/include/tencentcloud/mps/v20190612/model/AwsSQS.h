@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SQSRegion 
+                     * 获取SQS queue area.
+                     * @return SQSRegion SQS queue area.
                      * 
                      */
                     std::string GetSQSRegion() const;
 
                     /**
-                     * 设置
-                     * @param _sQSRegion 
+                     * 设置SQS queue area.
+                     * @param _sQSRegion SQS queue area.
                      * 
                      */
                     void SetSQSRegion(const std::string& _sQSRegion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SQSRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SQSQueueName 
+                     * 获取SQS queue name.
+                     * @return SQSQueueName SQS queue name.
                      * 
                      */
                     std::string GetSQSQueueName() const;
 
                     /**
-                     * 设置
-                     * @param _sQSQueueName 
+                     * 设置SQS queue name.
+                     * @param _sQSQueueName SQS queue name.
                      * 
                      */
                     void SetSQSQueueName(const std::string& _sQSQueueName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SQSQueueNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3SecretId 
+                     * 获取id for read-write access to SQS.
+                     * @return S3SecretId id for read-write access to SQS.
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置
-                     * @param _s3SecretId 
+                     * 设置id for read-write access to SQS.
+                     * @param _s3SecretId id for read-write access to SQS.
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return S3SecretKey 
+                     * 获取key for read-write access to SQS.
+                     * @return S3SecretKey key for read-write access to SQS.
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _s3SecretKey 
+                     * 设置key for read-write access to SQS.
+                     * @param _s3SecretKey key for read-write access to SQS.
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * SQS queue area.
                      */
                     std::string m_sQSRegion;
                     bool m_sQSRegionHasBeenSet;
 
                     /**
-                     * 
+                     * SQS queue name.
                      */
                     std::string m_sQSQueueName;
                     bool m_sQSQueueNameHasBeenSet;
 
                     /**
-                     * 
+                     * id for read-write access to SQS.
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * 
+                     * key for read-write access to SQS.
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;

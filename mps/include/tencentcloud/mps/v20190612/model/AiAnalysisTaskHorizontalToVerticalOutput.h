@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Path 
+                     * 获取Intelligent landscape-to-portrait video list.
+                     * @return Path Intelligent landscape-to-portrait video list.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置
-                     * @param _path 
+                     * 设置Intelligent landscape-to-portrait video list.
+                     * @param _path Intelligent landscape-to-portrait video list.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取Storage location of intelligent landscape-to-portrait videos.
+                     * @return OutputStorage Storage location of intelligent landscape-to-portrait videos.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置Storage location of intelligent landscape-to-portrait videos.
+                     * @param _outputStorage Storage location of intelligent landscape-to-portrait videos.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence degree.	
+                     * @return Confidence Confidence degree.	
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence degree.	
+                     * @param _confidence Confidence degree.	
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Intelligent landscape-to-portrait video list.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * 
+                     * Storage location of intelligent landscape-to-portrait videos.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Confidence degree.	
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

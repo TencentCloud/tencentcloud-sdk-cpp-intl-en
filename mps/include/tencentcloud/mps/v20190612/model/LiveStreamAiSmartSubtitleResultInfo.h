@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream smart subtitle result
+                * Smart subtitle result of the live stream.
                 */
                 class LiveStreamAiSmartSubtitleResultInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Live stream smart subtitle task result list.
-                     * @return SmartSubtitleResult Live stream smart subtitle task result list.
+                     * 获取List of live stream smart subtitle task results.
+                     * @return SmartSubtitleResult List of live stream smart subtitle task results.
                      * 
                      */
                     std::vector<LiveSmartSubtitleResult> GetSmartSubtitleResult() const;
 
                     /**
-                     * 设置Live stream smart subtitle task result list.
-                     * @param _smartSubtitleResult Live stream smart subtitle task result list.
+                     * 设置List of live stream smart subtitle task results.
+                     * @param _smartSubtitleResult List of live stream smart subtitle task results.
                      * 
                      */
                     void SetSmartSubtitleResult(const std::vector<LiveSmartSubtitleResult>& _smartSubtitleResult);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Live stream smart subtitle task result list.
+                     * List of live stream smart subtitle task results.
                      */
                     std::vector<LiveSmartSubtitleResult> m_smartSubtitleResult;
                     bool m_smartSubtitleResultHasBeenSet;

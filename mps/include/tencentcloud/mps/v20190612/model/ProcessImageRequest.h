@@ -110,42 +110,42 @@ namespace TencentCloud
 
                     /**
                      * 获取Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
                      * @return OutputPath Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
                      * 
                      */
                     std::string GetOutputPath() const;
 
                     /**
                      * 设置Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
                      * @param _outputPath Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
                      * 
                      */
                     void SetOutputPath(const std::string& _outputPath);
@@ -267,13 +267,13 @@ The image template feature is in beta testing. If you want to use it, submit a t
 
                     /**
                      * Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
                      */
                     std::string m_outputPath;
                     bool m_outputPathHasBeenSet;

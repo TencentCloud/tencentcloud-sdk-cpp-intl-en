@@ -47,10 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ClusterView Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Cluster dimension view
+                     * @return ClusterView Cluster dimension view
                      * 
                      */
                     ClusterView GetClusterView() const;
@@ -63,10 +61,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterViewHasBeenSet() const;
 
                     /**
-                     * 获取Node view
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return NodesView Node view
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Node dimension view
+                     * @return NodesView Node dimension view
                      * 
                      */
                     std::vector<NodeView> GetNodesView() const;
@@ -79,10 +75,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool NodesViewHasBeenSet() const;
 
                     /**
-                     * 获取Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return KibanasView Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Kibana dimensional view
+                     * @return KibanasView Kibana dimensional view
                      * 
                      */
                     std::vector<KibanaView> GetKibanasView() const;
@@ -97,22 +91,19 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Cluster dimension view
                      */
                     ClusterView m_clusterView;
                     bool m_clusterViewHasBeenSet;
 
                     /**
-                     * Node view
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Node dimension view
                      */
                     std::vector<NodeView> m_nodesView;
                     bool m_nodesViewHasBeenSet;
 
                     /**
-                     * Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Kibana dimensional view
                      */
                     std::vector<KibanaView> m_kibanasView;
                     bool m_kibanasViewHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Orchestration task info
+                * Orchestration task information
                 */
                 class ScheduleTask : public AbstractModel
                 {
@@ -71,10 +71,10 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task flow status. Valid values:
+                     * 获取Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-                     * @return Status Task flow status. Valid values:
+                     * @return Status Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      * 
@@ -82,10 +82,10 @@ namespace TencentCloud
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task flow status. Valid values:
+                     * 设置Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-                     * @param _status Task flow status. Valid values:
+                     * @param _status Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      * 
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputInfo 
+                     * 获取Information about the target file for media processing.
+                     * @return InputInfo Information about the target file for media processing.
                      * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _inputInfo 
+                     * 设置Information about the target file for media processing.
+                     * @param _inputInfo Information about the target file for media processing.
                      * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取Metadata of the original video.
+                     * @return MetaData Metadata of the original video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置Metadata of the original video.
+                     * @param _metaData Metadata of the original video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActivityResultSet 
+                     * 获取Output of the orchestration task.
+                     * @return ActivityResultSet Output of the orchestration task.
                      * 
                      */
                     std::vector<ActivityResult> GetActivityResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _activityResultSet 
+                     * 设置Output of the orchestration task.
+                     * @param _activityResultSet Output of the orchestration task.
                      * 
                      */
                     void SetActivityResultSet(const std::vector<ActivityResult>& _activityResultSet);
@@ -213,7 +213,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task flow status. Valid values:
+                     * Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
                      */
@@ -233,19 +233,19 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Information about the target file for media processing.
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Metadata of the original video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the orchestration task.
                      */
                     std::vector<ActivityResult> m_activityResultSet;
                     bool m_activityResultSetHasBeenSet;

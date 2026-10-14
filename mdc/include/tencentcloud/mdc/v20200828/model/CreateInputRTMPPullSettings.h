@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configuration message of the created input RTMP pull.
                 */
                 class CreateInputRTMPPullSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SourceAddresses 
+                     * 获取RTMP origin server address. Only one is allowed.
+                     * @return SourceAddresses RTMP origin server address. Only one is allowed.
                      * 
                      */
                     std::vector<RTMPPullSourceAddress> GetSourceAddresses() const;
 
                     /**
-                     * 设置
-                     * @param _sourceAddresses 
+                     * 设置RTMP origin server address. Only one is allowed.
+                     * @param _sourceAddresses RTMP origin server address. Only one is allowed.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<RTMPPullSourceAddress>& _sourceAddresses);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * RTMP origin server address. Only one is allowed.
                      */
                     std::vector<RTMPPullSourceAddress> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;

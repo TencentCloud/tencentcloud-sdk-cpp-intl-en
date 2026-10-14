@@ -52,7 +52,7 @@ namespace TencentCloud
                      * 获取Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -71,16 +71,16 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
                      * @return Type Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -99,12 +99,12 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
                      * 
                      */
                     std::string GetType() const;
@@ -113,7 +113,7 @@ For MPEG-DASH, only singlefile mode can be used.
                      * 设置Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -132,16 +132,16 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
                      * @param _type Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -160,12 +160,12 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -178,15 +178,15 @@ For MPEG-DASH, only singlefile mode can be used.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SimpleAesDrm 
+                     * 获取SimpleAes encryption information.
+                     * @return SimpleAesDrm SimpleAes encryption information.
                      * 
                      */
                     SimpleAesDrm GetSimpleAesDrm() const;
 
                     /**
-                     * 设置
-                     * @param _simpleAesDrm 
+                     * 设置SimpleAes encryption information.
+                     * @param _simpleAesDrm SimpleAes encryption information.
                      * 
                      */
                     void SetSimpleAesDrm(const SimpleAesDrm& _simpleAesDrm);
@@ -225,7 +225,7 @@ For MPEG-DASH, only singlefile mode can be used.
                      * Encryption type.
 
 - simpleaes
-Can only be used for HLS. Format support: ts and mp4.
+Can only be used for HLS. Format support: ts and mp4
 Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
@@ -244,18 +244,18 @@ Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
 Can only be used for HLS. The segment format can only be mp4.
-Slice mode or singlefile mode can be used.
+Slice mode or single-file mode can be used.
 
 - widevine+playready:
 Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
 For HLS format, you can use the slicing mode or singlefile mode.
-For MPEG-DASH, only singlefile mode can be used.
+For MPEG-DASH, only can be used in singlefile mode.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * SimpleAes encryption information.
                      */
                     SimpleAesDrm m_simpleAesDrm;
                     bool m_simpleAesDrmHasBeenSet;

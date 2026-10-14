@@ -43,7 +43,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI recognition result
+                * AI recognition result of the live stream
                 */
                 class LiveStreamAiRecognitionResultItem : public AbstractModel
                 {
@@ -109,18 +109,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
                      * @return FaceRecognitionResultSet Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
                      * 
                      */
                     std::vector<LiveStreamFaceRecognitionResult> GetFaceRecognitionResultSet() const;
 
                     /**
                      * 设置Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
                      * @param _faceRecognitionResultSet Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
                      * 
                      */
                     void SetFaceRecognitionResultSet(const std::vector<LiveStreamFaceRecognitionResult>& _faceRecognitionResultSet);
@@ -134,18 +134,18 @@ FaceRecognition is valid at that time.
 
                     /**
                      * 获取Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
                      * @return AsrWordsRecognitionResultSet Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
                      * 
                      */
                     std::vector<LiveStreamAsrWordsRecognitionResult> GetAsrWordsRecognitionResultSet() const;
 
                     /**
                      * 设置Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
                      * @param _asrWordsRecognitionResultSet Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
                      * 
                      */
                     void SetAsrWordsRecognitionResultSet(const std::vector<LiveStreamAsrWordsRecognitionResult>& _asrWordsRecognitionResultSet);
@@ -159,18 +159,18 @@ AsrWordsRecognition.
 
                     /**
                      * 获取Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
                      * @return OcrWordsRecognitionResultSet Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
                      * 
                      */
                     std::vector<LiveStreamOcrWordsRecognitionResult> GetOcrWordsRecognitionResultSet() const;
 
                     /**
                      * 设置Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
                      * @param _ocrWordsRecognitionResultSet Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
                      * 
                      */
                     void SetOcrWordsRecognitionResultSet(const std::vector<LiveStreamOcrWordsRecognitionResult>& _ocrWordsRecognitionResultSet);
@@ -184,18 +184,18 @@ OcrWordsRecognition.
 
                     /**
                      * 获取Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
                      * @return AsrFullTextRecognitionResultSet Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
                      * 
                      */
                     std::vector<LiveStreamAsrFullTextRecognitionResult> GetAsrFullTextRecognitionResultSet() const;
 
                     /**
                      * 设置Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
                      * @param _asrFullTextRecognitionResultSet Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
                      * 
                      */
                     void SetAsrFullTextRecognitionResultSet(const std::vector<LiveStreamAsrFullTextRecognitionResult>& _asrFullTextRecognitionResultSet);
@@ -208,19 +208,19 @@ AsrFullTextRecognition.
                     bool AsrFullTextRecognitionResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Full text recognition result, when Type is
-OcrFullTextRecognition.
-                     * @return OcrFullTextRecognitionResultSet Full text recognition result, when Type is
-OcrFullTextRecognition.
+                     * 获取Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
+                     * @return OcrFullTextRecognitionResultSet Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
                      * 
                      */
                     std::vector<LiveStreamOcrFullTextRecognitionResult> GetOcrFullTextRecognitionResultSet() const;
 
                     /**
-                     * 设置Full text recognition result, when Type is
-OcrFullTextRecognition.
-                     * @param _ocrFullTextRecognitionResultSet Full text recognition result, when Type is
-OcrFullTextRecognition.
+                     * 设置Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
+                     * @param _ocrFullTextRecognitionResultSet Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
                      * 
                      */
                     void SetOcrFullTextRecognitionResultSet(const std::vector<LiveStreamOcrFullTextRecognitionResult>& _ocrFullTextRecognitionResultSet);
@@ -275,15 +275,15 @@ OcrFullTextRecognition.
                     bool ObjectRecognitionResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagRecognitionResultSet 
+                     * 获取Marking point result. Valid when Type is TagRecognition.
+                     * @return TagRecognitionResultSet Marking point result. Valid when Type is TagRecognition.
                      * 
                      */
                     std::vector<LiveStreamTagRecognitionResult> GetTagRecognitionResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _tagRecognitionResultSet 
+                     * 设置Marking point result. Valid when Type is TagRecognition.
+                     * @param _tagRecognitionResultSet Marking point result. Valid when Type is TagRecognition.
                      * 
                      */
                     void SetTagRecognitionResultSet(const std::vector<LiveStreamTagRecognitionResult>& _tagRecognitionResultSet);
@@ -313,35 +313,35 @@ OcrFullTextRecognition.
 
                     /**
                      * Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
                      */
                     std::vector<LiveStreamFaceRecognitionResult> m_faceRecognitionResultSet;
                     bool m_faceRecognitionResultSetHasBeenSet;
 
                     /**
                      * Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
                      */
                     std::vector<LiveStreamAsrWordsRecognitionResult> m_asrWordsRecognitionResultSet;
                     bool m_asrWordsRecognitionResultSetHasBeenSet;
 
                     /**
                      * Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
                      */
                     std::vector<LiveStreamOcrWordsRecognitionResult> m_ocrWordsRecognitionResultSet;
                     bool m_ocrWordsRecognitionResultSetHasBeenSet;
 
                     /**
                      * Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
                      */
                     std::vector<LiveStreamAsrFullTextRecognitionResult> m_asrFullTextRecognitionResultSet;
                     bool m_asrFullTextRecognitionResultSetHasBeenSet;
 
                     /**
-                     * Full text recognition result, when Type is
-OcrFullTextRecognition.
+                     * Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
                      */
                     std::vector<LiveStreamOcrFullTextRecognitionResult> m_ocrFullTextRecognitionResultSet;
                     bool m_ocrFullTextRecognitionResultSetHasBeenSet;
@@ -359,7 +359,7 @@ OcrFullTextRecognition.
                     bool m_objectRecognitionResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Marking point result. Valid when Type is TagRecognition.
                      */
                     std::vector<LiveStreamTagRecognitionResult> m_tagRecognitionResultSet;
                     bool m_tagRecognitionResultSetHasBeenSet;

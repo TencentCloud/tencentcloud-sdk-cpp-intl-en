@@ -29,7 +29,11 @@ RecognizePhilippinesTinIDOCRResponse::RecognizePhilippinesTinIDOCRResponse() :
     m_fullNameHasBeenSet(false),
     m_addressHasBeenSet(false),
     m_birthdayHasBeenSet(false),
-    m_issueDateHasBeenSet(false)
+    m_issueDateHasBeenSet(false),
+    m_givenNameHasBeenSet(false),
+    m_lastNameHasBeenSet(false),
+    m_middleNameHasBeenSet(false),
+    m_rDOHasBeenSet(false)
 {
 }
 
@@ -169,6 +173,74 @@ CoreInternalOutcome RecognizePhilippinesTinIDOCRResponse::Deserialize(const stri
         m_issueDateHasBeenSet = true;
     }
 
+    if (rsp.HasMember("GivenName") && !rsp["GivenName"].IsNull())
+    {
+        if (!rsp["GivenName"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `GivenName` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_givenName.Deserialize(rsp["GivenName"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_givenNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("LastName") && !rsp["LastName"].IsNull())
+    {
+        if (!rsp["LastName"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `LastName` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_lastName.Deserialize(rsp["LastName"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_lastNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("MiddleName") && !rsp["MiddleName"].IsNull())
+    {
+        if (!rsp["MiddleName"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MiddleName` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_middleName.Deserialize(rsp["MiddleName"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_middleNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RDO") && !rsp["RDO"].IsNull())
+    {
+        if (!rsp["RDO"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RDO` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rDO.Deserialize(rsp["RDO"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rDOHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -231,6 +303,42 @@ string RecognizePhilippinesTinIDOCRResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_issueDate.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_givenNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GivenName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_givenName.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_lastNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LastName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_lastName.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_middleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MiddleName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_middleName.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_rDOHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RDO";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rDO.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -303,6 +411,46 @@ TextDetectionResult RecognizePhilippinesTinIDOCRResponse::GetIssueDate() const
 bool RecognizePhilippinesTinIDOCRResponse::IssueDateHasBeenSet() const
 {
     return m_issueDateHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesTinIDOCRResponse::GetGivenName() const
+{
+    return m_givenName;
+}
+
+bool RecognizePhilippinesTinIDOCRResponse::GivenNameHasBeenSet() const
+{
+    return m_givenNameHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesTinIDOCRResponse::GetLastName() const
+{
+    return m_lastName;
+}
+
+bool RecognizePhilippinesTinIDOCRResponse::LastNameHasBeenSet() const
+{
+    return m_lastNameHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesTinIDOCRResponse::GetMiddleName() const
+{
+    return m_middleName;
+}
+
+bool RecognizePhilippinesTinIDOCRResponse::MiddleNameHasBeenSet() const
+{
+    return m_middleNameHasBeenSet;
+}
+
+TextDetectionResult RecognizePhilippinesTinIDOCRResponse::GetRDO() const
+{
+    return m_rDO;
+}
+
+bool RecognizePhilippinesTinIDOCRResponse::RDOHasBeenSet() const
+{
+    return m_rDOHasBeenSet;
 }
 
 

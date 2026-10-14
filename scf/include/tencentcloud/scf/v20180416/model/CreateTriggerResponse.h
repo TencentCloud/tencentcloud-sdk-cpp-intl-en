@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Trigger information
-                     * @return TriggerInfo Trigger information
+                     * 获取Trigger information.
+                     * @return TriggerInfo Trigger information.
                      * 
                      */
                     Trigger GetTriggerInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Trigger information
+                     * Trigger information.
                      */
                     Trigger m_triggerInfo;
                     bool m_triggerInfoHasBeenSet;

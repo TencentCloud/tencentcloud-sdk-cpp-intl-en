@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output file for video (audio) recognition.
+                     * @return Output Output file for video (audio) recognition.
                      * 
                      */
                     AiAnalysisTaskVideoComprehensionOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output file for video (audio) recognition.
+                     * @param _output Output file for video (audio) recognition.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskVideoComprehensionOutput& _output);
@@ -264,7 +264,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output file for video (audio) recognition.
                      */
                     AiAnalysisTaskVideoComprehensionOutput m_output;
                     bool m_outputHasBeenSet;

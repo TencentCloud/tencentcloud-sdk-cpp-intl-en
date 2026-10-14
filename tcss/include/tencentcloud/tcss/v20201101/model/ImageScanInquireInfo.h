@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing item
-                     * @return InquireKey Billing item
+                     * 获取Billing item.
+                     * @return InquireKey Billing item.
                      * 
                      */
                     std::string GetInquireKey() const;
 
                     /**
-                     * 设置Billing item
-                     * @param _inquireKey Billing item
+                     * 设置Billing item.
+                     * @param _inquireKey Billing item.
                      * 
                      */
                     void SetInquireKey(const std::string& _inquireKey);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InquireKeyHasBeenSet() const;
 
                     /**
-                     * 获取Total Capacity
-                     * @return Capcity Total Capacity
+                     * 获取Total capacity
+                     * @return Capcity Total capacity
                      * 
                      */
                     uint64_t GetCapcity() const;
 
                     /**
-                     * 设置Total Capacity
-                     * @param _capcity Total Capacity
+                     * 设置Total capacity
+                     * @param _capcity Total capacity
                      * 
                      */
                     void SetCapcity(const uint64_t& _capcity);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -153,12 +153,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
                      * @return PurchaseStatus Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
                      * 
                      */
@@ -166,12 +166,12 @@ Isolate
 
                     /**
                      * 设置Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
                      * @param _purchaseStatus Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
                      * 
                      */
@@ -271,13 +271,13 @@ Isolate
                 private:
 
                     /**
-                     * Billing item
+                     * Billing item.
                      */
                     std::string m_inquireKey;
                     bool m_inquireKeyHasBeenSet;
 
                     /**
-                     * Total Capacity
+                     * Total capacity
                      */
                     uint64_t m_capcity;
                     bool m_capcityHasBeenSet;
@@ -295,15 +295,15 @@ Isolate
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
                      * Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
                      */
                     std::string m_purchaseStatus;

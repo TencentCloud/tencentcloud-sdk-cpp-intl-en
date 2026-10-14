@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Abstract 
+                     * 获取Video summary, used for offline scenarios.
+                     * @return Abstract Video summary, used for offline scenarios.
                      * 
                      */
                     std::string GetAbstract() const;
 
                     /**
-                     * 设置
-                     * @param _abstract 
+                     * 设置Video summary, used for offline scenarios.
+                     * @param _abstract Video summary, used for offline scenarios.
                      * 
                      */
                     void SetAbstract(const std::string& _abstract);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * 
+                     * Video summary, used for offline scenarios.
                      */
                     std::string m_abstract;
                     bool m_abstractHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edit on-demand video file information
+                * Edit video-on-demand file information.
                 */
                 class EditMediaFileInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input video information.
-                     * @return InputInfo Input video information.
+                     * 获取Video input information.
+                     * @return InputInfo Video input information.
                      * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置Input video information.
-                     * @param _inputInfo Input video information.
+                     * 设置Video input information.
+                     * @param _inputInfo Video input information.
                      * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取[Edit] task takes effect, video editing start time offset, measurement unit: second.
-                     * @return StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
+                     * 获取[Edit] task takes effect. Start time offset for video editing, in seconds.
+                     * @return StartTimeOffset [Edit] task takes effect. Start time offset for video editing, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置[Edit] task takes effect, video editing start time offset, measurement unit: second.
-                     * @param _startTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
+                     * 设置[Edit] task takes effect. Start time offset for video editing, in seconds.
+                     * @param _startTimeOffset [Edit] task takes effect. Start time offset for video editing, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取[Edit] task takes effect, video editing end time offset, measurement unit: second.
-                     * @return EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
+                     * 获取[Edit] task takes effect. End time offset of video editing. Measurement unit: second.
+                     * @return EndTimeOffset [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置[Edit] task takes effect, video editing end time offset, measurement unit: second.
-                     * @param _endTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
+                     * 设置[Edit] task takes effect. End time offset of video editing. Measurement unit: second.
+                     * @param _endTimeOffset [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -111,15 +111,23 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取[Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
+                     * @return Id [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置[Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
+                     * @param _id [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -134,25 +142,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input video information.
+                     * Video input information.
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * [Edit] task takes effect, video editing start time offset, measurement unit: second.
+                     * [Edit] task takes effect. Start time offset for video editing, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * [Edit] task takes effect, video editing end time offset, measurement unit: second.
+                     * [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

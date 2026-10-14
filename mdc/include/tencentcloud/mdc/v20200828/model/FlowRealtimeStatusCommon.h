@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The common real-time status information of a flow.
+                * Common status information for querying stream status in real time.
                 */
                 class FlowRealtimeStatusCommon : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The connection status. Valid values: Connected, Waiting, Idle.
-                     * @return State The connection status. Valid values: Connected, Waiting, Idle.
+                     * 获取Current connection status. Connected | Waiting | Idle.
+                     * @return State Current connection status. Connected | Waiting | Idle.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置The connection status. Valid values: Connected, Waiting, Idle.
-                     * @param _state The connection status. Valid values: Connected, Waiting, Idle.
+                     * 设置Current connection status. Connected | Waiting | Idle.
+                     * @param _state Current connection status. Connected | Waiting | Idle.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取The connection mode. Valid values: Listener, Caller.
-                     * @return Mode The connection mode. Valid values: Listener, Caller.
+                     * 获取Connection mode. Listener|Caller.
+                     * @return Mode Connection mode. Listener|Caller.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置The connection mode. Valid values: Listener, Caller.
-                     * @param _mode The connection mode. Valid values: Listener, Caller.
+                     * 设置Connection mode. Listener|Caller.
+                     * @param _mode Connection mode. Listener|Caller.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The connected time.
-                     * @return ConnectedTime The connected time.
+                     * 获取Connection duration, unit: ms.
+                     * @return ConnectedTime Connection duration, unit: ms.
                      * 
                      */
                     int64_t GetConnectedTime() const;
 
                     /**
-                     * 设置The connected time.
-                     * @param _connectedTime The connected time.
+                     * 设置Connection duration, unit: ms.
+                     * @param _connectedTime Connection duration, unit: ms.
                      * 
                      */
                     void SetConnectedTime(const int64_t& _connectedTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ConnectedTimeHasBeenSet() const;
 
                     /**
-                     * 获取The real-time bitrate (bps).
-                     * @return Bitrate The real-time bitrate (bps).
+                     * 获取Real-time bitrate, unit in bps.
+                     * @return Bitrate Real-time bitrate, unit in bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置The real-time bitrate (bps).
-                     * @param _bitrate The real-time bitrate (bps).
+                     * 设置Real-time bitrate, unit in bps.
+                     * @param _bitrate Real-time bitrate, unit in bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取The number of retries.
-                     * @return Reconnections The number of retries.
+                     * 获取Number of retries.
+                     * @return Reconnections Number of retries.
                      * 
                      */
                     int64_t GetReconnections() const;
 
                     /**
-                     * 设置The number of retries.
-                     * @param _reconnections The number of retries.
+                     * 设置Number of retries.
+                     * @param _reconnections Number of retries.
                      * 
                      */
                     void SetReconnections(const int64_t& _reconnections);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The connection status. Valid values: Connected, Waiting, Idle.
+                     * Current connection status. Connected | Waiting | Idle.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * The connection mode. Valid values: Listener, Caller.
+                     * Connection mode. Listener|Caller.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The connected time.
+                     * Connection duration, unit: ms.
                      */
                     int64_t m_connectedTime;
                     bool m_connectedTimeHasBeenSet;
 
                     /**
-                     * The real-time bitrate (bps).
+                     * Real-time bitrate, unit in bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * The number of retries.
+                     * Number of retries.
                      */
                     int64_t m_reconnections;
                     bool m_reconnectionsHasBeenSet;

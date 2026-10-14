@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specification parameters of custom transcoding.
+                * Specification parameters for custom transcoding.
                 */
                 class RawTranscodeParameter : public AbstractModel
                 {
@@ -74,11 +74,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      * @return RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      * 
@@ -87,11 +87,11 @@ Default value: 0.
 
                     /**
                      * 设置Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      * @param _removeVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      * 
@@ -106,12 +106,12 @@ Default value: 0.
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+                     * 获取Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
-                     * @return RemoveAudio Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+                     * @return RemoveAudio Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      * 
@@ -119,12 +119,12 @@ Default value: 0.
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+                     * 设置Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
-                     * @param _removeAudio Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+                     * @param _removeAudio Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      * 
@@ -181,15 +181,15 @@ Default value: 0.
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取TSC transcoding parameters.
-                     * @return TEHDConfig TSC transcoding parameters.
+                     * 获取Top Speed Codec transcoding parameters.
+                     * @return TEHDConfig Top Speed Codec transcoding parameters.
                      * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置TSC transcoding parameters.
-                     * @param _tEHDConfig TSC transcoding parameters.
+                     * 设置Top Speed Codec transcoding parameters.
+                     * @param _tEHDConfig Top Speed Codec transcoding parameters.
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
@@ -223,15 +223,15 @@ Default value: 0.
                     bool StdExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhanceConfig 
+                     * 获取Audio/Video enhancement configuration.
+                     * @return EnhanceConfig Audio/Video enhancement configuration.
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置
-                     * @param _enhanceConfig 
+                     * 设置Audio/Video enhancement configuration.
+                     * @param _enhanceConfig Audio/Video enhancement configuration.
                      * 
                      */
                     void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
@@ -244,15 +244,15 @@ Default value: 0.
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleTemplate 
+                     * 获取Subtitle parameters.
+                     * @return SubtitleTemplate Subtitle parameters.
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleTemplate 
+                     * 设置Subtitle parameters.
+                     * @param _subtitleTemplate Subtitle parameters.
                      * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
@@ -274,7 +274,7 @@ Default value: 0.
 
                     /**
                      * Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      */
@@ -282,8 +282,8 @@ Default value: 0.
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+                     * Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
                      */
@@ -303,7 +303,7 @@ Default value: 0.
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * TSC transcoding parameters.
+                     * Top Speed Codec transcoding parameters.
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
@@ -315,13 +315,13 @@ Default value: 0.
                     bool m_stdExtInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Audio/Video enhancement configuration.
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle parameters.
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;

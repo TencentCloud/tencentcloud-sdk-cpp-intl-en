@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The video data of a flow.
+                * Video data of the stream.
                 */
                 class FlowVideo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The frame rate.
-                     * @return Fps The frame rate.
+                     * 获取Frame rate.
+                     * @return Fps Frame rate.
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置The frame rate.
-                     * @param _fps The frame rate.
+                     * 设置Frame rate.
+                     * @param _fps Frame rate.
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取The bitrate (bps).
-                     * @return Rate The bitrate (bps).
+                     * 获取Bitrate in bps.
+                     * @return Rate Bitrate in bps.
                      * 
                      */
                     int64_t GetRate() const;
 
                     /**
-                     * 设置The bitrate (bps).
-                     * @param _rate The bitrate (bps).
+                     * 设置Bitrate in bps.
+                     * @param _rate Bitrate in bps.
                      * 
                      */
                     void SetRate(const int64_t& _rate);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RateHasBeenSet() const;
 
                     /**
-                     * 获取The audio PID.
-                     * @return Pid The audio PID.
+                     * 获取Audio Pid.
+                     * @return Pid Audio Pid.
                      * 
                      */
                     int64_t GetPid() const;
 
                     /**
-                     * 设置The audio PID.
-                     * @param _pid The audio PID.
+                     * 设置Audio Pid.
+                     * @param _pid Audio Pid.
                      * 
                      */
                     void SetPid(const int64_t& _pid);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The frame rate.
+                     * Frame rate.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * The bitrate (bps).
+                     * Bitrate in bps.
                      */
                     int64_t m_rate;
                     bool m_rateHasBeenSet;
 
                     /**
-                     * The audio PID.
+                     * Audio Pid.
                      */
                     int64_t m_pid;
                     bool m_pidHasBeenSet;

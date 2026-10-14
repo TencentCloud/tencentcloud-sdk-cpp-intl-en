@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Environment variable parameter of the function
+                * Environment variable parameters of the function
                 */
                 class Environment : public AbstractModel
                 {

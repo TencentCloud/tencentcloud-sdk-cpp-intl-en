@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ES cluster operation details
+                * Detailed ES cluster operation information
                 */
                 class Operation : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique operation ID
-                     * @return Id Unique operation ID
+                     * 获取<p>Unique id of the operation</p>
+                     * @return Id <p>Unique id of the operation</p>
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Unique operation ID
-                     * @param _id Unique operation ID
+                     * 设置<p>Unique id of the operation</p>
+                     * @param _id <p>Unique id of the operation</p>
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Operation start time
-                     * @return StartTime Operation start time
+                     * 获取<p>Operation start time.</p>
+                     * @return StartTime <p>Operation start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Operation start time
-                     * @param _startTime Operation start time
+                     * 设置<p>Operation start time.</p>
+                     * @param _startTime <p>Operation start time.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Operation type
-                     * @return Type Operation type
+                     * 获取<p>Operation type.</p>
+                     * @return Type <p>Operation type.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Operation type
-                     * @param _type Operation type
+                     * 设置<p>Operation type.</p>
+                     * @param _type <p>Operation type.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Operation details
-                     * @return Detail Operation details
+                     * 获取<p>Operation details.</p>
+                     * @return Detail <p>Operation details.</p>
                      * 
                      */
                     OperationDetail GetDetail() const;
 
                     /**
-                     * 设置Operation details
-                     * @param _detail Operation details
+                     * 设置<p>Operation details.</p>
+                     * @param _detail <p>Operation details.</p>
                      * 
                      */
                     void SetDetail(const OperationDetail& _detail);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool DetailHasBeenSet() const;
 
                     /**
-                     * 获取Operation result
-                     * @return Result Operation result
+                     * 获取<p>Operation result.</p>
+                     * @return Result <p>Operation result.</p>
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
-                     * 设置Operation result
-                     * @param _result Operation result
+                     * 设置<p>Operation result.</p>
+                     * @param _result <p>Operation result.</p>
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取Workflow task information
-                     * @return Tasks Workflow task information
+                     * 获取<p>Process task info</p>
+                     * @return Tasks <p>Process task info</p>
                      * 
                      */
                     std::vector<TaskDetail> GetTasks() const;
 
                     /**
-                     * 设置Workflow task information
-                     * @param _tasks Workflow task information
+                     * 设置<p>Process task info</p>
+                     * @param _tasks <p>Process task info</p>
                      * 
                      */
                     void SetTasks(const std::vector<TaskDetail>& _tasks);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取Operation progress
-                     * @return Progress Operation progress
+                     * 获取<p>Operation progress.</p>
+                     * @return Progress <p>Operation progress.</p>
                      * 
                      */
                     double GetProgress() const;
 
                     /**
-                     * 设置Operation progress
-                     * @param _progress Operation progress
+                     * 设置<p>Operation progress.</p>
+                     * @param _progress <p>Operation progress.</p>
                      * 
                      */
                     void SetProgress(const double& _progress);
@@ -195,49 +195,157 @@ namespace TencentCloud
                      */
                     bool ProgressHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+                     * @return RollbackTag <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+                     * 
+                     */
+                    int64_t GetRollbackTag() const;
+
+                    /**
+                     * 设置<p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+                     * @param _rollbackTag <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+                     * 
+                     */
+                    void SetRollbackTag(const int64_t& _rollbackTag);
+
+                    /**
+                     * 判断参数 RollbackTag 是否已赋值
+                     * @return RollbackTag 是否已赋值
+                     * 
+                     */
+                    bool RollbackTagHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Operator Uin</p>
+                     * @return SubAccountUin <p>Operator Uin</p>
+                     * 
+                     */
+                    std::string GetSubAccountUin() const;
+
+                    /**
+                     * 设置<p>Operator Uin</p>
+                     * @param _subAccountUin <p>Operator Uin</p>
+                     * 
+                     */
+                    void SetSubAccountUin(const std::string& _subAccountUin);
+
+                    /**
+                     * 判断参数 SubAccountUin 是否已赋值
+                     * @return SubAccountUin 是否已赋值
+                     * 
+                     */
+                    bool SubAccountUinHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+                     * @return AutoScaleTag <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+                     * 
+                     */
+                    uint64_t GetAutoScaleTag() const;
+
+                    /**
+                     * 设置<p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+                     * @param _autoScaleTag <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+                     * 
+                     */
+                    void SetAutoScaleTag(const uint64_t& _autoScaleTag);
+
+                    /**
+                     * 判断参数 AutoScaleTag 是否已赋值
+                     * @return AutoScaleTag 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleTagHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Process exception cause</p>
+                     * @return SuspendedReason <p>Process exception cause</p>
+                     * 
+                     */
+                    std::string GetSuspendedReason() const;
+
+                    /**
+                     * 设置<p>Process exception cause</p>
+                     * @param _suspendedReason <p>Process exception cause</p>
+                     * 
+                     */
+                    void SetSuspendedReason(const std::string& _suspendedReason);
+
+                    /**
+                     * 判断参数 SuspendedReason 是否已赋值
+                     * @return SuspendedReason 是否已赋值
+                     * 
+                     */
+                    bool SuspendedReasonHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Unique operation ID
+                     * <p>Unique id of the operation</p>
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Operation start time
+                     * <p>Operation start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Operation type
+                     * <p>Operation type.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Operation details
+                     * <p>Operation details.</p>
                      */
                     OperationDetail m_detail;
                     bool m_detailHasBeenSet;
 
                     /**
-                     * Operation result
+                     * <p>Operation result.</p>
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * Workflow task information
+                     * <p>Process task info</p>
                      */
                     std::vector<TaskDetail> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * Operation progress
+                     * <p>Operation progress.</p>
                      */
                     double m_progress;
                     bool m_progressHasBeenSet;
+
+                    /**
+                     * <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+                     */
+                    int64_t m_rollbackTag;
+                    bool m_rollbackTagHasBeenSet;
+
+                    /**
+                     * <p>Operator Uin</p>
+                     */
+                    std::string m_subAccountUin;
+                    bool m_subAccountUinHasBeenSet;
+
+                    /**
+                     * <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+                     */
+                    uint64_t m_autoScaleTag;
+                    bool m_autoScaleTagHasBeenSet;
+
+                    /**
+                     * <p>Process exception cause</p>
+                     */
+                    std::string m_suspendedReason;
+                    bool m_suspendedReasonHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies a layer version
+                * Specify a Layer version
                 */
                 class LayerVersionSimple : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the layer to bind. Leave it blank if you want to unbind layers
-                     * @return LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
+                     * 获取Name of the bound layer. Pass an empty string to unbind the layer.
+                     * @return LayerName Name of the bound layer. Pass an empty string to unbind the layer.
                      * 
                      */
                     std::string GetLayerName() const;
 
                     /**
-                     * 设置Name of the layer to bind. Leave it blank if you want to unbind layers
-                     * @param _layerName Name of the layer to bind. Leave it blank if you want to unbind layers
+                     * 设置Name of the bound layer. Pass an empty string to unbind the layer.
+                     * @param _layerName Name of the bound layer. Pass an empty string to unbind the layer.
                      * 
                      */
                     void SetLayerName(const std::string& _layerName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LayerNameHasBeenSet() const;
 
                     /**
-                     * 获取Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
-                     * @return LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+                     * 获取Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
+                     * @return LayerVersion Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
                      * 
                      */
                     int64_t GetLayerVersion() const;
 
                     /**
-                     * 设置Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
-                     * @param _layerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+                     * 设置Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
+                     * @param _layerVersion Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
                      * 
                      */
                     void SetLayerVersion(const int64_t& _layerVersion);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of the layer to bind. Leave it blank if you want to unbind layers
+                     * Name of the bound layer. Pass an empty string to unbind the layer.
                      */
                     std::string m_layerName;
                     bool m_layerNameHasBeenSet;
 
                     /**
-                     * Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+                     * Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
                      */
                     int64_t m_layerVersion;
                     bool m_layerVersionHasBeenSet;

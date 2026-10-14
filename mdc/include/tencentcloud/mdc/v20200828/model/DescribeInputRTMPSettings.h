@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTMP configuration information of the queried input
+                * Query the input RTMP configuration message.
                 */
                 class DescribeInputRTMPSettings : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return AppName Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取RTMP push path.
+                     * @return AppName RTMP push path.
                      * 
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _appName Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置RTMP push path.
+                     * @param _appName RTMP push path.
                      * 
                      */
                     void SetAppName(const std::string& _appName);
@@ -72,19 +68,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
-                     * @return StreamKey StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+                     * 获取RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
+                     * @return StreamKey RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
                      * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
-                     * 设置StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
-                     * @param _streamKey StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+                     * 设置RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
+                     * @param _streamKey RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
                      * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
@@ -99,15 +95,14 @@ Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
                 private:
 
                     /**
-                     * Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+                     * RTMP push path.
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+                     * RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
                      */
                     std::string m_streamKey;
                     bool m_streamKeyHasBeenSet;

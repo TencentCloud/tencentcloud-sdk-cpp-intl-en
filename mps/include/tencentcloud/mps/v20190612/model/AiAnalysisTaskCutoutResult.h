@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data structure of the video intelligence matting result.
+                * Data structure of the intelligent video masking result.
                 */
                 class AiAnalysisTaskCutoutResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of the video matting task.
+                     * @return Output Output of the video matting task.
                      * 
                      */
                     AiAnalysisTaskCutoutOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of the video matting task.
+                     * @param _output Output of the video matting task.
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskCutoutOutput& _output);
@@ -243,7 +243,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of the video matting task.
                      */
                     AiAnalysisTaskCutoutOutput m_output;
                     bool m_outputHasBeenSet;

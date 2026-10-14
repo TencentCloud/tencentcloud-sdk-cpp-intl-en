@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TCSS UUID
-                     * @return UUID TCSS UUID
+                     * 获取Container Security UUID
+                     * @return UUID Container Security UUID
                      * 
                      */
                     std::string GetUUID() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool UUIDHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Update time.
+                     * @return UpdateTime Update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-                     * @return HostName Server name
+                     * 获取Host name
+                     * @return HostName Host name
                      * 
                      */
                     std::string GetHostName() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Server group
-                     * @return Group Server group
+                     * 获取Host grouping
+                     * @return Group Host grouping
                      * 
                      */
                     std::string GetGroup() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool GroupHasBeenSet() const;
 
                     /**
-                     * 获取Server IP
-                     * @return HostIP Server IP
+                     * 获取Host IP address
+                     * @return HostIP Host IP address
                      * 
                      */
                     std::string GetHostIP() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取OS
-                     * @return OsName OS
+                     * 获取Operating system.
+                     * @return OsName Operating system.
                      * 
                      */
                     std::string GetOsName() const;
@@ -158,8 +158,8 @@ namespace TencentCloud
                     bool KernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Docker version
-                     * @return DockerVersion Docker version
+                     * 获取docker version
+                     * @return DockerVersion docker version
                      * 
                      */
                     std::string GetDockerVersion() const;
@@ -172,8 +172,8 @@ namespace TencentCloud
                     bool DockerVersionHasBeenSet() const;
 
                     /**
-                     * 获取Docker API version
-                     * @return DockerAPIVersion Docker API version
+                     * 获取docker api version
+                     * @return DockerAPIVersion docker api version
                      * 
                      */
                     std::string GetDockerAPIVersion() const;
@@ -186,8 +186,8 @@ namespace TencentCloud
                     bool DockerAPIVersionHasBeenSet() const;
 
                     /**
-                     * 获取Docker version for Go
-                     * @return DockerGoVersion Docker version for Go
+                     * 获取docker go version
+                     * @return DockerGoVersion docker go version
                      * 
                      */
                     std::string GetDockerGoVersion() const;
@@ -200,8 +200,8 @@ namespace TencentCloud
                     bool DockerGoVersionHasBeenSet() const;
 
                     /**
-                     * 获取Docker file system type
-                     * @return DockerFileSystemDriver Docker file system type
+                     * 获取docker file system type
+                     * @return DockerFileSystemDriver docker file system type
                      * 
                      */
                     std::string GetDockerFileSystemDriver() const;
@@ -214,8 +214,8 @@ namespace TencentCloud
                     bool DockerFileSystemDriverHasBeenSet() const;
 
                     /**
-                     * 获取Docker root directory
-                     * @return DockerRootDir Docker root directory
+                     * 获取docker root directory
+                     * @return DockerRootDir docker root directory
                      * 
                      */
                     std::string GetDockerRootDir() const;
@@ -228,8 +228,8 @@ namespace TencentCloud
                     bool DockerRootDirHasBeenSet() const;
 
                     /**
-                     * 获取Number of images
-                     * @return ImageCnt Number of images
+                     * 获取Image count
+                     * @return ImageCnt Image count
                      * 
                      */
                     uint64_t GetImageCnt() const;
@@ -256,8 +256,8 @@ namespace TencentCloud
                     bool ContainerCntHasBeenSet() const;
 
                     /**
-                     * 获取K8s IP
-                     * @return K8sMasterIP K8s IP
+                     * 获取k8s IP
+                     * @return K8sMasterIP k8s IP
                      * 
                      */
                     std::string GetK8sMasterIP() const;
@@ -270,8 +270,8 @@ namespace TencentCloud
                     bool K8sMasterIPHasBeenSet() const;
 
                     /**
-                     * 获取K8s version
-                     * @return K8sVersion K8s version
+                     * 获取k8s version
+                     * @return K8sVersion k8s version
                      * 
                      */
                     std::string GetK8sVersion() const;
@@ -298,8 +298,8 @@ namespace TencentCloud
                     bool KubeProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
-                     * @return Status Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+                     * 获取"UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
+                     * @return Status "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
                      * 
                      */
                     std::string GetStatus() const;
@@ -312,8 +312,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is Containerd
-                     * @return IsContainerd Whether it is Containerd
+                     * 获取Is Containerd
+                     * @return IsContainerd Is Containerd
                      * 
                      */
                     bool GetIsContainerd() const;
@@ -326,8 +326,8 @@ namespace TencentCloud
                     bool IsContainerdHasBeenSet() const;
 
                     /**
-                     * 获取Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
-                     * @return MachineType Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+                     * 获取Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
+                     * @return MachineType Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
                      * 
                      */
                     std::string GetMachineType() const;
@@ -340,8 +340,8 @@ namespace TencentCloud
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-                     * @return PublicIp Public IP
+                     * 获取Public IP address
+                     * @return PublicIp Public IP address
                      * 
                      */
                     std::string GetPublicIp() const;
@@ -354,8 +354,8 @@ namespace TencentCloud
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Server instance ID
-                     * @return InstanceID Server instance ID
+                     * 获取Host instance ID
+                     * @return InstanceID Host instance ID
                      * 
                      */
                     std::string GetInstanceID() const;
@@ -368,8 +368,8 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return RegionID Region ID
+                     * 获取Region ID.
+                     * @return RegionID Region ID.
                      * 
                      */
                     int64_t GetRegionID() const;
@@ -382,8 +382,8 @@ namespace TencentCloud
                     bool RegionIDHasBeenSet() const;
 
                     /**
-                     * 获取Project
-                     * @return Project Project
+                     * 获取Associated project
+                     * @return Project Associated project
                      * 
                      */
                     ProjectInfo GetProject() const;
@@ -396,8 +396,8 @@ namespace TencentCloud
                     bool ProjectHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-                     * @return Tags Tags
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
@@ -410,8 +410,8 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterID 
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
                      * 
                      */
                     std::string GetClusterID() const;
@@ -424,8 +424,8 @@ namespace TencentCloud
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterName 
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
@@ -438,8 +438,8 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterAccessedStatus 
+                     * 获取Cluster Access Status
+                     * @return ClusterAccessedStatus Cluster Access Status
                      * 
                      */
                     std::string GetClusterAccessedStatus() const;
@@ -468,37 +468,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TCSS UUID
+                     * Container Security UUID
                      */
                     std::string m_uUID;
                     bool m_uUIDHasBeenSet;
 
                     /**
-                     * Update time
+                     * Update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Server name
+                     * Host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Server group
+                     * Host grouping
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;
 
                     /**
-                     * Server IP
+                     * Host IP address
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * OS
+                     * Operating system.
                      */
                     std::string m_osName;
                     bool m_osNameHasBeenSet;
@@ -516,37 +516,37 @@ namespace TencentCloud
                     bool m_kernelVersionHasBeenSet;
 
                     /**
-                     * Docker version
+                     * docker version
                      */
                     std::string m_dockerVersion;
                     bool m_dockerVersionHasBeenSet;
 
                     /**
-                     * Docker API version
+                     * docker api version
                      */
                     std::string m_dockerAPIVersion;
                     bool m_dockerAPIVersionHasBeenSet;
 
                     /**
-                     * Docker version for Go
+                     * docker go version
                      */
                     std::string m_dockerGoVersion;
                     bool m_dockerGoVersionHasBeenSet;
 
                     /**
-                     * Docker file system type
+                     * docker file system type
                      */
                     std::string m_dockerFileSystemDriver;
                     bool m_dockerFileSystemDriverHasBeenSet;
 
                     /**
-                     * Docker root directory
+                     * docker root directory
                      */
                     std::string m_dockerRootDir;
                     bool m_dockerRootDirHasBeenSet;
 
                     /**
-                     * Number of images
+                     * Image count
                      */
                     uint64_t m_imageCnt;
                     bool m_imageCntHasBeenSet;
@@ -558,13 +558,13 @@ namespace TencentCloud
                     bool m_containerCntHasBeenSet;
 
                     /**
-                     * K8s IP
+                     * k8s IP
                      */
                     std::string m_k8sMasterIP;
                     bool m_k8sMasterIPHasBeenSet;
 
                     /**
-                     * K8s version
+                     * k8s version
                      */
                     std::string m_k8sVersion;
                     bool m_k8sVersionHasBeenSet;
@@ -576,67 +576,67 @@ namespace TencentCloud
                     bool m_kubeProxyVersionHasBeenSet;
 
                     /**
-                     * Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+                     * "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether it is Containerd
+                     * Is Containerd
                      */
                     bool m_isContainerd;
                     bool m_isContainerdHasBeenSet;
 
                     /**
-                     * Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+                     * Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * Public IP
+                     * Public IP address
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Server instance ID
+                     * Host instance ID
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * Region ID
+                     * Region ID.
                      */
                     int64_t m_regionID;
                     bool m_regionIDHasBeenSet;
 
                     /**
-                     * Project
+                     * Associated project
                      */
                     ProjectInfo m_project;
                     bool m_projectHasBeenSet;
 
                     /**
-                     * Tags
+                     * Tag.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster ID
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster Access Status
                      */
                     std::string m_clusterAccessedStatus;
                     bool m_clusterAccessedStatusHasBeenSet;

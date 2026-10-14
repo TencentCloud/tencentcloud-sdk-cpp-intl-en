@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of the CFS instance associated with function
+                * cfs configuration message associated with the SCF
                 */
                 class CfsInsInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取User group ID
-                     * @return UserGroupId User group ID
+                     * 获取User group id.
+                     * @return UserGroupId User group id.
                      * 
                      */
                     std::string GetUserGroupId() const;
 
                     /**
-                     * 设置User group ID
-                     * @param _userGroupId User group ID
+                     * 设置User group id.
+                     * @param _userGroupId User group id.
                      * 
                      */
                     void SetUserGroupId(const std::string& _userGroupId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取CFS instance ID
-                     * @return CfsId CFS instance ID
+                     * 获取File system instance id
+                     * @return CfsId File system instance id
                      * 
                      */
                     std::string GetCfsId() const;
 
                     /**
-                     * 设置CFS instance ID
-                     * @param _cfsId CFS instance ID
+                     * 设置File system instance id
+                     * @param _cfsId File system instance id
                      * 
                      */
                     void SetCfsId(const std::string& _cfsId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CfsIdHasBeenSet() const;
 
                     /**
-                     * 获取File system mount target ID
-                     * @return MountInsId File system mount target ID
+                     * 获取File system mount point id
+                     * @return MountInsId File system mount point id
                      * 
                      */
                     std::string GetMountInsId() const;
 
                     /**
-                     * 设置File system mount target ID
-                     * @param _mountInsId File system mount target ID
+                     * 设置File system mount point id
+                     * @param _mountInsId File system mount point id
                      * 
                      */
                     void SetMountInsId(const std::string& _mountInsId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MountInsIdHasBeenSet() const;
 
                     /**
-                     * 获取Local mount target
-                     * @return LocalMountDir Local mount target
+                     * 获取Local mount point
+                     * @return LocalMountDir Local mount point
                      * 
                      */
                     std::string GetLocalMountDir() const;
 
                     /**
-                     * 设置Local mount target
-                     * @param _localMountDir Local mount target
+                     * 设置Local mount point
+                     * @param _localMountDir Local mount point
                      * 
                      */
                     void SetLocalMountDir(const std::string& _localMountDir);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool LocalMountDirHasBeenSet() const;
 
                     /**
-                     * 获取Remote mount target
-                     * @return RemoteMountDir Remote mount target
+                     * 获取Remote mount point.
+                     * @return RemoteMountDir Remote mount point.
                      * 
                      */
                     std::string GetRemoteMountDir() const;
 
                     /**
-                     * 设置Remote mount target
-                     * @param _remoteMountDir Remote mount target
+                     * 设置Remote mount point.
+                     * @param _remoteMountDir Remote mount point.
                      * 
                      */
                     void SetRemoteMountDir(const std::string& _remoteMountDir);
@@ -173,19 +173,19 @@ namespace TencentCloud
                     bool RemoteMountDirHasBeenSet() const;
 
                     /**
-                     * 获取File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IpAddress File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IpAddress File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
-                     * 设置File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _ipAddress File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _ipAddress File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
@@ -198,19 +198,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IpAddressHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MountVpcId VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MountVpcId VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMountVpcId() const;
 
                     /**
-                     * 设置VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _mountVpcId VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _mountVpcId VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMountVpcId(const std::string& _mountVpcId);
@@ -223,19 +223,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MountVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MountSubnetId Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMountSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _mountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _mountSubnetId Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMountSubnetId(const std::string& _mountSubnetId);
@@ -256,52 +256,52 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * User group ID
+                     * User group id.
                      */
                     std::string m_userGroupId;
                     bool m_userGroupIdHasBeenSet;
 
                     /**
-                     * CFS instance ID
+                     * File system instance id
                      */
                     std::string m_cfsId;
                     bool m_cfsIdHasBeenSet;
 
                     /**
-                     * File system mount target ID
+                     * File system mount point id
                      */
                     std::string m_mountInsId;
                     bool m_mountInsIdHasBeenSet;
 
                     /**
-                     * Local mount target
+                     * Local mount point
                      */
                     std::string m_localMountDir;
                     bool m_localMountDirHasBeenSet;
 
                     /**
-                     * Remote mount target
+                     * Remote mount point.
                      */
                     std::string m_remoteMountDir;
                     bool m_remoteMountDirHasBeenSet;
 
                     /**
-                     * File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ipAddress;
                     bool m_ipAddressHasBeenSet;
 
                     /**
-                     * VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mountVpcId;
                     bool m_mountVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mountSubnetId;
                     bool m_mountSubnetIdHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster instance ID
-                     * @return InstanceId Cluster instance ID
+                     * 获取Cluster instance ID.
+                     * @return InstanceId Cluster instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster instance ID
-                     * @param _instanceId Cluster instance ID
+                     * 设置Cluster instance ID.
+                     * @param _instanceId Cluster instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time, such as "2019-03-07 16:30:39"
-                     * @return StartTime Start time, such as "2019-03-07 16:30:39"
+                     * 获取Start time, e.g., "2019-03-07 16:30:39"
+                     * @return StartTime Start time, e.g., "2019-03-07 16:30:39"
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time, such as "2019-03-07 16:30:39"
-                     * @param _startTime Start time, such as "2019-03-07 16:30:39"
+                     * 设置Start time, e.g., "2019-03-07 16:30:39"
+                     * @param _startTime Start time, e.g., "2019-03-07 16:30:39"
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time, such as "2019-03-30 20:18:03"
-                     * @return EndTime End time, such as "2019-03-30 20:18:03"
+                     * 获取End time, e.g., "2019-03-30 20:18:03"
+                     * @return EndTime End time, e.g., "2019-03-30 20:18:03"
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time, such as "2019-03-30 20:18:03"
-                     * @param _endTime End time, such as "2019-03-30 20:18:03"
+                     * 设置End time, e.g., "2019-03-30 20:18:03"
+                     * @param _endTime End time, e.g., "2019-03-30 20:18:03"
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Pagination start value
-                     * @return Offset Pagination start value
+                     * 获取Paging Starting Value
+                     * @return Offset Paging Starting Value
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination start value
-                     * @param _offset Pagination start value
+                     * 设置Paging Starting Value
+                     * @param _offset Paging Starting Value
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page
-                     * @return Limit Number of entries per page
+                     * 获取Pagination size.
+                     * @return Limit Pagination size.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page
-                     * @param _limit Number of entries per page
+                     * 设置Pagination size.
+                     * @param _limit Pagination size.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster instance ID
+                     * Cluster instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time, such as "2019-03-07 16:30:39"
+                     * Start time, e.g., "2019-03-07 16:30:39"
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time, such as "2019-03-30 20:18:03"
+                     * End time, e.g., "2019-03-30 20:18:03"
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Pagination start value
+                     * Paging Starting Value
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page
+                     * Pagination size.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

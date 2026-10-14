@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task type for intelligent content moderation
+                * Intelligent content review task type
                 */
                 class AiContentReviewTaskInput : public AbstractModel
                 {

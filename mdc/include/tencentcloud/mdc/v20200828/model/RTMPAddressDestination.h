@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Destination address information of RTMP push.
+                * Target address information for RTMP repush.
                 */
                 class RTMPAddressDestination : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Destination URL of RTMP push in the format of 'rtmp://domain/live'.
-                     * @return Url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+                     * 获取Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
+                     * @return Url Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Destination URL of RTMP push in the format of 'rtmp://domain/live'.
-                     * @param _url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+                     * 设置Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
+                     * @param _url Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
-                     * @return StreamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+                     * 获取Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
+                     * @return StreamKey Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
                      * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
-                     * 设置Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
-                     * @param _streamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+                     * 设置Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
+                     * @param _streamKey Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
                      * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+                     * Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+                     * Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
                      */
                     std::string m_streamKey;
                     bool m_streamKeyHasBeenSet;

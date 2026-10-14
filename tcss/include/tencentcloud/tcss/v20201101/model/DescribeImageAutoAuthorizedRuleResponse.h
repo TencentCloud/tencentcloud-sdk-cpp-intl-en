@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
-                     * @return IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * 获取Whether the Rule Is Effective. 0: Not Effective; 1: Effective
+                     * @return IsEnabled Whether the Rule Is Effective. 0: Not Effective; 1: Effective
                      * 
                      */
                     int64_t GetIsEnabled() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoScanEnabled 
+                     * 获取Auto-Scan Switch. 0: Off; 1: On
+                     * @return AutoScanEnabled Auto-Scan Switch. 0: Off; 1: On
                      * 
                      */
                     int64_t GetAutoScanEnabled() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool AutoScanEnabledHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanType 
+                     * 获取Auto-Scan Range
+                     * @return ScanType Auto-Scan Range
                      * 
                      */
                     std::vector<std::string> GetScanType() const;
@@ -144,7 +144,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * Whether the Rule Is Effective. 0: Not Effective; 1: Effective
                      */
                     int64_t m_isEnabled;
                     bool m_isEnabledHasBeenSet;
@@ -174,13 +174,13 @@ namespace TencentCloud
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * 
+                     * Auto-Scan Switch. 0: Off; 1: On
                      */
                     int64_t m_autoScanEnabled;
                     bool m_autoScanEnabledHasBeenSet;
 
                     /**
-                     * 
+                     * Auto-Scan Range
                      */
                     std::vector<std::string> m_scanType;
                     bool m_scanTypeHasBeenSet;

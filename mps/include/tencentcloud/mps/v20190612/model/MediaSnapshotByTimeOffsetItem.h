@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Screenshot information at the specified time point for on-demand files
+                * Screenshot information of a VOD file at the specified time point
                 */
                 class MediaSnapshotByTimeOffsetItem : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 获取SnapshotByTimeOffset specification. See SnapshotByTimeOffset parameter template.
+                     * @return Definition SnapshotByTimeOffset specification. See SnapshotByTimeOffset parameter template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 设置SnapshotByTimeOffset specification. See SnapshotByTimeOffset parameter template.
+                     * @param _definition SnapshotByTimeOffset specification. See SnapshotByTimeOffset parameter template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取A screenshot information set of the same specification, each element represents a screenshot.
-                     * @return PicInfoSet A screenshot information set of the same specification, each element represents a screenshot.
+                     * 获取Screenshot information set of the same specification, where each element represents a screenshot.
+                     * @return PicInfoSet Screenshot information set of the same specification, where each element represents a screenshot.
                      * 
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> GetPicInfoSet() const;
 
                     /**
-                     * 设置A screenshot information set of the same specification, each element represents a screenshot.
-                     * @param _picInfoSet A screenshot information set of the same specification, each element represents a screenshot.
+                     * 设置Screenshot information set of the same specification, where each element represents a screenshot.
+                     * @param _picInfoSet Screenshot information set of the same specification, where each element represents a screenshot.
                      * 
                      */
                     void SetPicInfoSet(const std::vector<MediaSnapshotByTimePicInfoItem>& _picInfoSet);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool PicInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of the SnapshotByTimeOffset file.
-                     * @return Storage Storage location of the SnapshotByTimeOffset file.
+                     * 获取Storage location of the time point screenshot file.
+                     * @return Storage Storage location of the time point screenshot file.
                      * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
-                     * 设置Storage location of the SnapshotByTimeOffset file.
-                     * @param _storage Storage location of the SnapshotByTimeOffset file.
+                     * 设置Storage location of the time point screenshot file.
+                     * @param _storage Storage location of the time point screenshot file.
                      * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * SnapshotByTimeOffset specification. See SnapshotByTimeOffset parameter template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * A screenshot information set of the same specification, each element represents a screenshot.
+                     * Screenshot information set of the same specification, where each element represents a screenshot.
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> m_picInfoSet;
                     bool m_picInfoSetHasBeenSet;
 
                     /**
-                     * Storage location of the SnapshotByTimeOffset file.
+                     * Storage location of the time point screenshot file.
                      */
                     TaskOutputStorage m_storage;
                     bool m_storageHasBeenSet;

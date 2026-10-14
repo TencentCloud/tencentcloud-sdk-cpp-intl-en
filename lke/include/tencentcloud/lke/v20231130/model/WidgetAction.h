@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Widget action submission structure for the dialogue side
                 */
                 class WidgetAction : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return WidgetId 
+                     * 获取Widget configuration ID
+                     * @return WidgetId Widget configuration ID
                      * 
                      */
                     std::string GetWidgetId() const;
 
                     /**
-                     * 设置
-                     * @param _widgetId 
+                     * 设置Widget configuration ID
+                     * @param _widgetId Widget configuration ID
                      * 
                      */
                     void SetWidgetId(const std::string& _widgetId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WidgetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WidgetRunId 
+                     * 获取Widget instance ID
+                     * @return WidgetRunId Widget instance ID
                      * 
                      */
                     std::string GetWidgetRunId() const;
 
                     /**
-                     * 设置
-                     * @param _widgetRunId 
+                     * 设置Widget instance ID
+                     * @param _widgetRunId Widget instance ID
                      * 
                      */
                     void SetWidgetRunId(const std::string& _widgetRunId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool WidgetRunIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActionType 
+                     * 获取Widget action
+                     * @return ActionType Widget action
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置
-                     * @param _actionType 
+                     * 设置Widget action
+                     * @param _actionType Widget action
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Payload 
+                     * 获取Data submitted by the Widget action
+                     * @return Payload Data submitted by the Widget action
                      * 
                      */
                     std::string GetPayload() const;
 
                     /**
-                     * 设置
-                     * @param _payload 
+                     * 设置Data submitted by the Widget action
+                     * @param _payload Data submitted by the Widget action
                      * 
                      */
                     void SetPayload(const std::string& _payload);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Widget configuration ID
                      */
                     std::string m_widgetId;
                     bool m_widgetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Widget instance ID
                      */
                     std::string m_widgetRunId;
                     bool m_widgetRunIdHasBeenSet;
 
                     /**
-                     * 
+                     * Widget action
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Data submitted by the Widget action
                      */
                     std::string m_payload;
                     bool m_payloadHasBeenSet;

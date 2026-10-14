@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Text recognition segment.
+                * OCR text recognition clip.
                 */
                 class AiRecognitionTaskOcrWordsSegmentItem : public AbstractModel
                 {

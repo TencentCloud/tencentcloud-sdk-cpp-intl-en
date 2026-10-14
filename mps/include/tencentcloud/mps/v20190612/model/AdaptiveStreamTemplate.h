@@ -93,10 +93,10 @@ namespace TencentCloud
                     /**
                      * 获取Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * @return RemoveAudio Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
@@ -104,10 +104,10 @@ namespace TencentCloud
                     /**
                      * 设置Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * @param _removeAudio Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
@@ -122,10 +122,10 @@ namespace TencentCloud
                     /**
                      * 获取Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * @return RemoveVideo Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
@@ -133,10 +133,10 @@ namespace TencentCloud
                     /**
                      * 设置Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * @param _removeVideo Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
@@ -149,15 +149,19 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioList 
+                     * 获取Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
+                     * @return AudioList Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
                      * 
                      */
                     std::vector<AudioTemplateInfo> GetAudioList() const;
 
                     /**
-                     * 设置
-                     * @param _audioList 
+                     * 设置Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
+                     * @param _audioList Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
                      * 
                      */
                     void SetAudioList(const std::vector<AudioTemplateInfo>& _audioList);
@@ -186,7 +190,7 @@ namespace TencentCloud
                     /**
                      * Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
@@ -194,13 +198,14 @@ namespace TencentCloud
                     /**
                      * Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * 
+                     * Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
                      */
                     std::vector<AudioTemplateInfo> m_audioList;
                     bool m_audioListHasBeenSet;

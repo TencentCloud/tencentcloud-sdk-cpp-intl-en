@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Index automation field
+                * Index autonomous field
                 */
                 class IndexOptionsField : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ExpireMaxAge Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Expiration time.</p>
+                     * @return ExpireMaxAge <p>Expiration time.</p>
                      * 
                      */
                     std::string GetExpireMaxAge() const;
 
                     /**
-                     * 设置Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _expireMaxAge Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Expiration time.</p>
+                     * @param _expireMaxAge <p>Expiration time.</p>
                      * 
                      */
                     void SetExpireMaxAge(const std::string& _expireMaxAge);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ExpireMaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ExpireMaxSize Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Expiration size</p>
+                     * @return ExpireMaxSize <p>Expiration size</p>
                      * 
                      */
                     std::string GetExpireMaxSize() const;
 
                     /**
-                     * 设置Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _expireMaxSize Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Expiration size</p>
+                     * @param _expireMaxSize <p>Expiration size</p>
                      * 
                      */
                     void SetExpireMaxSize(const std::string& _expireMaxSize);
@@ -97,19 +89,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ExpireMaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RolloverMaxAge Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Rollover period</p>
+                     * @return RolloverMaxAge <p>Rollover period</p>
                      * 
                      */
                     std::string GetRolloverMaxAge() const;
 
                     /**
-                     * 设置Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _rolloverMaxAge Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Rollover period</p>
+                     * @param _rolloverMaxAge <p>Rollover period</p>
                      * 
                      */
                     void SetRolloverMaxAge(const std::string& _rolloverMaxAge);
@@ -122,19 +110,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RolloverMaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RolloverDynamic Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Whether to enable dynamic scrolling</p>
+                     * @return RolloverDynamic <p>Whether to enable dynamic scrolling</p>
                      * 
                      */
                     std::string GetRolloverDynamic() const;
 
                     /**
-                     * 设置Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _rolloverDynamic Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Whether to enable dynamic scrolling</p>
+                     * @param _rolloverDynamic <p>Whether to enable dynamic scrolling</p>
                      * 
                      */
                     void SetRolloverDynamic(const std::string& _rolloverDynamic);
@@ -147,19 +131,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RolloverDynamicHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ShardNumDynamic Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Whether to enable dynamic sharding</p>
+                     * @return ShardNumDynamic <p>Whether to enable dynamic sharding</p>
                      * 
                      */
                     std::string GetShardNumDynamic() const;
 
                     /**
-                     * 设置Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _shardNumDynamic Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Whether to enable dynamic sharding</p>
+                     * @param _shardNumDynamic <p>Whether to enable dynamic sharding</p>
                      * 
                      */
                     void SetShardNumDynamic(const std::string& _shardNumDynamic);
@@ -172,19 +152,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ShardNumDynamicHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return TimestampField Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Time partition field</p>
+                     * @return TimestampField <p>Time partition field</p>
                      * 
                      */
                     std::string GetTimestampField() const;
 
                     /**
-                     * 设置Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _timestampField Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Time partition field</p>
+                     * @param _timestampField <p>Time partition field</p>
                      * 
                      */
                     void SetTimestampField(const std::string& _timestampField);
@@ -197,19 +173,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool TimestampFieldHasBeenSet() const;
 
                     /**
-                     * 获取Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return WriteMode Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Write mode</p>
+                     * @return WriteMode <p>Write mode</p>
                      * 
                      */
                     std::string GetWriteMode() const;
 
                     /**
-                     * 设置Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _writeMode Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Write mode</p>
+                     * @param _writeMode <p>Write mode</p>
                      * 
                      */
                     void SetWriteMode(const std::string& _writeMode);
@@ -221,56 +193,130 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool WriteModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+                     * @return FullOffloadedEnable <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+                     * 
+                     */
+                    std::string GetFullOffloadedEnable() const;
+
+                    /**
+                     * 设置<p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+                     * @param _fullOffloadedEnable <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+                     * 
+                     */
+                    void SetFullOffloadedEnable(const std::string& _fullOffloadedEnable);
+
+                    /**
+                     * 判断参数 FullOffloadedEnable 是否已赋值
+                     * @return FullOffloadedEnable 是否已赋值
+                     * 
+                     */
+                    bool FullOffloadedEnableHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Full uninstall lifecycle</p>
+                     * @return FullOffloadedMaxAge <p>Full uninstall lifecycle</p>
+                     * 
+                     */
+                    std::string GetFullOffloadedMaxAge() const;
+
+                    /**
+                     * 设置<p>Full uninstall lifecycle</p>
+                     * @param _fullOffloadedMaxAge <p>Full uninstall lifecycle</p>
+                     * 
+                     */
+                    void SetFullOffloadedMaxAge(const std::string& _fullOffloadedMaxAge);
+
+                    /**
+                     * 判断参数 FullOffloadedMaxAge 是否已赋值
+                     * @return FullOffloadedMaxAge 是否已赋值
+                     * 
+                     */
+                    bool FullOffloadedMaxAgeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Completely uninstall the lifecycle after backup index retrieval</p>
+                     * @return FullOffloadedRetrieveMaxAge <p>Completely uninstall the lifecycle after backup index retrieval</p>
+                     * 
+                     */
+                    std::string GetFullOffloadedRetrieveMaxAge() const;
+
+                    /**
+                     * 设置<p>Completely uninstall the lifecycle after backup index retrieval</p>
+                     * @param _fullOffloadedRetrieveMaxAge <p>Completely uninstall the lifecycle after backup index retrieval</p>
+                     * 
+                     */
+                    void SetFullOffloadedRetrieveMaxAge(const std::string& _fullOffloadedRetrieveMaxAge);
+
+                    /**
+                     * 判断参数 FullOffloadedRetrieveMaxAge 是否已赋值
+                     * @return FullOffloadedRetrieveMaxAge 是否已赋值
+                     * 
+                     */
+                    bool FullOffloadedRetrieveMaxAgeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Expiration time.</p>
                      */
                     std::string m_expireMaxAge;
                     bool m_expireMaxAgeHasBeenSet;
 
                     /**
-                     * Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Expiration size</p>
                      */
                     std::string m_expireMaxSize;
                     bool m_expireMaxSizeHasBeenSet;
 
                     /**
-                     * Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Rollover period</p>
                      */
                     std::string m_rolloverMaxAge;
                     bool m_rolloverMaxAgeHasBeenSet;
 
                     /**
-                     * Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Whether to enable dynamic scrolling</p>
                      */
                     std::string m_rolloverDynamic;
                     bool m_rolloverDynamicHasBeenSet;
 
                     /**
-                     * Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Whether to enable dynamic sharding</p>
                      */
                     std::string m_shardNumDynamic;
                     bool m_shardNumDynamicHasBeenSet;
 
                     /**
-                     * Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Time partition field</p>
                      */
                     std::string m_timestampField;
                     bool m_timestampFieldHasBeenSet;
 
                     /**
-                     * Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Write mode</p>
                      */
                     std::string m_writeMode;
                     bool m_writeModeHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+                     */
+                    std::string m_fullOffloadedEnable;
+                    bool m_fullOffloadedEnableHasBeenSet;
+
+                    /**
+                     * <p>Full uninstall lifecycle</p>
+                     */
+                    std::string m_fullOffloadedMaxAge;
+                    bool m_fullOffloadedMaxAgeHasBeenSet;
+
+                    /**
+                     * <p>Completely uninstall the lifecycle after backup index retrieval</p>
+                     */
+                    std::string m_fullOffloadedRetrieveMaxAge;
+                    bool m_fullOffloadedRetrieveMaxAgeHasBeenSet;
 
                 };
             }

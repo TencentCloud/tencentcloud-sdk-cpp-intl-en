@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdc/v20200828/model/SRTSourceAddressResp.h>
+#include <tencentcloud/mdc/v20200828/model/SRTFECSimpleOptions.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * SRT configuration information of the queried input.
+                * Query the input SRT configuration information.
                 */
                 class DescribeInputSRTSettings : public AbstractModel
                 {
@@ -48,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取SRT mode.
+                     * @return Mode SRT mode.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置SRT mode.
+                     * @param _mode SRT mode.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -73,15 +70,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Stream ID.
-                     * @return StreamId Stream ID.
+                     * 获取Stream Id.
+                     * @return StreamId Stream Id.
                      * 
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置Stream ID.
-                     * @param _streamId Stream ID.
+                     * 设置Stream Id.
+                     * @param _streamId Stream Id.
                      * 
                      */
                     void SetStreamId(const std::string& _streamId);
@@ -94,15 +91,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取Latency.
-                     * @return Latency Latency.
+                     * 获取Delay.
+                     * @return Latency Delay.
                      * 
                      */
                     int64_t GetLatency() const;
 
                     /**
-                     * 设置Latency.
-                     * @param _latency Latency.
+                     * 设置Delay.
+                     * @param _latency Delay.
                      * 
                      */
                     void SetLatency(const int64_t& _latency);
@@ -115,15 +112,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool LatencyHasBeenSet() const;
 
                     /**
-                     * 获取Receive latency.
-                     * @return RecvLatency Receive latency.
+                     * 获取Receive delay.
+                     * @return RecvLatency Receive delay.
                      * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
-                     * 设置Receive latency.
-                     * @param _recvLatency Receive latency.
+                     * 设置Receive delay.
+                     * @param _recvLatency Receive delay.
                      * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
@@ -136,15 +133,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RecvLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Peer latency.
-                     * @return PeerLatency Peer latency.
+                     * 获取Peer delay.
+                     * @return PeerLatency Peer delay.
                      * 
                      */
                     int64_t GetPeerLatency() const;
 
                     /**
-                     * 设置Peer latency.
-                     * @param _peerLatency Peer latency.
+                     * 设置Peer delay.
+                     * @param _peerLatency Peer delay.
                      * 
                      */
                     void SetPeerLatency(const int64_t& _peerLatency);
@@ -157,15 +154,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PeerLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Peer idle timeout period.
-                     * @return PeerIdleTimeout Peer idle timeout period.
+                     * 获取Idle timeout period of the peer.
+                     * @return PeerIdleTimeout Idle timeout period of the peer.
                      * 
                      */
                     int64_t GetPeerIdleTimeout() const;
 
                     /**
-                     * 设置Peer idle timeout period.
-                     * @param _peerIdleTimeout Peer idle timeout period.
+                     * 设置Idle timeout period of the peer.
+                     * @param _peerIdleTimeout Idle timeout period of the peer.
                      * 
                      */
                     void SetPeerIdleTimeout(const int64_t& _peerIdleTimeout);
@@ -220,19 +217,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PbKeyLenHasBeenSet() const;
 
                     /**
-                     * 获取The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SourceAddresses The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取SRT peer address.
+                     * @return SourceAddresses SRT peer address.
                      * 
                      */
                     std::vector<SRTSourceAddressResp> GetSourceAddresses() const;
 
                     /**
-                     * 设置The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _sourceAddresses The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置SRT peer address.
+                     * @param _sourceAddresses SRT peer address.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<SRTSourceAddressResp>& _sourceAddresses);
@@ -244,41 +237,61 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool SourceAddressesHasBeenSet() const;
 
+                    /**
+                     * 获取FEC settings
+                     * @return FEC FEC settings
+                     * 
+                     */
+                    SRTFECSimpleOptions GetFEC() const;
+
+                    /**
+                     * 设置FEC settings
+                     * @param _fEC FEC settings
+                     * 
+                     */
+                    void SetFEC(const SRTFECSimpleOptions& _fEC);
+
+                    /**
+                     * 判断参数 FEC 是否已赋值
+                     * @return FEC 是否已赋值
+                     * 
+                     */
+                    bool FECHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * SRT mode.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Stream ID.
+                     * Stream Id.
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * Latency.
+                     * Delay.
                      */
                     int64_t m_latency;
                     bool m_latencyHasBeenSet;
 
                     /**
-                     * Receive latency.
+                     * Receive delay.
                      */
                     int64_t m_recvLatency;
                     bool m_recvLatencyHasBeenSet;
 
                     /**
-                     * Peer latency.
+                     * Peer delay.
                      */
                     int64_t m_peerLatency;
                     bool m_peerLatencyHasBeenSet;
 
                     /**
-                     * Peer idle timeout period.
+                     * Idle timeout period of the peer.
                      */
                     int64_t m_peerIdleTimeout;
                     bool m_peerIdleTimeoutHasBeenSet;
@@ -296,11 +309,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_pbKeyLenHasBeenSet;
 
                     /**
-                     * The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * SRT peer address.
                      */
                     std::vector<SRTSourceAddressResp> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;
+
+                    /**
+                     * FEC settings
+                     */
+                    SRTFECSimpleOptions m_fEC;
+                    bool m_fECHasBeenSet;
 
                 };
             }

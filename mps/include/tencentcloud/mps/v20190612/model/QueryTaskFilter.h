@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Query the list filter criteria for AIGC tasks
+                * List filter criteria for querying AIGC tasks
                 */
                 class QueryTaskFilter : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task type</p>
-                     * @return TaskType <p>Task type</p>
+                     * 获取<p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
+                     * @return TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置<p>Task type</p>
-                     * @param _taskType <p>Task type</p>
+                     * 设置<p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
+                     * @param _taskType <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -151,6 +151,69 @@ namespace TencentCloud
                      */
                     bool RatioHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+                     * @return ExecuteMode <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+                     * 
+                     */
+                    std::string GetExecuteMode() const;
+
+                    /**
+                     * 设置<p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+                     * @param _executeMode <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+                     * 
+                     */
+                    void SetExecuteMode(const std::string& _executeMode);
+
+                    /**
+                     * 判断参数 ExecuteMode 是否已赋值
+                     * @return ExecuteMode 是否已赋值
+                     * 
+                     */
+                    bool ExecuteModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+                     * @return VideoType <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+                     * 
+                     */
+                    std::string GetVideoType() const;
+
+                    /**
+                     * 设置<p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+                     * @param _videoType <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+                     * 
+                     */
+                    void SetVideoType(const std::string& _videoType);
+
+                    /**
+                     * 判断参数 VideoType 是否已赋值
+                     * @return VideoType 是否已赋值
+                     * 
+                     */
+                    bool VideoTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+                     * @return ModelTier <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+                     * 
+                     */
+                    std::string GetModelTier() const;
+
+                    /**
+                     * 设置<p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+                     * @param _modelTier <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+                     * 
+                     */
+                    void SetModelTier(const std::string& _modelTier);
+
+                    /**
+                     * 判断参数 ModelTier 是否已赋值
+                     * @return ModelTier 是否已赋值
+                     * 
+                     */
+                    bool ModelTierHasBeenSet() const;
+
                 private:
 
                     /**
@@ -160,7 +223,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Task type</p>
+                     * <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -182,6 +245,24 @@ namespace TencentCloud
                      */
                     std::string m_ratio;
                     bool m_ratioHasBeenSet;
+
+                    /**
+                     * <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+                     */
+                    std::string m_executeMode;
+                    bool m_executeModeHasBeenSet;
+
+                    /**
+                     * <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+                     */
+                    std::string m_videoType;
+                    bool m_videoTypeHasBeenSet;
+
+                    /**
+                     * <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+                     */
+                    std::string m_modelTier;
+                    bool m_modelTierHasBeenSet;
 
                 };
             }

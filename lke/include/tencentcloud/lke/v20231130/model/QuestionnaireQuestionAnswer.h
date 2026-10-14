@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Answer to the questionnaire question
                 */
                 class QuestionnaireQuestionAnswer : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Question 
+                     * 获取<p>Issue.</p>
+                     * @return Question <p>Issue.</p>
                      * 
                      */
                     std::string GetQuestion() const;
 
                     /**
-                     * 设置
-                     * @param _question 
+                     * 设置<p>Issue.</p>
+                     * @param _question <p>Issue.</p>
                      * 
                      */
                     void SetQuestion(const std::string& _question);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SelectedLabels 
+                     * 获取<p>Selected answer tag.</p>
+                     * @return SelectedLabels <p>Selected answer tag.</p>
                      * 
                      */
                     std::vector<std::string> GetSelectedLabels() const;
 
                     /**
-                     * 设置
-                     * @param _selectedLabels 
+                     * 设置<p>Selected answer tag.</p>
+                     * @param _selectedLabels <p>Selected answer tag.</p>
                      * 
                      */
                     void SetSelectedLabels(const std::vector<std::string>& _selectedLabels);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Issue.</p>
                      */
                     std::string m_question;
                     bool m_questionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Selected answer tag.</p>
                      */
                     std::vector<std::string> m_selectedLabels;
                     bool m_selectedLabelsHasBeenSet;

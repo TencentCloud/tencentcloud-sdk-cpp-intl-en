@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SegmentSet 
+                     * 获取<p>List of segments for full speech recognition.</p>
+                     * @return SegmentSet <p>List of segments for full speech recognition.</p>
                      * 
                      */
                     std::vector<SmartSubtitleTaskAsrFullTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置
-                     * @param _segmentSet 
+                     * 设置<p>List of segments for full speech recognition.</p>
+                     * @param _segmentSet <p>List of segments for full speech recognition.</p>
                      * 
                      */
                     void SetSegmentSet(const std::vector<SmartSubtitleTaskAsrFullTextSegmentItem>& _segmentSet);
@@ -157,7 +157,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>List of segments for full speech recognition.</p>
                      */
                     std::vector<SmartSubtitleTaskAsrFullTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

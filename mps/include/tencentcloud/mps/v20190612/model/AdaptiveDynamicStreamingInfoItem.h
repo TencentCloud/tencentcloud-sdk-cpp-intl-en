@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive Bitrate Streaming information
+                * Adaptive bitrate streaming information
                 */
                 class AdaptiveDynamicStreamingInfoItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate streaming specification.
-                     * @return Definition Adaptive bitrate streaming specification.
+                     * 获取Adaptive bitstreaming specification.
+                     * @return Definition Adaptive bitstreaming specification.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming specification.
-                     * @param _definition Adaptive bitrate streaming specification.
+                     * 设置Adaptive bitstreaming specification.
+                     * @param _definition Adaptive bitstreaming specification.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Packaging format, which may be two kinds: HLS and MPEG-DASH.
-                     * @return Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
+                     * 获取Packaging format. Possible values: HLS and MPEG-DASH.
+                     * @return Package Packaging format. Possible values: HLS and MPEG-DASH.
                      * 
                      */
                     std::string GetPackage() const;
 
                     /**
-                     * 设置Packaging format, which may be two kinds: HLS and MPEG-DASH.
-                     * @param _package Packaging format, which may be two kinds: HLS and MPEG-DASH.
+                     * 设置Packaging format. Possible values: HLS and MPEG-DASH.
+                     * @param _package Packaging format. Possible values: HLS and MPEG-DASH.
                      * 
                      */
                     void SetPackage(const std::string& _package);
@@ -134,13 +134,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Adaptive bitrate streaming specification.
+                     * Adaptive bitstreaming specification.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Packaging format, which may be two kinds: HLS and MPEG-DASH.
+                     * Packaging format. Possible values: HLS and MPEG-DASH.
                      */
                     std::string m_package;
                     bool m_packageHasBeenSet;

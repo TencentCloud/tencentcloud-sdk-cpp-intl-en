@@ -27,7 +27,11 @@ Operation::Operation() :
     m_detailHasBeenSet(false),
     m_resultHasBeenSet(false),
     m_tasksHasBeenSet(false),
-    m_progressHasBeenSet(false)
+    m_progressHasBeenSet(false),
+    m_rollbackTagHasBeenSet(false),
+    m_subAccountUinHasBeenSet(false),
+    m_autoScaleTagHasBeenSet(false),
+    m_suspendedReasonHasBeenSet(false)
 {
 }
 
@@ -123,6 +127,46 @@ CoreInternalOutcome Operation::Deserialize(const rapidjson::Value &value)
         m_progressHasBeenSet = true;
     }
 
+    if (value.HasMember("RollbackTag") && !value["RollbackTag"].IsNull())
+    {
+        if (!value["RollbackTag"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Operation.RollbackTag` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_rollbackTag = value["RollbackTag"].GetInt64();
+        m_rollbackTagHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubAccountUin") && !value["SubAccountUin"].IsNull())
+    {
+        if (!value["SubAccountUin"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Operation.SubAccountUin` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_subAccountUin = string(value["SubAccountUin"].GetString());
+        m_subAccountUinHasBeenSet = true;
+    }
+
+    if (value.HasMember("AutoScaleTag") && !value["AutoScaleTag"].IsNull())
+    {
+        if (!value["AutoScaleTag"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Operation.AutoScaleTag` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoScaleTag = value["AutoScaleTag"].GetUint64();
+        m_autoScaleTagHasBeenSet = true;
+    }
+
+    if (value.HasMember("SuspendedReason") && !value["SuspendedReason"].IsNull())
+    {
+        if (!value["SuspendedReason"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Operation.SuspendedReason` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_suspendedReason = string(value["SuspendedReason"].GetString());
+        m_suspendedReasonHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -192,6 +236,38 @@ void Operation::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "Progress";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_progress, allocator);
+    }
+
+    if (m_rollbackTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RollbackTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rollbackTag, allocator);
+    }
+
+    if (m_subAccountUinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubAccountUin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subAccountUin.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoScaleTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoScaleTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoScaleTag, allocator);
+    }
+
+    if (m_suspendedReasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SuspendedReason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suspendedReason.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -307,5 +383,69 @@ void Operation::SetProgress(const double& _progress)
 bool Operation::ProgressHasBeenSet() const
 {
     return m_progressHasBeenSet;
+}
+
+int64_t Operation::GetRollbackTag() const
+{
+    return m_rollbackTag;
+}
+
+void Operation::SetRollbackTag(const int64_t& _rollbackTag)
+{
+    m_rollbackTag = _rollbackTag;
+    m_rollbackTagHasBeenSet = true;
+}
+
+bool Operation::RollbackTagHasBeenSet() const
+{
+    return m_rollbackTagHasBeenSet;
+}
+
+string Operation::GetSubAccountUin() const
+{
+    return m_subAccountUin;
+}
+
+void Operation::SetSubAccountUin(const string& _subAccountUin)
+{
+    m_subAccountUin = _subAccountUin;
+    m_subAccountUinHasBeenSet = true;
+}
+
+bool Operation::SubAccountUinHasBeenSet() const
+{
+    return m_subAccountUinHasBeenSet;
+}
+
+uint64_t Operation::GetAutoScaleTag() const
+{
+    return m_autoScaleTag;
+}
+
+void Operation::SetAutoScaleTag(const uint64_t& _autoScaleTag)
+{
+    m_autoScaleTag = _autoScaleTag;
+    m_autoScaleTagHasBeenSet = true;
+}
+
+bool Operation::AutoScaleTagHasBeenSet() const
+{
+    return m_autoScaleTagHasBeenSet;
+}
+
+string Operation::GetSuspendedReason() const
+{
+    return m_suspendedReason;
+}
+
+void Operation::SetSuspendedReason(const string& _suspendedReason)
+{
+    m_suspendedReason = _suspendedReason;
+    m_suspendedReasonHasBeenSet = true;
+}
+
+bool Operation::SuspendedReasonHasBeenSet() const
+{
+    return m_suspendedReasonHasBeenSet;
 }
 

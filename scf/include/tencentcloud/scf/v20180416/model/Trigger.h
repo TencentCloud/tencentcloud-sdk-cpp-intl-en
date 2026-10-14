@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Latest modification time of the trigger
-                     * @return ModTime Latest modification time of the trigger
+                     * 获取Last modification time of the trigger
+                     * @return ModTime Last modification time of the trigger
                      * 
                      */
                     std::string GetModTime() const;
 
                     /**
-                     * 设置Latest modification time of the trigger
-                     * @param _modTime Latest modification time of the trigger
+                     * 设置Last modification time of the trigger
+                     * @param _modTime Last modification time of the trigger
                      * 
                      */
                     void SetModTime(const std::string& _modTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Detailed trigger configuration
-                     * @return TriggerDesc Detailed trigger configuration
+                     * 获取Trigger detailed configuration
+                     * @return TriggerDesc Trigger detailed configuration
                      * 
                      */
                     std::string GetTriggerDesc() const;
 
                     /**
-                     * 设置Detailed trigger configuration
-                     * @param _triggerDesc Detailed trigger configuration
+                     * 设置Trigger detailed configuration
+                     * @param _triggerDesc Trigger detailed configuration
                      * 
                      */
                     void SetTriggerDesc(const std::string& _triggerDesc);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TriggerDescHasBeenSet() const;
 
                     /**
-                     * 获取Trigger name
-                     * @return TriggerName Trigger name
+                     * 获取Trigger name.
+                     * @return TriggerName Trigger name.
                      * 
                      */
                     std::string GetTriggerName() const;
 
                     /**
-                     * 设置Trigger name
-                     * @param _triggerName Trigger name
+                     * 设置Trigger name.
+                     * @param _triggerName Trigger name.
                      * 
                      */
                     void SetTriggerName(const std::string& _triggerName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TriggerNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the trigger
-                     * @return AddTime Creation time of the trigger
+                     * 获取Trigger creation time
+                     * @return AddTime Trigger creation time
                      * 
                      */
                     std::string GetAddTime() const;
 
                     /**
-                     * 设置Creation time of the trigger
-                     * @param _addTime Creation time of the trigger
+                     * 设置Trigger creation time
+                     * @param _addTime Trigger creation time
                      * 
                      */
                     void SetAddTime(const std::string& _addTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool AddTimeHasBeenSet() const;
 
                     /**
-                     * 获取Enabling switch
-                     * @return Enable Enabling switch
+                     * 获取Enable switch
+                     * @return Enable Enable switch
                      * 
                      */
                     int64_t GetEnable() const;
 
                     /**
-                     * 设置Enabling switch
-                     * @param _enable Enabling switch
+                     * 设置Enable switch
+                     * @param _enable Enable switch
                      * 
                      */
                     void SetEnable(const int64_t& _enable);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameter
-                     * @return CustomArgument Custom parameter
+                     * 获取Customer custom parameter
+                     * @return CustomArgument Customer custom parameter
                      * 
                      */
                     std::string GetCustomArgument() const;
 
                     /**
-                     * 设置Custom parameter
-                     * @param _customArgument Custom parameter
+                     * 设置Customer custom parameter
+                     * @param _customArgument Customer custom parameter
                      * 
                      */
                     void SetCustomArgument(const std::string& _customArgument);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool AvailableStatusHasBeenSet() const;
 
                     /**
-                     * 获取Minimum resource ID of trigger
-                     * @return ResourceId Minimum resource ID of trigger
+                     * 获取Minimum resource ID of the trigger
+                     * @return ResourceId Minimum resource ID of the trigger
                      * @deprecated
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Minimum resource ID of trigger
-                     * @param _resourceId Minimum resource ID of trigger
+                     * 设置Minimum resource ID of the trigger
+                     * @param _resourceId Minimum resource ID of the trigger
                      * @deprecated
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Trigger-Function binding status
-                     * @return BindStatus Trigger-Function binding status
+                     * 获取Binding status of the trigger and SCF
+                     * @return BindStatus Binding status of the trigger and SCF
                      * @deprecated
                      */
                     std::string GetBindStatus() const;
 
                     /**
-                     * 设置Trigger-Function binding status
-                     * @param _bindStatus Trigger-Function binding status
+                     * 设置Binding status of the trigger and SCF
+                     * @param _bindStatus Binding status of the trigger and SCF
                      * @deprecated
                      */
                     void SetBindStatus(const std::string& _bindStatus);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool BindStatusHasBeenSet() const;
 
                     /**
-                     * 获取Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
-                     * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     * 获取Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
+                     * @return TriggerAttribute Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
                      * @deprecated
                      */
                     std::string GetTriggerAttribute() const;
 
                     /**
-                     * 设置Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
-                     * @param _triggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     * 设置Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
+                     * @param _triggerAttribute Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
                      * @deprecated
                      */
                     void SetTriggerAttribute(const std::string& _triggerAttribute);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool TriggerAttributeHasBeenSet() const;
 
                     /**
-                     * 获取The alias or version bound with the trigger
-                     * @return Qualifier The alias or version bound with the trigger
+                     * 获取Alias name or version bound to the trigger
+                     * @return Qualifier Alias name or version bound to the trigger
                      * 
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置The alias or version bound with the trigger
-                     * @param _qualifier The alias or version bound with the trigger
+                     * 设置Alias name or version bound to the trigger
+                     * @param _qualifier Alias name or version bound to the trigger
                      * 
                      */
                     void SetQualifier(const std::string& _qualifier);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool QualifierHasBeenSet() const;
 
                     /**
-                     * 获取Trigger description
-                     * @return Description Trigger description
+                     * 获取Trigger description.
+                     * @return Description Trigger description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Trigger description
-                     * @param _description Trigger description
+                     * 设置Trigger description.
+                     * @param _description Trigger description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -322,7 +322,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Latest modification time of the trigger
+                     * Last modification time of the trigger
                      */
                     std::string m_modTime;
                     bool m_modTimeHasBeenSet;
@@ -334,31 +334,31 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Detailed trigger configuration
+                     * Trigger detailed configuration
                      */
                     std::string m_triggerDesc;
                     bool m_triggerDescHasBeenSet;
 
                     /**
-                     * Trigger name
+                     * Trigger name.
                      */
                     std::string m_triggerName;
                     bool m_triggerNameHasBeenSet;
 
                     /**
-                     * Creation time of the trigger
+                     * Trigger creation time
                      */
                     std::string m_addTime;
                     bool m_addTimeHasBeenSet;
 
                     /**
-                     * Enabling switch
+                     * Enable switch
                      */
                     int64_t m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Custom parameter
+                     * Customer custom parameter
                      */
                     std::string m_customArgument;
                     bool m_customArgumentHasBeenSet;
@@ -370,31 +370,31 @@ namespace TencentCloud
                     bool m_availableStatusHasBeenSet;
 
                     /**
-                     * Minimum resource ID of trigger
+                     * Minimum resource ID of the trigger
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Trigger-Function binding status
+                     * Binding status of the trigger and SCF
                      */
                     std::string m_bindStatus;
                     bool m_bindStatusHasBeenSet;
 
                     /**
-                     * Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     * Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
                      */
                     std::string m_triggerAttribute;
                     bool m_triggerAttributeHasBeenSet;
 
                     /**
-                     * The alias or version bound with the trigger
+                     * Alias name or version bound to the trigger
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;
 
                     /**
-                     * Trigger description
+                     * Trigger description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

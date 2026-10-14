@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Basic image information
+                * Basic mirror information
                 */
                 class ImageInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Image name
-                     * @return ImageName Image name
+                     * 获取Image name.
+                     * @return ImageName Image name.
                      * 
                      */
                     std::string GetImageName() const;
 
                     /**
-                     * 设置Image name
-                     * @param _imageName Image name
+                     * 设置Image name.
+                     * @param _imageName Image name.
                      * 
                      */
                     void SetImageName(const std::string& _imageName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ImageTagHasBeenSet() const;
 
                     /**
-                     * 获取Forced scan
-                     * @return Force Forced scan
+                     * 获取Force scan
+                     * @return Force Force scan
                      * 
                      */
                     std::string GetForce() const;
 
                     /**
-                     * 设置Forced scan
-                     * @param _force Forced scan
+                     * 设置Force scan
+                     * @param _force Force scan
                      * 
                      */
                     void SetForce(const std::string& _force);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ForceHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-                     * @return ImageDigest Image ID
+                     * 获取Image id
+                     * @return ImageDigest Image id
                      * 
                      */
                     std::string GetImageDigest() const;
 
                     /**
-                     * 设置Image ID
-                     * @param _imageDigest Image ID
+                     * 设置Image id
+                     * @param _imageDigest Image id
                      * 
                      */
                     void SetImageDigest(const std::string& _imageDigest);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ImageRepoAddressHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -238,7 +238,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -250,7 +250,7 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Image name
+                     * Image name.
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
@@ -262,13 +262,13 @@ namespace TencentCloud
                     bool m_imageTagHasBeenSet;
 
                     /**
-                     * Forced scan
+                     * Force scan
                      */
                     std::string m_force;
                     bool m_forceHasBeenSet;
 
                     /**
-                     * Image ID
+                     * Image id
                      */
                     std::string m_imageDigest;
                     bool m_imageDigestHasBeenSet;
@@ -286,7 +286,7 @@ namespace TencentCloud
                     bool m_imageRepoAddressHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

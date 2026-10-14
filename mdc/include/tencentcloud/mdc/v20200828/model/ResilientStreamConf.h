@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configure smooth stream output for delayed playback.
                 */
                 class ResilientStreamConf : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Enable 
+                     * 获取Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
+                     * @return Enable Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
                      * 
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置
-                     * @param _enable 
+                     * 设置Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
+                     * @param _enable Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
                      * 
                      */
                     void SetEnable(const bool& _enable);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BufferTime 
+                     * 获取Delay time in seconds, ranging from 10 to 300 for the time being.
+                     * @return BufferTime Delay time in seconds, ranging from 10 to 300 for the time being.
                      * 
                      */
                     uint64_t GetBufferTime() const;
 
                     /**
-                     * 设置
-                     * @param _bufferTime 
+                     * 设置Delay time in seconds, ranging from 10 to 300 for the time being.
+                     * @param _bufferTime Delay time in seconds, ranging from 10 to 300 for the time being.
                      * 
                      */
                     void SetBufferTime(const uint64_t& _bufferTime);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * 
+                     * Delay time in seconds, ranging from 10 to 300 for the time being.
                      */
                     uint64_t m_bufferTime;
                     bool m_bufferTimeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live streaming AI Ocr word recognition result
+                * Live streaming AI Ocr word recognition result.
                 */
                 class LiveStreamOcrWordsRecognitionResult : public AbstractModel
                 {

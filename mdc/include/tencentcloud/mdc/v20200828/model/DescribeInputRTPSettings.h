@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTP configuration information of the queried input.
+                * Query the configuration message of the input RTP.
                 */
                 class DescribeInputRTPSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether it is FEC.
-                     * @return FEC Whether it is FEC.
+                     * 获取Whether to enable FEC.
+                     * @return FEC Whether to enable FEC.
                      * 
                      */
                     std::string GetFEC() const;
 
                     /**
-                     * 设置Whether it is FEC.
-                     * @param _fEC Whether it is FEC.
+                     * 设置Whether to enable FEC.
+                     * @param _fEC Whether to enable FEC.
                      * 
                      */
                     void SetFEC(const std::string& _fEC);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether it is FEC.
+                     * Whether to enable FEC.
                      */
                     std::string m_fEC;
                     bool m_fECHasBeenSet;

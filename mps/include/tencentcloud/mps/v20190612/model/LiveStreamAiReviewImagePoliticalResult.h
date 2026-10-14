@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI content review image sensitive result
+                * Live stream AI content moderation result of images involving sensitive content
                 */
                 class LiveStreamAiReviewImagePoliticalResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start PTS time of a suspected segment, in seconds.
-                     * @return StartPtsTime Start PTS time of a suspected segment, in seconds.
+                     * 获取Starting PTS time of a suspected segment, in seconds.
+                     * @return StartPtsTime Starting PTS time of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of a suspected segment, in seconds.
-                     * @param _startPtsTime Start PTS time of a suspected segment, in seconds.
+                     * 设置Starting PTS time of a suspected segment, in seconds.
+                     * @param _startPtsTime Starting PTS time of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Result suggestion for suspected segment porn detection, permissible range:
+                     * 获取Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @return Suggestion Result suggestion for suspected segment porn detection, permissible range:
+                     * @return Suggestion Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Result suggestion for suspected segment porn detection, permissible range:
+                     * 设置Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param _suggestion Result suggestion for suspected segment porn detection, permissible range:
+                     * @param _suggestion Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -143,10 +143,10 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Video sensitive result tag, value ranges from...to...
+                     * 获取Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
-                     * @return Label Video sensitive result tag, value ranges from...to...
+                     * @return Label Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
                      * 
@@ -154,10 +154,10 @@ namespace TencentCloud
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Video sensitive result tag, value ranges from...to...
+                     * 设置Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
-                     * @param _label Video sensitive result tag, value ranges from...to...
+                     * @param _label Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
                      * 
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Sensitive person, violative icon name.
-                     * @return Name Sensitive person, violative icon name.
+                     * 获取Sensitive person and violative icon name.
+                     * @return Name Sensitive person and violative icon name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Sensitive person, violative icon name.
-                     * @param _name Sensitive person, violative icon name.
+                     * 设置Sensitive person and violative icon name.
+                     * @param _name Sensitive person and violative icon name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
-                     * @return AreaCoordSet Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+                     * 获取Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+                     * @return AreaCoordSet Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
-                     * @param _areaCoordSet Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+                     * 设置Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+                     * @param _areaCoordSet Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -214,19 +214,19 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 获取Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @return Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @param _url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 设置Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @param _url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -239,15 +239,15 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -262,7 +262,7 @@ The image will be deleted after the PicUrlExpireTime time point.
                 private:
 
                     /**
-                     * Start PTS time of a suspected segment, in seconds.
+                     * Starting PTS time of a suspected segment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
@@ -280,7 +280,7 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Result suggestion for suspected segment porn detection, permissible range:
+                     * Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -289,7 +289,7 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Video sensitive result tag, value ranges from...to...
+                     * Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
                      */
@@ -297,26 +297,26 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Sensitive person, violative icon name.
+                     * Sensitive person and violative icon name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+                     * Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

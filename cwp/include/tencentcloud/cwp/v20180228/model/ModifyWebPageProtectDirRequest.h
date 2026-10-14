@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ProtectDirAddrHasBeenSet() const;
 
                     /**
-                     * 获取Website protection directory name
-                     * @return ProtectDirName Website protection directory name
+                     * 获取Name of the website protection directory
+                     * @return ProtectDirName Name of the website protection directory
                      * 
                      */
                     std::string GetProtectDirName() const;
 
                     /**
-                     * 设置Website protection directory name
-                     * @param _protectDirName Website protection directory name
+                     * 设置Name of the website protection directory
+                     * @param _protectDirName Name of the website protection directory
                      * 
                      */
                     void SetProtectDirName(const std::string& _protectDirName);
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_protectDirAddrHasBeenSet;
 
                     /**
-                     * Website protection directory name
+                     * Name of the website protection directory
                      */
                     std::string m_protectDirName;
                     bool m_protectDirNameHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Text keyword recognition result.
+                * Keyword recognition result of the text.
                 */
                 class AiRecognitionTaskOcrWordsResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Text keyword recognition task input.
-                     * @return Input Text keyword recognition task input.
+                     * 获取Input information for the text keyword recognition task.
+                     * @return Input Input information for the text keyword recognition task.
                      * 
                      */
                     AiRecognitionTaskOcrWordsResultInput GetInput() const;
 
                     /**
-                     * 设置Text keyword recognition task input.
-                     * @param _input Text keyword recognition task input.
+                     * 设置Input information for the text keyword recognition task.
+                     * @param _input Input information for the text keyword recognition task.
                      * 
                      */
                     void SetInput(const AiRecognitionTaskOcrWordsResultInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output message of the text keyword recognition task.
+                     * @return Output Output message of the text keyword recognition task.
                      * 
                      */
                     AiRecognitionTaskOcrWordsResultOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output message of the text keyword recognition task.
+                     * @param _output Output message of the text keyword recognition task.
                      * 
                      */
                     void SetOutput(const AiRecognitionTaskOcrWordsResultOutput& _output);
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Text keyword recognition task input.
+                     * Input information for the text keyword recognition task.
                      */
                     AiRecognitionTaskOcrWordsResultInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output message of the text keyword recognition task.
                      */
                     AiRecognitionTaskOcrWordsResultOutput m_output;
                     bool m_outputHasBeenSet;

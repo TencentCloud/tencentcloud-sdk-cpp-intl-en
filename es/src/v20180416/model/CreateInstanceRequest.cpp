@@ -56,7 +56,17 @@ CreateInstanceRequest::CreateInstanceRequest() :
     m_operationDurationHasBeenSet(false),
     m_enableHybridStorageHasBeenSet(false),
     m_diskEnhanceHasBeenSet(false),
-    m_enableDiagnoseHasBeenSet(false)
+    m_enableDiagnoseHasBeenSet(false),
+    m_enableCosBackupHasBeenSet(false),
+    m_cdcIdHasBeenSet(false),
+    m_disasterRecoverGroupAffinityHasBeenSet(false),
+    m_subProductCodeHasBeenSet(false),
+    m_readWriteModeHasBeenSet(false),
+    m_enableScheduleRecoverGroupHasBeenSet(false),
+    m_enableScheduleOperationDurationHasBeenSet(false),
+    m_autoScaleDiskInfoListHasBeenSet(false),
+    m_enableKibanaPublicAccessHasBeenSet(false),
+    m_alarmPolicyIdsHasBeenSet(false)
 {
 }
 
@@ -365,6 +375,99 @@ string CreateInstanceRequest::ToJsonString() const
         string key = "EnableDiagnose";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableDiagnose, allocator);
+    }
+
+    if (m_enableCosBackupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableCosBackup";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableCosBackup, allocator);
+    }
+
+    if (m_cdcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CdcId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_disasterRecoverGroupAffinityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DisasterRecoverGroupAffinity";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_disasterRecoverGroupAffinity, allocator);
+    }
+
+    if (m_subProductCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubProductCode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subProductCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_readWriteModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReadWriteMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_readWriteMode, allocator);
+    }
+
+    if (m_enableScheduleRecoverGroupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableScheduleRecoverGroup";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableScheduleRecoverGroup, allocator);
+    }
+
+    if (m_enableScheduleOperationDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableScheduleOperationDuration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_enableScheduleOperationDuration.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_autoScaleDiskInfoListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoScaleDiskInfoList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_autoScaleDiskInfoList.begin(); itr != m_autoScaleDiskInfoList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_enableKibanaPublicAccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableKibanaPublicAccess";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_enableKibanaPublicAccess.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_alarmPolicyIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AlarmPolicyIds";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_alarmPolicyIds.begin(); itr != m_alarmPolicyIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -917,6 +1020,166 @@ void CreateInstanceRequest::SetEnableDiagnose(const bool& _enableDiagnose)
 bool CreateInstanceRequest::EnableDiagnoseHasBeenSet() const
 {
     return m_enableDiagnoseHasBeenSet;
+}
+
+bool CreateInstanceRequest::GetEnableCosBackup() const
+{
+    return m_enableCosBackup;
+}
+
+void CreateInstanceRequest::SetEnableCosBackup(const bool& _enableCosBackup)
+{
+    m_enableCosBackup = _enableCosBackup;
+    m_enableCosBackupHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::EnableCosBackupHasBeenSet() const
+{
+    return m_enableCosBackupHasBeenSet;
+}
+
+string CreateInstanceRequest::GetCdcId() const
+{
+    return m_cdcId;
+}
+
+void CreateInstanceRequest::SetCdcId(const string& _cdcId)
+{
+    m_cdcId = _cdcId;
+    m_cdcIdHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::CdcIdHasBeenSet() const
+{
+    return m_cdcIdHasBeenSet;
+}
+
+uint64_t CreateInstanceRequest::GetDisasterRecoverGroupAffinity() const
+{
+    return m_disasterRecoverGroupAffinity;
+}
+
+void CreateInstanceRequest::SetDisasterRecoverGroupAffinity(const uint64_t& _disasterRecoverGroupAffinity)
+{
+    m_disasterRecoverGroupAffinity = _disasterRecoverGroupAffinity;
+    m_disasterRecoverGroupAffinityHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::DisasterRecoverGroupAffinityHasBeenSet() const
+{
+    return m_disasterRecoverGroupAffinityHasBeenSet;
+}
+
+string CreateInstanceRequest::GetSubProductCode() const
+{
+    return m_subProductCode;
+}
+
+void CreateInstanceRequest::SetSubProductCode(const string& _subProductCode)
+{
+    m_subProductCode = _subProductCode;
+    m_subProductCodeHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::SubProductCodeHasBeenSet() const
+{
+    return m_subProductCodeHasBeenSet;
+}
+
+int64_t CreateInstanceRequest::GetReadWriteMode() const
+{
+    return m_readWriteMode;
+}
+
+void CreateInstanceRequest::SetReadWriteMode(const int64_t& _readWriteMode)
+{
+    m_readWriteMode = _readWriteMode;
+    m_readWriteModeHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::ReadWriteModeHasBeenSet() const
+{
+    return m_readWriteModeHasBeenSet;
+}
+
+bool CreateInstanceRequest::GetEnableScheduleRecoverGroup() const
+{
+    return m_enableScheduleRecoverGroup;
+}
+
+void CreateInstanceRequest::SetEnableScheduleRecoverGroup(const bool& _enableScheduleRecoverGroup)
+{
+    m_enableScheduleRecoverGroup = _enableScheduleRecoverGroup;
+    m_enableScheduleRecoverGroupHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::EnableScheduleRecoverGroupHasBeenSet() const
+{
+    return m_enableScheduleRecoverGroupHasBeenSet;
+}
+
+EnableScheduleOperationDuration CreateInstanceRequest::GetEnableScheduleOperationDuration() const
+{
+    return m_enableScheduleOperationDuration;
+}
+
+void CreateInstanceRequest::SetEnableScheduleOperationDuration(const EnableScheduleOperationDuration& _enableScheduleOperationDuration)
+{
+    m_enableScheduleOperationDuration = _enableScheduleOperationDuration;
+    m_enableScheduleOperationDurationHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::EnableScheduleOperationDurationHasBeenSet() const
+{
+    return m_enableScheduleOperationDurationHasBeenSet;
+}
+
+vector<AutoScaleDiskInfo> CreateInstanceRequest::GetAutoScaleDiskInfoList() const
+{
+    return m_autoScaleDiskInfoList;
+}
+
+void CreateInstanceRequest::SetAutoScaleDiskInfoList(const vector<AutoScaleDiskInfo>& _autoScaleDiskInfoList)
+{
+    m_autoScaleDiskInfoList = _autoScaleDiskInfoList;
+    m_autoScaleDiskInfoListHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::AutoScaleDiskInfoListHasBeenSet() const
+{
+    return m_autoScaleDiskInfoListHasBeenSet;
+}
+
+string CreateInstanceRequest::GetEnableKibanaPublicAccess() const
+{
+    return m_enableKibanaPublicAccess;
+}
+
+void CreateInstanceRequest::SetEnableKibanaPublicAccess(const string& _enableKibanaPublicAccess)
+{
+    m_enableKibanaPublicAccess = _enableKibanaPublicAccess;
+    m_enableKibanaPublicAccessHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::EnableKibanaPublicAccessHasBeenSet() const
+{
+    return m_enableKibanaPublicAccessHasBeenSet;
+}
+
+vector<string> CreateInstanceRequest::GetAlarmPolicyIds() const
+{
+    return m_alarmPolicyIds;
+}
+
+void CreateInstanceRequest::SetAlarmPolicyIds(const vector<string>& _alarmPolicyIds)
+{
+    m_alarmPolicyIds = _alarmPolicyIds;
+    m_alarmPolicyIdsHasBeenSet = true;
+}
+
+bool CreateInstanceRequest::AlarmPolicyIdsHasBeenSet() const
+{
+    return m_alarmPolicyIdsHasBeenSet;
 }
 
 

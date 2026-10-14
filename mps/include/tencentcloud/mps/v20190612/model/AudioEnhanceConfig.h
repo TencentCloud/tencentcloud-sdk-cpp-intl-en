@@ -28,6 +28,7 @@
 #include <tencentcloud/mps/v20190612/model/AudioSeparateConfig.h>
 #include <tencentcloud/mps/v20190612/model/VolumeBalanceConfig.h>
 #include <tencentcloud/mps/v20190612/model/AudioBeautifyConfig.h>
+#include <tencentcloud/mps/v20190612/model/AudioEnhanceEditConfig.h>
 
 
 namespace TencentCloud
@@ -51,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Denoise 
+                     * 获取<p>Audio noise reduction configuration.</p>
+                     * @return Denoise <p>Audio noise reduction configuration.</p>
                      * 
                      */
                     AudioDenoiseConfig GetDenoise() const;
 
                     /**
-                     * 设置
-                     * @param _denoise 
+                     * 设置<p>Audio noise reduction configuration.</p>
+                     * @param _denoise <p>Audio noise reduction configuration.</p>
                      * 
                      */
                     void SetDenoise(const AudioDenoiseConfig& _denoise);
@@ -72,15 +73,15 @@ namespace TencentCloud
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Separate 
+                     * 获取<p>Audio separation configuration.</p>
+                     * @return Separate <p>Audio separation configuration.</p>
                      * 
                      */
                     AudioSeparateConfig GetSeparate() const;
 
                     /**
-                     * 设置
-                     * @param _separate 
+                     * 设置<p>Audio separation configuration.</p>
+                     * @param _separate <p>Audio separation configuration.</p>
                      * 
                      */
                     void SetSeparate(const AudioSeparateConfig& _separate);
@@ -93,15 +94,15 @@ namespace TencentCloud
                     bool SeparateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VolumeBalance 
+                     * 获取<p>Volume equalization configuration.</p>
+                     * @return VolumeBalance <p>Volume equalization configuration.</p>
                      * 
                      */
                     VolumeBalanceConfig GetVolumeBalance() const;
 
                     /**
-                     * 设置
-                     * @param _volumeBalance 
+                     * 设置<p>Volume equalization configuration.</p>
+                     * @param _volumeBalance <p>Volume equalization configuration.</p>
                      * 
                      */
                     void SetVolumeBalance(const VolumeBalanceConfig& _volumeBalance);
@@ -114,15 +115,15 @@ namespace TencentCloud
                     bool VolumeBalanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Beautify 
+                     * 获取<p>Audio beautification configurations.</p>
+                     * @return Beautify <p>Audio beautification configurations.</p>
                      * 
                      */
                     AudioBeautifyConfig GetBeautify() const;
 
                     /**
-                     * 设置
-                     * @param _beautify 
+                     * 设置<p>Audio beautification configurations.</p>
+                     * @param _beautify <p>Audio beautification configurations.</p>
                      * 
                      */
                     void SetBeautify(const AudioBeautifyConfig& _beautify);
@@ -134,31 +135,58 @@ namespace TencentCloud
                      */
                     bool BeautifyHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Audio enhancement edit.</p>
+                     * @return AudioEnhanceEdit <p>Audio enhancement edit.</p>
+                     * 
+                     */
+                    AudioEnhanceEditConfig GetAudioEnhanceEdit() const;
+
+                    /**
+                     * 设置<p>Audio enhancement edit.</p>
+                     * @param _audioEnhanceEdit <p>Audio enhancement edit.</p>
+                     * 
+                     */
+                    void SetAudioEnhanceEdit(const AudioEnhanceEditConfig& _audioEnhanceEdit);
+
+                    /**
+                     * 判断参数 AudioEnhanceEdit 是否已赋值
+                     * @return AudioEnhanceEdit 是否已赋值
+                     * 
+                     */
+                    bool AudioEnhanceEditHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>Audio noise reduction configuration.</p>
                      */
                     AudioDenoiseConfig m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio separation configuration.</p>
                      */
                     AudioSeparateConfig m_separate;
                     bool m_separateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Volume equalization configuration.</p>
                      */
                     VolumeBalanceConfig m_volumeBalance;
                     bool m_volumeBalanceHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio beautification configurations.</p>
                      */
                     AudioBeautifyConfig m_beautify;
                     bool m_beautifyHasBeenSet;
+
+                    /**
+                     * <p>Audio enhancement edit.</p>
+                     */
+                    AudioEnhanceEditConfig m_audioEnhanceEdit;
+                    bool m_audioEnhanceEditHasBeenSet;
 
                 };
             }

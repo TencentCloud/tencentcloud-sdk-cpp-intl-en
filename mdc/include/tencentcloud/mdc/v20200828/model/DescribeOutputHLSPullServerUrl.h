@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query the output HLS pull URL information.
                 */
                 class DescribeOutputHLSPullServerUrl : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Url of the HLS pull address.
+                     * @return Url Url of the HLS pull address.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Url of the HLS pull address.
+                     * @param _url Url of the HLS pull address.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Url of the HLS pull address.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

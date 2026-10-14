@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Summary 
+                     * 获取Segment summary.
+                     * @return Summary Segment summary.
                      * 
                      */
                     std::string GetSummary() const;
 
                     /**
-                     * 设置
-                     * @param _summary 
+                     * 设置Segment summary.
+                     * @param _summary Segment summary.
                      * 
                      */
                     void SetSummary(const std::string& _summary);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool KeywordsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Starting time point of the segment, in seconds.
+                     * @return StartTimeOffset Starting time point of the segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Starting time point of the segment, in seconds.
+                     * @param _startTimeOffset Starting time point of the segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取End time point of the segment, in seconds.
+                     * @return EndTimeOffset End time point of the segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置End time point of the segment, in seconds.
+                     * @param _endTimeOffset End time point of the segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Segment summary.
                      */
                     std::string m_summary;
                     bool m_summaryHasBeenSet;
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_keywordsHasBeenSet;
 
                     /**
-                     * 
+                     * Starting time point of the segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * End time point of the segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

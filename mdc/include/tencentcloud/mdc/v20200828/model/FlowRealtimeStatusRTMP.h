@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The real-time RTMP streaming information of a flow.
+                * RTMP information of the real-time stream status query API.
                 */
                 class FlowRealtimeStatusRTMP : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The video frame rate.
-                     * @return VideoFPS The video frame rate.
+                     * 获取Video frame rate.
+                     * @return VideoFPS Video frame rate.
                      * 
                      */
                     int64_t GetVideoFPS() const;
 
                     /**
-                     * 设置The video frame rate.
-                     * @param _videoFPS The video frame rate.
+                     * 设置Video frame rate.
+                     * @param _videoFPS Video frame rate.
                      * 
                      */
                     void SetVideoFPS(const int64_t& _videoFPS);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VideoFPSHasBeenSet() const;
 
                     /**
-                     * 获取The audio frame rate.
-                     * @return AudioFPS The audio frame rate.
+                     * 获取Audio frame rate.
+                     * @return AudioFPS Audio frame rate.
                      * 
                      */
                     int64_t GetAudioFPS() const;
 
                     /**
-                     * 设置The audio frame rate.
-                     * @param _audioFPS The audio frame rate.
+                     * 设置Audio frame rate.
+                     * @param _audioFPS Audio frame rate.
                      * 
                      */
                     void SetAudioFPS(const int64_t& _audioFPS);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The video frame rate.
+                     * Video frame rate.
                      */
                     int64_t m_videoFPS;
                     bool m_videoFPSHasBeenSet;
 
                     /**
-                     * The audio frame rate.
+                     * Audio frame rate.
                      */
                     int64_t m_audioFPS;
                     bool m_audioFPSHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The SRT input address.
+                * SRT input source address.
                 */
                 class SRTSourceAddressResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The peer IP.
-                     * @return Ip The peer IP.
+                     * 获取Peer IP.
+                     * @return Ip Peer IP.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置The peer IP.
-                     * @param _ip The peer IP.
+                     * 设置Peer IP.
+                     * @param _ip Peer IP.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取The peer port.
-                     * @return Port The peer port.
+                     * 获取Peer port.
+                     * @return Port Peer port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置The peer port.
-                     * @param _port The peer port.
+                     * 设置Peer port.
+                     * @param _port Peer port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The peer IP.
+                     * Peer IP.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * The peer port.
+                     * Peer port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

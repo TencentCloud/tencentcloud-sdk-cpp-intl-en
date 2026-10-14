@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdc/v20200828/model/SRTSourceAddressReq.h>
+#include <tencentcloud/mdc/v20200828/model/SRTFECSimpleOptions.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * SRT configuration information of the created input.
+                * Configuration message of the created input SRT.
                 */
                 class CreateInputSRTSettings : public AbstractModel
                 {
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The SRT mode. Valid values: LISTENER (default), CALLER.
-                     * @return Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * 获取SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+                     * @return Mode SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置The SRT mode. Valid values: LISTENER (default), CALLER.
-                     * @param _mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * 设置SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+                     * @param _mode SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-                     * @return StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+                     * 获取Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
+                     * @return StreamId Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
                      * 
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-                     * @param _streamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+                     * 设置Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
+                     * @param _streamId Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
                      * 
                      */
                     void SetStreamId(const std::string& _streamId);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取Latency in ms. Default value: 0. Value range: [0, 3000].
-                     * @return Latency Latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 获取Delay. Default value: 0. Unit: ms. Range: [0, 3000].
+                     * @return Latency Delay. Default value: 0. Unit: ms. Range: [0, 3000].
                      * 
                      */
                     int64_t GetLatency() const;
 
                     /**
-                     * 设置Latency in ms. Default value: 0. Value range: [0, 3000].
-                     * @param _latency Latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 设置Delay. Default value: 0. Unit: ms. Range: [0, 3000].
+                     * @param _latency Delay. Default value: 0. Unit: ms. Range: [0, 3000].
                      * 
                      */
                     void SetLatency(const int64_t& _latency);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool LatencyHasBeenSet() const;
 
                     /**
-                     * 获取Receive latency in ms. Default value: 120. Value range: [0, 3000].
-                     * @return RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+                     * 获取Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
+                     * @return RecvLatency Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
                      * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
-                     * 设置Receive latency in ms. Default value: 120. Value range: [0, 3000].
-                     * @param _recvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+                     * 设置Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
+                     * @param _recvLatency Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
                      * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool RecvLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Peer latency in ms. Default value: 0. Value range: [0, 3000].
-                     * @return PeerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 获取Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
+                     * @return PeerLatency Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
                      * 
                      */
                     int64_t GetPeerLatency() const;
 
                     /**
-                     * 设置Peer latency in ms. Default value: 0. Value range: [0, 3000].
-                     * @param _peerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 设置Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
+                     * @param _peerLatency Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
                      * 
                      */
                     void SetPeerLatency(const int64_t& _peerLatency);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool PeerLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-                     * @return PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * 获取Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
+                     * @return PeerIdleTimeout Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
                      * 
                      */
                     int64_t GetPeerIdleTimeout() const;
 
                     /**
-                     * 设置Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-                     * @param _peerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * 设置Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
+                     * @param _peerIdleTimeout Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
                      * 
                      */
                     void SetPeerIdleTimeout(const int64_t& _peerIdleTimeout);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool PeerIdleTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
-                     * @return Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+                     * 获取Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
+                     * @return Passphrase Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
                      * 
                      */
                     std::string GetPassphrase() const;
 
                     /**
-                     * 设置Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
-                     * @param _passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+                     * 设置Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
+                     * @param _passphrase Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
                      * 
                      */
                     void SetPassphrase(const std::string& _passphrase);
@@ -195,15 +196,15 @@ namespace TencentCloud
                     bool PassphraseHasBeenSet() const;
 
                     /**
-                     * 获取Key length. Default value: 0. Valid values: 0, 16, 24, 32.
-                     * @return PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+                     * 获取Key length. Default value: 0. Options: [0|16|24|32].
+                     * @return PbKeyLen Key length. Default value: 0. Options: [0|16|24|32].
                      * 
                      */
                     int64_t GetPbKeyLen() const;
 
                     /**
-                     * 设置Key length. Default value: 0. Valid values: 0, 16, 24, 32.
-                     * @param _pbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+                     * 设置Key length. Default value: 0. Options: [0|16|24|32].
+                     * @param _pbKeyLen Key length. Default value: 0. Options: [0|16|24|32].
                      * 
                      */
                     void SetPbKeyLen(const int64_t& _pbKeyLen);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool PbKeyLenHasBeenSet() const;
 
                     /**
-                     * 获取The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
-                     * @return SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * 获取SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
+                     * @return SourceAddresses SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
                      * 
                      */
                     std::vector<SRTSourceAddressReq> GetSourceAddresses() const;
 
                     /**
-                     * 设置The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
-                     * @param _sourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * 设置SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
+                     * @param _sourceAddresses SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<SRTSourceAddressReq>& _sourceAddresses);
@@ -236,61 +237,88 @@ namespace TencentCloud
                      */
                     bool SourceAddressesHasBeenSet() const;
 
+                    /**
+                     * 获取SRT FEC settings
+                     * @return FEC SRT FEC settings
+                     * 
+                     */
+                    SRTFECSimpleOptions GetFEC() const;
+
+                    /**
+                     * 设置SRT FEC settings
+                     * @param _fEC SRT FEC settings
+                     * 
+                     */
+                    void SetFEC(const SRTFECSimpleOptions& _fEC);
+
+                    /**
+                     * 判断参数 FEC 是否已赋值
+                     * @return FEC 是否已赋值
+                     * 
+                     */
+                    bool FECHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+                     * Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * Latency in ms. Default value: 0. Value range: [0, 3000].
+                     * Delay. Default value: 0. Unit: ms. Range: [0, 3000].
                      */
                     int64_t m_latency;
                     bool m_latencyHasBeenSet;
 
                     /**
-                     * Receive latency in ms. Default value: 120. Value range: [0, 3000].
+                     * Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
                      */
                     int64_t m_recvLatency;
                     bool m_recvLatencyHasBeenSet;
 
                     /**
-                     * Peer latency in ms. Default value: 0. Value range: [0, 3000].
+                     * Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
                      */
                     int64_t m_peerLatency;
                     bool m_peerLatencyHasBeenSet;
 
                     /**
-                     * Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
                      */
                     int64_t m_peerIdleTimeout;
                     bool m_peerIdleTimeoutHasBeenSet;
 
                     /**
-                     * Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+                     * Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
                      */
                     std::string m_passphrase;
                     bool m_passphraseHasBeenSet;
 
                     /**
-                     * Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+                     * Key length. Default value: 0. Options: [0|16|24|32].
                      */
                     int64_t m_pbKeyLen;
                     bool m_pbKeyLenHasBeenSet;
 
                     /**
-                     * The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
                      */
                     std::vector<SRTSourceAddressReq> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;
+
+                    /**
+                     * SRT FEC settings
+                     */
+                    SRTFECSimpleOptions m_fEC;
+                    bool m_fECHasBeenSet;
 
                 };
             }

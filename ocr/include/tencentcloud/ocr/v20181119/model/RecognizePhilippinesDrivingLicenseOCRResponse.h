@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The Base64-encoded identity photo.
-                     * @return HeadPortrait The Base64-encoded identity photo.
+                     * 获取Base64 encoded result of portrait photo.
+                     * @return HeadPortrait Base64 encoded result of portrait photo.
                      * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取Gender
-                     * @return Sex Gender
+                     * 获取Gender.
+                     * @return Sex Gender.
                      * 
                      */
                     TextDetectionResult GetSex() const;
@@ -212,10 +212,108 @@ namespace TencentCloud
                      */
                     bool BirthdayHasBeenSet() const;
 
+                    /**
+                     * 获取Blood type of the  license holder.
+                     * @return BloodType Blood type of the  license holder.
+                     * 
+                     */
+                    TextDetectionResult GetBloodType() const;
+
+                    /**
+                     * 判断参数 BloodType 是否已赋值
+                     * @return BloodType 是否已赋值
+                     * 
+                     */
+                    bool BloodTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Height of the license holder, in metres as printed on the card (e.g. 1.69).
+                     * @return Height Height of the license holder, in metres as printed on the card (e.g. 1.69).
+                     * 
+                     */
+                    TextDetectionResult GetHeight() const;
+
+                    /**
+                     * 判断参数 Height 是否已赋值
+                     * @return Height 是否已赋值
+                     * 
+                     */
+                    bool HeightHasBeenSet() const;
+
+                    /**
+                     * 获取Weight of the license holder, in kilograms (e.g. 65).
+                     * @return Weight Weight of the license holder, in kilograms (e.g. 65).
+                     * 
+                     */
+                    TextDetectionResult GetWeight() const;
+
+                    /**
+                     * 判断参数 Weight 是否已赋值
+                     * @return Weight 是否已赋值
+                     * 
+                     */
+                    bool WeightHasBeenSet() const;
+
+                    /**
+                     * 获取Eye color of the license holder (e.g. BLACK).
+                     * @return EyeColor Eye color of the license holder (e.g. BLACK).
+                     * 
+                     */
+                    TextDetectionResult GetEyeColor() const;
+
+                    /**
+                     * 判断参数 EyeColor 是否已赋值
+                     * @return EyeColor 是否已赋值
+                     * 
+                     */
+                    bool EyeColorHasBeenSet() const;
+
+                    /**
+                     * 获取Driver's license codes indicating the vehicle categories the license holder is authorized to operate (e.g. A, A1, B, B1, B2, C, D, BE, CE).
+                     * @return DLCodes Driver's license codes indicating the vehicle categories the license holder is authorized to operate (e.g. A, A1, B, B1, B2, C, D, BE, CE).
+                     * 
+                     */
+                    TextDetectionResult GetDLCodes() const;
+
+                    /**
+                     * 判断参数 DLCodes 是否已赋值
+                     * @return DLCodes 是否已赋值
+                     * 
+                     */
+                    bool DLCodesHasBeenSet() const;
+
+                    /**
+                     * 获取Restrictions that limit the license holder's driving privileges, such as transmission type (AT / MT) or vehicle-class limits.
+                     * @return Restrictions Restrictions that limit the license holder's driving privileges, such as transmission type (AT / MT) or vehicle-class limits.
+                     * 
+                     */
+                    TextDetectionResult GetRestrictions() const;
+
+                    /**
+                     * 判断参数 Restrictions 是否已赋值
+                     * @return Restrictions 是否已赋值
+                     * 
+                     */
+                    bool RestrictionsHasBeenSet() const;
+
+                    /**
+                     * 获取Driving conditions of the license holder (e.g. A = must wear glasses, D = daytime driving only).
+                     * @return Conditions Driving conditions of the license holder (e.g. A = must wear glasses, D = daytime driving only).
+                     * 
+                     */
+                    TextDetectionResult GetConditions() const;
+
+                    /**
+                     * 判断参数 Conditions 是否已赋值
+                     * @return Conditions 是否已赋值
+                     * 
+                     */
+                    bool ConditionsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The Base64-encoded identity photo.
+                     * Base64 encoded result of portrait photo.
                      */
                     TextDetectionResult m_headPortrait;
                     bool m_headPortraitHasBeenSet;
@@ -251,7 +349,7 @@ namespace TencentCloud
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * Gender
+                     * Gender.
                      */
                     TextDetectionResult m_sex;
                     bool m_sexHasBeenSet;
@@ -285,6 +383,48 @@ namespace TencentCloud
                      */
                     TextDetectionResult m_birthday;
                     bool m_birthdayHasBeenSet;
+
+                    /**
+                     * Blood type of the  license holder.
+                     */
+                    TextDetectionResult m_bloodType;
+                    bool m_bloodTypeHasBeenSet;
+
+                    /**
+                     * Height of the license holder, in metres as printed on the card (e.g. 1.69).
+                     */
+                    TextDetectionResult m_height;
+                    bool m_heightHasBeenSet;
+
+                    /**
+                     * Weight of the license holder, in kilograms (e.g. 65).
+                     */
+                    TextDetectionResult m_weight;
+                    bool m_weightHasBeenSet;
+
+                    /**
+                     * Eye color of the license holder (e.g. BLACK).
+                     */
+                    TextDetectionResult m_eyeColor;
+                    bool m_eyeColorHasBeenSet;
+
+                    /**
+                     * Driver's license codes indicating the vehicle categories the license holder is authorized to operate (e.g. A, A1, B, B1, B2, C, D, BE, CE).
+                     */
+                    TextDetectionResult m_dLCodes;
+                    bool m_dLCodesHasBeenSet;
+
+                    /**
+                     * Restrictions that limit the license holder's driving privileges, such as transmission type (AT / MT) or vehicle-class limits.
+                     */
+                    TextDetectionResult m_restrictions;
+                    bool m_restrictionsHasBeenSet;
+
+                    /**
+                     * Driving conditions of the license holder (e.g. A = must wear glasses, D = daytime driving only).
+                     */
+                    TextDetectionResult m_conditions;
+                    bool m_conditionsHasBeenSet;
 
                 };
             }

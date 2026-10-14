@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取Stream Id.
+                     * @return FlowId Stream Id.
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置Stream Id.
+                     * @param _flowId Stream Id.
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The input information to modify.
-                     * @return Input The input information to modify.
+                     * 获取Input information that needs to be modified.
+                     * @return Input Input information that needs to be modified.
                      * 
                      */
                     ModifyInput GetInput() const;
 
                     /**
-                     * 设置The input information to modify.
-                     * @param _input The input information to modify.
+                     * 设置Input information that needs to be modified.
+                     * @param _input Input information that needs to be modified.
                      * 
                      */
                     void SetInput(const ModifyInput& _input);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The flow ID.
+                     * Stream Id.
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The input information to modify.
+                     * Input information that needs to be modified.
                      */
                     ModifyInput m_input;
                     bool m_inputHasBeenSet;

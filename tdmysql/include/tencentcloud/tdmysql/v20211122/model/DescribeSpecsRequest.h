@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool IsExclusiveInstanceHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Availability zone combination list</p>
+                     * @return Zones <p>Availability zone combination list</p>
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置<p>Availability zone combination list</p>
+                     * @param _zones <p>Availability zone combination list</p>
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     int64_t m_isExclusiveInstance;
                     bool m_isExclusiveInstanceHasBeenSet;
+
+                    /**
+                     * <p>Availability zone combination list</p>
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
 
                 };
             }

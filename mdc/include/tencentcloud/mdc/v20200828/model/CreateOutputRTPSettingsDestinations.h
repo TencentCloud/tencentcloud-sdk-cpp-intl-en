@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The RTP destination address of the output to create.
+                * Create the RTP destination address for the output of a media transmission stream.
                 */
                 class CreateOutputRTPSettingsDestinations : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The relay destination IP.
-                     * @return Ip The relay destination IP.
+                     * 获取Destination IP for repush.
+                     * @return Ip Destination IP for repush.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置The relay destination IP.
-                     * @param _ip The relay destination IP.
+                     * 设置Destination IP for repush.
+                     * @param _ip Destination IP for repush.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取The relay destination port.
-                     * @return Port The relay destination port.
+                     * 获取Destination port for push.
+                     * @return Port Destination port for push.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置The relay destination port.
-                     * @param _port The relay destination port.
+                     * 设置Destination port for push.
+                     * @param _port Destination port for push.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The relay destination IP.
+                     * Destination IP for repush.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * The relay destination port.
+                     * Destination port for push.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

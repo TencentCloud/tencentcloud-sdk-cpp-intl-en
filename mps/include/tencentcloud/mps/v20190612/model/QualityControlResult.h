@@ -54,18 +54,18 @@ Blur: blurry.
 LowLighting: low light.
 HighLighting: overexposure.
 CrashScreen: screen glitch.
-BlackWhiteEdge: Black and white edges
+BlackWhiteEdge: black and white edge
 SolidColorScreen: solid color screen.
 Noise: noise.
-Mosaic: Mosaic
+Mosaic: mosaic.
 QRCode: QR code.
-AppletCode: Mini program code.
+AppletCode: mini program code
 BarCode: barcode.
 LowVoice: bass.
-HighVoice: high voice detection.
+HighVoice: high voice.
 NoVoice: mute.
-LowEvaluation: The video no-reference score (MOS) is below the threshold.
-AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+LowEvaluation: The no-reference score (MOS) of the video is below the threshold.
+AudioEvaluation: Audio no-reference scoring (MOS) is below the threshold.
 AudioNoise: Audio noise.
                      * @return Type Exception type. Valid values:
 Jitter: jitter.
@@ -73,18 +73,18 @@ Blur: blurry.
 LowLighting: low light.
 HighLighting: overexposure.
 CrashScreen: screen glitch.
-BlackWhiteEdge: Black and white edges
+BlackWhiteEdge: black and white edge
 SolidColorScreen: solid color screen.
 Noise: noise.
-Mosaic: Mosaic
+Mosaic: mosaic.
 QRCode: QR code.
-AppletCode: Mini program code.
+AppletCode: mini program code
 BarCode: barcode.
 LowVoice: bass.
-HighVoice: high voice detection.
+HighVoice: high voice.
 NoVoice: mute.
-LowEvaluation: The video no-reference score (MOS) is below the threshold.
-AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+LowEvaluation: The no-reference score (MOS) of the video is below the threshold.
+AudioEvaluation: Audio no-reference scoring (MOS) is below the threshold.
 AudioNoise: Audio noise.
                      * 
                      */
@@ -97,18 +97,18 @@ Blur: blurry.
 LowLighting: low light.
 HighLighting: overexposure.
 CrashScreen: screen glitch.
-BlackWhiteEdge: Black and white edges
+BlackWhiteEdge: black and white edge
 SolidColorScreen: solid color screen.
 Noise: noise.
-Mosaic: Mosaic
+Mosaic: mosaic.
 QRCode: QR code.
-AppletCode: Mini program code.
+AppletCode: mini program code
 BarCode: barcode.
 LowVoice: bass.
-HighVoice: high voice detection.
+HighVoice: high voice.
 NoVoice: mute.
-LowEvaluation: The video no-reference score (MOS) is below the threshold.
-AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+LowEvaluation: The no-reference score (MOS) of the video is below the threshold.
+AudioEvaluation: Audio no-reference scoring (MOS) is below the threshold.
 AudioNoise: Audio noise.
                      * @param _type Exception type. Valid values:
 Jitter: jitter.
@@ -116,18 +116,18 @@ Blur: blurry.
 LowLighting: low light.
 HighLighting: overexposure.
 CrashScreen: screen glitch.
-BlackWhiteEdge: Black and white edges
+BlackWhiteEdge: black and white edge
 SolidColorScreen: solid color screen.
 Noise: noise.
-Mosaic: Mosaic
+Mosaic: mosaic.
 QRCode: QR code.
-AppletCode: Mini program code.
+AppletCode: mini program code
 BarCode: barcode.
 LowVoice: bass.
-HighVoice: high voice detection.
+HighVoice: high voice.
 NoVoice: mute.
-LowEvaluation: The video no-reference score (MOS) is below the threshold.
-AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+LowEvaluation: The no-reference score (MOS) of the video is below the threshold.
+AudioEvaluation: Audio no-reference scoring (MOS) is below the threshold.
 AudioNoise: Audio noise.
                      * 
                      */
@@ -170,18 +170,18 @@ Blur: blurry.
 LowLighting: low light.
 HighLighting: overexposure.
 CrashScreen: screen glitch.
-BlackWhiteEdge: Black and white edges
+BlackWhiteEdge: black and white edge
 SolidColorScreen: solid color screen.
 Noise: noise.
-Mosaic: Mosaic
+Mosaic: mosaic.
 QRCode: QR code.
-AppletCode: Mini program code.
+AppletCode: mini program code
 BarCode: barcode.
 LowVoice: bass.
-HighVoice: high voice detection.
+HighVoice: high voice.
 NoVoice: mute.
-LowEvaluation: The video no-reference score (MOS) is below the threshold.
-AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+LowEvaluation: The no-reference score (MOS) of the video is below the threshold.
+AudioEvaluation: Audio no-reference scoring (MOS) is below the threshold.
 AudioNoise: Audio noise.
                      */
                     std::string m_type;

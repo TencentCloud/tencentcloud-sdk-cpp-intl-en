@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The flow statistics.
+                * Stream stats.
                 */
                 class FlowStatistics : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The session ID.
-                     * @return SessionId The session ID.
+                     * 获取Session ID.
+                     * @return SessionId Session ID.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The session ID.
-                     * @param _sessionId The session ID.
+                     * 设置Session ID.
+                     * @param _sessionId Session ID.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The peer IP.
-                     * @return ClientIp The peer IP.
+                     * 获取Peer IP.
+                     * @return ClientIp Peer IP.
                      * 
                      */
                     std::string GetClientIp() const;
 
                     /**
-                     * 设置The peer IP.
-                     * @param _clientIp The peer IP.
+                     * 设置Peer IP.
+                     * @param _clientIp Peer IP.
                      * 
                      */
                     void SetClientIp(const std::string& _clientIp);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ClientIpHasBeenSet() const;
 
                     /**
-                     * 获取The total bandwidth.
-                     * @return Network The total bandwidth.
+                     * 获取Total bandwidth.
+                     * @return Network Total bandwidth.
                      * 
                      */
                     int64_t GetNetwork() const;
 
                     /**
-                     * 设置The total bandwidth.
-                     * @param _network The total bandwidth.
+                     * 设置Total bandwidth.
+                     * @param _network Total bandwidth.
                      * 
                      */
                     void SetNetwork(const int64_t& _network);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool NetworkHasBeenSet() const;
 
                     /**
-                     * 获取The video data.
-                     * @return Video The video data.
+                     * 获取Video data.
+                     * @return Video Video data.
                      * 
                      */
                     std::vector<FlowVideo> GetVideo() const;
 
                     /**
-                     * 设置The video data.
-                     * @param _video The video data.
+                     * 设置Video data.
+                     * @param _video Video data.
                      * 
                      */
                     void SetVideo(const std::vector<FlowVideo>& _video);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取The audio data.
-                     * @return Audio The audio data.
+                     * 获取Audio data.
+                     * @return Audio Audio data.
                      * 
                      */
                     std::vector<FlowAudio> GetAudio() const;
 
                     /**
-                     * 设置The audio data.
-                     * @param _audio The audio data.
+                     * 设置Audio data.
+                     * @param _audio Audio data.
                      * 
                      */
                     void SetAudio(const std::vector<FlowAudio>& _audio);
@@ -156,31 +156,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The session ID.
+                     * Session ID.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The peer IP.
+                     * Peer IP.
                      */
                     std::string m_clientIp;
                     bool m_clientIpHasBeenSet;
 
                     /**
-                     * The total bandwidth.
+                     * Total bandwidth.
                      */
                     int64_t m_network;
                     bool m_networkHasBeenSet;
 
                     /**
-                     * The video data.
+                     * Video data.
                      */
                     std::vector<FlowVideo> m_video;
                     bool m_videoHasBeenSet;
 
                     /**
-                     * The audio data.
+                     * Audio data.
                      */
                     std::vector<FlowAudio> m_audio;
                     bool m_audioHasBeenSet;

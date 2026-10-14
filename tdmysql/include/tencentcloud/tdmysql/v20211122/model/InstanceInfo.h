@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateVersion 
+                     * 获取<p>Create an instance version</p>
+                     * @return CreateVersion <p>Create an instance version</p>
                      * 
                      */
                     std::string GetCreateVersion() const;
 
                     /**
-                     * 设置
-                     * @param _createVersion 
+                     * 设置<p>Create an instance version</p>
+                     * @param _createVersion <p>Create an instance version</p>
                      * 
                      */
                     void SetCreateVersion(const std::string& _createVersion);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool CreateVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InitParams 
+                     * 获取<p>Initialize instance parameters</p>
+                     * @return InitParams <p>Initialize instance parameters</p>
                      * 
                      */
                     std::vector<InstanceParam> GetInitParams() const;
 
                     /**
-                     * 设置
-                     * @param _initParams 
+                     * 设置<p>Initialize instance parameters</p>
+                     * @param _initParams <p>Initialize instance parameters</p>
                      * 
                      */
                     void SetInitParams(const std::vector<InstanceParam>& _initParams);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool StorageNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceTags 
+                     * 获取<p>Instance tag information.</p>
+                     * @return ResourceTags <p>Instance tag information.</p>
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置
-                     * @param _resourceTags 
+                     * 设置<p>Instance tag information.</p>
+                     * @param _resourceTags <p>Instance tag information.</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -221,15 +221,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceName 
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置
-                     * @param _instanceName 
+                     * 设置<p>Instance name</p>
+                     * @param _instanceName <p>Instance name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -452,15 +452,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MCCpu 
+                     * 获取<p>CPU cores of the control node</p>
+                     * @return MCCpu <p>CPU cores of the control node</p>
                      * @deprecated
                      */
                     int64_t GetMCCpu() const;
 
                     /**
-                     * 设置
-                     * @param _mCCpu 
+                     * 设置<p>CPU cores of the control node</p>
+                     * @param _mCCpu <p>CPU cores of the control node</p>
                      * @deprecated
                      */
                     void SetMCCpu(const int64_t& _mCCpu);
@@ -473,15 +473,15 @@ namespace TencentCloud
                     bool MCCpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MCMem 
+                     * 获取<p>CPU size of the control node</p>
+                     * @return MCMem <p>CPU size of the control node</p>
                      * @deprecated
                      */
                     int64_t GetMCMem() const;
 
                     /**
-                     * 设置
-                     * @param _mCMem 
+                     * 设置<p>CPU size of the control node</p>
+                     * @param _mCMem <p>CPU size of the control node</p>
                      * @deprecated
                      */
                     void SetMCMem(const int64_t& _mCMem);
@@ -494,15 +494,15 @@ namespace TencentCloud
                     bool MCMemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ComputerNodeCpu 
+                     * 获取<p>CPU cores of the computing node</p>
+                     * @return ComputerNodeCpu <p>CPU cores of the computing node</p>
                      * @deprecated
                      */
                     int64_t GetComputerNodeCpu() const;
 
                     /**
-                     * 设置
-                     * @param _computerNodeCpu 
+                     * 设置<p>CPU cores of the computing node</p>
+                     * @param _computerNodeCpu <p>CPU cores of the computing node</p>
                      * @deprecated
                      */
                     void SetComputerNodeCpu(const int64_t& _computerNodeCpu);
@@ -515,15 +515,15 @@ namespace TencentCloud
                     bool ComputerNodeCpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ComputerNodeMem 
+                     * 获取<p>Compute node memory size</p>
+                     * @return ComputerNodeMem <p>Compute node memory size</p>
                      * @deprecated
                      */
                     int64_t GetComputerNodeMem() const;
 
                     /**
-                     * 设置
-                     * @param _computerNodeMem 
+                     * 设置<p>Compute node memory size</p>
+                     * @param _computerNodeMem <p>Compute node memory size</p>
                      * @deprecated
                      */
                     void SetComputerNodeMem(const int64_t& _computerNodeMem);
@@ -536,15 +536,15 @@ namespace TencentCloud
                     bool ComputerNodeMemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageNodeCpu 
+                     * 获取<p>CPU cores of the storage node</p>
+                     * @return StorageNodeCpu <p>CPU cores of the storage node</p>
                      * 
                      */
                     int64_t GetStorageNodeCpu() const;
 
                     /**
-                     * 设置
-                     * @param _storageNodeCpu 
+                     * 设置<p>CPU cores of the storage node</p>
+                     * @param _storageNodeCpu <p>CPU cores of the storage node</p>
                      * 
                      */
                     void SetStorageNodeCpu(const int64_t& _storageNodeCpu);
@@ -557,15 +557,15 @@ namespace TencentCloud
                     bool StorageNodeCpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageNodeMem 
+                     * 获取<p>Storage node memory size</p>
+                     * @return StorageNodeMem <p>Storage node memory size</p>
                      * 
                      */
                     int64_t GetStorageNodeMem() const;
 
                     /**
-                     * 设置
-                     * @param _storageNodeMem 
+                     * 设置<p>Storage node memory size</p>
+                     * @param _storageNodeMem <p>Storage node memory size</p>
                      * 
                      */
                     void SetStorageNodeMem(const int64_t& _storageNodeMem);
@@ -578,15 +578,15 @@ namespace TencentCloud
                     bool StorageNodeMemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MCNum 
+                     * 获取<p>Number of control nodes</p>
+                     * @return MCNum <p>Number of control nodes</p>
                      * @deprecated
                      */
                     int64_t GetMCNum() const;
 
                     /**
-                     * 设置
-                     * @param _mCNum 
+                     * 设置<p>Number of control nodes</p>
+                     * @param _mCNum <p>Number of control nodes</p>
                      * @deprecated
                      */
                     void SetMCNum(const int64_t& _mCNum);
@@ -599,15 +599,15 @@ namespace TencentCloud
                     bool MCNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RenewFlag 
+                     * 获取<p>Renewal flag</p>
+                     * @return RenewFlag <p>Renewal flag</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置
-                     * @param _renewFlag 
+                     * 设置<p>Renewal flag</p>
+                     * @param _renewFlag <p>Renewal flag</p>
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -641,15 +641,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccountTag 
+                     * 获取<p>User tag, inner: internal user; external: external user</p>
+                     * @return AccountTag <p>User tag, inner: internal user; external: external user</p>
                      * 
                      */
                     std::string GetAccountTag() const;
 
                     /**
-                     * 设置
-                     * @param _accountTag 
+                     * 设置<p>User tag, inner: internal user; external: external user</p>
+                     * @param _accountTag <p>User tag, inner: internal user; external: external user</p>
                      * 
                      */
                     void SetAccountTag(const std::string& _accountTag);
@@ -662,15 +662,15 @@ namespace TencentCloud
                     bool AccountTagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取<p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
+                     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceType 
+                     * 设置<p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
+                     * @param _instanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -683,15 +683,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageType 
+                     * 获取<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+                     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置
-                     * @param _storageType 
+                     * 设置<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+                     * @param _storageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -830,15 +830,15 @@ namespace TencentCloud
                     bool FullReplicationsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AppId 
+                     * 获取<p>Account information</p>
+                     * @return AppId <p>Account information</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置
-                     * @param _appId 
+                     * 设置<p>Account information</p>
+                     * @param _appId <p>Account information</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -851,15 +851,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAccountUin 
+                     * 获取<p>Account information</p>
+                     * @return SubAccountUin <p>Account information</p>
                      * 
                      */
                     std::string GetSubAccountUin() const;
 
                     /**
-                     * 设置
-                     * @param _subAccountUin 
+                     * 设置<p>Account information</p>
+                     * @param _subAccountUin <p>Account information</p>
                      * 
                      */
                     void SetSubAccountUin(const std::string& _subAccountUin);
@@ -872,15 +872,15 @@ namespace TencentCloud
                     bool SubAccountUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uin 
+                     * 获取<p>Account information</p>
+                     * @return Uin <p>Account information</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置
-                     * @param _uin 
+                     * 设置<p>Account information</p>
+                     * @param _uin <p>Account information</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -893,15 +893,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Zones 
+                     * 获取<p>AZ information</p>
+                     * @return Zones <p>AZ information</p>
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置
-                     * @param _zones 
+                     * 设置<p>AZ information</p>
+                     * @param _zones <p>AZ information</p>
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -914,15 +914,15 @@ namespace TencentCloud
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Nodes 
+                     * 获取<p>Instance node</p>
+                     * @return Nodes <p>Instance node</p>
                      * 
                      */
                     std::vector<InstanceNode> GetNodes() const;
 
                     /**
-                     * 设置
-                     * @param _nodes 
+                     * 设置<p>Instance node</p>
+                     * @param _nodes <p>Instance node</p>
                      * 
                      */
                     void SetNodes(const std::vector<InstanceNode>& _nodes);
@@ -1019,15 +1019,15 @@ namespace TencentCloud
                     bool CdcNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AZMode 
+                     * 获取<p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
+                     * @return AZMode <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
                      * 
                      */
                     int64_t GetAZMode() const;
 
                     /**
-                     * 设置
-                     * @param _aZMode 
+                     * 设置<p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
+                     * @param _aZMode <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
                      * 
                      */
                     void SetAZMode(const int64_t& _aZMode);
@@ -1040,15 +1040,15 @@ namespace TencentCloud
                     bool AZModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StandbyFlag 
+                     * 获取<p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
+                     * @return StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
                      * 
                      */
                     int64_t GetStandbyFlag() const;
 
                     /**
-                     * 设置
-                     * @param _standbyFlag 
+                     * 设置<p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
+                     * @param _standbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
                      * 
                      */
                     void SetStandbyFlag(const int64_t& _standbyFlag);
@@ -1061,15 +1061,15 @@ namespace TencentCloud
                     bool StandbyFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StandbySecondaryNum 
+                     * 获取<p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
+                     * @return StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
                      * 
                      */
                     int64_t GetStandbySecondaryNum() const;
 
                     /**
-                     * 设置
-                     * @param _standbySecondaryNum 
+                     * 设置<p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
+                     * @param _standbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
                      * 
                      */
                     void SetStandbySecondaryNum(const int64_t& _standbySecondaryNum);
@@ -1376,15 +1376,15 @@ namespace TencentCloud
                     bool AnalysisInstanceInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoScaleConfigs 
+                     * 获取<p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
+                     * @return AutoScaleConfigs <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
                      * 
                      */
                     std::vector<AutoScalingConfig> GetAutoScaleConfigs() const;
 
                     /**
-                     * 设置
-                     * @param _autoScaleConfigs 
+                     * 设置<p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
+                     * @param _autoScaleConfigs <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
                      * 
                      */
                     void SetAutoScaleConfigs(const std::vector<AutoScalingConfig>& _autoScaleConfigs);
@@ -1411,13 +1411,13 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Create an instance version</p>
                      */
                     std::string m_createVersion;
                     bool m_createVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Initialize instance parameters</p>
                      */
                     std::vector<InstanceParam> m_initParams;
                     bool m_initParamsHasBeenSet;
@@ -1441,13 +1441,13 @@ namespace TencentCloud
                     bool m_storageNodeNumHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance tag information.</p>
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -1513,49 +1513,49 @@ namespace TencentCloud
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * 
+                     * <p>CPU cores of the control node</p>
                      */
                     int64_t m_mCCpu;
                     bool m_mCCpuHasBeenSet;
 
                     /**
-                     * 
+                     * <p>CPU size of the control node</p>
                      */
                     int64_t m_mCMem;
                     bool m_mCMemHasBeenSet;
 
                     /**
-                     * 
+                     * <p>CPU cores of the computing node</p>
                      */
                     int64_t m_computerNodeCpu;
                     bool m_computerNodeCpuHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Compute node memory size</p>
                      */
                     int64_t m_computerNodeMem;
                     bool m_computerNodeMemHasBeenSet;
 
                     /**
-                     * 
+                     * <p>CPU cores of the storage node</p>
                      */
                     int64_t m_storageNodeCpu;
                     bool m_storageNodeCpuHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Storage node memory size</p>
                      */
                     int64_t m_storageNodeMem;
                     bool m_storageNodeMemHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of control nodes</p>
                      */
                     int64_t m_mCNum;
                     bool m_mCNumHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Renewal flag</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
@@ -1567,19 +1567,19 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>User tag, inner: internal user; external: external user</p>
                      */
                     std::string m_accountTag;
                     bool m_accountTagHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
@@ -1621,31 +1621,31 @@ namespace TencentCloud
                     bool m_fullReplicationsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Account information</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Account information</p>
                      */
                     std::string m_subAccountUin;
                     bool m_subAccountUinHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Account information</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * 
+                     * <p>AZ information</p>
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance node</p>
                      */
                     std::vector<InstanceNode> m_nodes;
                     bool m_nodesHasBeenSet;
@@ -1675,19 +1675,19 @@ namespace TencentCloud
                     bool m_cdcNodeNumHasBeenSet;
 
                     /**
-                     * 
+                     * <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
                      */
                     int64_t m_aZMode;
                     bool m_aZModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
                      */
                     int64_t m_standbyFlag;
                     bool m_standbyFlagHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
                      */
                     int64_t m_standbySecondaryNum;
                     bool m_standbySecondaryNumHasBeenSet;
@@ -1777,7 +1777,7 @@ namespace TencentCloud
                     bool m_analysisInstanceInfoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
                      */
                     std::vector<AutoScalingConfig> m_autoScaleConfigs;
                     bool m_autoScaleConfigsHasBeenSet;

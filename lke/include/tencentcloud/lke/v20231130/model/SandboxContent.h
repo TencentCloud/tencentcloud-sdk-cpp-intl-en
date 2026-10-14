@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sandbox information content
                 */
                 class SandboxContent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取URL address of the sandbox
+                     * @return Url URL address of the sandbox
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置URL address of the sandbox
+                     * @param _url URL address of the sandbox
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DisplayUrl 
+                     * 获取URL address for opening the sandbox through a browser
+                     * @return DisplayUrl URL address for opening the sandbox through a browser
                      * 
                      */
                     std::string GetDisplayUrl() const;
 
                     /**
-                     * 设置
-                     * @param _displayUrl 
+                     * 设置URL address for opening the sandbox through a browser
+                     * @param _displayUrl URL address for opening the sandbox through a browser
                      * 
                      */
                     void SetDisplayUrl(const std::string& _displayUrl);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DisplayUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Content 
+                     * 获取Sandbox output content
+                     * @return Content Sandbox output content
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置
-                     * @param _content 
+                     * 设置Sandbox output content
+                     * @param _content Sandbox output content
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * URL address of the sandbox
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * URL address for opening the sandbox through a browser
                      */
                     std::string m_displayUrl;
                     bool m_displayUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Sandbox output content
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

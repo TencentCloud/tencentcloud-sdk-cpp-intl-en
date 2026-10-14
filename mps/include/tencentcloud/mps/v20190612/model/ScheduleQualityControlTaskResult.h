@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of a media quality inspection task.
+                     * @return Output Output of a media quality inspection task.
                      * 
                      */
                     QualityControlData GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output of a media quality inspection task.
+                     * @param _output Output of a media quality inspection task.
                      * 
                      */
                     void SetOutput(const QualityControlData& _output);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of a media quality inspection task.
                      */
                     QualityControlData m_output;
                     bool m_outputHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Documentation reference source info
                 */
                 class DocReference : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DocBizId 
+                     * 获取<p>Document business ID</p>
+                     * @return DocBizId <p>Document business ID</p>
                      * 
                      */
-                    uint64_t GetDocBizId() const;
+                    std::string GetDocBizId() const;
 
                     /**
-                     * 设置
-                     * @param _docBizId 
+                     * 设置<p>Document business ID</p>
+                     * @param _docBizId <p>Document business ID</p>
                      * 
                      */
-                    void SetDocBizId(const uint64_t& _docBizId);
+                    void SetDocBizId(const std::string& _docBizId);
 
                     /**
                      * 判断参数 DocBizId 是否已赋值
@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool DocBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReferBizId 
+                     * 获取<p>Document fragment reference ID</p>
+                     * @return ReferBizId <p>Document fragment reference ID</p>
                      * 
                      */
-                    uint64_t GetReferBizId() const;
+                    std::string GetReferBizId() const;
 
                     /**
-                     * 设置
-                     * @param _referBizId 
+                     * 设置<p>Document fragment reference ID</p>
+                     * @param _referBizId <p>Document fragment reference ID</p>
                      * 
                      */
-                    void SetReferBizId(const uint64_t& _referBizId);
+                    void SetReferBizId(const std::string& _referBizId);
 
                     /**
                      * 判断参数 ReferBizId 是否已赋值
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ReferBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DocName 
+                     * 获取<p>Document name</p>
+                     * @return DocName <p>Document name</p>
                      * 
                      */
                     std::string GetDocName() const;
 
                     /**
-                     * 设置
-                     * @param _docName 
+                     * 设置<p>Document name</p>
+                     * @param _docName <p>Document name</p>
                      * 
                      */
                     void SetDocName(const std::string& _docName);
@@ -110,18 +110,18 @@ namespace TencentCloud
                     bool DocNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeBizId 
+                     * 获取<p>Business ID of the knowledge base where the document resides</p>
+                     * @return KnowledgeBizId <p>Business ID of the knowledge base where the document resides</p>
                      * 
                      */
-                    uint64_t GetKnowledgeBizId() const;
+                    std::string GetKnowledgeBizId() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBizId 
+                     * 设置<p>Business ID of the knowledge base where the document resides</p>
+                     * @param _knowledgeBizId <p>Business ID of the knowledge base where the document resides</p>
                      * 
                      */
-                    void SetKnowledgeBizId(const uint64_t& _knowledgeBizId);
+                    void SetKnowledgeBizId(const std::string& _knowledgeBizId);
 
                     /**
                      * 判断参数 KnowledgeBizId 是否已赋值
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool KnowledgeBizIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeName 
+                     * 获取<p>Name of the knowledge base where the document resides</p>
+                     * @return KnowledgeName <p>Name of the knowledge base where the document resides</p>
                      * 
                      */
                     std::string GetKnowledgeName() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeName 
+                     * 设置<p>Name of the knowledge base where the document resides</p>
+                     * @param _knowledgeName <p>Name of the knowledge base where the document resides</p>
                      * 
                      */
                     void SetKnowledgeName(const std::string& _knowledgeName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool KnowledgeNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取<p>Document Access Address</p>
+                     * @return Url <p>Document Access Address</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置<p>Document Access Address</p>
+                     * @param _url <p>Document Access Address</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Document business ID</p>
                      */
-                    uint64_t m_docBizId;
+                    std::string m_docBizId;
                     bool m_docBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Document fragment reference ID</p>
                      */
-                    uint64_t m_referBizId;
+                    std::string m_referBizId;
                     bool m_referBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Document name</p>
                      */
                     std::string m_docName;
                     bool m_docNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Business ID of the knowledge base where the document resides</p>
                      */
-                    uint64_t m_knowledgeBizId;
+                    std::string m_knowledgeBizId;
                     bool m_knowledgeBizIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Name of the knowledge base where the document resides</p>
                      */
                     std::string m_knowledgeName;
                     bool m_knowledgeNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Document Access Address</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

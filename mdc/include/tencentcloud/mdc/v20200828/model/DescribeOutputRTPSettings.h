@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTP configuration information of the queried output.
+                * Query the configuration message of the output RTP.
                 */
                 class DescribeOutputRTPSettings : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Destinations Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of target address information for RTP repush.
+                     * @return Destinations List of target address information for RTP repush.
                      * 
                      */
                     std::vector<RTPAddressDestination> GetDestinations() const;
 
                     /**
-                     * 设置Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _destinations Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of target address information for RTP repush.
+                     * @param _destinations List of target address information for RTP repush.
                      * 
                      */
                     void SetDestinations(const std::vector<RTPAddressDestination>& _destinations);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DestinationsHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FEC Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable FEC.
+                     * @return FEC Whether to enable FEC.
                      * 
                      */
                     std::string GetFEC() const;
 
                     /**
-                     * 设置Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _fEC Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable FEC.
+                     * @param _fEC Whether to enable FEC.
                      * 
                      */
                     void SetFEC(const std::string& _fEC);
@@ -99,18 +91,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIdleTimeout() const;
 
                     /**
                      * 设置Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _idleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIdleTimeout(const int64_t& _idleTimeout);
@@ -125,22 +113,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of target address information for RTP repush.
                      */
                     std::vector<RTPAddressDestination> m_destinations;
                     bool m_destinationsHasBeenSet;
 
                     /**
-                     * Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable FEC.
                      */
                     std::string m_fEC;
                     bool m_fECHasBeenSet;
 
                     /**
                      * Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_idleTimeout;
                     bool m_idleTimeoutHasBeenSet;

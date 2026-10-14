@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query the input RTMP configuration message.
                 */
                 class DescribeInputRTMPPullSettings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SourceAddresses 
+                     * 获取RTMP origin server address information.
+                     * @return SourceAddresses RTMP origin server address information.
                      * 
                      */
                     std::vector<DescribeRTMPPullSourceAddress> GetSourceAddresses() const;
 
                     /**
-                     * 设置
-                     * @param _sourceAddresses 
+                     * 设置RTMP origin server address information.
+                     * @param _sourceAddresses RTMP origin server address information.
                      * 
                      */
                     void SetSourceAddresses(const std::vector<DescribeRTMPPullSourceAddress>& _sourceAddresses);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * RTMP origin server address information.
                      */
                     std::vector<DescribeRTMPPullSourceAddress> m_sourceAddresses;
                     bool m_sourceAddressesHasBeenSet;

@@ -36,6 +36,8 @@
 #include <tencentcloud/es/v20180416/model/EsConfigSetInfo.h>
 #include <tencentcloud/es/v20180416/model/OperationDuration.h>
 #include <tencentcloud/es/v20180416/model/OptionalWebServiceInfo.h>
+#include <tencentcloud/es/v20180416/model/OutboundPublicAcl.h>
+#include <tencentcloud/es/v20180416/model/EnableScheduleOperationDuration.h>
 
 
 namespace TencentCloud
@@ -59,15 +61,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -80,15 +82,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -101,15 +103,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -122,15 +124,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Availability Zone
-                     * @return Zone Availability Zone
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability Zone
-                     * @param _zone Availability Zone
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -143,15 +145,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取User ID
-                     * @return AppId User ID
+                     * 获取<p>uid</p>
+                     * @return AppId <p>uid</p>
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置User ID
-                     * @param _appId User ID
+                     * 设置<p>uid</p>
+                     * @param _appId <p>uid</p>
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -164,15 +166,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User UIN
-                     * @return Uin User UIN
+                     * 获取<p>User UIN.</p>
+                     * @return Uin <p>User UIN.</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User UIN
-                     * @param _uin User UIN
+                     * 设置<p>User UIN.</p>
+                     * @param _uin <p>User UIN.</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -185,15 +187,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取UID of the VPC where the instance resides
-                     * @return VpcUid UID of the VPC where the instance resides
+                     * 获取<p>UID of the VPC to which the instance belongs</p>
+                     * @return VpcUid <p>UID of the VPC to which the instance belongs</p>
                      * 
                      */
                     std::string GetVpcUid() const;
 
                     /**
-                     * 设置UID of the VPC where the instance resides
-                     * @param _vpcUid UID of the VPC where the instance resides
+                     * 设置<p>UID of the VPC to which the instance belongs</p>
+                     * @param _vpcUid <p>UID of the VPC to which the instance belongs</p>
                      * 
                      */
                     void SetVpcUid(const std::string& _vpcUid);
@@ -206,15 +208,15 @@ namespace TencentCloud
                     bool VpcUidHasBeenSet() const;
 
                     /**
-                     * 获取UID of the subnet where the instance resides
-                     * @return SubnetUid UID of the subnet where the instance resides
+                     * 获取<p>UID of the subnet to which the instance belongs</p>
+                     * @return SubnetUid <p>UID of the subnet to which the instance belongs</p>
                      * 
                      */
                     std::string GetSubnetUid() const;
 
                     /**
-                     * 设置UID of the subnet where the instance resides
-                     * @param _subnetUid UID of the subnet where the instance resides
+                     * 设置<p>UID of the subnet to which the instance belongs</p>
+                     * @param _subnetUid <p>UID of the subnet to which the instance belongs</p>
                      * 
                      */
                     void SetSubnetUid(const std::string& _subnetUid);
@@ -227,15 +229,15 @@ namespace TencentCloud
                     bool SubnetUidHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
-                     * @return Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+                     * 获取<p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
+                     * @return Status <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
-                     * @param _status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+                     * 设置<p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
+                     * @param _status <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -248,15 +250,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not used on the global website
-                     * @return RenewFlag This parameter is not used on the global website
+                     * 获取<p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
+                     * @return RenewFlag <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置This parameter is not used on the global website
-                     * @param _renewFlag This parameter is not used on the global website
+                     * 设置<p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
+                     * @param _renewFlag <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -269,15 +271,15 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
-                     * @return ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+                     * 获取<p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
+                     * @return ChargeType <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
                      * 
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
-                     * @param _chargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+                     * 设置<p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
+                     * @param _chargeType <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
                      * 
                      */
                     void SetChargeType(const std::string& _chargeType);
@@ -290,15 +292,15 @@ namespace TencentCloud
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not used on the global website
-                     * @return ChargePeriod This parameter is not used on the global website
+                     * 获取<p>Annual and monthly subscription duration, unit: month</p>
+                     * @return ChargePeriod <p>Annual and monthly subscription duration, unit: month</p>
                      * 
                      */
                     uint64_t GetChargePeriod() const;
 
                     /**
-                     * 设置This parameter is not used on the global website
-                     * @param _chargePeriod This parameter is not used on the global website
+                     * 设置<p>Annual and monthly subscription duration, unit: month</p>
+                     * @param _chargePeriod <p>Annual and monthly subscription duration, unit: month</p>
                      * 
                      */
                     void SetChargePeriod(const uint64_t& _chargePeriod);
@@ -311,15 +313,15 @@ namespace TencentCloud
                     bool ChargePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @return NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 获取<p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @return NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @param _nodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 设置<p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @param _nodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -332,15 +334,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes
-                     * @return NodeNum Number of nodes
+                     * 获取<p>Number of nodes</p>
+                     * @return NodeNum <p>Number of nodes</p>
                      * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
-                     * 设置Number of nodes
-                     * @param _nodeNum Number of nodes
+                     * 设置<p>Number of nodes</p>
+                     * @param _nodeNum <p>Number of nodes</p>
                      * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
@@ -353,15 +355,15 @@ namespace TencentCloud
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores of the node
-                     * @return CpuNum Number of CPU cores of the node
+                     * 获取<p>Number of node CPU cores.</p>
+                     * @return CpuNum <p>Number of node CPU cores.</p>
                      * 
                      */
                     uint64_t GetCpuNum() const;
 
                     /**
-                     * 设置Number of CPU cores of the node
-                     * @param _cpuNum Number of CPU cores of the node
+                     * 设置<p>Number of node CPU cores.</p>
+                     * @param _cpuNum <p>Number of node CPU cores.</p>
                      * 
                      */
                     void SetCpuNum(const uint64_t& _cpuNum);
@@ -374,15 +376,15 @@ namespace TencentCloud
                     bool CpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Node memory size in GB
-                     * @return MemSize Node memory size in GB
+                     * 获取<p>Node memory size (GB).</p>
+                     * @return MemSize <p>Node memory size (GB).</p>
                      * 
                      */
                     uint64_t GetMemSize() const;
 
                     /**
-                     * 设置Node memory size in GB
-                     * @param _memSize Node memory size in GB
+                     * 设置<p>Node memory size (GB).</p>
+                     * @param _memSize <p>Node memory size (GB).</p>
                      * 
                      */
                     void SetMemSize(const uint64_t& _memSize);
@@ -395,15 +397,15 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Node disk type
-                     * @return DiskType Node disk type
+                     * 获取<p>Node disk type</p>
+                     * @return DiskType <p>Node disk type</p>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Node disk type
-                     * @param _diskType Node disk type
+                     * 设置<p>Node disk type</p>
+                     * @param _diskType <p>Node disk type</p>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -416,15 +418,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node disk size in GB
-                     * @return DiskSize Node disk size in GB
+                     * 获取<p>Node disk size (GB).</p>
+                     * @return DiskSize <p>Node disk size (GB).</p>
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Node disk size in GB
-                     * @param _diskSize Node disk size in GB
+                     * 设置<p>Node disk size (GB).</p>
+                     * @param _diskSize <p>Node disk size (GB).</p>
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -437,15 +439,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取ES domain name
-                     * @return EsDomain ES domain name
+                     * 获取<p>ES domain name</p>
+                     * @return EsDomain <p>ES domain name</p>
                      * 
                      */
                     std::string GetEsDomain() const;
 
                     /**
-                     * 设置ES domain name
-                     * @param _esDomain ES domain name
+                     * 设置<p>ES domain name</p>
+                     * @param _esDomain <p>ES domain name</p>
                      * 
                      */
                     void SetEsDomain(const std::string& _esDomain);
@@ -458,15 +460,15 @@ namespace TencentCloud
                     bool EsDomainHasBeenSet() const;
 
                     /**
-                     * 获取ES VIP
-                     * @return EsVip ES VIP
+                     * 获取<p>ES VIP</p>
+                     * @return EsVip <p>ES VIP</p>
                      * 
                      */
                     std::string GetEsVip() const;
 
                     /**
-                     * 设置ES VIP
-                     * @param _esVip ES VIP
+                     * 设置<p>ES VIP</p>
+                     * @param _esVip <p>ES VIP</p>
                      * 
                      */
                     void SetEsVip(const std::string& _esVip);
@@ -479,15 +481,15 @@ namespace TencentCloud
                     bool EsVipHasBeenSet() const;
 
                     /**
-                     * 获取ES port
-                     * @return EsPort ES port
+                     * 获取<p>ES port</p>
+                     * @return EsPort <p>ES port</p>
                      * 
                      */
                     uint64_t GetEsPort() const;
 
                     /**
-                     * 设置ES port
-                     * @param _esPort ES port
+                     * 设置<p>ES port</p>
+                     * @param _esPort <p>ES port</p>
                      * 
                      */
                     void SetEsPort(const uint64_t& _esPort);
@@ -500,15 +502,15 @@ namespace TencentCloud
                     bool EsPortHasBeenSet() const;
 
                     /**
-                     * 获取Kibana access URL
-                     * @return KibanaUrl Kibana access URL
+                     * 获取<p>Kibana access url</p>
+                     * @return KibanaUrl <p>Kibana access url</p>
                      * 
                      */
                     std::string GetKibanaUrl() const;
 
                     /**
-                     * 设置Kibana access URL
-                     * @param _kibanaUrl Kibana access URL
+                     * 设置<p>Kibana access url</p>
+                     * @param _kibanaUrl <p>Kibana access url</p>
                      * 
                      */
                     void SetKibanaUrl(const std::string& _kibanaUrl);
@@ -521,15 +523,15 @@ namespace TencentCloud
                     bool KibanaUrlHasBeenSet() const;
 
                     /**
-                     * 获取ES version number
-                     * @return EsVersion ES version number
+                     * 获取<p>ES version number</p>
+                     * @return EsVersion <p>ES version number</p>
                      * 
                      */
                     std::string GetEsVersion() const;
 
                     /**
-                     * 设置ES version number
-                     * @param _esVersion ES version number
+                     * 设置<p>ES version number</p>
+                     * @param _esVersion <p>ES version number</p>
                      * 
                      */
                     void SetEsVersion(const std::string& _esVersion);
@@ -542,15 +544,15 @@ namespace TencentCloud
                     bool EsVersionHasBeenSet() const;
 
                     /**
-                     * 获取ES configuration item
-                     * @return EsConfig ES configuration item
+                     * 获取<p>ES configuration item</p>
+                     * @return EsConfig <p>ES configuration item</p>
                      * 
                      */
                     std::string GetEsConfig() const;
 
                     /**
-                     * 设置ES configuration item
-                     * @param _esConfig ES configuration item
+                     * 设置<p>ES configuration item</p>
+                     * @param _esConfig <p>ES configuration item</p>
                      * 
                      */
                     void SetEsConfig(const std::string& _esConfig);
@@ -563,15 +565,15 @@ namespace TencentCloud
                     bool EsConfigHasBeenSet() const;
 
                     /**
-                     * 获取Kibana access control configuration
-                     * @return EsAcl Kibana access control configuration
+                     * 获取<p>Kibana Access Control Configuration</p>
+                     * @return EsAcl <p>Kibana Access Control Configuration</p>
                      * 
                      */
                     EsAcl GetEsAcl() const;
 
                     /**
-                     * 设置Kibana access control configuration
-                     * @param _esAcl Kibana access control configuration
+                     * 设置<p>Kibana Access Control Configuration</p>
+                     * @param _esAcl <p>Kibana Access Control Configuration</p>
                      * 
                      */
                     void SetEsAcl(const EsAcl& _esAcl);
@@ -584,15 +586,15 @@ namespace TencentCloud
                     bool EsAclHasBeenSet() const;
 
                     /**
-                     * 获取Instance creation time
-                     * @return CreateTime Instance creation time
+                     * 获取<p>Instance creation time</p>
+                     * @return CreateTime <p>Instance creation time</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Instance creation time
-                     * @param _createTime Instance creation time
+                     * 设置<p>Instance creation time</p>
+                     * @param _createTime <p>Instance creation time</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -605,15 +607,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of the instance
-                     * @return UpdateTime Last modified time of the instance
+                     * 获取<p>Last modification time of the instance</p>
+                     * @return UpdateTime <p>Last modification time of the instance</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of the instance
-                     * @param _updateTime Last modified time of the instance
+                     * 设置<p>Last modification time of the instance</p>
+                     * @param _updateTime <p>Last modification time of the instance</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -626,15 +628,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not used on the global website
-                     * @return Deadline This parameter is not used on the global website
+                     * 获取<p>Instance expiration time</p>
+                     * @return Deadline <p>Instance expiration time</p>
                      * 
                      */
                     std::string GetDeadline() const;
 
                     /**
-                     * 设置This parameter is not used on the global website
-                     * @param _deadline This parameter is not used on the global website
+                     * 设置<p>Instance expiration time</p>
+                     * @param _deadline <p>Instance expiration time</p>
                      * 
                      */
                     void SetDeadline(const std::string& _deadline);
@@ -647,15 +649,15 @@ namespace TencentCloud
                     bool DeadlineHasBeenSet() const;
 
                     /**
-                     * 获取Instance type (instance type identifier, which can be only 1 or 2 currently)
-                     * @return InstanceType Instance type (instance type identifier, which can be only 1 or 2 currently)
+                     * 获取<p>Instance type (instance type flag, currently only 1 and 2)</p>
+                     * @return InstanceType <p>Instance type (instance type flag, currently only 1 and 2)</p>
                      * 
                      */
                     uint64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type (instance type identifier, which can be only 1 or 2 currently)
-                     * @param _instanceType Instance type (instance type identifier, which can be only 1 or 2 currently)
+                     * 设置<p>Instance type (instance type flag, currently only 1 and 2)</p>
+                     * @param _instanceType <p>Instance type (instance type flag, currently only 1 and 2)</p>
                      * 
                      */
                     void SetInstanceType(const uint64_t& _instanceType);
@@ -668,15 +670,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取IK analyzer configuration
-                     * @return IkConfig IK analyzer configuration
+                     * 获取<p>Ik analyzer configuration</p>
+                     * @return IkConfig <p>Ik analyzer configuration</p>
                      * 
                      */
                     EsDictionaryInfo GetIkConfig() const;
 
                     /**
-                     * 设置IK analyzer configuration
-                     * @param _ikConfig IK analyzer configuration
+                     * 设置<p>Ik analyzer configuration</p>
+                     * @param _ikConfig <p>Ik analyzer configuration</p>
                      * 
                      */
                     void SetIkConfig(const EsDictionaryInfo& _ikConfig);
@@ -689,15 +691,15 @@ namespace TencentCloud
                     bool IkConfigHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated primary node configuration
-                     * @return MasterNodeInfo Dedicated primary node configuration
+                     * 获取<p>Dedicated master node configuration</p>
+                     * @return MasterNodeInfo <p>Dedicated master node configuration</p>
                      * 
                      */
                     MasterNodeInfo GetMasterNodeInfo() const;
 
                     /**
-                     * 设置Dedicated primary node configuration
-                     * @param _masterNodeInfo Dedicated primary node configuration
+                     * 设置<p>Dedicated master node configuration</p>
+                     * @param _masterNodeInfo <p>Dedicated master node configuration</p>
                      * 
                      */
                     void SetMasterNodeInfo(const MasterNodeInfo& _masterNodeInfo);
@@ -710,15 +712,15 @@ namespace TencentCloud
                     bool MasterNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Auto-backup to COS configuration
-                     * @return CosBackup Auto-backup to COS configuration
+                     * 获取<p>cos automatic backup configuration</p>
+                     * @return CosBackup <p>cos automatic backup configuration</p>
                      * 
                      */
                     CosBackup GetCosBackup() const;
 
                     /**
-                     * 设置Auto-backup to COS configuration
-                     * @param _cosBackup Auto-backup to COS configuration
+                     * 设置<p>cos automatic backup configuration</p>
+                     * @param _cosBackup <p>cos automatic backup configuration</p>
                      * 
                      */
                     void SetCosBackup(const CosBackup& _cosBackup);
@@ -731,15 +733,15 @@ namespace TencentCloud
                     bool CosBackupHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow auto-backup to COS
-                     * @return AllowCosBackup Whether to allow auto-backup to COS
+                     * 获取<p>Whether cos automatic backup is allowed</p>
+                     * @return AllowCosBackup <p>Whether cos automatic backup is allowed</p>
                      * 
                      */
                     bool GetAllowCosBackup() const;
 
                     /**
-                     * 设置Whether to allow auto-backup to COS
-                     * @param _allowCosBackup Whether to allow auto-backup to COS
+                     * 设置<p>Whether cos automatic backup is allowed</p>
+                     * @param _allowCosBackup <p>Whether cos automatic backup is allowed</p>
                      * 
                      */
                     void SetAllowCosBackup(const bool& _allowCosBackup);
@@ -752,15 +754,15 @@ namespace TencentCloud
                     bool AllowCosBackupHasBeenSet() const;
 
                     /**
-                     * 获取List of tags owned by the instance
-                     * @return TagList List of tags owned by the instance
+                     * 获取<p>Tag list of the instance</p>
+                     * @return TagList <p>Tag list of the instance</p>
                      * 
                      */
                     std::vector<TagInfo> GetTagList() const;
 
                     /**
-                     * 设置List of tags owned by the instance
-                     * @param _tagList List of tags owned by the instance
+                     * 设置<p>Tag list of the instance</p>
+                     * @param _tagList <p>Tag list of the instance</p>
                      * 
                      */
                     void SetTagList(const std::vector<TagInfo>& _tagList);
@@ -773,15 +775,15 @@ namespace TencentCloud
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-                     * @return LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * 获取<p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+                     * @return LicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
                      * 
                      */
                     std::string GetLicenseType() const;
 
                     /**
-                     * 设置License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-                     * @param _licenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * 设置<p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+                     * @param _licenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
                      * 
                      */
                     void SetLicenseType(const std::string& _licenseType);
@@ -794,19 +796,36 @@ namespace TencentCloud
                     bool LicenseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+                     * @return RealLicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+                     * 
+                     */
+                    std::string GetRealLicenseType() const;
+
+                    /**
+                     * 设置<p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+                     * @param _realLicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+                     * 
+                     */
+                    void SetRealLicenseType(const std::string& _realLicenseType);
+
+                    /**
+                     * 判断参数 RealLicenseType 是否已赋值
+                     * @return RealLicenseType 是否已赋值
+                     * 
+                     */
+                    bool RealLicenseTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
+                     * @return EnableHotWarmMode <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
                      * 
                      */
                     bool GetEnableHotWarmMode() const;
 
                     /**
-                     * 设置Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _enableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
+                     * @param _enableHotWarmMode <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
                      * 
                      */
                     void SetEnableHotWarmMode(const bool& _enableHotWarmMode);
@@ -819,19 +838,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EnableHotWarmModeHasBeenSet() const;
 
                     /**
-                     * 获取Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @return WarmNodeType <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     std::string GetWarmNodeType() const;
 
                     /**
-                     * 设置Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _warmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @param _warmNodeType <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     void SetWarmNodeType(const std::string& _warmNodeType);
@@ -844,19 +859,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool WarmNodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return WarmNodeNum Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Number of warm nodes</p>
+                     * @return WarmNodeNum <p>Number of warm nodes</p>
                      * 
                      */
                     uint64_t GetWarmNodeNum() const;
 
                     /**
-                     * 设置Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _warmNodeNum Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Number of warm nodes</p>
+                     * @param _warmNodeNum <p>Number of warm nodes</p>
                      * 
                      */
                     void SetWarmNodeNum(const uint64_t& _warmNodeNum);
@@ -869,19 +880,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool WarmNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return WarmCpuNum Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Warm node CPU cores</p>
+                     * @return WarmCpuNum <p>Warm node CPU cores</p>
                      * 
                      */
                     uint64_t GetWarmCpuNum() const;
 
                     /**
-                     * 设置Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _warmCpuNum Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Warm node CPU cores</p>
+                     * @param _warmCpuNum <p>Warm node CPU cores</p>
                      * 
                      */
                     void SetWarmCpuNum(const uint64_t& _warmCpuNum);
@@ -894,19 +901,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool WarmCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return WarmMemSize Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Warm node memory size (GB).</p>
+                     * @return WarmMemSize <p>Warm node memory size (GB).</p>
                      * 
                      */
                     uint64_t GetWarmMemSize() const;
 
                     /**
-                     * 设置Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _warmMemSize Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Warm node memory size (GB).</p>
+                     * @param _warmMemSize <p>Warm node memory size (GB).</p>
                      * 
                      */
                     void SetWarmMemSize(const uint64_t& _warmMemSize);
@@ -919,19 +922,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool WarmMemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return WarmDiskType Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Warm node disk type</p>
+                     * @return WarmDiskType <p>Warm node disk type</p>
                      * 
                      */
                     std::string GetWarmDiskType() const;
 
                     /**
-                     * 设置Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _warmDiskType Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Warm node disk type</p>
+                     * @param _warmDiskType <p>Warm node disk type</p>
                      * 
                      */
                     void SetWarmDiskType(const std::string& _warmDiskType);
@@ -944,19 +943,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool WarmDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return WarmDiskSize Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Warm node disk size (GB).</p>
+                     * @return WarmDiskSize <p>Warm node disk size (GB).</p>
                      * 
                      */
                     uint64_t GetWarmDiskSize() const;
 
                     /**
-                     * 设置Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _warmDiskSize Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Warm node disk size (GB).</p>
+                     * @param _warmDiskSize <p>Warm node disk size (GB).</p>
                      * 
                      */
                     void SetWarmDiskSize(const uint64_t& _warmDiskSize);
@@ -969,19 +964,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool WarmDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeInfoList Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cluster node information list</p>
+                     * @return NodeInfoList <p>Cluster node information list</p>
                      * 
                      */
                     std::vector<NodeInfo> GetNodeInfoList() const;
 
                     /**
-                     * 设置Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeInfoList Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cluster node information list</p>
+                     * @param _nodeInfoList <p>Cluster node information list</p>
                      * 
                      */
                     void SetNodeInfoList(const std::vector<NodeInfo>& _nodeInfoList);
@@ -994,19 +985,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeInfoListHasBeenSet() const;
 
                     /**
-                     * 获取ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EsPublicUrl ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Es public network address</p>
+                     * @return EsPublicUrl <p>Es public network address</p>
                      * 
                      */
                     std::string GetEsPublicUrl() const;
 
                     /**
-                     * 设置ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _esPublicUrl ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Es public network address</p>
+                     * @param _esPublicUrl <p>Es public network address</p>
                      * 
                      */
                     void SetEsPublicUrl(const std::string& _esPublicUrl);
@@ -1019,19 +1006,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EsPublicUrlHasBeenSet() const;
 
                     /**
-                     * 获取Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MultiZoneInfo Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Multi-AZ network info</p>
+                     * @return MultiZoneInfo <p>Multi-AZ network info</p>
                      * 
                      */
                     std::vector<ZoneDetail> GetMultiZoneInfo() const;
 
                     /**
-                     * 设置Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _multiZoneInfo Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Multi-AZ network info</p>
+                     * @param _multiZoneInfo <p>Multi-AZ network info</p>
                      * 
                      */
                     void SetMultiZoneInfo(const std::vector<ZoneDetail>& _multiZoneInfo);
@@ -1044,19 +1027,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MultiZoneInfoHasBeenSet() const;
 
                     /**
-                     * 获取Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeployMode Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
+                     * @return DeployMode <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
                      * 
                      */
                     uint64_t GetDeployMode() const;
 
                     /**
-                     * 设置Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deployMode Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
+                     * @param _deployMode <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
                      * 
                      */
                     void SetDeployMode(const uint64_t& _deployMode);
@@ -1069,19 +1048,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicAccess ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+                     * @return PublicAccess <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      * 
                      */
                     std::string GetPublicAccess() const;
 
                     /**
-                     * 设置ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publicAccess ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+                     * @param _publicAccess <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      * 
                      */
                     void SetPublicAccess(const std::string& _publicAccess);
@@ -1094,15 +1069,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取ES public access control configuration
-                     * @return EsPublicAcl ES public access control configuration
+                     * 获取<p>ES public network access control configuration</p>
+                     * @return EsPublicAcl <p>ES public network access control configuration</p>
                      * 
                      */
                     EsAcl GetEsPublicAcl() const;
 
                     /**
-                     * 设置ES public access control configuration
-                     * @param _esPublicAcl ES public access control configuration
+                     * 设置<p>ES public network access control configuration</p>
+                     * @param _esPublicAcl <p>ES public network access control configuration</p>
                      * 
                      */
                     void SetEsPublicAcl(const EsAcl& _esPublicAcl);
@@ -1115,19 +1090,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EsPublicAclHasBeenSet() const;
 
                     /**
-                     * 获取Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KibanaPrivateUrl Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Kibana private network address</p>
+                     * @return KibanaPrivateUrl <p>Kibana private network address</p>
                      * 
                      */
                     std::string GetKibanaPrivateUrl() const;
 
                     /**
-                     * 设置Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kibanaPrivateUrl Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Kibana private network address</p>
+                     * @param _kibanaPrivateUrl <p>Kibana private network address</p>
                      * 
                      */
                     void SetKibanaPrivateUrl(const std::string& _kibanaPrivateUrl);
@@ -1140,19 +1111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KibanaPrivateUrlHasBeenSet() const;
 
                     /**
-                     * 获取Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KibanaPublicAccess Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
+                     * @return KibanaPublicAccess <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
                      * 
                      */
                     std::string GetKibanaPublicAccess() const;
 
                     /**
-                     * 设置Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kibanaPublicAccess Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
+                     * @param _kibanaPublicAccess <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
                      * 
                      */
                     void SetKibanaPublicAccess(const std::string& _kibanaPublicAccess);
@@ -1165,19 +1132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KibanaPublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KibanaPrivateAccess Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+                     * @return KibanaPrivateAccess <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      * 
                      */
                     std::string GetKibanaPrivateAccess() const;
 
                     /**
-                     * 设置Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kibanaPrivateAccess Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+                     * @param _kibanaPrivateAccess <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      * 
                      */
                     void SetKibanaPrivateAccess(const std::string& _kibanaPrivateAccess);
@@ -1190,19 +1153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KibanaPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+                     * @return SecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
                      * 
                      */
                     uint64_t GetSecurityType() const;
 
                     /**
-                     * 设置Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _securityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+                     * @param _securityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
                      * 
                      */
                     void SetSecurityType(const uint64_t& _securityType);
@@ -1215,19 +1174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
+                     * @return SceneType <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
                      * 
                      */
                     int64_t GetSceneType() const;
 
                     /**
-                     * 设置Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
+                     * @param _sceneType <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
                      * 
                      */
                     void SetSceneType(const int64_t& _sceneType);
@@ -1240,19 +1195,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return KibanaConfig Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Kibana configuration item</p>
+                     * @return KibanaConfig <p>Kibana configuration item</p>
                      * 
                      */
                     std::string GetKibanaConfig() const;
 
                     /**
-                     * 设置Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _kibanaConfig Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Kibana configuration item</p>
+                     * @param _kibanaConfig <p>Kibana configuration item</p>
                      * 
                      */
                     void SetKibanaConfig(const std::string& _kibanaConfig);
@@ -1265,19 +1216,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool KibanaConfigHasBeenSet() const;
 
                     /**
-                     * 获取Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return KibanaNodeInfo Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取<p>Kibana node information</p>
+                     * @return KibanaNodeInfo <p>Kibana node information</p>
                      * 
                      */
                     KibanaNodeInfo GetKibanaNodeInfo() const;
 
                     /**
-                     * 设置Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param _kibanaNodeInfo Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置<p>Kibana node information</p>
+                     * @param _kibanaNodeInfo <p>Kibana node information</p>
                      * 
                      */
                     void SetKibanaNodeInfo(const KibanaNodeInfo& _kibanaNodeInfo);
@@ -1290,19 +1237,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool KibanaNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return WebNodeTypeInfo Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Visualize node configuration</p>
+                     * @return WebNodeTypeInfo <p>Visualize node configuration</p>
                      * 
                      */
                     WebNodeTypeInfo GetWebNodeTypeInfo() const;
 
                     /**
-                     * 设置Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _webNodeTypeInfo Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Visualize node configuration</p>
+                     * @param _webNodeTypeInfo <p>Visualize node configuration</p>
                      * 
                      */
                     void SetWebNodeTypeInfo(const WebNodeTypeInfo& _webNodeTypeInfo);
@@ -1315,19 +1258,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool WebNodeTypeInfoHasBeenSet() const;
 
                     /**
-                     * 获取JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Jdk JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>JDK type. Valid values: oracle, kona</p>
+                     * @return Jdk <p>JDK type. Valid values: oracle, kona</p>
                      * 
                      */
                     std::string GetJdk() const;
 
                     /**
-                     * 设置JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _jdk JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>JDK type. Valid values: oracle, kona</p>
+                     * @param _jdk <p>JDK type. Valid values: oracle, kona</p>
                      * 
                      */
                     void SetJdk(const std::string& _jdk);
@@ -1340,19 +1279,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool JdkHasBeenSet() const;
 
                     /**
-                     * 获取Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Protocol Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Cluster network communication protocol</p>
+                     * @return Protocol <p>Cluster network communication protocol</p>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _protocol Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Cluster network communication protocol</p>
+                     * @param _protocol <p>Cluster network communication protocol</p>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -1365,19 +1300,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SecurityGroups Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Security group id</p>
+                     * @return SecurityGroups <p>Security group id</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
-                     * 设置Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _securityGroups Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Security group id</p>
+                     * @param _securityGroups <p>Security group id</p>
                      * 
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
@@ -1390,19 +1321,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SecurityGroupsHasBeenSet() const;
 
                     /**
-                     * 获取Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @return ColdNodeType <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     std::string GetColdNodeType() const;
 
                     /**
-                     * 设置Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _coldNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+                     * @param _coldNodeType <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      * 
                      */
                     void SetColdNodeType(const std::string& _coldNodeType);
@@ -1415,19 +1342,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ColdNodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ColdNodeNum Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Number of cold nodes</p>
+                     * @return ColdNodeNum <p>Number of cold nodes</p>
                      * 
                      */
                     uint64_t GetColdNodeNum() const;
 
                     /**
-                     * 设置Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _coldNodeNum Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Number of cold nodes</p>
+                     * @param _coldNodeNum <p>Number of cold nodes</p>
                      * 
                      */
                     void SetColdNodeNum(const uint64_t& _coldNodeNum);
@@ -1440,19 +1363,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ColdNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ColdCpuNum Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Cold node CPU cores</p>
+                     * @return ColdCpuNum <p>Cold node CPU cores</p>
                      * 
                      */
                     uint64_t GetColdCpuNum() const;
 
                     /**
-                     * 设置Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _coldCpuNum Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Cold node CPU cores</p>
+                     * @param _coldCpuNum <p>Cold node CPU cores</p>
                      * 
                      */
                     void SetColdCpuNum(const uint64_t& _coldCpuNum);
@@ -1465,19 +1384,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ColdCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ColdMemSize Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Cold node memory size (GB).</p>
+                     * @return ColdMemSize <p>Cold node memory size (GB).</p>
                      * 
                      */
                     uint64_t GetColdMemSize() const;
 
                     /**
-                     * 设置Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _coldMemSize Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Cold node memory size (GB).</p>
+                     * @param _coldMemSize <p>Cold node memory size (GB).</p>
                      * 
                      */
                     void SetColdMemSize(const uint64_t& _coldMemSize);
@@ -1490,19 +1405,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ColdMemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ColdDiskType Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Cold node disk type</p>
+                     * @return ColdDiskType <p>Cold node disk type</p>
                      * 
                      */
                     std::string GetColdDiskType() const;
 
                     /**
-                     * 设置Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _coldDiskType Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Cold node disk type</p>
+                     * @param _coldDiskType <p>Cold node disk type</p>
                      * 
                      */
                     void SetColdDiskType(const std::string& _coldDiskType);
@@ -1515,19 +1426,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ColdDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ColdDiskSize Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Cold node disk size (GB).</p>
+                     * @return ColdDiskSize <p>Cold node disk size (GB).</p>
                      * 
                      */
                     uint64_t GetColdDiskSize() const;
 
                     /**
-                     * 设置Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _coldDiskSize Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Cold node disk size (GB).</p>
+                     * @param _coldDiskSize <p>Cold node disk size (GB).</p>
                      * 
                      */
                     void SetColdDiskSize(const uint64_t& _coldDiskSize);
@@ -1540,19 +1447,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ColdDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
+                     * @return FrozenNodeType <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
                      * 
                      */
                     std::string GetFrozenNodeType() const;
 
                     /**
-                     * 设置Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _frozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
+                     * @param _frozenNodeType <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
                      * 
                      */
                     void SetFrozenNodeType(const std::string& _frozenNodeType);
@@ -1565,19 +1468,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool FrozenNodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return FrozenNodeNum Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Number of frozen nodes</p>
+                     * @return FrozenNodeNum <p>Number of frozen nodes</p>
                      * 
                      */
                     uint64_t GetFrozenNodeNum() const;
 
                     /**
-                     * 设置Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _frozenNodeNum Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Number of frozen nodes</p>
+                     * @param _frozenNodeNum <p>Number of frozen nodes</p>
                      * 
                      */
                     void SetFrozenNodeNum(const uint64_t& _frozenNodeNum);
@@ -1590,19 +1489,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool FrozenNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return FrozenCpuNum Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Frozen node CPU cores</p>
+                     * @return FrozenCpuNum <p>Frozen node CPU cores</p>
                      * 
                      */
                     uint64_t GetFrozenCpuNum() const;
 
                     /**
-                     * 设置Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _frozenCpuNum Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Frozen node CPU cores</p>
+                     * @param _frozenCpuNum <p>Frozen node CPU cores</p>
                      * 
                      */
                     void SetFrozenCpuNum(const uint64_t& _frozenCpuNum);
@@ -1615,19 +1510,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool FrozenCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return FrozenMemSize Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Frozen node memory size (GB).</p>
+                     * @return FrozenMemSize <p>Frozen node memory size (GB).</p>
                      * 
                      */
                     uint64_t GetFrozenMemSize() const;
 
                     /**
-                     * 设置Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _frozenMemSize Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Frozen node memory size (GB).</p>
+                     * @param _frozenMemSize <p>Frozen node memory size (GB).</p>
                      * 
                      */
                     void SetFrozenMemSize(const uint64_t& _frozenMemSize);
@@ -1640,19 +1531,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool FrozenMemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return FrozenDiskType Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Frozen node disk type</p>
+                     * @return FrozenDiskType <p>Frozen node disk type</p>
                      * 
                      */
                     std::string GetFrozenDiskType() const;
 
                     /**
-                     * 设置Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _frozenDiskType Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Frozen node disk type</p>
+                     * @param _frozenDiskType <p>Frozen node disk type</p>
                      * 
                      */
                     void SetFrozenDiskType(const std::string& _frozenDiskType);
@@ -1665,19 +1552,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool FrozenDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return FrozenDiskSize Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Frozen node disk size (GB).</p>
+                     * @return FrozenDiskSize <p>Frozen node disk size (GB).</p>
                      * 
                      */
                     uint64_t GetFrozenDiskSize() const;
 
                     /**
-                     * 设置Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _frozenDiskSize Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Frozen node disk size (GB).</p>
+                     * @param _frozenDiskSize <p>Frozen node disk size (GB).</p>
                      * 
                      */
                     void SetFrozenDiskSize(const uint64_t& _frozenDiskSize);
@@ -1690,19 +1573,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool FrozenDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
+                     * @return HealthStatus <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
                      * 
                      */
                     int64_t GetHealthStatus() const;
 
                     /**
-                     * 设置Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _healthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
+                     * @param _healthStatus <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
                      * 
                      */
                     void SetHealthStatus(const int64_t& _healthStatus);
@@ -1715,19 +1594,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HealthStatusHasBeenSet() const;
 
                     /**
-                     * 获取Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return EsPrivateUrl Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Intracluster network url for https.</p>
+                     * @return EsPrivateUrl <p>Intracluster network url for https.</p>
                      * 
                      */
                     std::string GetEsPrivateUrl() const;
 
                     /**
-                     * 设置Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _esPrivateUrl Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Intracluster network url for https.</p>
+                     * @param _esPrivateUrl <p>Intracluster network url for https.</p>
                      * 
                      */
                     void SetEsPrivateUrl(const std::string& _esPrivateUrl);
@@ -1740,19 +1615,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool EsPrivateUrlHasBeenSet() const;
 
                     /**
-                     * 获取Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return EsPrivateDomain Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>https cluster private network domain name</p>
+                     * @return EsPrivateDomain <p>https cluster private network domain name</p>
                      * 
                      */
                     std::string GetEsPrivateDomain() const;
 
                     /**
-                     * 设置Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _esPrivateDomain Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>https cluster private network domain name</p>
+                     * @param _esPrivateDomain <p>https cluster private network domain name</p>
                      * 
                      */
                     void SetEsPrivateDomain(const std::string& _esPrivateDomain);
@@ -1765,19 +1636,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool EsPrivateDomainHasBeenSet() const;
 
                     /**
-                     * 获取Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EsConfigSets Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cluster configuration group information.</p>
+                     * @return EsConfigSets <p>Cluster configuration group information.</p>
                      * 
                      */
                     std::vector<EsConfigSetInfo> GetEsConfigSets() const;
 
                     /**
-                     * 设置Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _esConfigSets Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cluster configuration group information.</p>
+                     * @param _esConfigSets <p>Cluster configuration group information.</p>
                      * 
                      */
                     void SetEsConfigSets(const std::vector<EsConfigSetInfo>& _esConfigSets);
@@ -1790,19 +1657,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EsConfigSetsHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OperationDuration The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cluster maintenance time slot</p>
+                     * @return OperationDuration <p>Cluster maintenance time slot</p>
                      * 
                      */
                     OperationDuration GetOperationDuration() const;
 
                     /**
-                     * 设置The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _operationDuration The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cluster maintenance time slot</p>
+                     * @param _operationDuration <p>Cluster maintenance time slot</p>
                      * 
                      */
                     void SetOperationDuration(const OperationDuration& _operationDuration);
@@ -1815,19 +1678,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OperationDurationHasBeenSet() const;
 
                     /**
-                     * 获取Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OptionalWebServiceInfos Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>web node list</p>
+                     * @return OptionalWebServiceInfos <p>web node list</p>
                      * 
                      */
                     std::vector<OptionalWebServiceInfo> GetOptionalWebServiceInfos() const;
 
                     /**
-                     * 设置Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _optionalWebServiceInfos Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>web node list</p>
+                     * @param _optionalWebServiceInfos <p>web node list</p>
                      * 
                      */
                     void SetOptionalWebServiceInfos(const std::vector<OptionalWebServiceInfo>& _optionalWebServiceInfos);
@@ -1840,19 +1699,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OptionalWebServiceInfosHasBeenSet() const;
 
                     /**
-                     * 获取Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AutoIndexEnabled Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Autonomous index switch</p>
+                     * @return AutoIndexEnabled <p>Autonomous index switch</p>
                      * 
                      */
                     bool GetAutoIndexEnabled() const;
 
                     /**
-                     * 设置Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _autoIndexEnabled Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Autonomous index switch</p>
+                     * @param _autoIndexEnabled <p>Autonomous index switch</p>
                      * 
                      */
                     void SetAutoIndexEnabled(const bool& _autoIndexEnabled);
@@ -1865,19 +1720,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutoIndexEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnableHybridStorage Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether storage and computation separation is supported.</p>
+                     * @return EnableHybridStorage <p>Whether storage and computation separation is supported.</p>
                      * 
                      */
                     bool GetEnableHybridStorage() const;
 
                     /**
-                     * 设置Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enableHybridStorage Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether storage and computation separation is supported.</p>
+                     * @param _enableHybridStorage <p>Whether storage and computation separation is supported.</p>
                      * 
                      */
                     void SetEnableHybridStorage(const bool& _enableHybridStorage);
@@ -1890,19 +1741,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnableHybridStorageHasBeenSet() const;
 
                     /**
-                     * 获取The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcessPercent The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Process progress.</p>
+                     * @return ProcessPercent <p>Process progress.</p>
                      * 
                      */
                     double GetProcessPercent() const;
 
                     /**
-                     * 设置The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _processPercent The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Process progress.</p>
+                     * @param _processPercent <p>Process progress.</p>
                      * 
                      */
                     void SetProcessPercent(const double& _processPercent);
@@ -1915,19 +1762,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessPercentHasBeenSet() const;
 
                     /**
-                     * 获取The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+                     * @return KibanaAlteringPublicAccess <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      * 
                      */
                     std::string GetKibanaAlteringPublicAccess() const;
 
                     /**
-                     * 设置The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+                     * @param _kibanaAlteringPublicAccess <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      * 
                      */
                     void SetKibanaAlteringPublicAccess(const std::string& _kibanaAlteringPublicAccess);
@@ -1939,538 +1782,1201 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool KibanaAlteringPublicAccessHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+                     * @return HasKernelUpgrade <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+                     * 
+                     */
+                    bool GetHasKernelUpgrade() const;
+
+                    /**
+                     * 设置<p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+                     * @param _hasKernelUpgrade <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+                     * 
+                     */
+                    void SetHasKernelUpgrade(const bool& _hasKernelUpgrade);
+
+                    /**
+                     * 判断参数 HasKernelUpgrade 是否已赋值
+                     * @return HasKernelUpgrade 是否已赋值
+                     * 
+                     */
+                    bool HasKernelUpgradeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>cdcId, pass it when using a CDC subnet</p>
+                     * @return CdcId <p>cdcId, pass it when using a CDC subnet</p>
+                     * 
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置<p>cdcId, pass it when using a CDC subnet</p>
+                     * @param _cdcId <p>cdcId, pass it when using a CDC subnet</p>
+                     * 
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     * 
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>kibana intranet vip</p>
+                     * @return KibanaPrivateVip <p>kibana intranet vip</p>
+                     * 
+                     */
+                    std::string GetKibanaPrivateVip() const;
+
+                    /**
+                     * 设置<p>kibana intranet vip</p>
+                     * @param _kibanaPrivateVip <p>kibana intranet vip</p>
+                     * 
+                     */
+                    void SetKibanaPrivateVip(const std::string& _kibanaPrivateVip);
+
+                    /**
+                     * 判断参数 KibanaPrivateVip 是否已赋值
+                     * @return KibanaPrivateVip 是否已赋值
+                     * 
+                     */
+                    bool KibanaPrivateVipHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Customize the private network url of kibana</p>
+                     * @return CustomKibanaPrivateUrl <p>Customize the private network url of kibana</p>
+                     * 
+                     */
+                    std::string GetCustomKibanaPrivateUrl() const;
+
+                    /**
+                     * 设置<p>Customize the private network url of kibana</p>
+                     * @param _customKibanaPrivateUrl <p>Customize the private network url of kibana</p>
+                     * 
+                     */
+                    void SetCustomKibanaPrivateUrl(const std::string& _customKibanaPrivateUrl);
+
+                    /**
+                     * 判断参数 CustomKibanaPrivateUrl 是否已赋值
+                     * @return CustomKibanaPrivateUrl 是否已赋值
+                     * 
+                     */
+                    bool CustomKibanaPrivateUrlHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Node outbound access detailed information.</p>
+                     * @return OutboundPublicAcls <p>Node outbound access detailed information.</p>
+                     * 
+                     */
+                    std::vector<OutboundPublicAcl> GetOutboundPublicAcls() const;
+
+                    /**
+                     * 设置<p>Node outbound access detailed information.</p>
+                     * @param _outboundPublicAcls <p>Node outbound access detailed information.</p>
+                     * 
+                     */
+                    void SetOutboundPublicAcls(const std::vector<OutboundPublicAcl>& _outboundPublicAcls);
+
+                    /**
+                     * 判断参数 OutboundPublicAcls 是否已赋值
+                     * @return OutboundPublicAcls 是否已赋值
+                     * 
+                     */
+                    bool OutboundPublicAclsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Network connection solution</p>
+                     * @return NetConnectScheme <p>Network connection solution</p>
+                     * 
+                     */
+                    std::string GetNetConnectScheme() const;
+
+                    /**
+                     * 设置<p>Network connection solution</p>
+                     * @param _netConnectScheme <p>Network connection solution</p>
+                     * 
+                     */
+                    void SetNetConnectScheme(const std::string& _netConnectScheme);
+
+                    /**
+                     * 判断参数 NetConnectScheme 是否已赋值
+                     * @return NetConnectScheme 是否已赋值
+                     * 
+                     */
+                    bool NetConnectSchemeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Placement group related parameters</p>
+                     * @return DisasterRecoverGroupAffinity <p>Placement group related parameters</p>
+                     * 
+                     */
+                    uint64_t GetDisasterRecoverGroupAffinity() const;
+
+                    /**
+                     * 设置<p>Placement group related parameters</p>
+                     * @param _disasterRecoverGroupAffinity <p>Placement group related parameters</p>
+                     * 
+                     */
+                    void SetDisasterRecoverGroupAffinity(const uint64_t& _disasterRecoverGroupAffinity);
+
+                    /**
+                     * 判断参数 DisasterRecoverGroupAffinity 是否已赋值
+                     * @return DisasterRecoverGroupAffinity 是否已赋值
+                     * 
+                     */
+                    bool DisasterRecoverGroupAffinityHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * @return SubProductCode <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * 
+                     */
+                    std::string GetSubProductCode() const;
+
+                    /**
+                     * 设置<p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * @param _subProductCode <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     * 
+                     */
+                    void SetSubProductCode(const std::string& _subProductCode);
+
+                    /**
+                     * 判断参数 SubProductCode 是否已赋值
+                     * @return SubProductCode 是否已赋值
+                     * 
+                     */
+                    bool SubProductCodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Storage-compute separation cos usage, Unit: M</p>
+                     * @return CosBucketStorageSize <p>Storage-compute separation cos usage, Unit: M</p>
+                     * 
+                     */
+                    uint64_t GetCosBucketStorageSize() const;
+
+                    /**
+                     * 设置<p>Storage-compute separation cos usage, Unit: M</p>
+                     * @param _cosBucketStorageSize <p>Storage-compute separation cos usage, Unit: M</p>
+                     * 
+                     */
+                    void SetCosBucketStorageSize(const uint64_t& _cosBucketStorageSize);
+
+                    /**
+                     * 判断参数 CosBucketStorageSize 是否已赋值
+                     * @return CosBucketStorageSize 是否已赋值
+                     * 
+                     */
+                    bool CosBucketStorageSizeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * @return ReadWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * 
+                     */
+                    int64_t GetReadWriteMode() const;
+
+                    /**
+                     * 设置<p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * @param _readWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     * 
+                     */
+                    void SetReadWriteMode(const int64_t& _readWriteMode);
+
+                    /**
+                     * 判断参数 ReadWriteMode 是否已赋值
+                     * @return ReadWriteMode 是否已赋值
+                     * 
+                     */
+                    bool ReadWriteModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether there is an asynchronous task scheduling for placement groups</p>
+                     * @return EnableScheduleRecoverGroup <p>Whether there is an asynchronous task scheduling for placement groups</p>
+                     * 
+                     */
+                    bool GetEnableScheduleRecoverGroup() const;
+
+                    /**
+                     * 设置<p>Whether there is an asynchronous task scheduling for placement groups</p>
+                     * @param _enableScheduleRecoverGroup <p>Whether there is an asynchronous task scheduling for placement groups</p>
+                     * 
+                     */
+                    void SetEnableScheduleRecoverGroup(const bool& _enableScheduleRecoverGroup);
+
+                    /**
+                     * 判断参数 EnableScheduleRecoverGroup 是否已赋值
+                     * @return EnableScheduleRecoverGroup 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleRecoverGroupHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The time when an asynchronous task is scheduled</p>
+                     * @return EnableScheduleOperationDuration <p>The time when an asynchronous task is scheduled</p>
+                     * 
+                     */
+                    EnableScheduleOperationDuration GetEnableScheduleOperationDuration() const;
+
+                    /**
+                     * 设置<p>The time when an asynchronous task is scheduled</p>
+                     * @param _enableScheduleOperationDuration <p>The time when an asynchronous task is scheduled</p>
+                     * 
+                     */
+                    void SetEnableScheduleOperationDuration(const EnableScheduleOperationDuration& _enableScheduleOperationDuration);
+
+                    /**
+                     * 判断参数 EnableScheduleOperationDuration 是否已赋值
+                     * @return EnableScheduleOperationDuration 是否已赋值
+                     * 
+                     */
+                    bool EnableScheduleOperationDurationHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+                     * @return EnableDestroyProtection <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+                     * 
+                     */
+                    std::string GetEnableDestroyProtection() const;
+
+                    /**
+                     * 设置<p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+                     * @param _enableDestroyProtection <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+                     * 
+                     */
+                    void SetEnableDestroyProtection(const std::string& _enableDestroyProtection);
+
+                    /**
+                     * 判断参数 EnableDestroyProtection 是否已赋值
+                     * @return EnableDestroyProtection 是否已赋值
+                     * 
+                     */
+                    bool EnableDestroyProtectionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>kibana intranet access address</p>
+                     * @return ShowKibanaIpPort <p>kibana intranet access address</p>
+                     * 
+                     */
+                    std::string GetShowKibanaIpPort() const;
+
+                    /**
+                     * 设置<p>kibana intranet access address</p>
+                     * @param _showKibanaIpPort <p>kibana intranet access address</p>
+                     * 
+                     */
+                    void SetShowKibanaIpPort(const std::string& _showKibanaIpPort);
+
+                    /**
+                     * 判断参数 ShowKibanaIpPort 是否已赋值
+                     * @return ShowKibanaIpPort 是否已赋值
+                     * 
+                     */
+                    bool ShowKibanaIpPortHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether it is a CDZLite availability zone</p>
+                     * @return IsCdzLite <p>Whether it is a CDZLite availability zone</p>
+                     * 
+                     */
+                    bool GetIsCdzLite() const;
+
+                    /**
+                     * 设置<p>Whether it is a CDZLite availability zone</p>
+                     * @param _isCdzLite <p>Whether it is a CDZLite availability zone</p>
+                     * 
+                     */
+                    void SetIsCdzLite(const bool& _isCdzLite);
+
+                    /**
+                     * 判断参数 IsCdzLite 是否已赋值
+                     * @return IsCdzLite 是否已赋值
+                     * 
+                     */
+                    bool IsCdzLiteHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster private network tcp address</p>
+                     * @return EsPrivateTcpUrl <p>Cluster private network tcp address</p>
+                     * 
+                     */
+                    std::string GetEsPrivateTcpUrl() const;
+
+                    /**
+                     * 设置<p>Cluster private network tcp address</p>
+                     * @param _esPrivateTcpUrl <p>Cluster private network tcp address</p>
+                     * 
+                     */
+                    void SetEsPrivateTcpUrl(const std::string& _esPrivateTcpUrl);
+
+                    /**
+                     * 判断参数 EsPrivateTcpUrl 是否已赋值
+                     * @return EsPrivateTcpUrl 是否已赋值
+                     * 
+                     */
+                    bool EsPrivateTcpUrlHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether it is in the recycle bin</p><p>Default value: false</p>
+                     * @return IsInRecycleBin <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetIsInRecycleBin() const;
+
+                    /**
+                     * 设置<p>Whether it is in the recycle bin</p><p>Default value: false</p>
+                     * @param _isInRecycleBin <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+                     * 
+                     */
+                    void SetIsInRecycleBin(const bool& _isInRecycleBin);
+
+                    /**
+                     * 判断参数 IsInRecycleBin 是否已赋值
+                     * @return IsInRecycleBin 是否已赋值
+                     * 
+                     */
+                    bool IsInRecycleBinHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Is locked in the recycle bin</p><p>Default value: false</p>
+                     * @return RecycleLockEnabled <p>Is locked in the recycle bin</p><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetRecycleLockEnabled() const;
+
+                    /**
+                     * 设置<p>Is locked in the recycle bin</p><p>Default value: false</p>
+                     * @param _recycleLockEnabled <p>Is locked in the recycle bin</p><p>Default value: false</p>
+                     * 
+                     */
+                    void SetRecycleLockEnabled(const bool& _recycleLockEnabled);
+
+                    /**
+                     * 判断参数 RecycleLockEnabled 是否已赋值
+                     * @return RecycleLockEnabled 是否已赋值
+                     * 
+                     */
+                    bool RecycleLockEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+                     * @return MayDestroyPoint <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+                     * 
+                     */
+                    std::string GetMayDestroyPoint() const;
+
+                    /**
+                     * 设置<p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+                     * @param _mayDestroyPoint <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+                     * 
+                     */
+                    void SetMayDestroyPoint(const std::string& _mayDestroyPoint);
+
+                    /**
+                     * 判断参数 MayDestroyPoint 是否已赋值
+                     * @return MayDestroyPoint 是否已赋值
+                     * 
+                     */
+                    bool MayDestroyPointHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The time when termination is delayed</p><p>Unit: day</p>
+                     * @return DelayDestroyInterval <p>The time when termination is delayed</p><p>Unit: day</p>
+                     * 
+                     */
+                    int64_t GetDelayDestroyInterval() const;
+
+                    /**
+                     * 设置<p>The time when termination is delayed</p><p>Unit: day</p>
+                     * @param _delayDestroyInterval <p>The time when termination is delayed</p><p>Unit: day</p>
+                     * 
+                     */
+                    void SetDelayDestroyInterval(const int64_t& _delayDestroyInterval);
+
+                    /**
+                     * 判断参数 DelayDestroyInterval 是否已赋值
+                     * @return DelayDestroyInterval 是否已赋值
+                     * 
+                     */
+                    bool DelayDestroyIntervalHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+                     * @return EnableAutoReplace <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+                     * 
+                     */
+                    int64_t GetEnableAutoReplace() const;
+
+                    /**
+                     * 设置<p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+                     * @param _enableAutoReplace <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+                     * 
+                     */
+                    void SetEnableAutoReplace(const int64_t& _enableAutoReplace);
+
+                    /**
+                     * 判断参数 EnableAutoReplace 是否已赋值
+                     * @return EnableAutoReplace 是否已赋值
+                     * 
+                     */
+                    bool EnableAutoReplaceHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Enable mtls. 0: disable, 1: enable</p>
+                     * @return OpenMTLS <p>Enable mtls. 0: disable, 1: enable</p>
+                     * 
+                     */
+                    uint64_t GetOpenMTLS() const;
+
+                    /**
+                     * 设置<p>Enable mtls. 0: disable, 1: enable</p>
+                     * @param _openMTLS <p>Enable mtls. 0: disable, 1: enable</p>
+                     * 
+                     */
+                    void SetOpenMTLS(const uint64_t& _openMTLS);
+
+                    /**
+                     * 判断参数 OpenMTLS 是否已赋值
+                     * @return OpenMTLS 是否已赋值
+                     * 
+                     */
+                    bool OpenMTLSHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Certificate type</p>
+                     * @return ServerCertSource <p>Certificate type</p>
+                     * 
+                     */
+                    std::string GetServerCertSource() const;
+
+                    /**
+                     * 设置<p>Certificate type</p>
+                     * @param _serverCertSource <p>Certificate type</p>
+                     * 
+                     */
+                    void SetServerCertSource(const std::string& _serverCertSource);
+
+                    /**
+                     * 判断参数 ServerCertSource 是否已赋值
+                     * @return ServerCertSource 是否已赋值
+                     * 
+                     */
+                    bool ServerCertSourceHasBeenSet() const;
+
+                    /**
+                     * 获取<p>VIP pending migration for the cluster</p>
+                     * @return OldEsVip <p>VIP pending migration for the cluster</p>
+                     * 
+                     */
+                    std::string GetOldEsVip() const;
+
+                    /**
+                     * 设置<p>VIP pending migration for the cluster</p>
+                     * @param _oldEsVip <p>VIP pending migration for the cluster</p>
+                     * 
+                     */
+                    void SetOldEsVip(const std::string& _oldEsVip);
+
+                    /**
+                     * 判断参数 OldEsVip 是否已赋值
+                     * @return OldEsVip 是否已赋值
+                     * 
+                     */
+                    bool OldEsVipHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster TCP address to be migrated</p>
+                     * @return OldEsPrivateTcpUrl <p>Cluster TCP address to be migrated</p>
+                     * 
+                     */
+                    std::string GetOldEsPrivateTcpUrl() const;
+
+                    /**
+                     * 设置<p>Cluster TCP address to be migrated</p>
+                     * @param _oldEsPrivateTcpUrl <p>Cluster TCP address to be migrated</p>
+                     * 
+                     */
+                    void SetOldEsPrivateTcpUrl(const std::string& _oldEsPrivateTcpUrl);
+
+                    /**
+                     * 判断参数 OldEsPrivateTcpUrl 是否已赋值
+                     * @return OldEsPrivateTcpUrl 是否已赋值
+                     * 
+                     */
+                    bool OldEsPrivateTcpUrlHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to take old nodes offline from the VIP</p>
+                     * @return NeedOfflineOldNodesNotify <p>Whether to take old nodes offline from the VIP</p>
+                     * 
+                     */
+                    bool GetNeedOfflineOldNodesNotify() const;
+
+                    /**
+                     * 设置<p>Whether to take old nodes offline from the VIP</p>
+                     * @param _needOfflineOldNodesNotify <p>Whether to take old nodes offline from the VIP</p>
+                     * 
+                     */
+                    void SetNeedOfflineOldNodesNotify(const bool& _needOfflineOldNodesNotify);
+
+                    /**
+                     * 判断参数 NeedOfflineOldNodesNotify 是否已赋值
+                     * @return NeedOfflineOldNodesNotify 是否已赋值
+                     * 
+                     */
+                    bool NeedOfflineOldNodesNotifyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Region
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Availability Zone
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * User ID
+                     * <p>uid</p>
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User UIN
+                     * <p>User UIN.</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * UID of the VPC where the instance resides
+                     * <p>UID of the VPC to which the instance belongs</p>
                      */
                     std::string m_vpcUid;
                     bool m_vpcUidHasBeenSet;
 
                     /**
-                     * UID of the subnet where the instance resides
+                     * <p>UID of the subnet to which the instance belongs</p>
                      */
                     std::string m_subnetUid;
                     bool m_subnetUidHasBeenSet;
 
                     /**
-                     * Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+                     * <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * This parameter is not used on the global website
+                     * <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+                     * <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
 
                     /**
-                     * This parameter is not used on the global website
+                     * <p>Annual and monthly subscription duration, unit: month</p>
                      */
                     uint64_t m_chargePeriod;
                     bool m_chargePeriodHasBeenSet;
 
                     /**
-                     * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Number of nodes
+                     * <p>Number of nodes</p>
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * Number of CPU cores of the node
+                     * <p>Number of node CPU cores.</p>
                      */
                     uint64_t m_cpuNum;
                     bool m_cpuNumHasBeenSet;
 
                     /**
-                     * Node memory size in GB
+                     * <p>Node memory size (GB).</p>
                      */
                     uint64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Node disk type
+                     * <p>Node disk type</p>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Node disk size in GB
+                     * <p>Node disk size (GB).</p>
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * ES domain name
+                     * <p>ES domain name</p>
                      */
                     std::string m_esDomain;
                     bool m_esDomainHasBeenSet;
 
                     /**
-                     * ES VIP
+                     * <p>ES VIP</p>
                      */
                     std::string m_esVip;
                     bool m_esVipHasBeenSet;
 
                     /**
-                     * ES port
+                     * <p>ES port</p>
                      */
                     uint64_t m_esPort;
                     bool m_esPortHasBeenSet;
 
                     /**
-                     * Kibana access URL
+                     * <p>Kibana access url</p>
                      */
                     std::string m_kibanaUrl;
                     bool m_kibanaUrlHasBeenSet;
 
                     /**
-                     * ES version number
+                     * <p>ES version number</p>
                      */
                     std::string m_esVersion;
                     bool m_esVersionHasBeenSet;
 
                     /**
-                     * ES configuration item
+                     * <p>ES configuration item</p>
                      */
                     std::string m_esConfig;
                     bool m_esConfigHasBeenSet;
 
                     /**
-                     * Kibana access control configuration
+                     * <p>Kibana Access Control Configuration</p>
                      */
                     EsAcl m_esAcl;
                     bool m_esAclHasBeenSet;
 
                     /**
-                     * Instance creation time
+                     * <p>Instance creation time</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of the instance
+                     * <p>Last modification time of the instance</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * This parameter is not used on the global website
+                     * <p>Instance expiration time</p>
                      */
                     std::string m_deadline;
                     bool m_deadlineHasBeenSet;
 
                     /**
-                     * Instance type (instance type identifier, which can be only 1 or 2 currently)
+                     * <p>Instance type (instance type flag, currently only 1 and 2)</p>
                      */
                     uint64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * IK analyzer configuration
+                     * <p>Ik analyzer configuration</p>
                      */
                     EsDictionaryInfo m_ikConfig;
                     bool m_ikConfigHasBeenSet;
 
                     /**
-                     * Dedicated primary node configuration
+                     * <p>Dedicated master node configuration</p>
                      */
                     MasterNodeInfo m_masterNodeInfo;
                     bool m_masterNodeInfoHasBeenSet;
 
                     /**
-                     * Auto-backup to COS configuration
+                     * <p>cos automatic backup configuration</p>
                      */
                     CosBackup m_cosBackup;
                     bool m_cosBackupHasBeenSet;
 
                     /**
-                     * Whether to allow auto-backup to COS
+                     * <p>Whether cos automatic backup is allowed</p>
                      */
                     bool m_allowCosBackup;
                     bool m_allowCosBackupHasBeenSet;
 
                     /**
-                     * List of tags owned by the instance
+                     * <p>Tag list of the instance</p>
                      */
                     std::vector<TagInfo> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+                     * <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
 
                     /**
-                     * Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+                     */
+                    std::string m_realLicenseType;
+                    bool m_realLicenseTypeHasBeenSet;
+
+                    /**
+                     * <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
                      */
                     bool m_enableHotWarmMode;
                     bool m_enableHotWarmModeHasBeenSet;
 
                     /**
-                     * Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      */
                     std::string m_warmNodeType;
                     bool m_warmNodeTypeHasBeenSet;
 
                     /**
-                     * Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Number of warm nodes</p>
                      */
                     uint64_t m_warmNodeNum;
                     bool m_warmNodeNumHasBeenSet;
 
                     /**
-                     * Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Warm node CPU cores</p>
                      */
                     uint64_t m_warmCpuNum;
                     bool m_warmCpuNumHasBeenSet;
 
                     /**
-                     * Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Warm node memory size (GB).</p>
                      */
                     uint64_t m_warmMemSize;
                     bool m_warmMemSizeHasBeenSet;
 
                     /**
-                     * Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Warm node disk type</p>
                      */
                     std::string m_warmDiskType;
                     bool m_warmDiskTypeHasBeenSet;
 
                     /**
-                     * Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Warm node disk size (GB).</p>
                      */
                     uint64_t m_warmDiskSize;
                     bool m_warmDiskSizeHasBeenSet;
 
                     /**
-                     * Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cluster node information list</p>
                      */
                     std::vector<NodeInfo> m_nodeInfoList;
                     bool m_nodeInfoListHasBeenSet;
 
                     /**
-                     * ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Es public network address</p>
                      */
                     std::string m_esPublicUrl;
                     bool m_esPublicUrlHasBeenSet;
 
                     /**
-                     * Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Multi-AZ network info</p>
                      */
                     std::vector<ZoneDetail> m_multiZoneInfo;
                     bool m_multiZoneInfoHasBeenSet;
 
                     /**
-                     * Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
                      */
                     uint64_t m_deployMode;
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      */
                     std::string m_publicAccess;
                     bool m_publicAccessHasBeenSet;
 
                     /**
-                     * ES public access control configuration
+                     * <p>ES public network access control configuration</p>
                      */
                     EsAcl m_esPublicAcl;
                     bool m_esPublicAclHasBeenSet;
 
                     /**
-                     * Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Kibana private network address</p>
                      */
                     std::string m_kibanaPrivateUrl;
                     bool m_kibanaPrivateUrlHasBeenSet;
 
                     /**
-                     * Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
                      */
                     std::string m_kibanaPublicAccess;
                     bool m_kibanaPublicAccessHasBeenSet;
 
                     /**
-                     * Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      */
                     std::string m_kibanaPrivateAccess;
                     bool m_kibanaPrivateAccessHasBeenSet;
 
                     /**
-                     * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
                      */
                     uint64_t m_securityType;
                     bool m_securityTypeHasBeenSet;
 
                     /**
-                     * Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
                      */
                     int64_t m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Kibana configuration item</p>
                      */
                     std::string m_kibanaConfig;
                     bool m_kibanaConfigHasBeenSet;
 
                     /**
-                     * Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * <p>Kibana node information</p>
                      */
                     KibanaNodeInfo m_kibanaNodeInfo;
                     bool m_kibanaNodeInfoHasBeenSet;
 
                     /**
-                     * Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Visualize node configuration</p>
                      */
                     WebNodeTypeInfo m_webNodeTypeInfo;
                     bool m_webNodeTypeInfoHasBeenSet;
 
                     /**
-                     * JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>JDK type. Valid values: oracle, kona</p>
                      */
                     std::string m_jdk;
                     bool m_jdkHasBeenSet;
 
                     /**
-                     * Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Cluster network communication protocol</p>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Security group id</p>
                      */
                     std::vector<std::string> m_securityGroups;
                     bool m_securityGroupsHasBeenSet;
 
                     /**
-                     * Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
                      */
                     std::string m_coldNodeType;
                     bool m_coldNodeTypeHasBeenSet;
 
                     /**
-                     * Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Number of cold nodes</p>
                      */
                     uint64_t m_coldNodeNum;
                     bool m_coldNodeNumHasBeenSet;
 
                     /**
-                     * Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Cold node CPU cores</p>
                      */
                     uint64_t m_coldCpuNum;
                     bool m_coldCpuNumHasBeenSet;
 
                     /**
-                     * Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Cold node memory size (GB).</p>
                      */
                     uint64_t m_coldMemSize;
                     bool m_coldMemSizeHasBeenSet;
 
                     /**
-                     * Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Cold node disk type</p>
                      */
                     std::string m_coldDiskType;
                     bool m_coldDiskTypeHasBeenSet;
 
                     /**
-                     * Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Cold node disk size (GB).</p>
                      */
                     uint64_t m_coldDiskSize;
                     bool m_coldDiskSizeHasBeenSet;
 
                     /**
-                     * Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
                      */
                     std::string m_frozenNodeType;
                     bool m_frozenNodeTypeHasBeenSet;
 
                     /**
-                     * Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Number of frozen nodes</p>
                      */
                     uint64_t m_frozenNodeNum;
                     bool m_frozenNodeNumHasBeenSet;
 
                     /**
-                     * Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Frozen node CPU cores</p>
                      */
                     uint64_t m_frozenCpuNum;
                     bool m_frozenCpuNumHasBeenSet;
 
                     /**
-                     * Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Frozen node memory size (GB).</p>
                      */
                     uint64_t m_frozenMemSize;
                     bool m_frozenMemSizeHasBeenSet;
 
                     /**
-                     * Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Frozen node disk type</p>
                      */
                     std::string m_frozenDiskType;
                     bool m_frozenDiskTypeHasBeenSet;
 
                     /**
-                     * Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Frozen node disk size (GB).</p>
                      */
                     uint64_t m_frozenDiskSize;
                     bool m_frozenDiskSizeHasBeenSet;
 
                     /**
-                     * Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
                      */
                     int64_t m_healthStatus;
                     bool m_healthStatusHasBeenSet;
 
                     /**
-                     * Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Intracluster network url for https.</p>
                      */
                     std::string m_esPrivateUrl;
                     bool m_esPrivateUrlHasBeenSet;
 
                     /**
-                     * Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>https cluster private network domain name</p>
                      */
                     std::string m_esPrivateDomain;
                     bool m_esPrivateDomainHasBeenSet;
 
                     /**
-                     * Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cluster configuration group information.</p>
                      */
                     std::vector<EsConfigSetInfo> m_esConfigSets;
                     bool m_esConfigSetsHasBeenSet;
 
                     /**
-                     * The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cluster maintenance time slot</p>
                      */
                     OperationDuration m_operationDuration;
                     bool m_operationDurationHasBeenSet;
 
                     /**
-                     * Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>web node list</p>
                      */
                     std::vector<OptionalWebServiceInfo> m_optionalWebServiceInfos;
                     bool m_optionalWebServiceInfosHasBeenSet;
 
                     /**
-                     * Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Autonomous index switch</p>
                      */
                     bool m_autoIndexEnabled;
                     bool m_autoIndexEnabledHasBeenSet;
 
                     /**
-                     * Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether storage and computation separation is supported.</p>
                      */
                     bool m_enableHybridStorage;
                     bool m_enableHybridStorageHasBeenSet;
 
                     /**
-                     * The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Process progress.</p>
                      */
                     double m_processPercent;
                     bool m_processPercentHasBeenSet;
 
                     /**
-                     * The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
                      */
                     std::string m_kibanaAlteringPublicAccess;
                     bool m_kibanaAlteringPublicAccessHasBeenSet;
+
+                    /**
+                     * <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+                     */
+                    bool m_hasKernelUpgrade;
+                    bool m_hasKernelUpgradeHasBeenSet;
+
+                    /**
+                     * <p>cdcId, pass it when using a CDC subnet</p>
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * <p>kibana intranet vip</p>
+                     */
+                    std::string m_kibanaPrivateVip;
+                    bool m_kibanaPrivateVipHasBeenSet;
+
+                    /**
+                     * <p>Customize the private network url of kibana</p>
+                     */
+                    std::string m_customKibanaPrivateUrl;
+                    bool m_customKibanaPrivateUrlHasBeenSet;
+
+                    /**
+                     * <p>Node outbound access detailed information.</p>
+                     */
+                    std::vector<OutboundPublicAcl> m_outboundPublicAcls;
+                    bool m_outboundPublicAclsHasBeenSet;
+
+                    /**
+                     * <p>Network connection solution</p>
+                     */
+                    std::string m_netConnectScheme;
+                    bool m_netConnectSchemeHasBeenSet;
+
+                    /**
+                     * <p>Placement group related parameters</p>
+                     */
+                    uint64_t m_disasterRecoverGroupAffinity;
+                    bool m_disasterRecoverGroupAffinityHasBeenSet;
+
+                    /**
+                     * <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+                     */
+                    std::string m_subProductCode;
+                    bool m_subProductCodeHasBeenSet;
+
+                    /**
+                     * <p>Storage-compute separation cos usage, Unit: M</p>
+                     */
+                    uint64_t m_cosBucketStorageSize;
+                    bool m_cosBucketStorageSizeHasBeenSet;
+
+                    /**
+                     * <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+                     */
+                    int64_t m_readWriteMode;
+                    bool m_readWriteModeHasBeenSet;
+
+                    /**
+                     * <p>Whether there is an asynchronous task scheduling for placement groups</p>
+                     */
+                    bool m_enableScheduleRecoverGroup;
+                    bool m_enableScheduleRecoverGroupHasBeenSet;
+
+                    /**
+                     * <p>The time when an asynchronous task is scheduled</p>
+                     */
+                    EnableScheduleOperationDuration m_enableScheduleOperationDuration;
+                    bool m_enableScheduleOperationDurationHasBeenSet;
+
+                    /**
+                     * <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+                     */
+                    std::string m_enableDestroyProtection;
+                    bool m_enableDestroyProtectionHasBeenSet;
+
+                    /**
+                     * <p>kibana intranet access address</p>
+                     */
+                    std::string m_showKibanaIpPort;
+                    bool m_showKibanaIpPortHasBeenSet;
+
+                    /**
+                     * <p>Whether it is a CDZLite availability zone</p>
+                     */
+                    bool m_isCdzLite;
+                    bool m_isCdzLiteHasBeenSet;
+
+                    /**
+                     * <p>Cluster private network tcp address</p>
+                     */
+                    std::string m_esPrivateTcpUrl;
+                    bool m_esPrivateTcpUrlHasBeenSet;
+
+                    /**
+                     * <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+                     */
+                    bool m_isInRecycleBin;
+                    bool m_isInRecycleBinHasBeenSet;
+
+                    /**
+                     * <p>Is locked in the recycle bin</p><p>Default value: false</p>
+                     */
+                    bool m_recycleLockEnabled;
+                    bool m_recycleLockEnabledHasBeenSet;
+
+                    /**
+                     * <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+                     */
+                    std::string m_mayDestroyPoint;
+                    bool m_mayDestroyPointHasBeenSet;
+
+                    /**
+                     * <p>The time when termination is delayed</p><p>Unit: day</p>
+                     */
+                    int64_t m_delayDestroyInterval;
+                    bool m_delayDestroyIntervalHasBeenSet;
+
+                    /**
+                     * <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+                     */
+                    int64_t m_enableAutoReplace;
+                    bool m_enableAutoReplaceHasBeenSet;
+
+                    /**
+                     * <p>Enable mtls. 0: disable, 1: enable</p>
+                     */
+                    uint64_t m_openMTLS;
+                    bool m_openMTLSHasBeenSet;
+
+                    /**
+                     * <p>Certificate type</p>
+                     */
+                    std::string m_serverCertSource;
+                    bool m_serverCertSourceHasBeenSet;
+
+                    /**
+                     * <p>VIP pending migration for the cluster</p>
+                     */
+                    std::string m_oldEsVip;
+                    bool m_oldEsVipHasBeenSet;
+
+                    /**
+                     * <p>Cluster TCP address to be migrated</p>
+                     */
+                    std::string m_oldEsPrivateTcpUrl;
+                    bool m_oldEsPrivateTcpUrlHasBeenSet;
+
+                    /**
+                     * <p>Whether to take old nodes offline from the VIP</p>
+                     */
+                    bool m_needOfflineOldNodesNotify;
+                    bool m_needOfflineOldNodesNotifyHasBeenSet;
 
                 };
             }

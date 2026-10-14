@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>ID of the horizontal-to-vertical video transformation template.</p>
+                     * @return Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>ID of the horizontal-to-vertical video transformation template.</p>
+                     * @param _definition <p>ID of the horizontal-to-vertical video transformation template.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>ID of the horizontal-to-vertical video transformation template.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

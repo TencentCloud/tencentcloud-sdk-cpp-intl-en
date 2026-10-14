@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio and video track selection
                 */
                 class TrackSelector : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VideoIndex 
+                     * 获取Video track serial number. It starts from 1. Maximum value: 32.
+                     * @return VideoIndex Video track serial number. It starts from 1. Maximum value: 32.
                      * 
                      */
                     std::vector<int64_t> GetVideoIndex() const;
 
                     /**
-                     * 设置
-                     * @param _videoIndex 
+                     * 设置Video track serial number. It starts from 1. Maximum value: 32.
+                     * @param _videoIndex Video track serial number. It starts from 1. Maximum value: 32.
                      * 
                      */
                     void SetVideoIndex(const std::vector<int64_t>& _videoIndex);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VideoIndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioIndex 
+                     * 获取Video track serial number. Starts from 1. Maximum value: 32.
+                     * @return AudioIndex Video track serial number. Starts from 1. Maximum value: 32.
                      * 
                      */
                     std::vector<int64_t> GetAudioIndex() const;
 
                     /**
-                     * 设置
-                     * @param _audioIndex 
+                     * 设置Video track serial number. Starts from 1. Maximum value: 32.
+                     * @param _audioIndex Video track serial number. Starts from 1. Maximum value: 32.
                      * 
                      */
                     void SetAudioIndex(const std::vector<int64_t>& _audioIndex);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video track serial number. It starts from 1. Maximum value: 32.
                      */
                     std::vector<int64_t> m_videoIndex;
                     bool m_videoIndexHasBeenSet;
 
                     /**
-                     * 
+                     * Video track serial number. Starts from 1. Maximum value: 32.
                      */
                     std::vector<int64_t> m_audioIndex;
                     bool m_audioIndexHasBeenSet;

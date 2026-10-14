@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of the index to create. `auto`: Automated; `normal`: General.
-                     * @return IndexType Type of the index to create. `auto`: Automated; `normal`: General.
+                     * 获取Index type of the created index. auto: autonomous index; normal: general index
+                     * @return IndexType Index type of the created index. auto: autonomous index; normal: general index
                      * 
                      */
                     std::string GetIndexType() const;
 
                     /**
-                     * 设置Type of the index to create. `auto`: Automated; `normal`: General.
-                     * @param _indexType Type of the index to create. `auto`: Automated; `normal`: General.
+                     * 设置Index type of the created index. auto: autonomous index; normal: general index
+                     * @param _indexType Index type of the created index. auto: autonomous index; normal: general index
                      * 
                      */
                     void SetIndexType(const std::string& _indexType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IndexTypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the index to create
-                     * @return IndexName Name of the index to create
+                     * 获取Index name of the created index
+                     * @return IndexName Index name of the created index
                      * 
                      */
                     std::string GetIndexName() const;
 
                     /**
-                     * 设置Name of the index to create
-                     * @param _indexName Name of the index to create
+                     * 设置Index name of the created index
+                     * @param _indexName Index name of the created index
                      * 
                      */
                     void SetIndexName(const std::string& _indexName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IndexNameHasBeenSet() const;
 
                     /**
-                     * 获取JSON-formatted index metadata to create, such as `mappings` and `settings`
-                     * @return IndexMetaJson JSON-formatted index metadata to create, such as `mappings` and `settings`
+                     * 获取[Required] JSON-formatted index metadata created, such as mappings and settings
+                     * @return IndexMetaJson [Required] JSON-formatted index metadata created, such as mappings and settings
                      * 
                      */
                     std::string GetIndexMetaJson() const;
 
                     /**
-                     * 设置JSON-formatted index metadata to create, such as `mappings` and `settings`
-                     * @param _indexMetaJson JSON-formatted index metadata to create, such as `mappings` and `settings`
+                     * 设置[Required] JSON-formatted index metadata created, such as mappings and settings
+                     * @param _indexMetaJson [Required] JSON-formatted index metadata created, such as mappings and settings
                      * 
                      */
                     void SetIndexMetaJson(const std::string& _indexMetaJson);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IndexMetaJsonHasBeenSet() const;
 
                     /**
-                     * 获取Username for cluster access
-                     * @return Username Username for cluster access
+                     * 获取Cluster access username.
+                     * @return Username Cluster access username.
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username for cluster access
-                     * @param _username Username for cluster access
+                     * 设置Cluster access username.
+                     * @param _username Cluster access username.
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Password for cluster access
-                     * @return Password Password for cluster access
+                     * 获取Cluster access password
+                     * @return Password Cluster access password
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password for cluster access
-                     * @param _password Password for cluster access
+                     * 设置Cluster access password
+                     * @param _password Cluster access password
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -177,31 +177,31 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Type of the index to create. `auto`: Automated; `normal`: General.
+                     * Index type of the created index. auto: autonomous index; normal: general index
                      */
                     std::string m_indexType;
                     bool m_indexTypeHasBeenSet;
 
                     /**
-                     * Name of the index to create
+                     * Index name of the created index
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
 
                     /**
-                     * JSON-formatted index metadata to create, such as `mappings` and `settings`
+                     * [Required] JSON-formatted index metadata created, such as mappings and settings
                      */
                     std::string m_indexMetaJson;
                     bool m_indexMetaJsonHasBeenSet;
 
                     /**
-                     * Username for cluster access
+                     * Cluster access username.
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Password for cluster access
+                     * Cluster access password
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

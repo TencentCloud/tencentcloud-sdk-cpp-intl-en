@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Watermark parameter type in the media processing task.
+                * Watermark parameter type in the MPS task.
                 */
                 class WatermarkInput : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
-                     * @return RawParameter <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
+                     * 获取<p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly custom scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters do not support watermarking screenshots.</p>
+                     * @return RawParameter <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly custom scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters do not support watermarking screenshots.</p>
                      * 
                      */
                     RawWatermarkParameter GetRawParameter() const;
 
                     /**
-                     * 设置<p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
-                     * @param _rawParameter <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
+                     * 设置<p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly custom scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters do not support watermarking screenshots.</p>
+                     * @param _rawParameter <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly custom scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters do not support watermarking screenshots.</p>
                      * 
                      */
                     void SetRawParameter(const RawWatermarkParameter& _rawParameter);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
-                     * @return TextContent <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+                     * 获取<p>Text content, not exceeding 100 characters in length. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+                     * @return TextContent <p>Text content, not exceeding 100 characters in length. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
                      * 
                      */
                     std::string GetTextContent() const;
 
                     /**
-                     * 设置<p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
-                     * @param _textContent <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+                     * 设置<p>Text content, not exceeding 100 characters in length. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+                     * @param _textContent <p>Text content, not exceeding 100 characters in length. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
                      * 
                      */
                     void SetTextContent(const std::string& _textContent);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool SvgContentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
-                     * @return StartTimeOffset <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+                     * 获取<p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), a watermark appears at second n after a video starts;</li><li>If the value is less than 0 (assuming -n), a watermark appears n seconds before the end of a video.</li>Note: This parameter only applies to video scenes. Screenshots do not support it.
+                     * @return StartTimeOffset <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), a watermark appears at second n after a video starts;</li><li>If the value is less than 0 (assuming -n), a watermark appears n seconds before the end of a video.</li>Note: This parameter only applies to video scenes. Screenshots do not support it.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置<p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
-                     * @param _startTimeOffset <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+                     * 设置<p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), a watermark appears at second n after a video starts;</li><li>If the value is less than 0 (assuming -n), a watermark appears n seconds before the end of a video.</li>Note: This parameter only applies to video scenes. Screenshots do not support it.
+                     * @param _startTimeOffset <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), a watermark appears at second n after a video starts;</li><li>If the value is less than 0 (assuming -n), a watermark appears n seconds before the end of a video.</li>Note: This parameter only applies to video scenes. Screenshots do not support it.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
-                     * @return EndTimeOffset <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
+                     * 获取<p>End time offset of a watermark. Unit: second.</p><li>If not specified or set to 0, the watermark lasts until the end of the video.</li><li>If the value is greater than 0 (assuming n), the watermark disappears at second n.</li><li>If the value is less than 0 (assuming -n), the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+                     * @return EndTimeOffset <p>End time offset of a watermark. Unit: second.</p><li>If not specified or set to 0, the watermark lasts until the end of the video.</li><li>If the value is greater than 0 (assuming n), the watermark disappears at second n.</li><li>If the value is less than 0 (assuming -n), the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置<p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
-                     * @param _endTimeOffset <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
+                     * 设置<p>End time offset of a watermark. Unit: second.</p><li>If not specified or set to 0, the watermark lasts until the end of the video.</li><li>If the value is greater than 0 (assuming n), the watermark disappears at second n.</li><li>If the value is less than 0 (assuming -n), the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+                     * @param _endTimeOffset <p>End time offset of a watermark. Unit: second.</p><li>If not specified or set to 0, the watermark lasts until the end of the video.</li><li>If the value is greater than 0 (assuming n), the watermark disappears at second n.</li><li>If the value is less than 0 (assuming -n), the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -182,13 +182,13 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
+                     * <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly custom scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters do not support watermarking screenshots.</p>
                      */
                     RawWatermarkParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+                     * <p>Text content, not exceeding 100 characters in length. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
                      */
                     std::string m_textContent;
                     bool m_textContentHasBeenSet;
@@ -200,13 +200,13 @@ namespace TencentCloud
                     bool m_svgContentHasBeenSet;
 
                     /**
-                     * <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+                     * <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), a watermark appears at second n after a video starts;</li><li>If the value is less than 0 (assuming -n), a watermark appears n seconds before the end of a video.</li>Note: This parameter only applies to video scenes. Screenshots do not support it.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
+                     * <p>End time offset of a watermark. Unit: second.</p><li>If not specified or set to 0, the watermark lasts until the end of the video.</li><li>If the value is greater than 0 (assuming n), the watermark disappears at second n.</li><li>If the value is less than 0 (assuming -n), the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

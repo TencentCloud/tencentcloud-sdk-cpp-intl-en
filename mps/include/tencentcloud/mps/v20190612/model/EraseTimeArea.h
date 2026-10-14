@@ -36,7 +36,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Smart erasing: specify the region configuration for removal.
+Directly erase the specified region within a specified period.
+When both BeginMs and EndMs are 0, directly erase the specified region in the entire video.
                 */
                 class EraseTimeArea : public AbstractModel
                 {
@@ -48,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return BeginMs 
+                     * 获取Start time in milliseconds.
+                     * @return BeginMs Start time in milliseconds.
                      * 
                      */
                     uint64_t GetBeginMs() const;
 
                     /**
-                     * 设置
-                     * @param _beginMs 
+                     * 设置Start time in milliseconds.
+                     * @param _beginMs Start time in milliseconds.
                      * 
                      */
                     void SetBeginMs(const uint64_t& _beginMs);
@@ -69,15 +71,15 @@ namespace TencentCloud
                     bool BeginMsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndMs 
+                     * 获取End time in ms.
+                     * @return EndMs End time in ms.
                      * 
                      */
                     uint64_t GetEndMs() const;
 
                     /**
-                     * 设置
-                     * @param _endMs 
+                     * 设置End time in ms.
+                     * @param _endMs End time in ms.
                      * 
                      */
                     void SetEndMs(const uint64_t& _endMs);
@@ -90,15 +92,15 @@ namespace TencentCloud
                     bool EndMsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Areas 
+                     * 获取List of regions removed within the period
+                     * @return Areas List of regions removed within the period
                      * 
                      */
                     std::vector<EraseArea> GetAreas() const;
 
                     /**
-                     * 设置
-                     * @param _areas 
+                     * 设置List of regions removed within the period
+                     * @param _areas List of regions removed within the period
                      * 
                      */
                     void SetAreas(const std::vector<EraseArea>& _areas);
@@ -113,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Start time in milliseconds.
                      */
                     uint64_t m_beginMs;
                     bool m_beginMsHasBeenSet;
 
                     /**
-                     * 
+                     * End time in ms.
                      */
                     uint64_t m_endMs;
                     bool m_endMsHasBeenSet;
 
                     /**
-                     * 
+                     * List of regions removed within the period
                      */
                     std::vector<EraseArea> m_areas;
                     bool m_areasHasBeenSet;

@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool TranslateSubtitlePathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitlePos 
+                     * 获取<p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+                     * @return SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
                      * 
                      */
                     SubtitlePosition GetSubtitlePos() const;
 
                     /**
-                     * 设置
-                     * @param _subtitlePos 
+                     * 设置<p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+                     * @param _subtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
                      * 
                      */
                     void SetSubtitlePos(const SubtitlePosition& _subtitlePos);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool SubtitlePosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceClonedVideo 
+                     * 获取<p>File URL of the video after voice type cloning</p>
+                     * @return VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
                      * 
                      */
                     std::string GetVoiceClonedVideo() const;
 
                     /**
-                     * 设置
-                     * @param _voiceClonedVideo 
+                     * 设置<p>File URL of the video after voice type cloning</p>
+                     * @param _voiceClonedVideo <p>File URL of the video after voice type cloning</p>
                      * 
                      */
                     void SetVoiceClonedVideo(const std::string& _voiceClonedVideo);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool VoiceClonedVideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceClonedMarkFile 
+                     * 获取<p>File address of the voice type clone annotation</p>
+                     * @return VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
                      * 
                      */
                     std::string GetVoiceClonedMarkFile() const;
 
                     /**
-                     * 设置
-                     * @param _voiceClonedMarkFile 
+                     * 设置<p>File address of the voice type clone annotation</p>
+                     * @param _voiceClonedMarkFile <p>File address of the voice type clone annotation</p>
                      * 
                      */
                     void SetVoiceClonedMarkFile(const std::string& _voiceClonedMarkFile);
@@ -327,19 +327,19 @@ namespace TencentCloud
                     bool m_translateSubtitlePathHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
                      */
                     SubtitlePosition m_subtitlePos;
                     bool m_subtitlePosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File URL of the video after voice type cloning</p>
                      */
                     std::string m_voiceClonedVideo;
                     bool m_voiceClonedVideoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File address of the voice type clone annotation</p>
                      */
                     std::string m_voiceClonedMarkFile;
                     bool m_voiceClonedMarkFileHasBeenSet;

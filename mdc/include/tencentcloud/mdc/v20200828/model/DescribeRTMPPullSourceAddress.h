@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Query the input RTMP configuration message.
                 */
                 class DescribeRTMPPullSourceAddress : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TcUrl 
+                     * 获取TcUrl of the RTMP origin server.
+                     * @return TcUrl TcUrl of the RTMP origin server.
                      * 
                      */
                     std::string GetTcUrl() const;
 
                     /**
-                     * 设置
-                     * @param _tcUrl 
+                     * 设置TcUrl of the RTMP origin server.
+                     * @param _tcUrl TcUrl of the RTMP origin server.
                      * 
                      */
                     void SetTcUrl(const std::string& _tcUrl);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool TcUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamKey 
+                     * 获取StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
+                     * @return StreamKey StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
                      * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
-                     * 设置
-                     * @param _streamKey 
+                     * 设置StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
+                     * @param _streamKey StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
                      * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
@@ -91,13 +95,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * TcUrl of the RTMP origin server.
                      */
                     std::string m_tcUrl;
                     bool m_tcUrlHasBeenSet;
 
                     /**
-                     * 
+                     * StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
                      */
                     std::string m_streamKey;
                     bool m_streamKeyHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ES instance ID
-                     * @return InstanceId ES instance ID
+                     * 获取ES instance ID.
+                     * @return InstanceId ES instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ES instance ID
-                     * @param _instanceId ES instance ID
+                     * 设置ES instance ID.
+                     * @param _instanceId ES instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取COS address of the main dictionary for the IK analyzer
-                     * @return IkMainDicts COS address of the main dictionary for the IK analyzer
+                     * 获取Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
+                     * @return IkMainDicts Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
                      * 
                      */
                     std::vector<std::string> GetIkMainDicts() const;
 
                     /**
-                     * 设置COS address of the main dictionary for the IK analyzer
-                     * @param _ikMainDicts COS address of the main dictionary for the IK analyzer
+                     * 设置Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
+                     * @param _ikMainDicts Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
                      * 
                      */
                     void SetIkMainDicts(const std::vector<std::string>& _ikMainDicts);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IkMainDictsHasBeenSet() const;
 
                     /**
-                     * 获取COS address of the stopword dictionary for the IK analyzer
-                     * @return IkStopwords COS address of the stopword dictionary for the IK analyzer
+                     * 获取Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
+                     * @return IkStopwords Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
                      * 
                      */
                     std::vector<std::string> GetIkStopwords() const;
 
                     /**
-                     * 设置COS address of the stopword dictionary for the IK analyzer
-                     * @param _ikStopwords COS address of the stopword dictionary for the IK analyzer
+                     * 设置Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
+                     * @param _ikStopwords Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
                      * 
                      */
                     void SetIkStopwords(const std::vector<std::string>& _ikStopwords);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IkStopwordsHasBeenSet() const;
 
                     /**
-                     * 获取COS address of the synonym dictionary
-                     * @return Synonym COS address of the synonym dictionary
+                     * 获取Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
+                     * @return Synonym Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
                      * 
                      */
                     std::vector<std::string> GetSynonym() const;
 
                     /**
-                     * 设置COS address of the synonym dictionary
-                     * @param _synonym COS address of the synonym dictionary
+                     * 设置Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
+                     * @param _synonym Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
                      * 
                      */
                     void SetSynonym(const std::vector<std::string>& _synonym);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SynonymHasBeenSet() const;
 
                     /**
-                     * 获取COS address of the QQ dictionary
-                     * @return QQDict COS address of the QQ dictionary
+                     * 获取Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
+                     * @return QQDict Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
                      * 
                      */
                     std::vector<std::string> GetQQDict() const;
 
                     /**
-                     * 设置COS address of the QQ dictionary
-                     * @param _qQDict COS address of the QQ dictionary
+                     * 设置Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
+                     * @param _qQDict Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
                      * 
                      */
                     void SetQQDict(const std::vector<std::string>& _qQDict);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool QQDictHasBeenSet() const;
 
                     /**
-                     * 获取`0` (default): Install, `1`: Delete
-                     * @return UpdateType `0` (default): Install, `1`: Delete
+                     * 获取0: installation; 1: deletion. Default value: 0
+                     * @return UpdateType 0: installation; 1: deletion. Default value: 0
                      * 
                      */
                     int64_t GetUpdateType() const;
 
                     /**
-                     * 设置`0` (default): Install, `1`: Delete
-                     * @param _updateType `0` (default): Install, `1`: Delete
+                     * 设置0: installation; 1: deletion. Default value: 0
+                     * @param _updateType 0: installation; 1: deletion. Default value: 0
                      * 
                      */
                     void SetUpdateType(const int64_t& _updateType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool UpdateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force restart the cluster. The default value is `false`.
-                     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
+                     * 获取Whether to force restart the cluster. Default value: false
+                     * @return ForceRestart Whether to force restart the cluster. Default value: false
                      * 
                      */
                     bool GetForceRestart() const;
 
                     /**
-                     * 设置Whether to force restart the cluster. The default value is `false`.
-                     * @param _forceRestart Whether to force restart the cluster. The default value is `false`.
+                     * 设置Whether to force restart the cluster. Default value: false
+                     * @param _forceRestart Whether to force restart the cluster. Default value: false
                      * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
@@ -192,43 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ES instance ID
+                     * ES instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * COS address of the main dictionary for the IK analyzer
+                     * Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
                      */
                     std::vector<std::string> m_ikMainDicts;
                     bool m_ikMainDictsHasBeenSet;
 
                     /**
-                     * COS address of the stopword dictionary for the IK analyzer
+                     * Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
                      */
                     std::vector<std::string> m_ikStopwords;
                     bool m_ikStopwordsHasBeenSet;
 
                     /**
-                     * COS address of the synonym dictionary
+                     * Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
                      */
                     std::vector<std::string> m_synonym;
                     bool m_synonymHasBeenSet;
 
                     /**
-                     * COS address of the QQ dictionary
+                     * Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
                      */
                     std::vector<std::string> m_qQDict;
                     bool m_qQDictHasBeenSet;
 
                     /**
-                     * `0` (default): Install, `1`: Delete
+                     * 0: installation; 1: deletion. Default value: 0
                      */
                     int64_t m_updateType;
                     bool m_updateTypeHasBeenSet;
 
                     /**
-                     * Whether to force restart the cluster. The default value is `false`.
+                     * Whether to force restart the cluster. Default value: false
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;

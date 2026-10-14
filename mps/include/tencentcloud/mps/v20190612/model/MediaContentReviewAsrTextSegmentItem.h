@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content review Asr text audit suspected segment
+                * Suspected segment of Asr text audit in content review
                 */
                 class MediaContentReviewAsrTextSegmentItem : public AbstractModel
                 {
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Review result suggestion for suspected segment, value ranges from...to...
+                     * 获取Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Review result suggestion for suspected segment, value ranges from...to...
+                     * @return Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Review result suggestion for suspected segment, value ranges from...to...
+                     * 设置Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Review result suggestion for suspected segment, value ranges from...to...
+                     * @param _suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Suspicious keyword list.
-                     * @return KeywordSet Suspicious keyword list.
+                     * 获取List of suspicious keywords.
+                     * @return KeywordSet List of suspicious keywords.
                      * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
-                     * 设置Suspicious keyword list.
-                     * @param _keywordSet Suspicious keyword list.
+                     * 设置List of suspicious keywords.
+                     * @param _keywordSet List of suspicious keywords.
                      * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Review result suggestion for suspected segment, value ranges from...to...
+                     * Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Suspicious keyword list.
+                     * List of suspicious keywords.
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;

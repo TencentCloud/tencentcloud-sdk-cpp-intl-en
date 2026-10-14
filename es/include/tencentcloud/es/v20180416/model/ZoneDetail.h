@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of AZs in multi-AZ deployment mode
+                * Detailed information of availability zones in multi-AZ deployment
                 */
                 class ZoneDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取AZ.
+                     * @return Zone AZ.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置AZ.
+                     * @param _zone AZ.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取Subnet ID.
+                     * @return SubnetId Subnet ID.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置Subnet ID.
+                     * @param _subnetId Subnet ID.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -88,19 +88,46 @@ namespace TencentCloud
                      */
                     bool SubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a hidden AZ
+                     * @return Hidden Whether it is a hidden AZ
+                     * 
+                     */
+                    bool GetHidden() const;
+
+                    /**
+                     * 设置Whether it is a hidden AZ
+                     * @param _hidden Whether it is a hidden AZ
+                     * 
+                     */
+                    void SetHidden(const bool& _hidden);
+
+                    /**
+                     * 判断参数 Hidden 是否已赋值
+                     * @return Hidden 是否已赋值
+                     * 
+                     */
+                    bool HiddenHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ
+                     * AZ.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * Subnet ID.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * Whether it is a hidden AZ
+                     */
+                    bool m_hidden;
+                    bool m_hiddenHasBeenSet;
 
                 };
             }

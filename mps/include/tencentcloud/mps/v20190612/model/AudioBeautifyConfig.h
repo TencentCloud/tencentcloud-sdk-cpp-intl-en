@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
-                     * @return Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * 获取<p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * @return Types <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
                      * 
                      */
                     std::vector<std::string> GetTypes() const;
 
                     /**
-                     * 设置<p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
-                     * @param _types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * 设置<p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * @param _types <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
                      * 
                      */
                     void SetTypes(const std::vector<std::string>& _types);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
                      */
                     std::vector<std::string> m_types;
                     bool m_typesHasBeenSet;

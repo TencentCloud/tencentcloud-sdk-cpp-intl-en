@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The maintenance time slot of the cluster
+                * Cluster maintainability time
                 */
                 class OperationDuration : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+                     * @return Periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
                      * 
                      */
                     std::vector<uint64_t> GetPeriods() const;
 
                     /**
-                     * 设置Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+                     * @param _periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
                      * 
                      */
                     void SetPeriods(const std::vector<uint64_t>& _periods);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeriodsHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance start time
-                     * @return TimeStart The maintenance start time
+                     * 获取Maintenance start time
+                     * @return TimeStart Maintenance start time
                      * 
                      */
                     std::string GetTimeStart() const;
 
                     /**
-                     * 设置The maintenance start time
-                     * @param _timeStart The maintenance start time
+                     * 设置Maintenance start time
+                     * @param _timeStart Maintenance start time
                      * 
                      */
                     void SetTimeStart(const std::string& _timeStart);
@@ -93,15 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeStartHasBeenSet() const;
 
                     /**
-                     * 获取The maintenance end time
-                     * @return TimeEnd The maintenance end time
+                     * 获取Maintenance end time.
+                     * @return TimeEnd Maintenance end time.
                      * 
                      */
                     std::string GetTimeEnd() const;
 
                     /**
-                     * 设置The maintenance end time
-                     * @param _timeEnd The maintenance end time
+                     * 设置Maintenance end time.
+                     * @param _timeEnd Maintenance end time.
                      * 
                      */
                     void SetTimeEnd(const std::string& _timeEnd);
@@ -114,15 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeEndHasBeenSet() const;
 
                     /**
-                     * 获取The time zone expressed in UTC.
-                     * @return TimeZone The time zone expressed in UTC.
+                     * 获取Time zone in UTC format
+                     * @return TimeZone Time zone in UTC format
                      * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置The time zone expressed in UTC.
-                     * @param _timeZone The time zone expressed in UTC.
+                     * 设置Time zone in UTC format
+                     * @param _timeZone Time zone in UTC format
                      * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
@@ -137,26 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
                      */
                     std::vector<uint64_t> m_periods;
                     bool m_periodsHasBeenSet;
 
                     /**
-                     * The maintenance start time
+                     * Maintenance start time
                      */
                     std::string m_timeStart;
                     bool m_timeStartHasBeenSet;
 
                     /**
-                     * The maintenance end time
+                     * Maintenance end time.
                      */
                     std::string m_timeEnd;
                     bool m_timeEndHasBeenSet;
 
                     /**
-                     * The time zone expressed in UTC.
+                     * Time zone in UTC format
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;

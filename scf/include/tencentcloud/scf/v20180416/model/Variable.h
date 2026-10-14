@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Variable parameter
+                * Variable parameters
                 */
                 class Variable : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Variable name
-                     * @return Key Variable name
+                     * 获取Variable name. Cannot be empty.
+                     * @return Key Variable name. Cannot be empty.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Variable name
-                     * @param _key Variable name
+                     * 设置Variable name. Cannot be empty.
+                     * @param _key Variable name. Cannot be empty.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Variable value
-                     * @return Value Variable value
+                     * 获取Variable value. Cannot be empty.
+                     * @return Value Variable value. Cannot be empty.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Variable value
-                     * @param _value Variable value
+                     * 设置Variable value. Cannot be empty.
+                     * @param _value Variable value. Cannot be empty.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Variable name
+                     * Variable name. Cannot be empty.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Variable value
+                     * Variable value. Cannot be empty.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

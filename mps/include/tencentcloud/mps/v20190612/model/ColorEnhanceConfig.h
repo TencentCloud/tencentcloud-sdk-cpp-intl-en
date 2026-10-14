@@ -47,11 +47,11 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Capability configuration switch. Available values:
+                     * 获取Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-                     * @return Switch Capability configuration switch. Available values:
+                     * @return Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -60,11 +60,11 @@ Default value: ON.
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Capability configuration switch. Available values:
+                     * 设置Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-                     * @param _switch Capability configuration switch. Available values:
+                     * @param _switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -80,15 +80,31 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
+                     * @return Type Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
+                     * @param _type Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -103,7 +119,7 @@ Default value: ON.
                 private:
 
                     /**
-                     * Capability configuration switch. Available values:
+                     * Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -112,7 +128,11 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

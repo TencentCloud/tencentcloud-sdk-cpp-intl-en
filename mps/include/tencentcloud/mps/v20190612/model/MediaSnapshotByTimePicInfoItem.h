@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Screenshot information at the specified time point
+                * Specified time point screenshot information
                 */
                 class MediaSnapshotByTimePicInfoItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The screenshot corresponds to the time offset in the video file, expressed in seconds.
-                     * @return TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
+                     * 获取Time offset of this screenshot in the video file, in seconds.
+                     * @return TimeOffset Time offset of this screenshot in the video file, in seconds.
                      * 
                      */
                     double GetTimeOffset() const;
 
                     /**
-                     * 设置The screenshot corresponds to the time offset in the video file, expressed in seconds.
-                     * @param _timeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
+                     * 设置Time offset of this screenshot in the video file, in seconds.
+                     * @param _timeOffset Time offset of this screenshot in the video file, in seconds.
                      * 
                      */
                     void SetTimeOffset(const double& _timeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取If a screenshot is watermarked, list of template IDs used for watermarking.
-                     * @return WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
+                     * 获取List of template IDs for watermarking if the screenshot is watermarked.
+                     * @return WaterMarkDefinition List of template IDs for watermarking if the screenshot is watermarked.
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置If a screenshot is watermarked, list of template IDs used for watermarking.
-                     * @param _waterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
+                     * 设置List of template IDs for watermarking if the screenshot is watermarked.
+                     * @param _waterMarkDefinition List of template IDs for watermarking if the screenshot is watermarked.
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The screenshot corresponds to the time offset in the video file, expressed in seconds.
+                     * Time offset of this screenshot in the video file, in seconds.
                      */
                     double m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_pathHasBeenSet;
 
                     /**
-                     * If a screenshot is watermarked, list of template IDs used for watermarking.
+                     * List of template IDs for watermarking if the screenshot is watermarked.
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

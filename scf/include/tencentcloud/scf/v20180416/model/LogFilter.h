@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Log filtering criteria, which is for distinguishing between logs of successful and failed execution
+                * Log filter criteria, used to distinguish between correct and error logs
                 */
                 class LogFilter : public AbstractModel
                 {
@@ -47,39 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
-                     * @return RetCode Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+                     * 获取Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
+                     * @return RetCode Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
                      * 
                      */
                     std::string GetRetCode() const;
 
                     /**
-                     * 设置Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
-                     * @param _retCode Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+                     * 设置Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
+                     * @param _retCode Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
                      * 
                      */
                     void SetRetCode(const std::string& _retCode);
@@ -94,13 +94,13 @@ Blank, indicating that all logs will be returned.
                 private:
 
                     /**
-                     * Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+                     * Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
                      */
                     std::string m_retCode;
                     bool m_retCodeHasBeenSet;

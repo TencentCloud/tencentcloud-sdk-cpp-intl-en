@@ -47,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HybridNodeSpecs 
+                     * 获取<p>Purchasable specification list of peer nodes</p>
+                     * @return HybridNodeSpecs <p>Purchasable specification list of peer nodes</p>
                      * 
                      */
                     std::vector<StorageNodeSpec> GetHybridNodeSpecs() const;
@@ -75,8 +75,8 @@ namespace TencentCloud
                     bool ServerlessCcuSpecHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ServerlessNodeNumSpec 
+                     * 获取<p>serverless node quantity configuration</p>
+                     * @return ServerlessNodeNumSpec <p>serverless node quantity configuration</p>
                      * 
                      */
                     ServerlessNodeNumSpec GetServerlessNodeNumSpec() const;
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Purchasable specification list of peer nodes</p>
                      */
                     std::vector<StorageNodeSpec> m_hybridNodeSpecs;
                     bool m_hybridNodeSpecsHasBeenSet;
@@ -103,7 +103,7 @@ namespace TencentCloud
                     bool m_serverlessCcuSpecHasBeenSet;
 
                     /**
-                     * 
+                     * <p>serverless node quantity configuration</p>
                      */
                     ServerlessNodeNumSpec m_serverlessNodeNumSpec;
                     bool m_serverlessNodeNumSpecHasBeenSet;

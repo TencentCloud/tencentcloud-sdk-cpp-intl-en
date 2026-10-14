@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Push destination address information.
+                * Target address information for repush.
                 */
                 class SRTAddressDestination : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Destination address IP.
-                     * @return Ip Destination address IP.
+                     * 获取IP of the target address.
+                     * @return Ip IP of the target address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Destination address IP.
-                     * @param _ip Destination address IP.
+                     * 设置IP of the target address.
+                     * @param _ip IP of the target address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Destination address port.
-                     * @return Port Destination address port.
+                     * 获取The port of the destination address.
+                     * @return Port The port of the destination address.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Destination address port.
-                     * @param _port Destination address port.
+                     * 设置The port of the destination address.
+                     * @param _port The port of the destination address.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Destination address IP.
+                     * IP of the target address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Destination address port.
+                     * The port of the destination address.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;

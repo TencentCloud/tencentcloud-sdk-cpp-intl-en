@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled scan time
-                     * @return ScanTime Scheduled scan time
+                     * 获取The time for scheduled scan
+                     * @return ScanTime The time for scheduled scan
                      * 
                      */
                     std::string GetScanTime() const;
 
                     /**
-                     * 设置Scheduled scan time
-                     * @param _scanTime Scheduled scan time
+                     * 设置The time for scheduled scan
+                     * @param _scanTime The time for scheduled scan
                      * 
                      */
                     void SetScanTime(const std::string& _scanTime);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Array of the scanned trojan types
-                     * @return ScanType Array of the scanned trojan types
+                     * 获取Array of Trojan horse types to scan
+                     * @return ScanType Array of Trojan horse types to scan
                      * 
                      */
                     std::vector<std::string> GetScanType() const;
 
                     /**
-                     * 设置Array of the scanned trojan types
-                     * @param _scanType Array of the scanned trojan types
+                     * 设置Array of Trojan horse types to scan
+                     * @param _scanType Array of Trojan horse types to scan
                      * 
                      */
                     void SetScanType(const std::vector<std::string>& _scanType);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool ScanTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scanned image
-                     * @return Images Scanned image
+                     * 获取Scan image
+                     * @return Images Scan image
                      * 
                      */
                     std::vector<ImageInfo> GetImages() const;
 
                     /**
-                     * 设置Scanned image
-                     * @param _images Scanned image
+                     * 设置Scan image
+                     * @param _images Scan image
                      * 
                      */
                     void SetImages(const std::vector<ImageInfo>& _images);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取ID of the image to be scanned
-                     * @return Id ID of the image to be scanned
+                     * 获取Scan Image ID
+                     * @return Id Scan Image ID
                      * 
                      */
                     std::vector<uint64_t> GetId() const;
 
                     /**
-                     * 设置ID of the image to be scanned
-                     * @param _id ID of the image to be scanned
+                     * 设置Scan Image ID
+                     * @param _id Scan Image ID
                      * 
                      */
                     void SetId(const std::vector<uint64_t>& _id);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to scan for the latest version
-                     * @return Latest Whether to scan for the latest version
+                     * 获取Whether to Scan the Latest Version
+                     * @return Latest Whether to Scan the Latest Version
                      * 
                      */
                     bool GetLatest() const;
 
                     /**
-                     * 设置Whether to scan for the latest version
-                     * @param _latest Whether to scan for the latest version
+                     * 设置Whether to Scan the Latest Version
+                     * @param _latest Whether to Scan the Latest Version
                      * 
                      */
                     void SetLatest(const bool& _latest);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool LatestHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ContainerRunning 
+                     * 获取Whether There Are Running Containers
+                     * @return ContainerRunning Whether There Are Running Containers
                      * 
                      */
                     bool GetContainerRunning() const;
 
                     /**
-                     * 设置
-                     * @param _containerRunning 
+                     * 设置Whether There Are Running Containers
+                     * @param _containerRunning Whether There Are Running Containers
                      * 
                      */
                     void SetContainerRunning(const bool& _containerRunning);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ContainerRunningHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanEndTime 
+                     * 获取Scan end time
+                     * @return ScanEndTime Scan end time
                      * 
                      */
                     std::string GetScanEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _scanEndTime 
+                     * 设置Scan end time
+                     * @param _scanEndTime Scan end time
                      * 
                      */
                     void SetScanEndTime(const std::string& _scanEndTime);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool ScanEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanScope 
+                     * 获取Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+                     * @return ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
                      * 
                      */
                     uint64_t GetScanScope() const;
 
                     /**
-                     * 设置
-                     * @param _scanScope 
+                     * 设置Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+                     * @param _scanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
                      * 
                      */
                     void SetScanScope(const uint64_t& _scanScope);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool ScanScopeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RegistryType 
+                     * 获取Repository Type: tcr, ccr, harbor
+                     * @return RegistryType Repository Type: tcr, ccr, harbor
                      * 
                      */
                     std::vector<std::string> GetRegistryType() const;
 
                     /**
-                     * 设置
-                     * @param _registryType 
+                     * 设置Repository Type: tcr, ccr, harbor
+                     * @param _registryType Repository Type: tcr, ccr, harbor
                      * 
                      */
                     void SetRegistryType(const std::vector<std::string>& _registryType);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Namespace 
+                     * 获取Namespace
+                     * @return Namespace Namespace
                      * 
                      */
                     std::vector<std::string> GetNamespace() const;
 
                     /**
-                     * 设置
-                     * @param _namespace 
+                     * 设置Namespace
+                     * @param _namespace Namespace
                      * 
                      */
                     void SetNamespace(const std::vector<std::string>& _namespace);
@@ -315,6 +315,27 @@ namespace TencentCloud
                      * 
                      */
                     bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取IDs of excluded image assets.
+                     * @return ExcludeImageAssetIds IDs of excluded image assets.
+                     * 
+                     */
+                    std::vector<uint64_t> GetExcludeImageAssetIds() const;
+
+                    /**
+                     * 设置IDs of excluded image assets.
+                     * @param _excludeImageAssetIds IDs of excluded image assets.
+                     * 
+                     */
+                    void SetExcludeImageAssetIds(const std::vector<uint64_t>& _excludeImageAssetIds);
+
+                    /**
+                     * 判断参数 ExcludeImageAssetIds 是否已赋值
+                     * @return ExcludeImageAssetIds 是否已赋值
+                     * 
+                     */
+                    bool ExcludeImageAssetIdsHasBeenSet() const;
 
                 private:
 
@@ -331,19 +352,19 @@ namespace TencentCloud
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Scheduled scan time
+                     * The time for scheduled scan
                      */
                     std::string m_scanTime;
                     bool m_scanTimeHasBeenSet;
 
                     /**
-                     * Array of the scanned trojan types
+                     * Array of Trojan horse types to scan
                      */
                     std::vector<std::string> m_scanType;
                     bool m_scanTypeHasBeenSet;
 
                     /**
-                     * Scanned image
+                     * Scan image
                      */
                     std::vector<ImageInfo> m_images;
                     bool m_imagesHasBeenSet;
@@ -355,46 +376,52 @@ namespace TencentCloud
                     bool m_allHasBeenSet;
 
                     /**
-                     * ID of the image to be scanned
+                     * Scan Image ID
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Whether to scan for the latest version
+                     * Whether to Scan the Latest Version
                      */
                     bool m_latest;
                     bool m_latestHasBeenSet;
 
                     /**
-                     * 
+                     * Whether There Are Running Containers
                      */
                     bool m_containerRunning;
                     bool m_containerRunningHasBeenSet;
 
                     /**
-                     * 
+                     * Scan end time
                      */
                     std::string m_scanEndTime;
                     bool m_scanEndTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
                      */
                     uint64_t m_scanScope;
                     bool m_scanScopeHasBeenSet;
 
                     /**
-                     * 
+                     * Repository Type: tcr, ccr, harbor
                      */
                     std::vector<std::string> m_registryType;
                     bool m_registryTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Namespace
                      */
                     std::vector<std::string> m_namespace;
                     bool m_namespaceHasBeenSet;
+
+                    /**
+                     * IDs of excluded image assets.
+                     */
+                    std::vector<uint64_t> m_excludeImageAssetIds;
+                    bool m_excludeImageAssetIdsHasBeenSet;
 
                 };
             }

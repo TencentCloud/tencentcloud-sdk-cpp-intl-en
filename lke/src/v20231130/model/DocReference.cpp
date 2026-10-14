@@ -37,21 +37,21 @@ CoreInternalOutcome DocReference::Deserialize(const rapidjson::Value &value)
 
     if (value.HasMember("DocBizId") && !value["DocBizId"].IsNull())
     {
-        if (!value["DocBizId"].IsUint64())
+        if (!value["DocBizId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `DocReference.DocBizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DocReference.DocBizId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_docBizId = value["DocBizId"].GetUint64();
+        m_docBizId = string(value["DocBizId"].GetString());
         m_docBizIdHasBeenSet = true;
     }
 
     if (value.HasMember("ReferBizId") && !value["ReferBizId"].IsNull())
     {
-        if (!value["ReferBizId"].IsUint64())
+        if (!value["ReferBizId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `DocReference.ReferBizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DocReference.ReferBizId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_referBizId = value["ReferBizId"].GetUint64();
+        m_referBizId = string(value["ReferBizId"].GetString());
         m_referBizIdHasBeenSet = true;
     }
 
@@ -67,11 +67,11 @@ CoreInternalOutcome DocReference::Deserialize(const rapidjson::Value &value)
 
     if (value.HasMember("KnowledgeBizId") && !value["KnowledgeBizId"].IsNull())
     {
-        if (!value["KnowledgeBizId"].IsUint64())
+        if (!value["KnowledgeBizId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `DocReference.KnowledgeBizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DocReference.KnowledgeBizId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_knowledgeBizId = value["KnowledgeBizId"].GetUint64();
+        m_knowledgeBizId = string(value["KnowledgeBizId"].GetString());
         m_knowledgeBizIdHasBeenSet = true;
     }
 
@@ -107,7 +107,7 @@ void DocReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DocBizId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_docBizId, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_docBizId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_referBizIdHasBeenSet)
@@ -115,7 +115,7 @@ void DocReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReferBizId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_referBizId, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_referBizId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_docNameHasBeenSet)
@@ -131,7 +131,7 @@ void DocReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KnowledgeBizId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_knowledgeBizId, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_knowledgeBizId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_knowledgeNameHasBeenSet)
@@ -153,12 +153,12 @@ void DocReference::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
 }
 
 
-uint64_t DocReference::GetDocBizId() const
+string DocReference::GetDocBizId() const
 {
     return m_docBizId;
 }
 
-void DocReference::SetDocBizId(const uint64_t& _docBizId)
+void DocReference::SetDocBizId(const string& _docBizId)
 {
     m_docBizId = _docBizId;
     m_docBizIdHasBeenSet = true;
@@ -169,12 +169,12 @@ bool DocReference::DocBizIdHasBeenSet() const
     return m_docBizIdHasBeenSet;
 }
 
-uint64_t DocReference::GetReferBizId() const
+string DocReference::GetReferBizId() const
 {
     return m_referBizId;
 }
 
-void DocReference::SetReferBizId(const uint64_t& _referBizId)
+void DocReference::SetReferBizId(const string& _referBizId)
 {
     m_referBizId = _referBizId;
     m_referBizIdHasBeenSet = true;
@@ -201,12 +201,12 @@ bool DocReference::DocNameHasBeenSet() const
     return m_docNameHasBeenSet;
 }
 
-uint64_t DocReference::GetKnowledgeBizId() const
+string DocReference::GetKnowledgeBizId() const
 {
     return m_knowledgeBizId;
 }
 
-void DocReference::SetKnowledgeBizId(const uint64_t& _knowledgeBizId)
+void DocReference::SetKnowledgeBizId(const string& _knowledgeBizId)
 {
     m_knowledgeBizId = _knowledgeBizId;
     m_knowledgeBizIdHasBeenSet = true;

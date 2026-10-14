@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RTP configuration information of the created input.
+                * Configuration message for creating an input RTP.
                 */
                 class CreateInputRTPSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Default value: none. Valid values: ['none'].
-                     * @return FEC Default value: none. Valid values: ['none'].
+                     * 获取Default value: "none". Available value: ['none'].
+                     * @return FEC Default value: "none". Available value: ['none'].
                      * 
                      */
                     std::string GetFEC() const;
 
                     /**
-                     * 设置Default value: none. Valid values: ['none'].
-                     * @param _fEC Default value: none. Valid values: ['none'].
+                     * 设置Default value: "none". Available value: ['none'].
+                     * @param _fEC Default value: "none". Available value: ['none'].
                      * 
                      */
                     void SetFEC(const std::string& _fEC);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FECHasBeenSet() const;
 
                     /**
-                     * 获取Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-                     * @return IdleTimeout Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * 获取Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
+                     * @return IdleTimeout Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
                      * 
                      */
                     int64_t GetIdleTimeout() const;
 
                     /**
-                     * 设置Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-                     * @param _idleTimeout Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * 设置Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
+                     * @param _idleTimeout Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
                      * 
                      */
                     void SetIdleTimeout(const int64_t& _idleTimeout);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Default value: none. Valid values: ['none'].
+                     * Default value: "none". Available value: ['none'].
                      */
                     std::string m_fEC;
                     bool m_fECHasBeenSet;
 
                     /**
-                     * Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
                      */
                     int64_t m_idleTimeout;
                     bool m_idleTimeoutHasBeenSet;

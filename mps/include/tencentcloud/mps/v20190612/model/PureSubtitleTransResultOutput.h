@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取Storage location of the subtitle file.
+                     * @return OutputStorage Storage location of the subtitle file.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param _outputStorage 
+                     * 设置Storage location of the subtitle file.
+                     * @param _outputStorage Storage location of the subtitle file.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -93,7 +93,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Storage location of the subtitle file.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

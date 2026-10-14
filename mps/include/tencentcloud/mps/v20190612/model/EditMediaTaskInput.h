@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input for the video editing task.
+                * Input of the video editing task.
                 */
                 class EditMediaTaskInput : public AbstractModel
                 {

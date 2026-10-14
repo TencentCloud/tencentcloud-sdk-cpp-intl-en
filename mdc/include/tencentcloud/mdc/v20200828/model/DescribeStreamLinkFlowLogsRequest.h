@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The flow ID.
-                     * @return FlowId The flow ID.
+                     * 获取<p>Transport stream Id.</p>
+                     * @return FlowId <p>Transport stream Id.</p>
                      * 
                      */
                     std::string GetFlowId() const;
 
                     /**
-                     * 设置The flow ID.
-                     * @param _flowId The flow ID.
+                     * 设置<p>Transport stream Id.</p>
+                     * @param _flowId <p>Transport stream Id.</p>
                      * 
                      */
                     void SetFlowId(const std::string& _flowId);
@@ -64,19 +64,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @return StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 获取<p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+                     * @return StartTime <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @param _startTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 设置<p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+                     * @param _startTime <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -89,19 +85,15 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @return EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 获取<p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+                     * @return EndTime <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-                     * @param _endTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * 设置<p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+                     * @param _endTime <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -114,15 +106,15 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to query the inputs or outputs. Valid values: input, output.
-                     * @return Type Whether to query the inputs or outputs. Valid values: input, output.
+                     * 获取<p>Input or output type. Valid values: `input`, `output`.</p>
+                     * @return Type <p>Input or output type. Valid values: `input`, `output`.</p>
                      * 
                      */
                     std::vector<std::string> GetType() const;
 
                     /**
-                     * 设置Whether to query the inputs or outputs. Valid values: input, output.
-                     * @param _type Whether to query the inputs or outputs. Valid values: input, output.
+                     * 设置<p>Input or output type. Valid values: `input`, `output`.</p>
+                     * @param _type <p>Input or output type. Valid values: `input`, `output`.</p>
                      * 
                      */
                     void SetType(const std::vector<std::string>& _type);
@@ -135,15 +127,15 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to query the primary or backup pipeline. Valid values: 0, 1.
-                     * @return Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+                     * 获取<p>Primary or backup channel. Option [0|1].</p>
+                     * @return Pipeline <p>Primary or backup channel. Option [0|1].</p>
                      * 
                      */
                     std::vector<std::string> GetPipeline() const;
 
                     /**
-                     * 设置Whether to query the primary or backup pipeline. Valid values: 0, 1.
-                     * @param _pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+                     * 设置<p>Primary or backup channel. Option [0|1].</p>
+                     * @param _pipeline <p>Primary or backup channel. Option [0|1].</p>
                      * 
                      */
                     void SetPipeline(const std::vector<std::string>& _pipeline);
@@ -156,15 +148,15 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool PipelineHasBeenSet() const;
 
                     /**
-                     * 获取The page size. Value range: [1, 1000]. Default: 100.
-                     * @return PageSize The page size. Value range: [1, 1000]. Default: 100.
+                     * 获取<p>Size per page. Default value: 100. Value range: [1, 1000].</p>
+                     * @return PageSize <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置The page size. Value range: [1, 1000]. Default: 100.
-                     * @param _pageSize The page size. Value range: [1, 1000]. Default: 100.
+                     * 设置<p>Size per page. Default value: 100. Value range: [1, 1000].</p>
+                     * @param _pageSize <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -177,15 +169,15 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
-                     * @return SortType Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+                     * 获取<p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
+                     * @return SortType <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
                      * 
                      */
                     std::string GetSortType() const;
 
                     /**
-                     * 设置Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
-                     * @param _sortType Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+                     * 设置<p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
+                     * @param _sortType <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
                      * 
                      */
                     void SetSortType(const std::string& _sortType);
@@ -198,15 +190,15 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                     bool SortTypeHasBeenSet() const;
 
                     /**
-                     * 获取The page number. Value range: [1, 1000]. Default: 1.
-                     * @return PageNum The page number. Value range: [1, 1000]. Default: 1.
+                     * 获取<p>Page number. Default value: 1. Value range: [1, 1000].</p>
+                     * @return PageNum <p>Page number. Default value: 1. Value range: [1, 1000].</p>
                      * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
-                     * 设置The page number. Value range: [1, 1000]. Default: 1.
-                     * @param _pageNum The page number. Value range: [1, 1000]. Default: 1.
+                     * 设置<p>Page number. Default value: 1. Value range: [1, 1000].</p>
+                     * @param _pageNum <p>Page number. Default value: 1. Value range: [1, 1000].</p>
                      * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
@@ -221,51 +213,49 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                 private:
 
                     /**
-                     * The flow ID.
+                     * <p>Transport stream Id.</p>
                      */
                     std::string m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+                     * <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Whether to query the inputs or outputs. Valid values: input, output.
+                     * <p>Input or output type. Valid values: `input`, `output`.</p>
                      */
                     std::vector<std::string> m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Whether to query the primary or backup pipeline. Valid values: 0, 1.
+                     * <p>Primary or backup channel. Option [0|1].</p>
                      */
                     std::vector<std::string> m_pipeline;
                     bool m_pipelineHasBeenSet;
 
                     /**
-                     * The page size. Value range: [1, 1000]. Default: 100.
+                     * <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+                     * <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
                      */
                     std::string m_sortType;
                     bool m_sortTypeHasBeenSet;
 
                     /**
-                     * The page number. Value range: [1, 1000]. Default: 1.
+                     * <p>Page number. Default value: 1. Value range: [1, 1000].</p>
                      */
                     int64_t m_pageNum;
                     bool m_pageNumHasBeenSet;

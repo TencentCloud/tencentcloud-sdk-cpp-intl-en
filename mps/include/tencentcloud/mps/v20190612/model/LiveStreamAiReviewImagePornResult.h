@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI content review image pornographic result
+                * Live stream AI content moderation pornographic result of images
                 */
                 class LiveStreamAiReviewImagePornResult : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Suspected segment porn score.
-                     * @return Confidence Suspected segment porn score.
+                     * 获取Pornography score of the suspected segment.
+                     * @return Confidence Pornography score of the suspected segment.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Suspected segment porn score.
-                     * @param _confidence Suspected segment porn score.
+                     * 设置Pornography score of the suspected segment.
+                     * @param _confidence Pornography score of the suspected segment.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * 获取Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * @return Suggestion Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * 设置Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param _suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * @param _suggestion Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -143,30 +143,30 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Pornographic result tag for video, value ranges from...to...
+                     * 获取Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
-                     * @return Label Pornographic result tag for video, value ranges from...to...
+                     * @return Label Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Pornographic result tag for video, value ranges from...to...
+                     * 设置Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
-                     * @param _label Pornographic result tag for video, value ranges from...to...
+                     * @param _label Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
                      * 
                      */
@@ -180,19 +180,19 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 获取Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-                     * @param _url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * 设置Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+                     * @param _url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -205,15 +205,15 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 获取Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 设置Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -240,13 +240,13 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Suspected segment porn score.
+                     * Pornography score of the suspected segment.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Pornographic result suggestion for suspected segment, value ranges from...to...
+                     * Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -255,24 +255,24 @@ The image will be deleted after the PicUrlExpireTime time point.
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Pornographic result tag for video, value ranges from...to...
+                     * Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+                     * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

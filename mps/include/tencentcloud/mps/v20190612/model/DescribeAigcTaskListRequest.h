@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Query page started</p>
-                     * @return PageNum <p>Query page started</p>
+                     * 获取<p>Start query page</p>
+                     * @return PageNum <p>Start query page</p>
                      * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
-                     * 设置<p>Query page started</p>
-                     * @param _pageNum <p>Query page started</p>
+                     * 设置<p>Start query page</p>
+                     * @param _pageNum <p>Start query page</p>
                      * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool PageNumHasBeenSet() const;
 
                     /**
-                     * 获取<p>How many data to get on the current page</p>
-                     * @return PageSize <p>How many data to get on the current page</p>
+                     * 获取<p>How many data entries to retrieve on the current page</p>
+                     * @return PageSize <p>How many data entries to retrieve on the current page</p>
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置<p>How many data to get on the current page</p>
-                     * @param _pageSize <p>How many data to get on the current page</p>
+                     * 设置<p>How many data entries to retrieve on the current page</p>
+                     * @param _pageSize <p>How many data entries to retrieve on the current page</p>
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Query filter criteria</p>
-                     * @return QueryTaskFilter <p>Query filter criteria</p>
+                     * 获取<p>Query filter conditions.</p>
+                     * @return QueryTaskFilter <p>Query filter conditions.</p>
                      * 
                      */
                     QueryTaskFilter GetQueryTaskFilter() const;
 
                     /**
-                     * 设置<p>Query filter criteria</p>
-                     * @param _queryTaskFilter <p>Query filter criteria</p>
+                     * 设置<p>Query filter conditions.</p>
+                     * @param _queryTaskFilter <p>Query filter conditions.</p>
                      * 
                      */
                     void SetQueryTaskFilter(const QueryTaskFilter& _queryTaskFilter);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Query page started</p>
+                     * <p>Start query page</p>
                      */
                     int64_t m_pageNum;
                     bool m_pageNumHasBeenSet;
 
                     /**
-                     * <p>How many data to get on the current page</p>
+                     * <p>How many data entries to retrieve on the current page</p>
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * <p>Query filter criteria</p>
+                     * <p>Query filter conditions.</p>
                      */
                     QueryTaskFilter m_queryTaskFilter;
                     bool m_queryTaskFilterHasBeenSet;
