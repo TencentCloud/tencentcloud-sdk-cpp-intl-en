@@ -240,15 +240,15 @@ Default value: 4
                     bool NeedVerifyIdCardHasBeenSet() const;
 
                     /**
-                     * 获取Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
-                     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+                     * 获取Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
+                     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
                      * 
                      */
                     bool GetDisableChangeOcrResult() const;
 
                     /**
-                     * 设置Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
-                     * @param _disableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+                     * 设置Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
+                     * @param _disableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
                      * 
                      */
                     void SetDisableChangeOcrResult(const bool& _disableChangeOcrResult);
@@ -262,18 +262,14 @@ Default value: 4
 
                     /**
                      * 获取Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      * 
                      */
                     bool GetDisableCheckOcrWarnings() const;
 
                     /**
                      * 设置Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      * @param _disableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      * 
                      */
                     void SetDisableCheckOcrWarnings(const bool& _disableCheckOcrWarnings);
@@ -287,18 +283,18 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 
                     /**
                      * 获取Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
                      * @return SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
                      * 
                      */
                     std::vector<int64_t> GetSelectedWarningCodes() const;
 
                     /**
                      * 设置Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
                      * @param _selectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
                      * 
                      */
                     void SetSelectedWarningCodes(const std::vector<int64_t>& _selectedWarningCodes);
@@ -810,21 +806,20 @@ Default value: 4
                     bool m_needVerifyIdCardHasBeenSet;
 
                     /**
-                     * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+                     * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
                      */
                     bool m_disableChangeOcrResult;
                     bool m_disableChangeOcrResultHasBeenSet;
 
                     /**
                      * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      */
                     bool m_disableCheckOcrWarnings;
                     bool m_disableCheckOcrWarningsHasBeenSet;
 
                     /**
                      * Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
                      */
                     std::vector<int64_t> m_selectedWarningCodes;
                     bool m_selectedWarningCodesHasBeenSet;

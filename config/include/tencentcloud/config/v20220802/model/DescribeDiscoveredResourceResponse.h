@@ -46,11 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return ResourceId Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetResourceId() const;
@@ -63,12 +59,8 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource type
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceType Resource type
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource type.
+                     * @return ResourceType Resource type.
                      * 
                      */
                     std::string GetResourceType() const;
@@ -81,12 +73,8 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceName Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource name
+                     * @return ResourceName Resource name
                      * 
                      */
                     std::string GetResourceName() const;
@@ -100,11 +88,7 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Resource region
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return ResourceRegion Resource region
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetResourceRegion() const;
@@ -117,10 +101,8 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceZone Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource availability zone.
+                     * @return ResourceZone Resource availability zone.
                      * 
                      */
                     std::string GetResourceZone() const;
@@ -133,12 +115,8 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceZoneHasBeenSet() const;
 
                     /**
-                     * 获取Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Configuration Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource configuration.
+                     * @return Configuration Resource configuration.
                      * 
                      */
                     std::string GetConfiguration() const;
@@ -152,11 +130,7 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetResourceCreateTime() const;
@@ -170,11 +144,7 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return Tags Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
@@ -187,10 +157,8 @@ Note: This field may return null, indicating that no valid value is found.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Resource update time
-Note: This field may return null, indicating that no valid value is found.
-                     * @return UpdateTime Resource update time
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource update time.
+                     * @return UpdateTime Resource update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
@@ -206,70 +174,54 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Resource type
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource type.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource name
                      */
                     std::string m_resourceName;
                     bool m_resourceNameHasBeenSet;
 
                     /**
                      * Resource region
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_resourceRegion;
                     bool m_resourceRegionHasBeenSet;
 
                     /**
-                     * Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource availability zone.
                      */
                     std::string m_resourceZone;
                     bool m_resourceZoneHasBeenSet;
 
                     /**
-                     * Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource configuration.
                      */
                     std::string m_configuration;
                     bool m_configurationHasBeenSet;
 
                     /**
                      * Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_resourceCreateTime;
                     bool m_resourceCreateTimeHasBeenSet;
 
                     /**
                      * Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Resource update time
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

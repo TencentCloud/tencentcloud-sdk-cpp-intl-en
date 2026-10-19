@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video image sprite task. This structure is only used for tasks initiated by the 2017 [capture CSS sprites](https://www.tencentcloud.com/document/product/266/8101?from_cn_redirect=1) API.
+                * Video image sprite task. This structure is only used for tasks initiated by the 2017 capture CSS sprites API.
                 */
                 class CreateImageSpriteTask2017 : public AbstractModel
                 {

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>id list</
-                     * @return Id <p>id list</
+                     * 获取<p>id list</p>
+                     * @return Id <p>id list</p>
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置<p>id list</
-                     * @param _id <p>id list</
+                     * 设置<p>id list</p>
+                     * @param _id <p>id list</p>
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取<p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
-                     * @return AssetRange <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+                     * 获取<p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
+                     * @return AssetRange <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
                      * 
                      */
                     uint64_t GetAssetRange() const;
 
                     /**
-                     * 设置<p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
-                     * @param _assetRange <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+                     * 设置<p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
+                     * @param _assetRange <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
                      * 
                      */
                     void SetAssetRange(const uint64_t& _assetRange);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>id list</
+                     * <p>id list</p>
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+                     * <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
                      */
                     uint64_t m_assetRange;
                     bool m_assetRangeHasBeenSet;

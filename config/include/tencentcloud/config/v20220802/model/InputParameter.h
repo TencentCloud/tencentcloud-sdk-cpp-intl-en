@@ -89,23 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Value Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Parameter value.
+                     * @return Value Parameter value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _value Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Parameter value.
+                     * @param _value Parameter value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -132,9 +124,7 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Parameter value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

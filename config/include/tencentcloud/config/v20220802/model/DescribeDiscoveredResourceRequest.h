@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource type
-                     * @return ResourceType Resource type
+                     * 获取Resource type.
+                     * @return ResourceType Resource type.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type
-                     * @param _resourceType Resource type
+                     * 设置Resource type.
+                     * @param _resourceType Resource type.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Resource type
+                     * Resource type.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

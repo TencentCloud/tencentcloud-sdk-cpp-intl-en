@@ -790,6 +790,56 @@ DbbrainClient::DescribeAuditInstanceListOutcomeCallable DbbrainClient::DescribeA
     return prom->get_future();
 }
 
+DbbrainClient::DescribeDBAuditLogsOutcome DbbrainClient::DescribeDBAuditLogs(const DescribeDBAuditLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBAuditLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBAuditLogsResponse rsp = DescribeDBAuditLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBAuditLogsOutcome(rsp);
+        else
+            return DescribeDBAuditLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBAuditLogsOutcome(outcome.GetError());
+    }
+}
+
+void DbbrainClient::DescribeDBAuditLogsAsync(const DescribeDBAuditLogsRequest& request, const DescribeDBAuditLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDBAuditLogsRequest&;
+    using Resp = DescribeDBAuditLogsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBAuditLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+DbbrainClient::DescribeDBAuditLogsOutcomeCallable DbbrainClient::DescribeDBAuditLogsCallable(const DescribeDBAuditLogsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDBAuditLogsOutcome>>();
+    DescribeDBAuditLogsAsync(
+    request,
+    [prom](
+        const DbbrainClient*,
+        const DescribeDBAuditLogsRequest&,
+        DescribeDBAuditLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 DbbrainClient::DescribeDBDiagEventOutcome DbbrainClient::DescribeDBDiagEvent(const DescribeDBDiagEventRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBDiagEvent");

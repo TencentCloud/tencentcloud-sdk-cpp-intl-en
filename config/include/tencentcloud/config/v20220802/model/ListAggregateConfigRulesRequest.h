@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the limit per page.
-                     * @return Limit Specifies the limit per page.
+                     * 获取<p>Number of items per page.</p>
+                     * @return Limit <p>Number of items per page.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Specifies the limit per page.
-                     * @param _limit Specifies the limit per page.
+                     * 设置<p>Number of items per page.</p>
+                     * @param _limit <p>Number of items per page.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取<p>Offset.</p>
+                     * @return Offset <p>Offset.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param _offset Offset.
+                     * 设置<p>Offset.</p>
+                     * @param _offset <p>Offset.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Account group ID
-                     * @return AccountGroupId Account group ID
+                     * 获取<p>Account group ID.</p>
+                     * @return AccountGroupId <p>Account group ID.</p>
                      * 
                      */
                     std::string GetAccountGroupId() const;
 
                     /**
-                     * 设置Account group ID
-                     * @param _accountGroupId Account group ID
+                     * 设置<p>Account group ID.</p>
+                     * @param _accountGroupId <p>Account group ID.</p>
                      * 
                      */
                     void SetAccountGroupId(const std::string& _accountGroupId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AccountGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Sort type, descending: desc, ascending: asc.
-                     * @return OrderType Sort type, descending: desc, ascending: asc.
+                     * 获取<p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
+                     * @return OrderType <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
                      * 
                      */
                     std::string GetOrderType() const;
 
                     /**
-                     * 设置Sort type, descending: desc, ascending: asc.
-                     * @param _orderType Sort type, descending: desc, ascending: asc.
+                     * 设置<p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
+                     * @param _orderType <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
                      * 
                      */
                     void SetOrderType(const std::string& _orderType);
@@ -127,31 +127,15 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
-                     * @return RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+                     * 获取<p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
+                     * @return RiskLevel <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
                      * 
                      */
                     std::vector<uint64_t> GetRiskLevel() const;
 
                     /**
-                     * 设置Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
-                     * @param _riskLevel Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+                     * 设置<p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
+                     * @param _riskLevel <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
                      * 
                      */
                     void SetRiskLevel(const std::vector<uint64_t>& _riskLevel);
@@ -164,15 +148,15 @@ namespace TencentCloud
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Rule status
-                     * @return State Rule status
+                     * 获取<p>Rule status.</p>
+                     * @return State <p>Rule status.</p>
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Rule status
-                     * @param _state Rule status
+                     * 设置<p>Rule status.</p>
+                     * @param _state <p>Rule status.</p>
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -185,15 +169,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Evaluation result
-                     * @return ComplianceResult Evaluation result
+                     * 获取<p>Evaluation results.</p>
+                     * @return ComplianceResult <p>Evaluation results.</p>
                      * 
                      */
                     std::vector<std::string> GetComplianceResult() const;
 
                     /**
-                     * 设置Evaluation result
-                     * @param _complianceResult Evaluation result
+                     * 设置<p>Evaluation results.</p>
+                     * @param _complianceResult <p>Evaluation results.</p>
                      * 
                      */
                     void SetComplianceResult(const std::vector<std::string>& _complianceResult);
@@ -206,15 +190,15 @@ namespace TencentCloud
                     bool ComplianceResultHasBeenSet() const;
 
                     /**
-                     * 获取Name of the rule
-                     * @return RuleName Name of the rule
+                     * 获取<p>Rule name.</p>
+                     * @return RuleName <p>Rule name.</p>
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Name of the rule
-                     * @param _ruleName Name of the rule
+                     * 设置<p>Rule name.</p>
+                     * @param _ruleName <p>Rule name.</p>
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -227,15 +211,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule ownership account ID
-                     * @return RuleOwnerId Rule ownership account ID
+                     * 获取<p>ID of the account to which the rule belongs.</p>
+                     * @return RuleOwnerId <p>ID of the account to which the rule belongs.</p>
                      * 
                      */
                     uint64_t GetRuleOwnerId() const;
 
                     /**
-                     * 设置Rule ownership account ID
-                     * @param _ruleOwnerId Rule ownership account ID
+                     * 设置<p>ID of the account to which the rule belongs.</p>
+                     * @param _ruleOwnerId <p>ID of the account to which the rule belongs.</p>
                      * 
                      */
                     void SetRuleOwnerId(const uint64_t& _ruleOwnerId);
@@ -250,59 +234,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the limit per page.
+                     * <p>Number of items per page.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset.
+                     * <p>Offset.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Account group ID
+                     * <p>Account group ID.</p>
                      */
                     std::string m_accountGroupId;
                     bool m_accountGroupIdHasBeenSet;
 
                     /**
-                     * Sort type, descending: desc, ascending: asc.
+                     * <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
                      */
                     std::string m_orderType;
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+                     * <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
                      */
                     std::vector<uint64_t> m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Rule status
+                     * <p>Rule status.</p>
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Evaluation result
+                     * <p>Evaluation results.</p>
                      */
                     std::vector<std::string> m_complianceResult;
                     bool m_complianceResultHasBeenSet;
 
                     /**
-                     * Name of the rule
+                     * <p>Rule name.</p>
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Rule ownership account ID
+                     * <p>ID of the account to which the rule belongs.</p>
                      */
                     uint64_t m_ruleOwnerId;
                     bool m_ruleOwnerIdHasBeenSet;

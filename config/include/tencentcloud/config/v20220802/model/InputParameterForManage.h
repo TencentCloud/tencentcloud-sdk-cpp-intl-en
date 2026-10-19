@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule input parameters
+                * Rule input parameters.
                 */
                 class InputParameterForManage : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ValueType Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Value type. Valid values: Integer and String.
+                     * @return ValueType Value type. Valid values: Integer and String.
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _valueType Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Value type. Valid values: Integer and String.
+                     * @param _valueType Value type. Valid values: Integer and String.
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter key
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ParameterKey Parameter key
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Parameter key.
+                     * @return ParameterKey Parameter key.
                      * 
                      */
                     std::string GetParameterKey() const;
 
                     /**
-                     * 设置Parameter key
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _parameterKey Parameter key
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Parameter key.
+                     * @param _parameterKey Parameter key.
                      * 
                      */
                     void SetParameterKey(const std::string& _parameterKey);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ParameterKeyHasBeenSet() const;
 
                     /**
-                     * 获取Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Type Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Parameter type. Valid values: Require (required) and Optional (optional).
+                     * @return Type Parameter type. Valid values: Require (required) and Optional (optional).
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _type Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Parameter type. Valid values: Require (required) and Optional (optional).
+                     * @param _type Parameter type. Valid values: Require (required) and Optional (optional).
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -123,22 +111,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Default value
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return DefaultValue Default value
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
                      * 设置Default value
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _defaultValue Default value
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
@@ -152,22 +132,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Description
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return Description Description
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _description Description
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -182,38 +154,31 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+                     * Value type. Valid values: Integer and String.
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Parameter key
-Note: This field may return null, indicating that no valid value is found.
+                     * Parameter key.
                      */
                     std::string m_parameterKey;
                     bool m_parameterKeyHasBeenSet;
 
                     /**
-                     * Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+                     * Parameter type. Valid values: Require (required) and Optional (optional).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Default value
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_defaultValue;
                     bool m_defaultValueHasBeenSet;
 
                     /**
                      * Description
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

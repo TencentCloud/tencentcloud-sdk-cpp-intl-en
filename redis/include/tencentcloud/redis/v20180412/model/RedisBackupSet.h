@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
-                     * @return BackupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+                     * 获取<p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
+                     * @return BackupType <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置<p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
-                     * @param _backupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+                     * 设置<p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
+                     * @param _backupType <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -397,7 +397,7 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+                     * <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;

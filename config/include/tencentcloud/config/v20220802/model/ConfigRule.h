@@ -53,19 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule identifier
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Identifier Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Rule ID
+                     * @return Identifier Rule ID
                      * 
                      */
                     std::string GetIdentifier() const;
 
                     /**
-                     * 设置Rule identifier
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _identifier Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Rule ID
+                     * @param _identifier Rule ID
                      * 
                      */
                     void SetIdentifier(const std::string& _identifier);
@@ -78,23 +74,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool IdentifierHasBeenSet() const;
 
                     /**
-                     * 获取Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return RuleName Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Rule Name
+                     * @return RuleName Rule Name
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _ruleName Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Rule Name
+                     * @param _ruleName Rule Name
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -108,18 +96,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Rule parameters
-Note: This field may return null, indicating that no valid value is found.
                      * @return InputParameter Rule parameters
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::vector<InputParameter> GetInputParameter() const;
 
                     /**
                      * 设置Rule parameters
-Note: This field may return null, indicating that no valid value is found.
                      * @param _inputParameter Rule parameters
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetInputParameter(const std::vector<InputParameter>& _inputParameter);
@@ -133,22 +117,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return SourceCondition Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::vector<SourceConditionForManage> GetSourceCondition() const;
 
                     /**
                      * 设置Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _sourceCondition Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetSourceCondition(const std::vector<SourceConditionForManage>& _sourceCondition);
@@ -161,19 +137,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool SourceConditionHasBeenSet() const;
 
                     /**
-                     * 获取Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceType Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource types supported by the rule. The rule applies only to resources of the specified resource types.
+                     * @return ResourceType Resource types supported by the rule. The rule applies only to resources of the specified resource types.
                      * 
                      */
                     std::vector<std::string> GetResourceType() const;
 
                     /**
-                     * 设置Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _resourceType Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Resource types supported by the rule. The rule applies only to resources of the specified resource types.
+                     * @param _resourceType Resource types supported by the rule. The rule applies only to resources of the specified resource types.
                      * 
                      */
                     void SetResourceType(const std::vector<std::string>& _resourceType);
@@ -186,19 +158,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Labels Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Rule tags.
+                     * @return Labels Rule tags.
                      * 
                      */
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _labels Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Rule tags.
+                     * @param _labels Rule tags.
                      * 
                      */
                     void SetLabels(const std::vector<std::string>& _labels);
@@ -211,31 +179,27 @@ Note: This field may return null, indicating that no valid value is found.
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取Rule risk level
+                     * 获取Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
-                     * @return RiskLevel Rule risk level
+2: Medium-risk
+3: High-risk
+                     * @return RiskLevel Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
                      * 
                      */
                     int64_t GetRiskLevel() const;
 
                     /**
-                     * 设置Rule risk level
+                     * 设置Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _riskLevel Rule risk level
+2: Medium-risk
+3: High-risk
+                     * @param _riskLevel Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
                      * 
                      */
                     void SetRiskLevel(const int64_t& _riskLevel);
@@ -248,19 +212,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ServiceFunction Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Function corresponding to the rule.
+                     * @return ServiceFunction Function corresponding to the rule.
                      * 
                      */
                     std::string GetServiceFunction() const;
 
                     /**
-                     * 设置Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _serviceFunction Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Function corresponding to the rule.
+                     * @param _serviceFunction Function corresponding to the rule.
                      * 
                      */
                     void SetServiceFunction(const std::string& _serviceFunction);
@@ -273,27 +233,19 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ServiceFunctionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-
+                     * 获取Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
-                     * @return CreateTime Creation time
-
+                     * @return CreateTime Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-
+                     * 设置Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _createTime Creation time
-
+                     * @param _createTime Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -307,22 +259,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Rule description
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return Description Rule description
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _description Rule description
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -335,23 +279,19 @@ Note: This field may return null, indicating that no valid value is found.
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取ACTIVE: Enabled
+                     * 获取ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Status ACTIVE: Enabled
+                     * @return Status ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置ACTIVE: Enabled
+                     * 设置ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _status ACTIVE: Enabled
+                     * @param _status ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -364,27 +304,23 @@ Note: This field may return null, indicating that no valid value is found.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ComplianceResult Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
+                     * @return ComplianceResult Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
                      * 
                      */
                     std::string GetComplianceResult() const;
 
                     /**
-                     * 设置Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _complianceResult Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
+                     * @param _complianceResult Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
                      * 
                      */
                     void SetComplianceResult(const std::string& _complianceResult);
@@ -398,18 +334,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取["",""]
-Note: This field may return null, indicating that no valid value is found.
                      * @return Annotation ["",""]
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     Annotation GetAnnotation() const;
 
                     /**
                      * 设置["",""]
-Note: This field may return null, indicating that no valid value is found.
                      * @param _annotation ["",""]
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetAnnotation(const Annotation& _annotation);
@@ -425,11 +357,9 @@ Note: This field may return null, indicating that no valid value is found.
                      * 获取Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
                      * @return ConfigRuleInvokedTime Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetConfigRuleInvokedTime() const;
@@ -438,11 +368,9 @@ Note: This field may return null, indicating that no valid value is found.
                      * 设置Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
                      * @param _configRuleInvokedTime Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetConfigRuleInvokedTime(const std::string& _configRuleInvokedTime);
@@ -456,22 +384,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return ConfigRuleId Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetConfigRuleId() const;
 
                     /**
                      * 设置Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _configRuleId Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetConfigRuleId(const std::string& _configRuleId);
@@ -484,23 +404,19 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ConfigRuleIdHasBeenSet() const;
 
                     /**
-                     * 获取CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
-                     * @return IdentifierType CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取CUSTOMIZE: custom rule
+SYSTEM: managed rule
+                     * @return IdentifierType CUSTOMIZE: custom rule
+SYSTEM: managed rule
                      * 
                      */
                     std::string GetIdentifierType() const;
 
                     /**
-                     * 设置CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _identifierType CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置CUSTOMIZE: custom rule
+SYSTEM: managed rule
+                     * @param _identifierType CUSTOMIZE: custom rule
+SYSTEM: managed rule
                      * 
                      */
                     void SetIdentifierType(const std::string& _identifierType);
@@ -513,19 +429,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool IdentifierTypeHasBeenSet() const;
 
                     /**
-                     * 获取Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
-                     * @return CompliancePackId Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Compliance package ID.
+                     * @return CompliancePackId Compliance package ID.
                      * 
                      */
                     std::string GetCompliancePackId() const;
 
                     /**
-                     * 设置Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _compliancePackId Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Compliance package ID.
+                     * @param _compliancePackId Compliance package ID.
                      * 
                      */
                     void SetCompliancePackId(const std::string& _compliancePackId);
@@ -539,30 +451,22 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
                      * @return TriggerType Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
                      * 
                      */
                     std::vector<TriggerType> GetTriggerType() const;
 
                     /**
                      * 设置Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
                      * @param _triggerType Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
                      * 
                      */
                     void SetTriggerType(const std::vector<TriggerType>& _triggerType);
@@ -576,22 +480,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return ManageInputParameter Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::vector<InputParameterForManage> GetManageInputParameter() const;
 
                     /**
                      * 设置Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _manageInputParameter Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetManageInputParameter(const std::vector<InputParameterForManage>& _manageInputParameter);
@@ -604,23 +500,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ManageInputParameterHasBeenSet() const;
 
                     /**
-                     * 获取Rule name
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return CompliancePackName Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Compliance package name
+                     * @return CompliancePackName Compliance package name
                      * 
                      */
                     std::string GetCompliancePackName() const;
 
                     /**
-                     * 设置Rule name
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _compliancePackName Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Compliance package name
+                     * @param _compliancePackName Compliance package name
                      * 
                      */
                     void SetCompliancePackName(const std::string& _compliancePackName);
@@ -633,19 +521,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool CompliancePackNameHasBeenSet() const;
 
                     /**
-                     * 获取Associated region
-Note: This field may return null, indicating that no valid value is found.
-                     * @return RegionsScope Associated region
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Associated regions.
+                     * @return RegionsScope Associated regions.
                      * 
                      */
                     std::vector<std::string> GetRegionsScope() const;
 
                     /**
-                     * 设置Associated region
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _regionsScope Associated region
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Associated regions.
+                     * @param _regionsScope Associated regions.
                      * 
                      */
                     void SetRegionsScope(const std::vector<std::string>& _regionsScope);
@@ -658,23 +542,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool RegionsScopeHasBeenSet() const;
 
                     /**
-                     * 获取Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return TagsScope Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Associated tag
+                     * @return TagsScope Associated tag
                      * 
                      */
                     std::vector<Tag> GetTagsScope() const;
 
                     /**
-                     * 设置Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _tagsScope Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Associated tag
+                     * @param _tagsScope Associated tag
                      * 
                      */
                     void SetTagsScope(const std::vector<Tag>& _tagsScope);
@@ -687,19 +563,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool TagsScopeHasBeenSet() const;
 
                     /**
-                     * 获取 The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取 The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
+                     * @return ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
                      * 
                      */
                     std::vector<std::string> GetExcludeResourceIdsScope() const;
 
                     /**
-                     * 设置 The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _excludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置 The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
+                     * @param _excludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
                      * 
                      */
                     void SetExcludeResourceIdsScope(const std::vector<std::string>& _excludeResourceIdsScope);
@@ -712,23 +584,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ExcludeResourceIdsScopeHasBeenSet() const;
 
                     /**
-                     * 获取Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return AccountGroupId Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Account group ID.
+                     * @return AccountGroupId Account group ID.
                      * 
                      */
                     std::string GetAccountGroupId() const;
 
                     /**
-                     * 设置Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _accountGroupId Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Account group ID.
+                     * @param _accountGroupId Account group ID.
                      * 
                      */
                     void SetAccountGroupId(const std::string& _accountGroupId);
@@ -741,19 +605,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool AccountGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Account group name
-Note: This field may return null, indicating that no valid value is found.
-                     * @return AccountGroupName Account group name
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Account group name.
+                     * @return AccountGroupName Account group name.
                      * 
                      */
                     std::string GetAccountGroupName() const;
 
                     /**
-                     * 设置Account group name
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _accountGroupName Account group name
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Account group name.
+                     * @param _accountGroupName Account group name.
                      * 
                      */
                     void SetAccountGroupName(const std::string& _accountGroupName);
@@ -766,19 +626,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool AccountGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
-                     * @return RuleOwnerId Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Rule owner user ID.
+                     * @return RuleOwnerId Rule owner user ID.
                      * 
                      */
                     uint64_t GetRuleOwnerId() const;
 
                     /**
-                     * 设置Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _ruleOwnerId Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Rule owner user ID.
+                     * @param _ruleOwnerId Rule owner user ID.
                      * 
                      */
                     void SetRuleOwnerId(const uint64_t& _ruleOwnerId);
@@ -791,23 +647,23 @@ Note: This field may return null, indicating that no valid value is found.
                     bool RuleOwnerIdHasBeenSet() const;
 
                     /**
-                     * 获取Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
-                     * @return ManageTriggerType Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+                     * 获取Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
+                     * @return ManageTriggerType Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
                      * 
                      */
                     std::vector<std::string> GetManageTriggerType() const;
 
                     /**
-                     * 设置Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
-                     * @param _manageTriggerType Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+                     * 设置Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
+                     * @param _manageTriggerType Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
                      * 
                      */
                     void SetManageTriggerType(const std::vector<std::string>& _manageTriggerType);
@@ -822,103 +678,86 @@ Triggered by configuration change
                 private:
 
                     /**
-                     * Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+                     * Rule ID
                      */
                     std::string m_identifier;
                     bool m_identifierHasBeenSet;
 
                     /**
-                     * Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Rule Name
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
                      * Rule parameters
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::vector<InputParameter> m_inputParameter;
                     bool m_inputParameterHasBeenSet;
 
                     /**
                      * Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::vector<SourceConditionForManage> m_sourceCondition;
                     bool m_sourceConditionHasBeenSet;
 
                     /**
-                     * Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource types supported by the rule. The rule applies only to resources of the specified resource types.
                      */
                     std::vector<std::string> m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+                     * Rule tags.
                      */
                     std::vector<std::string> m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * Rule risk level
+                     * Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
                      */
                     int64_t m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+                     * Function corresponding to the rule.
                      */
                     std::string m_serviceFunction;
                     bool m_serviceFunctionHasBeenSet;
 
                     /**
-                     * Creation time
-
+                     * Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Rule description
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * ACTIVE: Enabled
+                     * ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+                     * Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
                      */
                     std::string m_complianceResult;
                     bool m_complianceResultHasBeenSet;
 
                     /**
                      * ["",""]
-Note: This field may return null, indicating that no valid value is found.
                      */
                     Annotation m_annotation;
                     bool m_annotationHasBeenSet;
@@ -927,108 +766,89 @@ Note: This field may return null, indicating that no valid value is found.
                      * Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_configRuleInvokedTime;
                     bool m_configRuleInvokedTimeHasBeenSet;
 
                     /**
                      * Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_configRuleId;
                     bool m_configRuleIdHasBeenSet;
 
                     /**
-                     * CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+                     * CUSTOMIZE: custom rule
+SYSTEM: managed rule
                      */
                     std::string m_identifierType;
                     bool m_identifierTypeHasBeenSet;
 
                     /**
-                     * Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+                     * Compliance package ID.
                      */
                     std::string m_compliancePackId;
                     bool m_compliancePackIdHasBeenSet;
 
                     /**
                      * Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
                      */
                     std::vector<TriggerType> m_triggerType;
                     bool m_triggerTypeHasBeenSet;
 
                     /**
                      * Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::vector<InputParameterForManage> m_manageInputParameter;
                     bool m_manageInputParameterHasBeenSet;
 
                     /**
-                     * Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Compliance package name
                      */
                     std::string m_compliancePackName;
                     bool m_compliancePackNameHasBeenSet;
 
                     /**
-                     * Associated region
-Note: This field may return null, indicating that no valid value is found.
+                     * Associated regions.
                      */
                     std::vector<std::string> m_regionsScope;
                     bool m_regionsScopeHasBeenSet;
 
                     /**
-                     * Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Associated tag
                      */
                     std::vector<Tag> m_tagsScope;
                     bool m_tagsScopeHasBeenSet;
 
                     /**
-                     *  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     *  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
                      */
                     std::vector<std::string> m_excludeResourceIdsScope;
                     bool m_excludeResourceIdsScopeHasBeenSet;
 
                     /**
-                     * Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Account group ID.
                      */
                     std::string m_accountGroupId;
                     bool m_accountGroupIdHasBeenSet;
 
                     /**
-                     * Account group name
-Note: This field may return null, indicating that no valid value is found.
+                     * Account group name.
                      */
                     std::string m_accountGroupName;
                     bool m_accountGroupNameHasBeenSet;
 
                     /**
-                     * Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+                     * Rule owner user ID.
                      */
                     uint64_t m_ruleOwnerId;
                     bool m_ruleOwnerIdHasBeenSet;
 
                     /**
-                     * Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+                     * Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
                      */
                     std::vector<std::string> m_manageTriggerType;
                     bool m_manageTriggerTypeHasBeenSet;

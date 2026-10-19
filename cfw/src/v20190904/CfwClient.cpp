@@ -40,56 +40,6 @@ CfwClient::CfwClient(const Credential &credential, const string &region, const C
 }
 
 
-CfwClient::AddAcRuleOutcome CfwClient::AddAcRule(const AddAcRuleRequest &request)
-{
-    auto outcome = MakeRequest(request, "AddAcRule");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        AddAcRuleResponse rsp = AddAcRuleResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return AddAcRuleOutcome(rsp);
-        else
-            return AddAcRuleOutcome(o.GetError());
-    }
-    else
-    {
-        return AddAcRuleOutcome(outcome.GetError());
-    }
-}
-
-void CfwClient::AddAcRuleAsync(const AddAcRuleRequest& request, const AddAcRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const AddAcRuleRequest&;
-    using Resp = AddAcRuleResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "AddAcRule", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CfwClient::AddAcRuleOutcomeCallable CfwClient::AddAcRuleCallable(const AddAcRuleRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<AddAcRuleOutcome>>();
-    AddAcRuleAsync(
-    request,
-    [prom](
-        const CfwClient*,
-        const AddAcRuleRequest&,
-        AddAcRuleOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CfwClient::AddAclRuleOutcome CfwClient::AddAclRule(const AddAclRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "AddAclRule");
@@ -490,56 +440,6 @@ CfwClient::DeleteAcRuleOutcomeCallable CfwClient::DeleteAcRuleCallable(const Del
     return prom->get_future();
 }
 
-CfwClient::DeleteAllAccessControlRuleOutcome CfwClient::DeleteAllAccessControlRule(const DeleteAllAccessControlRuleRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteAllAccessControlRule");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteAllAccessControlRuleResponse rsp = DeleteAllAccessControlRuleResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteAllAccessControlRuleOutcome(rsp);
-        else
-            return DeleteAllAccessControlRuleOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteAllAccessControlRuleOutcome(outcome.GetError());
-    }
-}
-
-void CfwClient::DeleteAllAccessControlRuleAsync(const DeleteAllAccessControlRuleRequest& request, const DeleteAllAccessControlRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DeleteAllAccessControlRuleRequest&;
-    using Resp = DeleteAllAccessControlRuleResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DeleteAllAccessControlRule", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CfwClient::DeleteAllAccessControlRuleOutcomeCallable CfwClient::DeleteAllAccessControlRuleCallable(const DeleteAllAccessControlRuleRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DeleteAllAccessControlRuleOutcome>>();
-    DeleteAllAccessControlRuleAsync(
-    request,
-    [prom](
-        const CfwClient*,
-        const DeleteAllAccessControlRuleRequest&,
-        DeleteAllAccessControlRuleOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CfwClient::DeleteResourceGroupOutcome CfwClient::DeleteResourceGroup(const DeleteResourceGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteResourceGroup");
@@ -632,56 +532,6 @@ CfwClient::DeleteSecurityGroupRuleOutcomeCallable CfwClient::DeleteSecurityGroup
         const CfwClient*,
         const DeleteSecurityGroupRuleRequest&,
         DeleteSecurityGroupRuleOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CfwClient::DeleteVpcInstanceOutcome CfwClient::DeleteVpcInstance(const DeleteVpcInstanceRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteVpcInstance");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteVpcInstanceResponse rsp = DeleteVpcInstanceResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteVpcInstanceOutcome(rsp);
-        else
-            return DeleteVpcInstanceOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteVpcInstanceOutcome(outcome.GetError());
-    }
-}
-
-void CfwClient::DeleteVpcInstanceAsync(const DeleteVpcInstanceRequest& request, const DeleteVpcInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DeleteVpcInstanceRequest&;
-    using Resp = DeleteVpcInstanceResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DeleteVpcInstance", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CfwClient::DeleteVpcInstanceOutcomeCallable CfwClient::DeleteVpcInstanceCallable(const DeleteVpcInstanceRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DeleteVpcInstanceOutcome>>();
-    DeleteVpcInstanceAsync(
-    request,
-    [prom](
-        const CfwClient*,
-        const DeleteVpcInstanceRequest&,
-        DeleteVpcInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2040,6 +1890,56 @@ CfwClient::DescribeVpcAcRuleOutcomeCallable CfwClient::DescribeVpcAcRuleCallable
     return prom->get_future();
 }
 
+CfwClient::DescribeVpcFwIpStatOutcome CfwClient::DescribeVpcFwIpStat(const DescribeVpcFwIpStatRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVpcFwIpStat");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVpcFwIpStatResponse rsp = DescribeVpcFwIpStatResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVpcFwIpStatOutcome(rsp);
+        else
+            return DescribeVpcFwIpStatOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVpcFwIpStatOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::DescribeVpcFwIpStatAsync(const DescribeVpcFwIpStatRequest& request, const DescribeVpcFwIpStatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVpcFwIpStatRequest&;
+    using Resp = DescribeVpcFwIpStatResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVpcFwIpStat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfwClient::DescribeVpcFwIpStatOutcomeCallable CfwClient::DescribeVpcFwIpStatCallable(const DescribeVpcFwIpStatRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVpcFwIpStatOutcome>>();
+    DescribeVpcFwIpStatAsync(
+    request,
+    [prom](
+        const CfwClient*,
+        const DescribeVpcFwIpStatRequest&,
+        DescribeVpcFwIpStatOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfwClient::ExpandCfwVerticalOutcome CfwClient::ExpandCfwVertical(const ExpandCfwVerticalRequest &request)
 {
     auto outcome = MakeRequest(request, "ExpandCfwVertical");
@@ -2232,56 +2132,6 @@ CfwClient::ModifyAllRuleStatusOutcomeCallable CfwClient::ModifyAllRuleStatusCall
         const CfwClient*,
         const ModifyAllRuleStatusRequest&,
         ModifyAllRuleStatusOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CfwClient::ModifyAllVPCSwitchStatusOutcome CfwClient::ModifyAllVPCSwitchStatus(const ModifyAllVPCSwitchStatusRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyAllVPCSwitchStatus");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyAllVPCSwitchStatusResponse rsp = ModifyAllVPCSwitchStatusResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyAllVPCSwitchStatusOutcome(rsp);
-        else
-            return ModifyAllVPCSwitchStatusOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyAllVPCSwitchStatusOutcome(outcome.GetError());
-    }
-}
-
-void CfwClient::ModifyAllVPCSwitchStatusAsync(const ModifyAllVPCSwitchStatusRequest& request, const ModifyAllVPCSwitchStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const ModifyAllVPCSwitchStatusRequest&;
-    using Resp = ModifyAllVPCSwitchStatusResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "ModifyAllVPCSwitchStatus", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CfwClient::ModifyAllVPCSwitchStatusOutcomeCallable CfwClient::ModifyAllVPCSwitchStatusCallable(const ModifyAllVPCSwitchStatusRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<ModifyAllVPCSwitchStatusOutcome>>();
-    ModifyAllVPCSwitchStatusAsync(
-    request,
-    [prom](
-        const CfwClient*,
-        const ModifyAllVPCSwitchStatusRequest&,
-        ModifyAllVPCSwitchStatusOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2782,56 +2632,6 @@ CfwClient::ModifyNatSequenceRulesOutcomeCallable CfwClient::ModifyNatSequenceRul
         const CfwClient*,
         const ModifyNatSequenceRulesRequest&,
         ModifyNatSequenceRulesOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CfwClient::ModifyPublicIPSwitchStatusOutcome CfwClient::ModifyPublicIPSwitchStatus(const ModifyPublicIPSwitchStatusRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyPublicIPSwitchStatus");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyPublicIPSwitchStatusResponse rsp = ModifyPublicIPSwitchStatusResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyPublicIPSwitchStatusOutcome(rsp);
-        else
-            return ModifyPublicIPSwitchStatusOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyPublicIPSwitchStatusOutcome(outcome.GetError());
-    }
-}
-
-void CfwClient::ModifyPublicIPSwitchStatusAsync(const ModifyPublicIPSwitchStatusRequest& request, const ModifyPublicIPSwitchStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const ModifyPublicIPSwitchStatusRequest&;
-    using Resp = ModifyPublicIPSwitchStatusResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "ModifyPublicIPSwitchStatus", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CfwClient::ModifyPublicIPSwitchStatusOutcomeCallable CfwClient::ModifyPublicIPSwitchStatusCallable(const ModifyPublicIPSwitchStatusRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<ModifyPublicIPSwitchStatusOutcome>>();
-    ModifyPublicIPSwitchStatusAsync(
-    request,
-    [prom](
-        const CfwClient*,
-        const ModifyPublicIPSwitchStatusRequest&,
-        ModifyPublicIPSwitchStatusOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

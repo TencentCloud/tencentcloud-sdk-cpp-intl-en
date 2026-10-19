@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Configuration Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
+                     * @return Configuration Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
                      * 
                      */
                     std::string GetConfiguration() const;
 
                     /**
-                     * 设置Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _configuration Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
+                     * @param _configuration Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
                      * 
                      */
                     void SetConfiguration(const std::string& _configuration);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ConfigurationHasBeenSet() const;
 
                     /**
-                     * 获取Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return DesiredValue Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
+                     * @return DesiredValue Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
                      * 
                      */
                     std::string GetDesiredValue() const;
 
                     /**
-                     * 设置Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _desiredValue Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
+                     * @param _desiredValue Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
                      * 
                      */
                     void SetDesiredValue(const std::string& _desiredValue);
@@ -141,15 +133,13 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
                      */
                     std::string m_configuration;
                     bool m_configurationHasBeenSet;
 
                     /**
-                     * Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+                     * Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
                      */
                     std::string m_desiredValue;
                     bool m_desiredValueHasBeenSet;

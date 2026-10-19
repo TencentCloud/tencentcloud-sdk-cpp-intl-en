@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video splicing task information. This structure is only used for tasks initiated via the 2017 [video splicing](https://www.tencentcloud.com/document/product/266/7821?from_cn_redirect=1) API.
+                * Video splicing task information. This structure is only used for tasks initiated via the 2017 video splicing API.
                 */
                 class ConcatTask2017 : public AbstractModel
                 {

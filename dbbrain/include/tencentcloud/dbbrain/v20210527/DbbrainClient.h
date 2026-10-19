@@ -53,6 +53,8 @@
 #include <tencentcloud/dbbrain/v20210527/model/DescribeAllUserGroupResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeAuditInstanceListRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeAuditInstanceListResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/DescribeDBAuditLogsRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/DescribeDBAuditLogsResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsRequest.h>
@@ -166,6 +168,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAuditInstanceListResponse> DescribeAuditInstanceListOutcome;
                 typedef std::future<DescribeAuditInstanceListOutcome> DescribeAuditInstanceListOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::DescribeAuditInstanceListRequest&, DescribeAuditInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditInstanceListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBAuditLogsResponse> DescribeDBAuditLogsOutcome;
+                typedef std::future<DescribeDBAuditLogsOutcome> DescribeDBAuditLogsOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::DescribeDBAuditLogsRequest&, DescribeDBAuditLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBAuditLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBDiagEventResponse> DescribeDBDiagEventOutcome;
                 typedef std::future<DescribeDBDiagEventOutcome> DescribeDBDiagEventOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::DescribeDBDiagEventRequest&, DescribeDBDiagEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBDiagEventAsyncHandler;
@@ -384,6 +389,15 @@ namespace TencentCloud
                 DescribeAuditInstanceListOutcome DescribeAuditInstanceList(const Model::DescribeAuditInstanceListRequest &request);
                 void DescribeAuditInstanceListAsync(const Model::DescribeAuditInstanceListRequest& request, const DescribeAuditInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAuditInstanceListOutcomeCallable DescribeAuditInstanceListCallable(const Model::DescribeAuditInstanceListRequest& request);
+
+                /**
+                 *Queries the audit log details of a specified instance within a time window, support by SQL type, execution time, error code, keyword, and other multi-condition filtering. Currently only support dcdb and mariadb products (cdb and cynosdb have been migrated to the central platform). Note that Filter.MultiSql and Filter.ExcludeMultiSql need to be transmitted as a JSON string in the form of a two-dimensional array, for example, [["a","b"]] means (a OR b), and the server will automatically parse it.
+                 * @param req DescribeDBAuditLogsRequest
+                 * @return DescribeDBAuditLogsOutcome
+                 */
+                DescribeDBAuditLogsOutcome DescribeDBAuditLogs(const Model::DescribeDBAuditLogsRequest &request);
+                void DescribeDBAuditLogsAsync(const Model::DescribeDBAuditLogsRequest& request, const DescribeDBAuditLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBAuditLogsOutcomeCallable DescribeDBAuditLogsCallable(const Model::DescribeDBAuditLogsRequest& request);
 
                 /**
                  *This API is used to get the details of an instance exception diagnosis event.

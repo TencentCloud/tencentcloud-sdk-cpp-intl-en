@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Managing end rule conditions
+                * Rule conditions on the operation side.
                 */
                 class SourceConditionForManage : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return EmptyAs Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
+                     * @return EmptyAs Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
                      * 
                      */
                     std::string GetEmptyAs() const;
 
                     /**
-                     * 设置Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _emptyAs Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
+                     * @param _emptyAs Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
                      * 
                      */
                     void SetEmptyAs(const std::string& _emptyAs);
@@ -73,22 +69,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return SelectPath Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetSelectPath() const;
 
                     /**
                      * 设置Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _selectPath Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetSelectPath(const std::string& _selectPath);
@@ -101,19 +89,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool SelectPathHasBeenSet() const;
 
                     /**
-                     * 获取Operators
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Operator Operators
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Operator.
+                     * @return Operator Operator.
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置Operators
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _operator Operators
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Operator.
+                     * @param _operator Operator.
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -126,23 +110,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Required Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Whether it is mandatory.
+                     * @return Required Whether it is mandatory.
                      * 
                      */
                     bool GetRequired() const;
 
                     /**
-                     * 设置Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _required Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Whether it is mandatory.
+                     * @param _required Whether it is mandatory.
                      * 
                      */
                     void SetRequired(const bool& _required);
@@ -156,18 +132,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Expected value
-Note: This field may return null, indicating that no valid value is found.
                      * @return DesiredValue Expected value
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetDesiredValue() const;
 
                     /**
                      * 设置Expected value
-Note: This field may return null, indicating that no valid value is found.
                      * @param _desiredValue Expected value
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDesiredValue(const std::string& _desiredValue);
@@ -182,38 +154,31 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+                     * Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
                      */
                     std::string m_emptyAs;
                     bool m_emptyAsHasBeenSet;
 
                     /**
                      * Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_selectPath;
                     bool m_selectPathHasBeenSet;
 
                     /**
-                     * Operators
-Note: This field may return null, indicating that no valid value is found.
+                     * Operator.
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Whether it is mandatory.
                      */
                     bool m_required;
                     bool m_requiredHasBeenSet;
 
                     /**
                      * Expected value
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_desiredValue;
                     bool m_desiredValueHasBeenSet;

@@ -590,6 +590,56 @@ MnaClient::DeleteL3ConnOutcomeCallable MnaClient::DeleteL3ConnCallable(const Del
     return prom->get_future();
 }
 
+MnaClient::DescribeAccessPointListOutcome MnaClient::DescribeAccessPointList(const DescribeAccessPointListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccessPointList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccessPointListResponse rsp = DescribeAccessPointListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccessPointListOutcome(rsp);
+        else
+            return DescribeAccessPointListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccessPointListOutcome(outcome.GetError());
+    }
+}
+
+void MnaClient::DescribeAccessPointListAsync(const DescribeAccessPointListRequest& request, const DescribeAccessPointListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAccessPointListRequest&;
+    using Resp = DescribeAccessPointListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAccessPointList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MnaClient::DescribeAccessPointListOutcomeCallable MnaClient::DescribeAccessPointListCallable(const DescribeAccessPointListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAccessPointListOutcome>>();
+    DescribeAccessPointListAsync(
+    request,
+    [prom](
+        const MnaClient*,
+        const DescribeAccessPointListRequest&,
+        DescribeAccessPointListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MnaClient::DescribeAccessRegionsOutcome MnaClient::DescribeAccessRegions(const DescribeAccessRegionsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAccessRegions");

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Items per Page
-                     * @return MaxResults Items per Page
+                     * 获取<p>Number of results displayed per page</p>
+                     * @return MaxResults <p>Number of results displayed per page</p>
                      * 
                      */
                     uint64_t GetMaxResults() const;
 
                     /**
-                     * 设置Items per Page
-                     * @param _maxResults Items per Page
+                     * 设置<p>Number of results displayed per page</p>
+                     * @param _maxResults <p>Number of results displayed per page</p>
                      * 
                      */
                     void SetMaxResults(const uint64_t& _maxResults);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool MaxResultsHasBeenSet() const;
 
                     /**
-                     * 获取Account group ID
-                     * @return AccountGroupId Account group ID
+                     * 获取<p>Account group ID.</p>
+                     * @return AccountGroupId <p>Account group ID.</p>
                      * 
                      */
                     std::string GetAccountGroupId() const;
 
                     /**
-                     * 设置Account group ID
-                     * @param _accountGroupId Account group ID
+                     * 设置<p>Account group ID.</p>
+                     * @param _accountGroupId <p>Account group ID.</p>
                      * 
                      */
                     void SetAccountGroupId(const std::string& _accountGroupId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool AccountGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
-                     * @return Filters resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
+                     * 获取<p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
+                     * @return Filters <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
-                     * @param _filters resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
+                     * 设置<p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
+                     * @param _filters <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取<Tag>
-                     * @return Tags <Tag>
+                     * 获取<p>Tag.</p>
+                     * @return Tags <p>Tag.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置<Tag>
-                     * @param _tags <Tag>
+                     * 设置<p>Tag.</p>
+                     * @param _tags <p>Tag.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Next page token.
-                     * @return NextToken Next page token.
+                     * 获取<p>Next page token</p>
+                     * @return NextToken <p>Next page token</p>
                      * 
                      */
                     std::string GetNextToken() const;
 
                     /**
-                     * 设置Next page token.
-                     * @param _nextToken Next page token.
+                     * 设置<p>Next page token</p>
+                     * @param _nextToken <p>Next page token</p>
                      * 
                      */
                     void SetNextToken(const std::string& _nextToken);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool NextTokenHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method asc, desc
-                     * @return OrderType Sorting method asc, desc
+                     * 获取<p>Sorting method: asc, desc</p>
+                     * @return OrderType <p>Sorting method: asc, desc</p>
                      * 
                      */
                     std::string GetOrderType() const;
 
                     /**
-                     * 设置Sorting method asc, desc
-                     * @param _orderType Sorting method asc, desc
+                     * 设置<p>Sorting method: asc, desc</p>
+                     * @param _orderType <p>Sorting method: asc, desc</p>
                      * 
                      */
                     void SetOrderType(const std::string& _orderType);
@@ -173,37 +173,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Items per Page
+                     * <p>Number of results displayed per page</p>
                      */
                     uint64_t m_maxResults;
                     bool m_maxResultsHasBeenSet;
 
                     /**
-                     * Account group ID
+                     * <p>Account group ID.</p>
                      */
                     std::string m_accountGroupId;
                     bool m_accountGroupIdHasBeenSet;
 
                     /**
-                     * resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
+                     * <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * <Tag>
+                     * <p>Tag.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Next page token.
+                     * <p>Next page token</p>
                      */
                     std::string m_nextToken;
                     bool m_nextTokenHasBeenSet;
 
                     /**
-                     * Sorting method asc, desc
+                     * <p>Sorting method: asc, desc</p>
                      */
                     std::string m_orderType;
                     bool m_orderTypeHasBeenSet;

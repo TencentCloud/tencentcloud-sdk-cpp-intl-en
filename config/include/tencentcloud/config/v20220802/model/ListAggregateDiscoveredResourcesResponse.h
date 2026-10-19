@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details.
-                     * @return Items Details.
+                     * 获取<p>Details.</p>
+                     * @return Items <p>Details.</p>
                      * 
                      */
                     std::vector<AggregateResourceInfo> GetItems() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool ItemsHasBeenSet() const;
 
                     /**
-                     * 获取next page
-Note: This field may return null, indicating that no valid value is found.
-                     * @return NextToken next page
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取<p>Next page.</p>
+                     * @return NextToken <p>Next page.</p>
                      * 
                      */
                     std::string GetNextToken() const;
@@ -74,20 +72,39 @@ Note: This field may return null, indicating that no valid value is found.
                      */
                     bool NextTokenHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Total.</p>
+                     * @return Count <p>Total.</p>
+                     * 
+                     */
+                    int64_t GetCount() const;
+
+                    /**
+                     * 判断参数 Count 是否已赋值
+                     * @return Count 是否已赋值
+                     * 
+                     */
+                    bool CountHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Details.
+                     * <p>Details.</p>
                      */
                     std::vector<AggregateResourceInfo> m_items;
                     bool m_itemsHasBeenSet;
 
                     /**
-                     * next page
-Note: This field may return null, indicating that no valid value is found.
+                     * <p>Next page.</p>
                      */
                     std::string m_nextToken;
                     bool m_nextTokenHasBeenSet;
+
+                    /**
+                     * <p>Total.</p>
+                     */
+                    int64_t m_count;
+                    bool m_countHasBeenSet;
 
                 };
             }

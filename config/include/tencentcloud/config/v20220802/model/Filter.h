@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource list filter
+                * Resource list filtering.
                 */
                 class Filter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
-                     * @return Name Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+                     * 获取Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
+                     * @return Name Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
-                     * @param _name Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+                     * 设置Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
+                     * @param _name Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Value of the field to query
-                     * @return Values Value of the field to query
+                     * 获取Queried field values.
+                     * @return Values Queried field values.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Value of the field to query
-                     * @param _values Value of the field to query
+                     * 设置Queried field values.
+                     * @param _values Queried field values.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+                     * Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Value of the field to query
+                     * Queried field values.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

@@ -2440,6 +2440,56 @@ CynosdbClient::DescribeAuditInstanceListOutcomeCallable CynosdbClient::DescribeA
     return prom->get_future();
 }
 
+CynosdbClient::DescribeAuditLogsOutcome CynosdbClient::DescribeAuditLogs(const DescribeAuditLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditLogsResponse rsp = DescribeAuditLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditLogsOutcome(rsp);
+        else
+            return DescribeAuditLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditLogsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeAuditLogsAsync(const DescribeAuditLogsRequest& request, const DescribeAuditLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAuditLogsRequest&;
+    using Resp = DescribeAuditLogsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAuditLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DescribeAuditLogsOutcomeCallable CynosdbClient::DescribeAuditLogsCallable(const DescribeAuditLogsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAuditLogsOutcome>>();
+    DescribeAuditLogsAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DescribeAuditLogsRequest&,
+        DescribeAuditLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::DescribeAuditRuleTemplatesOutcome CynosdbClient::DescribeAuditRuleTemplates(const DescribeAuditRuleTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAuditRuleTemplates");

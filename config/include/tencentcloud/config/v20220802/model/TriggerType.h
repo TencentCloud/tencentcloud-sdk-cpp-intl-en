@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool MessageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Trigger time period
-Note: This field may return null, indicating that no valid value is found.
-                     * @return MaximumExecutionFrequency Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Triggering time period.
+                     * @return MaximumExecutionFrequency Triggering time period.
                      * 
                      */
                     std::string GetMaximumExecutionFrequency() const;
 
                     /**
-                     * 设置Trigger time period
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _maximumExecutionFrequency Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Triggering time period.
+                     * @param _maximumExecutionFrequency Triggering time period.
                      * 
                      */
                     void SetMaximumExecutionFrequency(const std::string& _maximumExecutionFrequency);
@@ -101,8 +97,7 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_messageTypeHasBeenSet;
 
                     /**
-                     * Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+                     * Triggering time period.
                      */
                     std::string m_maximumExecutionFrequency;
                     bool m_maximumExecutionFrequencyHasBeenSet;

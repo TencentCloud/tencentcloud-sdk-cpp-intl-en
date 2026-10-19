@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
-                     * @return Status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+                     * 获取<p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
+                     * @return Status <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置<p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
-                     * @param _status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+                     * 设置<p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
+                     * @param _status <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+                     * <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;

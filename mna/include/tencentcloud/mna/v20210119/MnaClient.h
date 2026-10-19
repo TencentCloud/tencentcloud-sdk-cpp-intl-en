@@ -45,6 +45,8 @@
 #include <tencentcloud/mna/v20210119/model/DeleteGroupResponse.h>
 #include <tencentcloud/mna/v20210119/model/DeleteL3ConnRequest.h>
 #include <tencentcloud/mna/v20210119/model/DeleteL3ConnResponse.h>
+#include <tencentcloud/mna/v20210119/model/DescribeAccessPointListRequest.h>
+#include <tencentcloud/mna/v20210119/model/DescribeAccessPointListResponse.h>
 #include <tencentcloud/mna/v20210119/model/DescribeAccessRegionsRequest.h>
 #include <tencentcloud/mna/v20210119/model/DescribeAccessRegionsResponse.h>
 #include <tencentcloud/mna/v20210119/model/DownloadActiveDeviceCountRequest.h>
@@ -178,6 +180,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteL3ConnResponse> DeleteL3ConnOutcome;
                 typedef std::future<DeleteL3ConnOutcome> DeleteL3ConnOutcomeCallable;
                 typedef std::function<void(const MnaClient*, const Model::DeleteL3ConnRequest&, DeleteL3ConnOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL3ConnAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessPointListResponse> DescribeAccessPointListOutcome;
+                typedef std::future<DescribeAccessPointListOutcome> DescribeAccessPointListOutcomeCallable;
+                typedef std::function<void(const MnaClient*, const Model::DescribeAccessPointListRequest&, DescribeAccessPointListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessPointListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccessRegionsResponse> DescribeAccessRegionsOutcome;
                 typedef std::future<DescribeAccessRegionsOutcome> DescribeAccessRegionsOutcomeCallable;
                 typedef std::function<void(const MnaClient*, const Model::DescribeAccessRegionsRequest&, DescribeAccessRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessRegionsAsyncHandler;
@@ -408,6 +413,15 @@ namespace TencentCloud
                 DeleteL3ConnOutcome DeleteL3Conn(const Model::DeleteL3ConnRequest &request);
                 void DeleteL3ConnAsync(const Model::DeleteL3ConnRequest& request, const DeleteL3ConnAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteL3ConnOutcomeCallable DeleteL3ConnCallable(const Model::DeleteL3ConnRequest& request);
+
+                /**
+                 *This API is used to query the access point list.
+                 * @param req DescribeAccessPointListRequest
+                 * @return DescribeAccessPointListOutcome
+                 */
+                DescribeAccessPointListOutcome DescribeAccessPointList(const Model::DescribeAccessPointListRequest &request);
+                void DescribeAccessPointListAsync(const Model::DescribeAccessPointListRequest& request, const DescribeAccessPointListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessPointListOutcomeCallable DescribeAccessPointListCallable(const Model::DescribeAccessPointListRequest& request);
 
                 /**
                  *Query the access region list.

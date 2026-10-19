@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video transcoding task information. This structure is only used for tasks initiated via the 2017 [video transcoding](https://www.tencentcloud.com/document/product/266/7822?from_cn_redirect=1) API.
+                * Video transcoding task information. This structure is only used for tasks initiated via the 2017 video transcoding API.
                 */
                 class TranscodeTask2017 : public AbstractModel
                 {

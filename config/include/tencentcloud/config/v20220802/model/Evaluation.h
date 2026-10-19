@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom rule evaluation result
+                * Custom rule evaluation result.
                 */
                 class Evaluation : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Evaluated resource id. It can contain 0 to 256 characters.
-                     * @return ComplianceResourceId Evaluated resource id. It can contain 0 to 256 characters.
+                     * 获取Evaluated resource ID, which is 0 to 256 characters in length.
+                     * @return ComplianceResourceId Evaluated resource ID, which is 0 to 256 characters in length.
                      * 
                      */
                     std::string GetComplianceResourceId() const;
 
                     /**
-                     * 设置Evaluated resource id. It can contain 0 to 256 characters.
-                     * @param _complianceResourceId Evaluated resource id. It can contain 0 to 256 characters.
+                     * 设置Evaluated resource ID, which is 0 to 256 characters in length.
+                     * @param _complianceResourceId Evaluated resource ID, which is 0 to 256 characters in length.
                      * 
                      */
                     void SetComplianceResourceId(const std::string& _complianceResourceId);
@@ -70,22 +70,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
                      * @return ComplianceResourceType Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
                      * 
                      */
                     std::string GetComplianceResourceType() const;
 
                     /**
                      * 设置Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
                      * @param _complianceResourceType Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
                      * 
                      */
                     void SetComplianceResourceType(const std::string& _complianceResourceType);
@@ -99,18 +99,18 @@ QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::V
 
                     /**
                      * 获取Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
                      * @return ComplianceRegion Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
                      * 
                      */
                     std::string GetComplianceRegion() const;
 
                     /**
                      * 设置Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
                      * @param _complianceRegion Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
                      * 
                      */
                     void SetComplianceRegion(const std::string& _complianceRegion);
@@ -123,23 +123,23 @@ It can contain 0 to 32 characters.
                     bool ComplianceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
-                     * @return ComplianceType Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+                     * 获取Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+                     * @return ComplianceType Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
                      * 
                      */
                     std::string GetComplianceType() const;
 
                     /**
-                     * 设置Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
-                     * @param _complianceType Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+                     * 设置Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+                     * @param _complianceType Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
                      * 
                      */
                     void SetComplianceType(const std::string& _complianceType);
@@ -152,15 +152,15 @@ NON_COMPLIANT: Non-compliant
                     bool ComplianceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Supplementary information for non-compliant resources.
-                     * @return Annotation Supplementary information for non-compliant resources.
+                     * 获取Supplementary information of non-compliant resources.
+                     * @return Annotation Supplementary information of non-compliant resources.
                      * 
                      */
                     Annotation GetAnnotation() const;
 
                     /**
-                     * 设置Supplementary information for non-compliant resources.
-                     * @param _annotation Supplementary information for non-compliant resources.
+                     * 设置Supplementary information of non-compliant resources.
+                     * @param _annotation Supplementary information of non-compliant resources.
                      * 
                      */
                     void SetAnnotation(const Annotation& _annotation);
@@ -175,36 +175,36 @@ NON_COMPLIANT: Non-compliant
                 private:
 
                     /**
-                     * Evaluated resource id. It can contain 0 to 256 characters.
+                     * Evaluated resource ID, which is 0 to 256 characters in length.
                      */
                     std::string m_complianceResourceId;
                     bool m_complianceResourceIdHasBeenSet;
 
                     /**
                      * Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
                      */
                     std::string m_complianceResourceType;
                     bool m_complianceResourceTypeHasBeenSet;
 
                     /**
                      * Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
                      */
                     std::string m_complianceRegion;
                     bool m_complianceRegionHasBeenSet;
 
                     /**
-                     * Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+                     * Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
                      */
                     std::string m_complianceType;
                     bool m_complianceTypeHasBeenSet;
 
                     /**
-                     * Supplementary information for non-compliant resources.
+                     * Supplementary information of non-compliant resources.
                      */
                     Annotation m_annotation;
                     bool m_annotationHasBeenSet;

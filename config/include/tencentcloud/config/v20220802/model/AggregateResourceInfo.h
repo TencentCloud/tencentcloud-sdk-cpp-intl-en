@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource list information response parameters structure
+                * Resource list information
                 */
                 class AggregateResourceInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource type
-                     * @return ResourceType Resource type
+                     * 获取Resource type.
+                     * @return ResourceType Resource type.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type
-                     * @param _resourceType Resource type
+                     * 设置Resource type.
+                     * @param _resourceType Resource type.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -111,23 +111,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Region
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Region.
+                     * @return ResourceRegion Region.
                      * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
-                     * 设置Region
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _resourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Region.
+                     * @param _resourceRegion Region.
                      * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
@@ -140,23 +132,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Resource status.
+                     * @return ResourceStatus Resource status.
                      * 
                      */
                     std::string GetResourceStatus() const;
 
                     /**
-                     * 设置Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _resourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Resource status.
+                     * @param _resourceStatus Resource status.
                      * 
                      */
                     void SetResourceStatus(const std::string& _resourceStatus);
@@ -169,19 +153,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceDelete Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
+                     * @return ResourceDelete Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
                      * 
                      */
                     uint64_t GetResourceDelete() const;
 
                     /**
-                     * 设置Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _resourceDelete Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
+                     * @param _resourceDelete Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
                      * 
                      */
                     void SetResourceDelete(const uint64_t& _resourceDelete);
@@ -195,22 +175,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetResourceCreateTime() const;
 
                     /**
                      * 设置Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _resourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetResourceCreateTime(const std::string& _resourceCreateTime);
@@ -223,23 +195,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Tag information
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Tag information.
+                     * @return Tags Tag information.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag information
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Tag information.
+                     * @param _tags Tag information.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -252,23 +216,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取AZ.
+                     * @return ResourceZone AZ.
                      * 
                      */
                     std::string GetResourceZone() const;
 
                     /**
-                     * 设置Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _resourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置AZ.
+                     * @param _resourceZone AZ.
                      * 
                      */
                     void SetResourceZone(const std::string& _resourceZone);
@@ -282,18 +238,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Compliance status
-Note: This field may return null, indicating that no valid value is found.
                      * @return ComplianceResult Compliance status
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetComplianceResult() const;
 
                     /**
                      * 设置Compliance status
-Note: This field may return null, indicating that no valid value is found.
                      * @param _complianceResult Compliance status
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetComplianceResult(const std::string& _complianceResult);
@@ -306,15 +258,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ComplianceResultHasBeenSet() const;
 
                     /**
-                     * 获取Resource owner uid
-                     * @return ResourceOwnerId Resource owner uid
+                     * 获取Resource owner ID.
+                     * @return ResourceOwnerId Resource owner ID.
                      * 
                      */
                     uint64_t GetResourceOwnerId() const;
 
                     /**
-                     * 设置Resource owner uid
-                     * @param _resourceOwnerId Resource owner uid
+                     * 设置Resource owner ID.
+                     * @param _resourceOwnerId Resource owner ID.
                      * 
                      */
                     void SetResourceOwnerId(const uint64_t& _resourceOwnerId);
@@ -327,19 +279,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ResourceOwnerIdHasBeenSet() const;
 
                     /**
-                     * 获取User nickname
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceOwnerName User nickname
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取User Nickname
+                     * @return ResourceOwnerName User Nickname
                      * 
                      */
                     std::string GetResourceOwnerName() const;
 
                     /**
-                     * 设置User nickname
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _resourceOwnerName User nickname
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置User Nickname
+                     * @param _resourceOwnerName User Nickname
                      * 
                      */
                     void SetResourceOwnerName(const std::string& _resourceOwnerName);
@@ -354,7 +302,7 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Resource type
+                     * Resource type.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -372,68 +320,55 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Region
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Region.
                      */
                     std::string m_resourceRegion;
                     bool m_resourceRegionHasBeenSet;
 
                     /**
-                     * Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Resource status.
                      */
                     std::string m_resourceStatus;
                     bool m_resourceStatusHasBeenSet;
 
                     /**
-                     * Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+                     * Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
                      */
                     uint64_t m_resourceDelete;
                     bool m_resourceDeleteHasBeenSet;
 
                     /**
                      * Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_resourceCreateTime;
                     bool m_resourceCreateTimeHasBeenSet;
 
                     /**
-                     * Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+                     * Tag information.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+                     * AZ.
                      */
                     std::string m_resourceZone;
                     bool m_resourceZoneHasBeenSet;
 
                     /**
                      * Compliance status
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_complianceResult;
                     bool m_complianceResultHasBeenSet;
 
                     /**
-                     * Resource owner uid
+                     * Resource owner ID.
                      */
                     uint64_t m_resourceOwnerId;
                     bool m_resourceOwnerIdHasBeenSet;
 
                     /**
-                     * User nickname
-Note: This field may return null, indicating that no valid value is found.
+                     * User Nickname
                      */
                     std::string m_resourceOwnerName;
                     bool m_resourceOwnerNameHasBeenSet;

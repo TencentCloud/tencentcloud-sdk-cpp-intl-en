@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Page limit
-                     * @return Limit Page limit
+                     * 获取Number of entries per page.
+Valid values: 1-200
+                     * @return Limit Number of entries per page.
+Valid values: 1-200
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page limit
-                     * @param _limit Page limit
+                     * 设置Number of entries per page.
+Valid values: 1-200
+                     * @param _limit Number of entries per page.
+Valid values: 1-200
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -65,14 +69,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Offset.
+Value range: minimum value is 0
                      * @return Offset Offset.
+Value range: minimum value is 0
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
+Value range: minimum value is 0
                      * @param _offset Offset.
+Value range: minimum value is 0
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +93,23 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sort type. Descending: desc, Ascending: asc.
-                     * @return OrderType Sort type. Descending: desc, Ascending: asc.
+                     * 获取Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
+                     * @return OrderType Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
                      * 
                      */
                     std::string GetOrderType() const;
 
                     /**
-                     * 设置Sort type. Descending: desc, Ascending: asc.
-                     * @param _orderType Sort type. Descending: desc, Ascending: asc.
+                     * 设置Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
+                     * @param _orderType Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
                      * 
                      */
                     void SetOrderType(const std::string& _orderType);
@@ -106,30 +122,26 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-
-1: High risk.
-2: Medium risk.
+                     * 获取Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
-                     * @return RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
+                     * @return RiskLevel Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
                      * 
                      */
                     std::vector<uint64_t> GetRiskLevel() const;
 
                     /**
-                     * 设置Risk level
-
-1: High risk.
-2: Medium risk.
+                     * 设置Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
-                     * @param _riskLevel Risk level
-
-1: High risk.
-2: Medium risk.
+                     * @param _riskLevel Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
                      * 
                      */
@@ -143,15 +155,27 @@ namespace TencentCloud
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Rule status
-                     * @return State Rule status
+                     * 获取Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
+                     * @return State Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Rule status
-                     * @param _state Rule status
+                     * 设置Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
+                     * @param _state Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -164,15 +188,23 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Evaluation result
-                     * @return ComplianceResult Evaluation result
+                     * 获取Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+                     * @return ComplianceResult Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
                      * 
                      */
                     std::vector<std::string> GetComplianceResult() const;
 
                     /**
-                     * 设置Evaluation result
-                     * @param _complianceResult Evaluation result
+                     * 设置Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+                     * @param _complianceResult Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
                      * 
                      */
                     void SetComplianceResult(const std::vector<std::string>& _complianceResult);
@@ -185,15 +217,15 @@ namespace TencentCloud
                     bool ComplianceResultHasBeenSet() const;
 
                     /**
-                     * 获取Name of the rule
-                     * @return RuleName Name of the rule
+                     * 获取Rule Name
+                     * @return RuleName Rule Name
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Name of the rule
-                     * @param _ruleName Name of the rule
+                     * 设置Rule Name
+                     * @param _ruleName Rule Name
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -208,47 +240,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Page limit
+                     * Number of entries per page.
+Valid values: 1-200
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
                      * Offset.
+Value range: minimum value is 0
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sort type. Descending: desc, Ascending: asc.
+                     * Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
                      */
                     std::string m_orderType;
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Risk level
-
-1: High risk.
-2: Medium risk.
+                     * Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
                      */
                     std::vector<uint64_t> m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Rule status
+                     * Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Evaluation result
+                     * Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
                      */
                     std::vector<std::string> m_complianceResult;
                     bool m_complianceResultHasBeenSet;
 
                     /**
-                     * Name of the rule
+                     * Rule Name
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;

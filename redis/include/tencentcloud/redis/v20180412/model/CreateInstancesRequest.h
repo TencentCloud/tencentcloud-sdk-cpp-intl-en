@@ -529,15 +529,15 @@ namespace TencentCloud
                     bool DryRunHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
-                     * @return ProductVersion <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
+                     * 获取<p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
+                     * @return ProductVersion <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
                      * 
                      */
                     std::string GetProductVersion() const;
 
                     /**
-                     * 设置<p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
-                     * @param _productVersion <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
+                     * 设置<p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
+                     * @param _productVersion <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
                      * 
                      */
                     void SetProductVersion(const std::string& _productVersion);
@@ -837,7 +837,7 @@ namespace TencentCloud
                     bool m_dryRunHasBeenSet;
 
                     /**
-                     * <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
+                     * <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
                      */
                     std::string m_productVersion;
                     bool m_productVersionHasBeenSet;

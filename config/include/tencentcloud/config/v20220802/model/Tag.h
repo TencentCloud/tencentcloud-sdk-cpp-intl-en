@@ -48,22 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag key
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return TagKey Tag key
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _tagKey Tag key
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -77,22 +69,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Tag value
-
-Note: This field may return null, indicating that no valid value is found.
                      * @return TagValue Tag value
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
-
-Note: This field may return null, indicating that no valid value is found.
                      * @param _tagValue Tag value
-
-Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetTagValue(const std::string& _tagValue);
@@ -108,16 +92,12 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * Tag key
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
                      * Tag value
-
-Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;
