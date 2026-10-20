@@ -44,14 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
-                     * @return Score Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
+                     * 获取<p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
+                     * @return Score <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
                      * 
                      */
                     double GetScore() const;
@@ -64,8 +58,8 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取Algorithm model version used for face recognition.
-                     * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 获取<p>Algorithm model version used for face recognition.</p>
+                     * @return FaceModelVersion <p>Algorithm model version used for face recognition.</p>
                      * 
                      */
                     std::string GetFaceModelVersion() const;
@@ -80,16 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
+                     * <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * Algorithm model version used for face recognition.
+                     * <p>Algorithm model version used for face recognition.</p>
                      */
                     std::string m_faceModelVersion;
                     bool m_faceModelVersionHasBeenSet;
