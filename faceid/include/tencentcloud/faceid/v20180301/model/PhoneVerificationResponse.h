@@ -45,11 +45,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
@@ -58,11 +58,11 @@ Three-element information consistency.
 -12: Authentication attempts exceeded the daily limit. Retry the next day.
 -13: The number range is unsupported for verification.
                      * @return Result Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
@@ -115,11 +115,11 @@ Three-element information consistency.
 
                     /**
                      * Verification result code.
--Fee result code
-Three-element information consistency.
+Fee result code
+-0:Three-element information consistency.
 -4: Three-element information inconsistency.
 
--No charge result code
+No charge result code
 -6: Invalid phone number.
 -7: Identity number error.
 -8: Name verification failed.
