@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Legacy backup list.
+                * Legacy backup list
                 */
                 class SaveBackupClusterInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup id of the deceased.
-                     * @return BackupId Backup id of the deceased.
+                     * 获取Backup id
+                     * @return BackupId Backup id
                      * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
-                     * 设置Backup id of the deceased.
-                     * @param _backupId Backup id of the deceased.
+                     * 设置Backup id
+                     * @param _backupId Backup id
                      * 
                      */
                     void SetBackupId(const int64_t& _backupId);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取Db type (NORMAL, SERVERLESS).
-                     * @return DbMode Db type (NORMAL, SERVERLESS).
+                     * 获取Db type. Available values: NORMAL, SERVERLESS
+                     * @return DbMode Db type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Db type (NORMAL, SERVERLESS).
-                     * @param _dbMode Db type (NORMAL, SERVERLESS).
+                     * 设置Db type. Available values: NORMAL, SERVERLESS
+                     * @param _dbMode Db type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
-                     * 获取Task list.
-                     * @return Tasks Task list.
+                     * 获取Task list
+                     * @return Tasks Task list
                      * 
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
-                     * 设置Task list.
-                     * @param _tasks Task list.
+                     * 设置Task list
+                     * @param _tasks Task list
                      * 
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
@@ -260,7 +260,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Backup id of the deceased.
+                     * Backup id
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;
@@ -302,7 +302,7 @@ namespace TencentCloud
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * Db type (NORMAL, SERVERLESS).
+                     * Db type. Available values: NORMAL, SERVERLESS
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
@@ -314,7 +314,7 @@ namespace TencentCloud
                     bool m_clusterStatusHasBeenSet;
 
                     /**
-                     * Task list.
+                     * Task list
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a resource pack
+                * Resource package information
                 */
                 class ResourcePackage : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of the resource package.
-                     * @return PackageId The unique ID of the resource package.
+                     * 获取Unique ID of the resource package
+                     * @return PackageId Unique ID of the resource package
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of the resource package.
-                     * @param _packageId The unique ID of the resource package.
+                     * 设置Unique ID of the resource package
+                     * @param _packageId Unique ID of the resource package
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource package type: CCU: compute resource package.
-DISK: storage resource package.
-                     * @return PackageType Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+                     * 获取Resource package type. CCU: compute resource package.
+DISK: storage resource package
+                     * @return PackageType Resource package type. CCU: compute resource package.
+DISK: storage resource package
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource package type: CCU: compute resource package.
-DISK: storage resource package.
-                     * @param _packageType Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+                     * 设置Resource package type. CCU: compute resource package.
+DISK: storage resource package
+                     * @param _packageType Resource package type. CCU: compute resource package.
+DISK: storage resource package
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -93,15 +93,15 @@ DISK: storage resource package.
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Deduction priority of the current resource package bound to the current instance.
-                     * @return DeductionPriority Deduction priority of the current resource package bound to the current instance.
+                     * 获取Deduction priority of the current resource pack bound to the current instance
+                     * @return DeductionPriority Deduction priority of the current resource pack bound to the current instance
                      * 
                      */
                     int64_t GetDeductionPriority() const;
 
                     /**
-                     * 设置Deduction priority of the current resource package bound to the current instance.
-                     * @param _deductionPriority Deduction priority of the current resource package bound to the current instance.
+                     * 设置Deduction priority of the current resource pack bound to the current instance
+                     * @param _deductionPriority Deduction priority of the current resource pack bound to the current instance
                      * 
                      */
                     void SetDeductionPriority(const int64_t& _deductionPriority);
@@ -116,20 +116,20 @@ DISK: storage resource package.
                 private:
 
                     /**
-                     * The unique ID of the resource package.
+                     * Unique ID of the resource package
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+                     * Resource package type. CCU: compute resource package.
+DISK: storage resource package
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Deduction priority of the current resource package bound to the current instance.
+                     * Deduction priority of the current resource pack bound to the current instance
                      */
                     int64_t m_deductionPriority;
                     bool m_deductionPriorityHasBeenSet;

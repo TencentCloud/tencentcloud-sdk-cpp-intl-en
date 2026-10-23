@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource package deduction priority.
+                * Resource package deduction priority
                 */
                 class PackagePriority : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The resource pack whose deduction priority needs to be customized.
-                     * @return PackageId The resource pack whose deduction priority needs to be customized.
+                     * 获取Resource pack with a custom deduction priority
+                     * @return PackageId Resource pack with a custom deduction priority
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The resource pack whose deduction priority needs to be customized.
-                     * @param _packageId The resource pack whose deduction priority needs to be customized.
+                     * 设置Resource pack with a custom deduction priority
+                     * @param _packageId Resource pack with a custom deduction priority
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom deduction priority.
-                     * @return DeductionPriority Custom deduction priority.
+                     * 获取Custom deduction priority
+                     * @return DeductionPriority Custom deduction priority
                      * 
                      */
                     int64_t GetDeductionPriority() const;
 
                     /**
-                     * 设置Custom deduction priority.
-                     * @param _deductionPriority Custom deduction priority.
+                     * 设置Custom deduction priority
+                     * @param _deductionPriority Custom deduction priority
                      * 
                      */
                     void SetDeductionPriority(const int64_t& _deductionPriority);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The resource pack whose deduction priority needs to be customized.
+                     * Resource pack with a custom deduction priority
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Custom deduction priority.
+                     * Custom deduction priority
                      */
                     int64_t m_deductionPriority;
                     bool m_deductionPriorityHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
-                     * @return RollbackStrategy Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+                     * 获取Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
+                     * @return RollbackStrategy Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
                      * 
                      */
                     std::string GetRollbackStrategy() const;
 
                     /**
-                     * 设置Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
-                     * @param _rollbackStrategy Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+                     * 设置Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
+                     * @param _rollbackStrategy Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
                      * 
                      */
                     void SetRollbackStrategy(const std::string& _rollbackStrategy);
@@ -87,15 +87,19 @@ namespace TencentCloud
                     bool RollbackStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
-                     * @return RollbackId Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+                     * 获取Backup file ID.
+Required when the rollback policy is rollback by backup file.
+                     * @return RollbackId Backup file ID.
+Required when the rollback policy is rollback by backup file.
                      * 
                      */
                     uint64_t GetRollbackId() const;
 
                     /**
-                     * 设置Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
-                     * @param _rollbackId Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+                     * 设置Backup file ID.
+Required when the rollback policy is rollback by backup file.
+                     * @param _rollbackId Backup file ID.
+Required when the rollback policy is rollback by backup file.
                      * 
                      */
                     void SetRollbackId(const uint64_t& _rollbackId);
@@ -108,15 +112,19 @@ namespace TencentCloud
                     bool RollbackIdHasBeenSet() const;
 
                     /**
-                     * 获取Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
-                     * @return ExpectTime Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+                     * 获取Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
+                     * @return ExpectTime Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
                      * 
                      */
                     std::string GetExpectTime() const;
 
                     /**
-                     * 设置Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
-                     * @param _expectTime Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+                     * 设置Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
+                     * @param _expectTime Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
                      * 
                      */
                     void SetExpectTime(const std::string& _expectTime);
@@ -129,15 +137,15 @@ namespace TencentCloud
                     bool ExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expected threshold (deprecated).
-                     * @return ExpectTimeThresh Expected threshold (deprecated).
+                     * 获取Expected threshold (abandoned)
+                     * @return ExpectTimeThresh Expected threshold (abandoned)
                      * 
                      */
                     uint64_t GetExpectTimeThresh() const;
 
                     /**
-                     * 设置Expected threshold (deprecated).
-                     * @param _expectTimeThresh Expected threshold (deprecated).
+                     * 设置Expected threshold (abandoned)
+                     * @param _expectTimeThresh Expected threshold (abandoned)
                      * 
                      */
                     void SetExpectTimeThresh(const uint64_t& _expectTimeThresh);
@@ -150,15 +158,15 @@ namespace TencentCloud
                     bool ExpectTimeThreshHasBeenSet() const;
 
                     /**
-                     * 获取List of rollback databases.
-                     * @return RollbackDatabases List of rollback databases.
+                     * 获取Database list for rollback
+                     * @return RollbackDatabases Database list for rollback
                      * 
                      */
                     std::vector<RollbackDatabase> GetRollbackDatabases() const;
 
                     /**
-                     * 设置List of rollback databases.
-                     * @param _rollbackDatabases List of rollback databases.
+                     * 设置Database list for rollback
+                     * @param _rollbackDatabases Database list for rollback
                      * 
                      */
                     void SetRollbackDatabases(const std::vector<RollbackDatabase>& _rollbackDatabases);
@@ -171,15 +179,15 @@ namespace TencentCloud
                     bool RollbackDatabasesHasBeenSet() const;
 
                     /**
-                     * 获取List of rollback databases and tables.
-                     * @return RollbackTables List of rollback databases and tables.
+                     * 获取List of rollback database tables
+                     * @return RollbackTables List of rollback database tables
                      * 
                      */
                     std::vector<RollbackTable> GetRollbackTables() const;
 
                     /**
-                     * 设置List of rollback databases and tables.
-                     * @param _rollbackTables List of rollback databases and tables.
+                     * 设置List of rollback database tables
+                     * @param _rollbackTables List of rollback database tables
                      * 
                      */
                     void SetRollbackTables(const std::vector<RollbackTable>& _rollbackTables);
@@ -192,15 +200,15 @@ namespace TencentCloud
                     bool RollbackTablesHasBeenSet() const;
 
                     /**
-                     * 获取Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
-                     * @return RollbackMode Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+                     * 获取Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
+                     * @return RollbackMode Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
                      * 
                      */
                     std::string GetRollbackMode() const;
 
                     /**
-                     * 设置Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
-                     * @param _rollbackMode Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+                     * 设置Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
+                     * @param _rollbackMode Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
                      * 
                      */
                     void SetRollbackMode(const std::string& _rollbackMode);
@@ -236,49 +244,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+                     * Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
                      */
                     std::string m_rollbackStrategy;
                     bool m_rollbackStrategyHasBeenSet;
 
                     /**
-                     * Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+                     * Backup file ID.
+Required when the rollback policy is rollback by backup file.
                      */
                     uint64_t m_rollbackId;
                     bool m_rollbackIdHasBeenSet;
 
                     /**
-                     * Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+                     * Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
                      */
                     std::string m_expectTime;
                     bool m_expectTimeHasBeenSet;
 
                     /**
-                     * Expected threshold (deprecated).
+                     * Expected threshold (abandoned)
                      */
                     uint64_t m_expectTimeThresh;
                     bool m_expectTimeThreshHasBeenSet;
 
                     /**
-                     * List of rollback databases.
+                     * Database list for rollback
                      */
                     std::vector<RollbackDatabase> m_rollbackDatabases;
                     bool m_rollbackDatabasesHasBeenSet;
 
                     /**
-                     * List of rollback databases and tables.
+                     * List of rollback database tables
                      */
                     std::vector<RollbackTable> m_rollbackTables;
                     bool m_rollbackTablesHasBeenSet;
 
                     /**
-                     * Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+                     * Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
                      */
                     std::string m_rollbackMode;
                     bool m_rollbackModeHasBeenSet;

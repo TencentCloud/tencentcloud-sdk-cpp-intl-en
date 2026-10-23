@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total eligible redo log files
-                     * @return TotalCount Total eligible redo log files
+                     * 获取Total eligible RedoLog files
+                     * @return TotalCount Total eligible RedoLog files
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Redo log file list
-                     * @return RedoLogList Redo log file list
+                     * 获取RedoLog file list
+                     * @return RedoLogList RedoLog file list
                      * 
                      */
                     std::vector<DescribeRedoLogListByVaultItem> GetRedoLogList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total eligible redo log files
+                     * Total eligible RedoLog files
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Redo log file list
+                     * RedoLog file list
                      */
                     std::vector<DescribeRedoLogListByVaultItem> m_redoLogList;
                     bool m_redoLogListHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule template ID
-                     * @return RuleTemplateIds Rule template ID
+                     * 获取Rule template ID.
+                     * @return RuleTemplateIds Rule template ID.
                      * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
-                     * 设置Rule template ID
-                     * @param _ruleTemplateIds Rule template ID
+                     * 设置Rule template ID.
+                     * @param _ruleTemplateIds Rule template ID.
                      * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RuleTemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取Number of results returned per request. Default value: `20`.
-                     * @return Limit Number of results returned per request. Default value: `20`.
+                     * 获取Number of items returned per request. Default value: 20.
+                     * @return Limit Number of items returned per request. Default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results returned per request. Default value: `20`.
-                     * @param _limit Number of results returned per request. Default value: `20`.
+                     * 设置Number of items returned per request. Default value: 20.
+                     * @param _limit Number of items returned per request. Default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: `0`.
-                     * @return Offset Offset. Default value: `0`.
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: `0`.
-                     * @param _offset Offset. Default value: `0`.
+                     * 设置Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -126,10 +126,52 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * 
+                     */
+                    uint64_t GetAlarmLevel() const;
+
+                    /**
+                     * 设置Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @param _alarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * 
+                     */
+                    void SetAlarmLevel(const uint64_t& _alarmLevel);
+
+                    /**
+                     * 判断参数 AlarmLevel 是否已赋值
+                     * @return AlarmLevel 是否已赋值
+                     * 
+                     */
+                    bool AlarmLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * 
+                     */
+                    uint64_t GetAlarmPolicy() const;
+
+                    /**
+                     * 设置Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @param _alarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * 
+                     */
+                    void SetAlarmPolicy(const uint64_t& _alarmPolicy);
+
+                    /**
+                     * 判断参数 AlarmPolicy 是否已赋值
+                     * @return AlarmPolicy 是否已赋值
+                     * 
+                     */
+                    bool AlarmPolicyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Rule template ID
+                     * Rule template ID.
                      */
                     std::vector<std::string> m_ruleTemplateIds;
                     bool m_ruleTemplateIdsHasBeenSet;
@@ -141,16 +183,28 @@ namespace TencentCloud
                     bool m_ruleTemplateNamesHasBeenSet;
 
                     /**
-                     * Number of results returned per request. Default value: `20`.
+                     * Number of items returned per request. Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: `0`.
+                     * Offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     */
+                    uint64_t m_alarmLevel;
+                    bool m_alarmLevelHasBeenSet;
+
+                    /**
+                     * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     */
+                    uint64_t m_alarmPolicy;
+                    bool m_alarmPolicyHasBeenSet;
 
                 };
             }

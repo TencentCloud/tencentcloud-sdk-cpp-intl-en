@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pagination size
-                     * @return Limit Pagination size
+                     * 获取Pagination size.
+                     * @return Limit Pagination size.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination size
-                     * @param _limit Pagination size
+                     * 设置Pagination size.
+                     * @param _limit Pagination size.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to query only user-level download limits. true - yes, false - no.
-                     * @return OnlyUserRestriction Specifies whether to query only user-level download limits. true - yes, false - no.
+                     * 获取Whether to query only user-level download limits. true: yes; false: no
+                     * @return OnlyUserRestriction Whether to query only user-level download limits. true: yes; false: no
                      * 
                      */
                     bool GetOnlyUserRestriction() const;
 
                     /**
-                     * 设置Specifies whether to query only user-level download limits. true - yes, false - no.
-                     * @param _onlyUserRestriction Specifies whether to query only user-level download limits. true - yes, false - no.
+                     * 设置Whether to query only user-level download limits. true: yes; false: no
+                     * @param _onlyUserRestriction Whether to query only user-level download limits. true: yes; false: no
                      * 
                      */
                     void SetOnlyUserRestriction(const bool& _onlyUserRestriction);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Pagination size
+                     * Pagination size.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Specifies whether to query only user-level download limits. true - yes, false - no.
+                     * Whether to query only user-level download limits. true: yes; false: no
                      */
                     bool m_onlyUserRestriction;
                     bool m_onlyUserRestrictionHasBeenSet;

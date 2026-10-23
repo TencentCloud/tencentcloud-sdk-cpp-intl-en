@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SparseBackupSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Sparse backup policy list (1-3)
-                     * @return SparseBackupConfigInfos Sparse backup policy list (1-3)
+                     * 获取List of sparse backup policies (1-3)
+                     * @return SparseBackupConfigInfos List of sparse backup policies (1-3)
                      * 
                      */
                     std::vector<SparseBackupConfigInfo> GetSparseBackupConfigInfos() const;
 
                     /**
-                     * 设置Sparse backup policy list (1-3)
-                     * @param _sparseBackupConfigInfos Sparse backup policy list (1-3)
+                     * 设置List of sparse backup policies (1-3)
+                     * @param _sparseBackupConfigInfos List of sparse backup policies (1-3)
                      * 
                      */
                     void SetSparseBackupConfigInfos(const std::vector<SparseBackupConfigInfo>& _sparseBackupConfigInfos);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_sparseBackupSwitchHasBeenSet;
 
                     /**
-                     * Sparse backup policy list (1-3)
+                     * List of sparse backup policies (1-3)
                      */
                     std::vector<SparseBackupConfigInfo> m_sparseBackupConfigInfos;
                     bool m_sparseBackupConfigInfosHasBeenSet;

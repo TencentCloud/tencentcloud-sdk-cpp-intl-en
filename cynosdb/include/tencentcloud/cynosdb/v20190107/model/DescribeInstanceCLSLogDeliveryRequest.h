@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log type.
-                     * @return LogType Log type.
+                     * 获取Log type
+                     * @return LogType Log type
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type.
-                     * @param _logType Log type.
+                     * 设置Log type
+                     * @param _logType Log type
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Log type.
+                     * Log type
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;

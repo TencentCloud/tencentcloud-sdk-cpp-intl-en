@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取task ID, for querying task execution status
-                     * @return TaskId task ID, for querying task execution status
+                     * 获取Task ID, used to query task execution status
+                     * @return TaskId Task ID, used to query task execution status
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * task ID, for querying task execution status
+                     * Task ID, used to query task execution status
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

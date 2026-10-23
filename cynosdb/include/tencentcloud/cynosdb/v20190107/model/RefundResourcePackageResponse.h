@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
-                     * @return DealNames Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
+                     * 获取Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
+                     * @return DealNames Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
+                     * Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The export format for an error log
+                * Error log export format
                 */
                 class ErrorLogItemExport : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the log level. valid values are note, warning, and error.
-                     * @return Level Specifies the log level. valid values are note, warning, and error.
+                     * 获取Log level. Available values: note, warning, error
+                     * @return Level Log level. Available values: note, warning, error
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Specifies the log level. valid values are note, warning, and error.
-                     * @param _level Specifies the log level. valid values are note, warning, and error.
+                     * 设置Log level. Available values: note, warning, error
+                     * @param _level Log level. Available values: note, warning, error
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Log content.
-                     * @return Content Log content.
+                     * 获取Log content
+                     * @return Content Log content
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Log content.
-                     * @param _content Log content.
+                     * 设置Log content
+                     * @param _content Log content
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * Specifies the log level. valid values are note, warning, and error.
+                     * Log level. Available values: note, warning, error
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Log content.
+                     * Log content
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

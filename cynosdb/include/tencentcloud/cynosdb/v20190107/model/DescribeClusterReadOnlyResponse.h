@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of cluster read-only switches.
-                     * @return ClusterReadOnlyValues List of cluster read-only switches.
+                     * 获取List of cluster read-only switches
+                     * @return ClusterReadOnlyValues List of cluster read-only switches
                      * 
                      */
                     std::vector<ClusterReadOnlyValue> GetClusterReadOnlyValues() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of cluster read-only switches.
+                     * List of cluster read-only switches
                      */
                     std::vector<ClusterReadOnlyValue> m_clusterReadOnlyValues;
                     bool m_clusterReadOnlyValuesHasBeenSet;

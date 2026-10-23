@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
-                     * @return Status Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
+                     * 获取Task flow status. 0: successful, 1: failed, 2: processing
+                     * @return Status Task flow status. 0: successful, 1: failed, 2: processing
                      * 
                      */
                     int64_t GetStatus() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
+                     * Task flow status. 0: successful, 1: failed, 2: processing
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

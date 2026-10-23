@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdListHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force isolation
-                     * @return ForceIsolate Whether to force isolation
+                     * 获取Whether to forcibly isolate
+                     * @return ForceIsolate Whether to forcibly isolate
                      * 
                      */
                     bool GetForceIsolate() const;
 
                     /**
-                     * 设置Whether to force isolation
-                     * @param _forceIsolate Whether to force isolation
+                     * 设置Whether to forcibly isolate
+                     * @param _forceIsolate Whether to forcibly isolate
                      * 
                      */
                     void SetForceIsolate(const bool& _forceIsolate);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IsolateReasonTypesHasBeenSet() const;
 
                     /**
-                     * 获取Cause of isolation
-                     * @return IsolateReason Cause of isolation
+                     * 获取Isolation reason
+                     * @return IsolateReason Isolation reason
                      * 
                      */
                     std::string GetIsolateReason() const;
 
                     /**
-                     * 设置Cause of isolation
-                     * @param _isolateReason Cause of isolation
+                     * 设置Isolation reason
+                     * @param _isolateReason Isolation reason
                      * 
                      */
                     void SetIsolateReason(const std::string& _isolateReason);
@@ -162,7 +162,7 @@ namespace TencentCloud
                     bool m_instanceIdListHasBeenSet;
 
                     /**
-                     * Whether to force isolation
+                     * Whether to forcibly isolate
                      */
                     bool m_forceIsolate;
                     bool m_forceIsolateHasBeenSet;
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_isolateReasonTypesHasBeenSet;
 
                     /**
-                     * Cause of isolation
+                     * Isolation reason
                      */
                     std::string m_isolateReason;
                     bool m_isolateReasonHasBeenSet;

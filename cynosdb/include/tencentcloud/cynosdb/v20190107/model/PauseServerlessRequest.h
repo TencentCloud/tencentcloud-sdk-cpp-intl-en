@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
-                     * @return ForcePause Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+                     * 获取Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
+                     * @return ForcePause Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
                      * 
                      */
                     int64_t GetForcePause() const;
 
                     /**
-                     * 设置Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
-                     * @param _forcePause Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+                     * 设置Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
+                     * @param _forcePause Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
                      * 
                      */
                     void SetForcePause(const int64_t& _forcePause);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+                     * Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
                      */
                     int64_t m_forcePause;
                     bool m_forcePauseHasBeenSet;

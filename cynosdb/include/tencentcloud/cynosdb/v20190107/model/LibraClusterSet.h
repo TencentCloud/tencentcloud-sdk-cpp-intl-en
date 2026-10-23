@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取instance information
-                     * @return InstanceSet instance information
+                     * 获取Instance information
+                     * @return InstanceSet Instance information
                      * 
                      */
                     std::vector<LibraInstanceSet> GetInstanceSet() const;
 
                     /**
-                     * 设置instance information
-                     * @param _instanceSet instance information
+                     * 设置Instance information
+                     * @param _instanceSet Instance information
                      * 
                      */
                     void SetInstanceSet(const std::vector<LibraInstanceSet>& _instanceSet);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
-                     * @return RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+                     * 获取Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
+                     * @return RenewFlag Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
-                     * @param _renewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+                     * 设置Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
+                     * @param _renewFlag Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Used Capacity
-                     * @return UsedStorage Used Capacity
+                     * 获取Used capacity
+                     * @return UsedStorage Used capacity
                      * 
                      */
                     int64_t GetUsedStorage() const;
 
                     /**
-                     * 设置Used Capacity
-                     * @param _usedStorage Used Capacity
+                     * 设置Used capacity
+                     * @param _usedStorage Used capacity
                      * 
                      */
                     void SetUsedStorage(const int64_t& _usedStorage);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取vport port
-                     * @return Vport vport port
+                     * 获取vport
+                     * @return Vport vport
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置vport port
-                     * @param _vport vport port
+                     * 设置vport
+                     * @param _vport vport
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -437,7 +437,7 @@ namespace TencentCloud
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * instance information
+                     * Instance information
                      */
                     std::vector<LibraInstanceSet> m_instanceSet;
                     bool m_instanceSetHasBeenSet;
@@ -467,7 +467,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+                     * Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
@@ -491,7 +491,7 @@ namespace TencentCloud
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Used Capacity
+                     * Used capacity
                      */
                     int64_t m_usedStorage;
                     bool m_usedStorageHasBeenSet;
@@ -503,7 +503,7 @@ namespace TencentCloud
                     bool m_vipHasBeenSet;
 
                     /**
-                     * vport port
+                     * vport
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;

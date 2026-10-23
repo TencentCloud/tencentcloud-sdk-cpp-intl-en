@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
-                     * @return LimitType Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+                     * 获取Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
+                     * @return LimitType Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
                      * 
                      */
                     std::string GetLimitType() const;
 
                     /**
-                     * 设置Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
-                     * @param _limitType Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+                     * 设置Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
+                     * @param _limitType Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
                      * 
                      */
                     void SetLimitType(const std::string& _limitType);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-                     * @return VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+                     * 获取This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+                     * @return VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
                      * 
                      */
                     std::string GetVpcComparisonSymbol() const;
 
                     /**
-                     * 设置This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-                     * @param _vpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+                     * 设置This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+                     * @param _vpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
                      * 
                      */
                     void SetVpcComparisonSymbol(const std::string& _vpcComparisonSymbol);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool VpcComparisonSymbolHasBeenSet() const;
 
                     /**
-                     * 获取Specified ips can download; specified ips are not allowed to download.
-                     * @return IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+                     * 获取In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+                     * @return IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
                      * 
                      */
                     std::string GetIpComparisonSymbol() const;
 
                     /**
-                     * 设置Specified ips can download; specified ips are not allowed to download.
-                     * @param _ipComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+                     * 设置In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+                     * @param _ipComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
                      * 
                      */
                     void SetIpComparisonSymbol(const std::string& _ipComparisonSymbol);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool IpComparisonSymbolHasBeenSet() const;
 
                     /**
-                     * 获取Limit the vpc settings for downloads.
-                     * @return LimitVpcs Limit the vpc settings for downloads.
+                     * 获取vpc settings with download restricted
+                     * @return LimitVpcs vpc settings with download restricted
                      * 
                      */
                     std::vector<BackupLimitVpcItem> GetLimitVpcs() const;
 
                     /**
-                     * 设置Limit the vpc settings for downloads.
-                     * @param _limitVpcs Limit the vpc settings for downloads.
+                     * 设置vpc settings with download restricted
+                     * @param _limitVpcs vpc settings with download restricted
                      * 
                      */
                     void SetLimitVpcs(const std::vector<BackupLimitVpcItem>& _limitVpcs);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool LimitVpcsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ip settings for limiting downloads.
-                     * @return LimitIps Specifies the ip settings for limiting downloads.
+                     * 获取ip settings for download restriction
+                     * @return LimitIps ip settings for download restriction
                      * 
                      */
                     std::vector<std::string> GetLimitIps() const;
 
                     /**
-                     * 设置Specifies the ip settings for limiting downloads.
-                     * @param _limitIps Specifies the ip settings for limiting downloads.
+                     * 设置ip settings for download restriction
+                     * @param _limitIps ip settings for download restriction
                      * 
                      */
                     void SetLimitIps(const std::vector<std::string>& _limitIps);
@@ -178,31 +178,31 @@ namespace TencentCloud
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+                     * Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
                      */
                     std::string m_limitType;
                     bool m_limitTypeHasBeenSet;
 
                     /**
-                     * This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+                     * This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
                      */
                     std::string m_vpcComparisonSymbol;
                     bool m_vpcComparisonSymbolHasBeenSet;
 
                     /**
-                     * Specified ips can download; specified ips are not allowed to download.
+                     * In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
                      */
                     std::string m_ipComparisonSymbol;
                     bool m_ipComparisonSymbolHasBeenSet;
 
                     /**
-                     * Limit the vpc settings for downloads.
+                     * vpc settings with download restricted
                      */
                     std::vector<BackupLimitVpcItem> m_limitVpcs;
                     bool m_limitVpcsHasBeenSet;
 
                     /**
-                     * Specifies the ip settings for limiting downloads.
+                     * ip settings for download restriction
                      */
                     std::vector<std::string> m_limitIps;
                     bool m_limitIpsHasBeenSet;

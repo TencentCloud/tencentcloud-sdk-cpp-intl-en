@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback time range
+                * Time range available for rollback
                 */
                 class RollbackTimeRange : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time
-                     * @return TimeRangeStart Start time
+                     * 获取Start time.
+                     * @return TimeRangeStart Start time.
                      * 
                      */
                     std::string GetTimeRangeStart() const;
 
                     /**
-                     * 设置Start time
-                     * @param _timeRangeStart Start time
+                     * 设置Start time.
+                     * @param _timeRangeStart Start time.
                      * 
                      */
                     void SetTimeRangeStart(const std::string& _timeRangeStart);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeRangeStartHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return TimeRangeEnd End time
+                     * 获取End time.
+                     * @return TimeRangeEnd End time.
                      * 
                      */
                     std::string GetTimeRangeEnd() const;
 
                     /**
-                     * 设置End time
-                     * @param _timeRangeEnd End time
+                     * 设置End time.
+                     * @param _timeRangeEnd End time.
                      * 
                      */
                     void SetTimeRangeEnd(const std::string& _timeRangeEnd);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time
+                     * Start time.
                      */
                     std::string m_timeRangeStart;
                     bool m_timeRangeStartHasBeenSet;
 
                     /**
-                     * End time
+                     * End time.
                      */
                     std::string m_timeRangeEnd;
                     bool m_timeRangeEndHasBeenSet;

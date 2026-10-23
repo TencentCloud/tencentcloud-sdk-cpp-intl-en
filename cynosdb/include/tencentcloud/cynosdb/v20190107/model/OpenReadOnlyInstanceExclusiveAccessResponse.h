@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Activation process ID.
-                     * @return FlowId Activation process ID.
+                     * 获取SDK activation process ID
+                     * @return FlowId SDK activation process ID
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Activation process ID.
+                     * SDK activation process ID
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

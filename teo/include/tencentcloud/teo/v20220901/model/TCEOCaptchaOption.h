@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
-                     * @return CaptchaMode EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+                     * 获取<p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+                     * @return CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
                      * 
                      */
                     std::string GetCaptchaMode() const;
 
                     /**
-                     * 设置EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
-                     * @param _captchaMode EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+                     * 设置<p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+                     * @param _captchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
                      * 
                      */
                     void SetCaptchaMode(const std::string& _captchaMode);
@@ -67,13 +67,40 @@ namespace TencentCloud
                      */
                     bool CaptchaModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+                     * @return MobileCaptchaMode <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+                     * 
+                     */
+                    std::string GetMobileCaptchaMode() const;
+
+                    /**
+                     * 设置<p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+                     * @param _mobileCaptchaMode <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+                     * 
+                     */
+                    void SetMobileCaptchaMode(const std::string& _mobileCaptchaMode);
+
+                    /**
+                     * 判断参数 MobileCaptchaMode 是否已赋值
+                     * @return MobileCaptchaMode 是否已赋值
+                     * 
+                     */
+                    bool MobileCaptchaModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+                     * <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
                      */
                     std::string m_captchaMode;
                     bool m_captchaModeHasBeenSet;
+
+                    /**
+                     * <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+                     */
+                    std::string m_mobileCaptchaMode;
+                    bool m_mobileCaptchaModeHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter to be modified
+                * Description of the incoming parameter when modifying parameters
                 */
                 class ParamItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取New value
-                     * @return CurrentValue New value
+                     * 获取Current value
+                     * @return CurrentValue Current value
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置New value
-                     * @param _currentValue New value
+                     * 设置Current value
+                     * @param _currentValue Current value
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * New value
+                     * Current value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;

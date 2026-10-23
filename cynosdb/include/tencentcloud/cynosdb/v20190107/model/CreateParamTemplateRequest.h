@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取MySQL version number
-                     * @return EngineVersion MySQL version number
+                     * 获取mysql version number
+                     * @return EngineVersion mysql version number
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置MySQL version number
-                     * @param _engineVersion MySQL version number
+                     * 设置mysql version number
+                     * @param _engineVersion mysql version number
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool TemplateDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取ID of the template to be copied
-                     * @return TemplateId ID of the template to be copied
+                     * 获取Optional parameter. ID of the template to replicate.
+                     * @return TemplateId Optional parameter. ID of the template to replicate.
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置ID of the template to be copied
-                     * @param _templateId ID of the template to be copied
+                     * 设置Optional parameter. ID of the template to replicate.
+                     * @param _templateId Optional parameter. ID of the template to replicate.
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
-                     * @return DbMode Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+                     * 获取Database type. Available values: NORMAL (default), SERVERLESS
+                     * @return DbMode Database type. Available values: NORMAL (default), SERVERLESS
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
-                     * @param _dbMode Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+                     * 设置Database type. Available values: NORMAL (default), SERVERLESS
+                     * @param _dbMode Database type. Available values: NORMAL (default), SERVERLESS
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取List of the parameters
-                     * @return ParamList List of the parameters
+                     * 获取Parameter list
+                     * @return ParamList Parameter list
                      * 
                      */
                     std::vector<ParamItem> GetParamList() const;
 
                     /**
-                     * 设置List of the parameters
-                     * @param _paramList List of the parameters
+                     * 设置Parameter list
+                     * @param _paramList Parameter list
                      * 
                      */
                     void SetParamList(const std::vector<ParamItem>& _paramList);
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * MySQL version number
+                     * mysql version number
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
@@ -190,19 +190,19 @@ namespace TencentCloud
                     bool m_templateDescriptionHasBeenSet;
 
                     /**
-                     * ID of the template to be copied
+                     * Optional parameter. ID of the template to replicate.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+                     * Database type. Available values: NORMAL (default), SERVERLESS
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * List of the parameters
+                     * Parameter list
                      */
                     std::vector<ParamItem> m_paramList;
                     bool m_paramListHasBeenSet;

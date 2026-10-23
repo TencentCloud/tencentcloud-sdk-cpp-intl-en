@@ -36,6 +36,7 @@
 #include <tencentcloud/teo/v20220901/model/StatusCodeCacheParameters.h>
 #include <tencentcloud/teo/v20220901/model/OfflineCacheParameters.h>
 #include <tencentcloud/teo/v20220901/model/SmartRoutingParameters.h>
+#include <tencentcloud/teo/v20220901/model/AdvancedOriginRoutingParameters.h>
 #include <tencentcloud/teo/v20220901/model/RangeOriginPullParameters.h>
 #include <tencentcloud/teo/v20220901/model/UpstreamHTTP2Parameters.h>
 #include <tencentcloud/teo/v20220901/model/HostHeaderParameters.h>
@@ -64,6 +65,7 @@
 #include <tencentcloud/teo/v20220901/model/VaryParameters.h>
 #include <tencentcloud/teo/v20220901/model/ContentCompressionParameters.h>
 #include <tencentcloud/teo/v20220901/model/OriginAuthenticationParameters.h>
+#include <tencentcloud/teo/v20220901/model/CustomActionParameters.h>
 
 
 namespace TencentCloud
@@ -87,175 +89,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
-                     * @return Name Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
+                     * 获取<p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
+                     * @return Name <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
-                     * @param _name Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
+                     * 设置<p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
+                     * @param _name <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -268,19 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CacheParameters Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
+                     * @return CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
                      * 
                      */
                     CacheParameters GetCacheParameters() const;
 
                     /**
-                     * 设置Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cacheParameters Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
+                     * @param _cacheParameters <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
                      * 
                      */
                     void SetCacheParameters(const CacheParameters& _cacheParameters);
@@ -293,19 +131,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CacheParametersHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CacheKeyParameters Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
+                     * @return CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
                      * 
                      */
                     CacheKeyParameters GetCacheKeyParameters() const;
 
                     /**
-                     * 设置Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cacheKeyParameters Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
+                     * @param _cacheKeyParameters <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
                      * 
                      */
                     void SetCacheKeyParameters(const CacheKeyParameters& _cacheKeyParameters);
@@ -318,19 +152,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CacheKeyParametersHasBeenSet() const;
 
                     /**
-                     * 获取The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CachePrefreshParameters The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
+                     * @return CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
                      * 
                      */
                     CachePrefreshParameters GetCachePrefreshParameters() const;
 
                     /**
-                     * 设置The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cachePrefreshParameters The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
+                     * @param _cachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
                      * 
                      */
                     void SetCachePrefreshParameters(const CachePrefreshParameters& _cachePrefreshParameters);
@@ -343,19 +173,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CachePrefreshParametersHasBeenSet() const;
 
                     /**
-                     * 获取The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return AccessURLRedirectParameters The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
+                     * @return AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
                      * 
                      */
                     AccessURLRedirectParameters GetAccessURLRedirectParameters() const;
 
                     /**
-                     * 设置The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _accessURLRedirectParameters The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
+                     * @param _accessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
                      * 
                      */
                     void SetAccessURLRedirectParameters(const AccessURLRedirectParameters& _accessURLRedirectParameters);
@@ -368,19 +194,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool AccessURLRedirectParametersHasBeenSet() const;
 
                     /**
-                     * 获取The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return UpstreamURLRewriteParameters The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
+                     * @return UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
                      * 
                      */
                     UpstreamURLRewriteParameters GetUpstreamURLRewriteParameters() const;
 
                     /**
-                     * 设置The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _upstreamURLRewriteParameters The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
+                     * @param _upstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
                      * 
                      */
                     void SetUpstreamURLRewriteParameters(const UpstreamURLRewriteParameters& _upstreamURLRewriteParameters);
@@ -393,19 +215,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool UpstreamURLRewriteParametersHasBeenSet() const;
 
                     /**
-                     * 获取The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return QUICParameters The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
+                     * @return QUICParameters <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
                      * 
                      */
                     QUICParameters GetQUICParameters() const;
 
                     /**
-                     * 设置The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _qUICParameters The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
+                     * @param _qUICParameters <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
                      * 
                      */
                     void SetQUICParameters(const QUICParameters& _qUICParameters);
@@ -418,19 +236,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool QUICParametersHasBeenSet() const;
 
                     /**
-                     * 获取The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return WebSocketParameters The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
+                     * @return WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
                      * 
                      */
                     WebSocketParameters GetWebSocketParameters() const;
 
                     /**
-                     * 设置The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _webSocketParameters The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
+                     * @param _webSocketParameters <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
                      * 
                      */
                     void SetWebSocketParameters(const WebSocketParameters& _webSocketParameters);
@@ -443,19 +257,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool WebSocketParametersHasBeenSet() const;
 
                     /**
-                     * 获取Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return AuthenticationParameters Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
+                     * @return AuthenticationParameters <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
                      * 
                      */
                     AuthenticationParameters GetAuthenticationParameters() const;
 
                     /**
-                     * 设置Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _authenticationParameters Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
+                     * @param _authenticationParameters <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
                      * 
                      */
                     void SetAuthenticationParameters(const AuthenticationParameters& _authenticationParameters);
@@ -468,19 +278,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool AuthenticationParametersHasBeenSet() const;
 
                     /**
-                     * 获取Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return MaxAgeParameters Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
+                     * @return MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
                      * 
                      */
                     MaxAgeParameters GetMaxAgeParameters() const;
 
                     /**
-                     * 设置Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _maxAgeParameters Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
+                     * @param _maxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
                      * 
                      */
                     void SetMaxAgeParameters(const MaxAgeParameters& _maxAgeParameters);
@@ -493,19 +299,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool MaxAgeParametersHasBeenSet() const;
 
                     /**
-                     * 获取Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return StatusCodeCacheParameters Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
+                     * @return StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
                      * 
                      */
                     StatusCodeCacheParameters GetStatusCodeCacheParameters() const;
 
                     /**
-                     * 设置Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _statusCodeCacheParameters Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
+                     * @param _statusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
                      * 
                      */
                     void SetStatusCodeCacheParameters(const StatusCodeCacheParameters& _statusCodeCacheParameters);
@@ -518,19 +320,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool StatusCodeCacheParametersHasBeenSet() const;
 
                     /**
-                     * 获取Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return OfflineCacheParameters Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
+                     * @return OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
                      * 
                      */
                     OfflineCacheParameters GetOfflineCacheParameters() const;
 
                     /**
-                     * 设置Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _offlineCacheParameters Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
+                     * @param _offlineCacheParameters <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
                      * 
                      */
                     void SetOfflineCacheParameters(const OfflineCacheParameters& _offlineCacheParameters);
@@ -543,19 +341,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool OfflineCacheParametersHasBeenSet() const;
 
                     /**
-                     * 获取Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return SmartRoutingParameters Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
+                     * @return SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
                      * 
                      */
                     SmartRoutingParameters GetSmartRoutingParameters() const;
 
                     /**
-                     * 设置Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _smartRoutingParameters Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
+                     * @param _smartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
                      * 
                      */
                     void SetSmartRoutingParameters(const SmartRoutingParameters& _smartRoutingParameters);
@@ -568,19 +362,36 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool SmartRoutingParametersHasBeenSet() const;
 
                     /**
-                     * 获取Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return RangeOriginPullParameters Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+                     * @return AdvancedOriginRoutingParameters <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+                     * 
+                     */
+                    AdvancedOriginRoutingParameters GetAdvancedOriginRoutingParameters() const;
+
+                    /**
+                     * 设置<p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+                     * @param _advancedOriginRoutingParameters <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+                     * 
+                     */
+                    void SetAdvancedOriginRoutingParameters(const AdvancedOriginRoutingParameters& _advancedOriginRoutingParameters);
+
+                    /**
+                     * 判断参数 AdvancedOriginRoutingParameters 是否已赋值
+                     * @return AdvancedOriginRoutingParameters 是否已赋值
+                     * 
+                     */
+                    bool AdvancedOriginRoutingParametersHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
+                     * @return RangeOriginPullParameters <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
                      * 
                      */
                     RangeOriginPullParameters GetRangeOriginPullParameters() const;
 
                     /**
-                     * 设置Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _rangeOriginPullParameters Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
+                     * @param _rangeOriginPullParameters <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
                      * 
                      */
                     void SetRangeOriginPullParameters(const RangeOriginPullParameters& _rangeOriginPullParameters);
@@ -593,19 +404,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool RangeOriginPullParametersHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return UpstreamHTTP2Parameters HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
+                     * @return UpstreamHTTP2Parameters <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
                      * 
                      */
                     UpstreamHTTP2Parameters GetUpstreamHTTP2Parameters() const;
 
                     /**
-                     * 设置HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _upstreamHTTP2Parameters HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
+                     * @param _upstreamHTTP2Parameters <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
                      * 
                      */
                     void SetUpstreamHTTP2Parameters(const UpstreamHTTP2Parameters& _upstreamHTTP2Parameters);
@@ -618,19 +425,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool UpstreamHTTP2ParametersHasBeenSet() const;
 
                     /**
-                     * 获取Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HostHeaderParameters Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
+                     * @return HostHeaderParameters <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
                      * 
                      */
                     HostHeaderParameters GetHostHeaderParameters() const;
 
                     /**
-                     * 设置Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _hostHeaderParameters Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
+                     * @param _hostHeaderParameters <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
                      * 
                      */
                     void SetHostHeaderParameters(const HostHeaderParameters& _hostHeaderParameters);
@@ -643,19 +446,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool HostHeaderParametersHasBeenSet() const;
 
                     /**
-                     * 获取Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ForceRedirectHTTPSParameters Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
+                     * @return ForceRedirectHTTPSParameters <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
                      * 
                      */
                     ForceRedirectHTTPSParameters GetForceRedirectHTTPSParameters() const;
 
                     /**
-                     * 设置Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _forceRedirectHTTPSParameters Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
+                     * @param _forceRedirectHTTPSParameters <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
                      * 
                      */
                     void SetForceRedirectHTTPSParameters(const ForceRedirectHTTPSParameters& _forceRedirectHTTPSParameters);
@@ -668,19 +467,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ForceRedirectHTTPSParametersHasBeenSet() const;
 
                     /**
-                     * 获取HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return OriginPullProtocolParameters HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
+                     * @return OriginPullProtocolParameters <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
                      * 
                      */
                     OriginPullProtocolParameters GetOriginPullProtocolParameters() const;
 
                     /**
-                     * 设置HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _originPullProtocolParameters HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
+                     * @param _originPullProtocolParameters <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
                      * 
                      */
                     void SetOriginPullProtocolParameters(const OriginPullProtocolParameters& _originPullProtocolParameters);
@@ -693,19 +488,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool OriginPullProtocolParametersHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
+                     * @return CompressionParameters <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
                      * 
                      */
                     CompressionParameters GetCompressionParameters() const;
 
                     /**
-                     * 设置Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _compressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
+                     * @param _compressionParameters <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
                      * 
                      */
                     void SetCompressionParameters(const CompressionParameters& _compressionParameters);
@@ -718,19 +509,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CompressionParametersHasBeenSet() const;
 
                     /**
-                     * 获取HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HSTSParameters HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
+                     * @return HSTSParameters <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
                      * 
                      */
                     HSTSParameters GetHSTSParameters() const;
 
                     /**
-                     * 设置HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _hSTSParameters HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
+                     * @param _hSTSParameters <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
                      * 
                      */
                     void SetHSTSParameters(const HSTSParameters& _hSTSParameters);
@@ -743,19 +530,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool HSTSParametersHasBeenSet() const;
 
                     /**
-                     * 获取Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ClientIPHeaderParameters Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
+                     * @return ClientIPHeaderParameters <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
                      * 
                      */
                     ClientIPHeaderParameters GetClientIPHeaderParameters() const;
 
                     /**
-                     * 设置Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _clientIPHeaderParameters Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
+                     * @param _clientIPHeaderParameters <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
                      * 
                      */
                     void SetClientIPHeaderParameters(const ClientIPHeaderParameters& _clientIPHeaderParameters);
@@ -768,19 +551,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ClientIPHeaderParametersHasBeenSet() const;
 
                     /**
-                     * 获取OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return OCSPStaplingParameters OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
+                     * @return OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
                      * 
                      */
                     OCSPStaplingParameters GetOCSPStaplingParameters() const;
 
                     /**
-                     * 设置OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _oCSPStaplingParameters OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
+                     * @param _oCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
                      * 
                      */
                     void SetOCSPStaplingParameters(const OCSPStaplingParameters& _oCSPStaplingParameters);
@@ -793,19 +572,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool OCSPStaplingParametersHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HTTP2Parameters HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
+                     * @return HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
                      * 
                      */
                     HTTP2Parameters GetHTTP2Parameters() const;
 
                     /**
-                     * 设置HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _hTTP2Parameters HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
+                     * @param _hTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
                      * 
                      */
                     void SetHTTP2Parameters(const HTTP2Parameters& _hTTP2Parameters);
@@ -818,19 +593,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool HTTP2ParametersHasBeenSet() const;
 
                     /**
-                     * 获取Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return PostMaxSizeParameters Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
+                     * @return PostMaxSizeParameters <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
                      * 
                      */
                     PostMaxSizeParameters GetPostMaxSizeParameters() const;
 
                     /**
-                     * 设置Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _postMaxSizeParameters Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
+                     * @param _postMaxSizeParameters <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
                      * 
                      */
                     void SetPostMaxSizeParameters(const PostMaxSizeParameters& _postMaxSizeParameters);
@@ -843,19 +614,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool PostMaxSizeParametersHasBeenSet() const;
 
                     /**
-                     * 获取Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ClientIPCountryParameters Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
+                     * @return ClientIPCountryParameters <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
                      * 
                      */
                     ClientIPCountryParameters GetClientIPCountryParameters() const;
 
                     /**
-                     * 设置Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _clientIPCountryParameters Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
+                     * @param _clientIPCountryParameters <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
                      * 
                      */
                     void SetClientIPCountryParameters(const ClientIPCountryParameters& _clientIPCountryParameters);
@@ -868,19 +635,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ClientIPCountryParametersHasBeenSet() const;
 
                     /**
-                     * 获取Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return UpstreamFollowRedirectParameters Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
+                     * @return UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
                      * 
                      */
                     UpstreamFollowRedirectParameters GetUpstreamFollowRedirectParameters() const;
 
                     /**
-                     * 设置Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _upstreamFollowRedirectParameters Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
+                     * @param _upstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
                      * 
                      */
                     void SetUpstreamFollowRedirectParameters(const UpstreamFollowRedirectParameters& _upstreamFollowRedirectParameters);
@@ -893,19 +656,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool UpstreamFollowRedirectParametersHasBeenSet() const;
 
                     /**
-                     * 获取Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return UpstreamRequestParameters Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
+                     * @return UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
                      * 
                      */
                     UpstreamRequestParameters GetUpstreamRequestParameters() const;
 
                     /**
-                     * 设置Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _upstreamRequestParameters Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
+                     * @param _upstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
                      * 
                      */
                     void SetUpstreamRequestParameters(const UpstreamRequestParameters& _upstreamRequestParameters);
@@ -918,19 +677,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool UpstreamRequestParametersHasBeenSet() const;
 
                     /**
-                     * 获取Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return ShieldParameters Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
+                     * @return ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
                      * 
                      */
                     ShieldParameters GetShieldParameters() const;
 
                     /**
-                     * 设置Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _shieldParameters Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
+                     * @param _shieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
                      * 
                      */
                     void SetShieldParameters(const ShieldParameters& _shieldParameters);
@@ -943,19 +698,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool ShieldParametersHasBeenSet() const;
 
                     /**
-                     * 获取SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return TLSConfigParameters SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
+                     * @return TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
                      * 
                      */
                     TLSConfigParameters GetTLSConfigParameters() const;
 
                     /**
-                     * 设置SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _tLSConfigParameters SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
+                     * @param _tLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
                      * 
                      */
                     void SetTLSConfigParameters(const TLSConfigParameters& _tLSConfigParameters);
@@ -968,19 +719,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool TLSConfigParametersHasBeenSet() const;
 
                     /**
-                     * 获取Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ModifyOriginParameters Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
+                     * @return ModifyOriginParameters <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
                      * 
                      */
                     ModifyOriginParameters GetModifyOriginParameters() const;
 
                     /**
-                     * 设置Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _modifyOriginParameters Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
+                     * @param _modifyOriginParameters <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
                      * 
                      */
                     void SetModifyOriginParameters(const ModifyOriginParameters& _modifyOriginParameters);
@@ -993,19 +740,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ModifyOriginParametersHasBeenSet() const;
 
                     /**
-                     * 获取Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return SiteFailoverParameters Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
+                     * @return SiteFailoverParameters <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
                      * 
                      */
                     SiteFailoverParameters GetSiteFailoverParameters() const;
 
                     /**
-                     * 设置Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _siteFailoverParameters Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
+                     * @param _siteFailoverParameters <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
                      * 
                      */
                     void SetSiteFailoverParameters(const SiteFailoverParameters& _siteFailoverParameters);
@@ -1018,19 +761,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool SiteFailoverParametersHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HTTPUpstreamTimeoutParameters Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
+                     * @return HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
                      * 
                      */
                     HTTPUpstreamTimeoutParameters GetHTTPUpstreamTimeoutParameters() const;
 
                     /**
-                     * 设置Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _hTTPUpstreamTimeoutParameters Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
+                     * @param _hTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
                      * 
                      */
                     void SetHTTPUpstreamTimeoutParameters(const HTTPUpstreamTimeoutParameters& _hTTPUpstreamTimeoutParameters);
@@ -1043,19 +782,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool HTTPUpstreamTimeoutParametersHasBeenSet() const;
 
                     /**
-                     * 获取HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HttpResponseParameters HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
+                     * @return HttpResponseParameters <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
                      * 
                      */
                     HTTPResponseParameters GetHttpResponseParameters() const;
 
                     /**
-                     * 设置HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _httpResponseParameters HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
+                     * @param _httpResponseParameters <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
                      * 
                      */
                     void SetHttpResponseParameters(const HTTPResponseParameters& _httpResponseParameters);
@@ -1068,19 +803,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool HttpResponseParametersHasBeenSet() const;
 
                     /**
-                     * 获取Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ErrorPageParameters Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
+                     * @return ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
                      * 
                      */
                     ErrorPageParameters GetErrorPageParameters() const;
 
                     /**
-                     * 设置Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _errorPageParameters Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
+                     * @param _errorPageParameters <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
                      * 
                      */
                     void SetErrorPageParameters(const ErrorPageParameters& _errorPageParameters);
@@ -1093,19 +824,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ErrorPageParametersHasBeenSet() const;
 
                     /**
-                     * 获取Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ModifyResponseHeaderParameters Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
+                     * @return ModifyResponseHeaderParameters <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
                      * 
                      */
                     ModifyResponseHeaderParameters GetModifyResponseHeaderParameters() const;
 
                     /**
-                     * 设置Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _modifyResponseHeaderParameters Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
+                     * @param _modifyResponseHeaderParameters <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
                      * 
                      */
                     void SetModifyResponseHeaderParameters(const ModifyResponseHeaderParameters& _modifyResponseHeaderParameters);
@@ -1118,19 +845,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ModifyResponseHeaderParametersHasBeenSet() const;
 
                     /**
-                     * 获取Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ModifyRequestHeaderParameters Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
+                     * @return ModifyRequestHeaderParameters <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
                      * 
                      */
                     ModifyRequestHeaderParameters GetModifyRequestHeaderParameters() const;
 
                     /**
-                     * 设置Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _modifyRequestHeaderParameters Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
+                     * @param _modifyRequestHeaderParameters <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
                      * 
                      */
                     void SetModifyRequestHeaderParameters(const ModifyRequestHeaderParameters& _modifyRequestHeaderParameters);
@@ -1143,19 +866,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ModifyRequestHeaderParametersHasBeenSet() const;
 
                     /**
-                     * 获取Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ResponseSpeedLimitParameters Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
+                     * @return ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
                      * 
                      */
                     ResponseSpeedLimitParameters GetResponseSpeedLimitParameters() const;
 
                     /**
-                     * 设置Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _responseSpeedLimitParameters Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
+                     * @param _responseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
                      * 
                      */
                     void SetResponseSpeedLimitParameters(const ResponseSpeedLimitParameters& _responseSpeedLimitParameters);
@@ -1168,23 +887,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ResponseSpeedLimitParametersHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return SetContentIdentifierParameters Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
+                     * @return SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
                      * 
                      */
                     SetContentIdentifierParameters GetSetContentIdentifierParameters() const;
 
                     /**
-                     * 设置Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _setContentIdentifierParameters Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
+                     * @param _setContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
                      * 
                      */
                     void SetSetContentIdentifierParameters(const SetContentIdentifierParameters& _setContentIdentifierParameters);
@@ -1197,15 +908,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool SetContentIdentifierParametersHasBeenSet() const;
 
                     /**
-                     * 获取Vary feature configuration parameter. when Name value is Vary, this parameter is required.
-                     * @return VaryParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+                     * 获取<p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
+                     * @return VaryParameters <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
                      * 
                      */
                     VaryParameters GetVaryParameters() const;
 
                     /**
-                     * 设置Vary feature configuration parameter. when Name value is Vary, this parameter is required.
-                     * @param _varyParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+                     * 设置<p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
+                     * @param _varyParameters <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
                      * 
                      */
                     void SetVaryParameters(const VaryParameters& _varyParameters);
@@ -1218,15 +929,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool VaryParametersHasBeenSet() const;
 
                     /**
-                     * 获取The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
-                     * @return ContentCompressionParameters The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+                     * 获取<p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+                     * @return ContentCompressionParameters <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
                      * 
                      */
                     ContentCompressionParameters GetContentCompressionParameters() const;
 
                     /**
-                     * 设置The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
-                     * @param _contentCompressionParameters The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+                     * 设置<p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+                     * @param _contentCompressionParameters <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
                      * 
                      */
                     void SetContentCompressionParameters(const ContentCompressionParameters& _contentCompressionParameters);
@@ -1239,15 +950,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool ContentCompressionParametersHasBeenSet() const;
 
                     /**
-                     * 获取The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
-                     * @return OriginAuthenticationParameters The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+                     * 获取<p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+                     * @return OriginAuthenticationParameters <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
                      * 
                      */
                     OriginAuthenticationParameters GetOriginAuthenticationParameters() const;
 
                     /**
-                     * 设置The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
-                     * @param _originAuthenticationParameters The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+                     * 设置<p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+                     * @param _originAuthenticationParameters <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
                      * 
                      */
                     void SetOriginAuthenticationParameters(const OriginAuthenticationParameters& _originAuthenticationParameters);
@@ -1259,331 +970,286 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                      */
                     bool OriginAuthenticationParametersHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @return CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 
+                     */
+                    CustomActionParameters GetCustomActionParameters() const;
+
+                    /**
+                     * 设置<p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @param _customActionParameters <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 
+                     */
+                    void SetCustomActionParameters(const CustomActionParameters& _customActionParameters);
+
+                    /**
+                     * 判断参数 CustomActionParameters 是否已赋值
+                     * @return CustomActionParameters 是否已赋值
+                     * 
+                     */
+                    bool CustomActionParametersHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
+                     * <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
                      */
                     CacheParameters m_cacheParameters;
                     bool m_cacheParametersHasBeenSet;
 
                     /**
-                     * Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
                      */
                     CacheKeyParameters m_cacheKeyParameters;
                     bool m_cacheKeyParametersHasBeenSet;
 
                     /**
-                     * The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
                      */
                     CachePrefreshParameters m_cachePrefreshParameters;
                     bool m_cachePrefreshParametersHasBeenSet;
 
                     /**
-                     * The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
                      */
                     AccessURLRedirectParameters m_accessURLRedirectParameters;
                     bool m_accessURLRedirectParametersHasBeenSet;
 
                     /**
-                     * The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
                      */
                     UpstreamURLRewriteParameters m_upstreamURLRewriteParameters;
                     bool m_upstreamURLRewriteParametersHasBeenSet;
 
                     /**
-                     * The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
                      */
                     QUICParameters m_qUICParameters;
                     bool m_qUICParametersHasBeenSet;
 
                     /**
-                     * The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
                      */
                     WebSocketParameters m_webSocketParameters;
                     bool m_webSocketParametersHasBeenSet;
 
                     /**
-                     * Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
                      */
                     AuthenticationParameters m_authenticationParameters;
                     bool m_authenticationParametersHasBeenSet;
 
                     /**
-                     * Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
                      */
                     MaxAgeParameters m_maxAgeParameters;
                     bool m_maxAgeParametersHasBeenSet;
 
                     /**
-                     * Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
                      */
                     StatusCodeCacheParameters m_statusCodeCacheParameters;
                     bool m_statusCodeCacheParametersHasBeenSet;
 
                     /**
-                     * Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
                      */
                     OfflineCacheParameters m_offlineCacheParameters;
                     bool m_offlineCacheParametersHasBeenSet;
 
                     /**
-                     * Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
                      */
                     SmartRoutingParameters m_smartRoutingParameters;
                     bool m_smartRoutingParametersHasBeenSet;
 
                     /**
-                     * Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+                     */
+                    AdvancedOriginRoutingParameters m_advancedOriginRoutingParameters;
+                    bool m_advancedOriginRoutingParametersHasBeenSet;
+
+                    /**
+                     * <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
                      */
                     RangeOriginPullParameters m_rangeOriginPullParameters;
                     bool m_rangeOriginPullParametersHasBeenSet;
 
                     /**
-                     * HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
                      */
                     UpstreamHTTP2Parameters m_upstreamHTTP2Parameters;
                     bool m_upstreamHTTP2ParametersHasBeenSet;
 
                     /**
-                     * Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
                      */
                     HostHeaderParameters m_hostHeaderParameters;
                     bool m_hostHeaderParametersHasBeenSet;
 
                     /**
-                     * Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
                      */
                     ForceRedirectHTTPSParameters m_forceRedirectHTTPSParameters;
                     bool m_forceRedirectHTTPSParametersHasBeenSet;
 
                     /**
-                     * HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
                      */
                     OriginPullProtocolParameters m_originPullProtocolParameters;
                     bool m_originPullProtocolParametersHasBeenSet;
 
                     /**
-                     * Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
                      */
                     CompressionParameters m_compressionParameters;
                     bool m_compressionParametersHasBeenSet;
 
                     /**
-                     * HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
                      */
                     HSTSParameters m_hSTSParameters;
                     bool m_hSTSParametersHasBeenSet;
 
                     /**
-                     * Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
                      */
                     ClientIPHeaderParameters m_clientIPHeaderParameters;
                     bool m_clientIPHeaderParametersHasBeenSet;
 
                     /**
-                     * OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
                      */
                     OCSPStaplingParameters m_oCSPStaplingParameters;
                     bool m_oCSPStaplingParametersHasBeenSet;
 
                     /**
-                     * HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
                      */
                     HTTP2Parameters m_hTTP2Parameters;
                     bool m_hTTP2ParametersHasBeenSet;
 
                     /**
-                     * Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
                      */
                     PostMaxSizeParameters m_postMaxSizeParameters;
                     bool m_postMaxSizeParametersHasBeenSet;
 
                     /**
-                     * Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
                      */
                     ClientIPCountryParameters m_clientIPCountryParameters;
                     bool m_clientIPCountryParametersHasBeenSet;
 
                     /**
-                     * Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
                      */
                     UpstreamFollowRedirectParameters m_upstreamFollowRedirectParameters;
                     bool m_upstreamFollowRedirectParametersHasBeenSet;
 
                     /**
-                     * Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
                      */
                     UpstreamRequestParameters m_upstreamRequestParameters;
                     bool m_upstreamRequestParametersHasBeenSet;
 
                     /**
-                     * Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
                      */
                     ShieldParameters m_shieldParameters;
                     bool m_shieldParametersHasBeenSet;
 
                     /**
-                     * SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
                      */
                     TLSConfigParameters m_tLSConfigParameters;
                     bool m_tLSConfigParametersHasBeenSet;
 
                     /**
-                     * Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
                      */
                     ModifyOriginParameters m_modifyOriginParameters;
                     bool m_modifyOriginParametersHasBeenSet;
 
                     /**
-                     * Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
                      */
                     SiteFailoverParameters m_siteFailoverParameters;
                     bool m_siteFailoverParametersHasBeenSet;
 
                     /**
-                     * Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
                      */
                     HTTPUpstreamTimeoutParameters m_hTTPUpstreamTimeoutParameters;
                     bool m_hTTPUpstreamTimeoutParametersHasBeenSet;
 
                     /**
-                     * HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
                      */
                     HTTPResponseParameters m_httpResponseParameters;
                     bool m_httpResponseParametersHasBeenSet;
 
                     /**
-                     * Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
                      */
                     ErrorPageParameters m_errorPageParameters;
                     bool m_errorPageParametersHasBeenSet;
 
                     /**
-                     * Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
                      */
                     ModifyResponseHeaderParameters m_modifyResponseHeaderParameters;
                     bool m_modifyResponseHeaderParametersHasBeenSet;
 
                     /**
-                     * Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
                      */
                     ModifyRequestHeaderParameters m_modifyRequestHeaderParameters;
                     bool m_modifyRequestHeaderParametersHasBeenSet;
 
                     /**
-                     * Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
                      */
                     ResponseSpeedLimitParameters m_responseSpeedLimitParameters;
                     bool m_responseSpeedLimitParametersHasBeenSet;
 
                     /**
-                     * Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
                      */
                     SetContentIdentifierParameters m_setContentIdentifierParameters;
                     bool m_setContentIdentifierParametersHasBeenSet;
 
                     /**
-                     * Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+                     * <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
                      */
                     VaryParameters m_varyParameters;
                     bool m_varyParametersHasBeenSet;
 
                     /**
-                     * The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+                     * <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
                      */
                     ContentCompressionParameters m_contentCompressionParameters;
                     bool m_contentCompressionParametersHasBeenSet;
 
                     /**
-                     * The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+                     * <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
                      */
                     OriginAuthenticationParameters m_originAuthenticationParameters;
                     bool m_originAuthenticationParametersHasBeenSet;
+
+                    /**
+                     * <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     */
+                    CustomActionParameters m_customActionParameters;
+                    bool m_customActionParametersHasBeenSet;
 
                 };
             }

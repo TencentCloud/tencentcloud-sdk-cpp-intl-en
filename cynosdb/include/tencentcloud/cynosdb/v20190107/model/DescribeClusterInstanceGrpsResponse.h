@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/CynosdbInstanceGrp.h>
+#include <tencentcloud/cynosdb/v20190107/model/CynosdbInstanceGroup.h>
 
 
 namespace TencentCloud
@@ -72,6 +73,20 @@ namespace TencentCloud
                      */
                     bool InstanceGrpInfoListHasBeenSet() const;
 
+                    /**
+                     * 获取Instance group list
+                     * @return InstanceGroupInfoList Instance group list
+                     * 
+                     */
+                    std::vector<CynosdbInstanceGroup> GetInstanceGroupInfoList() const;
+
+                    /**
+                     * 判断参数 InstanceGroupInfoList 是否已赋值
+                     * @return InstanceGroupInfoList 是否已赋值
+                     * 
+                     */
+                    bool InstanceGroupInfoListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -85,6 +100,12 @@ namespace TencentCloud
                      */
                     std::vector<CynosdbInstanceGrp> m_instanceGrpInfoList;
                     bool m_instanceGrpInfoListHasBeenSet;
+
+                    /**
+                     * Instance group list
+                     */
+                    std::vector<CynosdbInstanceGroup> m_instanceGroupInfoList;
+                    bool m_instanceGroupInfoListHasBeenSet;
 
                 };
             }

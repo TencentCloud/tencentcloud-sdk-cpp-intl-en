@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Safe info
-                     * @return ClusterInfos Safe info
+                     * 获取Vault information
+                     * @return ClusterInfos Vault information
                      * 
                      */
                     std::vector<DescribeVaultBackupClusterInfo> GetClusterInfos() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Safe info
+                     * Vault information
                      */
                     std::vector<DescribeVaultBackupClusterInfo> m_clusterInfos;
                     bool m_clusterInfosHasBeenSet;

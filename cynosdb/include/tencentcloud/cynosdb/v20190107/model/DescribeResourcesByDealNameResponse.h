@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billable resource ID information array
-                     * @return BillingResourceInfos Billable resource ID information array
+                     * 获取Billing resource id information array
+                     * @return BillingResourceInfos Billing resource id information array
                      * 
                      */
                     std::vector<BillingResourceInfo> GetBillingResourceInfos() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Billable resource ID information array
+                     * Billing resource id information array
                      */
                     std::vector<BillingResourceInfo> m_billingResourceInfos;
                     bool m_billingResourceInfosHasBeenSet;

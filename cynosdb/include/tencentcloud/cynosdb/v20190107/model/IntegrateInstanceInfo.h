@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Initializes the configuration information of an instance.
+                * Instance initialization configuration information
                 */
                 class IntegrateInstanceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the cpu of the instance.
-                     * @return Cpu Specifies the cpu of the instance.
+                     * 获取Instance cpu
+                     * @return Cpu Instance cpu
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Specifies the cpu of the instance.
-                     * @param _cpu Specifies the cpu of the instance.
+                     * 设置Instance cpu
+                     * @param _cpu Instance cpu
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the instance memory.
-                     * @return Memory Specifies the instance memory.
+                     * 获取Instance memory
+                     * @return Memory Instance memory
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Specifies the instance memory.
-                     * @param _memory Specifies the instance memory.
+                     * 设置Instance memory
+                     * @param _memory Instance memory
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance type (rw/ro).
-                     * @return InstanceType Instance type (rw/ro).
+                     * 获取Instance type. Valid values: `rw` (primary), `ro` (read-only).
+                     * @return InstanceType Instance type. Valid values: `rw` (primary), `ro` (read-only).
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type (rw/ro).
-                     * @param _instanceType Instance type (rw/ro).
+                     * 设置Instance type. Valid values: `rw` (primary), `ro` (read-only).
+                     * @param _instanceType Instance type. Valid values: `rw` (primary), `ro` (read-only).
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances. value range: [1,15].
-                     * @return InstanceCount Number of instances. value range: [1,15].
+                     * 获取Number of instances. Value range: 1-15.
+                     * @return InstanceCount Number of instances. Value range: 1-15.
                      * 
                      */
                     int64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Number of instances. value range: [1,15].
-                     * @param _instanceCount Number of instances. value range: [1,15].
+                     * 设置Number of instances. Value range: 1-15.
+                     * @param _instanceCount Number of instances. Value range: 1-15.
                      * 
                      */
                     void SetInstanceCount(const int64_t& _instanceCount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type. valid values: universal type (common), exclusive type.
-                     * @return DeviceType Instance machine type. valid values: universal type (common), exclusive type.
+                     * 获取Instance machine type. common: universal type; exclusive: dedicated type
+                     * @return DeviceType Instance machine type. common: universal type; exclusive: dedicated type
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance machine type. valid values: universal type (common), exclusive type.
-                     * @param _deviceType Instance machine type. valid values: universal type (common), exclusive type.
+                     * 设置Instance machine type. common: universal type; exclusive: dedicated type
+                     * @param _deviceType Instance machine type. common: universal type; exclusive: dedicated type
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the cpu of the instance.
+                     * Instance cpu
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Specifies the instance memory.
+                     * Instance memory
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance type (rw/ro).
+                     * Instance type. Valid values: `rw` (primary), `ro` (read-only).
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Number of instances. value range: [1,15].
+                     * Number of instances. Value range: 1-15.
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Instance machine type. valid values: universal type (common), exclusive type.
+                     * Instance machine type. common: universal type; exclusive: dedicated type
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

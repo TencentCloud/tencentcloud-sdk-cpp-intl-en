@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data table list.
-                     * @return Tables Data table list.
+                     * 获取Data table list
+                     * @return Tables Data table list
                      * 
                      */
                     std::vector<DatabaseTables> GetTables() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data table list.
+                     * Data table list
                      */
                     std::vector<DatabaseTables> m_tables;
                     bool m_tablesHasBeenSet;

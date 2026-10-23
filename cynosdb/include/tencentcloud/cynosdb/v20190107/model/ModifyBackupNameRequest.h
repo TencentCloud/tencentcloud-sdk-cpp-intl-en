@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup name, which can contain up to 60 characters.
-                     * @return BackupName Backup name, which can contain up to 60 characters.
+                     * 获取Alias name, which cannot exceed 60 characters.
+                     * @return BackupName Alias name, which cannot exceed 60 characters.
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Backup name, which can contain up to 60 characters.
-                     * @param _backupName Backup name, which can contain up to 60 characters.
+                     * 设置Alias name, which cannot exceed 60 characters.
+                     * @param _backupName Alias name, which cannot exceed 60 characters.
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup name, which can contain up to 60 characters.
+                     * Alias name, which cannot exceed 60 characters.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;

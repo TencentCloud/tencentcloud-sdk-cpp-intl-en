@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -106,27 +106,27 @@ namespace TencentCloud
                     bool TableHasBeenSet() const;
 
                     /**
-                     * 获取Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
-                     * @return TableType Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+                     * 获取Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
+                     * @return TableType Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
                      * 
                      */
                     std::string GetTableType() const;
 
                     /**
-                     * 设置Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
-                     * @param _tableType Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+                     * 设置Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
+                     * @param _tableType Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
                      * 
                      */
                     void SetTableType(const std::string& _tableType);
@@ -141,7 +141,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -159,10 +159,10 @@ namespace TencentCloud
                     bool m_tableHasBeenSet;
 
                     /**
-                     * Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+                     * Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
                      */
                     std::string m_tableType;
                     bool m_tableTypeHasBeenSet;

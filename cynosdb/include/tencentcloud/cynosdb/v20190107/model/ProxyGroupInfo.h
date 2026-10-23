@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Database proxy group details
+                * Detailed information of the database proxy group
                 */
                 class ProxyGroupInfo : public AbstractModel
                 {
@@ -53,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database proxy group.
-                     * @return ProxyGroup Database proxy group.
+                     * 获取Database Proxy Group
+                     * @return ProxyGroup Database Proxy Group
                      * 
                      */
                     ProxyGroup GetProxyGroup() const;
 
                     /**
-                     * 设置Database proxy group.
-                     * @param _proxyGroup Database proxy group.
+                     * 设置Database Proxy Group
+                     * @param _proxyGroup Database Proxy Group
                      * 
                      */
                     void SetProxyGroup(const ProxyGroup& _proxyGroup);
@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool ProxyGroupHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy group read-write separation information.
-                     * @return ProxyGroupRwInfo Database proxy group read-write separation information.
+                     * 获取Read-write separation info of the Database Proxy Group
+                     * @return ProxyGroupRwInfo Read-write separation info of the Database Proxy Group
                      * 
                      */
                     ProxyGroupRwInfo GetProxyGroupRwInfo() const;
 
                     /**
-                     * 设置Database proxy group read-write separation information.
-                     * @param _proxyGroupRwInfo Database proxy group read-write separation information.
+                     * 设置Read-write separation info of the Database Proxy Group
+                     * @param _proxyGroupRwInfo Read-write separation info of the Database Proxy Group
                      * 
                      */
                     void SetProxyGroupRwInfo(const ProxyGroupRwInfo& _proxyGroupRwInfo);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool ProxyNodesHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy connection pool information.
-                     * @return ConnectionPool Database proxy connection pool information.
+                     * 获取Database proxy connection pool information
+                     * @return ConnectionPool Database proxy connection pool information
                      * 
                      */
                     ProxyConnectionPoolInfo GetConnectionPool() const;
 
                     /**
-                     * 设置Database proxy connection pool information.
-                     * @param _connectionPool Database proxy connection pool information.
+                     * 设置Database proxy connection pool information
+                     * @param _connectionPool Database proxy connection pool information
                      * 
                      */
                     void SetConnectionPool(const ProxyConnectionPoolInfo& _connectionPool);
@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool NetAddrInfosHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy task set.
-                     * @return Tasks Database proxy task set.
+                     * 获取Task set of the database proxy
+                     * @return Tasks Task set of the database proxy
                      * 
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
-                     * 设置Database proxy task set.
-                     * @param _tasks Database proxy task set.
+                     * 设置Task set of the database proxy
+                     * @param _tasks Task set of the database proxy
                      * 
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
@@ -181,13 +181,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database proxy group.
+                     * Database Proxy Group
                      */
                     ProxyGroup m_proxyGroup;
                     bool m_proxyGroupHasBeenSet;
 
                     /**
-                     * Database proxy group read-write separation information.
+                     * Read-write separation info of the Database Proxy Group
                      */
                     ProxyGroupRwInfo m_proxyGroupRwInfo;
                     bool m_proxyGroupRwInfoHasBeenSet;
@@ -199,7 +199,7 @@ namespace TencentCloud
                     bool m_proxyNodesHasBeenSet;
 
                     /**
-                     * Database proxy connection pool information.
+                     * Database proxy connection pool information
                      */
                     ProxyConnectionPoolInfo m_connectionPool;
                     bool m_connectionPoolHasBeenSet;
@@ -211,7 +211,7 @@ namespace TencentCloud
                     bool m_netAddrInfosHasBeenSet;
 
                     /**
-                     * Database proxy task set.
+                     * Task set of the database proxy
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;

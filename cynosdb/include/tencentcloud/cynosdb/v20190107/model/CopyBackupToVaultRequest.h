@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Target safe ID. The backup file will be copied to this safe.</p>
-                     * @return VaultId <p>Target safe ID. The backup file will be copied to this safe.</p>
+                     * 获取<p>Target safe ID. The backup file will be copied to this safe</p>
+                     * @return VaultId <p>Target safe ID. The backup file will be copied to this safe</p>
                      * 
                      */
                     std::string GetVaultId() const;
 
                     /**
-                     * 设置<p>Target safe ID. The backup file will be copied to this safe.</p>
-                     * @param _vaultId <p>Target safe ID. The backup file will be copied to this safe.</p>
+                     * 设置<p>Target safe ID. The backup file will be copied to this safe</p>
+                     * @param _vaultId <p>Target safe ID. The backup file will be copied to this safe</p>
                      * 
                      */
                     void SetVaultId(const std::string& _vaultId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
-                     * @return BackupIds <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+                     * 获取<p>Backup file ID list. Supports batch replication of multiple backup files</p>
+                     * @return BackupIds <p>Backup file ID list. Supports batch replication of multiple backup files</p>
                      * 
                      */
                     std::vector<int64_t> GetBackupIds() const;
 
                     /**
-                     * 设置<p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
-                     * @param _backupIds <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+                     * 设置<p>Backup file ID list. Supports batch replication of multiple backup files</p>
+                     * @param _backupIds <p>Backup file ID list. Supports batch replication of multiple backup files</p>
                      * 
                      */
                     void SetBackupIds(const std::vector<int64_t>& _backupIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Target safe ID. The backup file will be copied to this safe.</p>
+                     * <p>Target safe ID. The backup file will be copied to this safe</p>
                      */
                     std::string m_vaultId;
                     bool m_vaultIdHasBeenSet;
 
                     /**
-                     * <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+                     * <p>Backup file ID list. Supports batch replication of multiple backup files</p>
                      */
                     std::vector<int64_t> m_backupIds;
                     bool m_backupIdsHasBeenSet;

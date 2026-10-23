@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Select the delivery type, storage class, message channel.
-                     * @return DeliverType Select the delivery type, storage class, message channel.
+                     * 获取Delivery type. Valid values: `store` (storage class), `mq` (message channel).
+                     * @return DeliverType Delivery type. Valid values: `store` (storage class), `mq` (message channel).
                      * 
                      */
                     std::string GetDeliverType() const;
 
                     /**
-                     * 设置Select the delivery type, storage class, message channel.
-                     * @param _deliverType Select the delivery type, storage class, message channel.
+                     * 设置Delivery type. Valid values: `store` (storage class), `mq` (message channel).
+                     * @param _deliverType Delivery type. Valid values: `store` (storage class), `mq` (message channel).
                      * 
                      */
                     void SetDeliverType(const std::string& _deliverType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DeliverTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the delivery subtype: cls, ckafka.
-                     * @return DeliverSubType Specifies the delivery subtype: cls, ckafka.
+                     * 获取Delivery subtype: cls, ckafka.
+                     * @return DeliverSubType Delivery subtype: cls, ckafka.
                      * 
                      */
                     std::string GetDeliverSubType() const;
 
                     /**
-                     * 设置Specifies the delivery subtype: cls, ckafka.
-                     * @param _deliverSubType Specifies the delivery subtype: cls, ckafka.
+                     * 设置Delivery subtype: cls, ckafka.
+                     * @param _deliverSubType Delivery subtype: cls, ckafka.
                      * 
                      */
                     void SetDeliverSubType(const std::string& _deliverSubType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DeliverSubTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sender.
-                     * @return DeliverConsumer Sender.
+                     * 获取Submitter
+                     * @return DeliverConsumer Submitter
                      * 
                      */
                     std::string GetDeliverConsumer() const;
 
                     /**
-                     * 设置Sender.
-                     * @param _deliverConsumer Sender.
+                     * 设置Submitter
+                     * @param _deliverConsumer Submitter
                      * 
                      */
                     void SetDeliverConsumer(const std::string& _deliverConsumer);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DeliverConsumerHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the name of the sender.
-                     * @return DeliverConsumerName Specifies the name of the sender.
+                     * 获取Submitter name
+                     * @return DeliverConsumerName Submitter name
                      * 
                      */
                     std::string GetDeliverConsumerName() const;
 
                     /**
-                     * 设置Specifies the name of the sender.
-                     * @param _deliverConsumerName Specifies the name of the sender.
+                     * 设置Submitter name
+                     * @param _deliverConsumerName Submitter name
                      * 
                      */
                     void SetDeliverConsumerName(const std::string& _deliverConsumerName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DeliverConsumerNameHasBeenSet() const;
 
                     /**
-                     * 获取Exception error in delivery
-                     * @return DeliverError Exception error in delivery
+                     * 获取Submission exception error
+                     * @return DeliverError Submission exception error
                      * 
                      */
                     std::string GetDeliverError() const;
 
                     /**
-                     * 设置Exception error in delivery
-                     * @param _deliverError Exception error in delivery
+                     * 设置Submission exception error
+                     * @param _deliverError Submission exception error
                      * 
                      */
                     void SetDeliverError(const std::string& _deliverError);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Select the delivery type, storage class, message channel.
+                     * Delivery type. Valid values: `store` (storage class), `mq` (message channel).
                      */
                     std::string m_deliverType;
                     bool m_deliverTypeHasBeenSet;
 
                     /**
-                     * Specifies the delivery subtype: cls, ckafka.
+                     * Delivery subtype: cls, ckafka.
                      */
                     std::string m_deliverSubType;
                     bool m_deliverSubTypeHasBeenSet;
 
                     /**
-                     * Sender.
+                     * Submitter
                      */
                     std::string m_deliverConsumer;
                     bool m_deliverConsumerHasBeenSet;
 
                     /**
-                     * Specifies the name of the sender.
+                     * Submitter name
                      */
                     std::string m_deliverConsumerName;
                     bool m_deliverConsumerNameHasBeenSet;
 
                     /**
-                     * Exception error in delivery
+                     * Submission exception error
                      */
                     std::string m_deliverError;
                     bool m_deliverErrorHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Analysis Cluster ID List
-                     * @return ClusterIdSet Analysis Cluster ID List
+                     * 获取Analytical cluster ID list
+                     * @return ClusterIdSet Analytical cluster ID list
                      * 
                      */
                     std::vector<std::string> GetClusterIdSet() const;
 
                     /**
-                     * 设置Analysis Cluster ID List
-                     * @param _clusterIdSet Analysis Cluster ID List
+                     * 设置Analytical cluster ID list
+                     * @param _clusterIdSet Analytical cluster ID list
                      * 
                      */
                     void SetClusterIdSet(const std::vector<std::string>& _clusterIdSet);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Analysis Cluster ID List
+                     * Analytical cluster ID list
                      */
                     std::vector<std::string> m_clusterIdSet;
                     bool m_clusterIdSetHasBeenSet;

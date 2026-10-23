@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modify parameter information.
+                * Modifies parameter information
                 */
                 class ModifyParamsData : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value before modification.
-                     * @return OldValue Parameter value before modification.
+                     * 获取Parameter value before modification
+                     * @return OldValue Parameter value before modification
                      * 
                      */
                     std::string GetOldValue() const;
 
                     /**
-                     * 设置Parameter value before modification.
-                     * @param _oldValue Parameter value before modification.
+                     * 设置Parameter value before modification
+                     * @param _oldValue Parameter value before modification
                      * 
                      */
                     void SetOldValue(const std::string& _oldValue);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OldValueHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value after modification.
-                     * @return CurValue Parameter value after modification.
+                     * 获取New Value
+                     * @return CurValue New Value
                      * 
                      */
                     std::string GetCurValue() const;
 
                     /**
-                     * 设置Parameter value after modification.
-                     * @param _curValue Parameter value after modification.
+                     * 设置New Value
+                     * @param _curValue New Value
                      * 
                      */
                     void SetCurValue(const std::string& _curValue);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Parameter value before modification.
+                     * Parameter value before modification
                      */
                     std::string m_oldValue;
                     bool m_oldValueHasBeenSet;
 
                     /**
-                     * Parameter value after modification.
+                     * New Value
                      */
                     std::string m_curValue;
                     bool m_curValueHasBeenSet;

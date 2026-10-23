@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Current version of database proxy
-                     * @return SrcProxyVersion Current version of database proxy
+                     * 获取Current version of the database proxy.
+                     * @return SrcProxyVersion Current version of the database proxy.
                      * 
                      */
                     std::string GetSrcProxyVersion() const;
 
                     /**
-                     * 设置Current version of database proxy
-                     * @param _srcProxyVersion Current version of database proxy
+                     * 设置Current version of the database proxy.
+                     * @param _srcProxyVersion Current version of the database proxy.
                      * 
                      */
                     void SetSrcProxyVersion(const std::string& _srcProxyVersion);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SrcProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Target version of database proxy
-                     * @return DstProxyVersion Target version of database proxy
+                     * 获取Database proxy upgrade version
+                     * @return DstProxyVersion Database proxy upgrade version
                      * 
                      */
                     std::string GetDstProxyVersion() const;
 
                     /**
-                     * 设置Target version of database proxy
-                     * @param _dstProxyVersion Target version of database proxy
+                     * 设置Database proxy upgrade version
+                     * @param _dstProxyVersion Database proxy upgrade version
                      * 
                      */
                     void SetDstProxyVersion(const std::string& _dstProxyVersion);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DstProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy group ID
-                     * @return ProxyGroupId Database proxy group ID
+                     * 获取Database Proxy Group ID
+                     * @return ProxyGroupId Database Proxy Group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy group ID
-                     * @param _proxyGroupId Database proxy group ID
+                     * 设置Database Proxy Group ID
+                     * @param _proxyGroupId Database Proxy Group ID
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
-                     * @return IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+                     * 获取Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+                     * @return IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
-                     * @param _isInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+                     * 设置Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+                     * @param _isInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -156,25 +156,25 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Current version of database proxy
+                     * Current version of the database proxy.
                      */
                     std::string m_srcProxyVersion;
                     bool m_srcProxyVersionHasBeenSet;
 
                     /**
-                     * Target version of database proxy
+                     * Database proxy upgrade version
                      */
                     std::string m_dstProxyVersion;
                     bool m_dstProxyVersionHasBeenSet;
 
                     /**
-                     * Database proxy group ID
+                     * Database Proxy Group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+                     * Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status code. valid values: 301, 302, 303, 307, 308.
-                     * @return StatusCode Status code. valid values: 301, 302, 303, 307, 308.
+                     * 获取<p>Status code, value is one of 301, 302, 303, 307, 308.</p>
+                     * @return StatusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置Status code. valid values: 301, 302, 303, 307, 308.
-                     * @param _statusCode Status code. valid values: 301, 302, 303, 307, 308.
+                     * 设置<p>Status code, value is one of 301, 302, 303, 307, 308.</p>
+                     * @param _statusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -71,27 +71,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
-                     * @return Protocol Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+                     * 获取<p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
+                     * @return Protocol <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
-                     * @param _protocol Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+                     * 设置<p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
+                     * @param _protocol <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -104,19 +92,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HostName Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Target HostName.</p>
+                     * @return HostName <p>Target HostName.</p>
                      * 
                      */
                     HostName GetHostName() const;
 
                     /**
-                     * 设置Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _hostName Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Target HostName.</p>
+                     * @param _hostName <p>Target HostName.</p>
                      * 
                      */
                     void SetHostName(const HostName& _hostName);
@@ -129,19 +113,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return URLPath Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Target path.</p>
+                     * @return URLPath <p>Target path.</p>
                      * 
                      */
                     URLPath GetURLPath() const;
 
                     /**
-                     * 设置Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _uRLPath Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Target path.</p>
+                     * @param _uRLPath <p>Target path.</p>
                      * 
                      */
                     void SetURLPath(const URLPath& _uRLPath);
@@ -154,19 +134,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool URLPathHasBeenSet() const;
 
                     /**
-                     * 获取Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return QueryString Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Query string.</p>
+                     * @return QueryString <p>Query string.</p>
                      * 
                      */
                     AccessURLRedirectQueryString GetQueryString() const;
 
                     /**
-                     * 设置Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _queryString Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Query string.</p>
+                     * @param _queryString <p>Query string.</p>
                      * 
                      */
                     void SetQueryString(const AccessURLRedirectQueryString& _queryString);
@@ -181,37 +157,31 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Status code. valid values: 301, 302, 303, 307, 308.
+                     * <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+                     * <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Target HostName.</p>
                      */
                     HostName m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Target path.</p>
                      */
                     URLPath m_uRLPath;
                     bool m_uRLPathHasBeenSet;
 
                     /**
-                     * Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Query string.</p>
                      */
                     AccessURLRedirectQueryString m_queryString;
                     bool m_queryStringHasBeenSet;

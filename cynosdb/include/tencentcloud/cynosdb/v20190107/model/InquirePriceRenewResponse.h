@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID list
-                     * @return InstanceIds Instance ID list
+                     * 获取Instance ID list.
+                     * @return InstanceIds Instance ID list.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Price of instance specification in array
-                     * @return Prices Price of instance specification in array
+                     * 获取Corresponding inquiry result array.
+                     * @return Prices Corresponding inquiry result array.
                      * 
                      */
                     std::vector<TradePrice> GetPrices() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool PricesHasBeenSet() const;
 
                     /**
-                     * 获取Total renewal price of compute node
-                     * @return InstanceRealTotalPrice Total renewal price of compute node
+                     * 获取Total price for renewing the computing node
+                     * @return InstanceRealTotalPrice Total price for renewing the computing node
                      * 
                      */
                     int64_t GetInstanceRealTotalPrice() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool InstanceRealTotalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Total renewal price of storage node
-                     * @return StorageRealTotalPrice Total renewal price of storage node
+                     * 获取Total price for renewing the storage node
+                     * @return StorageRealTotalPrice Total price for renewing the storage node
                      * 
                      */
                     int64_t GetStorageRealTotalPrice() const;
@@ -123,25 +123,25 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance ID list
+                     * Instance ID list.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Price of instance specification in array
+                     * Corresponding inquiry result array.
                      */
                     std::vector<TradePrice> m_prices;
                     bool m_pricesHasBeenSet;
 
                     /**
-                     * Total renewal price of compute node
+                     * Total price for renewing the computing node
                      */
                     int64_t m_instanceRealTotalPrice;
                     bool m_instanceRealTotalPriceHasBeenSet;
 
                     /**
-                     * Total renewal price of storage node
+                     * Total price for renewing the storage node
                      */
                     int64_t m_storageRealTotalPrice;
                     bool m_storageRealTotalPriceHasBeenSet;

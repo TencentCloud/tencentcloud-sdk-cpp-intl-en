@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance group ID
-                     * @return InstanceGrpId Instance group ID
+                     * 获取Instance Group ID
+                     * @return InstanceGrpId Instance Group ID
                      * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置Instance group ID
-                     * @param _instanceGrpId Instance group ID
+                     * 设置Instance Group ID
+                     * @param _instanceGrpId Instance Group ID
                      * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
@@ -63,13 +63,67 @@ namespace TencentCloud
                      */
                     bool InstanceGrpIdHasBeenSet() const;
 
+                    /**
+                     * 获取Instance Group ID
+                     * @return InstanceGroupId Instance Group ID
+                     * 
+                     */
+                    std::string GetInstanceGroupId() const;
+
+                    /**
+                     * 设置Instance Group ID
+                     * @param _instanceGroupId Instance Group ID
+                     * 
+                     */
+                    void SetInstanceGroupId(const std::string& _instanceGroupId);
+
+                    /**
+                     * 判断参数 InstanceGroupId 是否已赋值
+                     * @return InstanceGroupId 是否已赋值
+                     * 
+                     */
+                    bool InstanceGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance group ID
+                     * Instance Group ID
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
+
+                    /**
+                     * Instance Group ID
+                     */
+                    std::string m_instanceGroupId;
+                    bool m_instanceGroupIdHasBeenSet;
+
+                    /**
+                     * Instance ID.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

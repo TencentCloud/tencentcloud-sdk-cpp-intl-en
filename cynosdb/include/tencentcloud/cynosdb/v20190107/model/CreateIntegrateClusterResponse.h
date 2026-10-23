@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Frozen transaction ID.
-                     * @return TranId Frozen transaction ID.
+                     * 获取Frozen transaction ID
+                     * @return TranId Frozen transaction ID
                      * 
                      */
                     std::string GetTranId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Order ID.
-                     * @return DealNames Order ID.
+                     * 获取Order ID
+                     * @return DealNames Order ID
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
-                     * @return ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
+                     * 获取Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
+                     * @return ResourceIds Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
-                     * @return ClusterIds Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
+                     * 获取Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
+                     * @return ClusterIds Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
@@ -116,25 +116,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Frozen transaction ID.
+                     * Frozen transaction ID
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Order ID.
+                     * Order ID
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
+                     * Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
+                     * Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;

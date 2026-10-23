@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID
-                     * @return TemplateId Template ID
+                     * 获取Template ID.
+                     * @return TemplateId Template ID.
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Template ID
-                     * @param _templateId Template ID
+                     * 设置Template ID.
+                     * @param _templateId Template ID.
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID
+                     * Template ID.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

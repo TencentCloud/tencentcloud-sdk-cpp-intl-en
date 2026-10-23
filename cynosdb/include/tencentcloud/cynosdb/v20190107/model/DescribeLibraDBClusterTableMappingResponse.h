@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCntHasBeenSet() const;
 
                     /**
-                     * 获取Database mapping info
-                     * @return TableMappings Database mapping info
+                     * 获取Database mapping information
+                     * @return TableMappings Database mapping information
                      * 
                      */
                     std::vector<TableMappingObject> GetTableMappings() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCntHasBeenSet;
 
                     /**
-                     * Database mapping info
+                     * Database mapping information
                      */
                     std::vector<TableMappingObject> m_tableMappings;
                     bool m_tableMappingsHasBeenSet;

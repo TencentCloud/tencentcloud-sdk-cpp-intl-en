@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Large order id. must choose between large order id and sub-order id.
-                     * @return BigDealId Large order id. must choose between large order id and sub-order id.
+                     * 获取Large order id. Either the large order id or the sub-order id must be selected.
+                     * @return BigDealId Large order id. Either the large order id or the sub-order id must be selected.
                      * 
                      */
                     std::string GetBigDealId() const;
 
                     /**
-                     * 设置Large order id. must choose between large order id and sub-order id.
-                     * @param _bigDealId Large order id. must choose between large order id and sub-order id.
+                     * 设置Large order id. Either the large order id or the sub-order id must be selected.
+                     * @param _bigDealId Large order id. Either the large order id or the sub-order id must be selected.
                      * 
                      */
                     void SetBigDealId(const std::string& _bigDealId);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Large order id. must choose between large order id and sub-order id.
+                     * Large order id. Either the large order id or the sub-order id must be selected.
                      */
                     std::string m_bigDealId;
                     bool m_bigDealIdHasBeenSet;

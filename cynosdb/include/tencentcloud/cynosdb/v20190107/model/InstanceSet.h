@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool MaintainDurationHasBeenSet() const;
 
                     /**
-                     * 获取Execution start time (seconds from 00:00)
-                     * @return MaintainStartTime Execution start time (seconds from 00:00)
+                     * 获取Execution start time (seconds from 00:00:00)
+                     * @return MaintainStartTime Execution start time (seconds from 00:00:00)
                      * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
-                     * 设置Execution start time (seconds from 00:00)
-                     * @param _maintainStartTime Execution start time (seconds from 00:00)
+                     * 设置Execution start time (seconds from 00:00:00)
+                     * @param _maintainStartTime Execution start time (seconds from 00:00:00)
                      * 
                      */
                     void SetMaintainStartTime(const int64_t& _maintainStartTime);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool MaintainStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
-                     * @return MaintainWeekDays The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+                     * 获取The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+                     * @return MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
-                     * 设置The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
-                     * @param _maintainWeekDays The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+                     * 设置The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+                     * @param _maintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
                      * 
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
@@ -485,13 +485,13 @@ namespace TencentCloud
                     bool m_maintainDurationHasBeenSet;
 
                     /**
-                     * Execution start time (seconds from 00:00)
+                     * Execution start time (seconds from 00:00:00)
                      */
                     int64_t m_maintainStartTime;
                     bool m_maintainStartTimeHasBeenSet;
 
                     /**
-                     * The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+                     * The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;

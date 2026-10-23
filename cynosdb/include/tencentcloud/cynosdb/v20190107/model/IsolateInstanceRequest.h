@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID array
-                     * @return InstanceIdList Instance ID array
+                     * 获取Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+                     * @return InstanceIdList Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
                      * 
                      */
                     std::vector<std::string> GetInstanceIdList() const;
 
                     /**
-                     * 设置Instance ID array
-                     * @param _instanceIdList Instance ID array
+                     * 设置Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+                     * @param _instanceIdList Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
                      * 
                      */
                     void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdListHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused.
-                     * @return DbType This parameter has been disused.
+                     * 获取This parameter has been deprecated.
+                     * @return DbType This parameter has been deprecated.
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置This parameter has been disused.
-                     * @param _dbType This parameter has been disused.
+                     * 设置This parameter has been deprecated.
+                     * @param _dbType This parameter has been deprecated.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance Refund Reason Types
-                     * @return IsolateReasonTypes Instance Refund Reason Types
+                     * 获取Refund reason type of the instance
+                     * @return IsolateReasonTypes Refund reason type of the instance
                      * 
                      */
                     std::vector<int64_t> GetIsolateReasonTypes() const;
 
                     /**
-                     * 设置Instance Refund Reason Types
-                     * @param _isolateReasonTypes Instance Refund Reason Types
+                     * 设置Refund reason type of the instance
+                     * @param _isolateReasonTypes Refund reason type of the instance
                      * 
                      */
                     void SetIsolateReasonTypes(const std::vector<int64_t>& _isolateReasonTypes);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IsolateReasonTypesHasBeenSet() const;
 
                     /**
-                     * 获取Instance Refund Reason Supplement
-                     * @return IsolateReason Instance Refund Reason Supplement
+                     * 获取Supplementary reason for instance return
+                     * @return IsolateReason Supplementary reason for instance return
                      * 
                      */
                     std::string GetIsolateReason() const;
 
                     /**
-                     * 设置Instance Refund Reason Supplement
-                     * @param _isolateReason Instance Refund Reason Supplement
+                     * 设置Supplementary reason for instance return
+                     * @param _isolateReason Supplementary reason for instance return
                      * 
                      */
                     void SetIsolateReason(const std::string& _isolateReason);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool IsolateReasonHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention
-                     * @return SaveBackup Backup retention
+                     * 获取Retain backups
+                     * @return SaveBackup Retain backups
                      * 
                      */
                     bool GetSaveBackup() const;
 
                     /**
-                     * 设置Backup retention
-                     * @param _saveBackup Backup retention
+                     * 设置Retain backups
+                     * @param _saveBackup Retain backups
                      * 
                      */
                     void SetSaveBackup(const bool& _saveBackup);
@@ -177,31 +177,31 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance ID array
+                     * Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
                      */
                     std::vector<std::string> m_instanceIdList;
                     bool m_instanceIdListHasBeenSet;
 
                     /**
-                     * This parameter has been disused.
+                     * This parameter has been deprecated.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Instance Refund Reason Types
+                     * Refund reason type of the instance
                      */
                     std::vector<int64_t> m_isolateReasonTypes;
                     bool m_isolateReasonTypesHasBeenSet;
 
                     /**
-                     * Instance Refund Reason Supplement
+                     * Supplementary reason for instance return
                      */
                     std::string m_isolateReason;
                     bool m_isolateReasonHasBeenSet;
 
                     /**
-                     * Backup retention
+                     * Retain backups
                      */
                     bool m_saveBackup;
                     bool m_saveBackupHasBeenSet;

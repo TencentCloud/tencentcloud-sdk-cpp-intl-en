@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Error log list.
-                     * @return ErrorLogs Error log list.
+                     * 获取Error log list
+                     * @return ErrorLogs Error log list
                      * 
                      */
                     std::vector<CynosdbErrorLogItem> GetErrorLogs() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Error log list.
+                     * Error log list
                      */
                     std::vector<CynosdbErrorLogItem> m_errorLogs;
                     bool m_errorLogsHasBeenSet;

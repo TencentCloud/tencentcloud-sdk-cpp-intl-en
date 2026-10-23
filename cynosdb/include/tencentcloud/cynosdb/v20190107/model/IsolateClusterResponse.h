@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
-                     * @return FlowId Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
+                     * 获取Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
+                     * @return FlowId Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
+                     * Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

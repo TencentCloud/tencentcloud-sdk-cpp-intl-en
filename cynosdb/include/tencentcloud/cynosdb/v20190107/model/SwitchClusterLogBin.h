@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Switch cluster log bin toggle
+                * Switch the log bin of the cluster
                 */
                 class SwitchClusterLogBin : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param _status Status
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status
+                     * Status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

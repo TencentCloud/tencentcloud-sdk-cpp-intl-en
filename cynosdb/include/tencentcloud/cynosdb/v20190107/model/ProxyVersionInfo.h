@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The proxy version information supported by TDSQL-C for MySQL.
+                * proxy version information supported by TDSQL-C MySQL
                 */
                 class ProxyVersionInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取proxy version number.
-                     * @return ProxyVersion proxy version number.
+                     * 获取proxy version number
+                     * @return ProxyVersion proxy version number
                      * 
                      */
                     std::string GetProxyVersion() const;
 
                     /**
-                     * 设置proxy version number.
-                     * @param _proxyVersion proxy version number.
+                     * 设置proxy version number
+                     * @param _proxyVersion proxy version number
                      * 
                      */
                     void SetProxyVersion(const std::string& _proxyVersion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
-                     * @return ProxyVersionType Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+                     * 获取Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
+                     * @return ProxyVersionType Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
                      * 
                      */
                     std::string GetProxyVersionType() const;
 
                     /**
-                     * 设置Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
-                     * @param _proxyVersionType Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+                     * 设置Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
+                     * @param _proxyVersionType Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
                      * 
                      */
                     void SetProxyVersionType(const std::string& _proxyVersionType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * proxy version number.
+                     * proxy version number
                      */
                     std::string m_proxyVersion;
                     bool m_proxyVersionHasBeenSet;
 
                     /**
-                     * Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+                     * Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
                      */
                     std::string m_proxyVersionType;
                     bool m_proxyVersionTypeHasBeenSet;

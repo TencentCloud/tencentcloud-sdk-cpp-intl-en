@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Transaction start time
-                     * @return StartTime Transaction start time
+                     * 获取Earliest transaction start time.
+                     * @return StartTime Earliest transaction start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Transaction start time
-                     * @param _startTime Transaction start time
+                     * 设置Earliest transaction start time.
+                     * @param _startTime Earliest transaction start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction end time
-                     * @return EndTime Transaction end time
+                     * 获取Latest transaction start time.
+                     * @return EndTime Latest transaction start time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Transaction end time
-                     * @param _endTime Transaction end time
+                     * 设置Latest transaction start time.
+                     * @param _endTime Latest transaction start time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number
-                     * @return Limit Maximum number
+                     * 获取Limit of Items
+                     * @return Limit Limit of Items
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number
-                     * @param _limit Maximum number
+                     * 设置Limit of Items
+                     * @param _limit Limit of Items
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Username
-                     * @return Username Username
+                     * 获取Username.
+                     * @return Username Username.
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username
-                     * @param _username Username
+                     * 设置Username.
+                     * @param _username Username.
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取File type. Valid values: csv, original.
-                     * @return FileType File type. Valid values: csv, original.
+                     * 获取File type. Available values: csv, original
+                     * @return FileType File type. Available values: csv, original
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置File type. Valid values: csv, original.
-                     * @param _fileType File type. Valid values: csv, original.
+                     * 设置File type. Available values: csv, original
+                     * @param _fileType File type. Available values: csv, original
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
-                     * @return OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * 获取Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
+                     * @return OrderBy Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
-                     * @param _orderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * 设置Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
+                     * @param _orderBy Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc`, `desc`.
-                     * @return OrderByType Sorting order. Valid values: `asc`, `desc`.
+                     * 获取Sorting type. Valid values: asc and desc.
+                     * @return OrderByType Sorting type. Valid values: asc and desc.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc`, `desc`.
-                     * @param _orderByType Sorting order. Valid values: `asc`, `desc`.
+                     * 设置Sorting type. Valid values: asc and desc.
+                     * @param _orderByType Sorting type. Valid values: asc and desc.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -276,37 +276,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Transaction start time
+                     * Earliest transaction start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Transaction end time
+                     * Latest transaction start time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Maximum number
+                     * Limit of Items
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Username
+                     * Username.
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
@@ -324,19 +324,19 @@ namespace TencentCloud
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * File type. Valid values: csv, original.
+                     * File type. Available values: csv, original
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc`, `desc`.
+                     * Sorting type. Valid values: asc and desc.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

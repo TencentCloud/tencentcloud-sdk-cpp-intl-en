@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Big order number
-                     * @return BigDealIds Big order number
+                     * 获取Total Payment Order Number
+                     * @return BigDealIds Total Payment Order Number
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool BigDealIdsHasBeenSet() const;
 
                     /**
-                     * 获取Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
-                     * @return DealNames Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
+                     * 获取Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
+                     * @return DealNames Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Big order number
+                     * Total Payment Order Number
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;
 
                     /**
-                     * Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
+                     * Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

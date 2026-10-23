@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Safe info
+                * Safe information.
                 */
                 class DescribeVaultsItem : public AbstractModel
                 {
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool VaultNameHasBeenSet() const;
 
                     /**
-                     * 获取Safe description
-                     * @return VaultDescribe Safe description
+                     * 获取Safe description.
+                     * @return VaultDescribe Safe description.
                      * 
                      */
                     std::string GetVaultDescribe() const;
 
                     /**
-                     * 设置Safe description
-                     * @param _vaultDescribe Safe description
+                     * 设置Safe description.
+                     * @param _vaultDescribe Safe description.
                      * 
                      */
                     void SetVaultDescribe(const std::string& _vaultDescribe);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Key region
-                     * @return KeyRegion Key region
+                     * 获取Region of the key
+                     * @return KeyRegion Region of the key
                      * 
                      */
                     std::string GetKeyRegion() const;
 
                     /**
-                     * 设置Key region
-                     * @param _keyRegion Key region
+                     * 设置Region of the key
+                     * @param _keyRegion Region of the key
                      * 
                      */
                     void SetKeyRegion(const std::string& _keyRegion);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool BinlogFileCountHasBeenSet() const;
 
                     /**
-                     * 获取Total size of the Binlog file (byte)
-                     * @return BinlogFileSize Total size of the Binlog file (byte)
+                     * 获取Total size of Binlog files (byte)
+                     * @return BinlogFileSize Total size of Binlog files (byte)
                      * 
                      */
                     int64_t GetBinlogFileSize() const;
 
                     /**
-                     * 设置Total size of the Binlog file (byte)
-                     * @param _binlogFileSize Total size of the Binlog file (byte)
+                     * 设置Total size of Binlog files (byte)
+                     * @param _binlogFileSize Total size of Binlog files (byte)
                      * 
                      */
                     void SetBinlogFileSize(const int64_t& _binlogFileSize);
@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period (seconds)
-                     * @return BackupSaveSeconds Backup retention period (seconds)
+                     * 获取Backup retention period in seconds.
+                     * @return BackupSaveSeconds Backup retention period in seconds.
                      * 
                      */
                     int64_t GetBackupSaveSeconds() const;
 
                     /**
-                     * 设置Backup retention period (seconds)
-                     * @param _backupSaveSeconds Backup retention period (seconds)
+                     * 设置Backup retention period in seconds.
+                     * @param _backupSaveSeconds Backup retention period in seconds.
                      * 
                      */
                     void SetBackupSaveSeconds(const int64_t& _backupSaveSeconds);
@@ -343,15 +343,15 @@ namespace TencentCloud
                     bool BackupSaveSecondsHasBeenSet() const;
 
                     /**
-                     * 获取lock time
-                     * @return LockedTime lock time
+                     * 获取Locking time
+                     * @return LockedTime Locking time
                      * 
                      */
                     std::string GetLockedTime() const;
 
                     /**
-                     * 设置lock time
-                     * @param _lockedTime lock time
+                     * 设置Locking time
+                     * @param _lockedTime Locking time
                      * 
                      */
                     void SetLockedTime(const std::string& _lockedTime);
@@ -364,15 +364,15 @@ namespace TencentCloud
                     bool LockedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Associated task list
-                     * @return Tasks Associated task list
+                     * 获取Associated task list.
+                     * @return Tasks Associated task list.
                      * 
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
-                     * 设置Associated task list
-                     * @param _tasks Associated task list
+                     * 设置Associated task list.
+                     * @param _tasks Associated task list.
                      * 
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
@@ -385,15 +385,15 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取Safe region
-                     * @return VaultRegion Safe region
+                     * 获取Region of the safe
+                     * @return VaultRegion Region of the safe
                      * 
                      */
                     std::string GetVaultRegion() const;
 
                     /**
-                     * 设置Safe region
-                     * @param _vaultRegion Safe region
+                     * 设置Region of the safe
+                     * @param _vaultRegion Region of the safe
                      * 
                      */
                     void SetVaultRegion(const std::string& _vaultRegion);
@@ -406,15 +406,15 @@ namespace TencentCloud
                     bool VaultRegionHasBeenSet() const;
 
                     /**
-                     * 获取Automatically deliver relationship
-                     * @return AutoCopyConfigs Automatically deliver relationship
+                     * 获取Automatically deliver relationships
+                     * @return AutoCopyConfigs Automatically deliver relationships
                      * 
                      */
                     std::vector<AutoCopyConfig> GetAutoCopyConfigs() const;
 
                     /**
-                     * 设置Automatically deliver relationship
-                     * @param _autoCopyConfigs Automatically deliver relationship
+                     * 设置Automatically deliver relationships
+                     * @param _autoCopyConfigs Automatically deliver relationships
                      * 
                      */
                     void SetAutoCopyConfigs(const std::vector<AutoCopyConfig>& _autoCopyConfigs);
@@ -441,7 +441,7 @@ namespace TencentCloud
                     bool m_vaultNameHasBeenSet;
 
                     /**
-                     * Safe description
+                     * Safe description.
                      */
                     std::string m_vaultDescribe;
                     bool m_vaultDescribeHasBeenSet;
@@ -453,7 +453,7 @@ namespace TencentCloud
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Key region
+                     * Region of the key
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
@@ -483,7 +483,7 @@ namespace TencentCloud
                     bool m_binlogFileCountHasBeenSet;
 
                     /**
-                     * Total size of the Binlog file (byte)
+                     * Total size of Binlog files (byte)
                      */
                     int64_t m_binlogFileSize;
                     bool m_binlogFileSizeHasBeenSet;
@@ -507,31 +507,31 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Backup retention period (seconds)
+                     * Backup retention period in seconds.
                      */
                     int64_t m_backupSaveSeconds;
                     bool m_backupSaveSecondsHasBeenSet;
 
                     /**
-                     * lock time
+                     * Locking time
                      */
                     std::string m_lockedTime;
                     bool m_lockedTimeHasBeenSet;
 
                     /**
-                     * Associated task list
+                     * Associated task list.
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * Safe region
+                     * Region of the safe
                      */
                     std::string m_vaultRegion;
                     bool m_vaultRegionHasBeenSet;
 
                     /**
-                     * Automatically deliver relationship
+                     * Automatically deliver relationships
                      */
                     std::vector<AutoCopyConfig> m_autoCopyConfigs;
                     bool m_autoCopyConfigsHasBeenSet;

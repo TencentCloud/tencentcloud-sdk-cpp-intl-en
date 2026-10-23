@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of a resource pack
-                     * @return PackageId The unique ID of a resource pack
+                     * 获取Unique ID of the resource package
+                     * @return PackageId Unique ID of the resource package
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack
-                     * @param _packageId The unique ID of a resource pack
+                     * 设置Unique ID of the resource package
+                     * @param _packageId Unique ID of the resource package
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cluster to be bound
-                     * @return BindClusterIds ID of the cluster to be bound
+                     * 获取Cluster ID for which a binding relationship needs to be established.
+                     * @return BindClusterIds Cluster ID for which a binding relationship needs to be established.
                      * 
                      */
                     std::vector<std::string> GetBindClusterIds() const;
 
                     /**
-                     * 设置ID of the cluster to be bound
-                     * @param _bindClusterIds ID of the cluster to be bound
+                     * 设置Cluster ID for which a binding relationship needs to be established.
+                     * @param _bindClusterIds Cluster ID for which a binding relationship needs to be established.
                      * 
                      */
                     void SetBindClusterIds(const std::vector<std::string>& _bindClusterIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BindClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cluster to be unbound
-                     * @return UnbindClusterIds ID of the cluster to be unbound
+                     * 获取Cluster ID for which the binding relationship needs to be unbound.
+                     * @return UnbindClusterIds Cluster ID for which the binding relationship needs to be unbound.
                      * 
                      */
                     std::vector<std::string> GetUnbindClusterIds() const;
 
                     /**
-                     * 设置ID of the cluster to be unbound
-                     * @param _unbindClusterIds ID of the cluster to be unbound
+                     * 设置Cluster ID for which the binding relationship needs to be unbound.
+                     * @param _unbindClusterIds Cluster ID for which the binding relationship needs to be unbound.
                      * 
                      */
                     void SetUnbindClusterIds(const std::vector<std::string>& _unbindClusterIds);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of a resource pack
+                     * Unique ID of the resource package
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * ID of the cluster to be bound
+                     * Cluster ID for which a binding relationship needs to be established.
                      */
                     std::vector<std::string> m_bindClusterIds;
                     bool m_bindClusterIdsHasBeenSet;
 
                     /**
-                     * ID of the cluster to be unbound
+                     * Cluster ID for which the binding relationship needs to be unbound.
                      */
                     std::vector<std::string> m_unbindClusterIds;
                     bool m_unbindClusterIdsHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
-                     * @return PackageType Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+                     * 获取Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+                     * @return PackageType Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
-                     * @param _packageType Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+                     * 设置Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+                     * @param _packageType Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取The modified deduction priority takes effect for which cynos resource.
-                     * @return ClusterId The modified deduction priority takes effect for which cynos resource.
+                     * 获取Which cynos resource does the modified deduction priority take effect for?
+                     * @return ClusterId Which cynos resource does the modified deduction priority take effect for?
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置The modified deduction priority takes effect for which cynos resource.
-                     * @param _clusterId The modified deduction priority takes effect for which cynos resource.
+                     * 设置Which cynos resource does the modified deduction priority take effect for?
+                     * @param _clusterId Which cynos resource does the modified deduction priority take effect for?
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource package deduction priority.
-                     * @return DeductionPriorities Resource package deduction priority.
+                     * 获取Resource package deduction priority
+                     * @return DeductionPriorities Resource package deduction priority
                      * 
                      */
                     std::vector<PackagePriority> GetDeductionPriorities() const;
 
                     /**
-                     * 设置Resource package deduction priority.
-                     * @param _deductionPriorities Resource package deduction priority.
+                     * 设置Resource package deduction priority
+                     * @param _deductionPriorities Resource package deduction priority
                      * 
                      */
                     void SetDeductionPriorities(const std::vector<PackagePriority>& _deductionPriorities);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+                     * Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * The modified deduction priority takes effect for which cynos resource.
+                     * Which cynos resource does the modified deduction priority take effect for?
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Resource package deduction priority.
+                     * Resource package deduction priority
                      */
                     std::vector<PackagePriority> m_deductionPriorities;
                     bool m_deductionPrioritiesHasBeenSet;

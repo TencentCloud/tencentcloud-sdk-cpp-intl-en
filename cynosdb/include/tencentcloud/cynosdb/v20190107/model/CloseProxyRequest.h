@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy group ID
-                     * @return ProxyGroupId Database proxy group ID
+                     * 获取Database Proxy Group ID
+                     * @return ProxyGroupId Database Proxy Group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy group ID
-                     * @param _proxyGroupId Database proxy group ID
+                     * 设置Database Proxy Group ID
+                     * @param _proxyGroupId Database Proxy Group ID
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether only to disable read/write separation. Valid values: `true`, `false`.
-                     * @return OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`.
+                     * 获取Whether to only disable read-write separation. Value: true or false
+                     * @return OnlyCloseRW Whether to only disable read-write separation. Value: true or false
                      * 
                      */
                     bool GetOnlyCloseRW() const;
 
                     /**
-                     * 设置Whether only to disable read/write separation. Valid values: `true`, `false`.
-                     * @param _onlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`.
+                     * 设置Whether to only disable read-write separation. Value: true or false
+                     * @param _onlyCloseRW Whether to only disable read-write separation. Value: true or false
                      * 
                      */
                     void SetOnlyCloseRW(const bool& _onlyCloseRW);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Database proxy group ID
+                     * Database Proxy Group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Whether only to disable read/write separation. Valid values: `true`, `false`.
+                     * Whether to only disable read-write separation. Value: true or false
                      */
                     bool m_onlyCloseRW;
                     bool m_onlyCloseRWHasBeenSet;

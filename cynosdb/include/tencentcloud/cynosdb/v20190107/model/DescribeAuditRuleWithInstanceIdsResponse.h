@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取None
-                     * @return TotalCount None
+                     * 获取None.
+                     * @return TotalCount None.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * None
+                     * None.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

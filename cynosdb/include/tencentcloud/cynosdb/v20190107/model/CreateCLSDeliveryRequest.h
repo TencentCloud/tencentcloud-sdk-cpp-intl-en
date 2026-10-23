@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intance ID.
-                     * @return InstanceId Intance ID.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Intance ID.
-                     * @param _instanceId Intance ID.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log shipping configuration.
-                     * @return CLSInfoList Log shipping configuration.
+                     * 获取Log delivery configuration
+                     * @return CLSInfoList Log delivery configuration
                      * 
                      */
                     std::vector<CLSInfo> GetCLSInfoList() const;
 
                     /**
-                     * 设置Log shipping configuration.
-                     * @param _cLSInfoList Log shipping configuration.
+                     * 设置Log delivery configuration
+                     * @param _cLSInfoList Log delivery configuration
                      * 
                      */
                     void SetCLSInfoList(const std::vector<CLSInfo>& _cLSInfoList);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CLSInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Log type.
-                     * @return LogType Log type.
+                     * 获取Log type
+                     * @return LogType Log type
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type.
-                     * @param _logType Log type.
+                     * 设置Log type
+                     * @param _logType Log type
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the maintenance time is in operation.
-                     * @return IsInMaintainPeriod Whether the maintenance time is in operation.
+                     * 获取Whether it is running during the maintenance time
+                     * @return IsInMaintainPeriod Whether it is running during the maintenance time
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Whether the maintenance time is in operation.
-                     * @param _isInMaintainPeriod Whether the maintenance time is in operation.
+                     * 设置Whether it is running during the maintenance time
+                     * @param _isInMaintainPeriod Whether it is running during the maintenance time
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Intance ID.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Log shipping configuration.
+                     * Log delivery configuration
                      */
                     std::vector<CLSInfo> m_cLSInfoList;
                     bool m_cLSInfoListHasBeenSet;
 
                     /**
-                     * Log type.
+                     * Log type
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Whether the maintenance time is in operation.
+                     * Whether it is running during the maintenance time
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

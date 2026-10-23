@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource pack
+                * Resource package
                 */
                 class Package : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of the resource package.
-                     * @return PackageId The unique ID of the resource package.
+                     * 获取Unique ID of the resource package
+                     * @return PackageId Unique ID of the resource package
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of the resource package.
-                     * @param _packageId The unique ID of the resource package.
+                     * 设置Unique ID of the resource package
+                     * @param _packageId Unique ID of the resource package
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -111,18 +111,18 @@ namespace TencentCloud
                     bool PackageNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the resource package type.
+                     * 获取Resource package type
 CCU: compute resource package. DISK: storage resource package.
-                     * @return PackageType Specifies the resource package type.
+                     * @return PackageType Resource package type
 CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Specifies the resource package type.
+                     * 设置Resource package type
 CCU: compute resource package. DISK: storage resource package.
-                     * @param _packageType Specifies the resource package type.
+                     * @param _packageType Resource package type
 CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
@@ -161,19 +161,19 @@ base - basic, common - general, enterprise - business
                     bool PackageVersionHasBeenSet() const;
 
                     /**
-                     * 获取Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-                     * @return PackageRegion Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * 获取Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+                     * @return PackageRegion Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
                      * 
                      */
                     std::string GetPackageRegion() const;
 
                     /**
-                     * 设置Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-                     * @param _packageRegion Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * 设置Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+                     * @param _packageRegion Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
                      * 
                      */
                     void SetPackageRegion(const std::string& _packageRegion);
@@ -186,39 +186,39 @@ China - common in the chinese mainland. overseas - universally applicable in hon
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
-                     * @return Status Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+                     * 获取Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
+                     * @return Status Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
-                     * @param _status Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+                     * 设置Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
+                     * @param _status Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -231,15 +231,15 @@ Specifies that the fee has been refunded.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Total resource package quantity.
-                     * @return PackageTotalSpec Total resource package quantity.
+                     * 获取Total resource package quantity
+                     * @return PackageTotalSpec Total resource package quantity
                      * 
                      */
                     double GetPackageTotalSpec() const;
 
                     /**
-                     * 设置Total resource package quantity.
-                     * @param _packageTotalSpec Total resource package quantity.
+                     * 设置Total resource package quantity
+                     * @param _packageTotalSpec Total resource package quantity
                      * 
                      */
                     void SetPackageTotalSpec(const double& _packageTotalSpec);
@@ -252,15 +252,15 @@ Specifies that the fee has been refunded.
                     bool PackageTotalSpecHasBeenSet() const;
 
                     /**
-                     * 获取Used amount of resource package.
-                     * @return PackageUsedSpec Used amount of resource package.
+                     * 获取Used amount of the resource package
+                     * @return PackageUsedSpec Used amount of the resource package
                      * 
                      */
                     double GetPackageUsedSpec() const;
 
                     /**
-                     * 设置Used amount of resource package.
-                     * @param _packageUsedSpec Used amount of resource package.
+                     * 设置Used amount of the resource package
+                     * @param _packageUsedSpec Used amount of the resource package
                      * 
                      */
                     void SetPackageUsedSpec(const double& _packageUsedSpec);
@@ -273,15 +273,15 @@ Specifies that the fee has been refunded.
                     bool PackageUsedSpecHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is inventory surplus.
-                     * @return HasQuota Whether there is inventory surplus.
+                     * 获取Whether there is still inventory surplus
+                     * @return HasQuota Whether there is still inventory surplus
                      * 
                      */
                     bool GetHasQuota() const;
 
                     /**
-                     * 设置Whether there is inventory surplus.
-                     * @param _hasQuota Whether there is inventory surplus.
+                     * 设置Whether there is still inventory surplus
+                     * @param _hasQuota Whether there is still inventory surplus
                      * 
                      */
                     void SetHasQuota(const bool& _hasQuota);
@@ -294,15 +294,15 @@ Specifies that the fee has been refunded.
                     bool HasQuotaHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the bound instance information.
-                     * @return BindInstanceInfos Specifies the bound instance information.
+                     * 获取Bound instance information
+                     * @return BindInstanceInfos Bound instance information
                      * 
                      */
                     std::vector<BindInstanceInfo> GetBindInstanceInfos() const;
 
                     /**
-                     * 设置Specifies the bound instance information.
-                     * @param _bindInstanceInfos Specifies the bound instance information.
+                     * 设置Bound instance information
+                     * @param _bindInstanceInfos Bound instance information
                      * 
                      */
                     void SetBindInstanceInfos(const std::vector<BindInstanceInfo>& _bindInstanceInfos);
@@ -315,15 +315,15 @@ Specifies that the fee has been refunded.
                     bool BindInstanceInfosHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the effective time: 2022-07-01 00:00:00.
-                     * @return StartTime Specifies the effective time: 2022-07-01 00:00:00.
+                     * 获取Effective time: 2022-07-01 00:00:00
+                     * @return StartTime Effective time: 2022-07-01 00:00:00
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Specifies the effective time: 2022-07-01 00:00:00.
-                     * @param _startTime Specifies the effective time: 2022-07-01 00:00:00.
+                     * 设置Effective time: 2022-07-01 00:00:00
+                     * @param _startTime Effective time: 2022-07-01 00:00:00
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -336,15 +336,15 @@ Specifies that the fee has been refunded.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the expiration time: 2022-08-01 00:00:00.
-                     * @return ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
+                     * 获取Expiration time: 2022-08-01 00:00:00
+                     * @return ExpireTime Expiration time: 2022-08-01 00:00:00
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Specifies the expiration time: 2022-08-01 00:00:00.
-                     * @param _expireTime Specifies the expiration time: 2022-08-01 00:00:00.
+                     * 设置Expiration time: 2022-08-01 00:00:00
+                     * @param _expireTime Expiration time: 2022-08-01 00:00:00
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -357,15 +357,15 @@ Specifies that the fee has been refunded.
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Information of the instance historically bound (now unbound) to the resource pack.
-                     * @return HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+                     * 获取Resource package historic bound (unbound) instance information
+                     * @return HistoryBindResourceInfos Resource package historic bound (unbound) instance information
                      * 
                      */
                     std::vector<BindInstanceInfo> GetHistoryBindResourceInfos() const;
 
                     /**
-                     * 设置Information of the instance historically bound (now unbound) to the resource pack.
-                     * @param _historyBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+                     * 设置Resource package historic bound (unbound) instance information
+                     * @param _historyBindResourceInfos Resource package historic bound (unbound) instance information
                      * 
                      */
                     void SetHistoryBindResourceInfos(const std::vector<BindInstanceInfo>& _historyBindResourceInfos);
@@ -386,7 +386,7 @@ Specifies that the fee has been refunded.
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * The unique ID of the resource package.
+                     * Unique ID of the resource package
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
@@ -398,7 +398,7 @@ Specifies that the fee has been refunded.
                     bool m_packageNameHasBeenSet;
 
                     /**
-                     * Specifies the resource package type.
+                     * Resource package type
 CCU: compute resource package. DISK: storage resource package.
                      */
                     std::string m_packageType;
@@ -412,62 +412,62 @@ base - basic, common - general, enterprise - business
                     bool m_packageVersionHasBeenSet;
 
                     /**
-                     * Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
                      */
                     std::string m_packageRegion;
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+                     * Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Total resource package quantity.
+                     * Total resource package quantity
                      */
                     double m_packageTotalSpec;
                     bool m_packageTotalSpecHasBeenSet;
 
                     /**
-                     * Used amount of resource package.
+                     * Used amount of the resource package
                      */
                     double m_packageUsedSpec;
                     bool m_packageUsedSpecHasBeenSet;
 
                     /**
-                     * Whether there is inventory surplus.
+                     * Whether there is still inventory surplus
                      */
                     bool m_hasQuota;
                     bool m_hasQuotaHasBeenSet;
 
                     /**
-                     * Specifies the bound instance information.
+                     * Bound instance information
                      */
                     std::vector<BindInstanceInfo> m_bindInstanceInfos;
                     bool m_bindInstanceInfosHasBeenSet;
 
                     /**
-                     * Specifies the effective time: 2022-07-01 00:00:00.
+                     * Effective time: 2022-07-01 00:00:00
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Specifies the expiration time: 2022-08-01 00:00:00.
+                     * Expiration time: 2022-08-01 00:00:00
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Information of the instance historically bound (now unbound) to the resource pack.
+                     * Resource package historic bound (unbound) instance information
                      */
                     std::vector<BindInstanceInfo> m_historyBindResourceInfos;
                     bool m_historyBindResourceInfosHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Renewal period.
-                     * @return TimeSpan Renewal period.
+                     * 获取Renewal duration
+                     * @return TimeSpan Renewal duration
                      * 
                      */
                     double GetTimeSpan() const;
 
                     /**
-                     * 设置Renewal period.
-                     * @param _timeSpan Renewal period.
+                     * 设置Renewal duration
+                     * @param _timeSpan Renewal duration
                      * 
                      */
                     void SetTimeSpan(const double& _timeSpan);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Time unit, such as y, m, d, h, i, and s.
-                     * @return TimeUnit Time unit, such as y, m, d, h, i, and s.
+                     * 获取Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
+                     * @return TimeUnit Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Time unit, such as y, m, d, h, i, and s.
-                     * @param _timeUnit Time unit, such as y, m, d, h, i, and s.
+                     * 设置Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
+                     * @param _timeUnit Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取"Transaction mode. 	0 - place an order and pay; 1 - place an order."
-                     * @return DealMode "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+                     * 获取Transaction mode 0-Place order and pay 1-Place order
+                     * @return DealMode Transaction mode 0-Place order and pay 1-Place order
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置"Transaction mode. 	0 - place an order and pay; 1 - place an order."
-                     * @param _dealMode "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+                     * 设置Transaction mode 0-Place order and pay 1-Place order
+                     * @param _dealMode Transaction mode 0-Place order and pay 1-Place order
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Renewal period.
+                     * Renewal duration
                      */
                     double m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Time unit, such as y, m, d, h, i, and s.
+                     * Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+                     * Transaction mode 0-Place order and pay 1-Place order
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;

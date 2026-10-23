@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of purchasable instance specifications. `Cpu` and `Memory` determine the instance specification during instance creation. The value range of the storage capacity is [MinStorageSize,MaxStorageSize]
+                * Detailed information about available instance specifications. When creating an instance, Cpu/Memory determine the instance specification. The selectable storage size ranges from [MinStorageSize, MaxStorageSize].
                 */
                 class InstanceSpec : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of instance CPU cores
-                     * @return Cpu Number of instance CPU cores
+                     * 获取Instance CPU. Measurement unit: core
+                     * @return Cpu Instance CPU. Measurement unit: core
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of instance CPU cores
-                     * @param _cpu Number of instance CPU cores
+                     * 设置Instance CPU. Measurement unit: core
+                     * @param _cpu Instance CPU. Measurement unit: core
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory in GB
-                     * @return Memory Instance memory in GB
+                     * 获取Instance memory. Unit: GB.
+                     * @return Memory Instance memory. Unit: GB.
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory in GB
-                     * @param _memory Instance memory in GB
+                     * 设置Instance memory. Unit: GB.
+                     * @param _memory Instance memory. Unit: GB.
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Maximum instance storage capacity GB
-                     * @return MaxStorageSize Maximum instance storage capacity GB
+                     * 获取Maximum available storage of an instance, unit: GB
+                     * @return MaxStorageSize Maximum available storage of an instance, unit: GB
                      * 
                      */
                     uint64_t GetMaxStorageSize() const;
 
                     /**
-                     * 设置Maximum instance storage capacity GB
-                     * @param _maxStorageSize Maximum instance storage capacity GB
+                     * 设置Maximum available storage of an instance, unit: GB
+                     * @param _maxStorageSize Maximum available storage of an instance, unit: GB
                      * 
                      */
                     void SetMaxStorageSize(const uint64_t& _maxStorageSize);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MaxStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum instance storage capacity GB
-                     * @return MinStorageSize Minimum instance storage capacity GB
+                     * 获取Minimum available storage of an instance, unit: GB
+                     * @return MinStorageSize Minimum available storage of an instance, unit: GB
                      * 
                      */
                     uint64_t GetMinStorageSize() const;
 
                     /**
-                     * 设置Minimum instance storage capacity GB
-                     * @param _minStorageSize Minimum instance storage capacity GB
+                     * 设置Minimum available storage of an instance, unit: GB
+                     * @param _minStorageSize Minimum available storage of an instance, unit: GB
                      * 
                      */
                     void SetMinStorageSize(const uint64_t& _minStorageSize);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is an inventory.
-                     * @return HasStock Whether there is an inventory.
+                     * 获取Whether there is inventory
+                     * @return HasStock Whether there is inventory
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
-                     * 设置Whether there is an inventory.
-                     * @param _hasStock Whether there is an inventory.
+                     * 设置Whether there is inventory
+                     * @param _hasStock Whether there is inventory
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool MaxIopsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum bandwidth
-                     * @return MaxIoBandWidth Maximum bandwidth
+                     * 获取Maximum IO bandwidth
+                     * @return MaxIoBandWidth Maximum IO bandwidth
                      * 
                      */
                     int64_t GetMaxIoBandWidth() const;
 
                     /**
-                     * 设置Maximum bandwidth
-                     * @param _maxIoBandWidth Maximum bandwidth
+                     * 设置Maximum IO bandwidth
+                     * @param _maxIoBandWidth Maximum IO bandwidth
                      * 
                      */
                     void SetMaxIoBandWidth(const int64_t& _maxIoBandWidth);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool MaxIoBandWidthHasBeenSet() const;
 
                     /**
-                     * 获取Regional inventory information.
-                     * @return ZoneStockInfos Regional inventory information.
+                     * 获取Regional inventory information
+                     * @return ZoneStockInfos Regional inventory information
                      * 
                      */
                     std::vector<ZoneStockInfo> GetZoneStockInfos() const;
 
                     /**
-                     * 设置Regional inventory information.
-                     * @param _zoneStockInfos Regional inventory information.
+                     * 设置Regional inventory information
+                     * @param _zoneStockInfos Regional inventory information
                      * 
                      */
                     void SetZoneStockInfos(const std::vector<ZoneStockInfo>& _zoneStockInfos);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ZoneStockInfosHasBeenSet() const;
 
                     /**
-                     * 获取Inventory quantity.
-                     * @return StockCount Inventory quantity.
+                     * 获取Inventory quantity
+                     * @return StockCount Inventory quantity
                      * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
-                     * 设置Inventory quantity.
-                     * @param _stockCount Inventory quantity.
+                     * 设置Inventory quantity
+                     * @param _stockCount Inventory quantity
                      * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
@@ -302,31 +302,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of instance CPU cores
+                     * Instance CPU. Measurement unit: core
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Instance memory in GB
+                     * Instance memory. Unit: GB.
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Maximum instance storage capacity GB
+                     * Maximum available storage of an instance, unit: GB
                      */
                     uint64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
-                     * Minimum instance storage capacity GB
+                     * Minimum available storage of an instance, unit: GB
                      */
                     uint64_t m_minStorageSize;
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
-                     * Whether there is an inventory.
+                     * Whether there is inventory
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
@@ -344,19 +344,19 @@ namespace TencentCloud
                     bool m_maxIopsHasBeenSet;
 
                     /**
-                     * Maximum bandwidth
+                     * Maximum IO bandwidth
                      */
                     int64_t m_maxIoBandWidth;
                     bool m_maxIoBandWidthHasBeenSet;
 
                     /**
-                     * Regional inventory information.
+                     * Regional inventory information
                      */
                     std::vector<ZoneStockInfo> m_zoneStockInfos;
                     bool m_zoneStockInfosHasBeenSet;
 
                     /**
-                     * Inventory quantity.
+                     * Inventory quantity
                      */
                     int64_t m_stockCount;
                     bool m_stockCountHasBeenSet;

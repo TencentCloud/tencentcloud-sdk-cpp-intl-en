@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI optimizer task data
+                * Task data of the AI optimizer
                 */
                 class AIOptimizerTaskData : public AbstractModel
                 {

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audit rule template ID
-                     * @return RuleTemplateIds Audit rule template ID
+                     * 获取Audit rule template ID.
+                     * @return RuleTemplateIds Audit rule template ID.
                      * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
-                     * 设置Audit rule template ID
-                     * @param _ruleTemplateIds Audit rule template ID
+                     * 设置Audit rule template ID.
+                     * @param _ruleTemplateIds Audit rule template ID.
                      * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool RuleTemplateIdsHasBeenSet() const;
 
                     /**
-                     * 获取Audit rule after modification
-                     * @return RuleFilters Audit rule after modification
+                     * 获取Modified audit rule.
+                     * @return RuleFilters Modified audit rule.
                      * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
-                     * 设置Audit rule after modification
-                     * @param _ruleFilters Audit rule after modification
+                     * 设置Modified audit rule.
+                     * @param _ruleFilters Modified audit rule.
                      * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool RuleFiltersHasBeenSet() const;
 
                     /**
-                     * 获取New name of the rule template
-                     * @return RuleTemplateName New name of the rule template
+                     * 获取Modified rule template name.
+                     * @return RuleTemplateName Modified rule template name.
                      * 
                      */
                     std::string GetRuleTemplateName() const;
 
                     /**
-                     * 设置New name of the rule template
-                     * @param _ruleTemplateName New name of the rule template
+                     * 设置Modified rule template name.
+                     * @param _ruleTemplateName Modified rule template name.
                      * 
                      */
                     void SetRuleTemplateName(const std::string& _ruleTemplateName);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool RuleTemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取New description of the rule template
-                     * @return Description New description of the rule template
+                     * 获取Modified rule template description.
+                     * @return Description Modified rule template description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置New description of the rule template
-                     * @param _description New description of the rule template
+                     * 设置Modified rule template description.
+                     * @param _description Modified rule template description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
-                     * @return AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * 获取Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
-                     * @param _alarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * 设置Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @param _alarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Alert policy. 0 - No alert, 1 - Alert.
-                     * @return AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+                     * 获取Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      * 
                      */
                     uint64_t GetAlarmPolicy() const;
 
                     /**
-                     * 设置Alert policy. 0 - No alert, 1 - Alert.
-                     * @param _alarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+                     * 设置Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @param _alarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      * 
                      */
                     void SetAlarmPolicy(const uint64_t& _alarmPolicy);
@@ -172,37 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audit rule template ID
+                     * Audit rule template ID.
                      */
                     std::vector<std::string> m_ruleTemplateIds;
                     bool m_ruleTemplateIdsHasBeenSet;
 
                     /**
-                     * Audit rule after modification
+                     * Modified audit rule.
                      */
                     std::vector<RuleFilters> m_ruleFilters;
                     bool m_ruleFiltersHasBeenSet;
 
                     /**
-                     * New name of the rule template
+                     * Modified rule template name.
                      */
                     std::string m_ruleTemplateName;
                     bool m_ruleTemplateNameHasBeenSet;
 
                     /**
-                     * New description of the rule template
+                     * Modified rule template description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Alert policy. 0 - No alert, 1 - Alert.
+                     * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      */
                     uint64_t m_alarmPolicy;
                     bool m_alarmPolicyHasBeenSet;

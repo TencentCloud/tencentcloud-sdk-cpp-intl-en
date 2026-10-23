@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the number of CPU cores.
-                     * @return Cpu Specifies the number of CPU cores.
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Specifies the number of CPU cores.
-                     * @param _cpu Specifies the number of CPU cores.
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory Size
-                     * @return Memory Memory Size
+                     * 获取Memory size.
+                     * @return Memory Memory size.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory Size
-                     * @param _memory Memory Size
+                     * 设置Memory size.
+                     * @param _memory Memory size.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Storage size, storage resource adjustment: ClusterId, StorageLimit.
-                     * @return StorageLimit Storage size, storage resource adjustment: ClusterId, StorageLimit.
+                     * 获取Storage size and storage resource configuration change: ClusterId, StorageLimit
+                     * @return StorageLimit Storage size and storage resource configuration change: ClusterId, StorageLimit
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage size, storage resource adjustment: ClusterId, StorageLimit.
-                     * @param _storageLimit Storage size, storage resource adjustment: ClusterId, StorageLimit.
+                     * 设置Storage size and storage resource configuration change: ClusterId, StorageLimit
+                     * @param _storageLimit Storage size and storage resource configuration change: ClusterId, StorageLimit
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
-                     * @return InstanceId Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+                     * 获取Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
+                     * @return InstanceId Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
-                     * @param _instanceId Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+                     * 设置Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
+                     * @param _instanceId Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance device type.
-                     * @return DeviceType Instance device type.
+                     * 获取Instance device type
+                     * @return DeviceType Instance device type
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance device type.
-                     * @param _deviceType Instance device type.
+                     * 设置Instance device type
+                     * @param _deviceType Instance device type
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ccu size of the serverless instance.
-                     * @return Ccu Specifies the ccu size of the serverless instance.
+                     * 获取ccu size of a serverless instance
+                     * @return Ccu ccu size of a serverless instance
                      * 
                      */
                     double GetCcu() const;
 
                     /**
-                     * 设置Specifies the ccu size of the serverless instance.
-                     * @param _ccu Specifies the ccu size of the serverless instance.
+                     * 设置ccu size of a serverless instance
+                     * @param _ccu ccu size of a serverless instance
                      * 
                      */
                     void SetCcu(const double& _ccu);
@@ -198,37 +198,37 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Specifies the number of CPU cores.
+                     * Number of CPU cores.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory Size
+                     * Memory size.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Storage size, storage resource adjustment: ClusterId, StorageLimit.
+                     * Storage size and storage resource configuration change: ClusterId, StorageLimit
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+                     * Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance device type.
+                     * Instance device type
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * Specifies the ccu size of the serverless instance.
+                     * ccu size of a serverless instance
                      */
                     double m_ccu;
                     bool m_ccuHasBeenSet;

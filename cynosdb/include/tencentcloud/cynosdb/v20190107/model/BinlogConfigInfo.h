@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the binlog configuration message.
+                * Binlog configuration information.
                 */
                 class BinlogConfigInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BinlogSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether cross-region backup of binlog is enabled</p>
-                     * @return BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
+                     * 获取<p>Whether binlog cross-region backup is enabled</p>
+                     * @return BinlogCrossRegionsEnable <p>Whether binlog cross-region backup is enabled</p>
                      * 
                      */
                     std::string GetBinlogCrossRegionsEnable() const;
 
                     /**
-                     * 设置<p>Whether cross-region backup of binlog is enabled</p>
-                     * @param _binlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
+                     * 设置<p>Whether binlog cross-region backup is enabled</p>
+                     * @param _binlogCrossRegionsEnable <p>Whether binlog cross-region backup is enabled</p>
                      * 
                      */
                     void SetBinlogCrossRegionsEnable(const std::string& _binlogCrossRegionsEnable);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool BinlogCrossRegionsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cross-region backup retention period</p><p>Unit: Day</p>
-                     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 获取<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
                      * 
                      */
                     int64_t GetBinlogCrossRegionSaveDays() const;
 
                     /**
-                     * 设置<p>Cross-region backup retention period</p><p>Unit: Day</p>
-                     * @param _binlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 设置<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @param _binlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
                      * 
                      */
                     void SetBinlogCrossRegionSaveDays(const int64_t& _binlogCrossRegionSaveDays);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool BinlogCrossRegionSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取<p>Safe info</p>
-                     * @return AutoCopyVaults <p>Safe info</p>
+                     * 获取<p>Safe information</p>
+                     * @return AutoCopyVaults <p>Safe information</p>
                      * 
                      */
                     std::vector<CreateBackupVaultItem> GetAutoCopyVaults() const;
 
                     /**
-                     * 设置<p>Safe info</p>
-                     * @param _autoCopyVaults <p>Safe info</p>
+                     * 设置<p>Safe information</p>
+                     * @param _autoCopyVaults <p>Safe information</p>
                      * 
                      */
                     void SetAutoCopyVaults(const std::vector<CreateBackupVaultItem>& _autoCopyVaults);
@@ -161,7 +161,7 @@ namespace TencentCloud
                     bool m_binlogSaveDaysHasBeenSet;
 
                     /**
-                     * <p>Whether cross-region backup of binlog is enabled</p>
+                     * <p>Whether binlog cross-region backup is enabled</p>
                      */
                     std::string m_binlogCrossRegionsEnable;
                     bool m_binlogCrossRegionsEnableHasBeenSet;
@@ -173,13 +173,13 @@ namespace TencentCloud
                     bool m_binlogCrossRegionsHasBeenSet;
 
                     /**
-                     * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * <p>Cross-region backup retention period</p><p>Unit: day</p>
                      */
                     int64_t m_binlogCrossRegionSaveDays;
                     bool m_binlogCrossRegionSaveDaysHasBeenSet;
 
                     /**
-                     * <p>Safe info</p>
+                     * <p>Safe information</p>
                      */
                     std::vector<CreateBackupVaultItem> m_autoCopyVaults;
                     bool m_autoCopyVaultsHasBeenSet;

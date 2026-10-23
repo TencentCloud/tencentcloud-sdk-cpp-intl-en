@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取List of accounts to be filtered
-                     * @return AccountNames List of accounts to be filtered
+                     * 获取Account list to filter
+                     * @return AccountNames Account list to filter
                      * 
                      */
                     std::vector<std::string> GetAccountNames() const;
 
                     /**
-                     * 设置List of accounts to be filtered
-                     * @param _accountNames List of accounts to be filtered
+                     * 设置Account list to filter
+                     * @param _accountNames Account list to filter
                      * 
                      */
                     void SetAccountNames(const std::vector<std::string>& _accountNames);
@@ -87,10 +87,10 @@ namespace TencentCloud
                     /**
                      * 获取Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
                      * @return DbType Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
                      * 
                      */
                     std::string GetDbType() const;
@@ -98,10 +98,10 @@ This parameter has been disused.
                     /**
                      * 设置Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
                      * @param _dbType Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -114,15 +114,15 @@ This parameter has been disused.
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of accounts to be filtered
-                     * @return Hosts List of accounts to be filtered
+                     * 获取Account list to filter
+                     * @return Hosts Account list to filter
                      * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
-                     * 设置List of accounts to be filtered
-                     * @param _hosts List of accounts to be filtered
+                     * 设置Account list to filter
+                     * @param _hosts Account list to filter
                      * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
@@ -135,15 +135,15 @@ This parameter has been disused.
                     bool HostsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum entries returned per page
-                     * @return Limit Maximum entries returned per page
+                     * 获取Limit amount
+                     * @return Limit Limit amount
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum entries returned per page
-                     * @param _limit Maximum entries returned per page
+                     * 设置Limit amount
+                     * @param _limit Limit amount
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -156,15 +156,15 @@ This parameter has been disused.
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -177,15 +177,15 @@ This parameter has been disused.
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
-                     * @return AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * 获取Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
+                     * @return AccountRegular Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
                      * 
                      */
                     std::string GetAccountRegular() const;
 
                     /**
-                     * 设置Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
-                     * @param _accountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * 设置Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
+                     * @param _accountRegular Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
                      * 
                      */
                     void SetAccountRegular(const std::string& _accountRegular);
@@ -206,7 +206,7 @@ This parameter has been disused.
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * List of accounts to be filtered
+                     * Account list to filter
                      */
                     std::vector<std::string> m_accountNames;
                     bool m_accountNamesHasBeenSet;
@@ -214,31 +214,31 @@ This parameter has been disused.
                     /**
                      * Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * List of accounts to be filtered
+                     * Account list to filter
                      */
                     std::vector<std::string> m_hosts;
                     bool m_hostsHasBeenSet;
 
                     /**
-                     * Maximum entries returned per page
+                     * Limit amount
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
                      */
                     std::string m_accountRegular;
                     bool m_accountRegularHasBeenSet;

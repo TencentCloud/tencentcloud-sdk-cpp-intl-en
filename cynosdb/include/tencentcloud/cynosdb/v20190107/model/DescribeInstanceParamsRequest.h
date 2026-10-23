@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID, which supports batch query.
-                     * @return InstanceIds Instance ID, which supports batch query.
+                     * 获取Instance ID. Support batch querying.
+                     * @return InstanceIds Instance ID. Support batch querying.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID, which supports batch query.
-                     * @param _instanceIds Instance ID, which supports batch query.
+                     * 设置Instance ID. Support batch querying.
+                     * @param _instanceIds Instance ID. Support batch querying.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Search condition for a parameter name, which supports fuzzy search.
-                     * @return ParamKeyword Search condition for a parameter name, which supports fuzzy search.
+                     * 获取Parameter name search criteria. Fuzzy matching is supported.
+                     * @return ParamKeyword Parameter name search criteria. Fuzzy matching is supported.
                      * 
                      */
                     std::string GetParamKeyword() const;
 
                     /**
-                     * 设置Search condition for a parameter name, which supports fuzzy search.
-                     * @param _paramKeyword Search condition for a parameter name, which supports fuzzy search.
+                     * 设置Parameter name search criteria. Fuzzy matching is supported.
+                     * @param _paramKeyword Parameter name search criteria. Fuzzy matching is supported.
                      * 
                      */
                     void SetParamKeyword(const std::string& _paramKeyword);
@@ -105,6 +105,27 @@ namespace TencentCloud
                      */
                     bool ParamKeywordHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a global parameter
+                     * @return IsGlobal Whether it is a global parameter
+                     * 
+                     */
+                    std::string GetIsGlobal() const;
+
+                    /**
+                     * 设置Whether it is a global parameter
+                     * @param _isGlobal Whether it is a global parameter
+                     * 
+                     */
+                    void SetIsGlobal(const std::string& _isGlobal);
+
+                    /**
+                     * 判断参数 IsGlobal 是否已赋值
+                     * @return IsGlobal 是否已赋值
+                     * 
+                     */
+                    bool IsGlobalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -114,16 +135,22 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance ID, which supports batch query.
+                     * Instance ID. Support batch querying.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Search condition for a parameter name, which supports fuzzy search.
+                     * Parameter name search criteria. Fuzzy matching is supported.
                      */
                     std::string m_paramKeyword;
                     bool m_paramKeywordHasBeenSet;
+
+                    /**
+                     * Whether it is a global parameter
+                     */
+                    std::string m_isGlobal;
+                    bool m_isGlobalHasBeenSet;
 
                 };
             }

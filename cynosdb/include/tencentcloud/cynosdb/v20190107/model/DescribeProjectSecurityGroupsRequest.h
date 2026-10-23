@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum entries returned per page
-                     * @return Limit Maximum entries returned per page
+                     * 获取Limit amount
+                     * @return Limit Limit amount
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum entries returned per page
-                     * @param _limit Maximum entries returned per page
+                     * 设置Limit amount
+                     * @param _limit Limit amount
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Search by keyword
-                     * @return SearchKey Search by keyword
+                     * 获取Search Keywords
+                     * @return SearchKey Search Keywords
                      * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Search by keyword
-                     * @param _searchKey Search by keyword
+                     * 设置Search Keywords
+                     * @param _searchKey Search Keywords
                      * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Maximum entries returned per page
+                     * Limit amount
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Search by keyword
+                     * Search Keywords
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;

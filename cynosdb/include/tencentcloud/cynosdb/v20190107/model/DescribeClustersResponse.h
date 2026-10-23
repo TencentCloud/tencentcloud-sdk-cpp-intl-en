@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Cluster list
-                     * @return ClusterSet Cluster list
+                     * 获取This example shows you how to obtain the cluster list.
+                     * @return ClusterSet This example shows you how to obtain the cluster list.
                      * 
                      */
                     std::vector<CynosdbCluster> GetClusterSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Cluster list
+                     * This example shows you how to obtain the cluster list.
                      */
                     std::vector<CynosdbCluster> m_clusterSet;
                     bool m_clusterSetHasBeenSet;

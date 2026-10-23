@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the backup download limit parameter.
+                * Backup download limit parameter
                 */
                 class BackupLimitRestriction : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Restriction type.
-                     * @return LimitType Restriction type.
+                     * 获取Restriction type
+                     * @return LimitType Restriction type
                      * 
                      */
                     std::string GetLimitType() const;
 
                     /**
-                     * 设置Restriction type.
-                     * @param _limitType Restriction type.
+                     * 设置Restriction type
+                     * @param _limitType Restriction type
                      * 
                      */
                     void SetLimitType(const std::string& _limitType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LimitTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-                     * @return VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+                     * 获取This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+                     * @return VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
                      * 
                      */
                     std::string GetVpcComparisonSymbol() const;
 
                     /**
-                     * 设置This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-                     * @param _vpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+                     * 设置This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+                     * @param _vpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
                      * 
                      */
                     void SetVpcComparisonSymbol(const std::string& _vpcComparisonSymbol);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool VpcComparisonSymbolHasBeenSet() const;
 
                     /**
-                     * 获取Specified ips can download; specified ips are not allowed to download.
-                     * @return IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+                     * 获取In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+                     * @return IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
                      * 
                      */
                     std::string GetIpComparisonSymbol() const;
 
                     /**
-                     * 设置Specified ips can download; specified ips are not allowed to download.
-                     * @param _ipComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+                     * 设置In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+                     * @param _ipComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
                      * 
                      */
                     void SetIpComparisonSymbol(const std::string& _ipComparisonSymbol);
@@ -155,19 +155,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Restriction type.
+                     * Restriction type
                      */
                     std::string m_limitType;
                     bool m_limitTypeHasBeenSet;
 
                     /**
-                     * This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+                     * This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
                      */
                     std::string m_vpcComparisonSymbol;
                     bool m_vpcComparisonSymbolHasBeenSet;
 
                     /**
-                     * Specified ips can download; specified ips are not allowed to download.
+                     * In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
                      */
                     std::string m_ipComparisonSymbol;
                     bool m_ipComparisonSymbolHasBeenSet;

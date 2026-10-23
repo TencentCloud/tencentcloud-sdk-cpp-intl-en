@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a purchasable AZ
+                * Information on AZs for sale.
                 */
                 class SaleZone : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ name
-                     * @return Zone AZ name
+                     * 获取Availability zone name
+                     * @return Zone Availability zone name
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ name
-                     * @param _zone AZ name
+                     * 设置Availability zone name
+                     * @param _zone Availability zone name
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Numeric ID of an AZ
-                     * @return ZoneId Numeric ID of an AZ
+                     * 获取Availability zone numeric ID
+                     * @return ZoneId Availability zone numeric ID
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置Numeric ID of an AZ
-                     * @param _zoneId Numeric ID of an AZ
+                     * 设置Availability zone numeric ID
+                     * @param _zoneId Availability zone numeric ID
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ name
-                     * @return ZoneZh AZ name
+                     * 获取AZ Chinese name
+                     * @return ZoneZh AZ Chinese name
                      * 
                      */
                     std::string GetZoneZh() const;
 
                     /**
-                     * 设置AZ name
-                     * @param _zoneZh AZ name
+                     * 设置AZ Chinese name
+                     * @param _zoneZh AZ Chinese name
                      * 
                      */
                     void SetZoneZh(const std::string& _zoneZh);
@@ -110,23 +110,23 @@ namespace TencentCloud
                     bool ZoneZhHasBeenSet() const;
 
                     /**
-                     * 获取Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-                     * @return IsSupportServerless Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+                     * 获取Whether serverless cluster is supported<br>
+0: not supported
+1: Support
+                     * @return IsSupportServerless Whether serverless cluster is supported<br>
+0: not supported
+1: Support
                      * 
                      */
                     int64_t GetIsSupportServerless() const;
 
                     /**
-                     * 设置Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-                     * @param _isSupportServerless Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+                     * 设置Whether serverless cluster is supported<br>
+0: not supported
+1: Support
+                     * @param _isSupportServerless Whether serverless cluster is supported<br>
+0: not supported
+1: Support
                      * 
                      */
                     void SetIsSupportServerless(const int64_t& _isSupportServerless);
@@ -139,23 +139,23 @@ namespace TencentCloud
                     bool IsSupportServerlessHasBeenSet() const;
 
                     /**
-                     * 获取Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-                     * @return IsSupportNormal Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+                     * 获取Whether a general cluster is supported
+0: not supported
+1: Support
+                     * @return IsSupportNormal Whether a general cluster is supported
+0: not supported
+1: Support
                      * 
                      */
                     int64_t GetIsSupportNormal() const;
 
                     /**
-                     * 设置Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-                     * @param _isSupportNormal Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+                     * 设置Whether a general cluster is supported
+0: not supported
+1: Support
+                     * @param _isSupportNormal Whether a general cluster is supported
+0: not supported
+1: Support
                      * 
                      */
                     void SetIsSupportNormal(const int64_t& _isSupportNormal);
@@ -189,15 +189,15 @@ namespace TencentCloud
                     bool PhysicalZoneHasBeenSet() const;
 
                     /**
-                     * 获取Whether the user has AZ permission.
-                     * @return HasPermission Whether the user has AZ permission.
+                     * 获取Whether the user has AZ permissions
+                     * @return HasPermission Whether the user has AZ permissions
                      * 
                      */
                     bool GetHasPermission() const;
 
                     /**
-                     * 设置Whether the user has AZ permission.
-                     * @param _hasPermission Whether the user has AZ permission.
+                     * 设置Whether the user has AZ permissions
+                     * @param _hasPermission Whether the user has AZ permissions
                      * 
                      */
                     void SetHasPermission(const bool& _hasPermission);
@@ -210,15 +210,15 @@ namespace TencentCloud
                     bool HasPermissionHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a full-linkage RDMA AZ.
-                     * @return IsWholeRdmaZone Whether it is a full-linkage RDMA AZ.
+                     * 获取Whether it is an all-link RDMA availability zone
+                     * @return IsWholeRdmaZone Whether it is an all-link RDMA availability zone
                      * 
                      */
                     std::string GetIsWholeRdmaZone() const;
 
                     /**
-                     * 设置Whether it is a full-linkage RDMA AZ.
-                     * @param _isWholeRdmaZone Whether it is a full-linkage RDMA AZ.
+                     * 设置Whether it is an all-link RDMA availability zone
+                     * @param _isWholeRdmaZone Whether it is an all-link RDMA availability zone
                      * 
                      */
                     void SetIsWholeRdmaZone(const std::string& _isWholeRdmaZone);
@@ -231,15 +231,15 @@ namespace TencentCloud
                     bool IsWholeRdmaZoneHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
-                     * @return IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * 获取Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
+                     * @return IsSupportCreateCluster Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
                      * 
                      */
                     int64_t GetIsSupportCreateCluster() const;
 
                     /**
-                     * 设置Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
-                     * @param _isSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * 设置Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
+                     * @param _isSupportCreateCluster Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
                      * 
                      */
                     void SetIsSupportCreateCluster(const int64_t& _isSupportCreateCluster);
@@ -254,35 +254,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AZ name
+                     * Availability zone name
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Numeric ID of an AZ
+                     * Availability zone numeric ID
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * AZ name
+                     * AZ Chinese name
                      */
                     std::string m_zoneZh;
                     bool m_zoneZhHasBeenSet;
 
                     /**
-                     * Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+                     * Whether serverless cluster is supported<br>
+0: not supported
+1: Support
                      */
                     int64_t m_isSupportServerless;
                     bool m_isSupportServerlessHasBeenSet;
 
                     /**
-                     * Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+                     * Whether a general cluster is supported
+0: not supported
+1: Support
                      */
                     int64_t m_isSupportNormal;
                     bool m_isSupportNormalHasBeenSet;
@@ -294,19 +294,19 @@ namespace TencentCloud
                     bool m_physicalZoneHasBeenSet;
 
                     /**
-                     * Whether the user has AZ permission.
+                     * Whether the user has AZ permissions
                      */
                     bool m_hasPermission;
                     bool m_hasPermissionHasBeenSet;
 
                     /**
-                     * Whether it is a full-linkage RDMA AZ.
+                     * Whether it is an all-link RDMA availability zone
                      */
                     std::string m_isWholeRdmaZone;
                     bool m_isWholeRdmaZoneHasBeenSet;
 
                     /**
-                     * Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
                      */
                     int64_t m_isSupportCreateCluster;
                     bool m_isSupportCreateClusterHasBeenSet;

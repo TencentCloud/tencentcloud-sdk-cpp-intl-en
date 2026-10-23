@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of a resource pack
-                     * @return PackageId The unique ID of a resource pack
+                     * 获取Unique ID of the resource package
+                     * @return PackageId Unique ID of the resource package
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack
-                     * @param _packageId The unique ID of a resource pack
+                     * 设置Unique ID of the resource package
+                     * @param _packageId Unique ID of the resource package
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of a resource pack
+                     * Unique ID of the resource package
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;

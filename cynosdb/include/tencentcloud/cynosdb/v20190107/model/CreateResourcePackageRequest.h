@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance type. currently fixed to cynosdb-serverless.
-                     * @return InstanceType Instance type. currently fixed to cynosdb-serverless.
+                     * 获取Instance type. Currently fixed to cynosdb-serverless.
+                     * @return InstanceType Instance type. Currently fixed to cynosdb-serverless.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. currently fixed to cynosdb-serverless.
-                     * @param _instanceType Instance type. currently fixed to cynosdb-serverless.
+                     * 设置Instance type. Currently fixed to cynosdb-serverless.
+                     * @param _instanceType Instance type. Currently fixed to cynosdb-serverless.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-                     * @return PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * 获取Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+                     * @return PackageRegion Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
                      * 
                      */
                     std::string GetPackageRegion() const;
 
                     /**
-                     * 设置Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-                     * @param _packageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * 设置Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+                     * @param _packageRegion Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
                      * 
                      */
                     void SetPackageRegion(const std::string& _packageRegion);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-                     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * 获取Resource package type. CCU: compute resource package. DISK: storage resource package.
+                     * @return PackageType Resource package type. CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-                     * @param _packageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * 设置Resource package type. CCU: compute resource package. DISK: storage resource package.
+                     * @param _packageType Resource package type. CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -106,15 +106,19 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
-                     * @return PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+                     * 获取Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
+                     * @return PackageVersion Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
                      * 
                      */
                     std::string GetPackageVersion() const;
 
                     /**
-                     * 设置Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
-                     * @param _packageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+                     * 设置Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
+                     * @param _packageVersion Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
                      * 
                      */
                     void SetPackageVersion(const std::string& _packageVersion);
@@ -127,15 +131,15 @@ namespace TencentCloud
                     bool PackageVersionHasBeenSet() const;
 
                     /**
-                     * 获取Resource package size. Compute resource unit: unit; storage resource: GB.
-                     * @return PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
+                     * 获取Package size. Compute resource unit: count. Storage resource: GB.
+                     * @return PackageSpec Package size. Compute resource unit: count. Storage resource: GB.
                      * 
                      */
                     double GetPackageSpec() const;
 
                     /**
-                     * 设置Resource package size. Compute resource unit: unit; storage resource: GB.
-                     * @param _packageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
+                     * 设置Package size. Compute resource unit: count. Storage resource: GB.
+                     * @param _packageSpec Package size. Compute resource unit: count. Storage resource: GB.
                      * 
                      */
                     void SetPackageSpec(const double& _packageSpec);
@@ -148,15 +152,15 @@ namespace TencentCloud
                     bool PackageSpecHasBeenSet() const;
 
                     /**
-                     * 获取Validity period of a resource pack in days
-                     * @return ExpireDay Validity period of a resource pack in days
+                     * 获取Resource pack validity period. Unit: day.
+                     * @return ExpireDay Resource pack validity period. Unit: day.
                      * 
                      */
                     int64_t GetExpireDay() const;
 
                     /**
-                     * 设置Validity period of a resource pack in days
-                     * @param _expireDay Validity period of a resource pack in days
+                     * 设置Resource pack validity period. Unit: day.
+                     * @param _expireDay Resource pack validity period. Unit: day.
                      * 
                      */
                     void SetExpireDay(const int64_t& _expireDay);
@@ -169,15 +173,15 @@ namespace TencentCloud
                     bool ExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Number of the resource packs to be purchased
-                     * @return PackageCount Number of the resource packs to be purchased
+                     * 获取Number of resource packages to purchase
+                     * @return PackageCount Number of resource packages to purchase
                      * 
                      */
                     int64_t GetPackageCount() const;
 
                     /**
-                     * 设置Number of the resource packs to be purchased
-                     * @param _packageCount Number of the resource packs to be purchased
+                     * 设置Number of resource packages to purchase
+                     * @param _packageCount Number of resource packages to purchase
                      * 
                      */
                     void SetPackageCount(const int64_t& _packageCount);
@@ -190,15 +194,15 @@ namespace TencentCloud
                     bool PackageCountHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack name
-                     * @return PackageName Resource pack name
+                     * 获取Resource package name.
+                     * @return PackageName Resource package name.
                      * 
                      */
                     std::string GetPackageName() const;
 
                     /**
-                     * 设置Resource pack name
-                     * @param _packageName Resource pack name
+                     * 设置Resource package name.
+                     * @param _packageName Resource package name.
                      * 
                      */
                     void SetPackageName(const std::string& _packageName);
@@ -213,49 +217,50 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance type. currently fixed to cynosdb-serverless.
+                     * Instance type. Currently fixed to cynosdb-serverless.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
                      */
                     std::string m_packageRegion;
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * Resource package type. CCU: compute resource package. DISK: storage resource package.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+                     * Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
                      */
                     std::string m_packageVersion;
                     bool m_packageVersionHasBeenSet;
 
                     /**
-                     * Resource package size. Compute resource unit: unit; storage resource: GB.
+                     * Package size. Compute resource unit: count. Storage resource: GB.
                      */
                     double m_packageSpec;
                     bool m_packageSpecHasBeenSet;
 
                     /**
-                     * Validity period of a resource pack in days
+                     * Resource pack validity period. Unit: day.
                      */
                     int64_t m_expireDay;
                     bool m_expireDayHasBeenSet;
 
                     /**
-                     * Number of the resource packs to be purchased
+                     * Number of resource packages to purchase
                      */
                     int64_t m_packageCount;
                     bool m_packageCountHasBeenSet;
 
                     /**
-                     * Resource pack name
+                     * Resource package name.
                      */
                     std::string m_packageName;
                     bool m_packageNameHasBeenSet;

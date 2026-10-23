@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
-                     * @return InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * 获取Instance ID (you must import either InstanceId or InstanceGroupId)
+                     * @return InstanceId Instance ID (you must import either InstanceId or InstanceGroupId)
                      * @deprecated
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
-                     * @param _instanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * 设置Instance ID (you must import either InstanceId or InstanceGroupId)
+                     * @param _instanceId Instance ID (you must import either InstanceId or InstanceGroupId)
                      * @deprecated
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * Instance ID (you must import either InstanceId or InstanceGroupId)
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

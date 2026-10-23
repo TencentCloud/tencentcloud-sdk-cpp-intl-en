@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Bias
+                     * @return Offset Bias
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Bias
+                     * @param _offset Bias
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -157,7 +157,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset
+                     * Bias
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

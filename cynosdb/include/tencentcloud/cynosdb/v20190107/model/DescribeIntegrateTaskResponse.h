@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current step.
-                     * @return CurrentStep Current step.
+                     * 获取Details of the current step
+                     * @return CurrentStep Details of the current step
                      * 
                      */
                     std::string GetCurrentStep() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool CurrentStepHasBeenSet() const;
 
                     /**
-                     * 获取Current progress.
-                     * @return CurrentProgress Current progress.
+                     * 获取Current progress
+                     * @return CurrentProgress Current progress
                      * 
                      */
                     std::string GetCurrentProgress() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool CurrentProgressHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the task status.
-                     * @return TaskStatus Indicates the task status.
+                     * 获取Task status.
+                     * @return TaskStatus Task status.
                      * 
                      */
                     std::string GetTaskStatus() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current step.
+                     * Details of the current step
                      */
                     std::string m_currentStep;
                     bool m_currentStepHasBeenSet;
 
                     /**
-                     * Current progress.
+                     * Current progress
                      */
                     std::string m_currentProgress;
                     bool m_currentProgressHasBeenSet;
 
                     /**
-                     * Indicates the task status.
+                     * Task status.
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;

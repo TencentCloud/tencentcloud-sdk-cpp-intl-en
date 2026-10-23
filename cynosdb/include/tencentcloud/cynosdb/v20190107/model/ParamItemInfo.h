@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter change information.
+                * Parameter change information
                 */
                 class ParamItemInfo : public AbstractModel
                 {
@@ -118,18 +118,18 @@ namespace TencentCloud
                     bool OldValueHasBeenSet() const;
 
                     /**
-                     * 获取Parameter formula.
+                     * 获取Parameter formula
 
-                     * @return ValueFunction Parameter formula.
+                     * @return ValueFunction Parameter formula
 
                      * 
                      */
                     std::string GetValueFunction() const;
 
                     /**
-                     * 设置Parameter formula.
+                     * 设置Parameter formula
 
-                     * @param _valueFunction Parameter formula.
+                     * @param _valueFunction Parameter formula
 
                      * 
                      */
@@ -165,7 +165,7 @@ namespace TencentCloud
                     bool m_oldValueHasBeenSet;
 
                     /**
-                     * Parameter formula.
+                     * Parameter formula
 
                      */
                     std::string m_valueFunction;

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template information
-                     * @return Items Parameter template information
+                     * 获取Parameter template information.
+                     * @return Items Parameter template information.
                      * 
                      */
                     std::vector<ParamTemplateListInfo> GetItems() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Parameter template information
+                     * Parameter template information.
                      */
                     std::vector<ParamTemplateListInfo> m_items;
                     bool m_itemsHasBeenSet;

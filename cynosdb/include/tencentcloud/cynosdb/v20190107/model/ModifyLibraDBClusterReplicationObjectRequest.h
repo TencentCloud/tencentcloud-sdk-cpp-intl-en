@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Analysis Cluster ID
-                     * @return ClusterId Analysis Cluster ID
+                     * 获取Analysis cluster ID
+                     * @return ClusterId Analysis cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Analysis Cluster ID
-                     * @param _clusterId Analysis Cluster ID
+                     * 设置Analysis cluster ID
+                     * @param _clusterId Analysis cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Map mode
-                     * @return ForceDefaultMapRule Map mode
+                     * 获取Mapping mode
+                     * @return ForceDefaultMapRule Mapping mode
                      * 
                      */
                     std::string GetForceDefaultMapRule() const;
 
                     /**
-                     * 设置Map mode
-                     * @param _forceDefaultMapRule Map mode
+                     * 设置Mapping mode
+                     * @param _forceDefaultMapRule Mapping mode
                      * 
                      */
                     void SetForceDefaultMapRule(const std::string& _forceDefaultMapRule);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool ForceDefaultMapRuleHasBeenSet() const;
 
                     /**
-                     * 获取sync object
-                     * @return Objects sync object
+                     * 获取Synchronization object
+                     * @return Objects Synchronization object
                      * 
                      */
                     std::vector<ReplicationObject> GetObjects() const;
 
                     /**
-                     * 设置sync object
-                     * @param _objects sync object
+                     * 设置Synchronization object
+                     * @param _objects Synchronization object
                      * 
                      */
                     void SetObjects(const std::vector<ReplicationObject>& _objects);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool AutoMapRulesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to refresh existing mapping relationships according to the latest mapping rule
-                     * @return RefreshMapping Whether to refresh existing mapping relationships according to the latest mapping rule
+                     * 获取Whether to update existing mapping relationships according to the latest mapping rule
+                     * @return RefreshMapping Whether to update existing mapping relationships according to the latest mapping rule
                      * 
                      */
                     bool GetRefreshMapping() const;
 
                     /**
-                     * 设置Whether to refresh existing mapping relationships according to the latest mapping rule
-                     * @param _refreshMapping Whether to refresh existing mapping relationships according to the latest mapping rule
+                     * 设置Whether to update existing mapping relationships according to the latest mapping rule
+                     * @param _refreshMapping Whether to update existing mapping relationships according to the latest mapping rule
                      * 
                      */
                     void SetRefreshMapping(const bool& _refreshMapping);
@@ -173,7 +173,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Analysis Cluster ID
+                     * Analysis cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -185,13 +185,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Map mode
+                     * Mapping mode
                      */
                     std::string m_forceDefaultMapRule;
                     bool m_forceDefaultMapRuleHasBeenSet;
 
                     /**
-                     * sync object
+                     * Synchronization object
                      */
                     std::vector<ReplicationObject> m_objects;
                     bool m_objectsHasBeenSet;
@@ -203,7 +203,7 @@ namespace TencentCloud
                     bool m_autoMapRulesHasBeenSet;
 
                     /**
-                     * Whether to refresh existing mapping relationships according to the latest mapping rule
+                     * Whether to update existing mapping relationships according to the latest mapping rule
                      */
                     bool m_refreshMapping;
                     bool m_refreshMappingHasBeenSet;

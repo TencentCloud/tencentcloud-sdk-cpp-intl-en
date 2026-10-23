@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination limit.
-                     * @return Limit Pagination limit.
+                     * 获取Pagination limit
+                     * @return Limit Pagination limit
                      * 
                      */
                     int64_t GetLimit() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Database table list.
-                     * @return Tables Database table list.
+                     * 获取List of database tables
+                     * @return Tables List of database tables
                      * 
                      */
                     std::vector<std::string> GetTables() const;
@@ -102,7 +102,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination limit.
+                     * Pagination limit
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Database table list.
+                     * List of database tables
                      */
                     std::vector<std::string> m_tables;
                     bool m_tablesHasBeenSet;

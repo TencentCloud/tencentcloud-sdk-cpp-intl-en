@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup file ID. This field is used by legacy versions and thus not recommended.
-                     * @return SnapshotIdList Backup file ID. This field is used by legacy versions and thus not recommended.
+                     * 获取Backup file ID. Field used in earlier versions. This is not recommended.
+                     * @return SnapshotIdList Backup file ID. Field used in earlier versions. This is not recommended.
                      * 
                      */
                     std::vector<int64_t> GetSnapshotIdList() const;
 
                     /**
-                     * 设置Backup file ID. This field is used by legacy versions and thus not recommended.
-                     * @param _snapshotIdList Backup file ID. This field is used by legacy versions and thus not recommended.
+                     * 设置Backup file ID. Field used in earlier versions. This is not recommended.
+                     * @param _snapshotIdList Backup file ID. Field used in earlier versions. This is not recommended.
                      * 
                      */
                     void SetSnapshotIdList(const std::vector<int64_t>& _snapshotIdList);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SnapshotIdListHasBeenSet() const;
 
                     /**
-                     * 获取Backup file ID. This field is recommended.
-                     * @return BackupIds Backup file ID. This field is recommended.
+                     * 获取Backup file ID. Recommended for use.
+                     * @return BackupIds Backup file ID. Recommended for use.
                      * 
                      */
                     std::vector<int64_t> GetBackupIds() const;
 
                     /**
-                     * 设置Backup file ID. This field is recommended.
-                     * @param _backupIds Backup file ID. This field is recommended.
+                     * 设置Backup file ID. Recommended for use.
+                     * @param _backupIds Backup file ID. Recommended for use.
                      * 
                      */
                     void SetBackupIds(const std::vector<int64_t>& _backupIds);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Backup file ID. This field is used by legacy versions and thus not recommended.
+                     * Backup file ID. Field used in earlier versions. This is not recommended.
                      */
                     std::vector<int64_t> m_snapshotIdList;
                     bool m_snapshotIdListHasBeenSet;
 
                     /**
-                     * Backup file ID. This field is recommended.
+                     * Backup file ID. Recommended for use.
                      */
                     std::vector<int64_t> m_backupIds;
                     bool m_backupIdsHasBeenSet;

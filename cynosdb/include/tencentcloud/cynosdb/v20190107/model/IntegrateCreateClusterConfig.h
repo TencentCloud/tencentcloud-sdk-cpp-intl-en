@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Integrated cluster configuration.
+                * Integrated cluster configuration
                 */
                 class IntegrateCreateClusterConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Retention days of binlog. value range: 7-1830.
-                     * @return BinlogSaveDays Retention days of binlog. value range: 7-1830.
+                     * 获取binlog retention days [7,1830]
+                     * @return BinlogSaveDays binlog retention days [7,1830]
                      * 
                      */
                     int64_t GetBinlogSaveDays() const;
 
                     /**
-                     * 设置Retention days of binlog. value range: 7-1830.
-                     * @param _binlogSaveDays Retention days of binlog. value range: 7-1830.
+                     * 设置binlog retention days [7,1830]
+                     * @param _binlogSaveDays binlog retention days [7,1830]
                      * 
                      */
                     void SetBinlogSaveDays(const int64_t& _binlogSaveDays);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BinlogSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the backup retention days. value range: 7-1830.
-                     * @return BackupSaveDays Specifies the backup retention days. value range: 7-1830.
+                     * 获取Backup retention days [7,1830]
+                     * @return BackupSaveDays Backup retention days [7,1830]
                      * 
                      */
                     int64_t GetBackupSaveDays() const;
 
                     /**
-                     * 设置Specifies the backup retention days. value range: 7-1830.
-                     * @param _backupSaveDays Specifies the backup retention days. value range: 7-1830.
+                     * 设置Backup retention days [7,1830]
+                     * @param _backupSaveDays Backup retention days [7,1830]
                      * 
                      */
                     void SetBackupSaveDays(const int64_t& _backupSaveDays);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool BackupSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the semi-sync timeout period. value range: [1000,4294967295].
-                     * @return SemiSyncTimeout Specifies the semi-sync timeout period. value range: [1000,4294967295].
+                     * 获取Semi-sync timeout period [1000,4294967295]
+                     * @return SemiSyncTimeout Semi-sync timeout period [1000,4294967295]
                      * 
                      */
                     int64_t GetSemiSyncTimeout() const;
 
                     /**
-                     * 设置Specifies the semi-sync timeout period. value range: [1000,4294967295].
-                     * @param _semiSyncTimeout Specifies the semi-sync timeout period. value range: [1000,4294967295].
+                     * 设置Semi-sync timeout period [1000,4294967295]
+                     * @param _semiSyncTimeout Semi-sync timeout period [1000,4294967295]
                      * 
                      */
                     void SetSemiSyncTimeout(const int64_t& _semiSyncTimeout);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SemiSyncTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取proxy connection address configuration message.
-                     * @return ProxyEndPointConfigs proxy connection address configuration message.
+                     * 获取proxy connection address configuration message
+                     * @return ProxyEndPointConfigs proxy connection address configuration message
                      * 
                      */
                     std::vector<ProxyEndPointConfigInfo> GetProxyEndPointConfigs() const;
 
                     /**
-                     * 设置proxy connection address configuration message.
-                     * @param _proxyEndPointConfigs proxy connection address configuration message.
+                     * 设置proxy connection address configuration message
+                     * @param _proxyEndPointConfigs proxy connection address configuration message
                      * 
                      */
                     void SetProxyEndPointConfigs(const std::vector<ProxyEndPointConfigInfo>& _proxyEndPointConfigs);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Retention days of binlog. value range: 7-1830.
+                     * binlog retention days [7,1830]
                      */
                     int64_t m_binlogSaveDays;
                     bool m_binlogSaveDaysHasBeenSet;
 
                     /**
-                     * Specifies the backup retention days. value range: 7-1830.
+                     * Backup retention days [7,1830]
                      */
                     int64_t m_backupSaveDays;
                     bool m_backupSaveDaysHasBeenSet;
 
                     /**
-                     * Specifies the semi-sync timeout period. value range: [1000,4294967295].
+                     * Semi-sync timeout period [1000,4294967295]
                      */
                     int64_t m_semiSyncTimeout;
                     bool m_semiSyncTimeoutHasBeenSet;
 
                     /**
-                     * proxy connection address configuration message.
+                     * proxy connection address configuration message
                      */
                     std::vector<ProxyEndPointConfigInfo> m_proxyEndPointConfigs;
                     bool m_proxyEndPointConfigsHasBeenSet;

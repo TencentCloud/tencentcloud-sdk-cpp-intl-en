@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * binlog backup info
+                * binlog backup information
                 */
                 class DescribeBinlogListByVaultItem : public AbstractModel
                 {

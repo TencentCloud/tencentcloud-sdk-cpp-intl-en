@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Prepaid total order number.
-                     * @return BigDealIds Prepaid total order number.
+                     * 获取Prepaid Total Order Number
+                     * @return BigDealIds Prepaid Total Order Number
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Delivery resource id list corresponding to each order number.
-                     * @return ResourceIds Delivery resource id list corresponding to each order number.
+                     * 获取Delivery resource id list corresponding to each order number
+                     * @return ResourceIds Delivery resource id list corresponding to each order number
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of Cluster IDs
-                     * @return ClusterIds List of Cluster IDs
+                     * 获取List of cluster IDs.
+                     * @return ClusterIds List of cluster IDs.
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
@@ -116,7 +116,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Prepaid total order number.
+                     * Prepaid Total Order Number
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;
@@ -134,13 +134,13 @@ namespace TencentCloud
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Delivery resource id list corresponding to each order number.
+                     * Delivery resource id list corresponding to each order number
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * List of Cluster IDs
+                     * List of cluster IDs.
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;

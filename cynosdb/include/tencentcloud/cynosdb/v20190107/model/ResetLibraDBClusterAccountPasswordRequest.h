@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool EncryptMethodHasBeenSet() const;
 
                     /**
-                     * 获取host
-                     * @return Host host
+                     * 获取Host
+                     * @return Host Host
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置host
-                     * @param _host host
+                     * 设置Host
+                     * @param _host Host
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_encryptMethodHasBeenSet;
 
                     /**
-                     * host
+                     * Host
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Enabling status of instance audit. 1 - enabled; 0 - not enabled.
-                     * @return AuditSwitch Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+                     * 获取Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
+                     * @return AuditSwitch Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
                      * 
                      */
                     int64_t GetAuditSwitch() const;
 
                     /**
-                     * 设置Enabling status of instance audit. 1 - enabled; 0 - not enabled.
-                     * @param _auditSwitch Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+                     * 设置Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
+                     * @param _auditSwitch Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
                      * 
                      */
                     void SetAuditSwitch(const int64_t& _auditSwitch);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool AuditSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Filtering conditions for querying the instance list.
-                     * @return Filters Filtering conditions for querying the instance list.
+                     * 获取Filter conditions for querying the instance list.
+                     * @return Filters Filter conditions for querying the instance list.
                      * 
                      */
                     std::vector<AuditInstanceFilters> GetFilters() const;
 
                     /**
-                     * 设置Filtering conditions for querying the instance list.
-                     * @param _filters Filtering conditions for querying the instance list.
+                     * 设置Filter conditions for querying the instance list.
+                     * @param _filters Filter conditions for querying the instance list.
                      * 
                      */
                     void SetFilters(const std::vector<AuditInstanceFilters>& _filters);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
-                     * @return AuditMode Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+                     * 获取Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
+                     * @return AuditMode Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
                      * 
                      */
                     int64_t GetAuditMode() const;
 
                     /**
-                     * 设置Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
-                     * @param _auditMode Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+                     * 设置Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
+                     * @param _auditMode Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
                      * 
                      */
                     void SetAuditMode(const int64_t& _auditMode);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool AuditModeHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries returned per request. The default value is 30, and the maximum value is 100.
-                     * @return Limit Number of entries returned per request. The default value is 30, and the maximum value is 100.
+                     * 获取Number of entries to return per request. Default value: 30. Maximum value: 100.
+                     * @return Limit Number of entries to return per request. Default value: 30. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries returned per request. The default value is 30, and the maximum value is 100.
-                     * @param _limit Number of entries returned per request. The default value is 30, and the maximum value is 100.
+                     * 设置Number of entries to return per request. Default value: 30. Maximum value: 100.
+                     * @param _limit Number of entries to return per request. Default value: 30. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. The default value is 0.
-                     * @return Offset Offset. The default value is 0.
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. The default value is 0.
-                     * @param _offset Offset. The default value is 0.
+                     * 设置Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -151,31 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+                     * Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
                      */
                     int64_t m_auditSwitch;
                     bool m_auditSwitchHasBeenSet;
 
                     /**
-                     * Filtering conditions for querying the instance list.
+                     * Filter conditions for querying the instance list.
                      */
                     std::vector<AuditInstanceFilters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+                     * Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
                      */
                     int64_t m_auditMode;
                     bool m_auditModeHasBeenSet;
 
                     /**
-                     * Number of entries returned per request. The default value is 30, and the maximum value is 100.
+                     * Number of entries to return per request. Default value: 30. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. The default value is 0.
+                     * Offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

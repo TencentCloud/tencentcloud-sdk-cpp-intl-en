@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of whether the parameter can be modified.
+                * Detailed information on whether the parameter is modifiable
                 */
                 class ModifiableInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the parameter can be modified, 1: Yes 0: No.
-                     * @return IsModifiable Whether the parameter can be modified, 1: Yes 0: No.
+                     * 获取Whether the parameter can be modified. 1: allowed, 0: not allowed
+                     * @return IsModifiable Whether the parameter can be modified. 1: allowed, 0: not allowed
                      * 
                      */
                     int64_t GetIsModifiable() const;
 
                     /**
-                     * 设置Whether the parameter can be modified, 1: Yes 0: No.
-                     * @param _isModifiable Whether the parameter can be modified, 1: Yes 0: No.
+                     * 设置Whether the parameter can be modified. 1: allowed, 0: not allowed
+                     * @param _isModifiable Whether the parameter can be modified. 1: allowed, 0: not allowed
                      * 
                      */
                     void SetIsModifiable(const int64_t& _isModifiable);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the parameter can be modified, 1: Yes 0: No.
+                     * Whether the parameter can be modified. 1: allowed, 0: not allowed
                      */
                     int64_t m_isModifiable;
                     bool m_isModifiableHasBeenSet;

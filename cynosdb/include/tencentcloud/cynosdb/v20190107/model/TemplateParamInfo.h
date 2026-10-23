@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DefaultHasBeenSet() const;
 
                     /**
-                     * 获取The collection of optional value types when the parameter type is `enum`.
-                     * @return EnumValue The collection of optional value types when the parameter type is `enum`.
+                     * 获取Value type collection that is optional when the parameter type is enum
+                     * @return EnumValue Value type collection that is optional when the parameter type is enum
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置The collection of optional value types when the parameter type is `enum`.
-                     * @param _enumValue The collection of optional value types when the parameter type is `enum`.
+                     * 设置Value type collection that is optional when the parameter type is enum
+                     * @param _enumValue Value type collection that is optional when the parameter type is enum
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取The maximum value when the parameter type is float/integer.
-                     * @return Max The maximum value when the parameter type is float/integer.
+                     * 获取Maximum value when the parameter type is float/integer.
+                     * @return Max Maximum value when the parameter type is float/integer.
                      * 
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置The maximum value when the parameter type is float/integer.
-                     * @param _max The maximum value when the parameter type is float/integer.
+                     * 设置Maximum value when the parameter type is float/integer.
+                     * @param _max Maximum value when the parameter type is float/integer.
                      * 
                      */
                     void SetMax(const std::string& _max);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value when the parameter type is float/integer.
-                     * @return Min Minimum value when the parameter type is float/integer.
+                     * 获取Minimum value when the parameter type is float/integer
+                     * @return Min Minimum value when the parameter type is float/integer
                      * 
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value when the parameter type is float/integer.
-                     * @param _min Minimum value when the parameter type is float/integer.
+                     * 设置Minimum value when the parameter type is float/integer
+                     * @param _min Minimum value when the parameter type is float/integer
                      * 
                      */
                     void SetMin(const std::string& _min);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the parameter to take effect
-                     * @return NeedReboot Whether to restart the instance for the parameter to take effect
+                     * 获取Whether restart is required
+                     * @return NeedReboot Whether restart is required
                      * 
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
-                     * 设置Whether to restart the instance for the parameter to take effect
-                     * @param _needReboot Whether to restart the instance for the parameter to take effect
+                     * 设置Whether restart is required
+                     * @param _needReboot Whether restart is required
                      * 
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
-                     * @return ParamType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+                     * 获取Parameter type. Valid values: integer, float, string, enum.
+                     * @return ParamType Parameter type. Valid values: integer, float, string, enum.
                      * 
                      */
                     std::string GetParamType() const;
 
                     /**
-                     * 设置Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
-                     * @param _paramType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+                     * 设置Parameter type. Valid values: integer, float, string, enum.
+                     * @param _paramType Parameter type. Valid values: integer, float, string, enum.
                      * 
                      */
                     void SetParamType(const std::string& _paramType);
@@ -250,31 +250,31 @@ namespace TencentCloud
                     bool m_defaultHasBeenSet;
 
                     /**
-                     * The collection of optional value types when the parameter type is `enum`.
+                     * Value type collection that is optional when the parameter type is enum
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * The maximum value when the parameter type is float/integer.
+                     * Maximum value when the parameter type is float/integer.
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Minimum value when the parameter type is float/integer.
+                     * Minimum value when the parameter type is float/integer
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the parameter to take effect
+                     * Whether restart is required
                      */
                     int64_t m_needReboot;
                     bool m_needRebootHasBeenSet;
@@ -286,7 +286,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+                     * Parameter type. Valid values: integer, float, string, enum.
                      */
                     std::string m_paramType;
                     bool m_paramTypeHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async flow ID
-                     * @return FlowId Async flow ID
+                     * 获取Async process ID
+                     * @return FlowId Async process ID
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Async task ID
-                     * @return TaskId Async task ID
+                     * 获取Asynchronous Task ID
+                     * @return TaskId Asynchronous Task ID
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy group ID
-                     * @return ProxyGroupId Database proxy group ID
+                     * 获取Database Proxy Group ID
+                     * @return ProxyGroupId Database Proxy Group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async flow ID
+                     * Async process ID
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Async task ID
+                     * Asynchronous Task ID
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Database proxy group ID
+                     * Database Proxy Group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;

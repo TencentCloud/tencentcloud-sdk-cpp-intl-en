@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Blurry query filter.
+                * Blurry query filter
                 */
                 class QuerySimpleFilter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Field name
-                     * @return Names Field name
+                     * 获取Field name.
+                     * @return Names Field name.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Field name
-                     * @param _names Field name
+                     * 设置Field name.
+                     * @param _names Field name.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Field value.
-                     * @return Values Field value.
+                     * 获取Field value
+                     * @return Values Field value
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Field value.
-                     * @param _values Field value.
+                     * 设置Field value
+                     * @param _values Field value
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Fuzzy matching. valid values: true (yes), false (no).
-                     * @return ExactMatch Fuzzy matching. valid values: true (yes), false (no).
+                     * 获取Fuzzy matching. true: yes; false: no
+                     * @return ExactMatch Fuzzy matching. true: yes; false: no
                      * 
                      */
                     bool GetExactMatch() const;
 
                     /**
-                     * 设置Fuzzy matching. valid values: true (yes), false (no).
-                     * @param _exactMatch Fuzzy matching. valid values: true (yes), false (no).
+                     * 设置Fuzzy matching. true: yes; false: no
+                     * @param _exactMatch Fuzzy matching. true: yes; false: no
                      * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Field name
+                     * Field name.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Field value.
+                     * Field value
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Fuzzy matching. valid values: true (yes), false (no).
+                     * Fuzzy matching. true: yes; false: no
                      */
                     bool m_exactMatch;
                     bool m_exactMatchHasBeenSet;

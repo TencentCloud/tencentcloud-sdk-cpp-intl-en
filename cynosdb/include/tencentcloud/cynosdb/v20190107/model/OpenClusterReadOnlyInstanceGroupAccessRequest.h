@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return Port Port
+                     * 获取Port.
+                     * @return Port Port.
                      * 
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _port Port
+                     * 设置Port.
+                     * @param _port Port.
                      * 
                      */
                     void SetPort(const std::string& _port);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID.
-                     * @return SecurityGroupIds Security group ID.
+                     * 获取Security group ID
+                     * @return SecurityGroupIds Security group ID
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group ID.
-                     * @param _securityGroupIds Security group ID.
+                     * 设置Security group ID
+                     * @param _securityGroupIds Security group ID
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Port
+                     * Port.
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Security group ID.
+                     * Security group ID
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;

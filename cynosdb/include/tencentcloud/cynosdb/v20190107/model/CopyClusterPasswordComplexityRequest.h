@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A parameter used to replicate the array of cluster IDs
-                     * @return ClusterIds A parameter used to replicate the array of cluster IDs
+                     * 获取Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+                     * @return ClusterIds Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置A parameter used to replicate the array of cluster IDs
-                     * @param _clusterIds A parameter used to replicate the array of cluster IDs
+                     * 设置Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+                     * @param _clusterIds Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
                      * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return SourceClusterId Cluster ID
+                     * 获取Cluster id, for example, cynosdbmysql-bzxxrmtq
+                     * @return SourceClusterId Cluster id, for example, cynosdbmysql-bzxxrmtq
                      * 
                      */
                     std::string GetSourceClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _sourceClusterId Cluster ID
+                     * 设置Cluster id, for example, cynosdbmysql-bzxxrmtq
+                     * @param _sourceClusterId Cluster id, for example, cynosdbmysql-bzxxrmtq
                      * 
                      */
                     void SetSourceClusterId(const std::string& _sourceClusterId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A parameter used to replicate the array of cluster IDs
+                     * Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * Cluster id, for example, cynosdbmysql-bzxxrmtq
                      */
                     std::string m_sourceClusterId;
                     bool m_sourceClusterIdHasBeenSet;

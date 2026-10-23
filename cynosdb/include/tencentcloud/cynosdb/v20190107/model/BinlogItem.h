@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Binlog filename</p>
-                     * @return FileName <p>Binlog filename</p>
+                     * 获取<p>Binlog file name</p>
+                     * @return FileName <p>Binlog file name</p>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置<p>Binlog filename</p>
-                     * @param _fileName <p>Binlog filename</p>
+                     * 设置<p>Binlog file name</p>
+                     * @param _fileName <p>Binlog file name</p>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>File size, measurement unit: byte</p>
-                     * @return FileSize <p>File size, measurement unit: byte</p>
+                     * 获取<p>File size, unit: byte</p>
+                     * @return FileSize <p>File size, unit: byte</p>
                      * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
-                     * 设置<p>File size, measurement unit: byte</p>
-                     * @param _fileSize <p>File size, measurement unit: byte</p>
+                     * 设置<p>File size, unit: byte</p>
+                     * @param _fileSize <p>File size, unit: byte</p>
                      * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool BinlogIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cross-regional binlog</p>
-                     * @return CrossRegions <p>Cross-regional binlog</p>
+                     * 获取<p>Cross-region of binlog</p>
+                     * @return CrossRegions <p>Cross-region of binlog</p>
                      * 
                      */
                     std::vector<std::string> GetCrossRegions() const;
 
                     /**
-                     * 设置<p>Cross-regional binlog</p>
-                     * @param _crossRegions <p>Cross-regional binlog</p>
+                     * 设置<p>Cross-region of binlog</p>
+                     * @param _crossRegions <p>Cross-region of binlog</p>
                      * 
                      */
                     void SetCrossRegions(const std::vector<std::string>& _crossRegions);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool CopyStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Safe information</p>
-                     * @return VaultInfos <p>Safe information</p>
+                     * 获取<p>Safe information.</p>
+                     * @return VaultInfos <p>Safe information.</p>
                      * 
                      */
                     std::vector<VaultInfo> GetVaultInfos() const;
 
                     /**
-                     * 设置<p>Safe information</p>
-                     * @param _vaultInfos <p>Safe information</p>
+                     * 设置<p>Safe information.</p>
+                     * @param _vaultInfos <p>Safe information.</p>
                      * 
                      */
                     void SetVaultInfos(const std::vector<VaultInfo>& _vaultInfos);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool EncryptRegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Geographical distribution of backups</p>
-                     * @return ExistRegions <p>Geographical distribution of backups</p>
+                     * 获取<p>Geographical distribution information of backups</p>
+                     * @return ExistRegions <p>Geographical distribution information of backups</p>
                      * 
                      */
                     std::vector<BinlogRegionInfo> GetExistRegions() const;
 
                     /**
-                     * 设置<p>Geographical distribution of backups</p>
-                     * @param _existRegions <p>Geographical distribution of backups</p>
+                     * 设置<p>Geographical distribution information of backups</p>
+                     * @param _existRegions <p>Geographical distribution information of backups</p>
                      * 
                      */
                     void SetExistRegions(const std::vector<BinlogRegionInfo>& _existRegions);
@@ -282,13 +282,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Binlog filename</p>
+                     * <p>Binlog file name</p>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * <p>File size, measurement unit: byte</p>
+                     * <p>File size, unit: byte</p>
                      */
                     int64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
@@ -312,7 +312,7 @@ namespace TencentCloud
                     bool m_binlogIdHasBeenSet;
 
                     /**
-                     * <p>Cross-regional binlog</p>
+                     * <p>Cross-region of binlog</p>
                      */
                     std::vector<std::string> m_crossRegions;
                     bool m_crossRegionsHasBeenSet;
@@ -324,7 +324,7 @@ namespace TencentCloud
                     bool m_copyStatusHasBeenSet;
 
                     /**
-                     * <p>Safe information</p>
+                     * <p>Safe information.</p>
                      */
                     std::vector<VaultInfo> m_vaultInfos;
                     bool m_vaultInfosHasBeenSet;
@@ -342,7 +342,7 @@ namespace TencentCloud
                     bool m_encryptRegionHasBeenSet;
 
                     /**
-                     * <p>Geographical distribution of backups</p>
+                     * <p>Geographical distribution information of backups</p>
                      */
                     std::vector<BinlogRegionInfo> m_existRegions;
                     bool m_existRegionsHasBeenSet;

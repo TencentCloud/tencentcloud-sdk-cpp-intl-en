@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance parameter details
+                * Detailed description of instance parameters
                 */
                 class ParamDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
-                     * @return ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+                     * 获取Parameter type: integer, enum, float, string, func
+                     * @return ParamType Parameter type: integer, enum, float, string, func
                      * 
                      */
                     std::string GetParamType() const;
 
                     /**
-                     * 设置Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
-                     * @param _paramType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+                     * 设置Parameter type: integer, enum, float, string, func
+                     * @param _paramType Parameter type: integer, enum, float, string, func
                      * 
                      */
                     void SetParamType(const std::string& _paramType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ParamTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
-                     * @return SupportFunc Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+                     * 获取true: supports "func"; false: no formula support
+                     * @return SupportFunc true: supports "func"; false: no formula support
                      * 
                      */
                     bool GetSupportFunc() const;
 
                     /**
-                     * 设置Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
-                     * @param _supportFunc Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+                     * 设置true: supports "func"; false: no formula support
+                     * @param _supportFunc true: supports "func"; false: no formula support
                      * 
                      */
                     void SetSupportFunc(const bool& _supportFunc);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Current value of the parameter
-                     * @return CurrentValue Current value of the parameter
+                     * 获取Current parameter value
+                     * @return CurrentValue Current parameter value
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value of the parameter
-                     * @param _currentValue Current value of the parameter
+                     * 设置Current parameter value
+                     * @param _currentValue Current parameter value
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
-                     * @return NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+                     * 获取Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
+                     * @return NeedReboot Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
                      * 
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
-                     * 设置Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
-                     * @param _needReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+                     * 设置Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
+                     * @param _needReboot Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
                      * 
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool NeedRebootHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the parameter
-                     * @return Max Maximum value of the parameter
+                     * 获取Maximum value allowed for the parameter
+                     * @return Max Maximum value allowed for the parameter
                      * 
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置Maximum value of the parameter
-                     * @param _max Maximum value of the parameter
+                     * 设置Maximum value allowed for the parameter
+                     * @param _max Maximum value allowed for the parameter
                      * 
                      */
                     void SetMax(const std::string& _max);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value of the parameter
-                     * @return Min Minimum value of the parameter
+                     * 获取Minimum allowed parameter value
+                     * @return Min Minimum allowed parameter value
                      * 
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value of the parameter
-                     * @param _min Minimum value of the parameter
+                     * 设置Minimum allowed parameter value
+                     * @param _min Minimum allowed parameter value
                      * 
                      */
                     void SetMin(const std::string& _min);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
-                     * @return EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+                     * 获取Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
+                     * @return EnumValue Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
-                     * @param _enumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+                     * 设置Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
+                     * @param _enumValue Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `1` (global parameter),  `0`  (non-global parameter).
-                     * @return IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
+                     * 获取1: global parameter, 0: non-global parameter
+                     * @return IsGlobal 1: global parameter, 0: non-global parameter
                      * 
                      */
                     int64_t GetIsGlobal() const;
 
                     /**
-                     * 设置Valid values: `1` (global parameter),  `0`  (non-global parameter).
-                     * @param _isGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
+                     * 设置1: global parameter, 0: non-global parameter
+                     * @param _isGlobal 1: global parameter, 0: non-global parameter
                      * 
                      */
                     void SetIsGlobal(const int64_t& _isGlobal);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool IsGlobalHasBeenSet() const;
 
                     /**
-                     * 获取The match type. Valid value: `multiVal`.
-                     * @return MatchType The match type. Valid value: `multiVal`.
+                     * 获取Match type. multiVal
+                     * @return MatchType Match type. multiVal
                      * 
                      */
                     std::string GetMatchType() const;
 
                     /**
-                     * 设置The match type. Valid value: `multiVal`.
-                     * @param _matchType The match type. Valid value: `multiVal`.
+                     * 设置Match type. multiVal
+                     * @param _matchType Match type. multiVal
                      * 
                      */
                     void SetMatchType(const std::string& _matchType);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool MatchTypeHasBeenSet() const;
 
                     /**
-                     * 获取Match values, which will be separated by comma when `MatchType` is `multiVal`.
-                     * @return MatchValue Match values, which will be separated by comma when `MatchType` is `multiVal`.
+                     * 获取Match target value. If multiVal is set, separate each key with a comma.
+                     * @return MatchValue Match target value. If multiVal is set, separate each key with a comma.
                      * 
                      */
                     std::string GetMatchValue() const;
 
                     /**
-                     * 设置Match values, which will be separated by comma when `MatchType` is `multiVal`.
-                     * @param _matchValue Match values, which will be separated by comma when `MatchType` is `multiVal`.
+                     * 设置Match target value. If multiVal is set, separate each key with a comma.
+                     * @param _matchValue Match target value. If multiVal is set, separate each key with a comma.
                      * 
                      */
                     void SetMatchValue(const std::string& _matchValue);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool MatchValueHasBeenSet() const;
 
                     /**
-                     * 获取true - indicates a formula. false - indicates it is not a formula.
-                     * @return IsFunc true - indicates a formula. false - indicates it is not a formula.
+                     * 获取true: formula; false: non-formula
+                     * @return IsFunc true: formula; false: non-formula
                      * 
                      */
                     bool GetIsFunc() const;
 
                     /**
-                     * 设置true - indicates a formula. false - indicates it is not a formula.
-                     * @param _isFunc true - indicates a formula. false - indicates it is not a formula.
+                     * 设置true: formula; false: non-formula
+                     * @param _isFunc true: formula; false: non-formula
                      * 
                      */
                     void SetIsFunc(const bool& _isFunc);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool IsFuncHasBeenSet() const;
 
                     /**
-                     * 获取Specifies that when the parameter is set as a formula, Func returns the set formula content.
-                     * @return Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
+                     * 获取When the parameter is set to a formula, Func returns the set formula content.
+                     * @return Func When the parameter is set to a formula, Func returns the set formula content.
                      * 
                      */
                     std::string GetFunc() const;
 
                     /**
-                     * 设置Specifies that when the parameter is set as a formula, Func returns the set formula content.
-                     * @param _func Specifies that when the parameter is set as a formula, Func returns the set formula content.
+                     * 设置When the parameter is set to a formula, Func returns the set formula content.
+                     * @param _func When the parameter is set to a formula, Func returns the set formula content.
                      * 
                      */
                     void SetFunc(const std::string& _func);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool FuncHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter is modifiable.
-                     * @return ModifiableInfo Whether the parameter is modifiable.
+                     * 获取Whether the parameter is modifiable
+                     * @return ModifiableInfo Whether the parameter is modifiable
                      * 
                      */
                     ModifiableInfo GetModifiableInfo() const;
 
                     /**
-                     * 设置Whether the parameter is modifiable.
-                     * @param _modifiableInfo Whether the parameter is modifiable.
+                     * 设置Whether the parameter is modifiable
+                     * @param _modifiableInfo Whether the parameter is modifiable
                      * 
                      */
                     void SetModifiableInfo(const ModifiableInfo& _modifiableInfo);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool ModifiableInfoHasBeenSet() const;
 
                     /**
-                     * 获取The default formula style of parameters that support formulas.
-                     * @return FuncPattern The default formula style of parameters that support formulas.
+                     * 获取Default formula style for parameters that support formulas
+                     * @return FuncPattern Default formula style for parameters that support formulas
                      * 
                      */
                     std::string GetFuncPattern() const;
 
                     /**
-                     * 设置The default formula style of parameters that support formulas.
-                     * @param _funcPattern The default formula style of parameters that support formulas.
+                     * 设置Default formula style for parameters that support formulas
+                     * @param _funcPattern Default formula style for parameters that support formulas
                      * 
                      */
                     void SetFuncPattern(const std::string& _funcPattern);
@@ -407,19 +407,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+                     * Parameter type: integer, enum, float, string, func
                      */
                     std::string m_paramType;
                     bool m_paramTypeHasBeenSet;
 
                     /**
-                     * Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+                     * true: supports "func"; false: no formula support
                      */
                     bool m_supportFunc;
                     bool m_supportFuncHasBeenSet;
@@ -437,73 +437,73 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Current value of the parameter
+                     * Current parameter value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+                     * Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
                      */
                     int64_t m_needReboot;
                     bool m_needRebootHasBeenSet;
 
                     /**
-                     * Maximum value of the parameter
+                     * Maximum value allowed for the parameter
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Minimum value of the parameter
+                     * Minimum allowed parameter value
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+                     * Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * Valid values: `1` (global parameter),  `0`  (non-global parameter).
+                     * 1: global parameter, 0: non-global parameter
                      */
                     int64_t m_isGlobal;
                     bool m_isGlobalHasBeenSet;
 
                     /**
-                     * The match type. Valid value: `multiVal`.
+                     * Match type. multiVal
                      */
                     std::string m_matchType;
                     bool m_matchTypeHasBeenSet;
 
                     /**
-                     * Match values, which will be separated by comma when `MatchType` is `multiVal`.
+                     * Match target value. If multiVal is set, separate each key with a comma.
                      */
                     std::string m_matchValue;
                     bool m_matchValueHasBeenSet;
 
                     /**
-                     * true - indicates a formula. false - indicates it is not a formula.
+                     * true: formula; false: non-formula
                      */
                     bool m_isFunc;
                     bool m_isFuncHasBeenSet;
 
                     /**
-                     * Specifies that when the parameter is set as a formula, Func returns the set formula content.
+                     * When the parameter is set to a formula, Func returns the set formula content.
                      */
                     std::string m_func;
                     bool m_funcHasBeenSet;
 
                     /**
-                     * Whether the parameter is modifiable.
+                     * Whether the parameter is modifiable
                      */
                     ModifiableInfo m_modifiableInfo;
                     bool m_modifiableInfoHasBeenSet;
 
                     /**
-                     * The default formula style of parameters that support formulas.
+                     * Default formula style for parameters that support formulas
                      */
                     std::string m_funcPattern;
                     bool m_funcPatternHasBeenSet;

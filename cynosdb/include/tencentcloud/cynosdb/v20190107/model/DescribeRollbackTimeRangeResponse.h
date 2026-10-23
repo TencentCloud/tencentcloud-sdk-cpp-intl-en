@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid regression time range start time point (abandoned).
-                     * @return TimeRangeStart Valid regression time range start time point (abandoned).
+                     * 获取Start of the valid regression time range (abandoned)
+                     * @return TimeRangeStart Start of the valid regression time range (abandoned)
                      * 
                      */
                     std::string GetTimeRangeStart() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TimeRangeStartHasBeenSet() const;
 
                     /**
-                     * 获取Valid regression time range end time point (abandoned).
-                     * @return TimeRangeEnd Valid regression time range end time point (abandoned).
+                     * 获取End time point of the valid regression time range (abandoned)
+                     * @return TimeRangeEnd End time point of the valid regression time range (abandoned)
                      * 
                      */
                     std::string GetTimeRangeEnd() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TimeRangeEndHasBeenSet() const;
 
                     /**
-                     * 获取Time range available for rollback
-                     * @return RollbackTimeRanges Time range available for rollback
+                     * 获取Available rollback time range
+                     * @return RollbackTimeRanges Available rollback time range
                      * 
                      */
                     std::vector<RollbackTimeRange> GetRollbackTimeRanges() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Valid regression time range start time point (abandoned).
+                     * Start of the valid regression time range (abandoned)
                      */
                     std::string m_timeRangeStart;
                     bool m_timeRangeStartHasBeenSet;
 
                     /**
-                     * Valid regression time range end time point (abandoned).
+                     * End time point of the valid regression time range (abandoned)
                      */
                     std::string m_timeRangeEnd;
                     bool m_timeRangeEndHasBeenSet;
 
                     /**
-                     * Time range available for rollback
+                     * Available rollback time range
                      */
                     std::vector<RollbackTimeRange> m_rollbackTimeRanges;
                     bool m_rollbackTimeRangesHasBeenSet;

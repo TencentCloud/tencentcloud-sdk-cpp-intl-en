@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of a resource pack
-                     * @return PackageId The unique ID of a resource pack
+                     * 获取Unique ID of the resource package
+                     * @return PackageId Unique ID of the resource package
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack
-                     * @param _packageId The unique ID of a resource pack
+                     * 设置Unique ID of the resource package
+                     * @param _packageId Unique ID of the resource package
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom resource pack name, which can contains up to 120 characters.
-                     * @return PackageName Custom resource pack name, which can contains up to 120 characters.
+                     * 获取Custom resource package name, supporting up to 120 characters.
+                     * @return PackageName Custom resource package name, supporting up to 120 characters.
                      * 
                      */
                     std::string GetPackageName() const;
 
                     /**
-                     * 设置Custom resource pack name, which can contains up to 120 characters.
-                     * @param _packageName Custom resource pack name, which can contains up to 120 characters.
+                     * 设置Custom resource package name, supporting up to 120 characters.
+                     * @param _packageName Custom resource package name, supporting up to 120 characters.
                      * 
                      */
                     void SetPackageName(const std::string& _packageName);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of a resource pack
+                     * Unique ID of the resource package
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Custom resource pack name, which can contains up to 120 characters.
+                     * Custom resource package name, supporting up to 120 characters.
                      */
                     std::string m_packageName;
                     bool m_packageNameHasBeenSet;

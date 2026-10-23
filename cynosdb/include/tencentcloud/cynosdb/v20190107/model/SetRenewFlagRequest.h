@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the instance to be manipulated
-                     * @return ResourceIds ID of the instance to be manipulated
+                     * 获取Cluster ID to operate on
+                     * @return ResourceIds Cluster ID to operate on
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
-                     * 设置ID of the instance to be manipulated
-                     * @param _resourceIds ID of the instance to be manipulated
+                     * 设置Cluster ID to operate on
+                     * @param _resourceIds Cluster ID to operate on
                      * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
-                     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+                     * 获取Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
+                     * @return AutoRenewFlag Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
-                     * @param _autoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+                     * 设置Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
+                     * @param _autoRenewFlag Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the instance to be manipulated
+                     * Cluster ID to operate on
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+                     * Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

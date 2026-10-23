@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Maintenance days of the week
-                     * @return MaintainWeekDays Maintenance days of the week
+                     * 获取Maintain week days
+                     * @return MaintainWeekDays Maintain week days
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Maintenance days of the week
+                     * Maintain week days
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;

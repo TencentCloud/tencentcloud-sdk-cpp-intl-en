@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of cluster task ids.
-                     * @return ClusterTaskIds List of cluster task ids.
+                     * 获取Cluster task ID list
+                     * @return ClusterTaskIds Cluster task ID list
                      * 
                      */
                     std::vector<ClusterTaskId> GetClusterTaskIds() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of cluster task ids.
+                     * Cluster task ID list
                      */
                     std::vector<ClusterTaskId> m_clusterTaskIds;
                     bool m_clusterTaskIdsHasBeenSet;

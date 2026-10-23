@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>During rollback, input the source cluster ID to search for the source poolId</p>
-                     * @return OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * 获取<p>During rollback, import the source cluster ID to search for the source poolId</p>
+                     * @return OriginalClusterId <p>During rollback, import the source cluster ID to search for the source poolId</p>
                      * 
                      */
                     std::string GetOriginalClusterId() const;
 
                     /**
-                     * 设置<p>During rollback, input the source cluster ID to search for the source poolId</p>
-                     * @param _originalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * 设置<p>During rollback, import the source cluster ID to search for the source poolId</p>
+                     * @param _originalClusterId <p>During rollback, import the source cluster ID to search for the source poolId</p>
                      * 
                      */
                     void SetOriginalClusterId(const std::string& _originalClusterId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool OriginalClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>VPC network ID</p>
-                     * @return UniqVpcId <p>VPC network ID</p>
+                     * 获取<p>ID of the VPC network it belongs to</p>
+                     * @return UniqVpcId <p>ID of the VPC network it belongs to</p>
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置<p>VPC network ID</p>
-                     * @param _uniqVpcId <p>VPC network ID</p>
+                     * 设置<p>ID of the VPC network it belongs to</p>
+                     * @param _uniqVpcId <p>ID of the VPC network it belongs to</p>
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subnet ID</p>
-                     * @return UniqSubnetId <p>Subnet ID</p>
+                     * 获取<p>Subnet ID.</p>
+                     * @return UniqSubnetId <p>Subnet ID.</p>
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置<p>Subnet ID</p>
-                     * @param _uniqSubnetId <p>Subnet ID</p>
+                     * 设置<p>Subnet ID.</p>
+                     * @param _uniqSubnetId <p>Subnet ID.</p>
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
-                     * @return ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+                     * 获取<p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
+                     * @return ClusterName <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置<p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
-                     * @param _clusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+                     * 设置<p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
+                     * @param _clusterName <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
-                     * @return RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * 获取<p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
+                     * @return RollbackId <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
                      * 
                      */
                     uint64_t GetRollbackId() const;
 
                     /**
-                     * 设置<p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
-                     * @param _rollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * 设置<p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
+                     * @param _rollbackId <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
                      * 
                      */
                     void SetRollbackId(const uint64_t& _rollbackId);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取<p>tag Array information that should be bound for cluster creation</p>
-                     * @return ResourceTags <p>tag Array information that should be bound for cluster creation</p>
+                     * 获取<p>tag Array information that need to be bound for cluster creation</p>
+                     * @return ResourceTags <p>tag Array information that need to be bound for cluster creation</p>
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置<p>tag Array information that should be bound for cluster creation</p>
-                     * @param _resourceTags <p>tag Array information that should be bound for cluster creation</p>
+                     * 设置<p>tag Array information that need to be bound for cluster creation</p>
+                     * @param _resourceTags <p>tag Array information that need to be bound for cluster creation</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
-                     * @return MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * 获取<p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+                     * @return MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置<p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
-                     * @param _minCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * 设置<p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+                     * @param _minCpu <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
-                     * @return MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+                     * 获取<p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+                     * @return MaxCpu <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置<p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
-                     * @param _maxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+                     * 设置<p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+                     * @param _maxCpu <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool AutoPauseHasBeenSet() const;
 
                     /**
-                     * 获取<p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
-                     * @return AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * 获取<p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * @return AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
                      * 
                      */
                     int64_t GetAutoPauseDelay() const;
 
                     /**
-                     * 设置<p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
-                     * @param _autoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * 设置<p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * @param _autoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
                      * 
                      */
                     void SetAutoPauseDelay(const int64_t& _autoPauseDelay);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool AlarmPolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
-                     * @return ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+                     * 获取<p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
+                     * @return ClusterParams <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
                      * 
                      */
                     std::vector<ParamItem> GetClusterParams() const;
 
                     /**
-                     * 设置<p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
-                     * @param _clusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+                     * 设置<p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
+                     * @param _clusterParams <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
                      * 
                      */
                     void SetClusterParams(const std::vector<ParamItem>& _clusterParams);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool ClusterParamsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
-                     * @return ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * 获取<p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
+                     * @return ParamTemplateId <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
                      * 
                      */
                     int64_t GetParamTemplateId() const;
 
                     /**
-                     * 设置<p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
-                     * @param _paramTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * 设置<p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
+                     * @param _paramTemplateId <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
                      * 
                      */
                     void SetParamTemplateId(const int64_t& _paramTemplateId);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool ParamTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
-                     * @return InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * 获取<p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
+                     * @return InstanceInitInfos <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
                      * 
                      */
                     std::vector<InstanceInitInfo> GetInstanceInitInfos() const;
 
                     /**
-                     * 设置<p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
-                     * @param _instanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * 设置<p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
+                     * @param _instanceInitInfos <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
                      * 
                      */
                     void SetInstanceInitInfos(const std::vector<InstanceInitInfo>& _instanceInitInfos);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool InstanceInitInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>0-Place order and pay 1-Placing order</p>
-                     * @return DealMode <p>0-Place order and pay 1-Placing order</p>
+                     * 获取<p>0-Place order and pay 1-Place order</p>
+                     * @return DealMode <p>0-Place order and pay 1-Place order</p>
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置<p>0-Place order and pay 1-Placing order</p>
-                     * @param _dealMode <p>0-Place order and pay 1-Placing order</p>
+                     * 设置<p>0-Place order and pay 1-Place order</p>
+                     * @param _dealMode <p>0-Place order and pay 1-Place order</p>
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -468,15 +468,15 @@ namespace TencentCloud
                     bool DealModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
-                     * @return PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+                     * 获取<p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
+                     * @return PayMode <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置<p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
-                     * @param _payMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+                     * 设置<p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
+                     * @param _payMode <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -531,15 +531,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Rollback database info</p>
-                     * @return RollbackDatabases <p>Rollback database info</p>
+                     * 获取<p>Rollback database information</p>
+                     * @return RollbackDatabases <p>Rollback database information</p>
                      * 
                      */
                     std::vector<RollbackDatabase> GetRollbackDatabases() const;
 
                     /**
-                     * 设置<p>Rollback database info</p>
-                     * @param _rollbackDatabases <p>Rollback database info</p>
+                     * 设置<p>Rollback database information</p>
+                     * @param _rollbackDatabases <p>Rollback database information</p>
                      * 
                      */
                     void SetRollbackDatabases(const std::vector<RollbackDatabase>& _rollbackDatabases);
@@ -552,15 +552,15 @@ namespace TencentCloud
                     bool RollbackDatabasesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Roll back table information</p>
-                     * @return RollbackTables <p>Roll back table information</p>
+                     * 获取<p>Rollback table information</p>
+                     * @return RollbackTables <p>Rollback table information</p>
                      * 
                      */
                     std::vector<RollbackTable> GetRollbackTables() const;
 
                     /**
-                     * 设置<p>Roll back table information</p>
-                     * @param _rollbackTables <p>Roll back table information</p>
+                     * 设置<p>Rollback table information</p>
+                     * @param _rollbackTables <p>Rollback table information</p>
                      * 
                      */
                     void SetRollbackTables(const std::vector<RollbackTable>& _rollbackTables);
@@ -573,15 +573,15 @@ namespace TencentCloud
                     bool RollbackTablesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Original ro instance information</p>
-                     * @return OriginalROInstanceList <p>Original ro instance information</p>
+                     * 获取<p>Information of the source read-only instance</p>
+                     * @return OriginalROInstanceList <p>Information of the source read-only instance</p>
                      * 
                      */
                     std::vector<std::string> GetOriginalROInstanceList() const;
 
                     /**
-                     * 设置<p>Original ro instance information</p>
-                     * @param _originalROInstanceList <p>Original ro instance information</p>
+                     * 设置<p>Information of the source read-only instance</p>
+                     * @param _originalROInstanceList <p>Information of the source read-only instance</p>
                      * 
                      */
                     void SetOriginalROInstanceList(const std::vector<std::string>& _originalROInstanceList);
@@ -615,15 +615,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
-                     * @return AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+                     * 获取<p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
+                     * @return AutoArchive <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
                      * 
                      */
                     std::string GetAutoArchive() const;
 
                     /**
-                     * 设置<p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
-                     * @param _autoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+                     * 设置<p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
+                     * @param _autoArchive <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
                      * 
                      */
                     void SetAutoArchive(const std::string& _autoArchive);
@@ -636,15 +636,15 @@ namespace TencentCloud
                     bool AutoArchiveHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to restore from the saved backup</p>
-                     * @return FromSaveBackup <p>Whether to restore from the saved backup</p>
+                     * 获取<p>Whether to restore from a saved backup</p>
+                     * @return FromSaveBackup <p>Whether to restore from a saved backup</p>
                      * 
                      */
                     bool GetFromSaveBackup() const;
 
                     /**
-                     * 设置<p>Whether to restore from the saved backup</p>
-                     * @param _fromSaveBackup <p>Whether to restore from the saved backup</p>
+                     * 设置<p>Whether to restore from a saved backup</p>
+                     * @param _fromSaveBackup <p>Whether to restore from a saved backup</p>
                      * 
                      */
                     void SetFromSaveBackup(const bool& _fromSaveBackup);
@@ -678,15 +678,15 @@ namespace TencentCloud
                     bool SyncWayHasBeenSet() const;
 
                     /**
-                     * 获取<p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
-                     * @return SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * 获取<p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * @return SemiSyncTimeout <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
                      * 
                      */
                     int64_t GetSemiSyncTimeout() const;
 
                     /**
-                     * 设置<p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
-                     * @param _semiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * 设置<p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * @param _semiSyncTimeout <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
                      * 
                      */
                     void SetSemiSyncTimeout(const int64_t& _semiSyncTimeout);
@@ -699,15 +699,15 @@ namespace TencentCloud
                     bool SemiSyncTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取<p>Standby availability zone</p>
-                     * @return SlaveZone <p>Standby availability zone</p>
+                     * 获取<p>Secondary AZ</p>
+                     * @return SlaveZone <p>Secondary AZ</p>
                      * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
-                     * 设置<p>Standby availability zone</p>
-                     * @param _slaveZone <p>Standby availability zone</p>
+                     * 设置<p>Secondary AZ</p>
+                     * @param _slaveZone <p>Secondary AZ</p>
                      * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
@@ -728,31 +728,31 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * <p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * <p>During rollback, import the source cluster ID to search for the source poolId</p>
                      */
                     std::string m_originalClusterId;
                     bool m_originalClusterIdHasBeenSet;
 
                     /**
-                     * <p>VPC network ID</p>
+                     * <p>ID of the VPC network it belongs to</p>
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * <p>Subnet ID</p>
+                     * <p>Subnet ID.</p>
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+                     * <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
                      */
                     uint64_t m_rollbackId;
                     bool m_rollbackIdHasBeenSet;
@@ -770,7 +770,7 @@ namespace TencentCloud
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * <p>tag Array information that should be bound for cluster creation</p>
+                     * <p>tag Array information that need to be bound for cluster creation</p>
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
@@ -782,13 +782,13 @@ namespace TencentCloud
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+                     * <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
@@ -800,7 +800,7 @@ namespace TencentCloud
                     bool m_autoPauseHasBeenSet;
 
                     /**
-                     * <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
                      */
                     int64_t m_autoPauseDelay;
                     bool m_autoPauseDelayHasBeenSet;
@@ -818,31 +818,31 @@ namespace TencentCloud
                     bool m_alarmPolicyIdsHasBeenSet;
 
                     /**
-                     * <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+                     * <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
                      */
                     std::vector<ParamItem> m_clusterParams;
                     bool m_clusterParamsHasBeenSet;
 
                     /**
-                     * <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
                      */
                     int64_t m_paramTemplateId;
                     bool m_paramTemplateIdHasBeenSet;
 
                     /**
-                     * <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
                      */
                     std::vector<InstanceInitInfo> m_instanceInitInfos;
                     bool m_instanceInitInfosHasBeenSet;
 
                     /**
-                     * <p>0-Place order and pay 1-Placing order</p>
+                     * <p>0-Place order and pay 1-Place order</p>
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
 
                     /**
-                     * <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+                     * <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -860,19 +860,19 @@ namespace TencentCloud
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * <p>Rollback database info</p>
+                     * <p>Rollback database information</p>
                      */
                     std::vector<RollbackDatabase> m_rollbackDatabases;
                     bool m_rollbackDatabasesHasBeenSet;
 
                     /**
-                     * <p>Roll back table information</p>
+                     * <p>Rollback table information</p>
                      */
                     std::vector<RollbackTable> m_rollbackTables;
                     bool m_rollbackTablesHasBeenSet;
 
                     /**
-                     * <p>Original ro instance information</p>
+                     * <p>Information of the source read-only instance</p>
                      */
                     std::vector<std::string> m_originalROInstanceList;
                     bool m_originalROInstanceListHasBeenSet;
@@ -884,13 +884,13 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+                     * <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
                      */
                     std::string m_autoArchive;
                     bool m_autoArchiveHasBeenSet;
 
                     /**
-                     * <p>Whether to restore from the saved backup</p>
+                     * <p>Whether to restore from a saved backup</p>
                      */
                     bool m_fromSaveBackup;
                     bool m_fromSaveBackupHasBeenSet;
@@ -902,13 +902,13 @@ namespace TencentCloud
                     bool m_syncWayHasBeenSet;
 
                     /**
-                     * <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
                      */
                     int64_t m_semiSyncTimeout;
                     bool m_semiSyncTimeoutHasBeenSet;
 
                     /**
-                     * <p>Standby availability zone</p>
+                     * <p>Secondary AZ</p>
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTP response timeout in seconds. value range: 5–600.
-                     * @return ResponseTimeout HTTP response timeout in seconds. value range: 5–600.
+                     * 获取<p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
+                     * @return ResponseTimeout <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
                      * 
                      */
                     int64_t GetResponseTimeout() const;
 
                     /**
-                     * 设置HTTP response timeout in seconds. value range: 5–600.
-                     * @param _responseTimeout HTTP response timeout in seconds. value range: 5–600.
+                     * 设置<p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
+                     * @param _responseTimeout <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
                      * 
                      */
                     void SetResponseTimeout(const int64_t& _responseTimeout);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * HTTP response timeout in seconds. value range: 5–600.
+                     * <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
                      */
                     int64_t m_responseTimeout;
                     bool m_responseTimeoutHasBeenSet;

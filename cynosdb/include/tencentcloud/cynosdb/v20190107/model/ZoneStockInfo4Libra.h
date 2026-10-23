@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inventory information of regions sold by Libra
+                * Regional inventory information sold by Libra
                 */
                 class ZoneStockInfo4Libra : public AbstractModel
                 {

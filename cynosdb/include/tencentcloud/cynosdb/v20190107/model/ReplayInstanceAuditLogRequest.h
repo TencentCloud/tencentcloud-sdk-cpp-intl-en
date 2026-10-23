@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source cluster id.
-                     * @return SourceClusterId Source cluster id.
+                     * 获取Source cluster id
+                     * @return SourceClusterId Source cluster id
                      * 
                      */
                     std::string GetSourceClusterId() const;
 
                     /**
-                     * 设置Source cluster id.
-                     * @param _sourceClusterId Source cluster id.
+                     * 设置Source cluster id
+                     * @param _sourceClusterId Source cluster id
                      * 
                      */
                     void SetSourceClusterId(const std::string& _sourceClusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SourceClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Source instance id.
-                     * @return SourceInstanceId Source instance id.
+                     * 获取Source instance ID.
+                     * @return SourceInstanceId Source instance ID.
                      * 
                      */
                     std::string GetSourceInstanceId() const;
 
                     /**
-                     * 设置Source instance id.
-                     * @param _sourceInstanceId Source instance id.
+                     * 设置Source instance ID.
+                     * @param _sourceInstanceId Source instance ID.
                      * 
                      */
                     void SetSourceInstanceId(const std::string& _sourceInstanceId);
@@ -85,19 +85,19 @@ namespace TencentCloud
                     bool SourceInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
-                     * @return TargetClusterId Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+                     * 获取Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
+                     * @return TargetClusterId Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
                      * 
                      */
                     std::string GetTargetClusterId() const;
 
                     /**
-                     * 设置Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
-                     * @param _targetClusterId Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+                     * 设置Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
+                     * @param _targetClusterId Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
                      * 
                      */
                     void SetTargetClusterId(const std::string& _targetClusterId);
@@ -110,15 +110,15 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
                     bool TargetClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Target instance id.
-                     * @return TargetInstanceId Target instance id.
+                     * 获取Target instance ID.
+                     * @return TargetInstanceId Target instance ID.
                      * 
                      */
                     std::string GetTargetInstanceId() const;
 
                     /**
-                     * 设置Target instance id.
-                     * @param _targetInstanceId Target instance id.
+                     * 设置Target instance ID.
+                     * @param _targetInstanceId Target instance ID.
                      * 
                      */
                     void SetTargetInstanceId(const std::string& _targetInstanceId);
@@ -131,15 +131,15 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
                     bool TargetInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Username. host must be % username.
-                     * @return TargetUserName Username. host must be % username.
+                     * 获取userName. A userName with the host as % is required.
+                     * @return TargetUserName userName. A userName with the host as % is required.
                      * 
                      */
                     std::string GetTargetUserName() const;
 
                     /**
-                     * 设置Username. host must be % username.
-                     * @param _targetUserName Username. host must be % username.
+                     * 设置userName. A userName with the host as % is required.
+                     * @param _targetUserName userName. A userName with the host as % is required.
                      * 
                      */
                     void SetTargetUserName(const std::string& _targetUserName);
@@ -173,15 +173,15 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
                     bool TargetPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Start time. time format: yyyy-DD-mm hh:mm:ss.
-                     * @return StartTime Start time. time format: yyyy-DD-mm hh:mm:ss.
+                     * 获取Start time. Time format: yyyy-DD-mm hh:mm:ss
+                     * @return StartTime Start time. Time format: yyyy-DD-mm hh:mm:ss
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time. time format: yyyy-DD-mm hh:mm:ss.
-                     * @param _startTime Start time. time format: yyyy-DD-mm hh:mm:ss.
+                     * 设置Start time. Time format: yyyy-DD-mm hh:mm:ss
+                     * @param _startTime Start time. Time format: yyyy-DD-mm hh:mm:ss
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -194,15 +194,15 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
-                     * @return EndTime Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+                     * 获取End time. Time format: yyyy-DD-mm hh:mm:ss
+                     * @return EndTime End time. Time format: yyyy-DD-mm hh:mm:ss
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
-                     * @param _endTime Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+                     * 设置End time. Time format: yyyy-DD-mm hh:mm:ss
+                     * @param _endTime End time. Time format: yyyy-DD-mm hh:mm:ss
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -217,32 +217,32 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
                 private:
 
                     /**
-                     * Source cluster id.
+                     * Source cluster id
                      */
                     std::string m_sourceClusterId;
                     bool m_sourceClusterIdHasBeenSet;
 
                     /**
-                     * Source instance id.
+                     * Source instance ID.
                      */
                     std::string m_sourceInstanceId;
                     bool m_sourceInstanceIdHasBeenSet;
 
                     /**
-                     * Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+                     * Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
                      */
                     std::string m_targetClusterId;
                     bool m_targetClusterIdHasBeenSet;
 
                     /**
-                     * Target instance id.
+                     * Target instance ID.
                      */
                     std::string m_targetInstanceId;
                     bool m_targetInstanceIdHasBeenSet;
 
                     /**
-                     * Username. host must be % username.
+                     * userName. A userName with the host as % is required.
                      */
                     std::string m_targetUserName;
                     bool m_targetUserNameHasBeenSet;
@@ -254,13 +254,13 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
                     bool m_targetPasswordHasBeenSet;
 
                     /**
-                     * Start time. time format: yyyy-DD-mm hh:mm:ss.
+                     * Start time. Time format: yyyy-DD-mm hh:mm:ss
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+                     * End time. Time format: yyyy-DD-mm hh:mm:ss
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

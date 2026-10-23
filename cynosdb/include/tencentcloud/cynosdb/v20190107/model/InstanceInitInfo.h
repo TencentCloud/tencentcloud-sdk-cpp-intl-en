@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of instances, range [1,15]</p>
-                     * @return InstanceCount <p>Number of instances, range [1,15]</p>
+                     * 获取<p>Number of instances. Value range: [1,15]</p>
+                     * @return InstanceCount <p>Number of instances. Value range: [1,15]</p>
                      * 
                      */
                     int64_t GetInstanceCount() const;
 
                     /**
-                     * 设置<p>Number of instances, range [1,15]</p>
-                     * @param _instanceCount <p>Number of instances, range [1,15]</p>
+                     * 设置<p>Number of instances. Value range: [1,15]</p>
+                     * @param _instanceCount <p>Number of instances. Value range: [1,15]</p>
                      * 
                      */
                     void SetInstanceCount(const int64_t& _instanceCount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum count of Serverless instance, range [1,15]</p>
-                     * @return MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
+                     * 获取<p>Minimum number of Serverless instances. Value range: [1,15]</p>
+                     * @return MinRoCount <p>Minimum number of Serverless instances. Value range: [1,15]</p>
                      * 
                      */
                     int64_t GetMinRoCount() const;
 
                     /**
-                     * 设置<p>Minimum count of Serverless instance, range [1,15]</p>
-                     * @param _minRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
+                     * 设置<p>Minimum number of Serverless instances. Value range: [1,15]</p>
+                     * @param _minRoCount <p>Minimum number of Serverless instances. Value range: [1,15]</p>
                      * 
                      */
                     void SetMinRoCount(const int64_t& _minRoCount);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MinRoCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum count of Serverless instances, range [1,15]</p>
-                     * @return MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
+                     * 获取<p>Maximum count of Serverless instances, ranging from 1 to 15</p>
+                     * @return MaxRoCount <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
                      * 
                      */
                     int64_t GetMaxRoCount() const;
 
                     /**
-                     * 设置<p>Maximum count of Serverless instances, range [1,15]</p>
-                     * @param _maxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
+                     * 设置<p>Maximum count of Serverless instances, ranging from 1 to 15</p>
+                     * @param _maxRoCount <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
                      * 
                      */
                     void SetMaxRoCount(const int64_t& _maxRoCount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MaxRoCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum specification of Serverless instance</p>
-                     * @return MinRoCpu <p>Minimum specification of Serverless instance</p>
+                     * 获取<p>Minimum specification of a Serverless instance</p>
+                     * @return MinRoCpu <p>Minimum specification of a Serverless instance</p>
                      * 
                      */
                     double GetMinRoCpu() const;
 
                     /**
-                     * 设置<p>Minimum specification of Serverless instance</p>
-                     * @param _minRoCpu <p>Minimum specification of Serverless instance</p>
+                     * 设置<p>Minimum specification of a Serverless instance</p>
+                     * @param _minRoCpu <p>Minimum specification of a Serverless instance</p>
                      * 
                      */
                     void SetMinRoCpu(const double& _minRoCpu);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MinRoCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum specification of Serverless instance</p>
-                     * @return MaxRoCpu <p>Maximum specification of Serverless instance</p>
+                     * 获取<p>Maximum specification of a Serverless instance</p>
+                     * @return MaxRoCpu <p>Maximum specification of a Serverless instance</p>
                      * 
                      */
                     double GetMaxRoCpu() const;
 
                     /**
-                     * 设置<p>Maximum specification of Serverless instance</p>
-                     * @param _maxRoCpu <p>Maximum specification of Serverless instance</p>
+                     * 设置<p>Maximum specification of a Serverless instance</p>
+                     * @param _maxRoCpu <p>Maximum specification of a Serverless instance</p>
                      * 
                      */
                     void SetMaxRoCpu(const double& _maxRoCpu);
@@ -256,31 +256,31 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * <p>Number of instances, range [1,15]</p>
+                     * <p>Number of instances. Value range: [1,15]</p>
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * <p>Minimum count of Serverless instance, range [1,15]</p>
+                     * <p>Minimum number of Serverless instances. Value range: [1,15]</p>
                      */
                     int64_t m_minRoCount;
                     bool m_minRoCountHasBeenSet;
 
                     /**
-                     * <p>Maximum count of Serverless instances, range [1,15]</p>
+                     * <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
                      */
                     int64_t m_maxRoCount;
                     bool m_maxRoCountHasBeenSet;
 
                     /**
-                     * <p>Minimum specification of Serverless instance</p>
+                     * <p>Minimum specification of a Serverless instance</p>
                      */
                     double m_minRoCpu;
                     bool m_minRoCpuHasBeenSet;
 
                     /**
-                     * <p>Maximum specification of Serverless instance</p>
+                     * <p>Maximum specification of a Serverless instance</p>
                      */
                     double m_maxRoCpu;
                     bool m_maxRoCpuHasBeenSet;

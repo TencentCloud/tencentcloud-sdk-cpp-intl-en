@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Log filter criteria
+                * Log filter criteria.
                 */
                 class LogFilter : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
-                     * @return Compare Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+                     * 获取Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
+                     * @return Compare Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
                      * 
                      */
                     std::string GetCompare() const;
 
                     /**
-                     * 设置Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
-                     * @param _compare Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+                     * 设置Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
+                     * @param _compare Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
                      * 
                      */
                     void SetCompare(const std::string& _compare);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CompareHasBeenSet() const;
 
                     /**
-                     * 获取Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
-                     * @return Value Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+                     * 获取Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
+                     * @return Value Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
                      * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
-                     * 设置Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
-                     * @param _value Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+                     * 设置Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
+                     * @param _value Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
                      * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+                     * Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
                      */
                     std::string m_compare;
                     bool m_compareHasBeenSet;
 
                     /**
-                     * Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+                     * Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
                      */
                     std::vector<std::string> m_value;
                     bool m_valueHasBeenSet;

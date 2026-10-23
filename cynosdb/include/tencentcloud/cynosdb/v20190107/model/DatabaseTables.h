@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Table name list.
-                     * @return Tables Table name list.
+                     * 获取Table Name List
+                     * @return Tables Table Name List
                      * 
                      */
                     std::vector<std::string> GetTables() const;
 
                     /**
-                     * 设置Table name list.
-                     * @param _tables Table name list.
+                     * 设置Table Name List
+                     * @param _tables Table Name List
                      * 
                      */
                     void SetTables(const std::vector<std::string>& _tables);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Table name list.
+                     * Table Name List
                      */
                     std::vector<std::string> m_tables;
                     bool m_tablesHasBeenSet;

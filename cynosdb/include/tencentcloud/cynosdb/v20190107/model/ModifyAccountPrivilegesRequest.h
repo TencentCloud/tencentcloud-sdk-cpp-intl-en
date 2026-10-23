@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Account infomation
-                     * @return Account Account infomation
+                     * 获取Account information
+                     * @return Account Account information
                      * 
                      */
                     InputAccount GetAccount() const;
 
                     /**
-                     * 设置Account infomation
-                     * @param _account Account infomation
+                     * 设置Account information
+                     * @param _account Account information
                      * 
                      */
                     void SetAccount(const InputAccount& _account);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool AccountHasBeenSet() const;
 
                     /**
-                     * 获取Array of global permissions
-                     * @return GlobalPrivileges Array of global permissions
+                     * 获取Global permission array
+                     * @return GlobalPrivileges Global permission array
                      * 
                      */
                     std::vector<std::string> GetGlobalPrivileges() const;
 
                     /**
-                     * 设置Array of global permissions
-                     * @param _globalPrivileges Array of global permissions
+                     * 设置Global permission array
+                     * @param _globalPrivileges Global permission array
                      * 
                      */
                     void SetGlobalPrivileges(const std::vector<std::string>& _globalPrivileges);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool DatabasePrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Array of table permissions
-                     * @return TablePrivileges Array of table permissions
+                     * 获取Table permission array
+                     * @return TablePrivileges Table permission array
                      * 
                      */
                     std::vector<TablePrivileges> GetTablePrivileges() const;
 
                     /**
-                     * 设置Array of table permissions
-                     * @param _tablePrivileges Array of table permissions
+                     * 设置Table permission array
+                     * @param _tablePrivileges Table permission array
                      * 
                      */
                     void SetTablePrivileges(const std::vector<TablePrivileges>& _tablePrivileges);
@@ -153,19 +153,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Account infomation
+                     * Account information
                      */
                     InputAccount m_account;
                     bool m_accountHasBeenSet;
 
                     /**
-                     * Array of global permissions
+                     * Global permission array
                      */
                     std::vector<std::string> m_globalPrivileges;
                     bool m_globalPrivilegesHasBeenSet;
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_databasePrivilegesHasBeenSet;
 
                     /**
-                     * Array of table permissions
+                     * Table permission array
                      */
                     std::vector<TablePrivileges> m_tablePrivileges;
                     bool m_tablePrivilegesHasBeenSet;

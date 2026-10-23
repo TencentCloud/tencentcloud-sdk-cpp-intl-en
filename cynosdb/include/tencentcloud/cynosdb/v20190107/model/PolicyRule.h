@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy, which can be `ACCEPT` or `DROP`
-                     * @return Action Policy, which can be `ACCEPT` or `DROP`
+                     * 获取Policy. Valid values: ACCEPT and DROP.
+                     * @return Action Policy. Valid values: ACCEPT and DROP.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Policy, which can be `ACCEPT` or `DROP`
-                     * @param _action Policy, which can be `ACCEPT` or `DROP`
+                     * 设置Policy. Valid values: ACCEPT and DROP.
+                     * @param _action Policy. Valid values: ACCEPT and DROP.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Source IP or source IP range, such as 192.168.0.0/16
-                     * @return CidrIp Source IP or source IP range, such as 192.168.0.0/16
+                     * 获取Source Ip or Ip range, for example, 192.168.0.0/16
+                     * @return CidrIp Source Ip or Ip range, for example, 192.168.0.0/16
                      * 
                      */
                     std::string GetCidrIp() const;
 
                     /**
-                     * 设置Source IP or source IP range, such as 192.168.0.0/16
-                     * @param _cidrIp Source IP or source IP range, such as 192.168.0.0/16
+                     * 设置Source Ip or Ip range, for example, 192.168.0.0/16
+                     * @param _cidrIp Source Ip or Ip range, for example, 192.168.0.0/16
                      * 
                      */
                     void SetCidrIp(const std::string& _cidrIp);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CidrIpHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return PortRange Port
+                     * 获取Port.
+                     * @return PortRange Port.
                      * 
                      */
                     std::string GetPortRange() const;
 
                     /**
-                     * 设置Port
-                     * @param _portRange Port
+                     * 设置Port.
+                     * @param _portRange Port.
                      * 
                      */
                     void SetPortRange(const std::string& _portRange);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PortRangeHasBeenSet() const;
 
                     /**
-                     * 获取Network protocol, such as UDP and TCP
-                     * @return IpProtocol Network protocol, such as UDP and TCP
+                     * 获取Network protocol. Supports udp and tcp.
+                     * @return IpProtocol Network protocol. Supports udp and tcp.
                      * 
                      */
                     std::string GetIpProtocol() const;
 
                     /**
-                     * 设置Network protocol, such as UDP and TCP
-                     * @param _ipProtocol Network protocol, such as UDP and TCP
+                     * 设置Network protocol. Supports udp and tcp.
+                     * @param _ipProtocol Network protocol. Supports udp and tcp.
                      * 
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ServiceModuleHasBeenSet() const;
 
                     /**
-                     * 获取IP address ID or IP address group ID.
-                     * @return AddressModule IP address ID or IP address group ID.
+                     * 获取IP address ID or IP address group ID
+                     * @return AddressModule IP address ID or IP address group ID
                      * 
                      */
                     std::string GetAddressModule() const;
 
                     /**
-                     * 设置IP address ID or IP address group ID.
-                     * @param _addressModule IP address ID or IP address group ID.
+                     * 设置IP address ID or IP address group ID
+                     * @param _addressModule IP address ID or IP address group ID
                      * 
                      */
                     void SetAddressModule(const std::string& _addressModule);
@@ -217,25 +217,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Policy, which can be `ACCEPT` or `DROP`
+                     * Policy. Valid values: ACCEPT and DROP.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Source IP or source IP range, such as 192.168.0.0/16
+                     * Source Ip or Ip range, for example, 192.168.0.0/16
                      */
                     std::string m_cidrIp;
                     bool m_cidrIpHasBeenSet;
 
                     /**
-                     * Port
+                     * Port.
                      */
                     std::string m_portRange;
                     bool m_portRangeHasBeenSet;
 
                     /**
-                     * Network protocol, such as UDP and TCP
+                     * Network protocol. Supports udp and tcp.
                      */
                     std::string m_ipProtocol;
                     bool m_ipProtocolHasBeenSet;
@@ -247,7 +247,7 @@ namespace TencentCloud
                     bool m_serviceModuleHasBeenSet;
 
                     /**
-                     * IP address ID or IP address group ID.
+                     * IP address ID or IP address group ID
                      */
                     std::string m_addressModule;
                     bool m_addressModuleHasBeenSet;

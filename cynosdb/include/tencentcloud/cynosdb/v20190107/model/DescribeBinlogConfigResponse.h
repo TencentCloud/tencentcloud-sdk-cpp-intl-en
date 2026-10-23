@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration update time for cross-regional Binlog.
-                     * @return BinlogCrossRegionsConfigUpdateTime Configuration update time for cross-regional Binlog.
+                     * 获取Binlog cross-regional configuration update time
+                     * @return BinlogCrossRegionsConfigUpdateTime Binlog cross-regional configuration update time
                      * 
                      */
                     std::string GetBinlogCrossRegionsConfigUpdateTime() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool BinlogCrossRegionsConfigUpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the Binlog configuration message.
-                     * @return BinlogConfig Specifies the Binlog configuration message.
+                     * 获取Binlog configuration message
+                     * @return BinlogConfig Binlog configuration message
                      * 
                      */
                     BinlogConfigInfo GetBinlogConfig() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration update time for cross-regional Binlog.
+                     * Binlog cross-regional configuration update time
                      */
                     std::string m_binlogCrossRegionsConfigUpdateTime;
                     bool m_binlogCrossRegionsConfigUpdateTimeHasBeenSet;
 
                     /**
-                     * Specifies the Binlog configuration message.
+                     * Binlog configuration message
                      */
                     BinlogConfigInfo m_binlogConfig;
                     bool m_binlogConfigHasBeenSet;

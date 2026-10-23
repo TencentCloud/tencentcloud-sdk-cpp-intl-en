@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Initiate process ID.
-                     * @return FlowId Initiate process ID.
+                     * 获取Process ID for initiation
+                     * @return FlowId Process ID for initiation
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Initiate process ID.
+                     * Process ID for initiation
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

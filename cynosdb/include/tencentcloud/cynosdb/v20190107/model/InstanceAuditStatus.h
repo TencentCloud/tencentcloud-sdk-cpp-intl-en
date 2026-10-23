@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance audit details information.
+                * Instance audit details.
                 */
                 class InstanceAuditStatus : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
-                     * @return AuditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+                     * 获取Audit status. ON - Audit is enabled, OFF - Audit is disabled.
+                     * @return AuditStatus Audit status. ON - Audit is enabled, OFF - Audit is disabled.
                      * 
                      */
                     std::string GetAuditStatus() const;
 
                     /**
-                     * 设置Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
-                     * @param _auditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+                     * 设置Audit status. ON - Audit is enabled, OFF - Audit is disabled.
+                     * @param _auditStatus Audit status. ON - Audit is enabled, OFF - Audit is disabled.
                      * 
                      */
                     void SetAuditStatus(const std::string& _auditStatus);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool AuditStatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the log retention period.
-                     * @return LogExpireDay Specifies the log retention period.
+                     * 获取Log retention period.
+                     * @return LogExpireDay Log retention period.
                      * 
                      */
                     uint64_t GetLogExpireDay() const;
 
                     /**
-                     * 设置Specifies the log retention period.
-                     * @param _logExpireDay Specifies the log retention period.
+                     * 设置Log retention period.
+                     * @param _logExpireDay Log retention period.
                      * 
                      */
                     void SetLogExpireDay(const uint64_t& _logExpireDay);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool LogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取High-Frequency storage duration.
-                     * @return HighLogExpireDay High-Frequency storage duration.
+                     * 获取High-frequency storage duration.
+                     * @return HighLogExpireDay High-frequency storage duration.
                      * 
                      */
                     uint64_t GetHighLogExpireDay() const;
 
                     /**
-                     * 设置High-Frequency storage duration.
-                     * @param _highLogExpireDay High-Frequency storage duration.
+                     * 设置High-frequency storage duration.
+                     * @param _highLogExpireDay High-frequency storage duration.
                      * 
                      */
                     void SetHighLogExpireDay(const uint64_t& _highLogExpireDay);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool HighLogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the duration of low-frequency storage.
-                     * @return LowLogExpireDay Specifies the duration of low-frequency storage.
+                     * 获取Low-frequency storage duration.
+                     * @return LowLogExpireDay Low-frequency storage duration.
                      * 
                      */
                     uint64_t GetLowLogExpireDay() const;
 
                     /**
-                     * 设置Specifies the duration of low-frequency storage.
-                     * @param _lowLogExpireDay Specifies the duration of low-frequency storage.
+                     * 设置Low-frequency storage duration.
+                     * @param _lowLogExpireDay Low-frequency storage duration.
                      * 
                      */
                     void SetLowLogExpireDay(const uint64_t& _lowLogExpireDay);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool LowLogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the log storage volume.
-                     * @return BillingAmount Specifies the log storage volume.
+                     * 获取Log storage volume.
+                     * @return BillingAmount Log storage volume.
                      * 
                      */
                     double GetBillingAmount() const;
 
                     /**
-                     * 设置Specifies the log storage volume.
-                     * @param _billingAmount Specifies the log storage volume.
+                     * 设置Log storage volume.
+                     * @param _billingAmount Log storage volume.
                      * 
                      */
                     void SetBillingAmount(const double& _billingAmount);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool BillingAmountHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the high-frequency storage volume.
-                     * @return HighRealStorage Specifies the high-frequency storage volume.
+                     * 获取High-frequency storage volume.
+                     * @return HighRealStorage High-frequency storage volume.
                      * 
                      */
                     double GetHighRealStorage() const;
 
                     /**
-                     * 设置Specifies the high-frequency storage volume.
-                     * @param _highRealStorage Specifies the high-frequency storage volume.
+                     * 设置High-frequency storage volume.
+                     * @param _highRealStorage High-frequency storage volume.
                      * 
                      */
                     void SetHighRealStorage(const double& _highRealStorage);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool HighRealStorageHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the infrequent access storage size.
-                     * @return LowRealStorage Specifies the infrequent access storage size.
+                     * 获取Infrequent access storage size.
+                     * @return LowRealStorage Infrequent access storage size.
                      * 
                      */
                     double GetLowRealStorage() const;
 
                     /**
-                     * 设置Specifies the infrequent access storage size.
-                     * @param _lowRealStorage Specifies the infrequent access storage size.
+                     * 设置Infrequent access storage size.
+                     * @param _lowRealStorage Infrequent access storage size.
                      * 
                      */
                     void SetLowRealStorage(const double& _lowRealStorage);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool LowRealStorageHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether it is a full audit. true - indicates a full audit.
-                     * @return AuditAll Specifies whether it is a full audit. true - indicates a full audit.
+                     * 获取Whether full audit is enabled. true - Full audit.
+                     * @return AuditAll Whether full audit is enabled. true - Full audit.
                      * 
                      */
                     bool GetAuditAll() const;
 
                     /**
-                     * 设置Specifies whether it is a full audit. true - indicates a full audit.
-                     * @param _auditAll Specifies whether it is a full audit. true - indicates a full audit.
+                     * 设置Whether full audit is enabled. true - Full audit.
+                     * @param _auditAll Whether full audit is enabled. true - Full audit.
                      * 
                      */
                     void SetAuditAll(const bool& _auditAll);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool AuditAllHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the audit activation time.
-                     * @return CreateAt Specifies the audit activation time.
+                     * 获取Time when the audit service was activated.
+                     * @return CreateAt Time when the audit service was activated.
                      * 
                      */
                     std::string GetCreateAt() const;
 
                     /**
-                     * 设置Specifies the audit activation time.
-                     * @param _createAt Specifies the audit activation time.
+                     * 设置Time when the audit service was activated.
+                     * @param _createAt Time when the audit service was activated.
                      * 
                      */
                     void SetCreateAt(const std::string& _createAt);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool CreateAtHasBeenSet() const;
 
                     /**
-                     * 获取Instance-Related information.
-                     * @return InstanceInfo Instance-Related information.
+                     * 获取Instance-related information.
+                     * @return InstanceInfo Instance-related information.
                      * 
                      */
                     AuditInstanceInfo GetInstanceInfo() const;
 
                     /**
-                     * 设置Instance-Related information.
-                     * @param _instanceInfo Instance-Related information.
+                     * 设置Instance-related information.
+                     * @param _instanceInfo Instance-related information.
                      * 
                      */
                     void SetInstanceInfo(const AuditInstanceInfo& _instanceInfo);
@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool InstanceInfoHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the total storage capacity.
-                     * @return RealStorage Specifies the total storage capacity.
+                     * 获取Total storage.
+                     * @return RealStorage Total storage.
                      * 
                      */
                     double GetRealStorage() const;
 
                     /**
-                     * 设置Specifies the total storage capacity.
-                     * @param _realStorage Specifies the total storage capacity.
+                     * 设置Total storage.
+                     * @param _realStorage Total storage.
                      * 
                      */
                     void SetRealStorage(const double& _realStorage);
@@ -301,15 +301,15 @@ namespace TencentCloud
                     bool RealStorageHasBeenSet() const;
 
                     /**
-                     * 获取The rule template applied to the instance.
-                     * @return RuleTemplateIds The rule template applied to the instance.
+                     * 获取Rule template applied to the instance.
+                     * @return RuleTemplateIds Rule template applied to the instance.
                      * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
-                     * 设置The rule template applied to the instance.
-                     * @param _ruleTemplateIds The rule template applied to the instance.
+                     * 设置Rule template applied to the instance.
+                     * @param _ruleTemplateIds Rule template applied to the instance.
                      * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool RuleTemplateIdsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable log delivery: ON, OFF.
-                     * @return Deliver Specifies whether to enable log delivery: ON, OFF.
+                     * 获取Whether to enable log delivery: ON, OFF
+                     * @return Deliver Whether to enable log delivery: ON, OFF
                      * 
                      */
                     std::string GetDeliver() const;
 
                     /**
-                     * 设置Specifies whether to enable log delivery: ON, OFF.
-                     * @param _deliver Specifies whether to enable log delivery: ON, OFF.
+                     * 设置Whether to enable log delivery: ON, OFF
+                     * @param _deliver Whether to enable log delivery: ON, OFF
                      * 
                      */
                     void SetDeliver(const std::string& _deliver);
@@ -372,79 +372,79 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+                     * Audit status. ON - Audit is enabled, OFF - Audit is disabled.
                      */
                     std::string m_auditStatus;
                     bool m_auditStatusHasBeenSet;
 
                     /**
-                     * Specifies the log retention period.
+                     * Log retention period.
                      */
                     uint64_t m_logExpireDay;
                     bool m_logExpireDayHasBeenSet;
 
                     /**
-                     * High-Frequency storage duration.
+                     * High-frequency storage duration.
                      */
                     uint64_t m_highLogExpireDay;
                     bool m_highLogExpireDayHasBeenSet;
 
                     /**
-                     * Specifies the duration of low-frequency storage.
+                     * Low-frequency storage duration.
                      */
                     uint64_t m_lowLogExpireDay;
                     bool m_lowLogExpireDayHasBeenSet;
 
                     /**
-                     * Specifies the log storage volume.
+                     * Log storage volume.
                      */
                     double m_billingAmount;
                     bool m_billingAmountHasBeenSet;
 
                     /**
-                     * Specifies the high-frequency storage volume.
+                     * High-frequency storage volume.
                      */
                     double m_highRealStorage;
                     bool m_highRealStorageHasBeenSet;
 
                     /**
-                     * Specifies the infrequent access storage size.
+                     * Infrequent access storage size.
                      */
                     double m_lowRealStorage;
                     bool m_lowRealStorageHasBeenSet;
 
                     /**
-                     * Specifies whether it is a full audit. true - indicates a full audit.
+                     * Whether full audit is enabled. true - Full audit.
                      */
                     bool m_auditAll;
                     bool m_auditAllHasBeenSet;
 
                     /**
-                     * Specifies the audit activation time.
+                     * Time when the audit service was activated.
                      */
                     std::string m_createAt;
                     bool m_createAtHasBeenSet;
 
                     /**
-                     * Instance-Related information.
+                     * Instance-related information.
                      */
                     AuditInstanceInfo m_instanceInfo;
                     bool m_instanceInfoHasBeenSet;
 
                     /**
-                     * Specifies the total storage capacity.
+                     * Total storage.
                      */
                     double m_realStorage;
                     bool m_realStorageHasBeenSet;
 
                     /**
-                     * The rule template applied to the instance.
+                     * Rule template applied to the instance.
                      */
                     std::vector<std::string> m_ruleTemplateIds;
                     bool m_ruleTemplateIdsHasBeenSet;
 
                     /**
-                     * Specifies whether to enable log delivery: ON, OFF.
+                     * Whether to enable log delivery: ON, OFF
                      */
                     std::string m_deliver;
                     bool m_deliverHasBeenSet;

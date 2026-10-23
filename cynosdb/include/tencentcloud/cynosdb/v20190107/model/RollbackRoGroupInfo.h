@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback RO group information.
+                * Rollback RO group information
                 */
                 class RollbackRoGroupInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance group ID.
-                     * @return InstanceGroupId Instance group ID.
+                     * 获取Instance group ID
+                     * @return InstanceGroupId Instance group ID
                      * 
                      */
                     std::string GetInstanceGroupId() const;
 
                     /**
-                     * 设置Instance group ID.
-                     * @param _instanceGroupId Instance group ID.
+                     * 设置Instance group ID
+                     * @param _instanceGroupId Instance group ID
                      * 
                      */
                     void SetInstanceGroupId(const std::string& _instanceGroupId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC information.
-                     * @return UniqVpcId VPC information.
+                     * 获取VPC information
+                     * @return UniqVpcId VPC information
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC information.
-                     * @param _uniqVpcId VPC information.
+                     * 设置VPC information
+                     * @param _uniqVpcId VPC information
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取vip information.
-                     * @return Vip vip information.
+                     * 获取VIP information.
+                     * @return Vip VIP information.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置vip information.
-                     * @param _vip vip information.
+                     * 设置VIP information.
+                     * @param _vip VIP information.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the vport information.
-                     * @return Vport Specifies the vport information.
+                     * 获取Virtual port information.
+                     * @return Vport Virtual port information.
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Specifies the vport information.
-                     * @param _vport Specifies the vport information.
+                     * 设置Virtual port information.
+                     * @param _vport Virtual port information.
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -154,13 +154,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance group ID.
+                     * Instance group ID
                      */
                     std::string m_instanceGroupId;
                     bool m_instanceGroupIdHasBeenSet;
 
                     /**
-                     * VPC information.
+                     * VPC information
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * vip information.
+                     * VIP information.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Specifies the vport information.
+                     * Virtual port information.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;

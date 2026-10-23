@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool GroupsHasBeenSet() const;
 
                     /**
-                     * 获取The total number of groups
-                     * @return Total The total number of groups
+                     * 获取Total number.
+                     * @return Total Total number.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_groupsHasBeenSet;
 
                     /**
-                     * The total number of groups
+                     * Total number.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

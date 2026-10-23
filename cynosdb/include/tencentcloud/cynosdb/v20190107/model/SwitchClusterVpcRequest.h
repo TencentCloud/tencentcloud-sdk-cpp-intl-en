@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID in string
-                     * @return UniqVpcId VPC ID in string
+                     * 获取vpc id in string format
+                     * @return UniqVpcId vpc id in string format
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID in string
-                     * @param _uniqVpcId VPC ID in string
+                     * 设置vpc id in string format
+                     * @param _uniqVpcId vpc id in string format
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID in string
-                     * @return UniqSubnetId Subnet ID in string
+                     * 获取String subnet id.
+                     * @return UniqSubnetId String subnet id.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置Subnet ID in string
-                     * @param _uniqSubnetId Subnet ID in string
+                     * 设置String subnet id.
+                     * @param _uniqSubnetId String subnet id.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Valid hours of old IP
-                     * @return OldIpReserveHours Valid hours of old IP
+                     * 获取Old address reclamation time
+                     * @return OldIpReserveHours Old address reclamation time
                      * 
                      */
                     int64_t GetOldIpReserveHours() const;
 
                     /**
-                     * 设置Valid hours of old IP
-                     * @param _oldIpReserveHours Valid hours of old IP
+                     * 设置Old address reclamation time
+                     * @param _oldIpReserveHours Old address reclamation time
                      * 
                      */
                     void SetOldIpReserveHours(const int64_t& _oldIpReserveHours);
@@ -135,19 +135,19 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * VPC ID in string
+                     * vpc id in string format
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID in string
+                     * String subnet id.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Valid hours of old IP
+                     * Old address reclamation time
                      */
                     int64_t m_oldIpReserveHours;
                     bool m_oldIpReserveHoursHasBeenSet;

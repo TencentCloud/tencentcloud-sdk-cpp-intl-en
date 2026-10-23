@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of the database proxy nodes
-                     * @return TotalCount Number of the database proxy nodes
+                     * 获取Total number of database proxy nodes
+                     * @return TotalCount Total number of database proxy nodes
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of the database proxy nodes
-                     * @return ProxyNodeInfos List of the database proxy nodes
+                     * 获取List of database proxy nodes
+                     * @return ProxyNodeInfos List of database proxy nodes
                      * 
                      */
                     std::vector<ProxyNodeInfo> GetProxyNodeInfos() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of the database proxy nodes
+                     * Total number of database proxy nodes
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of the database proxy nodes
+                     * List of database proxy nodes
                      */
                     std::vector<ProxyNodeInfo> m_proxyNodeInfos;
                     bool m_proxyNodeInfosHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance weight.
+                * Instance weight
                 */
                 class InstanceNameWeight : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
-                     * @return InstanceName Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+                     * 获取Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
+                     * @return InstanceName Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
-                     * @param _instanceName Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+                     * 设置Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
+                     * @param _instanceName Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+                     * Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

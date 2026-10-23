@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
-                     * @return AutoPauseDelay Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
+                     * 获取cpu load duration (seconds) at 0 before auto pause
+                     * @return AutoPauseDelay cpu load duration (seconds) at 0 before auto pause
                      * 
                      */
                     int64_t GetAutoPauseDelay() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool AutoPauseDelayHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
-                     * @return AutoScaleUpDelay Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
+                     * 获取cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
+                     * @return AutoScaleUpDelay cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
                      * 
                      */
                     int64_t GetAutoScaleUpDelay() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AutoScaleUpDelayHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
-                     * @return AutoScaleDownDelay Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
+                     * 获取Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
+                     * @return AutoScaleDownDelay Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
                      * 
                      */
                     int64_t GetAutoScaleDownDelay() const;
@@ -86,10 +86,10 @@ namespace TencentCloud
                     bool AutoScaleDownDelayHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically pause. valid values:.
+                     * 获取Whether to auto pause. Possible values:
 yes
 no
-                     * @return AutoPause Whether to automatically pause. valid values:.
+                     * @return AutoPause Whether to auto pause. Possible values:
 yes
 no
                      * 
@@ -104,8 +104,8 @@ no
                     bool AutoPauseHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
-                     * @return AutoScaleUp Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
+                     * 获取Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
+                     * @return AutoScaleUp Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
                      * 
                      */
                     std::string GetAutoScaleUp() const;
@@ -118,8 +118,8 @@ no
                     bool AutoScaleUpHasBeenSet() const;
 
                     /**
-                     * 获取Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
-                     * @return AutoScaleDown Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
+                     * 获取Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
+                     * @return AutoScaleDown Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
                      * 
                      */
                     std::string GetAutoScaleDown() const;
@@ -132,8 +132,8 @@ no
                     bool AutoScaleDownHasBeenSet() const;
 
                     /**
-                     * 获取Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
-                     * @return AutoArchive Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+                     * 获取Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
+                     * @return AutoArchive Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
                      * 
                      */
                     std::string GetAutoArchive() const;
@@ -148,25 +148,25 @@ no
                 private:
 
                     /**
-                     * Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
+                     * cpu load duration (seconds) at 0 before auto pause
                      */
                     int64_t m_autoPauseDelay;
                     bool m_autoPauseDelayHasBeenSet;
 
                     /**
-                     * Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
+                     * cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
                      */
                     int64_t m_autoScaleUpDelay;
                     bool m_autoScaleUpDelayHasBeenSet;
 
                     /**
-                     * Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
+                     * Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
                      */
                     int64_t m_autoScaleDownDelay;
                     bool m_autoScaleDownDelayHasBeenSet;
 
                     /**
-                     * Whether to automatically pause. valid values:.
+                     * Whether to auto pause. Possible values:
 yes
 no
                      */
@@ -174,19 +174,19 @@ no
                     bool m_autoPauseHasBeenSet;
 
                     /**
-                     * Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
+                     * Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
                      */
                     std::string m_autoScaleUp;
                     bool m_autoScaleUpHasBeenSet;
 
                     /**
-                     * Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
+                     * Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
                      */
                     std::string m_autoScaleDown;
                     bool m_autoScaleDownHasBeenSet;
 
                     /**
-                     * Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+                     * Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
                      */
                     std::string m_autoArchive;
                     bool m_autoArchiveHasBeenSet;

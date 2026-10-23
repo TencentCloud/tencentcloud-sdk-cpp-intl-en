@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone. specifies the best practice for region provision.
-                     * @return Zone Availability zone. specifies the best practice for region provision.
+                     * 获取AZ. Best practice provided by each region
+                     * @return Zone AZ. Best practice provided by each region
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone. specifies the best practice for region provision.
-                     * @param _zone Availability zone. specifies the best practice for region provision.
+                     * 设置AZ. Best practice provided by each region
+                     * @param _zone AZ. Best practice provided by each region
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
-                     * @return InstancePayMode Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+                     * 获取Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
+                     * @return InstancePayMode Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
                      * 
                      */
                     std::string GetInstancePayMode() const;
 
                     /**
-                     * 设置Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
-                     * @param _instancePayMode Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+                     * 设置Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
+                     * @param _instancePayMode Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
                      * 
                      */
                     void SetInstancePayMode(const std::string& _instancePayMode);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstancePayModeHasBeenSet() const;
 
                     /**
-                     * 获取Storage purchase type. available values are: PREPAID, POSTPAID.
-                     * @return StoragePayMode Storage purchase type. available values are: PREPAID, POSTPAID.
+                     * 获取Storage purchase type. Available values are: PREPAID, POSTPAID
+                     * @return StoragePayMode Storage purchase type. Available values are: PREPAID, POSTPAID
                      * 
                      */
                     std::string GetStoragePayMode() const;
 
                     /**
-                     * 设置Storage purchase type. available values are: PREPAID, POSTPAID.
-                     * @param _storagePayMode Storage purchase type. available values are: PREPAID, POSTPAID.
+                     * 设置Storage purchase type. Available values are: PREPAID, POSTPAID
+                     * @param _storagePayMode Storage purchase type. Available values are: PREPAID, POSTPAID
                      * 
                      */
                     void SetStoragePayMode(const std::string& _storagePayMode);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the product specification.
-                     * @return GoodsSpecs Specifies the product specification.
+                     * 获取Product specification
+                     * @return GoodsSpecs Product specification
                      * 
                      */
                     std::vector<GoodsSpec> GetGoodsSpecs() const;
 
                     /**
-                     * 设置Specifies the product specification.
-                     * @param _goodsSpecs Specifies the product specification.
+                     * 设置Product specification
+                     * @param _goodsSpecs Product specification
                      * 
                      */
                     void SetGoodsSpecs(const std::vector<GoodsSpec>& _goodsSpecs);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Availability zone. specifies the best practice for region provision.
+                     * AZ. Best practice provided by each region
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+                     * Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
                      */
                     std::string m_instancePayMode;
                     bool m_instancePayModeHasBeenSet;
 
                     /**
-                     * Storage purchase type. available values are: PREPAID, POSTPAID.
+                     * Storage purchase type. Available values are: PREPAID, POSTPAID
                      */
                     std::string m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * Specifies the product specification.
+                     * Product specification
                      */
                     std::vector<GoodsSpec> m_goodsSpecs;
                     bool m_goodsSpecsHasBeenSet;

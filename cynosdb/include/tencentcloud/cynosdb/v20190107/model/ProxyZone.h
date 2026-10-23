@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Number of proxy nodes and their AZs
+                * Count of nodes in the proxy node availability zone
                 */
                 class ProxyZone : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ of the proxy node
-                     * @return ProxyNodeZone AZ of the proxy node
+                     * 获取proxy node availability zone
+                     * @return ProxyNodeZone proxy node availability zone
                      * 
                      */
                     std::string GetProxyNodeZone() const;
 
                     /**
-                     * 设置AZ of the proxy node
-                     * @param _proxyNodeZone AZ of the proxy node
+                     * 设置proxy node availability zone
+                     * @param _proxyNodeZone proxy node availability zone
                      * 
                      */
                     void SetProxyNodeZone(const std::string& _proxyNodeZone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProxyNodeZoneHasBeenSet() const;
 
                     /**
-                     * 获取The number of proxy nodes
-                     * @return ProxyNodeCount The number of proxy nodes
+                     * 获取Number of proxy nodes.
+                     * @return ProxyNodeCount Number of proxy nodes.
                      * 
                      */
                     int64_t GetProxyNodeCount() const;
 
                     /**
-                     * 设置The number of proxy nodes
-                     * @param _proxyNodeCount The number of proxy nodes
+                     * 设置Number of proxy nodes.
+                     * @param _proxyNodeCount Number of proxy nodes.
                      * 
                      */
                     void SetProxyNodeCount(const int64_t& _proxyNodeCount);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AZ of the proxy node
+                     * proxy node availability zone
                      */
                     std::string m_proxyNodeZone;
                     bool m_proxyNodeZoneHasBeenSet;
 
                     /**
-                     * The number of proxy nodes
+                     * Number of proxy nodes.
                      */
                     int64_t m_proxyNodeCount;
                     bool m_proxyNodeCountHasBeenSet;

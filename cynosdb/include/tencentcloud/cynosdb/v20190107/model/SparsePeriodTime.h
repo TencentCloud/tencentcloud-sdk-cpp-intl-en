@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sparse backup cycle info
+                * Sparse backup cycle information
                 */
                 class SparsePeriodTime : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
-                     * @return WeekDays Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+                     * 获取By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
+                     * @return WeekDays By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
                      * 
                      */
                     std::vector<int64_t> GetWeekDays() const;
 
                     /**
-                     * 设置Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
-                     * @param _weekDays Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+                     * 设置By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
+                     * @param _weekDays By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
                      * 
                      */
                     void SetWeekDays(const std::vector<int64_t>& _weekDays);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取By month: Date list, 1-31 (for monthly cycle only, up to 7)
-                     * @return Days By month: Date list, 1-31 (for monthly cycle only, up to 7)
+                     * 获取Monthly: date list, 1-31 (only for monthly cycle, up to 7)
+                     * @return Days Monthly: date list, 1-31 (only for monthly cycle, up to 7)
                      * 
                      */
                     std::vector<int64_t> GetDays() const;
 
                     /**
-                     * 设置By month: Date list, 1-31 (for monthly cycle only, up to 7)
-                     * @param _days By month: Date list, 1-31 (for monthly cycle only, up to 7)
+                     * 设置Monthly: date list, 1-31 (only for monthly cycle, up to 7)
+                     * @param _days Monthly: date list, 1-31 (only for monthly cycle, up to 7)
                      * 
                      */
                     void SetDays(const std::vector<int64_t>& _days);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DaysHasBeenSet() const;
 
                     /**
-                     * 获取Yearly: Month-day composite column (Only for yearly cycle, up to 7)
-                     * @return MonthDays Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+                     * 获取Yearly: list of month-day combinations (only for yearly cycle, up to 7)
+                     * @return MonthDays Yearly: list of month-day combinations (only for yearly cycle, up to 7)
                      * 
                      */
                     std::vector<MonthDay> GetMonthDays() const;
 
                     /**
-                     * 设置Yearly: Month-day composite column (Only for yearly cycle, up to 7)
-                     * @param _monthDays Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+                     * 设置Yearly: list of month-day combinations (only for yearly cycle, up to 7)
+                     * @param _monthDays Yearly: list of month-day combinations (only for yearly cycle, up to 7)
                      * 
                      */
                     void SetMonthDays(const std::vector<MonthDay>& _monthDays);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+                     * By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
                      */
                     std::vector<int64_t> m_weekDays;
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * By month: Date list, 1-31 (for monthly cycle only, up to 7)
+                     * Monthly: date list, 1-31 (only for monthly cycle, up to 7)
                      */
                     std::vector<int64_t> m_days;
                     bool m_daysHasBeenSet;
 
                     /**
-                     * Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+                     * Yearly: list of month-day combinations (only for yearly cycle, up to 7)
                      */
                     std::vector<MonthDay> m_monthDays;
                     bool m_monthDaysHasBeenSet;

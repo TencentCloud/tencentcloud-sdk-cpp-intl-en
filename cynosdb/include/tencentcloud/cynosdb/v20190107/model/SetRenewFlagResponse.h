@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of successfully manipulated instances
-                     * @return Count Number of successfully manipulated instances
+                     * 获取Number of successfully operated instances
+                     * @return Count Number of successfully operated instances
                      * 
                      */
                     int64_t GetCount() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of successfully manipulated instances
+                     * Number of successfully operated instances
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

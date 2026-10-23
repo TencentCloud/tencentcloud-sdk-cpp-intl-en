@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DbHasBeenSet() const;
 
                     /**
-                     * 获取<p>Original SQL sample</p>
-                     * @return SQLSample <p>Original SQL sample</p>
+                     * 获取<p>Original SQL sample.</p>
+                     * @return SQLSample <p>Original SQL sample.</p>
                      * 
                      */
                     std::string GetSQLSample() const;
 
                     /**
-                     * 设置<p>Original SQL sample</p>
-                     * @param _sQLSample <p>Original SQL sample</p>
+                     * 设置<p>Original SQL sample.</p>
+                     * @param _sQLSample <p>Original SQL sample.</p>
                      * 
                      */
                     void SetSQLSample(const std::string& _sQLSample);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool TablePlanBeforeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Execution plan after optimization - List</p>
-                     * @return TablePlanAfter <p>Execution plan after optimization - List</p>
+                     * 获取<p>Execution plan after optimization - list</p>
+                     * @return TablePlanAfter <p>Execution plan after optimization - list</p>
                      * 
                      */
                     std::vector<ExplainRow> GetTablePlanAfter() const;
 
                     /**
-                     * 设置<p>Execution plan after optimization - List</p>
-                     * @param _tablePlanAfter <p>Execution plan after optimization - List</p>
+                     * 设置<p>Execution plan after optimization - list</p>
+                     * @param _tablePlanAfter <p>Execution plan after optimization - list</p>
                      * 
                      */
                     void SetTablePlanAfter(const std::vector<ExplainRow>& _tablePlanAfter);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool QueryTimeAfterHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of scanned rows before optimization</p>
-                     * @return SQLScanRowsBefore <p>Number of scanned rows before optimization</p>
+                     * 获取<p>Scanned rows before optimization</p>
+                     * @return SQLScanRowsBefore <p>Scanned rows before optimization</p>
                      * 
                      */
                     int64_t GetSQLScanRowsBefore() const;
 
                     /**
-                     * 设置<p>Number of scanned rows before optimization</p>
-                     * @param _sQLScanRowsBefore <p>Number of scanned rows before optimization</p>
+                     * 设置<p>Scanned rows before optimization</p>
+                     * @param _sQLScanRowsBefore <p>Scanned rows before optimization</p>
                      * 
                      */
                     void SetSQLScanRowsBefore(const int64_t& _sQLScanRowsBefore);
@@ -314,7 +314,7 @@ namespace TencentCloud
                     bool m_dbHasBeenSet;
 
                     /**
-                     * <p>Original SQL sample</p>
+                     * <p>Original SQL sample.</p>
                      */
                     std::string m_sQLSample;
                     bool m_sQLSampleHasBeenSet;
@@ -332,7 +332,7 @@ namespace TencentCloud
                     bool m_tablePlanBeforeHasBeenSet;
 
                     /**
-                     * <p>Execution plan after optimization - List</p>
+                     * <p>Execution plan after optimization - list</p>
                      */
                     std::vector<ExplainRow> m_tablePlanAfter;
                     bool m_tablePlanAfterHasBeenSet;
@@ -362,7 +362,7 @@ namespace TencentCloud
                     bool m_queryTimeAfterHasBeenSet;
 
                     /**
-                     * <p>Number of scanned rows before optimization</p>
+                     * <p>Scanned rows before optimization</p>
                      */
                     int64_t m_sQLScanRowsBefore;
                     bool m_sQLScanRowsBeforeHasBeenSet;

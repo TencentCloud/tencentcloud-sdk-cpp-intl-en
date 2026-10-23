@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log start time.
-                     * @return StartTime Log start time.
+                     * 获取Earliest log time
+                     * @return StartTime Earliest log time
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Log start time.
-                     * @param _startTime Log start time.
+                     * 设置Earliest log time
+                     * @param _startTime Earliest log time
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log end time.
-                     * @return EndTime Log end time.
+                     * 获取Latest log time
+                     * @return EndTime Latest log time
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Log end time.
-                     * @param _endTime Log end time.
+                     * 设置Latest log time
+                     * @param _endTime Latest log time
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The max number of returned results.
-                     * @return Limit The max number of returned results.
+                     * 获取Limit of Items
+                     * @return Limit Limit of Items
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The max number of returned results.
-                     * @param _limit The max number of returned results.
+                     * 设置Limit of Items
+                     * @param _limit Limit of Items
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LogLevelsHasBeenSet() const;
 
                     /**
-                     * 获取KeyWords.
-                     * @return KeyWords KeyWords.
+                     * 获取Keyword.
+                     * @return KeyWords Keyword.
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置KeyWords.
-                     * @param _keyWords KeyWords.
+                     * 设置Keyword.
+                     * @param _keyWords Keyword.
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool KeyWordsHasBeenSet() const;
 
                     /**
-                     * 获取The template type. Valid values: `csv`, `original`.
-                     * @return FileType The template type. Valid values: `csv`, `original`.
+                     * 获取File type. Available values: csv, original
+                     * @return FileType File type. Available values: csv, original
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置The template type. Valid values: `csv`, `original`.
-                     * @param _fileType The template type. Valid values: `csv`, `original`.
+                     * 设置File type. Available values: csv, original
+                     * @param _fileType File type. Available values: csv, original
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid value: `Timestamp`.
-                     * @return OrderBy Valid value: `Timestamp`.
+                     * 获取Available values: Timestamp
+                     * @return OrderBy Available values: Timestamp
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Valid value: `Timestamp`.
-                     * @param _orderBy Valid value: `Timestamp`.
+                     * 设置Available values: Timestamp
+                     * @param _orderBy Available values: Timestamp
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting type. valid values: ASC or DESC.
-                     * @return OrderByType Sorting type. valid values: ASC or DESC.
+                     * 获取Sorting type. ASC or DESC.
+                     * @return OrderByType Sorting type. ASC or DESC.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting type. valid values: ASC or DESC.
-                     * @param _orderByType Sorting type. valid values: ASC or DESC.
+                     * 设置Sorting type. ASC or DESC.
+                     * @param _orderByType Sorting type. ASC or DESC.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -261,19 +261,19 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Log start time.
+                     * Earliest log time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Log end time.
+                     * Latest log time
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The max number of returned results.
+                     * Limit of Items
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -291,25 +291,25 @@ namespace TencentCloud
                     bool m_logLevelsHasBeenSet;
 
                     /**
-                     * KeyWords.
+                     * Keyword.
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;
 
                     /**
-                     * The template type. Valid values: `csv`, `original`.
+                     * File type. Available values: csv, original
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Valid value: `Timestamp`.
+                     * Available values: Timestamp
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting type. valid values: ASC or DESC.
+                     * Sorting type. ASC or DESC.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

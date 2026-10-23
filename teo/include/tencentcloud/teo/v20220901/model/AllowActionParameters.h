@@ -35,7 +35,12 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional parameter for Web security Allow.
+                * Additional parameter when the safe execution action is Allow.
+
+This parameter is used to specify the extra handling action taken by the system when a security rule is hit and an Allow action is executed.
+Different handling actions are configured with different fixed parameter combinations. The system will determine the actually effective handling action type according to the configured parameter combination.
+During the same release execution, only one handling action can be configured and made effective. Parameter composites for multiple handling actions cannot appear simultaneously; otherwise, it is deemed an invalid configuration. If empty, the default release handling action is used.
+AllowActionParameters supports the following additional handling actions: <li>Default: When AllowActionParameters is empty, skip the remaining rules of the current security module immediately and continue matching subsequent security modules.</li><li>Delayed pass: Add response delay to the request and continue matching the remaining rules of the current module. Corresponding parameters: MinDelayTime, MaxDelayTime.</li>
                 */
                 class AllowActionParameters : public AbstractModel
                 {

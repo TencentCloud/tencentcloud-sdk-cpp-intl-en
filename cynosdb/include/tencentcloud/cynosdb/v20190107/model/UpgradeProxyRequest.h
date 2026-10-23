@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory
-                     * @return Mem Memory
+                     * 获取memory
+                     * @return Mem memory
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Memory
-                     * @param _mem Memory
+                     * 设置memory
+                     * @param _mem memory
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes in the proxy group
-                     * @return ProxyCount Number of nodes in the proxy group
+                     * 获取Number of database proxy group nodes
+                     * @return ProxyCount Number of database proxy group nodes
                      * 
                      */
                     int64_t GetProxyCount() const;
 
                     /**
-                     * 设置Number of nodes in the proxy group
-                     * @param _proxyCount Number of nodes in the proxy group
+                     * 设置Number of database proxy group nodes
+                     * @param _proxyCount Number of database proxy group nodes
                      * 
                      */
                     void SetProxyCount(const int64_t& _proxyCount);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool ProxyCountHasBeenSet() const;
 
                     /**
-                     * 获取ID of the database proxy group (disused)
-                     * @return ProxyGroupId ID of the database proxy group (disused)
+                     * 获取Database Proxy Group ID (abandoned)
+                     * @return ProxyGroupId Database Proxy Group ID (abandoned)
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置ID of the database proxy group (disused)
-                     * @param _proxyGroupId ID of the database proxy group (disused)
+                     * 设置Database Proxy Group ID (abandoned)
+                     * @param _proxyGroupId Database Proxy Group ID (abandoned)
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Load rebalance mode. Valid values: `auto`, `manual`
-                     * @return ReloadBalance Load rebalance mode. Valid values: `auto`, `manual`
+                     * 获取Load rebalance: auto (automatic), manual
+                     * @return ReloadBalance Load rebalance: auto (automatic), manual
                      * 
                      */
                     std::string GetReloadBalance() const;
 
                     /**
-                     * 设置Load rebalance mode. Valid values: `auto`, `manual`
-                     * @param _reloadBalance Load rebalance mode. Valid values: `auto`, `manual`
+                     * 设置Load rebalance: auto (automatic), manual
+                     * @param _reloadBalance Load rebalance: auto (automatic), manual
                      * 
                      */
                     void SetReloadBalance(const std::string& _reloadBalance);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ReloadBalanceHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
-                     * @return IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+                     * 获取Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+                     * @return IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
-                     * @param _isInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+                     * 设置Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+                     * @param _isInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool IsInMaintainPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Node information of the atabase proxy
-                     * @return ProxyZones Node information of the atabase proxy
+                     * 获取Database proxy node information
+                     * @return ProxyZones Database proxy node information
                      * 
                      */
                     std::vector<ProxyZone> GetProxyZones() const;
 
                     /**
-                     * 设置Node information of the atabase proxy
-                     * @param _proxyZones Node information of the atabase proxy
+                     * 设置Database proxy node information
+                     * @param _proxyZones Database proxy node information
                      * 
                      */
                     void SetProxyZones(const std::vector<ProxyZone>& _proxyZones);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool ProxyZonesHasBeenSet() const;
 
                     /**
-                     * 获取whether rolling upgrade
-                     * @return IsRollUpgrade whether rolling upgrade
+                     * 获取Whether to perform a rolling upgrade
+                     * @return IsRollUpgrade Whether to perform a rolling upgrade
                      * 
                      */
                     std::string GetIsRollUpgrade() const;
 
                     /**
-                     * 设置whether rolling upgrade
-                     * @param _isRollUpgrade whether rolling upgrade
+                     * 设置Whether to perform a rolling upgrade
+                     * @param _isRollUpgrade Whether to perform a rolling upgrade
                      * 
                      */
                     void SetIsRollUpgrade(const std::string& _isRollUpgrade);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool IsRollUpgradeHasBeenSet() const;
 
                     /**
-                     * 获取Rolling upgrade waiting time, unit: second
-                     * @return RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+                     * 获取In-place rolling upgrade waiting time. Unit: seconds
+                     * @return RollUpgradeWaitingTime In-place rolling upgrade waiting time. Unit: seconds
                      * 
                      */
                     int64_t GetRollUpgradeWaitingTime() const;
 
                     /**
-                     * 设置Rolling upgrade waiting time, unit: second
-                     * @param _rollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+                     * 设置In-place rolling upgrade waiting time. Unit: seconds
+                     * @param _rollUpgradeWaitingTime In-place rolling upgrade waiting time. Unit: seconds
                      * 
                      */
                     void SetRollUpgradeWaitingTime(const int64_t& _rollUpgradeWaitingTime);
@@ -268,49 +268,49 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory
+                     * memory
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Number of nodes in the proxy group
+                     * Number of database proxy group nodes
                      */
                     int64_t m_proxyCount;
                     bool m_proxyCountHasBeenSet;
 
                     /**
-                     * ID of the database proxy group (disused)
+                     * Database Proxy Group ID (abandoned)
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Load rebalance mode. Valid values: `auto`, `manual`
+                     * Load rebalance: auto (automatic), manual
                      */
                     std::string m_reloadBalance;
                     bool m_reloadBalanceHasBeenSet;
 
                     /**
-                     * Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+                     * Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;
 
                     /**
-                     * Node information of the atabase proxy
+                     * Database proxy node information
                      */
                     std::vector<ProxyZone> m_proxyZones;
                     bool m_proxyZonesHasBeenSet;
 
                     /**
-                     * whether rolling upgrade
+                     * Whether to perform a rolling upgrade
                      */
                     std::string m_isRollUpgrade;
                     bool m_isRollUpgradeHasBeenSet;
 
                     /**
-                     * Rolling upgrade waiting time, unit: second
+                     * In-place rolling upgrade waiting time. Unit: seconds
                      */
                     int64_t m_rollUpgradeWaitingTime;
                     bool m_rollUpgradeWaitingTimeHasBeenSet;

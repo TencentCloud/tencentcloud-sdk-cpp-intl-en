@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Retrieval criteria.
-                     * @return Filters Retrieval criteria.
+                     * 获取Retrieval criteria
+                     * @return Filters Retrieval criteria
                      * 
                      */
                     std::vector<QuerySimpleFilter> GetFilters() const;
 
                     /**
-                     * 设置Retrieval criteria.
-                     * @param _filters Retrieval criteria.
+                     * 设置Retrieval criteria
+                     * @param _filters Retrieval criteria
                      * 
                      */
                     void SetFilters(const std::vector<QuerySimpleFilter>& _filters);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Retrieval criteria.
+                     * Retrieval criteria
                      */
                     std::vector<QuerySimpleFilter> m_filters;
                     bool m_filtersHasBeenSet;

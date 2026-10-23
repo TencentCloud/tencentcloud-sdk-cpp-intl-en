@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Return order ID
-                     * @return DealNames Return order ID
+                     * 获取Return the order number.
+                     * @return DealNames Return the order number.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Return order ID
+                     * Return the order number.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

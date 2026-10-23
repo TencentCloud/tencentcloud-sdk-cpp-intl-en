@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Backup file list that will be deleted
+                * List of backup files to be deleted
                 */
                 class WillDeleteItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup file name
-                     * @return BackupName Backup file name
+                     * 获取Backup file name.
+                     * @return BackupName Backup file name.
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Backup file name
-                     * @param _backupName Backup file name
+                     * 设置Backup file name.
+                     * @param _backupName Backup file name.
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup file name
+                     * Backup file name.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;

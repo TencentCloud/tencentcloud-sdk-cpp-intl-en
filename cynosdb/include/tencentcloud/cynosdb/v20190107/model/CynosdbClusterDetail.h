@@ -42,7 +42,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster details.
+                * Cluster detail information
                 */
                 class CynosdbClusterDetail : public AbstractModel
                 {
@@ -96,15 +96,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region</p>
-                     * @return Region <p>Region</p>
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置<p>Region</p>
-                     * @param _region <p>Region</p>
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -159,15 +159,15 @@ namespace TencentCloud
                     bool PhysicalZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
-                     * @return Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+                     * 获取<p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+                     * @return Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
-                     * @param _status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+                     * 设置<p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+                     * @param _status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status description</p>
-                     * @return StatusDesc <p>Status description</p>
+                     * 获取<p>Status description.</p>
+                     * @return StatusDesc <p>Status description.</p>
                      * 
                      */
                     std::string GetStatusDesc() const;
 
                     /**
-                     * 设置<p>Status description</p>
-                     * @param _statusDesc <p>Status description</p>
+                     * 设置<p>Status description.</p>
+                     * @param _statusDesc <p>Status description.</p>
                      * 
                      */
                     void SetStatusDesc(const std::string& _statusDesc);
@@ -201,15 +201,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
-                     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+                     * 获取<p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+                     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置<p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
-                     * @param _serverlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+                     * 设置<p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+                     * @param _serverlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -243,15 +243,15 @@ namespace TencentCloud
                     bool StorageIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage size in GB</p>
-                     * @return Storage <p>Storage size in GB</p>
+                     * 获取<p>Storage size, in GB.</p>
+                     * @return Storage <p>Storage size, in GB.</p>
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置<p>Storage size in GB</p>
-                     * @param _storage <p>Storage size in GB</p>
+                     * 设置<p>Storage size, in GB.</p>
+                     * @param _storage <p>Storage size, in GB.</p>
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -285,15 +285,15 @@ namespace TencentCloud
                     bool MaxStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum storage specification, in GB</p>
-                     * @return MinStorageSize <p>Minimum storage specification, in GB</p>
+                     * 获取<p>Minimum storage specification, in GB.</p>
+                     * @return MinStorageSize <p>Minimum storage specification, in GB.</p>
                      * 
                      */
                     int64_t GetMinStorageSize() const;
 
                     /**
-                     * 设置<p>Minimum storage specification, in GB</p>
-                     * @param _minStorageSize <p>Minimum storage specification, in GB</p>
+                     * 设置<p>Minimum storage specification, in GB.</p>
+                     * @param _minStorageSize <p>Minimum storage specification, in GB.</p>
                      * 
                      */
                     void SetMinStorageSize(const int64_t& _minStorageSize);
@@ -306,15 +306,15 @@ namespace TencentCloud
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
-                     * @return StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+                     * 获取<p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
+                     * @return StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置<p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
-                     * @param _storagePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+                     * 设置<p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
+                     * @param _storagePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -327,15 +327,15 @@ namespace TencentCloud
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>VPC name</p>
-                     * @return VpcName <p>VPC name</p>
+                     * 获取<p>VPC name.</p>
+                     * @return VpcName <p>VPC name.</p>
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置<p>VPC name</p>
-                     * @param _vpcName <p>VPC name</p>
+                     * 设置<p>VPC name.</p>
+                     * @param _vpcName <p>VPC name.</p>
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -411,15 +411,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Character set.</p>
-                     * @return Charset <p>Character set.</p>
+                     * 获取<p>Character set</p>
+                     * @return Charset <p>Character set</p>
                      * 
                      */
                     std::string GetCharset() const;
 
                     /**
-                     * 设置<p>Character set.</p>
-                     * @param _charset <p>Character set.</p>
+                     * 设置<p>Character set</p>
+                     * @param _charset <p>Character set</p>
                      * 
                      */
                     void SetCharset(const std::string& _charset);
@@ -495,15 +495,15 @@ namespace TencentCloud
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database version</p>
-                     * @return DbVersion <p>Database version</p>
+                     * 获取<p>Database version.</p>
+                     * @return DbVersion <p>Database version.</p>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置<p>Database version</p>
-                     * @param _dbVersion <p>Database version</p>
+                     * 设置<p>Database version.</p>
+                     * @param _dbVersion <p>Database version.</p>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -516,15 +516,15 @@ namespace TencentCloud
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage space limit</p>
-                     * @return StorageLimit <p>Storage space limit</p>
+                     * 获取<p>Maximum storage space</p>
+                     * @return StorageLimit <p>Maximum storage space</p>
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置<p>Storage space limit</p>
-                     * @param _storageLimit <p>Storage space limit</p>
+                     * 设置<p>Maximum storage space</p>
+                     * @param _storageLimit <p>Maximum storage space</p>
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -579,15 +579,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取<p>vport port</p>
-                     * @return Vport <p>vport port</p>
+                     * 获取<p>vport</p>
+                     * @return Vport <p>vport</p>
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置<p>vport port</p>
-                     * @param _vport <p>vport port</p>
+                     * 设置<p>vport</p>
+                     * @param _vport <p>vport</p>
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -642,15 +642,15 @@ namespace TencentCloud
                     bool AbilityHasBeenSet() const;
 
                     /**
-                     * 获取<p>cynos version</p>
-                     * @return CynosVersion <p>cynos version</p>
+                     * 获取<p>cynos version.</p>
+                     * @return CynosVersion <p>cynos version.</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置<p>cynos version</p>
-                     * @param _cynosVersion <p>cynos version</p>
+                     * 设置<p>cynos version.</p>
+                     * @param _cynosVersion <p>cynos version.</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -705,15 +705,15 @@ namespace TencentCloud
                     bool HasSlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Freeze or not</p>
-                     * @return IsFreeze <p>Freeze or not</p>
+                     * 获取<p>Whether to freeze</p>
+                     * @return IsFreeze <p>Whether to freeze</p>
                      * 
                      */
                     std::string GetIsFreeze() const;
 
                     /**
-                     * 设置<p>Freeze or not</p>
-                     * @param _isFreeze <p>Freeze or not</p>
+                     * 设置<p>Whether to freeze</p>
+                     * @param _isFreeze <p>Whether to freeze</p>
                      * 
                      */
                     void SetIsFreeze(const std::string& _isFreeze);
@@ -768,15 +768,15 @@ namespace TencentCloud
                     bool MasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>From the AZ list</p>
-                     * @return SlaveZones <p>From the AZ list</p>
+                     * 获取<p>From the availability zone list</p>
+                     * @return SlaveZones <p>From the availability zone list</p>
                      * 
                      */
                     std::vector<std::string> GetSlaveZones() const;
 
                     /**
-                     * 设置<p>From the AZ list</p>
-                     * @param _slaveZones <p>From the AZ list</p>
+                     * 设置<p>From the availability zone list</p>
+                     * @param _slaveZones <p>From the availability zone list</p>
                      * 
                      */
                     void SetSlaveZones(const std::vector<std::string>& _slaveZones);
@@ -831,15 +831,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Expiry time.</p>
-                     * @return PeriodEndTime <p>Expiry time.</p>
+                     * 获取<p>Expiration time.</p>
+                     * @return PeriodEndTime <p>Expiration time.</p>
                      * 
                      */
                     std::string GetPeriodEndTime() const;
 
                     /**
-                     * 设置<p>Expiry time.</p>
-                     * @param _periodEndTime <p>Expiry time.</p>
+                     * 设置<p>Expiration time.</p>
+                     * @param _periodEndTime <p>Expiration time.</p>
                      * 
                      */
                     void SetPeriodEndTime(const std::string& _periodEndTime);
@@ -873,15 +873,15 @@ namespace TencentCloud
                     bool ProjectIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>tag Array information for instance binding</p>
-                     * @return ResourceTags <p>tag Array information for instance binding</p>
+                     * 获取<p>tag Array information bound to the instance</p>
+                     * @return ResourceTags <p>tag Array information bound to the instance</p>
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置<p>tag Array information for instance binding</p>
-                     * @param _resourceTags <p>tag Array information for instance binding</p>
+                     * 设置<p>tag Array information bound to the instance</p>
+                     * @param _resourceTags <p>tag Array information bound to the instance</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -894,15 +894,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Proxy status</p>
-                     * @return ProxyStatus <p>Proxy status</p>
+                     * 获取<p>Proxy status.</p>
+                     * @return ProxyStatus <p>Proxy status.</p>
                      * 
                      */
                     std::string GetProxyStatus() const;
 
                     /**
-                     * 设置<p>Proxy status</p>
-                     * @param _proxyStatus <p>Proxy status</p>
+                     * 设置<p>Proxy status.</p>
+                     * @param _proxyStatus <p>Proxy status.</p>
                      * 
                      */
                     void SetProxyStatus(const std::string& _proxyStatus);
@@ -915,15 +915,15 @@ namespace TencentCloud
                     bool ProxyStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>binlog switch, available values: ON, OFF</p>
-                     * @return LogBin <p>binlog switch, available values: ON, OFF</p>
+                     * 获取<p>binlog switch. Available values: ON, OFF</p>
+                     * @return LogBin <p>binlog switch. Available values: ON, OFF</p>
                      * 
                      */
                     std::string GetLogBin() const;
 
                     /**
-                     * 设置<p>binlog switch, available values: ON, OFF</p>
-                     * @param _logBin <p>binlog switch, available values: ON, OFF</p>
+                     * 设置<p>binlog switch. Available values: ON, OFF</p>
+                     * @param _logBin <p>binlog switch. Available values: ON, OFF</p>
                      * 
                      */
                     void SetLogBin(const std::string& _logBin);
@@ -936,15 +936,15 @@ namespace TencentCloud
                     bool LogBinHasBeenSet() const;
 
                     /**
-                     * 获取<p>Skip transaction or not</p>
-                     * @return IsSkipTrade <p>Skip transaction or not</p>
+                     * 获取<p>Whether to skip transaction</p>
+                     * @return IsSkipTrade <p>Whether to skip transaction</p>
                      * 
                      */
                     std::string GetIsSkipTrade() const;
 
                     /**
-                     * 设置<p>Skip transaction or not</p>
-                     * @param _isSkipTrade <p>Skip transaction or not</p>
+                     * 设置<p>Whether to skip transaction</p>
+                     * @param _isSkipTrade <p>Whether to skip transaction</p>
                      * 
                      */
                     void SetIsSkipTrade(const std::string& _isSkipTrade);
@@ -957,15 +957,15 @@ namespace TencentCloud
                     bool IsSkipTradeHasBeenSet() const;
 
                     /**
-                     * 获取<p>PITR type, available values: normal, redo_pitr</p>
-                     * @return PitrType <p>PITR type, available values: normal, redo_pitr</p>
+                     * 获取<p>PITR type. Available values: normal, redo_pitr</p>
+                     * @return PitrType <p>PITR type. Available values: normal, redo_pitr</p>
                      * 
                      */
                     std::string GetPitrType() const;
 
                     /**
-                     * 设置<p>PITR type, available values: normal, redo_pitr</p>
-                     * @param _pitrType <p>PITR type, available values: normal, redo_pitr</p>
+                     * 设置<p>PITR type. Available values: normal, redo_pitr</p>
+                     * @param _pitrType <p>PITR type. Available values: normal, redo_pitr</p>
                      * 
                      */
                     void SetPitrType(const std::string& _pitrType);
@@ -978,15 +978,15 @@ namespace TencentCloud
                     bool PitrTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to toggle on password complexity</p>
-                     * @return IsOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
+                     * 获取<p>Whether to enable password complexity</p>
+                     * @return IsOpenPasswordComplexity <p>Whether to enable password complexity</p>
                      * 
                      */
                     std::string GetIsOpenPasswordComplexity() const;
 
                     /**
-                     * 设置<p>Whether to toggle on password complexity</p>
-                     * @param _isOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
+                     * 设置<p>Whether to enable password complexity</p>
+                     * @param _isOpenPasswordComplexity <p>Whether to enable password complexity</p>
                      * 
                      */
                     void SetIsOpenPasswordComplexity(const std::string& _isOpenPasswordComplexity);
@@ -1020,15 +1020,15 @@ namespace TencentCloud
                     bool NetworkStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Package info of the bound resource for the cluster</p>
-                     * @return ResourcePackages <p>Package info of the bound resource for the cluster</p>
+                     * 获取<p>Resource package information bound to the cluster</p>
+                     * @return ResourcePackages <p>Resource package information bound to the cluster</p>
                      * 
                      */
                     std::vector<ResourcePackage> GetResourcePackages() const;
 
                     /**
-                     * 设置<p>Package info of the bound resource for the cluster</p>
-                     * @param _resourcePackages <p>Package info of the bound resource for the cluster</p>
+                     * 设置<p>Resource package information bound to the cluster</p>
+                     * @param _resourcePackages <p>Resource package information bound to the cluster</p>
                      * 
                      */
                     void SetResourcePackages(const std::vector<ResourcePackage>& _resourcePackages);
@@ -1041,15 +1041,15 @@ namespace TencentCloud
                     bool ResourcePackagesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
-                     * @return RenewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+                     * 获取<p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
+                     * @return RenewFlag <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置<p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
-                     * @param _renewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+                     * 设置<p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
+                     * @param _renewFlag <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -1083,15 +1083,15 @@ namespace TencentCloud
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Secondary availability zone property</p>
-                     * @return SlaveZoneAttr <p>Secondary availability zone property</p>
+                     * 获取<p>Secondary AZ property</p>
+                     * @return SlaveZoneAttr <p>Secondary AZ property</p>
                      * 
                      */
                     std::vector<SlaveZoneAttrItem> GetSlaveZoneAttr() const;
 
                     /**
-                     * 设置<p>Secondary availability zone property</p>
-                     * @param _slaveZoneAttr <p>Secondary availability zone property</p>
+                     * 设置<p>Secondary AZ property</p>
+                     * @param _slaveZoneAttr <p>Secondary AZ property</p>
                      * 
                      */
                     void SetSlaveZoneAttr(const std::vector<SlaveZoneAttrItem>& _slaveZoneAttr);
@@ -1104,15 +1104,15 @@ namespace TencentCloud
                     bool SlaveZoneAttrHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version tag</p>
-                     * @return CynosVersionTag <p>Version tag</p>
+                     * 获取<p>Version tag.</p>
+                     * @return CynosVersionTag <p>Version tag.</p>
                      * 
                      */
                     std::string GetCynosVersionTag() const;
 
                     /**
-                     * 设置<p>Version tag</p>
-                     * @param _cynosVersionTag <p>Version tag</p>
+                     * 设置<p>Version tag.</p>
+                     * @param _cynosVersionTag <p>Version tag.</p>
                      * 
                      */
                     void SetCynosVersionTag(const std::string& _cynosVersionTag);
@@ -1125,15 +1125,15 @@ namespace TencentCloud
                     bool CynosVersionTagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Unique ID of the global database network</p>
-                     * @return GdnId <p>Unique ID of the global database network</p>
+                     * 获取<p>Global database network unique ID</p>
+                     * @return GdnId <p>Global database network unique ID</p>
                      * 
                      */
                     std::string GetGdnId() const;
 
                     /**
-                     * 设置<p>Unique ID of the global database network</p>
-                     * @param _gdnId <p>Unique ID of the global database network</p>
+                     * 设置<p>Global database network unique ID</p>
+                     * @param _gdnId <p>Global database network unique ID</p>
                      * 
                      */
                     void SetGdnId(const std::string& _gdnId);
@@ -1146,15 +1146,15 @@ namespace TencentCloud
                     bool GdnIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
-                     * @return GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+                     * 获取<p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
+                     * @return GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
                      * 
                      */
                     std::string GetGdnRole() const;
 
                     /**
-                     * 设置<p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
-                     * @param _gdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+                     * 设置<p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
+                     * @param _gdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
                      * 
                      */
                     void SetGdnRole(const std::string& _gdnRole);
@@ -1167,15 +1167,15 @@ namespace TencentCloud
                     bool GdnRoleHasBeenSet() const;
 
                     /**
-                     * 获取<p>Second-level storage usage in GB</p>
-                     * @return UsedArchiveStorage <p>Second-level storage usage in GB</p>
+                     * 获取<p>Level-2 storage usage, in GB.</p>
+                     * @return UsedArchiveStorage <p>Level-2 storage usage, in GB.</p>
                      * 
                      */
                     int64_t GetUsedArchiveStorage() const;
 
                     /**
-                     * 设置<p>Second-level storage usage in GB</p>
-                     * @param _usedArchiveStorage <p>Second-level storage usage in GB</p>
+                     * 设置<p>Level-2 storage usage, in GB.</p>
+                     * @param _usedArchiveStorage <p>Level-2 storage usage, in GB.</p>
                      * 
                      */
                     void SetUsedArchiveStorage(const int64_t& _usedArchiveStorage);
@@ -1188,15 +1188,15 @@ namespace TencentCloud
                     bool UsedArchiveStorageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
-                     * @return ArchiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+                     * 获取<p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+                     * @return ArchiveStatus <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
                      * 
                      */
                     std::string GetArchiveStatus() const;
 
                     /**
-                     * 设置<p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
-                     * @param _archiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+                     * 设置<p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+                     * @param _archiveStatus <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
                      * 
                      */
                     void SetArchiveStatus(const std::string& _archiveStatus);
@@ -1230,15 +1230,15 @@ namespace TencentCloud
                     bool ArchiveProgressHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster level. For example P0, P1</p>
-                     * @return ClusterLevel <p>Cluster level. For example P0, P1</p>
+                     * 获取<p>Cluster level. For example, P0, P1</p>
+                     * @return ClusterLevel <p>Cluster level. For example, P0, P1</p>
                      * 
                      */
                     std::string GetClusterLevel() const;
 
                     /**
-                     * 设置<p>Cluster level. For example P0, P1</p>
-                     * @param _clusterLevel <p>Cluster level. For example P0, P1</p>
+                     * 设置<p>Cluster level. For example, P0, P1</p>
+                     * @param _clusterLevel <p>Cluster level. For example, P0, P1</p>
                      * 
                      */
                     void SetClusterLevel(const std::string& _clusterLevel);
@@ -1251,15 +1251,15 @@ namespace TencentCloud
                     bool ClusterLevelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable transparent data encryption</p>
-                     * @return IsOpenTDE <p>Whether to enable transparent data encryption</p>
+                     * 获取<p>Whether to enable transparent encryption</p>
+                     * @return IsOpenTDE <p>Whether to enable transparent encryption</p>
                      * 
                      */
                     bool GetIsOpenTDE() const;
 
                     /**
-                     * 设置<p>Whether to enable transparent data encryption</p>
-                     * @param _isOpenTDE <p>Whether to enable transparent data encryption</p>
+                     * 设置<p>Whether to enable transparent encryption</p>
+                     * @param _isOpenTDE <p>Whether to enable transparent encryption</p>
                      * 
                      */
                     void SetIsOpenTDE(const bool& _isOpenTDE);
@@ -1349,7 +1349,7 @@ namespace TencentCloud
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * <p>Region</p>
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
@@ -1367,19 +1367,19 @@ namespace TencentCloud
                     bool m_physicalZoneHasBeenSet;
 
                     /**
-                     * <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+                     * <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Status description</p>
+                     * <p>Status description.</p>
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+                     * <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
@@ -1391,7 +1391,7 @@ namespace TencentCloud
                     bool m_storageIdHasBeenSet;
 
                     /**
-                     * <p>Storage size in GB</p>
+                     * <p>Storage size, in GB.</p>
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -1403,19 +1403,19 @@ namespace TencentCloud
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
-                     * <p>Minimum storage specification, in GB</p>
+                     * <p>Minimum storage specification, in GB.</p>
                      */
                     int64_t m_minStorageSize;
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
-                     * <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+                     * <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * <p>VPC name</p>
+                     * <p>VPC name.</p>
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
@@ -1439,7 +1439,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * <p>Character set.</p>
+                     * <p>Character set</p>
                      */
                     std::string m_charset;
                     bool m_charsetHasBeenSet;
@@ -1463,13 +1463,13 @@ namespace TencentCloud
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * <p>Database version</p>
+                     * <p>Database version.</p>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * <p>Storage space limit</p>
+                     * <p>Maximum storage space</p>
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
@@ -1487,7 +1487,7 @@ namespace TencentCloud
                     bool m_vipHasBeenSet;
 
                     /**
-                     * <p>vport port</p>
+                     * <p>vport</p>
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
@@ -1505,7 +1505,7 @@ namespace TencentCloud
                     bool m_abilityHasBeenSet;
 
                     /**
-                     * <p>cynos version</p>
+                     * <p>cynos version.</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
@@ -1523,7 +1523,7 @@ namespace TencentCloud
                     bool m_hasSlaveZoneHasBeenSet;
 
                     /**
-                     * <p>Freeze or not</p>
+                     * <p>Whether to freeze</p>
                      */
                     std::string m_isFreeze;
                     bool m_isFreezeHasBeenSet;
@@ -1541,7 +1541,7 @@ namespace TencentCloud
                     bool m_masterZoneHasBeenSet;
 
                     /**
-                     * <p>From the AZ list</p>
+                     * <p>From the availability zone list</p>
                      */
                     std::vector<std::string> m_slaveZones;
                     bool m_slaveZonesHasBeenSet;
@@ -1559,7 +1559,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * <p>Expiry time.</p>
+                     * <p>Expiration time.</p>
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
@@ -1571,37 +1571,37 @@ namespace TencentCloud
                     bool m_projectIDHasBeenSet;
 
                     /**
-                     * <p>tag Array information for instance binding</p>
+                     * <p>tag Array information bound to the instance</p>
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * <p>Proxy status</p>
+                     * <p>Proxy status.</p>
                      */
                     std::string m_proxyStatus;
                     bool m_proxyStatusHasBeenSet;
 
                     /**
-                     * <p>binlog switch, available values: ON, OFF</p>
+                     * <p>binlog switch. Available values: ON, OFF</p>
                      */
                     std::string m_logBin;
                     bool m_logBinHasBeenSet;
 
                     /**
-                     * <p>Skip transaction or not</p>
+                     * <p>Whether to skip transaction</p>
                      */
                     std::string m_isSkipTrade;
                     bool m_isSkipTradeHasBeenSet;
 
                     /**
-                     * <p>PITR type, available values: normal, redo_pitr</p>
+                     * <p>PITR type. Available values: normal, redo_pitr</p>
                      */
                     std::string m_pitrType;
                     bool m_pitrTypeHasBeenSet;
 
                     /**
-                     * <p>Whether to toggle on password complexity</p>
+                     * <p>Whether to enable password complexity</p>
                      */
                     std::string m_isOpenPasswordComplexity;
                     bool m_isOpenPasswordComplexityHasBeenSet;
@@ -1613,13 +1613,13 @@ namespace TencentCloud
                     bool m_networkStatusHasBeenSet;
 
                     /**
-                     * <p>Package info of the bound resource for the cluster</p>
+                     * <p>Resource package information bound to the cluster</p>
                      */
                     std::vector<ResourcePackage> m_resourcePackages;
                     bool m_resourcePackagesHasBeenSet;
 
                     /**
-                     * <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+                     * <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
@@ -1631,37 +1631,37 @@ namespace TencentCloud
                     bool m_networkTypeHasBeenSet;
 
                     /**
-                     * <p>Secondary availability zone property</p>
+                     * <p>Secondary AZ property</p>
                      */
                     std::vector<SlaveZoneAttrItem> m_slaveZoneAttr;
                     bool m_slaveZoneAttrHasBeenSet;
 
                     /**
-                     * <p>Version tag</p>
+                     * <p>Version tag.</p>
                      */
                     std::string m_cynosVersionTag;
                     bool m_cynosVersionTagHasBeenSet;
 
                     /**
-                     * <p>Unique ID of the global database network</p>
+                     * <p>Global database network unique ID</p>
                      */
                     std::string m_gdnId;
                     bool m_gdnIdHasBeenSet;
 
                     /**
-                     * <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+                     * <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
                      */
                     std::string m_gdnRole;
                     bool m_gdnRoleHasBeenSet;
 
                     /**
-                     * <p>Second-level storage usage in GB</p>
+                     * <p>Level-2 storage usage, in GB.</p>
                      */
                     int64_t m_usedArchiveStorage;
                     bool m_usedArchiveStorageHasBeenSet;
 
                     /**
-                     * <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+                     * <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
                      */
                     std::string m_archiveStatus;
                     bool m_archiveStatusHasBeenSet;
@@ -1673,13 +1673,13 @@ namespace TencentCloud
                     bool m_archiveProgressHasBeenSet;
 
                     /**
-                     * <p>Cluster level. For example P0, P1</p>
+                     * <p>Cluster level. For example, P0, P1</p>
                      */
                     std::string m_clusterLevel;
                     bool m_clusterLevelHasBeenSet;
 
                     /**
-                     * <p>Whether to enable transparent data encryption</p>
+                     * <p>Whether to enable transparent encryption</p>
                      */
                     bool m_isOpenTDE;
                     bool m_isOpenTDEHasBeenSet;

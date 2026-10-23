@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Automatically copy the safe configuration list
-                     * @return AutoCopyVaults Automatically copy the safe configuration list
+                     * 获取Automatically copy the configuration list of the safe
+                     * @return AutoCopyVaults Automatically copy the configuration list of the safe
                      * 
                      */
                     std::vector<CreateBackupVaultItem> GetAutoCopyVaults() const;
 
                     /**
-                     * 设置Automatically copy the safe configuration list
-                     * @param _autoCopyVaults Automatically copy the safe configuration list
+                     * 设置Automatically copy the configuration list of the safe
+                     * @param _autoCopyVaults Automatically copy the configuration list of the safe
                      * 
                      */
                     void SetAutoCopyVaults(const std::vector<CreateBackupVaultItem>& _autoCopyVaults);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Automatically copy the safe configuration list
+                     * Automatically copy the configuration list of the safe
                      */
                     std::vector<CreateBackupVaultItem> m_autoCopyVaults;
                     bool m_autoCopyVaultsHasBeenSet;

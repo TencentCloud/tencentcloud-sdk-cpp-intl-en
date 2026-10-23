@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modules supported by the system
+                * Supported modules
                 */
                 class Module : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether it is supported. Valid values: `yes`, `no`.
-                     * @return IsDisable Whether it is supported. Valid values: `yes`, `no`.
+                     * 获取Whether it is supported. Available values: yes, no
+                     * @return IsDisable Whether it is supported. Available values: yes, no
                      * 
                      */
                     std::string GetIsDisable() const;
 
                     /**
-                     * 设置Whether it is supported. Valid values: `yes`, `no`.
-                     * @param _isDisable Whether it is supported. Valid values: `yes`, `no`.
+                     * 设置Whether it is supported. Available values: yes, no
+                     * @param _isDisable Whether it is supported. Available values: yes, no
                      * 
                      */
                     void SetIsDisable(const std::string& _isDisable);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IsDisableHasBeenSet() const;
 
                     /**
-                     * 获取Module name
-                     * @return ModuleName Module name
+                     * 获取Module Name
+                     * @return ModuleName Module Name
                      * 
                      */
                     std::string GetModuleName() const;
 
                     /**
-                     * 设置Module name
-                     * @param _moduleName Module name
+                     * 设置Module Name
+                     * @param _moduleName Module Name
                      * 
                      */
                     void SetModuleName(const std::string& _moduleName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether it is supported. Valid values: `yes`, `no`.
+                     * Whether it is supported. Available values: yes, no
                      */
                     std::string m_isDisable;
                     bool m_isDisableHasBeenSet;
 
                     /**
-                     * Module name
+                     * Module Name
                      */
                     std::string m_moduleName;
                     bool m_moduleNameHasBeenSet;

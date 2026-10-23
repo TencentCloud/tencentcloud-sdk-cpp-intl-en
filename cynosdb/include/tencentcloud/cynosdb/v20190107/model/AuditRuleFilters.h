@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filter of rule audit
+                * Filter criteria for rule audit
                 */
                 class AuditRuleFilters : public AbstractModel
                 {

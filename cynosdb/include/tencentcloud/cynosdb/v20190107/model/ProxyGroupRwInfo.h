@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Read/write separation information of the database proxy group
+                * Read-write separation info of the Database Proxy Group
                 */
                 class ProxyGroupRwInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
-                     * @return ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+                     * 获取<p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
+                     * @return ConsistencyType <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
                      * 
                      */
                     std::string GetConsistencyType() const;
 
                     /**
-                     * 设置<p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
-                     * @param _consistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+                     * 设置<p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
+                     * @param _consistencyType <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
                      * 
                      */
                     void SetConsistencyType(const std::string& _consistencyType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ConsistencyTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取<p>Weight mode system-system-assigned, custom-custom</p>
-                     * @return WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
+                     * 获取<p>Weight mode: system - system-assigned, custom - custom</p>
+                     * @return WeightMode <p>Weight mode: system - system-assigned, custom - custom</p>
                      * 
                      */
                     std::string GetWeightMode() const;
 
                     /**
-                     * 设置<p>Weight mode system-system-assigned, custom-custom</p>
-                     * @param _weightMode <p>Weight mode system-system-assigned, custom-custom</p>
+                     * 设置<p>Weight mode: system - system-assigned, custom - custom</p>
+                     * @param _weightMode <p>Weight mode: system - system-assigned, custom - custom</p>
                      * 
                      */
                     void SetWeightMode(const std::string& _weightMode);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取<p>Automatically add read-only instance, yes-yes, no-no</p>
-                     * @return AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
+                     * 获取<p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
+                     * @return AutoAddRo <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
                      * 
                      */
                     std::string GetAutoAddRo() const;
 
                     /**
-                     * 设置<p>Automatically add read-only instance, yes-yes, no-no</p>
-                     * @param _autoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
+                     * 设置<p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
+                     * @param _autoAddRo <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
                      * 
                      */
                     void SetAutoAddRo(const std::string& _autoAddRo);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool InstanceWeightsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable the read-write node, yes - enable, no - disable</p>
-                     * @return OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+                     * 获取<p>Whether to enable read-write node. yes: enable, no: disable</p>
+                     * @return OpenRw <p>Whether to enable read-write node. yes: enable, no: disable</p>
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
-                     * 设置<p>Whether to enable the read-write node, yes - enable, no - disable</p>
-                     * @param _openRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+                     * 设置<p>Whether to enable read-write node. yes: enable, no: disable</p>
+                     * @param _openRw <p>Whether to enable read-write node. yes: enable, no: disable</p>
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool OpenRwHasBeenSet() const;
 
                     /**
-                     * 获取<p>Read-write attribute, value range: READWRITE, READONLY</p>
-                     * @return RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
+                     * 获取<p>Read-write attribute. Available values: READWRITE, READONLY</p>
+                     * @return RwType <p>Read-write attribute. Available values: READWRITE, READONLY</p>
                      * 
                      */
                     std::string GetRwType() const;
 
                     /**
-                     * 设置<p>Read-write attribute, value range: READWRITE, READONLY</p>
-                     * @param _rwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
+                     * 设置<p>Read-write attribute. Available values: READWRITE, READONLY</p>
+                     * @param _rwType <p>Read-write attribute. Available values: READWRITE, READONLY</p>
                      * 
                      */
                     void SetRwType(const std::string& _rwType);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool TransSplitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Connection mode, available values: balance, nearby</p>
-                     * @return AccessMode <p>Connection mode, available values: balance, nearby</p>
+                     * 获取<p>Connection mode. Available values: balance, nearby</p>
+                     * @return AccessMode <p>Connection mode. Available values: balance, nearby</p>
                      * 
                      */
                     std::string GetAccessMode() const;
 
                     /**
-                     * 设置<p>Connection mode, available values: balance, nearby</p>
-                     * @param _accessMode <p>Connection mode, available values: balance, nearby</p>
+                     * 设置<p>Connection mode. Available values: balance, nearby</p>
+                     * @param _accessMode <p>Connection mode. Available values: balance, nearby</p>
                      * 
                      */
                     void SetAccessMode(const std::string& _accessMode);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool ApQueryToOtherNodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
-                     * @return LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * 获取<p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * @return LoadBalanceMode <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
                      * 
                      */
                     std::string GetLoadBalanceMode() const;
 
                     /**
-                     * 设置<p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
-                     * @param _loadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * 设置<p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * @param _loadBalanceMode <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
                      * 
                      */
                     void SetLoadBalanceMode(const std::string& _loadBalanceMode);
@@ -320,10 +320,31 @@ namespace TencentCloud
                      */
                     bool LoadBalanceModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+                     * @return TransAllSplit <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+                     * 
+                     */
+                    bool GetTransAllSplit() const;
+
+                    /**
+                     * 设置<p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+                     * @param _transAllSplit <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+                     * 
+                     */
+                    void SetTransAllSplit(const bool& _transAllSplit);
+
+                    /**
+                     * 判断参数 TransAllSplit 是否已赋值
+                     * @return TransAllSplit 是否已赋值
+                     * 
+                     */
+                    bool TransAllSplitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+                     * <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
                      */
                     std::string m_consistencyType;
                     bool m_consistencyTypeHasBeenSet;
@@ -335,7 +356,7 @@ namespace TencentCloud
                     bool m_consistencyTimeOutHasBeenSet;
 
                     /**
-                     * <p>Weight mode system-system-assigned, custom-custom</p>
+                     * <p>Weight mode: system - system-assigned, custom - custom</p>
                      */
                     std::string m_weightMode;
                     bool m_weightModeHasBeenSet;
@@ -347,7 +368,7 @@ namespace TencentCloud
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * <p>Automatically add read-only instance, yes-yes, no-no</p>
+                     * <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
                      */
                     std::string m_autoAddRo;
                     bool m_autoAddRoHasBeenSet;
@@ -359,13 +380,13 @@ namespace TencentCloud
                     bool m_instanceWeightsHasBeenSet;
 
                     /**
-                     * <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+                     * <p>Whether to enable read-write node. yes: enable, no: disable</p>
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;
 
                     /**
-                     * <p>Read-write attribute, value range: READWRITE, READONLY</p>
+                     * <p>Read-write attribute. Available values: READWRITE, READONLY</p>
                      */
                     std::string m_rwType;
                     bool m_rwTypeHasBeenSet;
@@ -377,7 +398,7 @@ namespace TencentCloud
                     bool m_transSplitHasBeenSet;
 
                     /**
-                     * <p>Connection mode, available values: balance, nearby</p>
+                     * <p>Connection mode. Available values: balance, nearby</p>
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;
@@ -395,10 +416,16 @@ namespace TencentCloud
                     bool m_apQueryToOtherNodeHasBeenSet;
 
                     /**
-                     * <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
                      */
                     std::string m_loadBalanceMode;
                     bool m_loadBalanceModeHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+                     */
+                    bool m_transAllSplit;
+                    bool m_transAllSplitHasBeenSet;
 
                 };
             }

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Frozen transaction ID.
-                     * @return TranId Frozen transaction ID.
+                     * 获取Frozen transaction ID
+                     * @return TranId Frozen transaction ID
                      * 
                      */
                     std::string GetTranId() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool BigDealIdsHasBeenSet() const;
 
                     /**
-                     * 获取Order ID.
-                     * @return DealNames Order ID.
+                     * 获取Order ID
+                     * @return DealNames Order ID
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Frozen transaction ID.
+                     * Frozen transaction ID
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_bigDealIdsHasBeenSet;
 
                     /**
-                     * Order ID.
+                     * Order ID
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

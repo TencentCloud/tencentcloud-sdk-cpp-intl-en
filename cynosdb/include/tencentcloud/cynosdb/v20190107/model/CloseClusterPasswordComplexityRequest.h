@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster IDs in array
-                     * @return ClusterIds Cluster IDs in array
+                     * 获取Cluster ID array.
+                     * @return ClusterIds Cluster ID array.
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置Cluster IDs in array
-                     * @param _clusterIds Cluster IDs in array
+                     * 设置Cluster ID array.
+                     * @param _clusterIds Cluster ID array.
                      * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster IDs in array
+                     * Cluster ID array.
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;

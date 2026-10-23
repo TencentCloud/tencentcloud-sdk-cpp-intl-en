@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Analyze instance version upgrade, connection information used for grayscale after the upgrade
+                * Analyze the instance version upgrade and the connection information used for grayscale after the upgrade.
                 */
                 class UpgradeAnalysisInstanceVersionInfo : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version</p>
-                     * @return EngineVersion <p>Version</p>
+                     * 获取<p>Version.</p>
+                     * @return EngineVersion <p>Version.</p>
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置<p>Version</p>
-                     * @param _engineVersion <p>Version</p>
+                     * 设置<p>Version.</p>
+                     * @param _engineVersion <p>Version.</p>
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Expiry time</p>
-                     * @return ExpiredTime <p>Expiry time</p>
+                     * 获取<p>Expiration time.</p>
+                     * @return ExpiredTime <p>Expiration time.</p>
                      * 
                      */
                     int64_t GetExpiredTime() const;
 
                     /**
-                     * 设置<p>Expiry time</p>
-                     * @param _expiredTime <p>Expiry time</p>
+                     * 设置<p>Expiration time.</p>
+                     * @param _expiredTime <p>Expiration time.</p>
                      * 
                      */
                     void SetExpiredTime(const int64_t& _expiredTime);
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_vportHasBeenSet;
 
                     /**
-                     * <p>Version</p>
+                     * <p>Version.</p>
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * <p>Expiry time</p>
+                     * <p>Expiration time.</p>
                      */
                     int64_t m_expiredTime;
                     bool m_expiredTimeHasBeenSet;

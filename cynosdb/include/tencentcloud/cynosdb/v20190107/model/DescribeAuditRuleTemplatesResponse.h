@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible instances
-                     * @return TotalCount Number of eligible instances
+                     * 获取Total number of eligible instances.
+                     * @return TotalCount Total number of eligible instances.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Rule template detail list.
-                     * @return Items Rule template detail list.
+                     * 获取List of rule template details.
+                     * @return Items List of rule template details.
                      * 
                      */
                     std::vector<AuditRuleTemplateInfo> GetItems() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible instances
+                     * Total number of eligible instances.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Rule template detail list.
+                     * List of rule template details.
                      */
                     std::vector<AuditRuleTemplateInfo> m_items;
                     bool m_itemsHasBeenSet;

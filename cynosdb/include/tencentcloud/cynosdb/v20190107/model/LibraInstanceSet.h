@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool InstancePeriodEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance role
-                     * @return InstanceRole Instance role
+                     * 获取Instance role.
+                     * @return InstanceRole Instance role.
                      * 
                      */
                     std::string GetInstanceRole() const;
 
                     /**
-                     * 设置Instance role
-                     * @param _instanceRole Instance role
+                     * 设置Instance role.
+                     * @param _instanceRole Instance role.
                      * 
                      */
                     void SetInstanceRole(const std::string& _instanceRole);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool WanPortHasBeenSet() const;
 
                     /**
-                     * 获取Public network status
-                     * @return WanStatus Public network status
+                     * 获取Public network status.
+                     * @return WanStatus Public network status.
                      * 
                      */
                     std::string GetWanStatus() const;
 
                     /**
-                     * 设置Public network status
-                     * @param _wanStatus Public network status
+                     * 设置Public network status.
+                     * @param _wanStatus Public network status.
                      * 
                      */
                     void SetWanStatus(const std::string& _wanStatus);
@@ -586,7 +586,7 @@ namespace TencentCloud
                     bool m_instancePeriodEndTimeHasBeenSet;
 
                     /**
-                     * Instance role
+                     * Instance role.
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;
@@ -652,7 +652,7 @@ namespace TencentCloud
                     bool m_wanPortHasBeenSet;
 
                     /**
-                     * Public network status
+                     * Public network status.
                      */
                     std::string m_wanStatus;
                     bool m_wanStatusHasBeenSet;

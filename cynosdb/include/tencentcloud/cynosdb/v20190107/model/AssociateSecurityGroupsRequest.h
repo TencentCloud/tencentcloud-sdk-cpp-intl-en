@@ -43,19 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or a cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-                     * @return InstanceIds Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or a cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * 获取Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or a cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-                     * @param _instanceIds Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or a cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * 设置Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * @param _instanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -68,15 +68,15 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID list to be modified. An array of one or more security group IDs.
-                     * @return SecurityGroupIds Security group ID list to be modified. An array of one or more security group IDs.
+                     * 获取Security group ID list to modify, which is an array of one or more security group IDs.
+                     * @return SecurityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group ID list to be modified. An array of one or more security group IDs.
-                     * @param _securityGroupIds Security group ID list to be modified. An array of one or more security group IDs.
+                     * 设置Security group ID list to modify, which is an array of one or more security group IDs.
+                     * @param _securityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -112,14 +112,14 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
                 private:
 
                     /**
-                     * Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or a cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Security group ID list to be modified. An array of one or more security group IDs.
+                     * Security group ID list to modify, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;

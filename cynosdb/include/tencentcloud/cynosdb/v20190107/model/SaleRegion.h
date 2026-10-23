@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a purchasable region
+                * Sales region information
                 */
                 class SaleRegion : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region name
-                     * @return Region Region name
+                     * 获取English name of the region
+                     * @return Region English name of the region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region name
-                     * @param _region Region name
+                     * 设置English name of the region
+                     * @param _region English name of the region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Numeric ID of a region
-                     * @return RegionId Numeric ID of a region
+                     * 获取Region numeric ID.
+                     * @return RegionId Region numeric ID.
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Numeric ID of a region
-                     * @param _regionId Numeric ID of a region
+                     * 设置Region numeric ID.
+                     * @param _regionId Region numeric ID.
                      * 
                      */
                     void SetRegionId(const int64_t& _regionId);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Region name
-                     * @return RegionZh Region name
+                     * 获取Region Name in Chinese
+                     * @return RegionZh Region Name in Chinese
                      * 
                      */
                     std::string GetRegionZh() const;
 
                     /**
-                     * 设置Region name
-                     * @param _regionZh Region name
+                     * 设置Region Name in Chinese
+                     * @param _regionZh Region Name in Chinese
                      * 
                      */
                     void SetRegionZh(const std::string& _regionZh);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool RegionZhHasBeenSet() const;
 
                     /**
-                     * 获取List of purchasable AZs
-                     * @return ZoneSet List of purchasable AZs
+                     * 获取List of available saleable zones
+                     * @return ZoneSet List of available saleable zones
                      * 
                      */
                     std::vector<SaleZone> GetZoneSet() const;
 
                     /**
-                     * 设置List of purchasable AZs
-                     * @param _zoneSet List of purchasable AZs
+                     * 设置List of available saleable zones
+                     * @param _zoneSet List of available saleable zones
                      * 
                      */
                     void SetZoneSet(const std::vector<SaleZone>& _zoneSet);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ZoneSetHasBeenSet() const;
 
                     /**
-                     * 获取Engine type
-                     * @return DbType Engine type
+                     * 获取Engine type.
+                     * @return DbType Engine type.
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Engine type
-                     * @param _dbType Engine type
+                     * 设置Engine type.
+                     * @param _dbType Engine type.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Supported modules in a region
-                     * @return Modules Supported modules in a region
+                     * 获取Region module support status
+                     * @return Modules Region module support status
                      * 
                      */
                     std::vector<Module> GetModules() const;
 
                     /**
-                     * 设置Supported modules in a region
-                     * @param _modules Supported modules in a region
+                     * 设置Region module support status
+                     * @param _modules Region module support status
                      * 
                      */
                     void SetModules(const std::vector<Module>& _modules);
@@ -177,37 +177,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region name
+                     * English name of the region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Numeric ID of a region
+                     * Region numeric ID.
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Region name
+                     * Region Name in Chinese
                      */
                     std::string m_regionZh;
                     bool m_regionZhHasBeenSet;
 
                     /**
-                     * List of purchasable AZs
+                     * List of available saleable zones
                      */
                     std::vector<SaleZone> m_zoneSet;
                     bool m_zoneSetHasBeenSet;
 
                     /**
-                     * Engine type
+                     * Engine type.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Supported modules in a region
+                     * Region module support status
                      */
                     std::vector<Module> m_modules;
                     bool m_modulesHasBeenSet;

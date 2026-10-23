@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source Cluster Id
-                     * @return ClusterId Source Cluster Id
+                     * 获取Source cluster Id
+                     * @return ClusterId Source cluster Id
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Source Cluster Id
-                     * @param _clusterId Source Cluster Id
+                     * 设置Source cluster Id
+                     * @param _clusterId Source cluster Id
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Target availability zone
-                     * @return DstZone Target availability zone
+                     * 获取Target zone
+                     * @return DstZone Target zone
                      * 
                      */
                     std::string GetDstZone() const;
 
                     /**
-                     * 设置Target availability zone
-                     * @param _dstZone Target availability zone
+                     * 设置Target zone
+                     * @param _dstZone Target zone
                      * 
                      */
                     void SetDstZone(const std::string& _dstZone);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DstZoneHasBeenSet() const;
 
                     /**
-                     * 获取Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
-                     * @return MaxLag Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+                     * 获取Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
+                     * @return MaxLag Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
                      * 
                      */
                     int64_t GetMaxLag() const;
 
                     /**
-                     * 设置Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
-                     * @param _maxLag Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+                     * 设置Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
+                     * @param _maxLag Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
                      * 
                      */
                     void SetMaxLag(const int64_t& _maxLag);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MaxLagHasBeenSet() const;
 
                     /**
-                     * 获取Immediate: Immediate execution, InMaintain: Time window execution
-                     * @return TransferType Immediate: Immediate execution, InMaintain: Time window execution
+                     * 获取Immediate: immediate execution. InMaintain: execute within the time window.
+                     * @return TransferType Immediate: immediate execution. InMaintain: execute within the time window.
                      * 
                      */
                     std::string GetTransferType() const;
 
                     /**
-                     * 设置Immediate: Immediate execution, InMaintain: Time window execution
-                     * @param _transferType Immediate: Immediate execution, InMaintain: Time window execution
+                     * 设置Immediate: immediate execution. InMaintain: execute within the time window.
+                     * @param _transferType Immediate: immediate execution. InMaintain: execute within the time window.
                      * 
                      */
                     void SetTransferType(const std::string& _transferType);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool TransferTypeHasBeenSet() const;
 
                     /**
-                     * 获取Multi-availability zone backup zone
-                     * @return DstSlaveZone Multi-availability zone backup zone
+                     * 获取Secondary AZ in a multi-availability zone
+                     * @return DstSlaveZone Secondary AZ in a multi-availability zone
                      * 
                      */
                     std::string GetDstSlaveZone() const;
 
                     /**
-                     * 设置Multi-availability zone backup zone
-                     * @param _dstSlaveZone Multi-availability zone backup zone
+                     * 设置Secondary AZ in a multi-availability zone
+                     * @param _dstSlaveZone Secondary AZ in a multi-availability zone
                      * 
                      */
                     void SetDstSlaveZone(const std::string& _dstSlaveZone);
@@ -172,31 +172,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source Cluster Id
+                     * Source cluster Id
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Target availability zone
+                     * Target zone
                      */
                     std::string m_dstZone;
                     bool m_dstZoneHasBeenSet;
 
                     /**
-                     * Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+                     * Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
                      */
                     int64_t m_maxLag;
                     bool m_maxLagHasBeenSet;
 
                     /**
-                     * Immediate: Immediate execution, InMaintain: Time window execution
+                     * Immediate: immediate execution. InMaintain: execute within the time window.
                      */
                     std::string m_transferType;
                     bool m_transferTypeHasBeenSet;
 
                     /**
-                     * Multi-availability zone backup zone
+                     * Secondary AZ in a multi-availability zone
                      */
                     std::string m_dstSlaveZone;
                     bool m_dstSlaveZoneHasBeenSet;

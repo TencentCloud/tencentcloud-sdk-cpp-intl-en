@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance Group List
-                     * @return InstanceGroupInfoList Instance Group List
+                     * 获取Instance group list
+                     * @return InstanceGroupInfoList Instance group list
                      * 
                      */
                     std::vector<CynosdbInstanceGroup> GetInstanceGroupInfoList() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Instance Group List
+                     * Instance group list
                      */
                     std::vector<CynosdbInstanceGroup> m_instanceGroupInfoList;
                     bool m_instanceGroupInfoListHasBeenSet;

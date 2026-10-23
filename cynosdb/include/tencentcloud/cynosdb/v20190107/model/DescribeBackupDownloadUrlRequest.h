@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup download source restriction condition.
-                     * @return DownloadRestriction Backup download source restriction condition.
+                     * 获取Backup download source limit
+                     * @return DownloadRestriction Backup download source limit
                      * 
                      */
                     BackupLimitRestriction GetDownloadRestriction() const;
 
                     /**
-                     * 设置Backup download source restriction condition.
-                     * @param _downloadRestriction Backup download source restriction condition.
+                     * 设置Backup download source limit
+                     * @param _downloadRestriction Backup download source limit
                      * 
                      */
                     void SetDownloadRestriction(const BackupLimitRestriction& _downloadRestriction);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup download source restriction condition.
+                     * Backup download source limit
                      */
                     BackupLimitRestriction m_downloadRestriction;
                     bool m_downloadRestrictionHasBeenSet;

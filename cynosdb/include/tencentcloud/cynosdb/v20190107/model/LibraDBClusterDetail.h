@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region</p>
-                     * @return Region <p>Region</p>
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置<p>Region</p>
-                     * @param _region <p>Region</p>
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status</p>
-                     * @return Status <p>Status</p>
+                     * 获取<p>Status.</p>
+                     * @return Status <p>Status.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Status</p>
-                     * @param _status <p>Status</p>
+                     * 设置<p>Status.</p>
+                     * @param _status <p>Status.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取<p>VPC name</p>
-                     * @return VpcName <p>VPC name</p>
+                     * 获取<p>VPC name.</p>
+                     * @return VpcName <p>VPC name.</p>
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置<p>VPC name</p>
-                     * @param _vpcName <p>VPC name</p>
+                     * 设置<p>VPC name.</p>
+                     * @param _vpcName <p>VPC name.</p>
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -282,15 +282,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database version</p>
-                     * @return DbVersion <p>Database version</p>
+                     * 获取<p>Database version.</p>
+                     * @return DbVersion <p>Database version.</p>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置<p>Database version</p>
-                     * @param _dbVersion <p>Database version</p>
+                     * 设置<p>Database version.</p>
+                     * @param _dbVersion <p>Database version.</p>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -387,15 +387,15 @@ namespace TencentCloud
                     bool RoAddrHasBeenSet() const;
 
                     /**
-                     * 获取<p>cynos version</p>
-                     * @return CynosVersion <p>cynos version</p>
+                     * 获取<p>cynos version.</p>
+                     * @return CynosVersion <p>cynos version.</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置<p>cynos version</p>
-                     * @param _cynosVersion <p>cynos version</p>
+                     * 设置<p>cynos version.</p>
+                     * @param _cynosVersion <p>cynos version.</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -408,15 +408,15 @@ namespace TencentCloud
                     bool CynosVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Freeze or not</p>
-                     * @return IsFreeze <p>Freeze or not</p>
+                     * 获取<p>Whether to freeze</p>
+                     * @return IsFreeze <p>Whether to freeze</p>
                      * 
                      */
                     std::string GetIsFreeze() const;
 
                     /**
-                     * 设置<p>Freeze or not</p>
-                     * @param _isFreeze <p>Freeze or not</p>
+                     * 设置<p>Whether to freeze</p>
+                     * @param _isFreeze <p>Whether to freeze</p>
                      * 
                      */
                     void SetIsFreeze(const std::string& _isFreeze);
@@ -513,15 +513,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Expiry time</p>
-                     * @return PeriodEndTime <p>Expiry time</p>
+                     * 获取<p>Expiration time</p>
+                     * @return PeriodEndTime <p>Expiration time</p>
                      * 
                      */
                     std::string GetPeriodEndTime() const;
 
                     /**
-                     * 设置<p>Expiry time</p>
-                     * @param _periodEndTime <p>Expiry time</p>
+                     * 设置<p>Expiration time</p>
+                     * @param _periodEndTime <p>Expiration time</p>
                      * 
                      */
                     void SetPeriodEndTime(const std::string& _periodEndTime);
@@ -576,15 +576,15 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version tag</p>
-                     * @return CynosVersionTag <p>Version tag</p>
+                     * 获取<p>Version tag.</p>
+                     * @return CynosVersionTag <p>Version tag.</p>
                      * 
                      */
                     std::string GetCynosVersionTag() const;
 
                     /**
-                     * 设置<p>Version tag</p>
-                     * @param _cynosVersionTag <p>Version tag</p>
+                     * 设置<p>Version tag.</p>
+                     * @param _cynosVersionTag <p>Version tag.</p>
                      * 
                      */
                     void SetCynosVersionTag(const std::string& _cynosVersionTag);
@@ -597,15 +597,15 @@ namespace TencentCloud
                     bool CynosVersionTagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
-                     * @return NoSupportAddRo <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+                     * 获取<p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
+                     * @return NoSupportAddRo <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
                      * 
                      */
                     std::string GetNoSupportAddRo() const;
 
                     /**
-                     * 设置<p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
-                     * @param _noSupportAddRo <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+                     * 设置<p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
+                     * @param _noSupportAddRo <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
                      * 
                      */
                     void SetNoSupportAddRo(const std::string& _noSupportAddRo);
@@ -695,13 +695,13 @@ namespace TencentCloud
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * <p>Region</p>
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * <p>Status</p>
+                     * <p>Status.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -719,7 +719,7 @@ namespace TencentCloud
                     bool m_storageHasBeenSet;
 
                     /**
-                     * <p>VPC name</p>
+                     * <p>VPC name.</p>
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
@@ -749,7 +749,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Database version</p>
+                     * <p>Database version.</p>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
@@ -779,13 +779,13 @@ namespace TencentCloud
                     bool m_roAddrHasBeenSet;
 
                     /**
-                     * <p>cynos version</p>
+                     * <p>cynos version.</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
 
                     /**
-                     * <p>Freeze or not</p>
+                     * <p>Whether to freeze</p>
                      */
                     std::string m_isFreeze;
                     bool m_isFreezeHasBeenSet;
@@ -815,7 +815,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * <p>Expiry time</p>
+                     * <p>Expiration time</p>
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
@@ -833,13 +833,13 @@ namespace TencentCloud
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * <p>Version tag</p>
+                     * <p>Version tag.</p>
                      */
                     std::string m_cynosVersionTag;
                     bool m_cynosVersionTagHasBeenSet;
 
                     /**
-                     * <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+                     * <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
                      */
                     std::string m_noSupportAddRo;
                     bool m_noSupportAddRoHasBeenSet;

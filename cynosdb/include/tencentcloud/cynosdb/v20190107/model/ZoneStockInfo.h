@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inventory information in an AZ
+                * Availability zone inventory information
                 */
                 class ZoneStockInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取Availability zone
+                     * @return Zone Availability zone
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置Availability zone
+                     * @param _zone Availability zone
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is an inventory.
-                     * @return HasStock Whether there is an inventory.
+                     * 获取Whether there is inventory
+                     * @return HasStock Whether there is inventory
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
-                     * 设置Whether there is an inventory.
-                     * @param _hasStock Whether there is an inventory.
+                     * 设置Whether there is inventory
+                     * @param _hasStock Whether there is inventory
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool HasStockHasBeenSet() const;
 
                     /**
-                     * 获取Quantity in stock
-                     * @return StockCount Quantity in stock
+                     * 获取Inventory quantity
+                     * @return StockCount Inventory quantity
                      * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
-                     * 设置Quantity in stock
-                     * @param _stockCount Quantity in stock
+                     * 设置Inventory quantity
+                     * @param _stockCount Inventory quantity
                      * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool StockCountHasBeenSet() const;
 
                     /**
-                     * 获取Available zone inventory information.
-                     * @return SlaveZoneStockInfos Available zone inventory information.
+                     * 获取AZ inventory information
+                     * @return SlaveZoneStockInfos AZ inventory information
                      * 
                      */
                     std::vector<SlaveZoneStockInfo> GetSlaveZoneStockInfos() const;
 
                     /**
-                     * 设置Available zone inventory information.
-                     * @param _slaveZoneStockInfos Available zone inventory information.
+                     * 设置AZ inventory information
+                     * @param _slaveZoneStockInfos AZ inventory information
                      * 
                      */
                     void SetSlaveZoneStockInfos(const std::vector<SlaveZoneStockInfo>& _slaveZoneStockInfos);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AZ
+                     * Availability zone
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Whether there is an inventory.
+                     * Whether there is inventory
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
 
                     /**
-                     * Quantity in stock
+                     * Inventory quantity
                      */
                     int64_t m_stockCount;
                     bool m_stockCountHasBeenSet;
 
                     /**
-                     * Available zone inventory information.
+                     * AZ inventory information
                      */
                     std::vector<SlaveZoneStockInfo> m_slaveZoneStockInfos;
                     bool m_slaveZoneStockInfosHasBeenSet;

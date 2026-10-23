@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Safe name, length must be greater than 0
-                     * @return VaultName Safe name, length must be greater than 0
+                     * 获取Safe name. The length must be greater than 0.
+                     * @return VaultName Safe name. The length must be greater than 0.
                      * 
                      */
                     std::string GetVaultName() const;
 
                     /**
-                     * 设置Safe name, length must be greater than 0
-                     * @param _vaultName Safe name, length must be greater than 0
+                     * 设置Safe name. The length must be greater than 0.
+                     * @param _vaultName Safe name. The length must be greater than 0.
                      * 
                      */
                     void SetVaultName(const std::string& _vaultName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultNameHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period (seconds). Must be greater than 0.
-                     * @return BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+                     * 获取Backup retention period in seconds. It must be greater than 0.
+                     * @return BackupSaveSeconds Backup retention period in seconds. It must be greater than 0.
                      * 
                      */
                     int64_t GetBackupSaveSeconds() const;
 
                     /**
-                     * 设置Backup retention period (seconds). Must be greater than 0.
-                     * @param _backupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+                     * 设置Backup retention period in seconds. It must be greater than 0.
+                     * @param _backupSaveSeconds Backup retention period in seconds. It must be greater than 0.
                      * 
                      */
                     void SetBackupSaveSeconds(const int64_t& _backupSaveSeconds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BackupSaveSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Safe description
-                     * @return VaultDescribe Safe description
+                     * 获取Description of the safe
+                     * @return VaultDescribe Description of the safe
                      * 
                      */
                     std::string GetVaultDescribe() const;
 
                     /**
-                     * 设置Safe description
-                     * @param _vaultDescribe Safe description
+                     * 设置Description of the safe
+                     * @param _vaultDescribe Description of the safe
                      * 
                      */
                     void SetVaultDescribe(const std::string& _vaultDescribe);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool VaultDescribeHasBeenSet() const;
 
                     /**
-                     * 获取KMS key ID, length 0-36 characters
-                     * @return KeyId KMS key ID, length 0-36 characters
+                     * 获取KMS key ID, 0-36 characters in length
+                     * @return KeyId KMS key ID, 0-36 characters in length
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置KMS key ID, length 0-36 characters
-                     * @param _keyId KMS key ID, length 0-36 characters
+                     * 设置KMS key ID, 0-36 characters in length
+                     * @param _keyId KMS key ID, 0-36 characters in length
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Key type, available values: cloud (KMS managed keys), custom (custom key)
-                     * @return KeyType Key type, available values: cloud (KMS managed keys), custom (custom key)
+                     * 获取Key type. Available values: cloud (cloud-managed key), custom (custom key)
+                     * @return KeyType Key type. Available values: cloud (cloud-managed key), custom (custom key)
                      * 
                      */
                     std::string GetKeyType() const;
 
                     /**
-                     * 设置Key type, available values: cloud (KMS managed keys), custom (custom key)
-                     * @param _keyType Key type, available values: cloud (KMS managed keys), custom (custom key)
+                     * 设置Key type. Available values: cloud (cloud-managed key), custom (custom key)
+                     * @param _keyType Key type. Available values: cloud (cloud-managed key), custom (custom key)
                      * 
                      */
                     void SetKeyType(const std::string& _keyType);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool KeyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Key region, length 0-32 characters
-                     * @return KeyRegion Key region, length 0-32 characters
+                     * 获取Region of the key, 0–32 characters in length
+                     * @return KeyRegion Region of the key, 0–32 characters in length
                      * 
                      */
                     std::string GetKeyRegion() const;
 
                     /**
-                     * 设置Key region, length 0-32 characters
-                     * @param _keyRegion Key region, length 0-32 characters
+                     * 设置Region of the key, 0–32 characters in length
+                     * @param _keyRegion Region of the key, 0–32 characters in length
                      * 
                      */
                     void SetKeyRegion(const std::string& _keyRegion);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool KeyRegionHasBeenSet() const;
 
                     /**
-                     * 获取Lock time, format: YYYY-MM-DD HH:mm:ss
-                     * @return LockedTime Lock time, format: YYYY-MM-DD HH:mm:ss
+                     * 获取Lock time. Format: YYYY-MM-DD HH:mm:ss
+                     * @return LockedTime Lock time. Format: YYYY-MM-DD HH:mm:ss
                      * 
                      */
                     std::string GetLockedTime() const;
 
                     /**
-                     * 设置Lock time, format: YYYY-MM-DD HH:mm:ss
-                     * @param _lockedTime Lock time, format: YYYY-MM-DD HH:mm:ss
+                     * 设置Lock time. Format: YYYY-MM-DD HH:mm:ss
+                     * @param _lockedTime Lock time. Format: YYYY-MM-DD HH:mm:ss
                      * 
                      */
                     void SetLockedTime(const std::string& _lockedTime);
@@ -192,43 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Safe name, length must be greater than 0
+                     * Safe name. The length must be greater than 0.
                      */
                     std::string m_vaultName;
                     bool m_vaultNameHasBeenSet;
 
                     /**
-                     * Backup retention period (seconds). Must be greater than 0.
+                     * Backup retention period in seconds. It must be greater than 0.
                      */
                     int64_t m_backupSaveSeconds;
                     bool m_backupSaveSecondsHasBeenSet;
 
                     /**
-                     * Safe description
+                     * Description of the safe
                      */
                     std::string m_vaultDescribe;
                     bool m_vaultDescribeHasBeenSet;
 
                     /**
-                     * KMS key ID, length 0-36 characters
+                     * KMS key ID, 0-36 characters in length
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Key type, available values: cloud (KMS managed keys), custom (custom key)
+                     * Key type. Available values: cloud (cloud-managed key), custom (custom key)
                      */
                     std::string m_keyType;
                     bool m_keyTypeHasBeenSet;
 
                     /**
-                     * Key region, length 0-32 characters
+                     * Region of the key, 0–32 characters in length
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
 
                     /**
-                     * Lock time, format: YYYY-MM-DD HH:mm:ss
+                     * Lock time. Format: YYYY-MM-DD HH:mm:ss
                      */
                     std::string m_lockedTime;
                     bool m_lockedTimeHasBeenSet;

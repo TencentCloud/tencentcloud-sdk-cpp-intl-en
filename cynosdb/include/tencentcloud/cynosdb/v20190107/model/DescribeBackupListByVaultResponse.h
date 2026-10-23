@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total files of backup that meets the conditions
-                     * @return TotalCount Total files of backup that meets the conditions
+                     * 获取Total number of backup files that meet the conditions
+                     * @return TotalCount Total number of backup files that meet the conditions
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total files of backup that meets the conditions
+                     * Total number of backup files that meet the conditions
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

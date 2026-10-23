@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Snapshot backup settings.
+                * Snapshot backup settings
                 */
                 class SnapshotBackupConfig : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BackupCustomAutoTimeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-                     * @return BackupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+                     * 获取Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
+                     * @return BackupTimeBeg Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
                      * 
                      */
                     uint64_t GetBackupTimeBeg() const;
 
                     /**
-                     * 设置Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-                     * @param _backupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+                     * 设置Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
+                     * @param _backupTimeBeg Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
                      * 
                      */
                     void SetBackupTimeBeg(const uint64_t& _backupTimeBeg);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool BackupTimeBegHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-                     * @return BackupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+                     * 获取Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
+                     * @return BackupTimeEnd Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
                      * 
                      */
                     uint64_t GetBackupTimeEnd() const;
 
                     /**
-                     * 设置Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-                     * @param _backupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+                     * 设置Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
+                     * @param _backupTimeEnd Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
                      * 
                      */
                     void SetBackupTimeEnd(const uint64_t& _backupTimeEnd);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool BackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
-                     * @return BackupWeekDays This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+                     * 获取Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
+                     * @return BackupWeekDays Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
                      * 
                      */
                     std::vector<std::string> GetBackupWeekDays() const;
 
                     /**
-                     * 设置This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
-                     * @param _backupWeekDays This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+                     * 设置Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
+                     * @param _backupWeekDays Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
                      * 
                      */
                     void SetBackupWeekDays(const std::vector<std::string>& _backupWeekDays);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool BackupWeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Interval.
-                     * @return BackupIntervalTime Interval.
+                     * 获取Interval
+                     * @return BackupIntervalTime Interval
                      * 
                      */
                     int64_t GetBackupIntervalTime() const;
 
                     /**
-                     * 设置Interval.
-                     * @param _backupIntervalTime Interval.
+                     * 设置Interval
+                     * @param _backupIntervalTime Interval
                      * 
                      */
                     void SetBackupIntervalTime(const int64_t& _backupIntervalTime);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool BackupIntervalTimeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
-                     * @return ReserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+                     * 获取Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
+                     * @return ReserveDuration Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
                      * 
                      */
                     uint64_t GetReserveDuration() const;
 
                     /**
-                     * 设置Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
-                     * @param _reserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+                     * 设置Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
+                     * @param _reserveDuration Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
                      * 
                      */
                     void SetReserveDuration(const uint64_t& _reserveDuration);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
-                     * @return BackupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+                     * 获取Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
+                     * @return BackupTriggerStrategy Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
                      * 
                      */
                     std::string GetBackupTriggerStrategy() const;
 
                     /**
-                     * 设置Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
-                     * @param _backupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+                     * 设置Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
+                     * @param _backupTriggerStrategy Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
                      * 
                      */
                     void SetBackupTriggerStrategy(const std::string& _backupTriggerStrategy);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool BackupTriggerStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Safe info
-                     * @return AutoCopyVaults Safe info
+                     * 获取Safe information.
+                     * @return AutoCopyVaults Safe information.
                      * 
                      */
                     std::vector<CreateBackupVaultItem> GetAutoCopyVaults() const;
 
                     /**
-                     * 设置Safe info
-                     * @param _autoCopyVaults Safe info
+                     * 设置Safe information.
+                     * @param _autoCopyVaults Safe information.
                      * 
                      */
                     void SetAutoCopyVaults(const std::vector<CreateBackupVaultItem>& _autoCopyVaults);
@@ -224,43 +224,43 @@ namespace TencentCloud
                     bool m_backupCustomAutoTimeHasBeenSet;
 
                     /**
-                     * Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+                     * Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
                      */
                     uint64_t m_backupTimeBeg;
                     bool m_backupTimeBegHasBeenSet;
 
                     /**
-                     * Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+                     * Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
                      */
                     uint64_t m_backupTimeEnd;
                     bool m_backupTimeEndHasBeenSet;
 
                     /**
-                     * This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+                     * Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
                      */
                     std::vector<std::string> m_backupWeekDays;
                     bool m_backupWeekDaysHasBeenSet;
 
                     /**
-                     * Interval.
+                     * Interval
                      */
                     int64_t m_backupIntervalTime;
                     bool m_backupIntervalTimeHasBeenSet;
 
                     /**
-                     * Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+                     * Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
                      */
                     uint64_t m_reserveDuration;
                     bool m_reserveDurationHasBeenSet;
 
                     /**
-                     * Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+                     * Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
                      */
                     std::string m_backupTriggerStrategy;
                     bool m_backupTriggerStrategyHasBeenSet;
 
                     /**
-                     * Safe info
+                     * Safe information.
                      */
                     std::vector<CreateBackupVaultItem> m_autoCopyVaults;
                     bool m_autoCopyVaultsHasBeenSet;

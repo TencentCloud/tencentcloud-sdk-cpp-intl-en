@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audit rule details of the instance, which is an output parameter of the `DescribeAuditRuleWithInstanceIds` API.
+                * Audit rule details of the instance.
                 */
                 class InstanceAuditRule : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
-                     * @return AuditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+                     * 获取Whether it is rule audit. true - Rule audit, false - Full audit.
+                     * @return AuditRule Whether it is rule audit. true - Rule audit, false - Full audit.
                      * 
                      */
                     bool GetAuditRule() const;
 
                     /**
-                     * 设置Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
-                     * @param _auditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+                     * 设置Whether it is rule audit. true - Rule audit, false - Full audit.
+                     * @param _auditRule Whether it is rule audit. true - Rule audit, false - Full audit.
                      * 
                      */
                     void SetAuditRule(const bool& _auditRule);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool AuditRuleHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the audit rule details. valid when AuditRule=true.
-                     * @return AuditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
+                     * 获取Audit rule details. Valid only when AuditRule=true.
+                     * @return AuditRuleFilters Audit rule details. Valid only when AuditRule=true.
                      * 
                      */
                     std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
 
                     /**
-                     * 设置Specifies the audit rule details. valid when AuditRule=true.
-                     * @param _auditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
+                     * 设置Audit rule details. Valid only when AuditRule=true.
+                     * @param _auditRuleFilters Audit rule details. Valid only when AuditRule=true.
                      * 
                      */
                     void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool OldRuleHasBeenSet() const;
 
                     /**
-                     * 获取The rule template details of the instance application.
-                     * @return RuleTemplates The rule template details of the instance application.
+                     * 获取Description of the rule template applied to the instance.
+                     * @return RuleTemplates Description of the rule template applied to the instance.
                      * 
                      */
                     std::vector<RuleTemplateInfo> GetRuleTemplates() const;
 
                     /**
-                     * 设置The rule template details of the instance application.
-                     * @param _ruleTemplates The rule template details of the instance application.
+                     * 设置Description of the rule template applied to the instance.
+                     * @param _ruleTemplates Description of the rule template applied to the instance.
                      * 
                      */
                     void SetRuleTemplates(const std::vector<RuleTemplateInfo>& _ruleTemplates);
@@ -162,13 +162,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+                     * Whether it is rule audit. true - Rule audit, false - Full audit.
                      */
                     bool m_auditRule;
                     bool m_auditRuleHasBeenSet;
 
                     /**
-                     * Specifies the audit rule details. valid when AuditRule=true.
+                     * Audit rule details. Valid only when AuditRule=true.
                      */
                     std::vector<AuditRuleFilters> m_auditRuleFilters;
                     bool m_auditRuleFiltersHasBeenSet;
@@ -180,7 +180,7 @@ namespace TencentCloud
                     bool m_oldRuleHasBeenSet;
 
                     /**
-                     * The rule template details of the instance application.
+                     * Description of the rule template applied to the instance.
                      */
                     std::vector<RuleTemplateInfo> m_ruleTemplates;
                     bool m_ruleTemplatesHasBeenSet;

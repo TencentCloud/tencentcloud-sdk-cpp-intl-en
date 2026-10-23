@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sync object details
+                * Details of sync objects
                 */
                 class MigrateOpt : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database table information
-                     * @return DatabaseTables Database table information
+                     * 获取Contains database table information
+                     * @return DatabaseTables Contains database table information
                      * 
                      */
                     MigrateObject GetDatabaseTables() const;
 
                     /**
-                     * 设置Database table information
-                     * @param _databaseTables Database table information
+                     * 设置Contains database table information
+                     * @param _databaseTables Contains database table information
                      * 
                      */
                     void SetDatabaseTables(const MigrateObject& _databaseTables);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database table information
+                     * Contains database table information
                      */
                     MigrateObject m_databaseTables;
                     bool m_databaseTablesHasBeenSet;

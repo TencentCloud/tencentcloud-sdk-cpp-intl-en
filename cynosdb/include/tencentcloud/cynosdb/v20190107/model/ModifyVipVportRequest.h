@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance group ID
-                     * @return InstanceGrpId Instance group ID
+                     * 获取Instance Group ID
+                     * @return InstanceGrpId Instance Group ID
                      * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置Instance group ID
-                     * @param _instanceGrpId Instance group ID
+                     * 设置Instance Group ID
+                     * @param _instanceGrpId Instance Group ID
                      * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
@@ -85,15 +85,36 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取Target IP to be modified
-                     * @return Vip Target IP to be modified
+                     * 获取Instance Group ID
+                     * @return InstanceGroupId Instance Group ID
+                     * 
+                     */
+                    std::string GetInstanceGroupId() const;
+
+                    /**
+                     * 设置Instance Group ID
+                     * @param _instanceGroupId Instance Group ID
+                     * 
+                     */
+                    void SetInstanceGroupId(const std::string& _instanceGroupId);
+
+                    /**
+                     * 判断参数 InstanceGroupId 是否已赋值
+                     * @return InstanceGroupId 是否已赋值
+                     * 
+                     */
+                    bool InstanceGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Destination ip that needs to be modified
+                     * @return Vip Destination ip that needs to be modified
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Target IP to be modified
-                     * @param _vip Target IP to be modified
+                     * 设置Destination ip that needs to be modified
+                     * @param _vip Destination ip that needs to be modified
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -106,15 +127,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Target port to be modified
-                     * @return Vport Target port to be modified
+                     * 获取Destination port that needs to be modified
+                     * @return Vport Destination port that needs to be modified
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Target port to be modified
-                     * @param _vport Target port to be modified
+                     * 设置Destination port that needs to be modified
+                     * @param _vport Destination port that needs to be modified
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -152,15 +173,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
-                     * @return OldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+                     * 获取Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
+                     * @return OldIpReserveHours Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
                      * 
                      */
                     int64_t GetOldIpReserveHours() const;
 
                     /**
-                     * 设置Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
-                     * @param _oldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+                     * 设置Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
+                     * @param _oldIpReserveHours Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
                      * 
                      */
                     void SetOldIpReserveHours(const int64_t& _oldIpReserveHours);
@@ -175,25 +196,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance group ID
+                     * Instance Group ID
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * Target IP to be modified
+                     * Instance Group ID
+                     */
+                    std::string m_instanceGroupId;
+                    bool m_instanceGroupIdHasBeenSet;
+
+                    /**
+                     * Destination ip that needs to be modified
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Target port to be modified
+                     * Destination port that needs to be modified
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
@@ -206,7 +233,7 @@ namespace TencentCloud
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+                     * Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
                      */
                     int64_t m_oldIpReserveHours;
                     bool m_oldIpReserveHoursHasBeenSet;

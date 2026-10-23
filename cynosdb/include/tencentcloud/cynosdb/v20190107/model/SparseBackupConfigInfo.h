@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sparse backup policy configuration info
+                * Sparse backup policy configuration information
                 */
                 class SparseBackupConfigInfo : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ConfigIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Policy type: weekly/monthly/yearly</p>
-                     * @return SparsePeriodConfig <p>Policy type: weekly/monthly/yearly</p>
+                     * 获取<p>Period policy type: weekly/monthly/yearly</p>
+                     * @return SparsePeriodConfig <p>Period policy type: weekly/monthly/yearly</p>
                      * 
                      */
                     std::string GetSparsePeriodConfig() const;
 
                     /**
-                     * 设置<p>Policy type: weekly/monthly/yearly</p>
-                     * @param _sparsePeriodConfig <p>Policy type: weekly/monthly/yearly</p>
+                     * 设置<p>Period policy type: weekly/monthly/yearly</p>
+                     * @param _sparsePeriodConfig <p>Period policy type: weekly/monthly/yearly</p>
                      * 
                      */
                     void SetSparsePeriodConfig(const std::string& _sparsePeriodConfig);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SparsePeriodConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cycle time configuration</p>
-                     * @return SparsePeriodTime <p>Cycle time configuration</p>
+                     * 获取<p>Periodic time configuration</p>
+                     * @return SparsePeriodTime <p>Periodic time configuration</p>
                      * 
                      */
                     SparsePeriodTime GetSparsePeriodTime() const;
 
                     /**
-                     * 设置<p>Cycle time configuration</p>
-                     * @param _sparsePeriodTime <p>Cycle time configuration</p>
+                     * 设置<p>Periodic time configuration</p>
+                     * @param _sparsePeriodTime <p>Periodic time configuration</p>
                      * 
                      */
                     void SetSparsePeriodTime(const SparsePeriodTime& _sparsePeriodTime);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool SparsePeriodTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Retention days (7-7320 days, longest 20 years)</p>
-                     * @return SparseBackupSaveDays <p>Retention days (7-7320 days, longest 20 years)</p>
+                     * 获取<p>Retention days (7-7320 days, up to 20 years)</p>
+                     * @return SparseBackupSaveDays <p>Retention days (7-7320 days, up to 20 years)</p>
                      * 
                      */
                     int64_t GetSparseBackupSaveDays() const;
 
                     /**
-                     * 设置<p>Retention days (7-7320 days, longest 20 years)</p>
-                     * @param _sparseBackupSaveDays <p>Retention days (7-7320 days, longest 20 years)</p>
+                     * 设置<p>Retention days (7-7320 days, up to 20 years)</p>
+                     * @param _sparseBackupSaveDays <p>Retention days (7-7320 days, up to 20 years)</p>
                      * 
                      */
                     void SetSparseBackupSaveDays(const int64_t& _sparseBackupSaveDays);
@@ -167,19 +167,19 @@ namespace TencentCloud
                     bool m_configIdHasBeenSet;
 
                     /**
-                     * <p>Policy type: weekly/monthly/yearly</p>
+                     * <p>Period policy type: weekly/monthly/yearly</p>
                      */
                     std::string m_sparsePeriodConfig;
                     bool m_sparsePeriodConfigHasBeenSet;
 
                     /**
-                     * <p>Cycle time configuration</p>
+                     * <p>Periodic time configuration</p>
                      */
                     SparsePeriodTime m_sparsePeriodTime;
                     bool m_sparsePeriodTimeHasBeenSet;
 
                     /**
-                     * <p>Retention days (7-7320 days, longest 20 years)</p>
+                     * <p>Retention days (7-7320 days, up to 20 years)</p>
                      */
                     int64_t m_sparseBackupSaveDays;
                     bool m_sparseBackupSaveDaysHasBeenSet;

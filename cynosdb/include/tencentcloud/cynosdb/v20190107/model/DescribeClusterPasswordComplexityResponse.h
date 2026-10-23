@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ValidatePasswordDictionaryHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the password length.
-                     * @return ValidatePasswordLength Specifies the password length.
+                     * 获取Password length
+                     * @return ValidatePasswordLength Password length
                      * 
                      */
                     ParamInfo GetValidatePasswordLength() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool ValidatePasswordLengthHasBeenSet() const;
 
                     /**
-                     * 获取Case-Sensitive character count.
-                     * @return ValidatePasswordMixedCaseCount Case-Sensitive character count.
+                     * 获取Number of case-sensitive characters
+                     * @return ValidatePasswordMixedCaseCount Number of case-sensitive characters
                      * 
                      */
                     ParamInfo GetValidatePasswordMixedCaseCount() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool ValidatePasswordMixedCaseCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of digits.
-                     * @return ValidatePasswordNumberCount Number of digits.
+                     * 获取Number of digits
+                     * @return ValidatePasswordNumberCount Number of digits
                      * 
                      */
                     ParamInfo GetValidatePasswordNumberCount() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool ValidatePasswordNumberCountHasBeenSet() const;
 
                     /**
-                     * 获取Password level.
-                     * @return ValidatePasswordPolicy Password level.
+                     * 获取Password level
+                     * @return ValidatePasswordPolicy Password level
                      * 
                      */
                     ParamInfo GetValidatePasswordPolicy() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool ValidatePasswordPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Number of special characters.
-                     * @return ValidatePasswordSpecialCharCount Number of special characters.
+                     * 获取Number of special characters
+                     * @return ValidatePasswordSpecialCharCount Number of special characters
                      * 
                      */
                     ParamInfo GetValidatePasswordSpecialCharCount() const;
@@ -137,31 +137,31 @@ namespace TencentCloud
                     bool m_validatePasswordDictionaryHasBeenSet;
 
                     /**
-                     * Specifies the password length.
+                     * Password length
                      */
                     ParamInfo m_validatePasswordLength;
                     bool m_validatePasswordLengthHasBeenSet;
 
                     /**
-                     * Case-Sensitive character count.
+                     * Number of case-sensitive characters
                      */
                     ParamInfo m_validatePasswordMixedCaseCount;
                     bool m_validatePasswordMixedCaseCountHasBeenSet;
 
                     /**
-                     * Number of digits.
+                     * Number of digits
                      */
                     ParamInfo m_validatePasswordNumberCount;
                     bool m_validatePasswordNumberCountHasBeenSet;
 
                     /**
-                     * Password level.
+                     * Password level
                      */
                     ParamInfo m_validatePasswordPolicy;
                     bool m_validatePasswordPolicyHasBeenSet;
 
                     /**
-                     * Number of special characters.
+                     * Number of special characters
                      */
                     ParamInfo m_validatePasswordSpecialCharCount;
                     bool m_validatePasswordSpecialCharCountHasBeenSet;

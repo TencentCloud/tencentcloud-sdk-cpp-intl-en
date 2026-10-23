@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Logical backup configuration information.
+                * Logical backup configuration information
                 */
                 class LogicBackupConfigInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LogicBackupEnableHasBeenSet() const;
 
                     /**
-                     * 获取<p>Automatic logic backup start time</p>
-                     * @return LogicBackupTimeBeg <p>Automatic logic backup start time</p>
+                     * 获取<p>Start time of automatic logical backup</p>
+                     * @return LogicBackupTimeBeg <p>Start time of automatic logical backup</p>
                      * 
                      */
                     uint64_t GetLogicBackupTimeBeg() const;
 
                     /**
-                     * 设置<p>Automatic logic backup start time</p>
-                     * @param _logicBackupTimeBeg <p>Automatic logic backup start time</p>
+                     * 设置<p>Start time of automatic logical backup</p>
+                     * @param _logicBackupTimeBeg <p>Start time of automatic logical backup</p>
                      * 
                      */
                     void SetLogicBackupTimeBeg(const uint64_t& _logicBackupTimeBeg);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool LogicBackupTimeBegHasBeenSet() const;
 
                     /**
-                     * 获取<p>Automated logic backup end time</p>
-                     * @return LogicBackupTimeEnd <p>Automated logic backup end time</p>
+                     * 获取<p>Auto logic backup end time</p>
+                     * @return LogicBackupTimeEnd <p>Auto logic backup end time</p>
                      * 
                      */
                     uint64_t GetLogicBackupTimeEnd() const;
 
                     /**
-                     * 设置<p>Automated logic backup end time</p>
-                     * @param _logicBackupTimeEnd <p>Automated logic backup end time</p>
+                     * 设置<p>Auto logic backup end time</p>
+                     * @param _logicBackupTimeEnd <p>Auto logic backup end time</p>
                      * 
                      */
                     void SetLogicBackupTimeEnd(const uint64_t& _logicBackupTimeEnd);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool LogicBackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取<p>Automatic logical backup retention time<br>Unit: second</p>
-                     * @return LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
+                     * 获取<p>Automated logic backup retention time<br>Unit: seconds</p>
+                     * @return LogicReserveDuration <p>Automated logic backup retention time<br>Unit: seconds</p>
                      * 
                      */
                     uint64_t GetLogicReserveDuration() const;
 
                     /**
-                     * 设置<p>Automatic logical backup retention time<br>Unit: second</p>
-                     * @param _logicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
+                     * 设置<p>Automated logic backup retention time<br>Unit: seconds</p>
+                     * @param _logicReserveDuration <p>Automated logic backup retention time<br>Unit: seconds</p>
                      * 
                      */
                     void SetLogicReserveDuration(const uint64_t& _logicReserveDuration);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool AutoCopyVaultsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
-                     * @return LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * 获取<p>Day</p><p>Unit: cross-regional logical backup retention time</p>
+                     * @return LogicCrossRegionSaveDays <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
                      * 
                      */
                     int64_t GetLogicCrossRegionSaveDays() const;
 
                     /**
-                     * 设置<p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
-                     * @param _logicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * 设置<p>Day</p><p>Unit: cross-regional logical backup retention time</p>
+                     * @param _logicCrossRegionSaveDays <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
                      * 
                      */
                     void SetLogicCrossRegionSaveDays(const int64_t& _logicCrossRegionSaveDays);
@@ -224,19 +224,19 @@ namespace TencentCloud
                     bool m_logicBackupEnableHasBeenSet;
 
                     /**
-                     * <p>Automatic logic backup start time</p>
+                     * <p>Start time of automatic logical backup</p>
                      */
                     uint64_t m_logicBackupTimeBeg;
                     bool m_logicBackupTimeBegHasBeenSet;
 
                     /**
-                     * <p>Automated logic backup end time</p>
+                     * <p>Auto logic backup end time</p>
                      */
                     uint64_t m_logicBackupTimeEnd;
                     bool m_logicBackupTimeEndHasBeenSet;
 
                     /**
-                     * <p>Automatic logical backup retention time<br>Unit: second</p>
+                     * <p>Automated logic backup retention time<br>Unit: seconds</p>
                      */
                     uint64_t m_logicReserveDuration;
                     bool m_logicReserveDurationHasBeenSet;
@@ -260,7 +260,7 @@ namespace TencentCloud
                     bool m_autoCopyVaultsHasBeenSet;
 
                     /**
-                     * <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
                      */
                     int64_t m_logicCrossRegionSaveDays;
                     bool m_logicCrossRegionSaveDaysHasBeenSet;

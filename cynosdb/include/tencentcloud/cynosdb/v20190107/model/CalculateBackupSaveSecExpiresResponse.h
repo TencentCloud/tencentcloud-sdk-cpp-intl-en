@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of backup files that will be deleted
-                     * @return WillDeleteBackupFileCount Total number of backup files that will be deleted
+                     * 获取Total number of backup files to be deleted
+                     * @return WillDeleteBackupFileCount Total number of backup files to be deleted
                      * 
                      */
                     int64_t GetWillDeleteBackupFileCount() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool WillDeleteBackupFilesHasBeenSet() const;
 
                     /**
-                     * 获取Total files of binlogs that will be deleted
-                     * @return WillDeleteBinlogFileCount Total files of binlogs that will be deleted
+                     * 获取Total number of Binlog files to be deleted
+                     * @return WillDeleteBinlogFileCount Total number of Binlog files to be deleted
                      * 
                      */
                     int64_t GetWillDeleteBinlogFileCount() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool WillDeleteBinlogFileCountHasBeenSet() const;
 
                     /**
-                     * 获取Binlog file list to be deleted
-                     * @return WillDeleteBinlogFiles Binlog file list to be deleted
+                     * 获取List of Binlog files to be deleted
+                     * @return WillDeleteBinlogFiles List of Binlog files to be deleted
                      * 
                      */
                     std::vector<WillDeleteItem> GetWillDeleteBinlogFiles() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool WillDeleteBinlogFilesHasBeenSet() const;
 
                     /**
-                     * 获取Total Redolog files to be deleted
-                     * @return WillDeleteRedoLogFileCount Total Redolog files to be deleted
+                     * 获取Total number of Redolog files to be deleted
+                     * @return WillDeleteRedoLogFileCount Total number of Redolog files to be deleted
                      * 
                      */
                     int64_t GetWillDeleteRedoLogFileCount() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool WillDeleteRedoLogFileCountHasBeenSet() const;
 
                     /**
-                     * 获取List of Redolog files that will be deleted
-                     * @return WillDeleteRedoLogFiles List of Redolog files that will be deleted
+                     * 获取List of Redolog files to be deleted
+                     * @return WillDeleteRedoLogFiles List of Redolog files to be deleted
                      * 
                      */
                     std::vector<WillDeleteItem> GetWillDeleteRedoLogFiles() const;
@@ -131,7 +131,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of backup files that will be deleted
+                     * Total number of backup files to be deleted
                      */
                     int64_t m_willDeleteBackupFileCount;
                     bool m_willDeleteBackupFileCountHasBeenSet;
@@ -143,25 +143,25 @@ namespace TencentCloud
                     bool m_willDeleteBackupFilesHasBeenSet;
 
                     /**
-                     * Total files of binlogs that will be deleted
+                     * Total number of Binlog files to be deleted
                      */
                     int64_t m_willDeleteBinlogFileCount;
                     bool m_willDeleteBinlogFileCountHasBeenSet;
 
                     /**
-                     * Binlog file list to be deleted
+                     * List of Binlog files to be deleted
                      */
                     std::vector<WillDeleteItem> m_willDeleteBinlogFiles;
                     bool m_willDeleteBinlogFilesHasBeenSet;
 
                     /**
-                     * Total Redolog files to be deleted
+                     * Total number of Redolog files to be deleted
                      */
                     int64_t m_willDeleteRedoLogFileCount;
                     bool m_willDeleteRedoLogFileCountHasBeenSet;
 
                     /**
-                     * List of Redolog files that will be deleted
+                     * List of Redolog files to be deleted
                      */
                     std::vector<WillDeleteItem> m_willDeleteRedoLogFiles;
                     bool m_willDeleteRedoLogFilesHasBeenSet;

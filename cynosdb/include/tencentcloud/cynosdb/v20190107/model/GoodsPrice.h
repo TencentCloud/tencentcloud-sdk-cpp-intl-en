@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Item price.
+                * Item price
                 */
                 class GoodsPrice : public AbstractModel
                 {

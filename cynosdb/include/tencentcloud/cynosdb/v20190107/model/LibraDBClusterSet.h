@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster list information
+                * Cluster list information.
                 */
                 class LibraDBClusterSet : public AbstractModel
                 {
@@ -347,15 +347,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
-                     * @return RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+                     * 获取Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
+                     * @return RenewFlag Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
-                     * @param _renewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+                     * 设置Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
+                     * @param _renewFlag Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -410,15 +410,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Storage size in GB
-                     * @return Storage Storage size in GB
+                     * 获取Storage size in GB.
+                     * @return Storage Storage size in GB.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Storage size in GB
-                     * @param _storage Storage size in GB
+                     * 设置Storage size in GB.
+                     * @param _storage Storage size in GB.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -536,15 +536,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取vport port
-                     * @return Vport vport port
+                     * 获取vport.
+                     * @return Vport vport.
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置vport port
-                     * @param _vport vport port
+                     * 设置vport.
+                     * @param _vport vport.
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -557,15 +557,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Update time.
+                     * @return UpdateTime Update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置Update time.
+                     * @param _updateTime Update time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -599,15 +599,15 @@ namespace TencentCloud
                     bool MasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取physical AZ
-                     * @return PhysicalZone physical AZ
+                     * 获取Physical AZ
+                     * @return PhysicalZone Physical AZ
                      * 
                      */
                     std::string GetPhysicalZone() const;
 
                     /**
-                     * 设置physical AZ
-                     * @param _physicalZone physical AZ
+                     * 设置Physical AZ
+                     * @param _physicalZone Physical AZ
                      * 
                      */
                     void SetPhysicalZone(const std::string& _physicalZone);
@@ -728,7 +728,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+                     * Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
@@ -746,7 +746,7 @@ namespace TencentCloud
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * Storage size in GB
+                     * Storage size in GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -782,13 +782,13 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * vport port
+                     * vport.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Update time
+                     * Update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -800,7 +800,7 @@ namespace TencentCloud
                     bool m_masterZoneHasBeenSet;
 
                     /**
-                     * physical AZ
+                     * Physical AZ
                      */
                     std::string m_physicalZone;
                     bool m_physicalZoneHasBeenSet;

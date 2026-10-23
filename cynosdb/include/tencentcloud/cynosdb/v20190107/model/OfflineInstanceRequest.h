@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID array
-                     * @return InstanceIdList Instance ID array
+                     * 获取Instance ID array.
+                     * @return InstanceIdList Instance ID array.
                      * 
                      */
                     std::vector<std::string> GetInstanceIdList() const;
 
                     /**
-                     * 设置Instance ID array
-                     * @param _instanceIdList Instance ID array
+                     * 设置Instance ID array.
+                     * @param _instanceIdList Instance ID array.
                      * 
                      */
                     void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance ID array
+                     * Instance ID array.
                      */
                     std::vector<std::string> m_instanceIdList;
                     bool m_instanceIdListHasBeenSet;

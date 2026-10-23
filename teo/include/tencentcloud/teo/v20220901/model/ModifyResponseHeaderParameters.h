@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HeaderActions HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取HTTP origin header rule list.
+                     * @return HeaderActions HTTP origin header rule list.
                      * 
                      */
                     std::vector<HeaderAction> GetHeaderActions() const;
 
                     /**
-                     * 设置HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _headerActions HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置HTTP origin header rule list.
+                     * @param _headerActions HTTP origin header rule list.
                      * 
                      */
                     void SetHeaderActions(const std::vector<HeaderAction>& _headerActions);
@@ -75,8 +71,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * HTTP origin-pull header rules list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * HTTP origin header rule list.
                      */
                     std::vector<HeaderAction> m_headerActions;
                     bool m_headerActionsHasBeenSet;

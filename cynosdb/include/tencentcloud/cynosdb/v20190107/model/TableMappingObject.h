@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mapping relationship
+                * Table mapping relationship
                 */
                 class TableMappingObject : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TableNameHasBeenSet() const;
 
                     /**
-                     * 获取Map database name
-                     * @return MapDatabaseName Map database name
+                     * 获取Map database names
+                     * @return MapDatabaseName Map database names
                      * 
                      */
                     std::string GetMapDatabaseName() const;
 
                     /**
-                     * 设置Map database name
-                     * @param _mapDatabaseName Map database name
+                     * 设置Map database names
+                     * @param _mapDatabaseName Map database names
                      * 
                      */
                     void SetMapDatabaseName(const std::string& _mapDatabaseName);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool IsPrimaryHasBeenSet() const;
 
                     /**
-                     * 获取Virtual column padding value
-                     * @return VirtualColValue Virtual column padding value
+                     * 获取Fill value of the virtual column
+                     * @return VirtualColValue Fill value of the virtual column
                      * 
                      */
                     std::string GetVirtualColValue() const;
 
                     /**
-                     * 设置Virtual column padding value
-                     * @param _virtualColValue Virtual column padding value
+                     * 设置Fill value of the virtual column
+                     * @param _virtualColValue Fill value of the virtual column
                      * 
                      */
                     void SetVirtualColValue(const std::string& _virtualColValue);
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_tableNameHasBeenSet;
 
                     /**
-                     * Map database name
+                     * Map database names
                      */
                     std::string m_mapDatabaseName;
                     bool m_mapDatabaseNameHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_isPrimaryHasBeenSet;
 
                     /**
-                     * Virtual column padding value
+                     * Fill value of the virtual column
                      */
                     std::string m_virtualColValue;
                     bool m_virtualColValueHasBeenSet;

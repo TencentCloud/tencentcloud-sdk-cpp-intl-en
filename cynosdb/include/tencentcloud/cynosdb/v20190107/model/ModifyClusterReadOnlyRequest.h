@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster read-only switch, valid values: ON, OFF.
-                     * @return ReadOnlyOperation Cluster read-only switch, valid values: ON, OFF.
+                     * 获取Cluster read-only switch. Available values: ON, OFF
+                     * @return ReadOnlyOperation Cluster read-only switch. Available values: ON, OFF
                      * 
                      */
                     std::string GetReadOnlyOperation() const;
 
                     /**
-                     * 设置Cluster read-only switch, valid values: ON, OFF.
-                     * @param _readOnlyOperation Cluster read-only switch, valid values: ON, OFF.
+                     * 设置Cluster read-only switch. Available values: ON, OFF
+                     * @param _readOnlyOperation Cluster read-only switch. Available values: ON, OFF
                      * 
                      */
                     void SetReadOnlyOperation(const std::string& _readOnlyOperation);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ReadOnlyOperationHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
-                     * @return IsInMaintainPeriod Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+                     * 获取yes: Modify within the Ops time window. no: Immediately execute (default value)
+                     * @return IsInMaintainPeriod yes: Modify within the Ops time window. no: Immediately execute (default value)
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
-                     * @param _isInMaintainPeriod Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+                     * 设置yes: Modify within the Ops time window. no: Immediately execute (default value)
+                     * @param _isInMaintainPeriod yes: Modify within the Ops time window. no: Immediately execute (default value)
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Cluster read-only switch, valid values: ON, OFF.
+                     * Cluster read-only switch. Available values: ON, OFF
                      */
                     std::string m_readOnlyOperation;
                     bool m_readOnlyOperationHasBeenSet;
 
                     /**
-                     * Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+                     * yes: Modify within the Ops time window. no: Immediately execute (default value)
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

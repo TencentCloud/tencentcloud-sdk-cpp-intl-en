@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>host</p>
-                     * @return Host <p>host</p>
+                     * 获取<p>Host</p>
+                     * @return Host <p>Host</p>
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置<p>host</p>
-                     * @param _host <p>host</p>
+                     * 设置<p>Host</p>
+                     * @param _host <p>Host</p>
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database account description.</p>
-                     * @return Description <p>Database account description.</p>
+                     * 获取<p>Database account description</p>
+                     * @return Description <p>Database account description</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置<p>Database account description.</p>
-                     * @param _description <p>Database account description.</p>
+                     * 设置<p>Database account description</p>
+                     * @param _description <p>Database account description</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -202,13 +202,13 @@ namespace TencentCloud
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * <p>host</p>
+                     * <p>Host</p>
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * <p>Database account description.</p>
+                     * <p>Database account description</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

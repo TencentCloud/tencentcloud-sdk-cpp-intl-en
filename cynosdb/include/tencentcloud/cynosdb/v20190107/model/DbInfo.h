@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Database details
+                * Database details.
                 */
                 class DbInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database name
-                     * @return DbName Database name
+                     * 获取Database name.
+                     * @return DbName Database name.
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置Database name
-                     * @param _dbName Database name
+                     * 设置Database name.
+                     * @param _dbName Database name.
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取Character set
-                     * @return CharacterSet Character set
+                     * 获取Character set type
+                     * @return CharacterSet Character set type
                      * 
                      */
                     std::string GetCharacterSet() const;
 
                     /**
-                     * 设置Character set
-                     * @param _characterSet Character set
+                     * 设置Character set type
+                     * @param _characterSet Character set type
                      * 
                      */
                     void SetCharacterSet(const std::string& _characterSet);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CharacterSetHasBeenSet() const;
 
                     /**
-                     * 获取Database status
-                     * @return Status Database status
+                     * 获取Database status.
+                     * @return Status Database status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Database status
-                     * @param _status Database status
+                     * 设置Database status.
+                     * @param _status Database status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Collation
-                     * @return CollateRule Collation
+                     * 获取Sorting rule
+                     * @return CollateRule Sorting rule
                      * 
                      */
                     std::string GetCollateRule() const;
 
                     /**
-                     * 设置Collation
-                     * @param _collateRule Collation
+                     * 设置Sorting rule
+                     * @param _collateRule Sorting rule
                      * 
                      */
                     void SetCollateRule(const std::string& _collateRule);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CollateRuleHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the remark of the database.
-                     * @return Description Specifies the remark of the database.
+                     * 获取Database remarks.
+                     * @return Description Database remarks.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Specifies the remark of the database.
-                     * @param _description Specifies the remark of the database.
+                     * 设置Database remarks.
+                     * @param _description Database remarks.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool UserHostPrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Database ID
-                     * @return DbId Database ID
+                     * 获取Database ID.
+                     * @return DbId Database ID.
                      * 
                      */
                     int64_t GetDbId() const;
 
                     /**
-                     * 设置Database ID
-                     * @param _dbId Database ID
+                     * 设置Database ID.
+                     * @param _dbId Database ID.
                      * 
                      */
                     void SetDbId(const int64_t& _dbId);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DbIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -302,31 +302,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database name
+                     * Database name.
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * Character set
+                     * Character set type
                      */
                     std::string m_characterSet;
                     bool m_characterSetHasBeenSet;
 
                     /**
-                     * Database status
+                     * Database status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Collation
+                     * Sorting rule
                      */
                     std::string m_collateRule;
                     bool m_collateRuleHasBeenSet;
 
                     /**
-                     * Specifies the remark of the database.
+                     * Database remarks.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -338,13 +338,13 @@ namespace TencentCloud
                     bool m_userHostPrivilegesHasBeenSet;
 
                     /**
-                     * Database ID
+                     * Database ID.
                      */
                     int64_t m_dbId;
                     bool m_dbIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

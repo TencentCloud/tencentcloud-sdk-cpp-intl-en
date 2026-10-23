@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Database type, value ranges from...to... </p><li> MYSQL </li>
-                     * @return DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+                     * 获取<p>Database type. Value range: </p><li> MYSQL </li>
+                     * @return DbType <p>Database type. Value range: </p><li> MYSQL </li>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置<p>Database type, value ranges from...to... </p><li> MYSQL </li>
-                     * @param _dbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+                     * 设置<p>Database type. Value range: </p><li> MYSQL </li>
+                     * @param _dbType <p>Database type. Value range: </p><li> MYSQL </li>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether required to return AZ information</p>
-                     * @return IncludeZoneStocks <p>Whether required to return AZ information</p>
+                     * 获取<p>Whether to return AZ information</p>
+                     * @return IncludeZoneStocks <p>Whether to return AZ information</p>
                      * 
                      */
                     bool GetIncludeZoneStocks() const;
 
                     /**
-                     * 设置<p>Whether required to return AZ information</p>
-                     * @param _includeZoneStocks <p>Whether required to return AZ information</p>
+                     * 设置<p>Whether to return AZ information</p>
+                     * @param _includeZoneStocks <p>Whether to return AZ information</p>
                      * 
                      */
                     void SetIncludeZoneStocks(const bool& _includeZoneStocks);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IncludeZoneStocksHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance machine type.</p>
-                     * @return DeviceType <p>Instance machine type.</p>
+                     * 获取<p>Instance Machine Type</p>
+                     * @return DeviceType <p>Instance Machine Type</p>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置<p>Instance machine type.</p>
-                     * @param _deviceType <p>Instance machine type.</p>
+                     * 设置<p>Instance Machine Type</p>
+                     * @param _deviceType <p>Instance Machine Type</p>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -150,19 +150,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+                     * <p>Database type. Value range: </p><li> MYSQL </li>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * <p>Whether required to return AZ information</p>
+                     * <p>Whether to return AZ information</p>
                      */
                     bool m_includeZoneStocks;
                     bool m_includeZoneStocksHasBeenSet;
 
                     /**
-                     * <p>Instance machine type.</p>
+                     * <p>Instance Machine Type</p>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

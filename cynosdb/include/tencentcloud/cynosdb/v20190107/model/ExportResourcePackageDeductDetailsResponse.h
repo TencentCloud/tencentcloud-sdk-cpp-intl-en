@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File detail.
-                     * @return FileContent File detail.
+                     * 获取File detail
+                     * @return FileContent File detail
                      * 
                      */
                     std::string GetFileContent() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File detail.
+                     * File detail
                      */
                     std::string m_fileContent;
                     bool m_fileContentHasBeenSet;

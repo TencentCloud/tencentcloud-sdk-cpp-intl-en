@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Analysis Cluster ID
-                     * @return ClusterId Analysis Cluster ID
+                     * 获取Analysis cluster ID
+                     * @return ClusterId Analysis cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Analysis Cluster ID
-                     * @param _clusterId Analysis Cluster ID
+                     * 设置Analysis cluster ID
+                     * @param _clusterId Analysis cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Node ID
-                     * @return NodeId Node ID
+                     * 获取Node ID.
+                     * @return NodeId Node ID.
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
-                     * 设置Node ID
-                     * @param _nodeId Node ID
+                     * 设置Node ID.
+                     * @param _nodeId Node ID.
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page history limit
-                     * @return Limit Page history limit
+                     * 获取Page record limit
+                     * @return Limit Page record limit
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page history limit
-                     * @param _limit Page history limit
+                     * 设置Page record limit
+                     * @param _limit Page record limit
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool StatusListHasBeenSet() const;
 
                     /**
-                     * 获取Map database name
-                     * @return MapSchemas Map database name
+                     * 获取Map database names
+                     * @return MapSchemas Map database names
                      * 
                      */
                     std::vector<std::string> GetMapSchemas() const;
 
                     /**
-                     * 设置Map database name
-                     * @param _mapSchemas Map database name
+                     * 设置Map database names
+                     * @param _mapSchemas Map database names
                      * 
                      */
                     void SetMapSchemas(const std::vector<std::string>& _mapSchemas);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool MapTableNameHasBeenSet() const;
 
                     /**
-                     * 获取Query records where the database name is not null
-                     * @return MapSchemaNotEmpty Query records where the database name is not null
+                     * 获取Whether to query records where the mapping database name is not empty
+                     * @return MapSchemaNotEmpty Whether to query records where the mapping database name is not empty
                      * 
                      */
                     bool GetMapSchemaNotEmpty() const;
 
                     /**
-                     * 设置Query records where the database name is not null
-                     * @param _mapSchemaNotEmpty Query records where the database name is not null
+                     * 设置Whether to query records where the mapping database name is not empty
+                     * @param _mapSchemaNotEmpty Whether to query records where the mapping database name is not empty
                      * 
                      */
                     void SetMapSchemaNotEmpty(const bool& _mapSchemaNotEmpty);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool MapSchemaNotEmptyHasBeenSet() const;
 
                     /**
-                     * 获取Query records where the mapping table name is not null
-                     * @return MapTableNameNotEmpty Query records where the mapping table name is not null
+                     * 获取Whether to query records where the mapping table name is not empty
+                     * @return MapTableNameNotEmpty Whether to query records where the mapping table name is not empty
                      * 
                      */
                     bool GetMapTableNameNotEmpty() const;
 
                     /**
-                     * 设置Query records where the mapping table name is not null
-                     * @param _mapTableNameNotEmpty Query records where the mapping table name is not null
+                     * 设置Whether to query records where the mapping table name is not empty
+                     * @param _mapTableNameNotEmpty Whether to query records where the mapping table name is not empty
                      * 
                      */
                     void SetMapTableNameNotEmpty(const bool& _mapTableNameNotEmpty);
@@ -297,7 +297,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Analysis Cluster ID
+                     * Analysis cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -309,7 +309,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Node ID
+                     * Node ID.
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
@@ -321,7 +321,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page history limit
+                     * Page record limit
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -345,7 +345,7 @@ namespace TencentCloud
                     bool m_statusListHasBeenSet;
 
                     /**
-                     * Map database name
+                     * Map database names
                      */
                     std::vector<std::string> m_mapSchemas;
                     bool m_mapSchemasHasBeenSet;
@@ -357,13 +357,13 @@ namespace TencentCloud
                     bool m_mapTableNameHasBeenSet;
 
                     /**
-                     * Query records where the database name is not null
+                     * Whether to query records where the mapping database name is not empty
                      */
                     bool m_mapSchemaNotEmpty;
                     bool m_mapSchemaNotEmptyHasBeenSet;
 
                     /**
-                     * Query records where the mapping table name is not null
+                     * Whether to query records where the mapping table name is not empty
                      */
                     bool m_mapTableNameNotEmpty;
                     bool m_mapTableNameNotEmptyHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -127,19 +127,19 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
-                     * @return TableType Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+                     * 获取Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
+                     * @return TableType Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
                      * 
                      */
                     std::string GetTableType() const;
 
                     /**
-                     * 设置Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
-                     * @param _tableType Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+                     * 设置Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
+                     * @param _tableType Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
                      * 
                      */
                     void SetTableType(const std::string& _tableType);
@@ -154,7 +154,7 @@ Specifies that "view" only returns the view, "base_table" only returns the basic
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -178,8 +178,8 @@ Specifies that "view" only returns the view, "base_table" only returns the basic
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+                     * Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
                      */
                     std::string m_tableType;
                     bool m_tableTypeHasBeenSet;

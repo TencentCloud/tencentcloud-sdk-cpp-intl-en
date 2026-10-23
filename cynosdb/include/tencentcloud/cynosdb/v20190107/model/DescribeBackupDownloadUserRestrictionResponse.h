@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool BackupLimitClusterRestrictionsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_backupLimitClusterRestrictionsHasBeenSet;
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

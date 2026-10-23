@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return ErrorPageParams Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<ErrorPage> GetErrorPageParams() const;
 
                     /**
                      * 设置Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _errorPageParams Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetErrorPageParams(const std::vector<ErrorPage>& _errorPageParams);
@@ -76,7 +72,6 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<ErrorPage> m_errorPageParams;
                     bool m_errorPageParamsHasBeenSet;

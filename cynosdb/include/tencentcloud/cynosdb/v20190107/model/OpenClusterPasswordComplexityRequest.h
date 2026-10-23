@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ValidatePasswordLengthHasBeenSet() const;
 
                     /**
-                     * 获取Number of letters
-                     * @return ValidatePasswordMixedCaseCount Number of letters
+                     * 获取Number of uppercase/lowercase characters
+                     * @return ValidatePasswordMixedCaseCount Number of uppercase/lowercase characters
                      * 
                      */
                     int64_t GetValidatePasswordMixedCaseCount() const;
 
                     /**
-                     * 设置Number of letters
-                     * @param _validatePasswordMixedCaseCount Number of letters
+                     * 设置Number of uppercase/lowercase characters
+                     * @param _validatePasswordMixedCaseCount Number of uppercase/lowercase characters
                      * 
                      */
                     void SetValidatePasswordMixedCaseCount(const int64_t& _validatePasswordMixedCaseCount);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ValidatePasswordMixedCaseCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of symbols
-                     * @return ValidatePasswordSpecialCharCount Number of symbols
+                     * 获取Number of special characters
+                     * @return ValidatePasswordSpecialCharCount Number of special characters
                      * 
                      */
                     int64_t GetValidatePasswordSpecialCharCount() const;
 
                     /**
-                     * 设置Number of symbols
-                     * @param _validatePasswordSpecialCharCount Number of symbols
+                     * 设置Number of special characters
+                     * @param _validatePasswordSpecialCharCount Number of special characters
                      * 
                      */
                     void SetValidatePasswordSpecialCharCount(const int64_t& _validatePasswordSpecialCharCount);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ValidatePasswordNumberCountHasBeenSet() const;
 
                     /**
-                     * 获取Password strength. Valid values: `MEDIUM`, `STRONG`.
-                     * @return ValidatePasswordPolicy Password strength. Valid values: `MEDIUM`, `STRONG`.
+                     * 获取Password strength ("MEDIUM", "STRONG")
+                     * @return ValidatePasswordPolicy Password strength ("MEDIUM", "STRONG")
                      * 
                      */
                     std::string GetValidatePasswordPolicy() const;
 
                     /**
-                     * 设置Password strength. Valid values: `MEDIUM`, `STRONG`.
-                     * @param _validatePasswordPolicy Password strength. Valid values: `MEDIUM`, `STRONG`.
+                     * 设置Password strength ("MEDIUM", "STRONG")
+                     * @param _validatePasswordPolicy Password strength ("MEDIUM", "STRONG")
                      * 
                      */
                     void SetValidatePasswordPolicy(const std::string& _validatePasswordPolicy);
@@ -192,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -204,13 +204,13 @@ namespace TencentCloud
                     bool m_validatePasswordLengthHasBeenSet;
 
                     /**
-                     * Number of letters
+                     * Number of uppercase/lowercase characters
                      */
                     int64_t m_validatePasswordMixedCaseCount;
                     bool m_validatePasswordMixedCaseCountHasBeenSet;
 
                     /**
-                     * Number of symbols
+                     * Number of special characters
                      */
                     int64_t m_validatePasswordSpecialCharCount;
                     bool m_validatePasswordSpecialCharCountHasBeenSet;
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_validatePasswordNumberCountHasBeenSet;
 
                     /**
-                     * Password strength. Valid values: `MEDIUM`, `STRONG`.
+                     * Password strength ("MEDIUM", "STRONG")
                      */
                     std::string m_validatePasswordPolicy;
                     bool m_validatePasswordPolicyHasBeenSet;

@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return QueryString Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Query string configuration. Optional configuration, leave blank for no configuration.
+                     * @return QueryString Query string configuration. Optional configuration, leave blank for no configuration.
                      * 
                      */
                     UpstreamRequestQueryString GetQueryString() const;
 
                     /**
-                     * 设置Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _queryString Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Query string configuration. Optional configuration, leave blank for no configuration.
+                     * @param _queryString Query string configuration. Optional configuration, leave blank for no configuration.
                      * 
                      */
                     void SetQueryString(const UpstreamRequestQueryString& _queryString);
@@ -74,19 +70,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool QueryStringHasBeenSet() const;
 
                     /**
-                     * 获取Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Cookie Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Cookie configuration. Optional configuration. Leave it blank for no configuration.
+                     * @return Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
                      * 
                      */
                     UpstreamRequestCookie GetCookie() const;
 
                     /**
-                     * 设置Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cookie Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Cookie configuration. Optional configuration. Leave it blank for no configuration.
+                     * @param _cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
                      * 
                      */
                     void SetCookie(const UpstreamRequestCookie& _cookie);
@@ -101,15 +93,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Query string configuration. Optional configuration, leave blank for no configuration.
                      */
                     UpstreamRequestQueryString m_queryString;
                     bool m_queryStringHasBeenSet;
 
                     /**
-                     * Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Cookie configuration. Optional configuration. Leave it blank for no configuration.
                      */
                     UpstreamRequestCookie m_cookie;
                     bool m_cookieHasBeenSet;

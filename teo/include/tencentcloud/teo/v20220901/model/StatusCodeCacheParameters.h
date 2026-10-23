@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return StatusCodeCacheParams Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Status code cache TTL.
+                     * @return StatusCodeCacheParams Status code cache TTL.
                      * 
                      */
                     std::vector<StatusCodeCacheParam> GetStatusCodeCacheParams() const;
 
                     /**
-                     * 设置Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _statusCodeCacheParams Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Status code cache TTL.
+                     * @param _statusCodeCacheParams Status code cache TTL.
                      * 
                      */
                     void SetStatusCodeCacheParams(const std::vector<StatusCodeCacheParam>& _statusCodeCacheParams);
@@ -75,8 +71,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Status code cache TTL.
                      */
                     std::vector<StatusCodeCacheParam> m_statusCodeCacheParams;
                     bool m_statusCodeCacheParamsHasBeenSet;

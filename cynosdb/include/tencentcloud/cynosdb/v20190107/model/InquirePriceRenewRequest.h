@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Validity period, which needs to be used together with `TimeUnit`.
-                     * @return TimeSpan Validity period, which needs to be used together with `TimeUnit`.
+                     * 获取Purchase period, combined with TimeUnit for the changes to take effect
+                     * @return TimeSpan Purchase period, combined with TimeUnit for the changes to take effect
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Validity period, which needs to be used together with `TimeUnit`.
-                     * @param _timeSpan Validity period, which needs to be used together with `TimeUnit`.
+                     * 设置Purchase period, combined with TimeUnit for the changes to take effect
+                     * @param _timeSpan Purchase period, combined with TimeUnit for the changes to take effect
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
-                     * @return TimeUnit Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+                     * 获取Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
+                     * @return TimeUnit Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
-                     * @param _timeUnit Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+                     * 设置Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
+                     * @param _timeUnit Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Validity period, which needs to be used together with `TimeUnit`.
+                     * Purchase period, combined with TimeUnit for the changes to take effect
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+                     * Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;

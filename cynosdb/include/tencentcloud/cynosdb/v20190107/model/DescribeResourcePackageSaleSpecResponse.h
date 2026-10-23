@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of available resource packs
-                     * @return Total Total number of available resource packs
+                     * 获取Total number of purchasable resource pack specifications
+                     * @return Total Total number of purchasable resource pack specifications
                      * 
                      */
                     int64_t GetTotal() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the details of the resource pack.
-                     * @return Detail Specifies the details of the resource pack.
+                     * 获取Resource pack details
+                     * @return Detail Resource pack details
                      * 
                      */
                     std::vector<SalePackageSpec> GetDetail() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of available resource packs
+                     * Total number of purchasable resource pack specifications
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Specifies the details of the resource pack.
+                     * Resource pack details
                      */
                     std::vector<SalePackageSpec> m_detail;
                     bool m_detailHasBeenSet;

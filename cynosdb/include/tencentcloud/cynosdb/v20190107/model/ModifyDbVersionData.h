@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modify database kernel version task information.
+                * Modify database kernel version task information
                 */
                 class ModifyDbVersionData : public AbstractModel
                 {

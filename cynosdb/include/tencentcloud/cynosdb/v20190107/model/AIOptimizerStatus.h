@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
-                     * @return Status <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+                     * 获取<p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
+                     * @return Status <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
-                     * @param _status <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+                     * 设置<p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
+                     * @param _status <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start time.</p>
-                     * @return OpenTime <p>Start time.</p>
+                     * 获取<p>Activation time.</p>
+                     * @return OpenTime <p>Activation time.</p>
                      * 
                      */
                     std::string GetOpenTime() const;
 
                     /**
-                     * 设置<p>Start time.</p>
-                     * @param _openTime <p>Start time.</p>
+                     * 设置<p>Activation time.</p>
+                     * @param _openTime <p>Activation time.</p>
                      * 
                      */
                     void SetOpenTime(const std::string& _openTime);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+                     * <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Start time.</p>
+                     * <p>Activation time.</p>
                      */
                     std::string m_openTime;
                     bool m_openTimeHasBeenSet;

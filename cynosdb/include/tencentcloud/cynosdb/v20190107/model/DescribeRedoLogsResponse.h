@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取redo log information.
-                     * @return RedoLogs redo log information.
+                     * 获取redo log information
+                     * @return RedoLogs redo log information
                      * 
                      */
                     std::vector<RedoLogItem> GetRedoLogs() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * redo log information.
+                     * redo log information
                      */
                     std::vector<RedoLogItem> m_redoLogs;
                     bool m_redoLogsHasBeenSet;

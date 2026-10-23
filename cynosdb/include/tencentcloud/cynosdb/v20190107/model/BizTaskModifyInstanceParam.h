@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance parameter modification task details.
+                * Parameter modification task details of an instance
                 */
                 class BizTaskModifyInstanceParam : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Details of instance parameter modification task.
-                     * @return ModifyInstanceParamList Details of instance parameter modification task.
+                     * 获取Instance parameter modification task details
+                     * @return ModifyInstanceParamList Instance parameter modification task details
                      * 
                      */
                     std::vector<ModifyParamItem> GetModifyInstanceParamList() const;
 
                     /**
-                     * 设置Details of instance parameter modification task.
-                     * @param _modifyInstanceParamList Details of instance parameter modification task.
+                     * 设置Instance parameter modification task details
+                     * @param _modifyInstanceParamList Instance parameter modification task details
                      * 
                      */
                     void SetModifyInstanceParamList(const std::vector<ModifyParamItem>& _modifyInstanceParamList);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Details of instance parameter modification task.
+                     * Instance parameter modification task details
                      */
                     std::vector<ModifyParamItem> m_modifyInstanceParamList;
                     bool m_modifyInstanceParamListHasBeenSet;

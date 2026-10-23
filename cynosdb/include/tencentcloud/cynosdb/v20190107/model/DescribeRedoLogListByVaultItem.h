@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * log message
+                * Redo log message
                 */
                 class DescribeRedoLogListByVaultItem : public AbstractModel
                 {

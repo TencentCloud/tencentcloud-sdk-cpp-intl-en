@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Binlog list.
-                     * @return Binlogs Binlog list.
+                     * 获取Binlog list
+                     * @return Binlogs Binlog list
                      * 
                      */
                     std::vector<BinlogItem> GetBinlogs() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Binlog list.
+                     * Binlog list
                      */
                     std::vector<BinlogItem> m_binlogs;
                     bool m_binlogsHasBeenSet;

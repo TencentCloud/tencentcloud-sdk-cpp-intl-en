@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Safe info
+                * Safe information
                 */
                 class VaultInfo : public AbstractModel
                 {

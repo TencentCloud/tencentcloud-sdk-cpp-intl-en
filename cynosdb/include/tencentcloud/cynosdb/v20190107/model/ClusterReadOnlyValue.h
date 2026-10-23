@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster read-only switch list.
+                * List of cluster read-only switches
                 */
                 class ClusterReadOnlyValue : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the value of the read-only switch.
-                     * @return ReadOnlyValue Specifies the value of the read-only switch.
+                     * 获取Read-only switch value
+                     * @return ReadOnlyValue Read-only switch value
                      * 
                      */
                     std::string GetReadOnlyValue() const;
 
                     /**
-                     * 设置Specifies the value of the read-only switch.
-                     * @param _readOnlyValue Specifies the value of the read-only switch.
+                     * 设置Read-only switch value
+                     * @param _readOnlyValue Read-only switch value
                      * 
                      */
                     void SetReadOnlyValue(const std::string& _readOnlyValue);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Specifies the value of the read-only switch.
+                     * Read-only switch value
                      */
                     std::string m_readOnlyValue;
                     bool m_readOnlyValueHasBeenSet;

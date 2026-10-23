@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
-                     * @return AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+                     * 获取<p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
+                     * @return AccountName <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置<p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
-                     * @param _accountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+                     * 设置<p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
+                     * @param _accountName <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>host (% or ipv4 address)</p>
-                     * @return Host <p>host (% or ipv4 address)</p>
+                     * 获取<p>Host (% or ipv4 address)</p>
+                     * @return Host <p>Host (% or ipv4 address)</p>
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置<p>host (% or ipv4 address)</p>
-                     * @param _host <p>host (% or ipv4 address)</p>
+                     * 设置<p>Host (% or ipv4 address)</p>
+                     * @param _host <p>Host (% or ipv4 address)</p>
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取<p>Password. The length range is 8 to 64 characters.</p>
-                     * @return AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
+                     * 获取<p>Password. The password length range is 8 to 64 characters.</p>
+                     * @return AccountPassword <p>Password. The password length range is 8 to 64 characters.</p>
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置<p>Password. The length range is 8 to 64 characters.</p>
-                     * @param _accountPassword <p>Password. The length range is 8 to 64 characters.</p>
+                     * 设置<p>Password. The password length range is 8 to 64 characters.</p>
+                     * @param _accountPassword <p>Password. The password length range is 8 to 64 characters.</p>
                      * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum user connections cannot be greater than 10240</p>
-                     * @return MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
+                     * 获取<p>Maximum user connections, cannot be greater than 10240</p>
+                     * @return MaxUserConnections <p>Maximum user connections, cannot be greater than 10240</p>
                      * 
                      */
                     int64_t GetMaxUserConnections() const;
 
                     /**
-                     * 设置<p>Maximum user connections cannot be greater than 10240</p>
-                     * @param _maxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
+                     * 设置<p>Maximum user connections, cannot be greater than 10240</p>
+                     * @param _maxUserConnections <p>Maximum user connections, cannot be greater than 10240</p>
                      * 
                      */
                     void SetMaxUserConnections(const int64_t& _maxUserConnections);
@@ -175,19 +175,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+                     * <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * <p>host (% or ipv4 address)</p>
+                     * <p>Host (% or ipv4 address)</p>
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * <p>Password. The length range is 8 to 64 characters.</p>
+                     * <p>Password. The password length range is 8 to 64 characters.</p>
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Maximum user connections cannot be greater than 10240</p>
+                     * <p>Maximum user connections, cannot be greater than 10240</p>
                      */
                     int64_t m_maxUserConnections;
                     bool m_maxUserConnectionsHasBeenSet;

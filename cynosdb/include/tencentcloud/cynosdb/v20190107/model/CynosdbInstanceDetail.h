@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>User Uin</p>
-                     * @return Uin <p>User Uin</p>
+                     * 获取<p>User Uin.</p>
+                     * @return Uin <p>User Uin.</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置<p>User Uin</p>
-                     * @param _uin <p>User Uin</p>
+                     * 设置<p>User Uin.</p>
+                     * @param _uin <p>User Uin.</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance name</p>
-                     * @return InstanceName <p>Instance name</p>
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置<p>Instance name</p>
-                     * @param _instanceName <p>Instance name</p>
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region</p>
-                     * @return Region <p>Region</p>
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置<p>Region</p>
-                     * @param _region <p>Region</p>
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
-                     * @return Status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+                     * 获取<p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
+                     * @return Status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
-                     * @param _status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+                     * 设置<p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
+                     * @param _status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status description in Chinese of the instance</p>
-                     * @return StatusDesc <p>Status description in Chinese of the instance</p>
+                     * 获取<p>Status description in Chinese of the instance.</p>
+                     * @return StatusDesc <p>Status description in Chinese of the instance.</p>
                      * 
                      */
                     std::string GetStatusDesc() const;
 
                     /**
-                     * 设置<p>Status description in Chinese of the instance</p>
-                     * @param _statusDesc <p>Status description in Chinese of the instance</p>
+                     * 设置<p>Status description in Chinese of the instance.</p>
+                     * @param _statusDesc <p>Status description in Chinese of the instance.</p>
                      * 
                      */
                     void SetStatusDesc(const std::string& _statusDesc);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
-                     * @return ServerlessStatus <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+                     * 获取<p>serverless instance status. Possible values: <br>resume<br>pause</p>
+                     * @return ServerlessStatus <p>serverless instance status. Possible values: <br>resume<br>pause</p>
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置<p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
-                     * @param _serverlessStatus <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+                     * 设置<p>serverless instance status. Possible values: <br>resume<br>pause</p>
+                     * @param _serverlessStatus <p>serverless instance status. Possible values: <br>resume<br>pause</p>
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database type.</p>
-                     * @return DbType <p>Database type.</p>
+                     * 获取<p>Database type</p>
+                     * @return DbType <p>Database type</p>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置<p>Database type.</p>
-                     * @param _dbType <p>Database type.</p>
+                     * 设置<p>Database type</p>
+                     * @param _dbType <p>Database type</p>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database version</p>
-                     * @return DbVersion <p>Database version</p>
+                     * 获取<p>Database version.</p>
+                     * @return DbVersion <p>Database version.</p>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置<p>Database version</p>
-                     * @param _dbVersion <p>Database version</p>
+                     * 设置<p>Database version.</p>
+                     * @param _dbVersion <p>Database version.</p>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Memory, unit: GB</p>
-                     * @return Memory <p>Memory, unit: GB</p>
+                     * 获取<p>Memory in GB</p>
+                     * @return Memory <p>Memory in GB</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置<p>Memory, unit: GB</p>
-                     * @param _memory <p>Memory, unit: GB</p>
+                     * 设置<p>Memory in GB</p>
+                     * @param _memory <p>Memory in GB</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Current instance role</p>
-                     * @return InstanceRole <p>Current instance role</p>
+                     * 获取<p>Current role of the instance</p>
+                     * @return InstanceRole <p>Current role of the instance</p>
                      * 
                      */
                     std::string GetInstanceRole() const;
 
                     /**
-                     * 设置<p>Current instance role</p>
-                     * @param _instanceRole <p>Current instance role</p>
+                     * 设置<p>Current role of the instance</p>
+                     * @param _instanceRole <p>Current role of the instance</p>
                      * 
                      */
                     void SetInstanceRole(const std::string& _instanceRole);
@@ -488,15 +488,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Payment mode</p>
-                     * @return PayMode <p>Payment mode</p>
+                     * 获取<p>Payment mode.</p>
+                     * @return PayMode <p>Payment mode.</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置<p>Payment mode</p>
-                     * @param _payMode <p>Payment mode</p>
+                     * 设置<p>Payment mode.</p>
+                     * @param _payMode <p>Payment mode.</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -530,15 +530,15 @@ namespace TencentCloud
                     bool PeriodEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Network type.</p>
-                     * @return NetType <p>Network type.</p>
+                     * 获取<p>Network type</p>
+                     * @return NetType <p>Network type</p>
                      * 
                      */
                     int64_t GetNetType() const;
 
                     /**
-                     * 设置<p>Network type.</p>
-                     * @param _netType <p>Network type.</p>
+                     * 设置<p>Network type</p>
+                     * @param _netType <p>Network type</p>
                      * 
                      */
                     void SetNetType(const int64_t& _netType);
@@ -635,15 +635,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance public network domain name</p>
-                     * @return WanDomain <p>Instance public network domain name</p>
+                     * 获取<p>Instance public network domain</p>
+                     * @return WanDomain <p>Instance public network domain</p>
                      * 
                      */
                     std::string GetWanDomain() const;
 
                     /**
-                     * 设置<p>Instance public network domain name</p>
-                     * @param _wanDomain <p>Instance public network domain name</p>
+                     * 设置<p>Instance public network domain</p>
+                     * @param _wanDomain <p>Instance public network domain</p>
                      * 
                      */
                     void SetWanDomain(const std::string& _wanDomain);
@@ -656,15 +656,15 @@ namespace TencentCloud
                     bool WanDomainHasBeenSet() const;
 
                     /**
-                     * 获取<p>Character set</p>
-                     * @return Charset <p>Character set</p>
+                     * 获取<p>Character set.</p>
+                     * @return Charset <p>Character set.</p>
                      * 
                      */
                     std::string GetCharset() const;
 
                     /**
-                     * 设置<p>Character set</p>
-                     * @param _charset <p>Character set</p>
+                     * 设置<p>Character set.</p>
+                     * @param _charset <p>Character set.</p>
                      * 
                      */
                     void SetCharset(const std::string& _charset);
@@ -698,15 +698,15 @@ namespace TencentCloud
                     bool CynosVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Renewal flag</p>
-                     * @return RenewFlag <p>Renewal flag</p>
+                     * 获取<p>Renewal flag.</p>
+                     * @return RenewFlag <p>Renewal flag.</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置<p>Renewal flag</p>
-                     * @param _renewFlag <p>Renewal flag</p>
+                     * 设置<p>Renewal flag.</p>
+                     * @param _renewFlag <p>Renewal flag.</p>
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -719,15 +719,15 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取<p>serverless instance cpu minimum</p>
-                     * @return MinCpu <p>serverless instance cpu minimum</p>
+                     * 获取<p>serverless instance cpu lower limit</p>
+                     * @return MinCpu <p>serverless instance cpu lower limit</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置<p>serverless instance cpu minimum</p>
-                     * @param _minCpu <p>serverless instance cpu minimum</p>
+                     * 设置<p>serverless instance cpu lower limit</p>
+                     * @param _minCpu <p>serverless instance cpu lower limit</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -740,15 +740,15 @@ namespace TencentCloud
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>cpu cap of the serverless instance</p>
-                     * @return MaxCpu <p>cpu cap of the serverless instance</p>
+                     * 获取<p>cpu upper limit of a serverless instance</p>
+                     * @return MaxCpu <p>cpu upper limit of a serverless instance</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置<p>cpu cap of the serverless instance</p>
-                     * @param _maxCpu <p>cpu cap of the serverless instance</p>
+                     * 设置<p>cpu upper limit of a serverless instance</p>
+                     * @param _maxCpu <p>cpu upper limit of a serverless instance</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -782,15 +782,15 @@ namespace TencentCloud
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster read/write instance Availability Zone</p>
-                     * @return MasterZone <p>Cluster read/write instance Availability Zone</p>
+                     * 获取<p>Availability Zone of the Cluster's Read/Write Instance</p>
+                     * @return MasterZone <p>Availability Zone of the Cluster's Read/Write Instance</p>
                      * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置<p>Cluster read/write instance Availability Zone</p>
-                     * @param _masterZone <p>Cluster read/write instance Availability Zone</p>
+                     * 设置<p>Availability Zone of the Cluster's Read/Write Instance</p>
+                     * @param _masterZone <p>Availability Zone of the Cluster's Read/Write Instance</p>
                      * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
@@ -868,7 +868,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>User Uin</p>
+                     * <p>User Uin.</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
@@ -898,7 +898,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * <p>Instance name</p>
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -910,7 +910,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * <p>Region</p>
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
@@ -922,31 +922,31 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+                     * <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Status description in Chinese of the instance</p>
+                     * <p>Status description in Chinese of the instance.</p>
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+                     * <p>serverless instance status. Possible values: <br>resume<br>pause</p>
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * <p>Database type.</p>
+                     * <p>Database type</p>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * <p>Database version</p>
+                     * <p>Database version.</p>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
@@ -958,7 +958,7 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * <p>Memory, unit: GB</p>
+                     * <p>Memory in GB</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
@@ -976,7 +976,7 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * <p>Current instance role</p>
+                     * <p>Current role of the instance</p>
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;
@@ -994,7 +994,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Payment mode</p>
+                     * <p>Payment mode.</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -1006,7 +1006,7 @@ namespace TencentCloud
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
-                     * <p>Network type.</p>
+                     * <p>Network type</p>
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;
@@ -1036,13 +1036,13 @@ namespace TencentCloud
                     bool m_vportHasBeenSet;
 
                     /**
-                     * <p>Instance public network domain name</p>
+                     * <p>Instance public network domain</p>
                      */
                     std::string m_wanDomain;
                     bool m_wanDomainHasBeenSet;
 
                     /**
-                     * <p>Character set</p>
+                     * <p>Character set.</p>
                      */
                     std::string m_charset;
                     bool m_charsetHasBeenSet;
@@ -1054,19 +1054,19 @@ namespace TencentCloud
                     bool m_cynosVersionHasBeenSet;
 
                     /**
-                     * <p>Renewal flag</p>
+                     * <p>Renewal flag.</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * <p>serverless instance cpu minimum</p>
+                     * <p>serverless instance cpu lower limit</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * <p>cpu cap of the serverless instance</p>
+                     * <p>cpu upper limit of a serverless instance</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
@@ -1078,7 +1078,7 @@ namespace TencentCloud
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * <p>Cluster read/write instance Availability Zone</p>
+                     * <p>Availability Zone of the Cluster's Read/Write Instance</p>
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;

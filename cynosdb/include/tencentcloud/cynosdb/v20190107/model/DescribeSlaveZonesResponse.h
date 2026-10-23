@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Secondary AZ.
-                     * @return SlaveZones Secondary AZ.
+                     * 获取Secondary AZ
+                     * @return SlaveZones Secondary AZ
                      * 
                      */
                     std::vector<std::string> GetSlaveZones() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Secondary AZ.
+                     * Secondary AZ
                      */
                     std::vector<std::string> m_slaveZones;
                     bool m_slaveZonesHasBeenSet;

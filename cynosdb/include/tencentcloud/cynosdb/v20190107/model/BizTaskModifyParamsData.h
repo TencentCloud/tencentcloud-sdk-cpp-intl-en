@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modify parameter task data.
+                * Parameter modification task data
                 */
                 class BizTaskModifyParamsData : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster parameter modification data.
-                     * @return ClusterParamList Cluster parameter modification data.
+                     * 获取Cluster parameter modification data
+                     * @return ClusterParamList Cluster parameter modification data
                      * 
                      */
                     std::vector<ModifyParamItem> GetClusterParamList() const;
 
                     /**
-                     * 设置Cluster parameter modification data.
-                     * @param _clusterParamList Cluster parameter modification data.
+                     * 设置Cluster parameter modification data
+                     * @param _clusterParamList Cluster parameter modification data
                      * 
                      */
                     void SetClusterParamList(const std::vector<ModifyParamItem>& _clusterParamList);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ClusterParamListHasBeenSet() const;
 
                     /**
-                     * 获取Instance parameter modification data.
-                     * @return ModifyInstanceParams Instance parameter modification data.
+                     * 获取Instance parameter modification data
+                     * @return ModifyInstanceParams Instance parameter modification data
                      * 
                      */
                     std::vector<BizTaskModifyInstanceParam> GetModifyInstanceParams() const;
 
                     /**
-                     * 设置Instance parameter modification data.
-                     * @param _modifyInstanceParams Instance parameter modification data.
+                     * 设置Instance parameter modification data
+                     * @param _modifyInstanceParams Instance parameter modification data
                      * 
                      */
                     void SetModifyInstanceParams(const std::vector<BizTaskModifyInstanceParam>& _modifyInstanceParams);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster parameter modification data.
+                     * Cluster parameter modification data
                      */
                     std::vector<ModifyParamItem> m_clusterParamList;
                     bool m_clusterParamListHasBeenSet;
 
                     /**
-                     * Instance parameter modification data.
+                     * Instance parameter modification data
                      */
                     std::vector<BizTaskModifyInstanceParam> m_modifyInstanceParams;
                     bool m_modifyInstanceParamsHasBeenSet;

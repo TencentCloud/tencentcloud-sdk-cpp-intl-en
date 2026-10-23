@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback task information.
+                * Rollback task information
                 */
                 class RollbackData : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance CPU.
-                     * @return Cpu Instance CPU.
+                     * 获取Instance CPU
+                     * @return Cpu Instance CPU
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Instance CPU.
-                     * @param _cpu Instance CPU.
+                     * 设置Instance CPU
+                     * @param _cpu Instance CPU
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory.
-                     * @return Memory Instance memory.
+                     * 获取Instance memory
+                     * @return Memory Instance memory
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory.
-                     * @param _memory Instance memory.
+                     * 设置Instance memory
+                     * @param _memory Instance memory
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Cluster storage upper limit.
-                     * @return StorageLimit Cluster storage upper limit.
+                     * 获取Cluster storage limit
+                     * @return StorageLimit Cluster storage limit
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Cluster storage upper limit.
-                     * @param _storageLimit Cluster storage upper limit.
+                     * 设置Cluster storage limit
+                     * @param _storageLimit Cluster storage limit
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Original cluster ID.
-                     * @return OriginalClusterId Original cluster ID.
+                     * 获取Source cluster id
+                     * @return OriginalClusterId Source cluster id
                      * 
                      */
                     std::string GetOriginalClusterId() const;
 
                     /**
-                     * 设置Original cluster ID.
-                     * @param _originalClusterId Original cluster ID.
+                     * 设置Source cluster id
+                     * @param _originalClusterId Source cluster id
                      * 
                      */
                     void SetOriginalClusterId(const std::string& _originalClusterId);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool OriginalClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Original cluster name.
-                     * @return OriginalClusterName Original cluster name.
+                     * 获取Source cluster name
+                     * @return OriginalClusterName Source cluster name
                      * 
                      */
                     std::string GetOriginalClusterName() const;
 
                     /**
-                     * 设置Original cluster name.
-                     * @param _originalClusterName Original cluster name.
+                     * 设置Source cluster name
+                     * @param _originalClusterName Source cluster name
                      * 
                      */
                     void SetOriginalClusterName(const std::string& _originalClusterName);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool OriginalClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Rollback method.
-                     * @return RollbackStrategy Rollback method.
+                     * 获取Rollback mode
+                     * @return RollbackStrategy Rollback mode
                      * 
                      */
                     std::string GetRollbackStrategy() const;
 
                     /**
-                     * 设置Rollback method.
-                     * @param _rollbackStrategy Rollback method.
+                     * 设置Rollback mode
+                     * @param _rollbackStrategy Rollback mode
                      * 
                      */
                     void SetRollbackStrategy(const std::string& _rollbackStrategy);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool RollbackStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot time.
-                     * @return SnapshotTime Snapshot time.
+                     * 获取Snapshot time
+                     * @return SnapshotTime Snapshot time
                      * 
                      */
                     std::string GetSnapshotTime() const;
 
                     /**
-                     * 设置Snapshot time.
-                     * @param _snapshotTime Snapshot time.
+                     * 设置Snapshot time
+                     * @param _snapshotTime Snapshot time
                      * 
                      */
                     void SetSnapshotTime(const std::string& _snapshotTime);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool SnapshotTimeHasBeenSet() const;
 
                     /**
-                     * 获取Roll back to the Serverless cluster with minimum CPU.
-                     * @return MinCpu Roll back to the Serverless cluster with minimum CPU.
+                     * 获取Minimum CPU for rollback to a Serverless cluster
+                     * @return MinCpu Minimum CPU for rollback to a Serverless cluster
                      * 
                      */
                     int64_t GetMinCpu() const;
 
                     /**
-                     * 设置Roll back to the Serverless cluster with minimum CPU.
-                     * @param _minCpu Roll back to the Serverless cluster with minimum CPU.
+                     * 设置Minimum CPU for rollback to a Serverless cluster
+                     * @param _minCpu Minimum CPU for rollback to a Serverless cluster
                      * 
                      */
                     void SetMinCpu(const int64_t& _minCpu);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取Roll back to the Serverless cluster with maximum CPU.
-                     * @return MaxCpu Roll back to the Serverless cluster with maximum CPU.
+                     * 获取Maximum CPU when rolling back to a Serverless cluster
+                     * @return MaxCpu Maximum CPU when rolling back to a Serverless cluster
                      * 
                      */
                     int64_t GetMaxCpu() const;
 
                     /**
-                     * 设置Roll back to the Serverless cluster with maximum CPU.
-                     * @param _maxCpu Roll back to the Serverless cluster with maximum CPU.
+                     * 设置Maximum CPU when rolling back to a Serverless cluster
+                     * @param _maxCpu Maximum CPU when rolling back to a Serverless cluster
                      * 
                      */
                     void SetMaxCpu(const int64_t& _maxCpu);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot ID.
-                     * @return SnapShotId Snapshot ID.
+                     * 获取Snapshot ID
+                     * @return SnapShotId Snapshot ID
                      * 
                      */
                     uint64_t GetSnapShotId() const;
 
                     /**
-                     * 设置Snapshot ID.
-                     * @param _snapShotId Snapshot ID.
+                     * 设置Snapshot ID
+                     * @param _snapShotId Snapshot ID
                      * 
                      */
                     void SetSnapShotId(const uint64_t& _snapShotId);
@@ -302,15 +302,15 @@ namespace TencentCloud
                     bool RollbackTablesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the backup file name.
-                     * @return BackupFileName Specifies the backup file name.
+                     * 获取Backup file name
+                     * @return BackupFileName Backup file name
                      * 
                      */
                     std::string GetBackupFileName() const;
 
                     /**
-                     * 设置Specifies the backup file name.
-                     * @param _backupFileName Specifies the backup file name.
+                     * 设置Backup file name
+                     * @param _backupFileName Backup file name
                      * 
                      */
                     void SetBackupFileName(const std::string& _backupFileName);
@@ -323,15 +323,15 @@ namespace TencentCloud
                     bool BackupFileNameHasBeenSet() const;
 
                     /**
-                     * 获取Rollback process.
-                     * @return RollbackProcess Rollback process.
+                     * 获取Rollback process
+                     * @return RollbackProcess Rollback process
                      * 
                      */
                     RollbackProcessInfo GetRollbackProcess() const;
 
                     /**
-                     * 设置Rollback process.
-                     * @param _rollbackProcess Rollback process.
+                     * 设置Rollback process
+                     * @param _rollbackProcess Rollback process
                      * 
                      */
                     void SetRollbackProcess(const RollbackProcessInfo& _rollbackProcess);
@@ -346,61 +346,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance CPU.
+                     * Instance CPU
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Instance memory.
+                     * Instance memory
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Cluster storage upper limit.
+                     * Cluster storage limit
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Original cluster ID.
+                     * Source cluster id
                      */
                     std::string m_originalClusterId;
                     bool m_originalClusterIdHasBeenSet;
 
                     /**
-                     * Original cluster name.
+                     * Source cluster name
                      */
                     std::string m_originalClusterName;
                     bool m_originalClusterNameHasBeenSet;
 
                     /**
-                     * Rollback method.
+                     * Rollback mode
                      */
                     std::string m_rollbackStrategy;
                     bool m_rollbackStrategyHasBeenSet;
 
                     /**
-                     * Snapshot time.
+                     * Snapshot time
                      */
                     std::string m_snapshotTime;
                     bool m_snapshotTimeHasBeenSet;
 
                     /**
-                     * Roll back to the Serverless cluster with minimum CPU.
+                     * Minimum CPU for rollback to a Serverless cluster
                      */
                     int64_t m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * Roll back to the Serverless cluster with maximum CPU.
+                     * Maximum CPU when rolling back to a Serverless cluster
                      */
                     int64_t m_maxCpu;
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * Snapshot ID.
+                     * Snapshot ID
                      */
                     uint64_t m_snapShotId;
                     bool m_snapShotIdHasBeenSet;
@@ -418,13 +418,13 @@ namespace TencentCloud
                     bool m_rollbackTablesHasBeenSet;
 
                     /**
-                     * Specifies the backup file name.
+                     * Backup file name
                      */
                     std::string m_backupFileName;
                     bool m_backupFileNameHasBeenSet;
 
                     /**
-                     * Rollback process.
+                     * Rollback process
                      */
                     RollbackProcessInfo m_rollbackProcess;
                     bool m_rollbackProcessHasBeenSet;

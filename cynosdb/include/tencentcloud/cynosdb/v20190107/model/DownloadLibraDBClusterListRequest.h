@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method, desc, asc, DESC, ASC
-                     * @return OrderByType Sorting method, desc, asc, DESC, ASC
+                     * 获取Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
+                     * @return OrderByType Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting method, desc, asc, DESC, ASC
-                     * @param _orderByType Sorting method, desc, asc, DESC, ASC
+                     * 设置Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
+                     * @param _orderByType Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method, desc, asc, DESC, ASC
+                     * Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

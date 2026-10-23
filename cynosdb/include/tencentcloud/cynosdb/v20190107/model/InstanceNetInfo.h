@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance network information
+                * Instance network information.
                 */
                 class InstanceNetInfo : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the virtual private cloud ID.
-                     * @return VpcId Specifies the virtual private cloud ID.
+                     * 获取VPC ID
+                     * @return VpcId VPC ID
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Specifies the virtual private cloud ID.
-                     * @param _vpcId Specifies the virtual private cloud ID.
+                     * 设置VPC ID
+                     * @param _vpcId VPC ID
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the subnet ID.
-                     * @return SubnetId Specifies the subnet ID.
+                     * 获取Subnet ID.
+                     * @return SubnetId Subnet ID.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Specifies the subnet ID.
-                     * @param _subnetId Specifies the subnet ID.
+                     * 设置Subnet ID.
+                     * @param _subnetId Subnet ID.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
-                     * @return NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+                     * 获取Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
+                     * @return NetType Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
                      * 
                      */
                     int64_t GetNetType() const;
 
                     /**
-                     * 设置Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
-                     * @param _netType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+                     * 设置Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
+                     * @param _netType Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
                      * 
                      */
                     void SetNetType(const int64_t& _netType);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool NetTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC IP.
-                     * @return Vip VPC IP.
+                     * 获取VPC IP
+                     * @return Vip VPC IP
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置VPC IP.
-                     * @param _vip VPC IP.
+                     * 设置VPC IP
+                     * @param _vip VPC IP
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the public network domain name.
-                     * @return WanDomain Specifies the public network domain name.
+                     * 获取Public network domain name.
+                     * @return WanDomain Public network domain name.
                      * 
                      */
                     std::string GetWanDomain() const;
 
                     /**
-                     * 设置Specifies the public network domain name.
-                     * @param _wanDomain Specifies the public network domain name.
+                     * 设置Public network domain name.
+                     * @param _wanDomain Public network domain name.
                      * 
                      */
                     void SetWanDomain(const std::string& _wanDomain);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool WanIPHasBeenSet() const;
 
                     /**
-                     * 获取Public network port.
-                     * @return WanPort Public network port.
+                     * 获取External port
+                     * @return WanPort External port
                      * 
                      */
                     int64_t GetWanPort() const;
 
                     /**
-                     * 设置Public network port.
-                     * @param _wanPort Public network port.
+                     * 设置External port
+                     * @param _wanPort External port
                      * 
                      */
                     void SetWanPort(const int64_t& _wanPort);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool WanPortHasBeenSet() const;
 
                     /**
-                     * 获取Public network enabled status.
-                     * @return WanStatus Public network enabled status.
+                     * 获取Public network status
+                     * @return WanStatus Public network status
                      * 
                      */
                     std::string GetWanStatus() const;
 
                     /**
-                     * 设置Public network enabled status.
-                     * @param _wanStatus Public network enabled status.
+                     * 设置Public network status
+                     * @param _wanStatus Public network status
                      * 
                      */
                     void SetWanStatus(const std::string& _wanStatus);
@@ -292,25 +292,25 @@ namespace TencentCloud
                     bool m_instanceGroupIdHasBeenSet;
 
                     /**
-                     * Specifies the virtual private cloud ID.
+                     * VPC ID
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Specifies the subnet ID.
+                     * Subnet ID.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+                     * Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;
 
                     /**
-                     * VPC IP.
+                     * VPC IP
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Specifies the public network domain name.
+                     * Public network domain name.
                      */
                     std::string m_wanDomain;
                     bool m_wanDomainHasBeenSet;
@@ -334,13 +334,13 @@ namespace TencentCloud
                     bool m_wanIPHasBeenSet;
 
                     /**
-                     * Public network port.
+                     * External port
                      */
                     int64_t m_wanPort;
                     bool m_wanPortHasBeenSet;
 
                     /**
-                     * Public network enabled status.
+                     * Public network status
                      */
                     std::string m_wanStatus;
                     bool m_wanStatusHasBeenSet;

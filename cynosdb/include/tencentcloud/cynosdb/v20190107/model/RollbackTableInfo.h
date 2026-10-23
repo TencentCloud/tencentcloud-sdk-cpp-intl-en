@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback table information.
+                * Table information for rollback
                 */
                 class RollbackTableInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Old table name.
-                     * @return OldTable Old table name.
+                     * 获取Old table name
+                     * @return OldTable Old table name
                      * 
                      */
                     std::string GetOldTable() const;
 
                     /**
-                     * 设置Old table name.
-                     * @param _oldTable Old table name.
+                     * 设置Old table name
+                     * @param _oldTable Old table name
                      * 
                      */
                     void SetOldTable(const std::string& _oldTable);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool OldTableHasBeenSet() const;
 
                     /**
-                     * 获取New table name.
-                     * @return NewTable New table name.
+                     * 获取New table name
+                     * @return NewTable New table name
                      * 
                      */
                     std::string GetNewTable() const;
 
                     /**
-                     * 设置New table name.
-                     * @param _newTable New table name.
+                     * 设置New table name
+                     * @param _newTable New table name
                      * 
                      */
                     void SetNewTable(const std::string& _newTable);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Old table name.
+                     * Old table name
                      */
                     std::string m_oldTable;
                     bool m_oldTableHasBeenSet;
 
                     /**
-                     * New table name.
+                     * New table name
                      */
                     std::string m_newTable;
                     bool m_newTableHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of returned results. the default value is 20. the maximum value is 100.
-                     * @return Limit Number of returned results. the default value is 20. the maximum value is 100.
+                     * 获取Returned quantity. Default value: 20. Maximum value: 100.
+                     * @return Limit Returned quantity. Default value: 20. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. the default value is 20. the maximum value is 100.
-                     * @param _limit Number of returned results. the default value is 20. the maximum value is 100.
+                     * 设置Returned quantity. Default value: 20. Maximum value: 100.
+                     * @param _limit Returned quantity. Default value: 20. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Record offset. default value: 0.
-                     * @return Offset Record offset. default value: 0.
+                     * 获取Record offset. Default value: 0
+                     * @return Offset Record offset. Default value: 0
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Record offset. default value: 0.
-                     * @param _offset Record offset. default value: 0.
+                     * 设置Record offset. Default value: 0
+                     * @param _offset Record offset. Default value: 0
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,23 +86,23 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
-                     * @return OrderBy Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
+                     * 获取Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
+                     * @return OrderBy Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
-                     * @param _orderBy Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
+                     * 设置Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
+                     * @param _orderBy Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -115,23 +115,23 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
-                     * @return OrderByType Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
+                     * 获取Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+                     * @return OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
-                     * @param _orderByType Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
+                     * 设置Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+                     * @param _orderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Search criteria. when multiple filters exist, the relationship between filters is logical AND.
-                     * @return Filters Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+                     * 获取Search criteria. When multiple filters exist, the relationship between filters is logical AND.
+                     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
                      * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
-                     * 设置Search criteria. when multiple filters exist, the relationship between filters is logical AND.
-                     * @param _filters Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+                     * 设置Search criteria. When multiple filters exist, the relationship between filters is logical AND.
+                     * @param _filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
                      * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
@@ -165,15 +165,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Engine type: currently supports "MYSQL", "POSTGRESQL".
-                     * @return DbType Engine type: currently supports "MYSQL", "POSTGRESQL".
+                     * 获取Engine type: Currently supports "MYSQL" and "POSTGRESQL"
+                     * @return DbType Engine type: Currently supports "MYSQL" and "POSTGRESQL"
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Engine type: currently supports "MYSQL", "POSTGRESQL".
-                     * @param _dbType Engine type: currently supports "MYSQL", "POSTGRESQL".
+                     * 设置Engine type: Currently supports "MYSQL" and "POSTGRESQL"
+                     * @param _dbType Engine type: Currently supports "MYSQL" and "POSTGRESQL"
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -188,41 +188,41 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of returned results. the default value is 20. the maximum value is 100.
+                     * Returned quantity. Default value: 20. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Record offset. default value: 0.
+                     * Record offset. Default value: 0
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
+                     * Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
+                     * Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+                     * Search criteria. When multiple filters exist, the relationship between filters is logical AND.
                      */
                     std::vector<QueryFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Engine type: currently supports "MYSQL", "POSTGRESQL".
+                     * Engine type: Currently supports "MYSQL" and "POSTGRESQL"
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;

@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Status of tasks.
-                     * @return TaskStatus Status of tasks.
+                     * 获取Task status.
+                     * @return TaskStatus Task status.
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
-                     * 设置Status of tasks.
-                     * @param _taskStatus Status of tasks.
+                     * 设置Task status.
+                     * @param _taskStatus Task status.
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Task ID (cluster ID | instance group ID | instance ID).
-                     * @return ObjectId Task ID (cluster ID | instance group ID | instance ID).
+                     * 获取Task ID (Cluster ID | instance group ID | instance ID)
+                     * @return ObjectId Task ID (Cluster ID | instance group ID | instance ID)
                      * 
                      */
                     std::string GetObjectId() const;
 
                     /**
-                     * 设置Task ID (cluster ID | instance group ID | instance ID).
-                     * @param _objectId Task ID (cluster ID | instance group ID | instance ID).
+                     * 设置Task ID (Cluster ID | instance group ID | instance ID)
+                     * @param _objectId Task ID (Cluster ID | instance group ID | instance ID)
                      * 
                      */
                     void SetObjectId(const std::string& _objectId);
@@ -166,13 +166,13 @@ namespace TencentCloud
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Status of tasks.
+                     * Task status.
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Task ID (cluster ID | instance group ID | instance ID).
+                     * Task ID (Cluster ID | instance group ID | instance ID)
                      */
                     std::string m_objectId;
                     bool m_objectIdHasBeenSet;

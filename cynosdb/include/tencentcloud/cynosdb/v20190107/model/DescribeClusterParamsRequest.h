@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a global parameter.
-                     * @return IsGlobal Whether it is a global parameter.
+                     * 获取Whether it is a global parameter
+                     * @return IsGlobal Whether it is a global parameter
                      * 
                      */
                     std::string GetIsGlobal() const;
 
                     /**
-                     * 设置Whether it is a global parameter.
-                     * @param _isGlobal Whether it is a global parameter.
+                     * 设置Whether it is a global parameter
+                     * @param _isGlobal Whether it is a global parameter
                      * 
                      */
                     void SetIsGlobal(const std::string& _isGlobal);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Whether it is a global parameter.
+                     * Whether it is a global parameter
                      */
                     std::string m_isGlobal;
                     bool m_isGlobalHasBeenSet;

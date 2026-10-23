@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced mapping, automated mapping rule
+                * Advanced mapping, automatic mapping rule
                 */
                 class AutoMapRule : public AbstractModel
                 {

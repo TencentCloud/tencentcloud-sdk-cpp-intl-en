@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Supported database proxy version collections.
-                     * @return SupportProxyVersions Supported database proxy version collections.
+                     * 获取Collection of supported database proxy versions
+                     * @return SupportProxyVersions Collection of supported database proxy versions
                      * 
                      */
                     std::vector<std::string> GetSupportProxyVersions() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool SupportProxyVersionsHasBeenSet() const;
 
                     /**
-                     * 获取The current proxy version number.
-                     * @return CurrentProxyVersion The current proxy version number.
+                     * 获取Current proxy version number
+                     * @return CurrentProxyVersion Current proxy version number
                      * 
                      */
                     std::string GetCurrentProxyVersion() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool CurrentProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the proxy version details.
-                     * @return SupportProxyVersionDetail Specifies the proxy version details.
+                     * 获取Proxy version details
+                     * @return SupportProxyVersionDetail Proxy version details
                      * 
                      */
                     std::vector<ProxyVersionInfo> GetSupportProxyVersionDetail() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Supported database proxy version collections.
+                     * Collection of supported database proxy versions
                      */
                     std::vector<std::string> m_supportProxyVersions;
                     bool m_supportProxyVersionsHasBeenSet;
 
                     /**
-                     * The current proxy version number.
+                     * Current proxy version number
                      */
                     std::string m_currentProxyVersion;
                     bool m_currentProxyVersionHasBeenSet;
 
                     /**
-                     * Specifies the proxy version details.
+                     * Proxy version details
                      */
                     std::vector<ProxyVersionInfo> m_supportProxyVersionDetail;
                     bool m_supportProxyVersionDetailHasBeenSet;

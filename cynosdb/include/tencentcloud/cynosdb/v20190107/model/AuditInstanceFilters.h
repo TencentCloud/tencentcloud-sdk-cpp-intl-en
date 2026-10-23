@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filter criteria for querying audit instances.
+                * Filter conditions for querying audit instances.
                 */
                 class AuditInstanceFilters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
-                     * @return Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+                     * 获取Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
+                     * @return Name Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
-                     * @param _name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+                     * 设置Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
+                     * @param _name Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取True indicates exact match, false indicates fuzzy match.
-                     * @return ExactMatch True indicates exact match, false indicates fuzzy match.
+                     * 获取true indicates exact matching; false indicates fuzzy matching.
+                     * @return ExactMatch true indicates exact matching; false indicates fuzzy matching.
                      * 
                      */
                     bool GetExactMatch() const;
 
                     /**
-                     * 设置True indicates exact match, false indicates fuzzy match.
-                     * @param _exactMatch True indicates exact match, false indicates fuzzy match.
+                     * 设置true indicates exact matching; false indicates fuzzy matching.
+                     * @param _exactMatch true indicates exact matching; false indicates fuzzy matching.
                      * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+                     * Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * True indicates exact match, false indicates fuzzy match.
+                     * true indicates exact matching; false indicates fuzzy matching.
                      */
                     bool m_exactMatch;
                     bool m_exactMatchHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter template information
+                * Parameter template information.
                 */
                 class ParamTemplateListInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template ID
-                     * @return Id Parameter template ID
+                     * 获取Parameter template ID.
+                     * @return Id Parameter template ID.
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置Parameter template ID
-                     * @param _id Parameter template ID
+                     * 设置Parameter template ID.
+                     * @param _id Parameter template ID.
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-                     * @return DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * 获取Database type. Available values: NORMAL, SERVERLESS
+                     * @return DbMode Database type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-                     * @param _dbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * 设置Database type. Available values: NORMAL, SERVERLESS
+                     * @param _dbMode Database type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -176,7 +176,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template ID
+                     * Parameter template ID.
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
@@ -200,7 +200,7 @@ namespace TencentCloud
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * Database type. Available values: NORMAL, SERVERLESS
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;

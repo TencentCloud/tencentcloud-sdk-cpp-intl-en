@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance parameter list.
-                     * @return Items Instance parameter list.
+                     * 获取Instance parameter list
+                     * @return Items Instance parameter list
                      * 
                      */
                     std::vector<ParamInfo> GetItems() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Instance parameter list.
+                     * Instance parameter list
                      */
                     std::vector<ParamInfo> m_items;
                     bool m_itemsHasBeenSet;

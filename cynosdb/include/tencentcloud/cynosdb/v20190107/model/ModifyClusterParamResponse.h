@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async request ID used to query the result
-                     * @return AsyncRequestId Async request ID used to query the result
+                     * 获取Async request Id, used for querying results
+                     * @return AsyncRequestId Async request Id, used for querying results
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async request ID used to query the result
+                     * Async request Id, used for querying results
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

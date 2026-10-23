@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset.
-                     * @return Offset Pagination offset.
+                     * 获取Pagination Offset
+                     * @return Offset Pagination Offset
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset.
-                     * @param _offset Pagination offset.
+                     * 设置Pagination Offset
+                     * @param _offset Pagination Offset
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination number limit.
-                     * @return Limit Pagination number limit.
+                     * 获取Page limit
+                     * @return Limit Page limit
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination number limit.
-                     * @param _limit Pagination number limit.
+                     * 设置Page limit
+                     * @param _limit Page limit
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Pagination offset.
+                     * Pagination Offset
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination number limit.
+                     * Page limit
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

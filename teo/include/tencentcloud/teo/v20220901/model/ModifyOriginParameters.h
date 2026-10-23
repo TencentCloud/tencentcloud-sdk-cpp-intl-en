@@ -234,19 +234,15 @@ namespace TencentCloud
                     bool PrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return PrivateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
+                     * @return PrivateParameters Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
                      * 
                      */
                     OriginPrivateParameters GetPrivateParameters() const;
 
                     /**
-                     * 设置Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _privateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
+                     * @param _privateParameters Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
                      * 
                      */
                     void SetPrivateParameters(const OriginPrivateParameters& _privateParameters);
@@ -312,8 +308,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_privateAccessHasBeenSet;
 
                     /**
-                     * Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
                      */
                     OriginPrivateParameters m_privateParameters;
                     bool m_privateParametersHasBeenSet;

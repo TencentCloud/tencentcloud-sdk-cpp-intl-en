@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Analysis Cluster ID
-                     * @return ClusterId Analysis Cluster ID
+                     * 获取Analysis cluster ID
+                     * @return ClusterId Analysis cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Analysis Cluster ID
-                     * @param _clusterId Analysis Cluster ID
+                     * 设置Analysis cluster ID
+                     * @param _clusterId Analysis cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Analyze instance ID
-                     * @return InstanceId Analyze instance ID
+                     * 获取Analysis instance ID
+                     * @return InstanceId Analysis instance ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Analyze instance ID
-                     * @param _instanceId Analyze instance ID
+                     * 设置Analysis instance ID
+                     * @param _instanceId Analysis instance ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Analysis Cluster ID
+                     * Analysis cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Analyze instance ID
+                     * Analysis instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

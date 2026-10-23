@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Version ID.
-                     * @return VersionId Version ID.
+                     * 获取<p>Version ID.</p>
+                     * @return VersionId <p>Version ID.</p>
                      * 
                      */
                     std::string GetVersionId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Version ID.
+                     * <p>Version ID.</p>
                      */
                     std::string m_versionId;
                     bool m_versionIdHasBeenSet;

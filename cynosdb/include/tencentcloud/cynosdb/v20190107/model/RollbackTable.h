@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback databases and tables.
+                * Rollback databases and tables
                 */
                 class RollbackTable : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Database table.
-                     * @return Tables Database table.
+                     * 获取Database table
+                     * @return Tables Database table
                      * 
                      */
                     std::vector<RollbackTableInfo> GetTables() const;
 
                     /**
-                     * 设置Database table.
-                     * @param _tables Database table.
+                     * 设置Database table
+                     * @param _tables Database table
                      * 
                      */
                     void SetTables(const std::vector<RollbackTableInfo>& _tables);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Database table.
+                     * Database table
                      */
                     std::vector<RollbackTableInfo> m_tables;
                     bool m_tablesHasBeenSet;

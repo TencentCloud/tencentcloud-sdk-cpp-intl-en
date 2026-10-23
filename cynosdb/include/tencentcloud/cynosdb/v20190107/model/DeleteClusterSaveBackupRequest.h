@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Reserved backup file ID. recommended.
-                     * @return SaveBackupId Reserved backup file ID. recommended.
+                     * 获取Backup file ID to be reserved. Recommended for use.
+                     * @return SaveBackupId Backup file ID to be reserved. Recommended for use.
                      * 
                      */
                     int64_t GetSaveBackupId() const;
 
                     /**
-                     * 设置Reserved backup file ID. recommended.
-                     * @param _saveBackupId Reserved backup file ID. recommended.
+                     * 设置Backup file ID to be reserved. Recommended for use.
+                     * @param _saveBackupId Backup file ID to be reserved. Recommended for use.
                      * 
                      */
                     void SetSaveBackupId(const int64_t& _saveBackupId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Reserved backup file ID. recommended.
+                     * Backup file ID to be reserved. Recommended for use.
                      */
                     int64_t m_saveBackupId;
                     bool m_saveBackupIdHasBeenSet;

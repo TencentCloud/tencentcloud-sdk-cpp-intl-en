@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Safe automatically deliver relationship
+                * Relationship for automatically delivering to a safe
                 */
                 class AutoCopyConfig : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VaultRegionHasBeenSet() const;
 
                     /**
-                     * 获取Delivery Type: binlog, redolog, snapshot, logic
-                     * @return CopyType Delivery Type: binlog, redolog, snapshot, logic
+                     * 获取Delivery type: binlog, redolog, snapshot, logic
+                     * @return CopyType Delivery type: binlog, redolog, snapshot, logic
                      * 
                      */
                     std::string GetCopyType() const;
 
                     /**
-                     * 设置Delivery Type: binlog, redolog, snapshot, logic
-                     * @param _copyType Delivery Type: binlog, redolog, snapshot, logic
+                     * 设置Delivery type: binlog, redolog, snapshot, logic
+                     * @param _copyType Delivery type: binlog, redolog, snapshot, logic
                      * 
                      */
                     void SetCopyType(const std::string& _copyType);
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_vaultRegionHasBeenSet;
 
                     /**
-                     * Delivery Type: binlog, redolog, snapshot, logic
+                     * Delivery type: binlog, redolog, snapshot, logic
                      */
                     std::string m_copyType;
                     bool m_copyTypeHasBeenSet;

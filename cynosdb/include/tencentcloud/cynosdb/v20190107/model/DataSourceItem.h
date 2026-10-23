@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IPHasBeenSet() const;
 
                     /**
-                     * 获取Source database port
-                     * @return Port Source database port
+                     * 获取Source database port.
+                     * @return Port Source database port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Source database port
-                     * @param _port Source database port
+                     * 设置Source database port.
+                     * @param _port Source database port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Source instance availability zone
-                     * @return Zone Source instance availability zone
+                     * 获取Source instance AZ
+                     * @return Zone Source instance AZ
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Source instance availability zone
-                     * @param _zone Source instance availability zone
+                     * 设置Source instance AZ
+                     * @param _zone Source instance AZ
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Source main account uin
-                     * @return SrcUin Source main account uin
+                     * 获取Source root account uin
+                     * @return SrcUin Source root account uin
                      * 
                      */
                     std::string GetSrcUin() const;
 
                     /**
-                     * 设置Source main account uin
-                     * @param _srcUin Source main account uin
+                     * 设置Source root account uin
+                     * @param _srcUin Source root account uin
                      * 
                      */
                     void SetSrcUin(const std::string& _srcUin);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool AccountModeHasBeenSet() const;
 
                     /**
-                     * 获取sync task status
-                     * @return ReplicationJobStatus sync task status
+                     * 获取Sync task status
+                     * @return ReplicationJobStatus Sync task status
                      * 
                      */
                     std::string GetReplicationJobStatus() const;
 
                     /**
-                     * 设置sync task status
-                     * @param _replicationJobStatus sync task status
+                     * 设置Sync task status
+                     * @param _replicationJobStatus Sync task status
                      * 
                      */
                     void SetReplicationJobStatus(const std::string& _replicationJobStatus);
@@ -283,7 +283,7 @@ namespace TencentCloud
                     bool m_iPHasBeenSet;
 
                     /**
-                     * Source database port
+                     * Source database port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
@@ -295,13 +295,13 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Source instance availability zone
+                     * Source instance AZ
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Source main account uin
+                     * Source root account uin
                      */
                     std::string m_srcUin;
                     bool m_srcUinHasBeenSet;
@@ -313,7 +313,7 @@ namespace TencentCloud
                     bool m_accountModeHasBeenSet;
 
                     /**
-                     * sync task status
+                     * Sync task status
                      */
                     std::string m_replicationJobStatus;
                     bool m_replicationJobStatusHasBeenSet;

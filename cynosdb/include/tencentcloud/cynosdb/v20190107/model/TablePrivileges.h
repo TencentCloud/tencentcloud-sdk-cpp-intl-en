@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MySQL table permission
+                * mysql table permission
                 */
                 class TablePrivileges : public AbstractModel
                 {

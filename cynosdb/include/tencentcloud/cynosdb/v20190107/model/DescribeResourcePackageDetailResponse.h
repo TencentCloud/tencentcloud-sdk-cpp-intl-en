@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of deducted resource packs
-                     * @return Total Total number of deducted resource packs
+                     * 获取Total number of resource package deductions.
+                     * @return Total Total number of resource package deductions.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of deducted resource packs
+                     * Total number of resource package deductions.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

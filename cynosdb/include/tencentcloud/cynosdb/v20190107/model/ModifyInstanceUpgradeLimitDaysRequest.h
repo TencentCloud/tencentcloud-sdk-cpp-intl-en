@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade time limit.
-                     * @return UpgradeLimitDays Upgrade time limit.
+                     * 获取Upgrade time limit
+                     * @return UpgradeLimitDays Upgrade time limit
                      * 
                      */
                     int64_t GetUpgradeLimitDays() const;
 
                     /**
-                     * 设置Upgrade time limit.
-                     * @param _upgradeLimitDays Upgrade time limit.
+                     * 设置Upgrade time limit
+                     * @param _upgradeLimitDays Upgrade time limit
                      * 
                      */
                     void SetUpgradeLimitDays(const int64_t& _upgradeLimitDays);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Upgrade time limit.
+                     * Upgrade time limit
                      */
                     int64_t m_upgradeLimitDays;
                     bool m_upgradeLimitDaysHasBeenSet;

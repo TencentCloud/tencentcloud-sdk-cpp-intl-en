@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Cluster Id</p>
-                     * @return ClusterId <p>Cluster Id</p>
+                     * 获取<p>Cluster Id.</p>
+                     * @return ClusterId <p>Cluster Id.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置<p>Cluster Id</p>
-                     * @param _clusterId <p>Cluster Id</p>
+                     * 设置<p>Cluster Id.</p>
+                     * @param _clusterId <p>Cluster Id.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum specification of the ro instance</p>
-                     * @return MinCpu <p>Minimum specification of the ro instance</p>
+                     * 获取<p>Minimum specification of a read-only instance</p>
+                     * @return MinCpu <p>Minimum specification of a read-only instance</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置<p>Minimum specification of the ro instance</p>
-                     * @param _minCpu <p>Minimum specification of the ro instance</p>
+                     * 设置<p>Minimum specification of a read-only instance</p>
+                     * @param _minCpu <p>Minimum specification of a read-only instance</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum specification of ro instance</p>
-                     * @return MaxCpu <p>Maximum specification of ro instance</p>
+                     * 获取<p>Maximum specification of a read-only instance</p>
+                     * @return MaxCpu <p>Maximum specification of a read-only instance</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置<p>Maximum specification of ro instance</p>
-                     * @param _maxCpu <p>Maximum specification of ro instance</p>
+                     * 设置<p>Maximum specification of a read-only instance</p>
+                     * @param _maxCpu <p>Maximum specification of a read-only instance</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
-                     * @return AutoPause <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+                     * 获取<p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+                     * @return AutoPause <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
                      * 
                      */
                     std::string GetAutoPause() const;
 
                     /**
-                     * 设置<p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
-                     * @param _autoPause <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+                     * 设置<p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+                     * @param _autoPause <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
                      * 
                      */
                     void SetAutoPause(const std::string& _autoPause);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool AutoPauseHasBeenSet() const;
 
                     /**
-                     * 获取<p>Auto-pause time</p><p>Unit: s</p>
-                     * @return AutoPauseDelay <p>Auto-pause time</p><p>Unit: s</p>
+                     * 获取<p>Auto-pause time</p><p>Unit: seconds</p>
+                     * @return AutoPauseDelay <p>Auto-pause time</p><p>Unit: seconds</p>
                      * 
                      */
                     int64_t GetAutoPauseDelay() const;
 
                     /**
-                     * 设置<p>Auto-pause time</p><p>Unit: s</p>
-                     * @param _autoPauseDelay <p>Auto-pause time</p><p>Unit: s</p>
+                     * 设置<p>Auto-pause time</p><p>Unit: seconds</p>
+                     * @param _autoPauseDelay <p>Auto-pause time</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetAutoPauseDelay(const int64_t& _autoPauseDelay);
@@ -319,19 +319,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Cluster Id</p>
+                     * <p>Cluster Id.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * <p>Minimum specification of the ro instance</p>
+                     * <p>Minimum specification of a read-only instance</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * <p>Maximum specification of ro instance</p>
+                     * <p>Maximum specification of a read-only instance</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
@@ -367,13 +367,13 @@ namespace TencentCloud
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+                     * <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
                      */
                     std::string m_autoPause;
                     bool m_autoPauseHasBeenSet;
 
                     /**
-                     * <p>Auto-pause time</p><p>Unit: s</p>
+                     * <p>Auto-pause time</p><p>Unit: seconds</p>
                      */
                     int64_t m_autoPauseDelay;
                     bool m_autoPauseDelayHasBeenSet;

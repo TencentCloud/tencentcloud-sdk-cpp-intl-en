@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cpu cores</p>
-                     * @return Cpu <p>Cpu cores</p>
+                     * 获取<p>Number of Cpu cores.</p>
+                     * @return Cpu <p>Number of Cpu cores.</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置<p>Cpu cores</p>
-                     * @param _cpu <p>Cpu cores</p>
+                     * 设置<p>Number of Cpu cores.</p>
+                     * @param _cpu <p>Number of Cpu cores.</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool ReadOnlyCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
-                     * @return DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * 获取<p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+                     * @return DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置<p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
-                     * @param _deviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * 设置<p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+                     * @param _deviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the associated VPC network.</p>
-                     * @return VpcId <p>ID of the associated VPC network.</p>
+                     * 获取<p>ID of the VPC network it belongs to.</p>
+                     * @return VpcId <p>ID of the VPC network it belongs to.</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置<p>ID of the associated VPC network.</p>
-                     * @param _vpcId <p>ID of the associated VPC network.</p>
+                     * 设置<p>ID of the VPC network it belongs to.</p>
+                     * @param _vpcId <p>ID of the VPC network it belongs to.</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database type, value ranges from...to...: </p><li> MYSQL </li>
-                     * @return DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+                     * 获取<p>Database type. Value range: </p><li> MYSQL </li>
+                     * @return DbType <p>Database type. Value range: </p><li> MYSQL </li>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置<p>Database type, value ranges from...to...: </p><li> MYSQL </li>
-                     * @param _dbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+                     * 设置<p>Database type. Value range: </p><li> MYSQL </li>
+                     * @param _dbType <p>Database type. Value range: </p><li> MYSQL </li>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -318,15 +318,15 @@ namespace TencentCloud
                     bool OrderSourceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Transaction mode. 0: place order and pay; 1: place order</p>
-                     * @return DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
+                     * 获取<p>Transaction mode 0-Place order and pay 1-Place order</p>
+                     * @return DealMode <p>Transaction mode 0-Place order and pay 1-Place order</p>
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置<p>Transaction mode. 0: place order and pay; 1: place order</p>
-                     * @param _dealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
+                     * 设置<p>Transaction mode 0-Place order and pay 1-Place order</p>
+                     * @param _dealMode <p>Transaction mode 0-Place order and pay 1-Place order</p>
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -339,15 +339,15 @@ namespace TencentCloud
                     bool DealModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter template ID</p>
-                     * @return ParamTemplateId <p>Parameter template ID</p>
+                     * 获取<p>Parameter template ID.</p>
+                     * @return ParamTemplateId <p>Parameter template ID.</p>
                      * 
                      */
                     int64_t GetParamTemplateId() const;
 
                     /**
-                     * 设置<p>Parameter template ID</p>
-                     * @param _paramTemplateId <p>Parameter template ID</p>
+                     * 设置<p>Parameter template ID.</p>
+                     * @param _paramTemplateId <p>Parameter template ID.</p>
                      * 
                      */
                     void SetParamTemplateId(const int64_t& _paramTemplateId);
@@ -402,15 +402,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>proxy sync upgrade</p>
-                     * @return UpgradeProxy <p>proxy sync upgrade</p>
+                     * 获取<p>Upgrade proxy synchronously</p>
+                     * @return UpgradeProxy <p>Upgrade proxy synchronously</p>
                      * 
                      */
                     UpgradeProxy GetUpgradeProxy() const;
 
                     /**
-                     * 设置<p>proxy sync upgrade</p>
-                     * @param _upgradeProxy <p>proxy sync upgrade</p>
+                     * 设置<p>Upgrade proxy synchronously</p>
+                     * @param _upgradeProxy <p>Upgrade proxy synchronously</p>
                      * 
                      */
                     void SetUpgradeProxy(const UpgradeProxy& _upgradeProxy);
@@ -431,7 +431,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * <p>Cpu cores</p>
+                     * <p>Number of Cpu cores.</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
@@ -449,7 +449,7 @@ namespace TencentCloud
                     bool m_readOnlyCountHasBeenSet;
 
                     /**
-                     * <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
@@ -461,7 +461,7 @@ namespace TencentCloud
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * <p>ID of the associated VPC network.</p>
+                     * <p>ID of the VPC network it belongs to.</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -491,7 +491,7 @@ namespace TencentCloud
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+                     * <p>Database type. Value range: </p><li> MYSQL </li>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
@@ -503,13 +503,13 @@ namespace TencentCloud
                     bool m_orderSourceHasBeenSet;
 
                     /**
-                     * <p>Transaction mode. 0: place order and pay; 1: place order</p>
+                     * <p>Transaction mode 0-Place order and pay 1-Place order</p>
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
 
                     /**
-                     * <p>Parameter template ID</p>
+                     * <p>Parameter template ID.</p>
                      */
                     int64_t m_paramTemplateId;
                     bool m_paramTemplateIdHasBeenSet;
@@ -527,7 +527,7 @@ namespace TencentCloud
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * <p>proxy sync upgrade</p>
+                     * <p>Upgrade proxy synchronously</p>
                      */
                     UpgradeProxy m_upgradeProxy;
                     bool m_upgradeProxyHasBeenSet;

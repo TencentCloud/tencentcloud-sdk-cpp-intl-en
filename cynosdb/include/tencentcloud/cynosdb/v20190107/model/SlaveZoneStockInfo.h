@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Standby availability zone inventory information.
+                * Available zone inventory information
                 */
                 class SlaveZoneStockInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replica AZ.
-                     * @return SlaveZone Replica AZ.
+                     * 获取Secondary AZ
+                     * @return SlaveZone Secondary AZ
                      * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
-                     * 设置Replica AZ.
-                     * @param _slaveZone Replica AZ.
+                     * 设置Secondary AZ
+                     * @param _slaveZone Secondary AZ
                      * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取Inventory quantity in spare availability zone.	
-                     * @return StockCount Inventory quantity in spare availability zone.	
+                     * 获取Inventory quantity in spare availability zone	
+                     * @return StockCount Inventory quantity in spare availability zone	
                      * 
                      */
                     uint64_t GetStockCount() const;
 
                     /**
-                     * 设置Inventory quantity in spare availability zone.	
-                     * @param _stockCount Inventory quantity in spare availability zone.	
+                     * 设置Inventory quantity in spare availability zone	
+                     * @param _stockCount Inventory quantity in spare availability zone	
                      * 
                      */
                     void SetStockCount(const uint64_t& _stockCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StockCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is inventory in the spare availability zone.	
-                     * @return HasStock Whether there is inventory in the spare availability zone.	
+                     * 获取Whether there is inventory in the spare AZ	
+                     * @return HasStock Whether there is inventory in the spare AZ	
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
-                     * 设置Whether there is inventory in the spare availability zone.	
-                     * @param _hasStock Whether there is inventory in the spare availability zone.	
+                     * 设置Whether there is inventory in the spare AZ	
+                     * @param _hasStock Whether there is inventory in the spare AZ	
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replica AZ.
+                     * Secondary AZ
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;
 
                     /**
-                     * Inventory quantity in spare availability zone.	
+                     * Inventory quantity in spare availability zone	
                      */
                     uint64_t m_stockCount;
                     bool m_stockCountHasBeenSet;
 
                     /**
-                     * Whether there is inventory in the spare availability zone.	
+                     * Whether there is inventory in the spare AZ	
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Features supported by the cluster
+                * Functions supported by the cluster
                 */
                 class Ability : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Whether support from availability zone is supported</p>
-                     * @return IsSupportSlaveZone <p>Whether support from availability zone is supported</p>
+                     * 获取<p>Whether a secondary AZ is supported</p>
+                     * @return IsSupportSlaveZone <p>Whether a secondary AZ is supported</p>
                      * 
                      */
                     std::string GetIsSupportSlaveZone() const;
 
                     /**
-                     * 设置<p>Whether support from availability zone is supported</p>
-                     * @param _isSupportSlaveZone <p>Whether support from availability zone is supported</p>
+                     * 设置<p>Whether a secondary AZ is supported</p>
+                     * @param _isSupportSlaveZone <p>Whether a secondary AZ is supported</p>
                      * 
                      */
                     void SetIsSupportSlaveZone(const std::string& _isSupportSlaveZone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IsSupportSlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>The causes for no support from availability zone</p>
-                     * @return NonsupportSlaveZoneReason <p>The causes for no support from availability zone</p>
+                     * 获取<p>The causes for no support from the availability zone</p>
+                     * @return NonsupportSlaveZoneReason <p>The causes for no support from the availability zone</p>
                      * 
                      */
                     std::string GetNonsupportSlaveZoneReason() const;
 
                     /**
-                     * 设置<p>The causes for no support from availability zone</p>
-                     * @param _nonsupportSlaveZoneReason <p>The causes for no support from availability zone</p>
+                     * 设置<p>The causes for no support from the availability zone</p>
+                     * @param _nonsupportSlaveZoneReason <p>The causes for no support from the availability zone</p>
                      * 
                      */
                     void SetNonsupportSlaveZoneReason(const std::string& _nonsupportSlaveZoneReason);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool IsSupportRoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reason for unsupported RO instance</p>
-                     * @return NonsupportRoReason <p>Reason for unsupported RO instance</p>
+                     * 获取<p>Reasons for no support for RO instances</p>
+                     * @return NonsupportRoReason <p>Reasons for no support for RO instances</p>
                      * 
                      */
                     std::string GetNonsupportRoReason() const;
 
                     /**
-                     * 设置<p>Reason for unsupported RO instance</p>
-                     * @param _nonsupportRoReason <p>Reason for unsupported RO instance</p>
+                     * 设置<p>Reasons for no support for RO instances</p>
+                     * @param _nonsupportRoReason <p>Reasons for no support for RO instances</p>
                      * 
                      */
                     void SetNonsupportRoReason(const std::string& _nonsupportRoReason);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool IsSupportManualSnapshotHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether transparent data encryption is supported</p>
-                     * @return IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported</p>
+                     * 获取<p>Whether transparent data encryption is supported.</p>
+                     * @return IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported.</p>
                      * 
                      */
                     std::string GetIsSupportTransparentDataEncryption() const;
 
                     /**
-                     * 设置<p>Whether transparent data encryption is supported</p>
-                     * @param _isSupportTransparentDataEncryption <p>Whether transparent data encryption is supported</p>
+                     * 设置<p>Whether transparent data encryption is supported.</p>
+                     * @param _isSupportTransparentDataEncryption <p>Whether transparent data encryption is supported.</p>
                      * 
                      */
                     void SetIsSupportTransparentDataEncryption(const std::string& _isSupportTransparentDataEncryption);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool IsSupportTransparentDataEncryptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>The causes for unsupported transparent data encryption</p>
-                     * @return NoSupportTransparentDataEncryptionReason <p>The causes for unsupported transparent data encryption</p>
+                     * 获取<p>Reasons for no support for transparent data encryption</p>
+                     * @return NoSupportTransparentDataEncryptionReason <p>Reasons for no support for transparent data encryption</p>
                      * 
                      */
                     std::string GetNoSupportTransparentDataEncryptionReason() const;
 
                     /**
-                     * 设置<p>The causes for unsupported transparent data encryption</p>
-                     * @param _noSupportTransparentDataEncryptionReason <p>The causes for unsupported transparent data encryption</p>
+                     * 设置<p>Reasons for no support for transparent data encryption</p>
+                     * @param _noSupportTransparentDataEncryptionReason <p>Reasons for no support for transparent data encryption</p>
                      * 
                      */
                     void SetNoSupportTransparentDataEncryptionReason(const std::string& _noSupportTransparentDataEncryptionReason);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool NoSupportTransparentDataEncryptionReasonHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether manual initiation of logical backup is supported</p>
-                     * @return IsSupportManualLogic <p>Whether manual initiation of logical backup is supported</p>
+                     * 获取<p>Whether manual initiation of logical backup is supported.</p>
+                     * @return IsSupportManualLogic <p>Whether manual initiation of logical backup is supported.</p>
                      * 
                      */
                     std::string GetIsSupportManualLogic() const;
 
                     /**
-                     * 设置<p>Whether manual initiation of logical backup is supported</p>
-                     * @param _isSupportManualLogic <p>Whether manual initiation of logical backup is supported</p>
+                     * 设置<p>Whether manual initiation of logical backup is supported.</p>
+                     * @param _isSupportManualLogic <p>Whether manual initiation of logical backup is supported.</p>
                      * 
                      */
                     void SetIsSupportManualLogic(const std::string& _isSupportManualLogic);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool IsSupportGlobalEncryptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>The causes for unsupported global encryption</p>
-                     * @return NoSupportGlobalEncryptionReason <p>The causes for unsupported global encryption</p>
+                     * 获取<p>The causes for no support for global encryption</p>
+                     * @return NoSupportGlobalEncryptionReason <p>The causes for no support for global encryption</p>
                      * 
                      */
                     std::string GetNoSupportGlobalEncryptionReason() const;
 
                     /**
-                     * 设置<p>The causes for unsupported global encryption</p>
-                     * @param _noSupportGlobalEncryptionReason <p>The causes for unsupported global encryption</p>
+                     * 设置<p>The causes for no support for global encryption</p>
+                     * @param _noSupportGlobalEncryptionReason <p>The causes for no support for global encryption</p>
                      * 
                      */
                     void SetNoSupportGlobalEncryptionReason(const std::string& _noSupportGlobalEncryptionReason);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool NoSupportGlobalEncryptionReasonHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status code for unsupported transparent encryption reason</p>
-                     * @return NoSupportTransparentDataEncryptionReasonCode <p>Status code for unsupported transparent encryption reason</p>
+                     * 获取<p>Status code for reasons of no support for transparent encryption</p>
+                     * @return NoSupportTransparentDataEncryptionReasonCode <p>Status code for reasons of no support for transparent encryption</p>
                      * 
                      */
                     std::string GetNoSupportTransparentDataEncryptionReasonCode() const;
 
                     /**
-                     * 设置<p>Status code for unsupported transparent encryption reason</p>
-                     * @param _noSupportTransparentDataEncryptionReasonCode <p>Status code for unsupported transparent encryption reason</p>
+                     * 设置<p>Status code for reasons of no support for transparent encryption</p>
+                     * @param _noSupportTransparentDataEncryptionReasonCode <p>Status code for reasons of no support for transparent encryption</p>
                      * 
                      */
                     void SetNoSupportTransparentDataEncryptionReasonCode(const std::string& _noSupportTransparentDataEncryptionReasonCode);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool NoSupportTransparentDataEncryptionReasonCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status code for unsupported global encryption reason</p>
-                     * @return NoSupportGlobalEncryptionReasonCode <p>Status code for unsupported global encryption reason</p>
+                     * 获取<p>Status code for the reason why global encryption is not supported</p>
+                     * @return NoSupportGlobalEncryptionReasonCode <p>Status code for the reason why global encryption is not supported</p>
                      * 
                      */
                     std::string GetNoSupportGlobalEncryptionReasonCode() const;
 
                     /**
-                     * 设置<p>Status code for unsupported global encryption reason</p>
-                     * @param _noSupportGlobalEncryptionReasonCode <p>Status code for unsupported global encryption reason</p>
+                     * 设置<p>Status code for the reason why global encryption is not supported</p>
+                     * @param _noSupportGlobalEncryptionReasonCode <p>Status code for the reason why global encryption is not supported</p>
                      * 
                      */
                     void SetNoSupportGlobalEncryptionReasonCode(const std::string& _noSupportGlobalEncryptionReasonCode);
@@ -301,13 +301,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Whether support from availability zone is supported</p>
+                     * <p>Whether a secondary AZ is supported</p>
                      */
                     std::string m_isSupportSlaveZone;
                     bool m_isSupportSlaveZoneHasBeenSet;
 
                     /**
-                     * <p>The causes for no support from availability zone</p>
+                     * <p>The causes for no support from the availability zone</p>
                      */
                     std::string m_nonsupportSlaveZoneReason;
                     bool m_nonsupportSlaveZoneReasonHasBeenSet;
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_isSupportRoHasBeenSet;
 
                     /**
-                     * <p>Reason for unsupported RO instance</p>
+                     * <p>Reasons for no support for RO instances</p>
                      */
                     std::string m_nonsupportRoReason;
                     bool m_nonsupportRoReasonHasBeenSet;
@@ -331,19 +331,19 @@ namespace TencentCloud
                     bool m_isSupportManualSnapshotHasBeenSet;
 
                     /**
-                     * <p>Whether transparent data encryption is supported</p>
+                     * <p>Whether transparent data encryption is supported.</p>
                      */
                     std::string m_isSupportTransparentDataEncryption;
                     bool m_isSupportTransparentDataEncryptionHasBeenSet;
 
                     /**
-                     * <p>The causes for unsupported transparent data encryption</p>
+                     * <p>Reasons for no support for transparent data encryption</p>
                      */
                     std::string m_noSupportTransparentDataEncryptionReason;
                     bool m_noSupportTransparentDataEncryptionReasonHasBeenSet;
 
                     /**
-                     * <p>Whether manual initiation of logical backup is supported</p>
+                     * <p>Whether manual initiation of logical backup is supported.</p>
                      */
                     std::string m_isSupportManualLogic;
                     bool m_isSupportManualLogicHasBeenSet;
@@ -355,19 +355,19 @@ namespace TencentCloud
                     bool m_isSupportGlobalEncryptionHasBeenSet;
 
                     /**
-                     * <p>The causes for unsupported global encryption</p>
+                     * <p>The causes for no support for global encryption</p>
                      */
                     std::string m_noSupportGlobalEncryptionReason;
                     bool m_noSupportGlobalEncryptionReasonHasBeenSet;
 
                     /**
-                     * <p>Status code for unsupported transparent encryption reason</p>
+                     * <p>Status code for reasons of no support for transparent encryption</p>
                      */
                     std::string m_noSupportTransparentDataEncryptionReasonCode;
                     bool m_noSupportTransparentDataEncryptionReasonCodeHasBeenSet;
 
                     /**
-                     * <p>Status code for unsupported global encryption reason</p>
+                     * <p>Status code for the reason why global encryption is not supported</p>
                      */
                     std::string m_noSupportGlobalEncryptionReasonCode;
                     bool m_noSupportGlobalEncryptionReasonCodeHasBeenSet;

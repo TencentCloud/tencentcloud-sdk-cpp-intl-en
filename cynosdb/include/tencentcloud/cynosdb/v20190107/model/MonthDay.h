@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * month date info
+                * Month, date, and info
                 */
                 class MonthDay : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取date info
-                     * @return Day date info
+                     * 获取Date information
+                     * @return Day Date information
                      * 
                      */
                     int64_t GetDay() const;
 
                     /**
-                     * 设置date info
-                     * @param _day date info
+                     * 设置Date information
+                     * @param _day Date information
                      * 
                      */
                     void SetDay(const int64_t& _day);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_monthHasBeenSet;
 
                     /**
-                     * date info
+                     * Date information
                      */
                     int64_t m_day;
                     bool m_dayHasBeenSet;

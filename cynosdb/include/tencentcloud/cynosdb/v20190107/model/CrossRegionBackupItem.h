@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cross-Region backup describes the backup information in each region.
+                * Cross-region backup information in each region
                 */
                 class CrossRegionBackupItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target region for backup.
-                     * @return CrossRegion Target region for backup.
+                     * 获取Target region for backup
+                     * @return CrossRegion Target region for backup
                      * 
                      */
                     std::string GetCrossRegion() const;
 
                     /**
-                     * 设置Target region for backup.
-                     * @param _crossRegion Target region for backup.
+                     * 设置Target region for backup
+                     * @param _crossRegion Target region for backup
                      * 
                      */
                     void SetCrossRegion(const std::string& _crossRegion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CrossRegionHasBeenSet() const;
 
                     /**
-                     * 获取Target region's backup task ID.
-                     * @return BackupId Target region's backup task ID.
+                     * 获取Backup task ID in the target region
+                     * @return BackupId Backup task ID in the target region
                      * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
-                     * 设置Target region's backup task ID.
-                     * @param _backupId Target region's backup task ID.
+                     * 设置Backup task ID in the target region
+                     * @param _backupId Backup task ID in the target region
                      * 
                      */
                     void SetBackupId(const int64_t& _backupId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup status in the target region.
-                     * @return BackupStatus Backup status in the target region.
+                     * 获取Backup status in the target region
+                     * @return BackupStatus Backup status in the target region
                      * 
                      */
                     std::string GetBackupStatus() const;
 
                     /**
-                     * 设置Backup status in the target region.
-                     * @param _backupStatus Backup status in the target region.
+                     * 设置Backup status in the target region
+                     * @param _backupStatus Backup status in the target region
                      * 
                      */
                     void SetBackupStatus(const std::string& _backupStatus);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target region for backup.
+                     * Target region for backup
                      */
                     std::string m_crossRegion;
                     bool m_crossRegionHasBeenSet;
 
                     /**
-                     * Target region's backup task ID.
+                     * Backup task ID in the target region
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup status in the target region.
+                     * Backup status in the target region
                      */
                     std::string m_backupStatus;
                     bool m_backupStatusHasBeenSet;

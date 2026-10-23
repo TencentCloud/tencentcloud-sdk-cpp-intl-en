@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of database proxyspecifications
-                     * @return ProxySpecs List of database proxyspecifications
+                     * 获取List of database proxy specifications
+                     * @return ProxySpecs List of database proxy specifications
                      * 
                      */
                     std::vector<ProxySpec> GetProxySpecs() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of database proxyspecifications
+                     * List of database proxy specifications
                      */
                     std::vector<ProxySpec> m_proxySpecs;
                     bool m_proxySpecsHasBeenSet;

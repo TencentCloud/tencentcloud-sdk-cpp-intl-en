@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Slow query export content
-                     * @return FileContent Slow query export content
+                     * 获取Exported content of slow query
+                     * @return FileContent Exported content of slow query
                      * 
                      */
                     std::string GetFileContent() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Slow query export content
+                     * Exported content of slow query
                      */
                     std::string m_fileContent;
                     bool m_fileContentHasBeenSet;

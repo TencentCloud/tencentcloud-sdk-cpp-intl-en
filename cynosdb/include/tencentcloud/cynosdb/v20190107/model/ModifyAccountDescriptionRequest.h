@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Database account description
-                     * @return Description Database account description
+                     * 获取Database account description information
+                     * @return Description Database account description information
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Database account description
-                     * @param _description Database account description
+                     * 设置Database account description information
+                     * @param _description Database account description information
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Host. Default value: `%`
-                     * @return Host Host. Default value: `%`
+                     * 获取Host. Default value: %.
+                     * @return Host Host. Default value: %.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Host. Default value: `%`
-                     * @param _host Host. Default value: `%`
+                     * 设置Host. Default value: %.
+                     * @param _host Host. Default value: %.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Database account description
+                     * Database account description information
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Host. Default value: `%`
+                     * Host. Default value: %.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

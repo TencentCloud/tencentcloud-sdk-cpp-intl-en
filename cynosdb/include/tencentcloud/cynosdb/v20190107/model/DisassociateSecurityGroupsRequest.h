@@ -43,19 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-                     * @return InstanceIds Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * 获取Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-                     * @param _instanceIds Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * 设置Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * @param _instanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -68,15 +68,15 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID list to modify. An array of one or more security group IDs.
-                     * @return SecurityGroupIds Security group ID list to modify. An array of one or more security group IDs.
+                     * 获取Security group ID list to modify, which is an array of one or more security group IDs.
+                     * @return SecurityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group ID list to modify. An array of one or more security group IDs.
-                     * @param _securityGroupIds Security group ID list to modify. An array of one or more security group IDs.
+                     * 设置Security group ID list to modify, which is an array of one or more security group IDs.
+                     * @param _securityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -90,18 +90,18 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
 
                     /**
                      * 获取Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
                      * @return Zone Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
                      * @deprecated
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
                      * @param _zone Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
                      * @deprecated
                      */
                     void SetZone(const std::string& _zone);
@@ -116,21 +116,21 @@ Description: Please enter the primary AZ of the cluster location correctly. If y
                 private:
 
                     /**
-                     * Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Security group ID list to modify. An array of one or more security group IDs.
+                     * Security group ID list to modify, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
                      * Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

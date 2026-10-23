@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User `appId`
-                     * @return AppId User `appId`
+                     * 获取User AppID
+                     * @return AppId User AppID
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User `appId`
-                     * @param _appId User `appId`
+                     * 设置User AppID
+                     * @param _appId User AppID
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreatedTime Creation time
+                     * 获取Creation time.
+                     * @return CreatedTime Creation time.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createdTime Creation time
+                     * 设置Creation time.
+                     * @param _createdTime Creation time.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param _status Status
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance group type. ha: HA group; ro: RO group
-                     * @return Type Instance group type. ha: HA group; ro: RO group
+                     * 获取Instance group type. ha: HA group; ro: read-only group
+                     * @return Type Instance group type. ha: HA group; ro: read-only group
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Instance group type. ha: HA group; ro: RO group
-                     * @param _type Instance group type. ha: HA group; ro: RO group
+                     * 设置Instance group type. ha: HA group; ro: read-only group
+                     * @param _type Instance group type. ha: HA group; ro: read-only group
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdatedTime Update time
+                     * 获取Update time.
+                     * @return UpdatedTime Update time.
                      * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updatedTime Update time
+                     * 设置Update time.
+                     * @param _updatedTime Update time.
                      * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool UpdatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Private IP
-                     * @return Vip Private IP
+                     * 获取Private IP address
+                     * @return Vip Private IP address
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Private IP
-                     * @param _vip Private IP
+                     * 设置Private IP address
+                     * @param _vip Private IP address
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Private port
-                     * @return Vport Private port
+                     * 获取Private network port
+                     * @return Vport Private network port
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Private port
-                     * @param _vport Private port
+                     * 设置Private network port
+                     * @param _vport Private network port
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Public domain name
-                     * @return WanDomain Public domain name
+                     * 获取Public network domain name.
+                     * @return WanDomain Public network domain name.
                      * 
                      */
                     std::string GetWanDomain() const;
 
                     /**
-                     * 设置Public domain name
-                     * @param _wanDomain Public domain name
+                     * 设置Public network domain name.
+                     * @param _wanDomain Public network domain name.
                      * 
                      */
                     void SetWanDomain(const std::string& _wanDomain);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool WanDomainHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-                     * @return WanIP Public IP
+                     * 获取Public IP address
+                     * @return WanIP Public IP address
                      * 
                      */
                     std::string GetWanIP() const;
 
                     /**
-                     * 设置Public IP
-                     * @param _wanIP Public IP
+                     * 设置Public IP address
+                     * @param _wanIP Public IP address
                      * 
                      */
                     void SetWanIP(const std::string& _wanIP);
@@ -302,15 +302,15 @@ namespace TencentCloud
                     bool WanIPHasBeenSet() const;
 
                     /**
-                     * 获取Public port
-                     * @return WanPort Public port
+                     * 获取External port
+                     * @return WanPort External port
                      * 
                      */
                     int64_t GetWanPort() const;
 
                     /**
-                     * 设置Public port
-                     * @param _wanPort Public port
+                     * 设置External port
+                     * @param _wanPort External port
                      * 
                      */
                     void SetWanPort(const int64_t& _wanPort);
@@ -323,15 +323,15 @@ namespace TencentCloud
                     bool WanPortHasBeenSet() const;
 
                     /**
-                     * 获取Public network status
-                     * @return WanStatus Public network status
+                     * 获取Public network status.
+                     * @return WanStatus Public network status.
                      * 
                      */
                     std::string GetWanStatus() const;
 
                     /**
-                     * 设置Public network status
-                     * @param _wanStatus Public network status
+                     * 设置Public network status.
+                     * @param _wanStatus Public network status.
                      * 
                      */
                     void SetWanStatus(const std::string& _wanStatus);
@@ -344,15 +344,15 @@ namespace TencentCloud
                     bool WanStatusHasBeenSet() const;
 
                     /**
-                     * 获取Information of instances contained in instance group
-                     * @return InstanceSet Information of instances contained in instance group
+                     * 获取Instance group information including instances
+                     * @return InstanceSet Instance group information including instances
                      * 
                      */
                     std::vector<CynosdbInstance> GetInstanceSet() const;
 
                     /**
-                     * 设置Information of instances contained in instance group
-                     * @param _instanceSet Information of instances contained in instance group
+                     * 设置Instance group information including instances
+                     * @param _instanceSet Instance group information including instances
                      * 
                      */
                     void SetInstanceSet(const std::vector<CynosdbInstance>& _instanceSet);
@@ -428,15 +428,15 @@ namespace TencentCloud
                     bool OldAddrInfoHasBeenSet() const;
 
                     /**
-                     * 获取Task in progress
-                     * @return ProcessingTasks Task in progress
+                     * 获取Ongoing task
+                     * @return ProcessingTasks Ongoing task
                      * 
                      */
                     std::vector<std::string> GetProcessingTasks() const;
 
                     /**
-                     * 设置Task in progress
-                     * @param _processingTasks Task in progress
+                     * 设置Ongoing task
+                     * @param _processingTasks Ongoing task
                      * 
                      */
                     void SetProcessingTasks(const std::vector<std::string>& _processingTasks);
@@ -470,15 +470,15 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取biz_net_service table ID
-                     * @return NetServiceId biz_net_service table ID
+                     * 获取id of the biz_net_service table
+                     * @return NetServiceId id of the biz_net_service table
                      * 
                      */
                     int64_t GetNetServiceId() const;
 
                     /**
-                     * 设置biz_net_service table ID
-                     * @param _netServiceId biz_net_service table ID
+                     * 设置id of the biz_net_service table
+                     * @param _netServiceId id of the biz_net_service table
                      * 
                      */
                     void SetNetServiceId(const int64_t& _netServiceId);
@@ -493,7 +493,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User `appId`
+                     * User AppID
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -505,7 +505,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
@@ -523,61 +523,61 @@ namespace TencentCloud
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * Status
+                     * Status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance group type. ha: HA group; ro: RO group
+                     * Instance group type. ha: HA group; ro: read-only group
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Update time
+                     * Update time.
                      */
                     std::string m_updatedTime;
                     bool m_updatedTimeHasBeenSet;
 
                     /**
-                     * Private IP
+                     * Private IP address
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Private port
+                     * Private network port
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Public domain name
+                     * Public network domain name.
                      */
                     std::string m_wanDomain;
                     bool m_wanDomainHasBeenSet;
 
                     /**
-                     * Public IP
+                     * Public IP address
                      */
                     std::string m_wanIP;
                     bool m_wanIPHasBeenSet;
 
                     /**
-                     * Public port
+                     * External port
                      */
                     int64_t m_wanPort;
                     bool m_wanPortHasBeenSet;
 
                     /**
-                     * Public network status
+                     * Public network status.
                      */
                     std::string m_wanStatus;
                     bool m_wanStatusHasBeenSet;
 
                     /**
-                     * Information of instances contained in instance group
+                     * Instance group information including instances
                      */
                     std::vector<CynosdbInstance> m_instanceSet;
                     bool m_instanceSetHasBeenSet;
@@ -601,7 +601,7 @@ namespace TencentCloud
                     bool m_oldAddrInfoHasBeenSet;
 
                     /**
-                     * Task in progress
+                     * Ongoing task
                      */
                     std::vector<std::string> m_processingTasks;
                     bool m_processingTasksHasBeenSet;
@@ -613,7 +613,7 @@ namespace TencentCloud
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * biz_net_service table ID
+                     * id of the biz_net_service table
                      */
                     int64_t m_netServiceId;
                     bool m_netServiceIdHasBeenSet;

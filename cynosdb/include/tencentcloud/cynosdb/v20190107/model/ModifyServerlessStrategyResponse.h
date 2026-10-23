@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Async process id</p>
-                     * @return FlowId <p>Async process id</p>
+                     * 获取<p>Asynchronous flow ID.</p>
+                     * @return FlowId <p>Asynchronous flow ID.</p>
                      * @deprecated
                      */
                     int64_t GetFlowId() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Async process id</p>
+                     * <p>Asynchronous flow ID.</p>
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

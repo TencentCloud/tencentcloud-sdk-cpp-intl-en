@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Global database task info
+                * Global database task information
                 */
                 class GdnTaskInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of the global database
-                     * @return GdnId Unique ID of the global database
+                     * 获取Global database unique ID
+                     * @return GdnId Global database unique ID
                      * 
                      */
                     std::string GetGdnId() const;
 
                     /**
-                     * 设置Unique ID of the global database
-                     * @param _gdnId Unique ID of the global database
+                     * 设置Global database unique ID
+                     * @param _gdnId Global database unique ID
                      * 
                      */
                     void SetGdnId(const std::string& _gdnId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool GdnIdHasBeenSet() const;
 
                     /**
-                     * 获取unique alias of the global database
-                     * @return GdnName unique alias of the global database
+                     * 获取Unique alias of the global database
+                     * @return GdnName Unique alias of the global database
                      * 
                      */
                     std::string GetGdnName() const;
 
                     /**
-                     * 设置unique alias of the global database
-                     * @param _gdnName unique alias of the global database
+                     * 设置Unique alias of the global database
+                     * @param _gdnName Unique alias of the global database
                      * 
                      */
                     void SetGdnName(const std::string& _gdnName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool GdnNameHasBeenSet() const;
 
                     /**
-                     * 获取Primary Cluster ID
-                     * @return PrimaryClusterId Primary Cluster ID
+                     * 获取Primary cluster ID
+                     * @return PrimaryClusterId Primary cluster ID
                      * 
                      */
                     std::string GetPrimaryClusterId() const;
 
                     /**
-                     * 设置Primary Cluster ID
-                     * @param _primaryClusterId Primary Cluster ID
+                     * 设置Primary cluster ID
+                     * @param _primaryClusterId Primary cluster ID
                      * 
                      */
                     void SetPrimaryClusterId(const std::string& _primaryClusterId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PrimaryClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Master cluster region
-                     * @return PrimaryClusterRegion Master cluster region
+                     * 获取Region of the primary cluster
+                     * @return PrimaryClusterRegion Region of the primary cluster
                      * 
                      */
                     std::string GetPrimaryClusterRegion() const;
 
                     /**
-                     * 设置Master cluster region
-                     * @param _primaryClusterRegion Master cluster region
+                     * 设置Region of the primary cluster
+                     * @param _primaryClusterRegion Region of the primary cluster
                      * 
                      */
                     void SetPrimaryClusterRegion(const std::string& _primaryClusterRegion);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PrimaryClusterRegionHasBeenSet() const;
 
                     /**
-                     * 获取from the cluster region
-                     * @return StandbyClusterRegion from the cluster region
+                     * 获取From the cluster region
+                     * @return StandbyClusterRegion From the cluster region
                      * 
                      */
                     std::string GetStandbyClusterRegion() const;
 
                     /**
-                     * 设置from the cluster region
-                     * @param _standbyClusterRegion from the cluster region
+                     * 设置From the cluster region
+                     * @param _standbyClusterRegion From the cluster region
                      * 
                      */
                     void SetStandbyClusterRegion(const std::string& _standbyClusterRegion);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StandbyClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether forced switchover is performed
-                     * @return ForceSwitchGdn Whether forced switchover is performed
+                     * 获取Whether a forced switchover has been performed
+                     * @return ForceSwitchGdn Whether a forced switchover has been performed
                      * 
                      */
                     std::string GetForceSwitchGdn() const;
 
                     /**
-                     * 设置Whether forced switchover is performed
-                     * @param _forceSwitchGdn Whether forced switchover is performed
+                     * 设置Whether a forced switchover has been performed
+                     * @param _forceSwitchGdn Whether a forced switchover has been performed
                      * 
                      */
                     void SetForceSwitchGdn(const std::string& _forceSwitchGdn);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ForceSwitchGdnHasBeenSet() const;
 
                     /**
-                     * 获取Return code
-                     * @return Code Return code
+                     * 获取code
+                     * @return Code code
                      * 
                      */
                     int64_t GetCode() const;
 
                     /**
-                     * 设置Return code
-                     * @param _code Return code
+                     * 设置code
+                     * @param _code code
                      * 
                      */
                     void SetCode(const int64_t& _code);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取prompt message
-                     * @return Message prompt message
+                     * 获取Prompt message
+                     * @return Message Prompt message
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置prompt message
-                     * @param _message prompt message
+                     * 设置Prompt message
+                     * @param _message Prompt message
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -280,31 +280,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of the global database
+                     * Global database unique ID
                      */
                     std::string m_gdnId;
                     bool m_gdnIdHasBeenSet;
 
                     /**
-                     * unique alias of the global database
+                     * Unique alias of the global database
                      */
                     std::string m_gdnName;
                     bool m_gdnNameHasBeenSet;
 
                     /**
-                     * Primary Cluster ID
+                     * Primary cluster ID
                      */
                     std::string m_primaryClusterId;
                     bool m_primaryClusterIdHasBeenSet;
 
                     /**
-                     * Master cluster region
+                     * Region of the primary cluster
                      */
                     std::string m_primaryClusterRegion;
                     bool m_primaryClusterRegionHasBeenSet;
 
                     /**
-                     * from the cluster region
+                     * From the cluster region
                      */
                     std::string m_standbyClusterRegion;
                     bool m_standbyClusterRegionHasBeenSet;
@@ -322,19 +322,19 @@ namespace TencentCloud
                     bool m_standbyClusterNameHasBeenSet;
 
                     /**
-                     * Whether forced switchover is performed
+                     * Whether a forced switchover has been performed
                      */
                     std::string m_forceSwitchGdn;
                     bool m_forceSwitchGdnHasBeenSet;
 
                     /**
-                     * Return code
+                     * code
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;
 
                     /**
-                     * prompt message
+                     * Prompt message
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

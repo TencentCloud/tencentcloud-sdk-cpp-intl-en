@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster information
+                * Cluster information.
                 */
                 class CynosdbCluster : public AbstractModel
                 {
@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
-                     * @return Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * 获取<p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * @return Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
-                     * @param _status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * 设置<p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * @param _status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region</p>
-                     * @return Region <p>Region</p>
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置<p>Region</p>
-                     * @param _region <p>Region</p>
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database version</p>
-                     * @return DbVersion <p>Database version</p>
+                     * 获取<p>Database version.</p>
+                     * @return DbVersion <p>Database version.</p>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置<p>Database version</p>
-                     * @param _dbVersion <p>Database version</p>
+                     * 设置<p>Database version.</p>
+                     * @param _dbVersion <p>Database version.</p>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -262,15 +262,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>User appid</p>
-                     * @return AppId <p>User appid</p>
+                     * 获取<p>User AppID.</p>
+                     * @return AppId <p>User AppID.</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置<p>User appid</p>
-                     * @param _appId <p>User appid</p>
+                     * 设置<p>User AppID.</p>
+                     * @param _appId <p>User AppID.</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -304,15 +304,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster creation time</p>
-                     * @return CreateTime <p>Cluster creation time</p>
+                     * 获取<p>Cluster creation time.</p>
+                     * @return CreateTime <p>Cluster creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Cluster creation time</p>
-                     * @param _createTime <p>Cluster creation time</p>
+                     * 设置<p>Cluster creation time.</p>
+                     * @param _createTime <p>Cluster creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -325,15 +325,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-                     * @return PayMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * 获取<p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+                     * @return PayMode <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置<p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-                     * @param _payMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * 设置<p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+                     * @param _payMode <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -472,15 +472,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>cynos kernel version</p>
-                     * @return CynosVersion <p>cynos kernel version</p>
+                     * 获取<p>cynos kernel version.</p>
+                     * @return CynosVersion <p>cynos kernel version.</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置<p>cynos kernel version</p>
-                     * @param _cynosVersion <p>cynos kernel version</p>
+                     * 设置<p>cynos kernel version.</p>
+                     * @param _cynosVersion <p>cynos kernel version.</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -493,15 +493,15 @@ namespace TencentCloud
                     bool CynosVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>cynos version tag</p>
-                     * @return CynosVersionTag <p>cynos version tag</p>
+                     * 获取<p>cynos version tag.</p>
+                     * @return CynosVersionTag <p>cynos version tag.</p>
                      * 
                      */
                     std::string GetCynosVersionTag() const;
 
                     /**
-                     * 设置<p>cynos version tag</p>
-                     * @param _cynosVersionTag <p>cynos version tag</p>
+                     * 设置<p>cynos version tag.</p>
+                     * @param _cynosVersionTag <p>cynos version tag.</p>
                      * 
                      */
                     void SetCynosVersionTag(const std::string& _cynosVersionTag);
@@ -514,15 +514,15 @@ namespace TencentCloud
                     bool CynosVersionTagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage capacity</p>
-                     * @return StorageLimit <p>Storage capacity</p>
+                     * 获取<p>Storage capacity.</p>
+                     * @return StorageLimit <p>Storage capacity.</p>
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置<p>Storage capacity</p>
-                     * @param _storageLimit <p>Storage capacity</p>
+                     * 设置<p>Storage capacity.</p>
+                     * @param _storageLimit <p>Storage capacity.</p>
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -535,15 +535,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Renewal flag</p>
-                     * @return RenewFlag <p>Renewal flag</p>
+                     * 获取<p>Renewal flag.</p>
+                     * @return RenewFlag <p>Renewal flag.</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置<p>Renewal flag</p>
-                     * @param _renewFlag <p>Renewal flag</p>
+                     * 设置<p>Renewal flag.</p>
+                     * @param _renewFlag <p>Renewal flag.</p>
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -556,15 +556,15 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Currently processing task</p>
-                     * @return ProcessingTask <p>Currently processing task</p>
+                     * 获取<p>Currently Processing Tasks</p>
+                     * @return ProcessingTask <p>Currently Processing Tasks</p>
                      * 
                      */
                     std::string GetProcessingTask() const;
 
                     /**
-                     * 设置<p>Currently processing task</p>
-                     * @param _processingTask <p>Currently processing task</p>
+                     * 设置<p>Currently Processing Tasks</p>
+                     * @param _processingTask <p>Currently Processing Tasks</p>
                      * 
                      */
                     void SetProcessingTask(const std::string& _processingTask);
@@ -598,15 +598,15 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取<p>tag Array of cluster binding</p>
-                     * @return ResourceTags <p>tag Array of cluster binding</p>
+                     * 获取<p>tag Array bound to the cluster</p>
+                     * @return ResourceTags <p>tag Array bound to the cluster</p>
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置<p>tag Array of cluster binding</p>
-                     * @param _resourceTags <p>tag Array of cluster binding</p>
+                     * 设置<p>tag Array bound to the cluster</p>
+                     * @param _resourceTags <p>tag Array bound to the cluster</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -640,15 +640,15 @@ namespace TencentCloud
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
-                     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+                     * 获取<p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
+                     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置<p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
-                     * @param _serverlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+                     * 设置<p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
+                     * @param _serverlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -661,15 +661,15 @@ namespace TencentCloud
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster Prepaid storage size</p>
-                     * @return Storage <p>Cluster Prepaid storage size</p>
+                     * 获取<p>Cluster prepaid storage size.</p>
+                     * @return Storage <p>Cluster prepaid storage size.</p>
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置<p>Cluster Prepaid storage size</p>
-                     * @param _storage <p>Cluster Prepaid storage size</p>
+                     * 设置<p>Cluster prepaid storage size.</p>
+                     * @param _storage <p>Cluster prepaid storage size.</p>
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -682,15 +682,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
-                     * @return StorageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+                     * 获取<p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
+                     * @return StorageId <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
                      * 
                      */
                     std::string GetStorageId() const;
 
                     /**
-                     * 设置<p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
-                     * @param _storageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+                     * 设置<p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
+                     * @param _storageId <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
                      * 
                      */
                     void SetStorageId(const std::string& _storageId);
@@ -703,15 +703,15 @@ namespace TencentCloud
                     bool StorageIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-                     * @return StoragePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * 获取<p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+                     * @return StoragePayMode <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置<p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-                     * @param _storagePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * 设置<p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+                     * @param _storagePayMode <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -724,15 +724,15 @@ namespace TencentCloud
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum storage of the cluster compute specification</p>
-                     * @return MinStorageSize <p>Minimum storage of the cluster compute specification</p>
+                     * 获取<p>Minimum storage corresponding to the cluster compute specification.</p>
+                     * @return MinStorageSize <p>Minimum storage corresponding to the cluster compute specification.</p>
                      * 
                      */
                     int64_t GetMinStorageSize() const;
 
                     /**
-                     * 设置<p>Minimum storage of the cluster compute specification</p>
-                     * @param _minStorageSize <p>Minimum storage of the cluster compute specification</p>
+                     * 设置<p>Minimum storage corresponding to the cluster compute specification.</p>
+                     * @param _minStorageSize <p>Minimum storage corresponding to the cluster compute specification.</p>
                      * 
                      */
                     void SetMinStorageSize(const int64_t& _minStorageSize);
@@ -745,15 +745,15 @@ namespace TencentCloud
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum storage value of the cluster compute specification</p>
-                     * @return MaxStorageSize <p>Maximum storage value of the cluster compute specification</p>
+                     * 获取<p>Maximum storage value corresponding to the cluster compute specification</p>
+                     * @return MaxStorageSize <p>Maximum storage value corresponding to the cluster compute specification</p>
                      * 
                      */
                     int64_t GetMaxStorageSize() const;
 
                     /**
-                     * 设置<p>Maximum storage value of the cluster compute specification</p>
-                     * @param _maxStorageSize <p>Maximum storage value of the cluster compute specification</p>
+                     * 设置<p>Maximum storage value corresponding to the cluster compute specification</p>
+                     * @param _maxStorageSize <p>Maximum storage value corresponding to the cluster compute specification</p>
                      * 
                      */
                     void SetMaxStorageSize(const int64_t& _maxStorageSize);
@@ -892,15 +892,15 @@ namespace TencentCloud
                     bool BusinessTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Freeze or not</p>
-                     * @return IsFreeze <p>Freeze or not</p>
+                     * 获取<p>Whether to freeze</p>
+                     * @return IsFreeze <p>Whether to freeze</p>
                      * 
                      */
                     std::string GetIsFreeze() const;
 
                     /**
-                     * 设置<p>Freeze or not</p>
-                     * @param _isFreeze <p>Freeze or not</p>
+                     * 设置<p>Whether to freeze</p>
+                     * @param _isFreeze <p>Whether to freeze</p>
                      * 
                      */
                     void SetIsFreeze(const std::string& _isFreeze);
@@ -955,15 +955,15 @@ namespace TencentCloud
                     bool AbilityHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
-                     * @return ResourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+                     * 获取<p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
+                     * @return ResourcePackages <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
                      * 
                      */
                     std::vector<ResourcePackage> GetResourcePackages() const;
 
                     /**
-                     * 设置<p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
-                     * @param _resourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+                     * 设置<p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
+                     * @param _resourcePackages <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
                      * 
                      */
                     void SetResourcePackages(const std::vector<ResourcePackage>& _resourcePackages);
@@ -997,15 +997,15 @@ namespace TencentCloud
                     bool GdnIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
-                     * @return GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+                     * 获取<p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
+                     * @return GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
                      * 
                      */
                     std::string GetGdnRole() const;
 
                     /**
-                     * 设置<p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
-                     * @param _gdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+                     * 设置<p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
+                     * @param _gdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
                      * 
                      */
                     void SetGdnRole(const std::string& _gdnRole);
@@ -1020,7 +1020,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -1044,13 +1044,13 @@ namespace TencentCloud
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * <p>Region</p>
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * <p>Database version</p>
+                     * <p>Database version.</p>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
@@ -1080,7 +1080,7 @@ namespace TencentCloud
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * <p>User appid</p>
+                     * <p>User AppID.</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -1092,13 +1092,13 @@ namespace TencentCloud
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * <p>Cluster creation time</p>
+                     * <p>Cluster creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -1140,31 +1140,31 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * <p>cynos kernel version</p>
+                     * <p>cynos kernel version.</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
 
                     /**
-                     * <p>cynos version tag</p>
+                     * <p>cynos version tag.</p>
                      */
                     std::string m_cynosVersionTag;
                     bool m_cynosVersionTagHasBeenSet;
 
                     /**
-                     * <p>Storage capacity</p>
+                     * <p>Storage capacity.</p>
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * <p>Renewal flag</p>
+                     * <p>Renewal flag.</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * <p>Currently processing task</p>
+                     * <p>Currently Processing Tasks</p>
                      */
                     std::string m_processingTask;
                     bool m_processingTaskHasBeenSet;
@@ -1176,7 +1176,7 @@ namespace TencentCloud
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * <p>tag Array of cluster binding</p>
+                     * <p>tag Array bound to the cluster</p>
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
@@ -1188,37 +1188,37 @@ namespace TencentCloud
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+                     * <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * <p>Cluster Prepaid storage size</p>
+                     * <p>Cluster prepaid storage size.</p>
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+                     * <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
                      */
                     std::string m_storageId;
                     bool m_storageIdHasBeenSet;
 
                     /**
-                     * <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * <p>Minimum storage of the cluster compute specification</p>
+                     * <p>Minimum storage corresponding to the cluster compute specification.</p>
                      */
                     int64_t m_minStorageSize;
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
-                     * <p>Maximum storage value of the cluster compute specification</p>
+                     * <p>Maximum storage value corresponding to the cluster compute specification</p>
                      */
                     int64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
@@ -1260,7 +1260,7 @@ namespace TencentCloud
                     bool m_businessTypeHasBeenSet;
 
                     /**
-                     * <p>Freeze or not</p>
+                     * <p>Whether to freeze</p>
                      */
                     std::string m_isFreeze;
                     bool m_isFreezeHasBeenSet;
@@ -1278,7 +1278,7 @@ namespace TencentCloud
                     bool m_abilityHasBeenSet;
 
                     /**
-                     * <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+                     * <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
                      */
                     std::vector<ResourcePackage> m_resourcePackages;
                     bool m_resourcePackagesHasBeenSet;
@@ -1290,7 +1290,7 @@ namespace TencentCloud
                     bool m_gdnIdHasBeenSet;
 
                     /**
-                     * <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+                     * <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
                      */
                     std::string m_gdnRole;
                     bool m_gdnRoleHasBeenSet;

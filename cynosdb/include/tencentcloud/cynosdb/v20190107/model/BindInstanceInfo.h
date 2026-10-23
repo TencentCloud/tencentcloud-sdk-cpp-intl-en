@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the instance bound to the resource pack
+                * Information of the instance bound to the resource package
                 */
                 class BindInstanceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the bound cluster.
-                     * @return InstanceId ID of the bound cluster.
+                     * 获取Bound cluster ID.
+                     * @return InstanceId Bound cluster ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the bound cluster.
-                     * @param _instanceId ID of the bound cluster.
+                     * 设置Bound cluster ID.
+                     * @param _instanceId Bound cluster ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The region where the bound instance is located.
-                     * @return InstanceRegion The region where the bound instance is located.
+                     * 获取Region of the bound instance
+                     * @return InstanceRegion Region of the bound instance
                      * 
                      */
                     std::string GetInstanceRegion() const;
 
                     /**
-                     * 设置The region where the bound instance is located.
-                     * @param _instanceRegion The region where the bound instance is located.
+                     * 设置Region of the bound instance
+                     * @param _instanceRegion Region of the bound instance
                      * 
                      */
                     void SetInstanceRegion(const std::string& _instanceRegion);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Type of the bound instance.
-                     * @return InstanceType Type of the bound instance.
+                     * 获取Bound instance type
+                     * @return InstanceType Bound instance type
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Type of the bound instance.
-                     * @param _instanceType Type of the bound instance.
+                     * 设置Bound instance type
+                     * @param _instanceType Bound instance type
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The instance ID under the bound cluster.
-                     * @return ExtendIds The instance ID under the bound cluster.
+                     * 获取Instance ID under the bound cluster
+                     * @return ExtendIds Instance ID under the bound cluster
                      * 
                      */
                     std::vector<std::string> GetExtendIds() const;
 
                     /**
-                     * 设置The instance ID under the bound cluster.
-                     * @param _extendIds The instance ID under the bound cluster.
+                     * 设置Instance ID under the bound cluster
+                     * @param _extendIds Instance ID under the bound cluster
                      * 
                      */
                     void SetExtendIds(const std::vector<std::string>& _extendIds);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the bound cluster.
+                     * Bound cluster ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The region where the bound instance is located.
+                     * Region of the bound instance
                      */
                     std::string m_instanceRegion;
                     bool m_instanceRegionHasBeenSet;
 
                     /**
-                     * Type of the bound instance.
+                     * Bound instance type
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * The instance ID under the bound cluster.
+                     * Instance ID under the bound cluster
                      */
                     std::vector<std::string> m_extendIds;
                     bool m_extendIdsHasBeenSet;

@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return FollowOrigin Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+                     * @return FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
                      * 
                      */
                     FollowOrigin GetFollowOrigin() const;
 
                     /**
-                     * 设置Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _followOrigin Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+                     * @param _followOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
                      * 
                      */
                     void SetFollowOrigin(const FollowOrigin& _followOrigin);
@@ -75,19 +71,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return NoCache No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+                     * @return NoCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
                      * 
                      */
                     NoCache GetNoCache() const;
 
                     /**
-                     * 设置No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _noCache No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+                     * @param _noCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
                      * 
                      */
                     void SetNoCache(const NoCache& _noCache);
@@ -100,19 +92,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool NoCacheHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CustomTime Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+                     * @return CustomTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
                      * 
                      */
                     CustomTime GetCustomTime() const;
 
                     /**
-                     * 设置Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _customTime Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+                     * @param _customTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
                      * 
                      */
                     void SetCustomTime(const CustomTime& _customTime);
@@ -127,22 +115,19 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
                      */
                     FollowOrigin m_followOrigin;
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
                      */
                     NoCache m_noCache;
                     bool m_noCacheHasBeenSet;
 
                     /**
-                     * Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
                      */
                     CustomTime m_customTime;
                     bool m_customTimeHasBeenSet;

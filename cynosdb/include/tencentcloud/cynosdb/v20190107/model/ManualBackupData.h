@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Manual backup task information.
+                * Manual backup task information
                 */
                 class ManualBackupData : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup type. snapshot - Snapshot backup.
-                     * @return BackupType Backup type. snapshot - Snapshot backup.
+                     * 获取Backup type. snapshot: snapshot backup.
+                     * @return BackupType Backup type. snapshot: snapshot backup.
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. snapshot - Snapshot backup.
-                     * @param _backupType Backup type. snapshot - Snapshot backup.
+                     * 设置Backup type. snapshot: snapshot backup.
+                     * @param _backupType Backup type. snapshot: snapshot backup.
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup method. auto - Automatic backup, manual - Manual backup.
-                     * @return BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
+                     * 获取Backup method. auto: automatic backup, manual: manual
+                     * @return BackupMethod Backup method. auto: automatic backup, manual: manual
                      * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置Backup method. auto - Automatic backup, manual - Manual backup.
-                     * @param _backupMethod Backup method. auto - Automatic backup, manual - Manual backup.
+                     * 设置Backup method. auto: automatic backup, manual: manual
+                     * @param _backupMethod Backup method. auto: automatic backup, manual: manual
                      * 
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Backup time.
-                     * @return SnapshotTime Backup time.
+                     * 获取Backup time
+                     * @return SnapshotTime Backup time
                      * 
                      */
                     std::string GetSnapshotTime() const;
 
                     /**
-                     * 设置Backup time.
-                     * @param _snapshotTime Backup time.
+                     * 设置Backup time
+                     * @param _snapshotTime Backup time
                      * 
                      */
                     void SetSnapshotTime(const std::string& _snapshotTime);
@@ -134,19 +134,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Backup type. snapshot - Snapshot backup.
+                     * Backup type. snapshot: snapshot backup.
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup method. auto - Automatic backup, manual - Manual backup.
+                     * Backup method. auto: automatic backup, manual: manual
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Backup time.
+                     * Backup time
                      */
                     std::string m_snapshotTime;
                     bool m_snapshotTimeHasBeenSet;

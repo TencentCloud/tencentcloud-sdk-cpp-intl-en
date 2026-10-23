@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused.
-                     * @return DbType This parameter has been disused.
+                     * 获取This parameter has been deprecated.
+                     * @return DbType This parameter has been deprecated.
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置This parameter has been disused.
-                     * @param _dbType This parameter has been disused.
+                     * 设置This parameter has been deprecated.
+                     * @param _dbType This parameter has been deprecated.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance return reason type.
-                     * @return IsolateReasonTypes Instance return reason type.
+                     * 获取Reason type for instance return
+                     * @return IsolateReasonTypes Reason type for instance return
                      * 
                      */
                     std::vector<int64_t> GetIsolateReasonTypes() const;
 
                     /**
-                     * 设置Instance return reason type.
-                     * @param _isolateReasonTypes Instance return reason type.
+                     * 设置Reason type for instance return
+                     * @param _isolateReasonTypes Reason type for instance return
                      * 
                      */
                     void SetIsolateReasonTypes(const std::vector<int64_t>& _isolateReasonTypes);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IsolateReasonTypesHasBeenSet() const;
 
                     /**
-                     * 获取Instance return reason supplement.
-                     * @return IsolateReason Instance return reason supplement.
+                     * 获取Supplementary reason for instance return
+                     * @return IsolateReason Supplementary reason for instance return
                      * 
                      */
                     std::string GetIsolateReason() const;
 
                     /**
-                     * 设置Instance return reason supplement.
-                     * @param _isolateReason Instance return reason supplement.
+                     * 设置Supplementary reason for instance return
+                     * @param _isolateReason Supplementary reason for instance return
                      * 
                      */
                     void SetIsolateReason(const std::string& _isolateReason);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IsolateReasonHasBeenSet() const;
 
                     /**
-                     * 获取Retain backup, true - Retained (incur fees).
-                     * @return SaveBackup Retain backup, true - Retained (incur fees).
+                     * 获取Retain backup. true: retain (fees will be incurred)
+                     * @return SaveBackup Retain backup. true: retain (fees will be incurred)
                      * 
                      */
                     bool GetSaveBackup() const;
 
                     /**
-                     * 设置Retain backup, true - Retained (incur fees).
-                     * @param _saveBackup Retain backup, true - Retained (incur fees).
+                     * 设置Retain backup. true: retain (fees will be incurred)
+                     * @param _saveBackup Retain backup. true: retain (fees will be incurred)
                      * 
                      */
                     void SetSaveBackup(const bool& _saveBackup);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * This parameter has been disused.
+                     * This parameter has been deprecated.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Instance return reason type.
+                     * Reason type for instance return
                      */
                     std::vector<int64_t> m_isolateReasonTypes;
                     bool m_isolateReasonTypesHasBeenSet;
 
                     /**
-                     * Instance return reason supplement.
+                     * Supplementary reason for instance return
                      */
                     std::string m_isolateReason;
                     bool m_isolateReasonHasBeenSet;
 
                     /**
-                     * Retain backup, true - Retained (incur fees).
+                     * Retain backup. true: retain (fees will be incurred)
                      */
                     bool m_saveBackup;
                     bool m_saveBackupHasBeenSet;

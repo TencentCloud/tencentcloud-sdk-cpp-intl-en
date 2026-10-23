@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BinlogSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cross-region backup retention period</p><p>Unit: Day</p>
-                     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 获取<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
                      * 
                      */
                     int64_t GetBinlogCrossRegionSaveDays() const;
 
                     /**
-                     * 设置<p>Cross-region backup retention period</p><p>Unit: Day</p>
-                     * @param _binlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 设置<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @param _binlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
                      * 
                      */
                     void SetBinlogCrossRegionSaveDays(const int64_t& _binlogCrossRegionSaveDays);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_binlogSaveDaysHasBeenSet;
 
                     /**
-                     * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * <p>Cross-region backup retention period</p><p>Unit: day</p>
                      */
                     int64_t m_binlogCrossRegionSaveDays;
                     bool m_binlogCrossRegionSaveDaysHasBeenSet;

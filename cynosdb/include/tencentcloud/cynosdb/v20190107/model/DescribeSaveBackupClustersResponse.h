@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Legacy backup information.
-                     * @return SaveBackupClusterInfos Legacy backup information.
+                     * 获取Legacy backup information
+                     * @return SaveBackupClusterInfos Legacy backup information
                      * 
                      */
                     std::vector<SaveBackupClusterInfo> GetSaveBackupClusterInfos() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Legacy backup information.
+                     * Legacy backup information
                      */
                     std::vector<SaveBackupClusterInfo> m_saveBackupClusterInfos;
                     bool m_saveBackupClusterInfosHasBeenSet;

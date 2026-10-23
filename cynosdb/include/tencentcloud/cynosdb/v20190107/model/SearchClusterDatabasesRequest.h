@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The cluster ID
-                     * @return ClusterId The cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置The cluster ID
-                     * @param _clusterId The cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -85,23 +85,23 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Whether to search exactly
+                     * 获取Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
-                     * @return MatchType Whether to search exactly
+The default is 0.
+                     * @return MatchType Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
                      * 
                      */
                     int64_t GetMatchType() const;
 
                     /**
-                     * 设置Whether to search exactly
+                     * 设置Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
-                     * @param _matchType Whether to search exactly
+The default is 0.
+                     * @param _matchType Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
                      * 
                      */
                     void SetMatchType(const int64_t& _matchType);
@@ -116,7 +116,7 @@ Default value: `0`.
                 private:
 
                     /**
-                     * The cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -128,9 +128,9 @@ Default value: `0`.
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Whether to search exactly
+                     * Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
                      */
                     int64_t m_matchType;
                     bool m_matchTypeHasBeenSet;

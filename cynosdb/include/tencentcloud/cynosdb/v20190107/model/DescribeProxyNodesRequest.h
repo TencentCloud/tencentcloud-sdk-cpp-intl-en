@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of returned results. Default value: `20`. Maximum value: `100`,
-                     * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`,
+                     * 获取Returned quantity. Default value: 20. Maximum value: 100.
+                     * @return Limit Returned quantity. Default value: 20. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: `20`. Maximum value: `100`,
-                     * @param _limit Number of returned results. Default value: `20`. Maximum value: `100`,
+                     * 设置Returned quantity. Default value: 20. Maximum value: 100.
+                     * @param _limit Returned quantity. Default value: 20. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Record offset. Default value: `0`.
-                     * @return Offset Record offset. Default value: `0`.
+                     * 获取Record offset. Default value: 0.
+                     * @return Offset Record offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Record offset. Default value: `0`.
-                     * @param _offset Record offset. Default value: `0`.
+                     * 设置Record offset. Default value: 0.
+                     * @param _offset Record offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -87,10 +87,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
                      * @return OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
                      * 
                      */
@@ -98,10 +98,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
                      * @param _orderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
                      * 
                      */
@@ -115,23 +115,23 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-                     * @return OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+                     * 获取Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
+                     * @return OrderByType Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-                     * @param _orderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+                     * 设置Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
+                     * @param _orderByType Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
-                     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * 获取Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
                      * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
-                     * 设置Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
-                     * @param _filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * 设置Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * @param _filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
                      * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
@@ -167,35 +167,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of returned results. Default value: `20`. Maximum value: `100`,
+                     * Returned quantity. Default value: 20. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Record offset. Default value: `0`.
+                     * Record offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
                      * Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+                     * Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
                      */
                     std::vector<QueryFilter> m_filters;
                     bool m_filtersHasBeenSet;

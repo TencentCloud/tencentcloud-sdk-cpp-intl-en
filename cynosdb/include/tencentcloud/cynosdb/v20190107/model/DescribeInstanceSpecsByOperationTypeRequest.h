@@ -65,22 +65,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
                      * @return OperationType Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
                      * 
                      */
                     std::string GetOperationType() const;
 
                     /**
                      * 设置Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
                      * @param _operationType Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
                      * 
                      */
                     void SetOperationType(const std::string& _operationType);
@@ -93,15 +93,15 @@ modifyInstance: Modify configuration
                     bool OperationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID, required when querying configuration modification specifications
-                     * @return InstanceId Instance ID, required when querying configuration modification specifications
+                     * 获取Instance ID. Required when querying configuration modification specifications.
+                     * @return InstanceId Instance ID. Required when querying configuration modification specifications.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID, required when querying configuration modification specifications
-                     * @param _instanceId Instance ID, required when querying configuration modification specifications
+                     * 设置Instance ID. Required when querying configuration modification specifications.
+                     * @param _instanceId Instance ID. Required when querying configuration modification specifications.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -114,15 +114,15 @@ modifyInstance: Modify configuration
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance Machine Type
-                     * @return DeviceType Instance Machine Type
+                     * 获取Instance machine type.
+                     * @return DeviceType Instance machine type.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance Machine Type
-                     * @param _deviceType Instance Machine Type
+                     * 设置Instance machine type.
+                     * @param _deviceType Instance machine type.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -144,20 +144,20 @@ modifyInstance: Modify configuration
 
                     /**
                      * Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
                      */
                     std::string m_operationType;
                     bool m_operationTypeHasBeenSet;
 
                     /**
-                     * Instance ID, required when querying configuration modification specifications
+                     * Instance ID. Required when querying configuration modification specifications.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance Machine Type
+                     * Instance machine type.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

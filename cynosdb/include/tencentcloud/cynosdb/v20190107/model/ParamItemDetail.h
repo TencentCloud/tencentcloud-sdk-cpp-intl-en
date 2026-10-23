@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DefaultHasBeenSet() const;
 
                     /**
-                     * 获取<p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
-                     * @return EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+                     * 获取<p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
+                     * @return EnumValue <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置<p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
-                     * @param _enumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+                     * 设置<p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
+                     * @param _enumValue <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>1: Global parameter, 0: Non-global parameter</p>
-                     * @return IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
+                     * 获取<p>1: global parameter, 0: non-global parameter</p>
+                     * @return IsGlobal <p>1: global parameter, 0: non-global parameter</p>
                      * 
                      */
                     int64_t GetIsGlobal() const;
 
                     /**
-                     * 设置<p>1: Global parameter, 0: Non-global parameter</p>
-                     * @param _isGlobal <p>1: Global parameter, 0: Non-global parameter</p>
+                     * 设置<p>1: global parameter, 0: non-global parameter</p>
+                     * @param _isGlobal <p>1: global parameter, 0: non-global parameter</p>
                      * 
                      */
                     void SetIsGlobal(const int64_t& _isGlobal);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取<p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
-                     * @return NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+                     * 获取<p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
+                     * @return NeedReboot <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
                      * 
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
-                     * 设置<p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
-                     * @param _needReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+                     * 设置<p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
+                     * @param _needReboot <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
                      * 
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether the type is formula</p>
-                     * @return IsFunc <p>Whether the type is formula</p>
+                     * 获取<p>Whether the type is a formula</p>
+                     * @return IsFunc <p>Whether the type is a formula</p>
                      * 
                      */
                     bool GetIsFunc() const;
 
                     /**
-                     * 设置<p>Whether the type is formula</p>
-                     * @param _isFunc <p>Whether the type is formula</p>
+                     * 设置<p>Whether the type is a formula</p>
+                     * @param _isFunc <p>Whether the type is a formula</p>
                      * 
                      */
                     void SetIsFunc(const bool& _isFunc);
@@ -356,13 +356,13 @@ namespace TencentCloud
                     bool m_defaultHasBeenSet;
 
                     /**
-                     * <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+                     * <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * <p>1: Global parameter, 0: Non-global parameter</p>
+                     * <p>1: global parameter, 0: non-global parameter</p>
                      */
                     int64_t m_isGlobal;
                     bool m_isGlobalHasBeenSet;
@@ -380,7 +380,7 @@ namespace TencentCloud
                     bool m_minHasBeenSet;
 
                     /**
-                     * <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+                     * <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
                      */
                     int64_t m_needReboot;
                     bool m_needRebootHasBeenSet;
@@ -410,7 +410,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Whether the type is formula</p>
+                     * <p>Whether the type is a formula</p>
                      */
                     bool m_isFunc;
                     bool m_isFuncHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * When adding or resizing an instance, synchronously upgrade the proxy.
+                * Upgrade proxy synchronously when adding instances or modifying instance configurations.
                 */
                 class UpgradeProxy : public AbstractModel
                 {
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ProxyZonesHasBeenSet() const;
 
                     /**
-                     * 获取Rebalance
-                     * @return ReloadBalance Rebalance
+                     * 获取Load rebalance
+                     * @return ReloadBalance Load rebalance
                      * 
                      */
                     std::string GetReloadBalance() const;
 
                     /**
-                     * 设置Rebalance
-                     * @param _reloadBalance Rebalance
+                     * 设置Load rebalance
+                     * @param _reloadBalance Load rebalance
                      * 
                      */
                     void SetReloadBalance(const std::string& _reloadBalance);
@@ -152,7 +152,7 @@ namespace TencentCloud
                     bool m_proxyZonesHasBeenSet;
 
                     /**
-                     * Rebalance
+                     * Load rebalance
                      */
                     std::string m_reloadBalance;
                     bool m_reloadBalanceHasBeenSet;

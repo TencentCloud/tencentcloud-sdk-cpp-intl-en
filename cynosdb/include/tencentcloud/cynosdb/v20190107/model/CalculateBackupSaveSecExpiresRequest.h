@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period (seconds). Must be greater than 0.
-                     * @return BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+                     * 获取Backup retention period (in seconds). Must be greater than 0.
+                     * @return BackupSaveSeconds Backup retention period (in seconds). Must be greater than 0.
                      * 
                      */
                     int64_t GetBackupSaveSeconds() const;
 
                     /**
-                     * 设置Backup retention period (seconds). Must be greater than 0.
-                     * @param _backupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+                     * 设置Backup retention period (in seconds). Must be greater than 0.
+                     * @param _backupSaveSeconds Backup retention period (in seconds). Must be greater than 0.
                      * 
                      */
                     void SetBackupSaveSeconds(const int64_t& _backupSaveSeconds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BackupSaveSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Number of items per page, range (0,100], default 10
-                     * @return Limit Number of items per page, range (0,100], default 10
+                     * 获取Number of items per page. Value range: (0,100]. Default: 10.
+                     * @return Limit Number of items per page. Value range: (0,100]. Default: 10.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items per page, range (0,100], default 10
-                     * @param _limit Number of items per page, range (0,100], default 10
+                     * 设置Number of items per page. Value range: (0,100]. Default: 10.
+                     * @param _limit Number of items per page. Value range: (0,100]. Default: 10.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Range: [0,INF). Default is 0
-                     * @return Offset Offset. Range: [0,INF). Default is 0
+                     * 获取Offset. Value range: [0, INF). Default value: 0.
+                     * @return Offset Offset. Value range: [0, INF). Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Range: [0,INF). Default is 0
-                     * @param _offset Offset. Range: [0,INF). Default is 0
+                     * 设置Offset. Value range: [0, INF). Default value: 0.
+                     * @param _offset Offset. Value range: [0, INF). Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
-                     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+                     * 获取Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
+                     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
-                     * @param _orderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+                     * 设置Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
+                     * @param _orderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method, available values: desc, asc, DESC, ASC, default desc
-                     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+                     * 获取Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+                     * @return OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting method, available values: desc, asc, DESC, ASC, default desc
-                     * @param _orderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+                     * 设置Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+                     * @param _orderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -177,31 +177,31 @@ namespace TencentCloud
                     bool m_vaultIdHasBeenSet;
 
                     /**
-                     * Backup retention period (seconds). Must be greater than 0.
+                     * Backup retention period (in seconds). Must be greater than 0.
                      */
                     int64_t m_backupSaveSeconds;
                     bool m_backupSaveSecondsHasBeenSet;
 
                     /**
-                     * Number of items per page, range (0,100], default 10
+                     * Number of items per page. Value range: (0,100]. Default: 10.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Range: [0,INF). Default is 0
+                     * Offset. Value range: [0, INF). Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+                     * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method, available values: desc, asc, DESC, ASC, default desc
+                     * Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

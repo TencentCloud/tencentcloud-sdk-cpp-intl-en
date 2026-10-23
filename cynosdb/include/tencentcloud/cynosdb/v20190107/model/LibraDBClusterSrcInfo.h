@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source endpoint type
-                     * @return SrcInstanceType Source endpoint type
+                     * 获取Source type
+                     * @return SrcInstanceType Source type
                      * 
                      */
                     std::string GetSrcInstanceType() const;
 
                     /**
-                     * 设置Source endpoint type
-                     * @param _srcInstanceType Source endpoint type
+                     * 设置Source type
+                     * @param _srcInstanceType Source type
                      * 
                      */
                     void SetSrcInstanceType(const std::string& _srcInstanceType);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Source sql mode
-                     * @return SqlMode Source sql mode
+                     * 获取sql_mode of the source
+                     * @return SqlMode sql_mode of the source
                      * 
                      */
                     std::string GetSqlMode() const;
 
                     /**
-                     * 设置Source sql mode
-                     * @param _sqlMode Source sql mode
+                     * 设置sql_mode of the source
+                     * @param _sqlMode sql_mode of the source
                      * 
                      */
                     void SetSqlMode(const std::string& _sqlMode);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool SrcAppIdHasBeenSet() const;
 
                     /**
-                     * 获取source account
-                     * @return SrcUin source account
+                     * 获取Source account
+                     * @return SrcUin Source account
                      * 
                      */
                     std::string GetSrcUin() const;
 
                     /**
-                     * 设置source account
-                     * @param _srcUin source account
+                     * 设置Source account
+                     * @param _srcUin Source account
                      * 
                      */
                     void SetSrcUin(const std::string& _srcUin);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool SrcUinHasBeenSet() const;
 
                     /**
-                     * 获取sub-account
-                     * @return SrcSubAccountUin sub-account
+                     * 获取Source sub-account
+                     * @return SrcSubAccountUin Source sub-account
                      * 
                      */
                     std::string GetSrcSubAccountUin() const;
 
                     /**
-                     * 设置sub-account
-                     * @param _srcSubAccountUin sub-account
+                     * 设置Source sub-account
+                     * @param _srcSubAccountUin Source sub-account
                      * 
                      */
                     void SetSrcSubAccountUin(const std::string& _srcSubAccountUin);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Operation of the source instance
-                     * @return Operation Operation of the source instance
+                     * 获取Operations on the source instance
+                     * @return Operation Operations on the source instance
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置Operation of the source instance
-                     * @param _operation Operation of the source instance
+                     * 设置Operations on the source instance
+                     * @param _operation Operations on the source instance
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -364,7 +364,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source endpoint type
+                     * Source type
                      */
                     std::string m_srcInstanceType;
                     bool m_srcInstanceTypeHasBeenSet;
@@ -412,7 +412,7 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Source sql mode
+                     * sql_mode of the source
                      */
                     std::string m_sqlMode;
                     bool m_sqlModeHasBeenSet;
@@ -424,13 +424,13 @@ namespace TencentCloud
                     bool m_srcAppIdHasBeenSet;
 
                     /**
-                     * source account
+                     * Source account
                      */
                     std::string m_srcUin;
                     bool m_srcUinHasBeenSet;
 
                     /**
-                     * sub-account
+                     * Source sub-account
                      */
                     std::string m_srcSubAccountUin;
                     bool m_srcSubAccountUinHasBeenSet;
@@ -448,7 +448,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Operation of the source instance
+                     * Operations on the source instance
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;

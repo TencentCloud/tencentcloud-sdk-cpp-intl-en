@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
-                     * @return BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+                     * 获取Backup type. Available values: logic (logical backup); snapshot (physical backup).
+                     * @return BackupType Backup type. Available values: logic (logical backup); snapshot (physical backup).
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
-                     * @param _backupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+                     * 设置Backup type. Available values: logic (logical backup); snapshot (physical backup).
+                     * @param _backupType Backup type. Available values: logic (logical backup); snapshot (physical backup).
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup database, which is valid when `BackupType` is `logic`.
-                     * @return BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
+                     * 获取Database to be backed up. This parameter is valid only when BackupType is logic.
+                     * @return BackupDatabases Database to be backed up. This parameter is valid only when BackupType is logic.
                      * 
                      */
                     std::vector<std::string> GetBackupDatabases() const;
 
                     /**
-                     * 设置Backup database, which is valid when `BackupType` is `logic`.
-                     * @param _backupDatabases Backup database, which is valid when `BackupType` is `logic`.
+                     * 设置Database to be backed up. This parameter is valid only when BackupType is logic.
+                     * @param _backupDatabases Database to be backed up. This parameter is valid only when BackupType is logic.
                      * 
                      */
                     void SetBackupDatabases(const std::vector<std::string>& _backupDatabases);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool BackupDatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Backup table, which is valid when `BackupType` is `logic`.
-                     * @return BackupTables Backup table, which is valid when `BackupType` is `logic`.
+                     * 获取Tables to be backed up. This parameter is valid only when BackupType is logic.
+                     * @return BackupTables Tables to be backed up. This parameter is valid only when BackupType is logic.
                      * 
                      */
                     std::vector<DatabaseTables> GetBackupTables() const;
 
                     /**
-                     * 设置Backup table, which is valid when `BackupType` is `logic`.
-                     * @param _backupTables Backup table, which is valid when `BackupType` is `logic`.
+                     * 设置Tables to be backed up. This parameter is valid only when BackupType is logic.
+                     * @param _backupTables Tables to be backed up. This parameter is valid only when BackupType is logic.
                      * 
                      */
                     void SetBackupTables(const std::vector<DatabaseTables>& _backupTables);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool BackupTablesHasBeenSet() const;
 
                     /**
-                     * 获取Backup name
-                     * @return BackupName Backup name
+                     * 获取Alias name
+                     * @return BackupName Alias name
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Backup name
-                     * @param _backupName Backup name
+                     * 设置Alias name
+                     * @param _backupName Alias name
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取	Message sent to safe
-                     * @return Vaults 	Message sent to safe
+                     * 获取	Information sent to the safe
+                     * @return Vaults 	Information sent to the safe
                      * 
                      */
                     std::vector<CreateBackupVaultItem> GetVaults() const;
 
                     /**
-                     * 设置	Message sent to safe
-                     * @param _vaults 	Message sent to safe
+                     * 设置	Information sent to the safe
+                     * @param _vaults 	Information sent to the safe
                      * 
                      */
                     void SetVaults(const std::vector<CreateBackupVaultItem>& _vaults);
@@ -179,31 +179,31 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+                     * Backup type. Available values: logic (logical backup); snapshot (physical backup).
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup database, which is valid when `BackupType` is `logic`.
+                     * Database to be backed up. This parameter is valid only when BackupType is logic.
                      */
                     std::vector<std::string> m_backupDatabases;
                     bool m_backupDatabasesHasBeenSet;
 
                     /**
-                     * Backup table, which is valid when `BackupType` is `logic`.
+                     * Tables to be backed up. This parameter is valid only when BackupType is logic.
                      */
                     std::vector<DatabaseTables> m_backupTables;
                     bool m_backupTablesHasBeenSet;
 
                     /**
-                     * Backup name
+                     * Alias name
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * 	Message sent to safe
+                     * 	Information sent to the safe
                      */
                     std::vector<CreateBackupVaultItem> m_vaults;
                     bool m_vaultsHasBeenSet;

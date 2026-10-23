@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Connection pool information for the database proxy
+                * Database proxy connection pool information
                 */
                 class ProxyConnectionPoolInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the persistence threshold of the connection pool. the unit is seconds.
-                     * @return ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
+                     * 获取Connection pool persistence threshold: measurement unit (seconds)
+                     * @return ConnectionPoolTimeOut Connection pool persistence threshold: measurement unit (seconds)
                      * 
                      */
                     int64_t GetConnectionPoolTimeOut() const;
 
                     /**
-                     * 设置Specifies the persistence threshold of the connection pool. the unit is seconds.
-                     * @param _connectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
+                     * 设置Connection pool persistence threshold: measurement unit (seconds)
+                     * @param _connectionPoolTimeOut Connection pool persistence threshold: measurement unit (seconds)
                      * 
                      */
                     void SetConnectionPoolTimeOut(const int64_t& _connectionPoolTimeOut);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConnectionPoolTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Whether the connection pool is enabled.
-                     * @return OpenConnectionPool Whether the connection pool is enabled.
+                     * 获取Whether the connection pool is enabled
+                     * @return OpenConnectionPool Whether the connection pool is enabled
                      * 
                      */
                     std::string GetOpenConnectionPool() const;
 
                     /**
-                     * 设置Whether the connection pool is enabled.
-                     * @param _openConnectionPool Whether the connection pool is enabled.
+                     * 设置Whether the connection pool is enabled
+                     * @param _openConnectionPool Whether the connection pool is enabled
                      * 
                      */
                     void SetOpenConnectionPool(const std::string& _openConnectionPool);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OpenConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
-                     * @return ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+                     * 获取Connection pool type: SessionConnectionPool (session-level connection pool)
+                     * @return ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
-                     * @param _connectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+                     * 设置Connection pool type: SessionConnectionPool (session-level connection pool)
+                     * @param _connectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the persistence threshold of the connection pool. the unit is seconds.
+                     * Connection pool persistence threshold: measurement unit (seconds)
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;
 
                     /**
-                     * Whether the connection pool is enabled.
+                     * Whether the connection pool is enabled
                      */
                     std::string m_openConnectionPool;
                     bool m_openConnectionPoolHasBeenSet;
 
                     /**
-                     * Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+                     * Connection pool type: SessionConnectionPool (session-level connection pool)
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return InstanceId Cluster ID.
+                     * 获取Cluster ID
+                     * @return InstanceId Cluster ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _instanceId Cluster ID.
+                     * 设置Cluster ID
+                     * @param _instanceId Cluster ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取CPU after specification adjustment.
-                     * @return DstCpu CPU after specification adjustment.
+                     * 获取CPU after configuration change
+                     * @return DstCpu CPU after configuration change
                      * 
                      */
                     int64_t GetDstCpu() const;
 
                     /**
-                     * 设置CPU after specification adjustment.
-                     * @param _dstCpu CPU after specification adjustment.
+                     * 设置CPU after configuration change
+                     * @param _dstCpu CPU after configuration change
                      * 
                      */
                     void SetDstCpu(const int64_t& _dstCpu);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DstCpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory after specification adjustment, in GB.
-                     * @return DstMem Memory after specification adjustment, in GB.
+                     * 获取MEM after specification modification, in GB
+                     * @return DstMem MEM after specification modification, in GB
                      * 
                      */
                     int64_t GetDstMem() const;
 
                     /**
-                     * 设置Memory after specification adjustment, in GB.
-                     * @param _dstMem Memory after specification adjustment, in GB.
+                     * 设置MEM after specification modification, in GB
+                     * @param _dstMem MEM after specification modification, in GB
                      * 
                      */
                     void SetDstMem(const int64_t& _dstMem);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID.
+                     * Cluster ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * CPU after specification adjustment.
+                     * CPU after configuration change
                      */
                     int64_t m_dstCpu;
                     bool m_dstCpuHasBeenSet;
 
                     /**
-                     * Memory after specification adjustment, in GB.
+                     * MEM after specification modification, in GB
                      */
                     int64_t m_dstMem;
                     bool m_dstMemHasBeenSet;

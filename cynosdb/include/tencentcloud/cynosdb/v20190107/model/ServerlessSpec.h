@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * serverless specification.
+                * serverless specification
                 */
                 class ServerlessSpec : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>cpu minimum value</p>
-                     * @return MinCpu <p>cpu minimum value</p>
+                     * 获取<p>Minimum cpu value</p>
+                     * @return MinCpu <p>Minimum cpu value</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置<p>cpu minimum value</p>
-                     * @param _minCpu <p>cpu minimum value</p>
+                     * 设置<p>Minimum cpu value</p>
+                     * @param _minCpu <p>Minimum cpu value</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum storage space</p>
-                     * @return MaxStorageSize <p>Maximum storage space</p>
+                     * 获取<p>maximum storage space</p>
+                     * @return MaxStorageSize <p>maximum storage space</p>
                      * 
                      */
                     int64_t GetMaxStorageSize() const;
 
                     /**
-                     * 设置<p>Maximum storage space</p>
-                     * @param _maxStorageSize <p>Maximum storage space</p>
+                     * 设置<p>maximum storage space</p>
+                     * @param _maxStorageSize <p>maximum storage space</p>
                      * 
                      */
                     void SetMaxStorageSize(const int64_t& _maxStorageSize);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MaxStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Is the default specification</p>
-                     * @return IsDefault <p>Is the default specification</p>
+                     * 获取<p>Whether it is the default specification.</p>
+                     * @return IsDefault <p>Whether it is the default specification.</p>
                      * 
                      */
                     int64_t GetIsDefault() const;
 
                     /**
-                     * 设置<p>Is the default specification</p>
-                     * @param _isDefault <p>Is the default specification</p>
+                     * 设置<p>Whether it is the default specification.</p>
+                     * @param _isDefault <p>Whether it is the default specification.</p>
                      * 
                      */
                     void SetIsDefault(const int64_t& _isDefault);
@@ -197,7 +197,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>cpu minimum value</p>
+                     * <p>Minimum cpu value</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
@@ -209,13 +209,13 @@ namespace TencentCloud
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * <p>Maximum storage space</p>
+                     * <p>maximum storage space</p>
                      */
                     int64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
-                     * <p>Is the default specification</p>
+                     * <p>Whether it is the default specification.</p>
                      */
                     int64_t m_isDefault;
                     bool m_isDefaultHasBeenSet;

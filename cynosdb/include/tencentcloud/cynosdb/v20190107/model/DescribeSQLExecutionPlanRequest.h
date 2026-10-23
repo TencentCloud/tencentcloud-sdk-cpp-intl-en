@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TemplateIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Plan details serial number</p>
-                     * @return PlanDetailId <p>Plan details serial number</p>
+                     * 获取<p>Plan detail serial number.</p>
+                     * @return PlanDetailId <p>Plan detail serial number.</p>
                      * 
                      */
                     int64_t GetPlanDetailId() const;
 
                     /**
-                     * 设置<p>Plan details serial number</p>
-                     * @param _planDetailId <p>Plan details serial number</p>
+                     * 设置<p>Plan detail serial number.</p>
+                     * @param _planDetailId <p>Plan detail serial number.</p>
                      * 
                      */
                     void SetPlanDetailId(const int64_t& _planDetailId);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_templateIDHasBeenSet;
 
                     /**
-                     * <p>Plan details serial number</p>
+                     * <p>Plan detail serial number.</p>
                      */
                     int64_t m_planDetailId;
                     bool m_planDetailIdHasBeenSet;

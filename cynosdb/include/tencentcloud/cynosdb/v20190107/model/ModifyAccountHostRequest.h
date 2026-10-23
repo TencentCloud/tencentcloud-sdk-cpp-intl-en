@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool NewHostHasBeenSet() const;
 
                     /**
-                     * 获取Account infomation
-                     * @return Account Account infomation
+                     * 获取Account information
+                     * @return Account Account information
                      * 
                      */
                     InputAccount GetAccount() const;
 
                     /**
-                     * 设置Account infomation
-                     * @param _account Account infomation
+                     * 设置Account information
+                     * @param _account Account information
                      * 
                      */
                     void SetAccount(const InputAccount& _account);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_newHostHasBeenSet;
 
                     /**
-                     * Account infomation
+                     * Account information
                      */
                     InputAccount m_account;
                     bool m_accountHasBeenSet;

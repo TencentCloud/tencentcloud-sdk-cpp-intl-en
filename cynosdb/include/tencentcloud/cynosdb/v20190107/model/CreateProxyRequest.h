@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory
-                     * @return Mem Memory
+                     * 获取memory
+                     * @return Mem memory
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Memory
-                     * @param _mem Memory
+                     * 设置memory
+                     * @param _mem memory
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, which is the same as that of the cluster by default.
-                     * @return UniqueVpcId VPC ID, which is the same as that of the cluster by default.
+                     * 获取VPC ID. Default value: the VPC ID of the cluster.
+                     * @return UniqueVpcId VPC ID. Default value: the VPC ID of the cluster.
                      * 
                      */
                     std::string GetUniqueVpcId() const;
 
                     /**
-                     * 设置VPC ID, which is the same as that of the cluster by default.
-                     * @param _uniqueVpcId VPC ID, which is the same as that of the cluster by default.
+                     * 设置VPC ID. Default value: the VPC ID of the cluster.
+                     * @param _uniqueVpcId VPC ID. Default value: the VPC ID of the cluster.
                      * 
                      */
                     void SetUniqueVpcId(const std::string& _uniqueVpcId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool UniqueVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID, which is the same as that of the cluster by default.
-                     * @return UniqueSubnetId VPC subnet ID, which is the same as that of the cluster by default.
+                     * 获取VPC subnet ID. Default value: the cluster subnet ID.
+                     * @return UniqueSubnetId VPC subnet ID. Default value: the cluster subnet ID.
                      * 
                      */
                     std::string GetUniqueSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID, which is the same as that of the cluster by default.
-                     * @param _uniqueSubnetId VPC subnet ID, which is the same as that of the cluster by default.
+                     * 设置VPC subnet ID. Default value: the cluster subnet ID.
+                     * @param _uniqueSubnetId VPC subnet ID. Default value: the cluster subnet ID.
                      * 
                      */
                     void SetUniqueSubnetId(const std::string& _uniqueSubnetId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool UniqueSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes in the proxy group
-                     * @return ProxyCount Number of nodes in the proxy group
+                     * 获取Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
+                     * @return ProxyCount Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
                      * 
                      */
                     int64_t GetProxyCount() const;
 
                     /**
-                     * 设置Number of nodes in the proxy group
-                     * @param _proxyCount Number of nodes in the proxy group
+                     * 设置Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
+                     * @param _proxyCount Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
                      * 
                      */
                     void SetProxyCount(const int64_t& _proxyCount);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ProxyCountHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
-                     * @return ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+                     * 获取Connection pool type: SessionConnectionPool (session-level connection pool)
+                     * @return ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
-                     * @param _connectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+                     * 设置Connection pool type: SessionConnectionPool (session-level connection pool)
+                     * @param _connectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
-                     * @return OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+                     * 获取Whether connection pool is enabled. yes: enabled; no: not enabled
+                     * @return OpenConnectionPool Whether connection pool is enabled. yes: enabled; no: not enabled
                      * 
                      */
                     std::string GetOpenConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
-                     * @param _openConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+                     * 设置Whether connection pool is enabled. yes: enabled; no: not enabled
+                     * @param _openConnectionPool Whether connection pool is enabled. yes: enabled; no: not enabled
                      * 
                      */
                     void SetOpenConnectionPool(const std::string& _openConnectionPool);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool OpenConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool threshold in seconds
-                     * @return ConnectionPoolTimeOut Connection pool threshold in seconds
+                     * 获取Connection pool threshold. Unit: second
+                     * @return ConnectionPoolTimeOut Connection pool threshold. Unit: second
                      * 
                      */
                     int64_t GetConnectionPoolTimeOut() const;
 
                     /**
-                     * 设置Connection pool threshold in seconds
-                     * @param _connectionPoolTimeOut Connection pool threshold in seconds
+                     * 设置Connection pool threshold. Unit: second
+                     * @param _connectionPoolTimeOut Connection pool threshold. Unit: second
                      * 
                      */
                     void SetConnectionPoolTimeOut(const int64_t& _connectionPoolTimeOut);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ConnectionPoolTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Array of security group IDs
-                     * @return SecurityGroupIds Array of security group IDs
+                     * 获取Security group ID array
+                     * @return SecurityGroupIds Security group ID array
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Array of security group IDs
-                     * @param _securityGroupIds Array of security group IDs
+                     * 设置Security group ID array
+                     * @param _securityGroupIds Security group ID array
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Description
-                     * @return Description Description
+                     * 获取Description.
+                     * @return Description Description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description
-                     * @param _description Description
+                     * 设置Description.
+                     * @param _description Description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Database node information
-                     * @return ProxyZones Database node information
+                     * 获取Database node information (either this parameter or ProxyCount is required)
+                     * @return ProxyZones Database node information (either this parameter or ProxyCount is required)
                      * 
                      */
                     std::vector<ProxyZone> GetProxyZones() const;
 
                     /**
-                     * 设置Database node information
-                     * @param _proxyZones Database node information
+                     * 设置Database node information (either this parameter or ProxyCount is required)
+                     * @param _proxyZones Database node information (either this parameter or ProxyCount is required)
                      * 
                      */
                     void SetProxyZones(const std::vector<ProxyZone>& _proxyZones);
@@ -310,61 +310,61 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory
+                     * memory
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * VPC ID, which is the same as that of the cluster by default.
+                     * VPC ID. Default value: the VPC ID of the cluster.
                      */
                     std::string m_uniqueVpcId;
                     bool m_uniqueVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID, which is the same as that of the cluster by default.
+                     * VPC subnet ID. Default value: the cluster subnet ID.
                      */
                     std::string m_uniqueSubnetId;
                     bool m_uniqueSubnetIdHasBeenSet;
 
                     /**
-                     * Number of nodes in the proxy group
+                     * Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
                      */
                     int64_t m_proxyCount;
                     bool m_proxyCountHasBeenSet;
 
                     /**
-                     * Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+                     * Connection pool type: SessionConnectionPool (session-level connection pool)
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+                     * Whether connection pool is enabled. yes: enabled; no: not enabled
                      */
                     std::string m_openConnectionPool;
                     bool m_openConnectionPoolHasBeenSet;
 
                     /**
-                     * Connection pool threshold in seconds
+                     * Connection pool threshold. Unit: second
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;
 
                     /**
-                     * Array of security group IDs
+                     * Security group ID array
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Description
+                     * Description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Database node information
+                     * Database node information (either this parameter or ProxyCount is required)
                      */
                     std::vector<ProxyZone> m_proxyZones;
                     bool m_proxyZonesHasBeenSet;

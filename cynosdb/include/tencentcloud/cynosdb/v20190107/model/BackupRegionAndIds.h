@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Region where backup files are located and ID.
+                * Region and ID of the backup file
                 */
                 class BackupRegionAndIds : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup region.
-                     * @return BackupRegion Backup region.
+                     * 获取Backup region
+                     * @return BackupRegion Backup region
                      * 
                      */
                     std::string GetBackupRegion() const;
 
                     /**
-                     * 设置Backup region.
-                     * @param _backupRegion Backup region.
+                     * 设置Backup region
+                     * @param _backupRegion Backup region
                      * 
                      */
                     void SetBackupRegion(const std::string& _backupRegion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BackupRegionHasBeenSet() const;
 
                     /**
-                     * 获取Backup ID.
-                     * @return BackupId Backup ID.
+                     * 获取Backup ID
+                     * @return BackupId Backup ID
                      * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
-                     * 设置Backup ID.
-                     * @param _backupId Backup ID.
+                     * 设置Backup ID
+                     * @param _backupId Backup ID
                      * 
                      */
                     void SetBackupId(const int64_t& _backupId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Backup region.
+                     * Backup region
                      */
                     std::string m_backupRegion;
                     bool m_backupRegionHasBeenSet;
 
                     /**
-                     * Backup ID.
+                     * Backup ID
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;

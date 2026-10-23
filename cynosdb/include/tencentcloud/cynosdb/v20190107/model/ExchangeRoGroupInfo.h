@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Swap RO group information.
+                * Exchange RO group information
                 */
                 class ExchangeRoGroupInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source RO group information.
-                     * @return SrcRoGroupInfo Source RO group information.
+                     * 获取Source RO group information
+                     * @return SrcRoGroupInfo Source RO group information
                      * 
                      */
                     RollbackRoGroupInfo GetSrcRoGroupInfo() const;
 
                     /**
-                     * 设置Source RO group information.
-                     * @param _srcRoGroupInfo Source RO group information.
+                     * 设置Source RO group information
+                     * @param _srcRoGroupInfo Source RO group information
                      * 
                      */
                     void SetSrcRoGroupInfo(const RollbackRoGroupInfo& _srcRoGroupInfo);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SrcRoGroupInfoHasBeenSet() const;
 
                     /**
-                     * 获取Target RO group information.
-                     * @return DstRoGroupInfo Target RO group information.
+                     * 获取Target RO group information
+                     * @return DstRoGroupInfo Target RO group information
                      * 
                      */
                     RollbackRoGroupInfo GetDstRoGroupInfo() const;
 
                     /**
-                     * 设置Target RO group information.
-                     * @param _dstRoGroupInfo Target RO group information.
+                     * 设置Target RO group information
+                     * @param _dstRoGroupInfo Target RO group information
                      * 
                      */
                     void SetDstRoGroupInfo(const RollbackRoGroupInfo& _dstRoGroupInfo);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source RO group information.
+                     * Source RO group information
                      */
                     RollbackRoGroupInfo m_srcRoGroupInfo;
                     bool m_srcRoGroupInfoHasBeenSet;
 
                     /**
-                     * Target RO group information.
+                     * Target RO group information
                      */
                     RollbackRoGroupInfo m_dstRoGroupInfo;
                     bool m_dstRoGroupInfoHasBeenSet;

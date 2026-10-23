@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Encryption key id.
-                     * @return KeyId Encryption key id.
+                     * 获取Encryption key id
+                     * @return KeyId Encryption key id
                      * 
                      */
                     std::string GetKeyId() const;
@@ -58,9 +58,9 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Encryption key region.
+                     * 获取Encryption key region
 
-                     * @return KeyRegion Encryption key region.
+                     * @return KeyRegion Encryption key region
 
                      * 
                      */
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool KeyTypeHasBeenSet() const;
 
                     /**
-                     * 获取To be enabled global encryption
-                     * @return IsOpenGlobalEncryption To be enabled global encryption
+                     * 获取Whether global encryption is enabled
+                     * @return IsOpenGlobalEncryption Whether global encryption is enabled
                      * 
                      */
                     bool GetIsOpenGlobalEncryption() const;
@@ -104,13 +104,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Encryption key id.
+                     * Encryption key id
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Encryption key region.
+                     * Encryption key region
 
                      */
                     std::string m_keyRegion;
@@ -123,7 +123,7 @@ namespace TencentCloud
                     bool m_keyTypeHasBeenSet;
 
                     /**
-                     * To be enabled global encryption
+                     * Whether global encryption is enabled
                      */
                     bool m_isOpenGlobalEncryption;
                     bool m_isOpenGlobalEncryptionHasBeenSet;

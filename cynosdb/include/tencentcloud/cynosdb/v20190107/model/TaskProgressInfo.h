@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task progress query.
+                * Task progress query
                 */
                 class TaskProgressInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current step.
-                     * @return CurrentStep Current step.
+                     * 获取Details of the current step
+                     * @return CurrentStep Details of the current step
                      * 
                      */
                     std::string GetCurrentStep() const;
 
                     /**
-                     * 设置Current step.
-                     * @param _currentStep Current step.
+                     * 设置Details of the current step
+                     * @param _currentStep Details of the current step
                      * 
                      */
                     void SetCurrentStep(const std::string& _currentStep);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CurrentStepHasBeenSet() const;
 
                     /**
-                     * 获取Current progress.
-                     * @return CurrentStepProgress Current progress.
+                     * 获取Current progress
+                     * @return CurrentStepProgress Current progress
                      * 
                      */
                     int64_t GetCurrentStepProgress() const;
 
                     /**
-                     * 设置Current progress.
-                     * @param _currentStepProgress Current progress.
+                     * 设置Current progress
+                     * @param _currentStepProgress Current progress
                      * 
                      */
                     void SetCurrentStepProgress(const int64_t& _currentStepProgress);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current step.
+                     * Details of the current step
                      */
                     std::string m_currentStep;
                     bool m_currentStepHasBeenSet;
 
                     /**
-                     * Current progress.
+                     * Current progress
                      */
                     int64_t m_currentStepProgress;
                     bool m_currentStepProgressHasBeenSet;

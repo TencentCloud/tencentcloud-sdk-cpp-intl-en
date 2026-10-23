@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Availability zone, each region provision best practice</p>
-                     * @return Zone <p>Availability zone, each region provision best practice</p>
+                     * 获取<p>AZ. Best practice provided by each region</p>
+                     * @return Zone <p>AZ. Best practice provided by each region</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置<p>Availability zone, each region provision best practice</p>
-                     * @param _zone <p>Availability zone, each region provision best practice</p>
+                     * 设置<p>AZ. Best practice provided by each region</p>
+                     * @param _zone <p>AZ. Best practice provided by each region</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
-                     * @return InstancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+                     * 获取<p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
+                     * @return InstancePayMode <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
                      * 
                      */
                     std::string GetInstancePayMode() const;
 
                     /**
-                     * 设置<p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
-                     * @param _instancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+                     * 设置<p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
+                     * @param _instancePayMode <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
                      * 
                      */
                     void SetInstancePayMode(const std::string& _instancePayMode);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool InstancePayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
-                     * @return StoragePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+                     * 获取<p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
+                     * @return StoragePayMode <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
                      * 
                      */
                     std::string GetStoragePayMode() const;
 
                     /**
-                     * 设置<p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
-                     * @param _storagePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+                     * 设置<p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
+                     * @param _storagePayMode <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
                      * 
                      */
                     void SetStoragePayMode(const std::string& _storagePayMode);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
-                     * @return DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+                     * 获取<p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+                     * @return DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置<p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
-                     * @param _deviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+                     * 设置<p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+                     * @param _deviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Ccu size. Required for the serverless type.</p>
-                     * @return Ccu <p>Ccu size. Required for the serverless type.</p>
+                     * 获取<p>Ccu size, required for serverless type</p>
+                     * @return Ccu <p>Ccu size, required for serverless type</p>
                      * 
                      */
                     double GetCcu() const;
 
                     /**
-                     * 设置<p>Ccu size. Required for the serverless type.</p>
-                     * @param _ccu <p>Ccu size. Required for the serverless type.</p>
+                     * 设置<p>Ccu size, required for serverless type</p>
+                     * @param _ccu <p>Ccu size, required for serverless type</p>
                      * 
                      */
                     void SetCcu(const double& _ccu);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool CcuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage size. Required for PREPAID storage type</p>
-                     * @return StorageLimit <p>Storage size. Required for PREPAID storage type</p>
+                     * 获取<p>Storage size. Required for PREPAID storage type.</p>
+                     * @return StorageLimit <p>Storage size. Required for PREPAID storage type.</p>
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置<p>Storage size. Required for PREPAID storage type</p>
-                     * @param _storageLimit <p>Storage size. Required for PREPAID storage type</p>
+                     * 设置<p>Storage size. Required for PREPAID storage type.</p>
+                     * @param _storageLimit <p>Storage size. Required for PREPAID storage type.</p>
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Purchase period, required for PREPAID purchase type</p>
-                     * @return TimeSpan <p>Purchase period, required for PREPAID purchase type</p>
+                     * 获取<p>Purchase period. Required when the purchase type is PREPAID.</p>
+                     * @return TimeSpan <p>Purchase period. Required when the purchase type is PREPAID.</p>
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置<p>Purchase period, required for PREPAID purchase type</p>
-                     * @param _timeSpan <p>Purchase period, required for PREPAID purchase type</p>
+                     * 设置<p>Purchase period. Required when the purchase type is PREPAID.</p>
+                     * @param _timeSpan <p>Purchase period. Required when the purchase type is PREPAID.</p>
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取<p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
-                     * @return TimeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+                     * 获取<p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
+                     * @return TimeUnit <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置<p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
-                     * @param _timeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+                     * 设置<p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
+                     * @param _timeUnit <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
-                     * @return StorageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+                     * 获取<p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
+                     * @return StorageVersion <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
                      * 
                      */
                     std::string GetStorageVersion() const;
 
                     /**
-                     * 设置<p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
-                     * @param _storageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+                     * 设置<p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
+                     * @param _storageVersion <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
                      * 
                      */
                     void SetStorageVersion(const std::string& _storageVersion);
@@ -295,15 +295,15 @@ namespace TencentCloud
                     bool StorageVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
-                     * @return IsMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+                     * 获取<p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
+                     * @return IsMultiAz <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
                      * 
                      */
                     bool GetIsMultiAz() const;
 
                     /**
-                     * 设置<p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
-                     * @param _isMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+                     * 设置<p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
+                     * @param _isMultiAz <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
                      * 
                      */
                     void SetIsMultiAz(const bool& _isMultiAz);
@@ -318,7 +318,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Availability zone, each region provision best practice</p>
+                     * <p>AZ. Best practice provided by each region</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -330,19 +330,19 @@ namespace TencentCloud
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+                     * <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
                      */
                     std::string m_instancePayMode;
                     bool m_instancePayModeHasBeenSet;
 
                     /**
-                     * <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+                     * <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
                      */
                     std::string m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+                     * <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
@@ -360,37 +360,37 @@ namespace TencentCloud
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * <p>Ccu size. Required for the serverless type.</p>
+                     * <p>Ccu size, required for serverless type</p>
                      */
                     double m_ccu;
                     bool m_ccuHasBeenSet;
 
                     /**
-                     * <p>Storage size. Required for PREPAID storage type</p>
+                     * <p>Storage size. Required for PREPAID storage type.</p>
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * <p>Purchase period, required for PREPAID purchase type</p>
+                     * <p>Purchase period. Required when the purchase type is PREPAID.</p>
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+                     * <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+                     * <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
                      */
                     std::string m_storageVersion;
                     bool m_storageVersionHasBeenSet;
 
                     /**
-                     * <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+                     * <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
                      */
                     bool m_isMultiAz;
                     bool m_isMultiAzHasBeenSet;

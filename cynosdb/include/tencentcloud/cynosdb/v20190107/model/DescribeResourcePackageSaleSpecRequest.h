@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-                     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * 获取Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+                     * @return PackageRegion Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
                      * 
                      */
                     std::string GetPackageRegion() const;
 
                     /**
-                     * 设置Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-                     * @param _packageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * 设置Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+                     * @param _packageRegion Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
                      * 
                      */
                     void SetPackageRegion(const std::string& _packageRegion);
@@ -85,15 +89,23 @@ namespace TencentCloud
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
-                     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+                     * 获取Resource package type
+CCU - compute resource package
+DISK - storage resource package
+                     * @return PackageType Resource package type
+CCU - compute resource package
+DISK - storage resource package
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
-                     * @param _packageType Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+                     * 设置Resource package type
+CCU - compute resource package
+DISK - storage resource package
+                     * @param _packageType Resource package type
+CCU - compute resource package
+DISK - storage resource package
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -106,15 +118,15 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -156,19 +168,22 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
                      */
                     std::string m_packageRegion;
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+                     * Resource package type
+CCU - compute resource package
+DISK - storage resource package
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

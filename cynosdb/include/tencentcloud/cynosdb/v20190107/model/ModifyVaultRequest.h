@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultIdHasBeenSet() const;
 
                     /**
-                     * 获取Safe name, maximum 255 characters
-                     * @return VaultName Safe name, maximum 255 characters
+                     * 获取Safe name. Maximum length: 255 characters.
+                     * @return VaultName Safe name. Maximum length: 255 characters.
                      * 
                      */
                     std::string GetVaultName() const;
 
                     /**
-                     * 设置Safe name, maximum 255 characters
-                     * @param _vaultName Safe name, maximum 255 characters
+                     * 设置Safe name. Maximum length: 255 characters.
+                     * @param _vaultName Safe name. Maximum length: 255 characters.
                      * 
                      */
                     void SetVaultName(const std::string& _vaultName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VaultNameHasBeenSet() const;
 
                     /**
-                     * 获取Safe description, maximum 1024 characters
-                     * @return VaultDescribe Safe description, maximum 1024 characters
+                     * 获取Safe description. Maximum length: 1024 characters.
+                     * @return VaultDescribe Safe description. Maximum length: 1024 characters.
                      * 
                      */
                     std::string GetVaultDescribe() const;
 
                     /**
-                     * 设置Safe description, maximum 1024 characters
-                     * @param _vaultDescribe Safe description, maximum 1024 characters
+                     * 设置Safe description. Maximum length: 1024 characters.
+                     * @param _vaultDescribe Safe description. Maximum length: 1024 characters.
                      * 
                      */
                     void SetVaultDescribe(const std::string& _vaultDescribe);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool VaultDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period (seconds). Range: (0, 632448000].
-                     * @return BackupSaveSeconds Backup retention period (seconds). Range: (0, 632448000].
+                     * 获取Backup retention period in seconds. Value range: (0, 632448000]
+                     * @return BackupSaveSeconds Backup retention period in seconds. Value range: (0, 632448000]
                      * 
                      */
                     int64_t GetBackupSaveSeconds() const;
 
                     /**
-                     * 设置Backup retention period (seconds). Range: (0, 632448000].
-                     * @param _backupSaveSeconds Backup retention period (seconds). Range: (0, 632448000].
+                     * 设置Backup retention period in seconds. Value range: (0, 632448000]
+                     * @param _backupSaveSeconds Backup retention period in seconds. Value range: (0, 632448000]
                      * 
                      */
                     void SetBackupSaveSeconds(const int64_t& _backupSaveSeconds);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BackupSaveSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Encryption key ID, maximum 36 characters
-                     * @return KeyId Encryption key ID, maximum 36 characters
+                     * 获取Encryption key ID. Maximum length: 36 characters.
+                     * @return KeyId Encryption key ID. Maximum length: 36 characters.
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Encryption key ID, maximum 36 characters
-                     * @param _keyId Encryption key ID, maximum 36 characters
+                     * 设置Encryption key ID. Maximum length: 36 characters.
+                     * @param _keyId Encryption key ID. Maximum length: 36 characters.
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Key type, available values: cloud, custom
-                     * @return KeyType Key type, available values: cloud, custom
+                     * 获取Key type. Available values: cloud, custom
+                     * @return KeyType Key type. Available values: cloud, custom
                      * 
                      */
                     std::string GetKeyType() const;
 
                     /**
-                     * 设置Key type, available values: cloud, custom
-                     * @param _keyType Key type, available values: cloud, custom
+                     * 设置Key type. Available values: cloud, custom
+                     * @param _keyType Key type. Available values: cloud, custom
                      * 
                      */
                     void SetKeyType(const std::string& _keyType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool KeyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Key region, maximum 32 characters
-                     * @return KeyRegion Key region, maximum 32 characters
+                     * 获取Region of the key. Maximum length: 32 characters.
+                     * @return KeyRegion Region of the key. Maximum length: 32 characters.
                      * 
                      */
                     std::string GetKeyRegion() const;
 
                     /**
-                     * 设置Key region, maximum 32 characters
-                     * @param _keyRegion Key region, maximum 32 characters
+                     * 设置Region of the key. Maximum length: 32 characters.
+                     * @param _keyRegion Region of the key. Maximum length: 32 characters.
                      * 
                      */
                     void SetKeyRegion(const std::string& _keyRegion);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool KeyRegionHasBeenSet() const;
 
                     /**
-                     * 获取Is the safe locked
-                     * @return IsLock Is the safe locked
+                     * 获取Whether the safe is locked
+                     * @return IsLock Whether the safe is locked
                      * 
                      */
                     bool GetIsLock() const;
 
                     /**
-                     * 设置Is the safe locked
-                     * @param _isLock Is the safe locked
+                     * 设置Whether the safe is locked
+                     * @param _isLock Whether the safe is locked
                      * 
                      */
                     void SetIsLock(const bool& _isLock);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool IsLockHasBeenSet() const;
 
                     /**
-                     * 获取Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
-                     * @return LockedTime Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+                     * 获取Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
+                     * @return LockedTime Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
                      * 
                      */
                     std::string GetLockedTime() const;
 
                     /**
-                     * 设置Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
-                     * @param _lockedTime Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+                     * 设置Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
+                     * @param _lockedTime Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
                      * 
                      */
                     void SetLockedTime(const std::string& _lockedTime);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool LockedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is encrypted
-                     * @return IsEncryption Whether it is encrypted
+                     * 获取Encrypted or not
+                     * @return IsEncryption Encrypted or not
                      * 
                      */
                     bool GetIsEncryption() const;
 
                     /**
-                     * 设置Whether it is encrypted
-                     * @param _isEncryption Whether it is encrypted
+                     * 设置Encrypted or not
+                     * @param _isEncryption Encrypted or not
                      * 
                      */
                     void SetIsEncryption(const bool& _isEncryption);
@@ -261,55 +261,55 @@ namespace TencentCloud
                     bool m_vaultIdHasBeenSet;
 
                     /**
-                     * Safe name, maximum 255 characters
+                     * Safe name. Maximum length: 255 characters.
                      */
                     std::string m_vaultName;
                     bool m_vaultNameHasBeenSet;
 
                     /**
-                     * Safe description, maximum 1024 characters
+                     * Safe description. Maximum length: 1024 characters.
                      */
                     std::string m_vaultDescribe;
                     bool m_vaultDescribeHasBeenSet;
 
                     /**
-                     * Backup retention period (seconds). Range: (0, 632448000].
+                     * Backup retention period in seconds. Value range: (0, 632448000]
                      */
                     int64_t m_backupSaveSeconds;
                     bool m_backupSaveSecondsHasBeenSet;
 
                     /**
-                     * Encryption key ID, maximum 36 characters
+                     * Encryption key ID. Maximum length: 36 characters.
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Key type, available values: cloud, custom
+                     * Key type. Available values: cloud, custom
                      */
                     std::string m_keyType;
                     bool m_keyTypeHasBeenSet;
 
                     /**
-                     * Key region, maximum 32 characters
+                     * Region of the key. Maximum length: 32 characters.
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
 
                     /**
-                     * Is the safe locked
+                     * Whether the safe is locked
                      */
                     bool m_isLock;
                     bool m_isLockHasBeenSet;
 
                     /**
-                     * Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+                     * Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
                      */
                     std::string m_lockedTime;
                     bool m_lockedTimeHasBeenSet;
 
                     /**
-                     * Whether it is encrypted
+                     * Encrypted or not
                      */
                     bool m_isEncryption;
                     bool m_isEncryptionHasBeenSet;

@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取Character set
-                     * @return CharacterSet Character set
+                     * 获取Character set type.
+                     * @return CharacterSet Character set type.
                      * 
                      */
                     std::string GetCharacterSet() const;
 
                     /**
-                     * 设置Character set
-                     * @param _characterSet Character set
+                     * 设置Character set type.
+                     * @param _characterSet Character set type.
                      * 
                      */
                     void SetCharacterSet(const std::string& _characterSet);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool CharacterSetHasBeenSet() const;
 
                     /**
-                     * 获取Collation
-                     * @return CollateRule Collation
+                     * 获取Sorting rule
+                     * @return CollateRule Sorting rule
                      * 
                      */
                     std::string GetCollateRule() const;
 
                     /**
-                     * 设置Collation
-                     * @param _collateRule Collation
+                     * 设置Sorting rule
+                     * @param _collateRule Sorting rule
                      * 
                      */
                     void SetCollateRule(const std::string& _collateRule);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool CollateRuleHasBeenSet() const;
 
                     /**
-                     * 获取Host permissions of the authorized user
-                     * @return UserHostPrivileges Host permissions of the authorized user
+                     * 获取Authorize user host permission
+                     * @return UserHostPrivileges Authorize user host permission
                      * 
                      */
                     std::vector<UserHostPrivilege> GetUserHostPrivileges() const;
 
                     /**
-                     * 设置Host permissions of the authorized user
-                     * @param _userHostPrivileges Host permissions of the authorized user
+                     * 设置Authorize user host permission
+                     * @param _userHostPrivileges Authorize user host permission
                      * 
                      */
                     void SetUserHostPrivileges(const std::vector<UserHostPrivilege>& _userHostPrivileges);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool UserHostPrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Description Remarks
+                     * 获取Remarks.
+                     * @return Description Remarks.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _description Remarks
+                     * 设置Remarks.
+                     * @param _description Remarks.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -184,25 +184,25 @@ namespace TencentCloud
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * Character set
+                     * Character set type.
                      */
                     std::string m_characterSet;
                     bool m_characterSetHasBeenSet;
 
                     /**
-                     * Collation
+                     * Sorting rule
                      */
                     std::string m_collateRule;
                     bool m_collateRuleHasBeenSet;
 
                     /**
-                     * Host permissions of the authorized user
+                     * Authorize user host permission
                      */
                     std::vector<UserHostPrivilege> m_userHostPrivileges;
                     bool m_userHostPrivilegesHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remarks.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

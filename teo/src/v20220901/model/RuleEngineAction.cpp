@@ -34,6 +34,7 @@ RuleEngineAction::RuleEngineAction() :
     m_statusCodeCacheParametersHasBeenSet(false),
     m_offlineCacheParametersHasBeenSet(false),
     m_smartRoutingParametersHasBeenSet(false),
+    m_advancedOriginRoutingParametersHasBeenSet(false),
     m_rangeOriginPullParametersHasBeenSet(false),
     m_upstreamHTTP2ParametersHasBeenSet(false),
     m_hostHeaderParametersHasBeenSet(false),
@@ -61,7 +62,8 @@ RuleEngineAction::RuleEngineAction() :
     m_setContentIdentifierParametersHasBeenSet(false),
     m_varyParametersHasBeenSet(false),
     m_contentCompressionParametersHasBeenSet(false),
-    m_originAuthenticationParametersHasBeenSet(false)
+    m_originAuthenticationParametersHasBeenSet(false),
+    m_customActionParametersHasBeenSet(false)
 {
 }
 
@@ -282,6 +284,23 @@ CoreInternalOutcome RuleEngineAction::Deserialize(const rapidjson::Value &value)
         }
 
         m_smartRoutingParametersHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdvancedOriginRoutingParameters") && !value["AdvancedOriginRoutingParameters"].IsNull())
+    {
+        if (!value["AdvancedOriginRoutingParameters"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleEngineAction.AdvancedOriginRoutingParameters` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_advancedOriginRoutingParameters.Deserialize(value["AdvancedOriginRoutingParameters"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_advancedOriginRoutingParametersHasBeenSet = true;
     }
 
     if (value.HasMember("RangeOriginPullParameters") && !value["RangeOriginPullParameters"].IsNull())
@@ -760,6 +779,23 @@ CoreInternalOutcome RuleEngineAction::Deserialize(const rapidjson::Value &value)
         m_originAuthenticationParametersHasBeenSet = true;
     }
 
+    if (value.HasMember("CustomActionParameters") && !value["CustomActionParameters"].IsNull())
+    {
+        if (!value["CustomActionParameters"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleEngineAction.CustomActionParameters` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_customActionParameters.Deserialize(value["CustomActionParameters"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_customActionParametersHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -881,6 +917,15 @@ void RuleEngineAction::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_smartRoutingParameters.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_advancedOriginRoutingParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdvancedOriginRoutingParameters";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_advancedOriginRoutingParameters.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_rangeOriginPullParametersHasBeenSet)
@@ -1135,6 +1180,15 @@ void RuleEngineAction::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         m_originAuthenticationParameters.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_customActionParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomActionParameters";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_customActionParameters.ToJsonObject(value[key.c_str()], allocator);
+    }
+
 }
 
 
@@ -1344,6 +1398,22 @@ void RuleEngineAction::SetSmartRoutingParameters(const SmartRoutingParameters& _
 bool RuleEngineAction::SmartRoutingParametersHasBeenSet() const
 {
     return m_smartRoutingParametersHasBeenSet;
+}
+
+AdvancedOriginRoutingParameters RuleEngineAction::GetAdvancedOriginRoutingParameters() const
+{
+    return m_advancedOriginRoutingParameters;
+}
+
+void RuleEngineAction::SetAdvancedOriginRoutingParameters(const AdvancedOriginRoutingParameters& _advancedOriginRoutingParameters)
+{
+    m_advancedOriginRoutingParameters = _advancedOriginRoutingParameters;
+    m_advancedOriginRoutingParametersHasBeenSet = true;
+}
+
+bool RuleEngineAction::AdvancedOriginRoutingParametersHasBeenSet() const
+{
+    return m_advancedOriginRoutingParametersHasBeenSet;
 }
 
 RangeOriginPullParameters RuleEngineAction::GetRangeOriginPullParameters() const
@@ -1792,5 +1862,21 @@ void RuleEngineAction::SetOriginAuthenticationParameters(const OriginAuthenticat
 bool RuleEngineAction::OriginAuthenticationParametersHasBeenSet() const
 {
     return m_originAuthenticationParametersHasBeenSet;
+}
+
+CustomActionParameters RuleEngineAction::GetCustomActionParameters() const
+{
+    return m_customActionParameters;
+}
+
+void RuleEngineAction::SetCustomActionParameters(const CustomActionParameters& _customActionParameters)
+{
+    m_customActionParameters = _customActionParameters;
+    m_customActionParametersHasBeenSet = true;
+}
+
+bool RuleEngineAction::CustomActionParametersHasBeenSet() const
+{
+    return m_customActionParametersHasBeenSet;
 }
 

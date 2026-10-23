@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取Host permissions of the new authorized user
-                     * @return NewUserHostPrivileges Host permissions of the new authorized user
+                     * 获取Host permissions for new authorized users
+                     * @return NewUserHostPrivileges Host permissions for new authorized users
                      * 
                      */
                     std::vector<UserHostPrivilege> GetNewUserHostPrivileges() const;
 
                     /**
-                     * 设置Host permissions of the new authorized user
-                     * @param _newUserHostPrivileges Host permissions of the new authorized user
+                     * 设置Host permissions for new authorized users
+                     * @param _newUserHostPrivileges Host permissions for new authorized users
                      * 
                      */
                     void SetNewUserHostPrivileges(const std::vector<UserHostPrivilege>& _newUserHostPrivileges);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool NewUserHostPrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Description Remarks
+                     * 获取Remarks.
+                     * @return Description Remarks.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _description Remarks
+                     * 设置Remarks.
+                     * @param _description Remarks.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Host permissions of previously authorized users
-                     * @return OldUserHostPrivileges Host permissions of previously authorized users
+                     * 获取Historical authorization of user host permissions
+                     * @return OldUserHostPrivileges Historical authorization of user host permissions
                      * 
                      */
                     std::vector<UserHostPrivilege> GetOldUserHostPrivileges() const;
 
                     /**
-                     * 设置Host permissions of previously authorized users
-                     * @param _oldUserHostPrivileges Host permissions of previously authorized users
+                     * 设置Historical authorization of user host permissions
+                     * @param _oldUserHostPrivileges Historical authorization of user host permissions
                      * 
                      */
                     void SetOldUserHostPrivileges(const std::vector<UserHostPrivilege>& _oldUserHostPrivileges);
@@ -163,19 +163,19 @@ namespace TencentCloud
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * Host permissions of the new authorized user
+                     * Host permissions for new authorized users
                      */
                     std::vector<UserHostPrivilege> m_newUserHostPrivileges;
                     bool m_newUserHostPrivilegesHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remarks.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Host permissions of previously authorized users
+                     * Historical authorization of user host permissions
                      */
                     std::vector<UserHostPrivilege> m_oldUserHostPrivileges;
                     bool m_oldUserHostPrivilegesHasBeenSet;

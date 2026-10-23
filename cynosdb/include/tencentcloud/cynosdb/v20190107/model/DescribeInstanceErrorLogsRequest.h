@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Limit on the number of logs.
-                     * @return Limit Limit on the number of logs.
+                     * 获取Log entry limit
+                     * @return Limit Log entry limit
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on the number of logs.
-                     * @param _limit Limit on the number of logs.
+                     * 设置Log entry limit
+                     * @param _limit Log entry limit
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the log number.
-                     * @return Offset Offset of the log number.
+                     * 获取Log entry offset
+                     * @return Offset Log entry offset
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset of the log number.
-                     * @param _offset Offset of the log number.
+                     * 设置Log entry offset
+                     * @param _offset Log entry offset
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid value: 'Timestamp'.
-                     * @return OrderBy Sorting field. Valid value: 'Timestamp'.
+                     * 获取Sorting field. Valid values: `Timestamp` (enumeration value).
+                     * @return OrderBy Sorting field. Valid values: `Timestamp` (enumeration value).
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid value: 'Timestamp'.
-                     * @param _orderBy Sorting field. Valid value: 'Timestamp'.
+                     * 设置Sorting field. Valid values: `Timestamp` (enumeration value).
+                     * @param _orderBy Sorting field. Valid values: `Timestamp` (enumeration value).
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `ASC`, `DESC`.
-                     * @return OrderByType Sorting order. Valid values: `ASC`, `DESC`.
+                     * 获取Sorting type. Valid values: `ASC`, `DESC`.
+                     * @return OrderByType Sorting type. Valid values: `ASC`, `DESC`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `ASC`, `DESC`.
-                     * @param _orderByType Sorting order. Valid values: `ASC`, `DESC`.
+                     * 设置Sorting type. Valid values: `ASC`, `DESC`.
+                     * @param _orderByType Sorting type. Valid values: `ASC`, `DESC`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
-                     * @return LogLevels Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+                     * 获取Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
+                     * @return LogLevels Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
                      * 
                      */
                     std::vector<std::string> GetLogLevels() const;
 
                     /**
-                     * 设置Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
-                     * @param _logLevels Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+                     * 设置Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
+                     * @param _logLevels Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
                      * 
                      */
                     void SetLogLevels(const std::vector<std::string>& _logLevels);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool LogLevelsHasBeenSet() const;
 
                     /**
-                     * 获取Keywords, supports fuzzy search.
-                     * @return KeyWords Keywords, supports fuzzy search.
+                     * 获取Keyword. Fuzzy search is supported.
+                     * @return KeyWords Keyword. Fuzzy search is supported.
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置Keywords, supports fuzzy search.
-                     * @param _keyWords Keywords, supports fuzzy search.
+                     * 设置Keyword. Fuzzy search is supported.
+                     * @param _keyWords Keyword. Fuzzy search is supported.
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -240,13 +240,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Limit on the number of logs.
+                     * Log entry limit
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset of the log number.
+                     * Log entry offset
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -264,25 +264,25 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Sorting field. Valid value: 'Timestamp'.
+                     * Sorting field. Valid values: `Timestamp` (enumeration value).
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `ASC`, `DESC`.
+                     * Sorting type. Valid values: `ASC`, `DESC`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+                     * Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
                      */
                     std::vector<std::string> m_logLevels;
                     bool m_logLevelsHasBeenSet;
 
                     /**
-                     * Keywords, supports fuzzy search.
+                     * Keyword. Fuzzy search is supported.
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;

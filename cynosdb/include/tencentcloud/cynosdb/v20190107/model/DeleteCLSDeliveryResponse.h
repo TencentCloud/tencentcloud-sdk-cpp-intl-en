@@ -45,7 +45,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Asynchronous task ID.
+
                      * @return TaskId Asynchronous task ID.
+
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -61,6 +63,7 @@ namespace TencentCloud
 
                     /**
                      * Asynchronous task ID.
+
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

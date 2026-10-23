@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access proxy configuration.
+                * Access proxy configuration
                 */
                 class ProxyConfigInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-                     * @return ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+                     * 获取Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
+                     * @return ProxyCount Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
                      * 
                      */
                     int64_t GetProxyCount() const;
 
                     /**
-                     * 设置Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-                     * @param _proxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+                     * 设置Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
+                     * @param _proxyCount Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
                      * 
                      */
                     void SetProxyCount(const int64_t& _proxyCount);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the memory.
-                     * @return Mem Specifies the memory.
+                     * 获取memory
+                     * @return Mem memory
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Specifies the memory.
-                     * @param _mem Specifies the memory.
+                     * 设置memory
+                     * @param _mem memory
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
-                     * @return ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+                     * 获取Database node information (either this parameter or ProxyCount is required)
+                     * @return ProxyZones Database node information (either this parameter or ProxyCount is required)
                      * 
                      */
                     std::vector<ProxyZone> GetProxyZones() const;
 
                     /**
-                     * 设置Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
-                     * @param _proxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+                     * 设置Database node information (either this parameter or ProxyCount is required)
+                     * @param _proxyZones Database node information (either this parameter or ProxyCount is required)
                      * 
                      */
                     void SetProxyZones(const std::vector<ProxyZone>& _proxyZones);
@@ -155,7 +155,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+                     * Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
                      */
                     int64_t m_proxyCount;
                     bool m_proxyCountHasBeenSet;
@@ -167,7 +167,7 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Specifies the memory.
+                     * memory
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
@@ -179,7 +179,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+                     * Database node information (either this parameter or ProxyCount is required)
                      */
                     std::vector<ProxyZone> m_proxyZones;
                     bool m_proxyZonesHasBeenSet;

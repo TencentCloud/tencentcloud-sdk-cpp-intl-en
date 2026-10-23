@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time in the format of yyyy-mm-dd hh:mm:ss
-                     * @return CreateTime Creation time in the format of yyyy-mm-dd hh:mm:ss
+                     * 获取Creation time. Time format: yyyy-mm-dd hh:mm:ss
+                     * @return CreateTime Creation time. Time format: yyyy-mm-dd hh:mm:ss
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time in the format of yyyy-mm-dd hh:mm:ss
-                     * @param _createTime Creation time in the format of yyyy-mm-dd hh:mm:ss
+                     * 设置Creation time. Time format: yyyy-mm-dd hh:mm:ss
+                     * @param _createTime Creation time. Time format: yyyy-mm-dd hh:mm:ss
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Security group name
-                     * @return SecurityGroupName Security group name
+                     * 获取Security group name.
+                     * @return SecurityGroupName Security group name.
                      * 
                      */
                     std::string GetSecurityGroupName() const;
 
                     /**
-                     * 设置Security group name
-                     * @param _securityGroupName Security group name
+                     * 设置Security group name.
+                     * @param _securityGroupName Security group name.
                      * 
                      */
                     void SetSecurityGroupName(const std::string& _securityGroupName);
@@ -197,13 +197,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Creation time in the format of yyyy-mm-dd hh:mm:ss
+                     * Creation time. Time format: yyyy-mm-dd hh:mm:ss
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -227,7 +227,7 @@ namespace TencentCloud
                     bool m_securityGroupIdHasBeenSet;
 
                     /**
-                     * Security group name
+                     * Security group name.
                      */
                     std::string m_securityGroupName;
                     bool m_securityGroupNameHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * serverless type availability zone inventory information.
+                * Inventory information of availability zones for serverless type
                 */
                 class ServerlessZoneStockInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the stored amount.
-                     * @return StockCount Specifies the stored amount.
+                     * 获取Stored amount
+                     * @return StockCount Stored amount
                      * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
-                     * 设置Specifies the stored amount.
-                     * @param _stockCount Specifies the stored amount.
+                     * 设置Stored amount
+                     * @param _stockCount Stored amount
                      * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StockCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether it contains inventory.
-                     * @return HasStock Whether it contains inventory.
+                     * 获取Whether inventory is included
+                     * @return HasStock Whether inventory is included
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
-                     * 设置Whether it contains inventory.
-                     * @param _hasStock Whether it contains inventory.
+                     * 设置Whether inventory is included
+                     * @param _hasStock Whether inventory is included
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool HasStockHasBeenSet() const;
 
                     /**
-                     * 获取Inventory information from availability zone.
-                     * @return SlaveZoneStockInfos Inventory information from availability zone.
+                     * 获取Secondary AZ inventory information
+                     * @return SlaveZoneStockInfos Secondary AZ inventory information
                      * 
                      */
                     std::vector<SlaveZoneStockInfo> GetSlaveZoneStockInfos() const;
 
                     /**
-                     * 设置Inventory information from availability zone.
-                     * @param _slaveZoneStockInfos Inventory information from availability zone.
+                     * 设置Secondary AZ inventory information
+                     * @param _slaveZoneStockInfos Secondary AZ inventory information
                      * 
                      */
                     void SetSlaveZoneStockInfos(const std::vector<SlaveZoneStockInfo>& _slaveZoneStockInfos);
@@ -140,19 +140,19 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Specifies the stored amount.
+                     * Stored amount
                      */
                     int64_t m_stockCount;
                     bool m_stockCountHasBeenSet;
 
                     /**
-                     * Whether it contains inventory.
+                     * Whether inventory is included
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
 
                     /**
-                     * Inventory information from availability zone.
+                     * Secondary AZ inventory information
                      */
                     std::vector<SlaveZoneStockInfo> m_slaveZoneStockInfos;
                     bool m_slaveZoneStockInfosHasBeenSet;

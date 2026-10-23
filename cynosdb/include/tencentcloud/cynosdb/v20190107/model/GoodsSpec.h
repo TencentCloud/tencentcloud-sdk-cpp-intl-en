@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Product specification.
+                * Product specification
                 */
                 class GoodsSpec : public AbstractModel
                 {
@@ -195,22 +195,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
                      * @return DeviceType Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
                      * 设置Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
                      * @param _deviceType Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -268,8 +268,8 @@ namespace TencentCloud
 
                     /**
                      * Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

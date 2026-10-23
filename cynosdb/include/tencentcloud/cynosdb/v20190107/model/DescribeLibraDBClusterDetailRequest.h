@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to get more server information, available values yes no
-                     * @return GetServerInfo Whether to get more server information, available values yes no
+                     * 获取Whether to get more server information. Available values: yes, no
+                     * @return GetServerInfo Whether to get more server information. Available values: yes, no
                      * 
                      */
                     std::string GetGetServerInfo() const;
 
                     /**
-                     * 设置Whether to get more server information, available values yes no
-                     * @param _getServerInfo Whether to get more server information, available values yes no
+                     * 设置Whether to get more server information. Available values: yes, no
+                     * @param _getServerInfo Whether to get more server information. Available values: yes, no
                      * 
                      */
                     void SetGetServerInfo(const std::string& _getServerInfo);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Whether to get more server information, available values yes no
+                     * Whether to get more server information. Available values: yes, no
                      */
                     std::string m_getServerInfo;
                     bool m_getServerInfoHasBeenSet;

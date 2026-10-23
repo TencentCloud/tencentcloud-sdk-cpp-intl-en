@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the check is successful
-                     * @return CheckStatus Whether the check is successful
+                     * 获取Whether the check succeeds
+                     * @return CheckStatus Whether the check succeeds
                      * 
                      */
                     bool GetCheckStatus() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the check is successful
+                     * Whether the check succeeds
                      */
                     bool m_checkStatus;
                     bool m_checkStatusHasBeenSet;

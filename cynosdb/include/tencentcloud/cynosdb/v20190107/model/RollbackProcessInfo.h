@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback progress details.
+                * Rollback progress details
                 */
                 class RollbackProcessInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Is it possible to switch vip.
-                     * @return IsVipSwitchable Is it possible to switch vip.
+                     * 获取Is it possible to switch vip
+                     * @return IsVipSwitchable Is it possible to switch vip
                      * 
                      */
                     bool GetIsVipSwitchable() const;
 
                     /**
-                     * 设置Is it possible to switch vip.
-                     * @param _isVipSwitchable Is it possible to switch vip.
+                     * 设置Is it possible to switch vip
+                     * @param _isVipSwitchable Is it possible to switch vip
                      * 
                      */
                     void SetIsVipSwitchable(const bool& _isVipSwitchable);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool IsVipSwitchableHasBeenSet() const;
 
                     /**
-                     * 获取The exchangeable time of vip.
-                     * @return VipSwitchableTime The exchangeable time of vip.
+                     * 获取vip exchangeable time
+                     * @return VipSwitchableTime vip exchangeable time
                      * 
                      */
                     std::string GetVipSwitchableTime() const;
 
                     /**
-                     * 设置The exchangeable time of vip.
-                     * @param _vipSwitchableTime The exchangeable time of vip.
+                     * 设置vip exchangeable time
+                     * @param _vipSwitchableTime vip exchangeable time
                      * 
                      */
                     void SetVipSwitchableTime(const std::string& _vipSwitchableTime);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ExchangeRoGroupInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Current step.
-                     * @return CurrentStep Current step.
+                     * 获取Details of the current step
+                     * @return CurrentStep Details of the current step
                      * 
                      */
                     std::string GetCurrentStep() const;
 
                     /**
-                     * 设置Current step.
-                     * @param _currentStep Current step.
+                     * 设置Details of the current step
+                     * @param _currentStep Details of the current step
                      * 
                      */
                     void SetCurrentStep(const std::string& _currentStep);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool CurrentStepProgressHasBeenSet() const;
 
                     /**
-                     * 获取Remaining time of the current step.
-                     * @return CurrentStepRemainingTime Remaining time of the current step.
+                     * 获取Remaining time of the current step
+                     * @return CurrentStepRemainingTime Remaining time of the current step
                      * 
                      */
                     std::string GetCurrentStepRemainingTime() const;
 
                     /**
-                     * 设置Remaining time of the current step.
-                     * @param _currentStepRemainingTime Remaining time of the current step.
+                     * 设置Remaining time of the current step
+                     * @param _currentStepRemainingTime Remaining time of the current step
                      * 
                      */
                     void SetCurrentStepRemainingTime(const std::string& _currentStepRemainingTime);
@@ -198,13 +198,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Is it possible to switch vip.
+                     * Is it possible to switch vip
                      */
                     bool m_isVipSwitchable;
                     bool m_isVipSwitchableHasBeenSet;
 
                     /**
-                     * The exchangeable time of vip.
+                     * vip exchangeable time
                      */
                     std::string m_vipSwitchableTime;
                     bool m_vipSwitchableTimeHasBeenSet;
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_exchangeRoGroupInfoListHasBeenSet;
 
                     /**
-                     * Current step.
+                     * Details of the current step
                      */
                     std::string m_currentStep;
                     bool m_currentStepHasBeenSet;
@@ -234,7 +234,7 @@ namespace TencentCloud
                     bool m_currentStepProgressHasBeenSet;
 
                     /**
-                     * Remaining time of the current step.
+                     * Remaining time of the current step
                      */
                     std::string m_currentStepRemainingTime;
                     bool m_currentStepRemainingTimeHasBeenSet;

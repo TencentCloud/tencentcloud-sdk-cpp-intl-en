@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task flow ID
-                     * @return FlowId Task flow ID
+                     * 获取Task flow id.
+                     * @return FlowId Task flow id.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task flow ID
+                     * Task flow id.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

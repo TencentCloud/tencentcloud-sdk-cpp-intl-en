@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the serverless cluster id.
-                     * @return ClusterId Specifies the serverless cluster id.
+                     * 获取serverless cluster id
+                     * @return ClusterId serverless cluster id
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Specifies the serverless cluster id.
-                     * @param _clusterId Specifies the serverless cluster id.
+                     * 设置serverless cluster id
+                     * @param _clusterId serverless cluster id
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the serverless cluster id.
+                     * serverless cluster id
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;

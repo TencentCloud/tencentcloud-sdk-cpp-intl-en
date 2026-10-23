@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VPC settings for restricting backup download sources.
+                * VPC setting item for restricting the download source of backup files
                 */
                 class BackupLimitVpcItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the region for limiting download sources. currently only supports the current region.
-                     * @return Region Specifies the region for limiting download sources. currently only supports the current region.
+                     * 获取Limit the region of the download source. Currently only support the current region.
+                     * @return Region Limit the region of the download source. Currently only support the current region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Specifies the region for limiting download sources. currently only supports the current region.
-                     * @param _region Specifies the region for limiting download sources. currently only supports the current region.
+                     * 设置Limit the region of the download source. Currently only support the current region.
+                     * @param _region Limit the region of the download source. Currently only support the current region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Limit the vpc list for downloads.
-                     * @return VpcList Limit the vpc list for downloads.
+                     * 获取vpc list with download restrictions
+                     * @return VpcList vpc list with download restrictions
                      * 
                      */
                     std::vector<std::string> GetVpcList() const;
 
                     /**
-                     * 设置Limit the vpc list for downloads.
-                     * @param _vpcList Limit the vpc list for downloads.
+                     * 设置vpc list with download restrictions
+                     * @param _vpcList vpc list with download restrictions
                      * 
                      */
                     void SetVpcList(const std::vector<std::string>& _vpcList);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the region for limiting download sources. currently only supports the current region.
+                     * Limit the region of the download source. Currently only support the current region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Limit the vpc list for downloads.
+                     * vpc list with download restrictions
                      */
                     std::vector<std::string> m_vpcList;
                     bool m_vpcListHasBeenSet;

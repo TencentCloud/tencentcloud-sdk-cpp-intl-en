@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Swap instance information.
+                * Exchange instance information
                 */
                 class ExchangeInstanceInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SrcInstanceInfoHasBeenSet() const;
 
                     /**
-                     * 获取Target instance information.
-                     * @return DstInstanceInfo Target instance information.
+                     * 获取Destination instance information.
+                     * @return DstInstanceInfo Destination instance information.
                      * 
                      */
                     RollbackInstanceInfo GetDstInstanceInfo() const;
 
                     /**
-                     * 设置Target instance information.
-                     * @param _dstInstanceInfo Target instance information.
+                     * 设置Destination instance information.
+                     * @param _dstInstanceInfo Destination instance information.
                      * 
                      */
                     void SetDstInstanceInfo(const RollbackInstanceInfo& _dstInstanceInfo);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_srcInstanceInfoHasBeenSet;
 
                     /**
-                     * Target instance information.
+                     * Destination instance information.
                      */
                     RollbackInstanceInfo m_dstInstanceInfo;
                     bool m_dstInstanceInfoHasBeenSet;

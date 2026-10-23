@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Account. Valid values: `accountName`, `host`.
+                * Account, including `accountName` and `host`
                 */
                 class InputAccount : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Host. Default value: `%`
-                     * @return Host Host. Default value: `%`
+                     * 获取Host. Default value: `%`.
+                     * @return Host Host. Default value: `%`.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Host. Default value: `%`
-                     * @param _host Host. Default value: `%`
+                     * 设置Host. Default value: `%`.
+                     * @param _host Host. Default value: `%`.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Host. Default value: `%`
+                     * Host. Default value: `%`.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * proxy address configuration of the integrated cluster.
+                * proxy address configuration for the integrated cluster
                 */
                 class ProxyEndPointConfigInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the ID of the VPC network it belongs to.
-                     * @return UniqueVpcId Specifies the ID of the VPC network it belongs to.
+                     * 获取VPC network ID
+                     * @return UniqueVpcId VPC network ID
                      * 
                      */
                     std::string GetUniqueVpcId() const;
 
                     /**
-                     * 设置Specifies the ID of the VPC network it belongs to.
-                     * @param _uniqueVpcId Specifies the ID of the VPC network it belongs to.
+                     * 设置VPC network ID
+                     * @param _uniqueVpcId VPC network ID
                      * 
                      */
                     void SetUniqueVpcId(const std::string& _uniqueVpcId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool UniqueSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Security group id array.
-                     * @return SecurityGroupIds Security group id array.
+                     * 获取Security group id array
+                     * @return SecurityGroupIds Security group id array
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group id array.
-                     * @param _securityGroupIds Security group id array.
+                     * 设置Security group id array
+                     * @param _securityGroupIds Security group id array
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Weight mode: system-system allocation, custom-custom.
-                     * @return WeightMode Weight mode: system-system allocation, custom-custom.
+                     * 获取Weight mode: system: system-assigned, custom: customization
+                     * @return WeightMode Weight mode: system: system-assigned, custom: customization
                      * 
                      */
                     std::string GetWeightMode() const;
 
                     /**
-                     * 设置Weight mode: system-system allocation, custom-custom.
-                     * @param _weightMode Weight mode: system-system allocation, custom-custom.
+                     * 设置Weight mode: system: system-assigned, custom: customization
+                     * @param _weightMode Weight mode: system: system-assigned, custom: customization
                      * 
                      */
                     void SetWeightMode(const std::string& _weightMode);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool WeightModeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to automatically add a read-only instance. valid values: yes, no.
-                     * @return AutoAddRo Specifies whether to automatically add a read-only instance. valid values: yes, no.
+                     * 获取Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
+                     * @return AutoAddRo Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
                      * 
                      */
                     std::string GetAutoAddRo() const;
 
                     /**
-                     * 设置Specifies whether to automatically add a read-only instance. valid values: yes, no.
-                     * @param _autoAddRo Specifies whether to automatically add a read-only instance. valid values: yes, no.
+                     * 设置Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
+                     * @param _autoAddRo Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
                      * 
                      */
                     void SetAutoAddRo(const std::string& _autoAddRo);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool AutoAddRoHasBeenSet() const;
 
                     /**
-                     * 获取Read-Write attribute. valid values: READWRITE, READONLY.
-                     * @return RwType Read-Write attribute. valid values: READWRITE, READONLY.
+                     * 获取Read-write attribute. Available values: READWRITE, READONLY
+                     * @return RwType Read-write attribute. Available values: READWRITE, READONLY
                      * 
                      */
                     std::string GetRwType() const;
 
                     /**
-                     * 设置Read-Write attribute. valid values: READWRITE, READONLY.
-                     * @param _rwType Read-Write attribute. valid values: READWRITE, READONLY.
+                     * 设置Read-write attribute. Available values: READWRITE, READONLY
+                     * @param _rwType Read-write attribute. Available values: READWRITE, READONLY
                      * 
                      */
                     void SetRwType(const std::string& _rwType);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool RwTypeHasBeenSet() const;
 
                     /**
-                     * 获取Weight information.
-                     * @return InstanceNameWeights Weight information.
+                     * 获取Weight information
+                     * @return InstanceNameWeights Weight information
                      * 
                      */
                     std::vector<InstanceNameWeight> GetInstanceNameWeights() const;
 
                     /**
-                     * 设置Weight information.
-                     * @param _instanceNameWeights Weight information.
+                     * 设置Weight information
+                     * @param _instanceNameWeights Weight information
                      * 
                      */
                     void SetInstanceNameWeights(const std::vector<InstanceNameWeight>& _instanceNameWeights);
@@ -197,7 +197,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the ID of the VPC network it belongs to.
+                     * VPC network ID
                      */
                     std::string m_uniqueVpcId;
                     bool m_uniqueVpcIdHasBeenSet;
@@ -209,31 +209,31 @@ namespace TencentCloud
                     bool m_uniqueSubnetIdHasBeenSet;
 
                     /**
-                     * Security group id array.
+                     * Security group id array
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Weight mode: system-system allocation, custom-custom.
+                     * Weight mode: system: system-assigned, custom: customization
                      */
                     std::string m_weightMode;
                     bool m_weightModeHasBeenSet;
 
                     /**
-                     * Specifies whether to automatically add a read-only instance. valid values: yes, no.
+                     * Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
                      */
                     std::string m_autoAddRo;
                     bool m_autoAddRoHasBeenSet;
 
                     /**
-                     * Read-Write attribute. valid values: READWRITE, READONLY.
+                     * Read-write attribute. Available values: READWRITE, READONLY
                      */
                     std::string m_rwType;
                     bool m_rwTypeHasBeenSet;
 
                     /**
-                     * Weight information.
+                     * Weight information
                      */
                     std::vector<InstanceNameWeight> m_instanceNameWeights;
                     bool m_instanceNameWeightsHasBeenSet;

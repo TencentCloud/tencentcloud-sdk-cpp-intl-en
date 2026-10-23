@@ -185,6 +185,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeAliasDomainsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeApplicationProxiesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeApplicationProxiesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeAvailableCustomActionsForRuleEngineRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeAvailableCustomActionsForRuleEngineResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeBillingDataRequest.h>
@@ -259,6 +261,10 @@
 #include <tencentcloud/teo/v20220901/model/DescribeL7AccSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeLogAnalysisDetailRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeLogAnalysisDetailResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeLogAnalysisDownloadTasksRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeLogAnalysisDownloadTasksResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayLineRequest.h>
@@ -333,6 +339,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeWebSecurityTemplatesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeZoneCustomVariablesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeZoneCustomVariablesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZonesRequest.h>
@@ -461,6 +469,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyWebSecurityTemplateResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyZoneCustomVariablesRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyZoneCustomVariablesResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneStatusRequest.h>
@@ -734,6 +744,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeApplicationProxiesResponse> DescribeApplicationProxiesOutcome;
                 typedef std::future<DescribeApplicationProxiesOutcome> DescribeApplicationProxiesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeApplicationProxiesRequest&, DescribeApplicationProxiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationProxiesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAvailableCustomActionsForRuleEngineResponse> DescribeAvailableCustomActionsForRuleEngineOutcome;
+                typedef std::future<DescribeAvailableCustomActionsForRuleEngineOutcome> DescribeAvailableCustomActionsForRuleEngineOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeAvailableCustomActionsForRuleEngineRequest&, DescribeAvailableCustomActionsForRuleEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableCustomActionsForRuleEngineAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAvailablePlansResponse> DescribeAvailablePlansOutcome;
                 typedef std::future<DescribeAvailablePlansOutcome> DescribeAvailablePlansOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAvailablePlansRequest&, DescribeAvailablePlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailablePlansAsyncHandler;
@@ -845,6 +858,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLoadBalancerListResponse> DescribeLoadBalancerListOutcome;
                 typedef std::future<DescribeLoadBalancerListOutcome> DescribeLoadBalancerListOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeLoadBalancerListRequest&, DescribeLoadBalancerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogAnalysisDetailResponse> DescribeLogAnalysisDetailOutcome;
+                typedef std::future<DescribeLogAnalysisDetailOutcome> DescribeLogAnalysisDetailOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeLogAnalysisDetailRequest&, DescribeLogAnalysisDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogAnalysisDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogAnalysisDownloadTasksResponse> DescribeLogAnalysisDownloadTasksOutcome;
+                typedef std::future<DescribeLogAnalysisDownloadTasksOutcome> DescribeLogAnalysisDownloadTasksOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeLogAnalysisDownloadTasksRequest&, DescribeLogAnalysisDownloadTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogAnalysisDownloadTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMultiPathGatewayResponse> DescribeMultiPathGatewayOutcome;
                 typedef std::future<DescribeMultiPathGatewayOutcome> DescribeMultiPathGatewayOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeMultiPathGatewayRequest&, DescribeMultiPathGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMultiPathGatewayAsyncHandler;
@@ -956,6 +975,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeZoneConfigImportResultResponse> DescribeZoneConfigImportResultOutcome;
                 typedef std::future<DescribeZoneConfigImportResultOutcome> DescribeZoneConfigImportResultOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeZoneConfigImportResultRequest&, DescribeZoneConfigImportResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneConfigImportResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeZoneCustomVariablesResponse> DescribeZoneCustomVariablesOutcome;
+                typedef std::future<DescribeZoneCustomVariablesOutcome> DescribeZoneCustomVariablesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeZoneCustomVariablesRequest&, DescribeZoneCustomVariablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneCustomVariablesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeZoneSettingResponse> DescribeZoneSettingOutcome;
                 typedef std::future<DescribeZoneSettingOutcome> DescribeZoneSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeZoneSettingRequest&, DescribeZoneSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneSettingAsyncHandler;
@@ -1148,6 +1170,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyZoneResponse> ModifyZoneOutcome;
                 typedef std::future<ModifyZoneOutcome> ModifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyZoneRequest&, ModifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyZoneCustomVariablesResponse> ModifyZoneCustomVariablesOutcome;
+                typedef std::future<ModifyZoneCustomVariablesOutcome> ModifyZoneCustomVariablesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyZoneCustomVariablesRequest&, ModifyZoneCustomVariablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneCustomVariablesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyZoneSettingResponse> ModifyZoneSettingOutcome;
                 typedef std::future<ModifyZoneSettingOutcome> ModifyZoneSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyZoneSettingRequest&, ModifyZoneSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneSettingAsyncHandler;
@@ -1308,7 +1333,7 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 CreateCLSIndexOutcomeCallable CreateCLSIndexCallable(const Model::CreateCLSIndexRequest& request);
 
                 /**
-                 *This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 *In version management mode, this API is used to create a new version of the specified configuration group.
                  * @param req CreateConfigGroupVersionRequest
                  * @return CreateConfigGroupVersionOutcome
                  */
@@ -1940,6 +1965,15 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 DescribeApplicationProxiesOutcomeCallable DescribeApplicationProxiesCallable(const Model::DescribeApplicationProxiesRequest& request);
 
                 /**
+                 *This API is used to query the list of available custom configurations for rule engine operations on a site.
+                 * @param req DescribeAvailableCustomActionsForRuleEngineRequest
+                 * @return DescribeAvailableCustomActionsForRuleEngineOutcome
+                 */
+                DescribeAvailableCustomActionsForRuleEngineOutcome DescribeAvailableCustomActionsForRuleEngine(const Model::DescribeAvailableCustomActionsForRuleEngineRequest &request);
+                void DescribeAvailableCustomActionsForRuleEngineAsync(const Model::DescribeAvailableCustomActionsForRuleEngineRequest& request, const DescribeAvailableCustomActionsForRuleEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAvailableCustomActionsForRuleEngineOutcomeCallable DescribeAvailableCustomActionsForRuleEngineCallable(const Model::DescribeAvailableCustomActionsForRuleEngineRequest& request);
+
+                /**
                  *This API is used to query plan options available for purchase.
                  * @param req DescribeAvailablePlansRequest
                  * @return DescribeAvailablePlansOutcome
@@ -2271,6 +2305,24 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 DescribeLoadBalancerListOutcome DescribeLoadBalancerList(const Model::DescribeLoadBalancerListRequest &request);
                 void DescribeLoadBalancerListAsync(const Model::DescribeLoadBalancerListRequest& request, const DescribeLoadBalancerListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLoadBalancerListOutcomeCallable DescribeLoadBalancerListCallable(const Model::DescribeLoadBalancerListRequest& request);
+
+                /**
+                 *This API is used to query the log analysis details. The data comes from the log data of the real-time log push task with the destination "log_analysis" under the site.
+                 * @param req DescribeLogAnalysisDetailRequest
+                 * @return DescribeLogAnalysisDetailOutcome
+                 */
+                DescribeLogAnalysisDetailOutcome DescribeLogAnalysisDetail(const Model::DescribeLogAnalysisDetailRequest &request);
+                void DescribeLogAnalysisDetailAsync(const Model::DescribeLogAnalysisDetailRequest& request, const DescribeLogAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogAnalysisDetailOutcomeCallable DescribeLogAnalysisDetailCallable(const Model::DescribeLogAnalysisDetailRequest& request);
+
+                /**
+                 *This API is used to query the log download task list for log analysis. Note: Only download task records from the last three days are retained.
+                 * @param req DescribeLogAnalysisDownloadTasksRequest
+                 * @return DescribeLogAnalysisDownloadTasksOutcome
+                 */
+                DescribeLogAnalysisDownloadTasksOutcome DescribeLogAnalysisDownloadTasks(const Model::DescribeLogAnalysisDownloadTasksRequest &request);
+                void DescribeLogAnalysisDownloadTasksAsync(const Model::DescribeLogAnalysisDownloadTasksRequest& request, const DescribeLogAnalysisDownloadTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogAnalysisDownloadTasksOutcomeCallable DescribeLogAnalysisDownloadTasksCallable(const Model::DescribeLogAnalysisDownloadTasksRequest& request);
 
                 /**
                  *This API is used to query multi-channel security acceleration gateway details such as name, Gateway ID, IP, port and type.
@@ -2617,6 +2669,17 @@ This API is used to return post-protection traffic request data by default. User
                 DescribeZoneConfigImportResultOutcome DescribeZoneConfigImportResult(const Model::DescribeZoneConfigImportResultRequest &request);
                 void DescribeZoneConfigImportResultAsync(const Model::DescribeZoneConfigImportResultRequest& request, const DescribeZoneConfigImportResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeZoneConfigImportResultOutcomeCallable DescribeZoneConfigImportResultCallable(const Model::DescribeZoneConfigImportResultRequest& request);
+
+                /**
+                 *This API is used to query site-level custom variable configurations, including variable definitions and variable operations. If not configured, both variable definitions and variable operations return empty lists.
+
+If needed, call the DescribeL7AccRules API to query rule-level custom variables.
+                 * @param req DescribeZoneCustomVariablesRequest
+                 * @return DescribeZoneCustomVariablesOutcome
+                 */
+                DescribeZoneCustomVariablesOutcome DescribeZoneCustomVariables(const Model::DescribeZoneCustomVariablesRequest &request);
+                void DescribeZoneCustomVariablesAsync(const Model::DescribeZoneCustomVariablesRequest& request, const DescribeZoneCustomVariablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeZoneCustomVariablesOutcomeCallable DescribeZoneCustomVariablesCallable(const Model::DescribeZoneCustomVariablesRequest& request);
 
                 /**
                  *This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
@@ -3213,6 +3276,17 @@ This API is used to create, modify and delete preheating origin speed limit rest
                 ModifyZoneOutcome ModifyZone(const Model::ModifyZoneRequest &request);
                 void ModifyZoneAsync(const Model::ModifyZoneRequest& request, const ModifyZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyZoneOutcomeCallable ModifyZoneCallable(const Model::ModifyZoneRequest& request);
+
+                /**
+                 *This API is used to manage site-level custom variables, supporting the creation, modification, and deletion of variable definitions and variable operations. The submitted list will override the corresponding existing configuration. To clear the configuration, pass in an empty list. Configuration items not passed in remain unchanged. The default values for variable definitions and variable operations are both empty.
+
+For operations related to rule-level custom variables, call the CreateL7AccRules or ModifyL7AccRule API.
+                 * @param req ModifyZoneCustomVariablesRequest
+                 * @return ModifyZoneCustomVariablesOutcome
+                 */
+                ModifyZoneCustomVariablesOutcome ModifyZoneCustomVariables(const Model::ModifyZoneCustomVariablesRequest &request);
+                void ModifyZoneCustomVariablesAsync(const Model::ModifyZoneCustomVariablesRequest& request, const ModifyZoneCustomVariablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyZoneCustomVariablesOutcomeCallable ModifyZoneCustomVariablesCallable(const Model::ModifyZoneCustomVariablesRequest& request);
 
                 /**
                  *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).

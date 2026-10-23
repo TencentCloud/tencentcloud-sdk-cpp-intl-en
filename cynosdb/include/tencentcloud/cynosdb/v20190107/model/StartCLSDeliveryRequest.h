@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Enabled log topic ID.
-                     * @return CLSTopicIds Enabled log topic ID.
+                     * 获取id of the enabled log topic
+                     * @return CLSTopicIds id of the enabled log topic
                      * 
                      */
                     std::vector<std::string> GetCLSTopicIds() const;
 
                     /**
-                     * 设置Enabled log topic ID.
-                     * @param _cLSTopicIds Enabled log topic ID.
+                     * 设置id of the enabled log topic
+                     * @param _cLSTopicIds id of the enabled log topic
                      * 
                      */
                     void SetCLSTopicIds(const std::vector<std::string>& _cLSTopicIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CLSTopicIdsHasBeenSet() const;
 
                     /**
-                     * 获取Log type.
-                     * @return LogType Log type.
+                     * 获取Log type
+                     * @return LogType Log type
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type.
-                     * @param _logType Log type.
+                     * 设置Log type
+                     * @param _logType Log type
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the maintenance time is in operation.
-                     * @return IsInMaintainPeriod Whether the maintenance time is in operation.
+                     * 获取Whether it is running during the maintenance time
+                     * @return IsInMaintainPeriod Whether it is running during the maintenance time
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Whether the maintenance time is in operation.
-                     * @param _isInMaintainPeriod Whether the maintenance time is in operation.
+                     * 设置Whether it is running during the maintenance time
+                     * @param _isInMaintainPeriod Whether it is running during the maintenance time
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -135,19 +135,19 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Enabled log topic ID.
+                     * id of the enabled log topic
                      */
                     std::vector<std::string> m_cLSTopicIds;
                     bool m_cLSTopicIdsHasBeenSet;
 
                     /**
-                     * Log type.
+                     * Log type
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Whether the maintenance time is in operation.
+                     * Whether it is running during the maintenance time
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

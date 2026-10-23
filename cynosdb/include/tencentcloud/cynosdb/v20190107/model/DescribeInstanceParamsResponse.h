@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance parameters
-                     * @return Items List of instance parameters
+                     * 获取Instance parameter list
+                     * @return Items Instance parameter list
                      * 
                      */
                     std::vector<InstanceParamItem> GetItems() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instance parameters
+                     * Instance parameter list
                      */
                     std::vector<InstanceParamItem> m_items;
                     bool m_itemsHasBeenSet;

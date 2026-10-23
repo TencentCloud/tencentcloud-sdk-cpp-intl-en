@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster slave availability zone information.
+                * Cluster AZ information.
                 */
                 class ClusterSlaveData : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Old primary availability zone.
-                     * @return OldMasterZone Old primary availability zone.
+                     * 获取Old primary AZ
+                     * @return OldMasterZone Old primary AZ
                      * 
                      */
                     std::string GetOldMasterZone() const;
 
                     /**
-                     * 设置Old primary availability zone.
-                     * @param _oldMasterZone Old primary availability zone.
+                     * 设置Old primary AZ
+                     * @param _oldMasterZone Old primary AZ
                      * 
                      */
                     void SetOldMasterZone(const std::string& _oldMasterZone);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool OldSlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取New primary availability zone.
-                     * @return NewMasterZone New primary availability zone.
+                     * 获取New primary AZ
+                     * @return NewMasterZone New primary AZ
                      * 
                      */
                     std::string GetNewMasterZone() const;
 
                     /**
-                     * 设置New primary availability zone.
-                     * @param _newMasterZone New primary availability zone.
+                     * 设置New primary AZ
+                     * @param _newMasterZone New primary AZ
                      * 
                      */
                     void SetNewMasterZone(const std::string& _newMasterZone);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool NewSlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取New from availability zone attribute.
-                     * @return NewSlaveZoneAttr New from availability zone attribute.
+                     * 获取New secondary availability zone attribute
+                     * @return NewSlaveZoneAttr New secondary availability zone attribute
                      * 
                      */
                     std::vector<SlaveZoneAttrItem> GetNewSlaveZoneAttr() const;
 
                     /**
-                     * 设置New from availability zone attribute.
-                     * @param _newSlaveZoneAttr New from availability zone attribute.
+                     * 设置New secondary availability zone attribute
+                     * @param _newSlaveZoneAttr New secondary availability zone attribute
                      * 
                      */
                     void SetNewSlaveZoneAttr(const std::vector<SlaveZoneAttrItem>& _newSlaveZoneAttr);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool NewSlaveZoneAttrHasBeenSet() const;
 
                     /**
-                     * 获取Old availability zone attributes.
-                     * @return OldSlaveZoneAttr Old availability zone attributes.
+                     * 获取Old availability zone attributes
+                     * @return OldSlaveZoneAttr Old availability zone attributes
                      * 
                      */
                     std::vector<SlaveZoneAttrItem> GetOldSlaveZoneAttr() const;
 
                     /**
-                     * 设置Old availability zone attributes.
-                     * @param _oldSlaveZoneAttr Old availability zone attributes.
+                     * 设置Old availability zone attributes
+                     * @param _oldSlaveZoneAttr Old availability zone attributes
                      * 
                      */
                     void SetOldSlaveZoneAttr(const std::vector<SlaveZoneAttrItem>& _oldSlaveZoneAttr);
@@ -176,7 +176,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Old primary availability zone.
+                     * Old primary AZ
                      */
                     std::string m_oldMasterZone;
                     bool m_oldMasterZoneHasBeenSet;
@@ -188,7 +188,7 @@ namespace TencentCloud
                     bool m_oldSlaveZoneHasBeenSet;
 
                     /**
-                     * New primary availability zone.
+                     * New primary AZ
                      */
                     std::string m_newMasterZone;
                     bool m_newMasterZoneHasBeenSet;
@@ -200,13 +200,13 @@ namespace TencentCloud
                     bool m_newSlaveZoneHasBeenSet;
 
                     /**
-                     * New from availability zone attribute.
+                     * New secondary availability zone attribute
                      */
                     std::vector<SlaveZoneAttrItem> m_newSlaveZoneAttr;
                     bool m_newSlaveZoneAttrHasBeenSet;
 
                     /**
-                     * Old availability zone attributes.
+                     * Old availability zone attributes
                      */
                     std::vector<SlaveZoneAttrItem> m_oldSlaveZoneAttr;
                     bool m_oldSlaveZoneAttrHasBeenSet;

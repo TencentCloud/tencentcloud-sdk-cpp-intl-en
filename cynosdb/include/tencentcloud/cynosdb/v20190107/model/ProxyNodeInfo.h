@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node in the database proxy group.
+                * Database Proxy Group node
                 */
                 class ProxyNodeInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Database Proxy Node ID</p>
-                     * @return ProxyNodeId <p>Database Proxy Node ID</p>
+                     * 获取<p>Database proxy node ID</p>
+                     * @return ProxyNodeId <p>Database proxy node ID</p>
                      * 
                      */
                     std::string GetProxyNodeId() const;
 
                     /**
-                     * 设置<p>Database Proxy Node ID</p>
-                     * @param _proxyNodeId <p>Database Proxy Node ID</p>
+                     * 设置<p>Database proxy node ID</p>
+                     * @param _proxyNodeId <p>Database proxy node ID</p>
                      * 
                      */
                     void SetProxyNodeId(const std::string& _proxyNodeId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProxyNodeIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
-                     * @return ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+                     * 获取<p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
+                     * @return ProxyNodeConnections <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
                      * 
                      */
                     int64_t GetProxyNodeConnections() const;
 
                     /**
-                     * 设置<p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
-                     * @param _proxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+                     * 设置<p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
+                     * @param _proxyNodeConnections <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
                      * 
                      */
                     void SetProxyNodeConnections(const int64_t& _proxyNodeConnections);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database Proxy Node Status</p>
-                     * @return Status <p>Database Proxy Node Status</p>
+                     * 获取<p>Database proxy node status</p>
+                     * @return Status <p>Database proxy node status</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Database Proxy Node Status</p>
-                     * @param _status <p>Database Proxy Node Status</p>
+                     * 设置<p>Database proxy node status</p>
+                     * @param _status <p>Database proxy node status</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>User AppID</p>
-                     * @return AppId <p>User AppID</p>
+                     * 获取<p>User AppID.</p>
+                     * @return AppId <p>User AppID.</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置<p>User AppID</p>
-                     * @param _appId <p>User AppID</p>
+                     * 设置<p>User AppID.</p>
+                     * @param _appId <p>User AppID.</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Database Proxy Node Name</p>
-                     * @return OssProxyNodeName <p>Database Proxy Node Name</p>
+                     * 获取<p>Database proxy node name</p>
+                     * @return OssProxyNodeName <p>Database proxy node name</p>
                      * 
                      */
                     std::string GetOssProxyNodeName() const;
 
                     /**
-                     * 设置<p>Database Proxy Node Name</p>
-                     * @param _ossProxyNodeName <p>Database Proxy Node Name</p>
+                     * 设置<p>Database proxy node name</p>
+                     * @param _ossProxyNodeName <p>Database proxy node name</p>
                      * 
                      */
                     void SetOssProxyNodeName(const std::string& _ossProxyNodeName);
@@ -322,13 +322,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Database Proxy Node ID</p>
+                     * <p>Database proxy node ID</p>
                      */
                     std::string m_proxyNodeId;
                     bool m_proxyNodeIdHasBeenSet;
 
                     /**
-                     * <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+                     * <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
                      */
                     int64_t m_proxyNodeConnections;
                     bool m_proxyNodeConnectionsHasBeenSet;
@@ -346,7 +346,7 @@ namespace TencentCloud
                     bool m_memHasBeenSet;
 
                     /**
-                     * <p>Database Proxy Node Status</p>
+                     * <p>Database proxy node status</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -364,7 +364,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * <p>User AppID</p>
+                     * <p>User AppID.</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -382,7 +382,7 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * <p>Database Proxy Node Name</p>
+                     * <p>Database proxy node name</p>
                      */
                     std::string m_ossProxyNodeName;
                     bool m_ossProxyNodeNameHasBeenSet;

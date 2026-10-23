@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * binlog retention info for each region
+                * binlog retention info in each region
                 */
                 class BinlogRegionInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Backup region</p>
-                     * @return BackupRegion <p>Backup region</p>
+                     * 获取<p>Backup region.</p>
+                     * @return BackupRegion <p>Backup region.</p>
                      * 
                      */
                     std::string GetBackupRegion() const;
 
                     /**
-                     * 设置<p>Backup region</p>
-                     * @param _backupRegion <p>Backup region</p>
+                     * 设置<p>Backup region.</p>
+                     * @param _backupRegion <p>Backup region.</p>
                      * 
                      */
                     void SetBackupRegion(const std::string& _backupRegion);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Backup region</p>
+                     * <p>Backup region.</p>
                      */
                     std::string m_backupRegion;
                     bool m_backupRegionHasBeenSet;

@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status
-                     * @return ClusterStatus Cluster status
+                     * 获取Cluster status.
+                     * @return ClusterStatus Cluster status.
                      * 
                      */
                     std::string GetClusterStatus() const;
 
                     /**
-                     * 设置Cluster status
-                     * @param _clusterStatus Cluster status
+                     * 设置Cluster status.
+                     * @param _clusterStatus Cluster status.
                      * 
                      */
                     void SetClusterStatus(const std::string& _clusterStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
-                     * 获取cluster region
-                     * @return ClusterRegion cluster region
+                     * 获取Region of the cluster
+                     * @return ClusterRegion Region of the cluster
                      * 
                      */
                     std::string GetClusterRegion() const;
 
                     /**
-                     * 设置cluster region
-                     * @param _clusterRegion cluster region
+                     * 设置Region of the cluster
+                     * @param _clusterRegion Region of the cluster
                      * 
                      */
                     void SetClusterRegion(const std::string& _clusterRegion);
@@ -166,13 +166,13 @@ namespace TencentCloud
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster status
+                     * Cluster status.
                      */
                     std::string m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
 
                     /**
-                     * cluster region
+                     * Region of the cluster
                      */
                     std::string m_clusterRegion;
                     bool m_clusterRegionHasBeenSet;

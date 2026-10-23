@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
-                     * @return MaintainStartTime Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+                     * 获取Maintenance start time in seconds. For example, 3:00 is 10800.
+                     * @return MaintainStartTime Maintenance start time in seconds. For example, 3:00 is 10800.
                      * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
-                     * 设置Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
-                     * @param _maintainStartTime Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+                     * 设置Maintenance start time in seconds. For example, 3:00 is 10800.
+                     * @param _maintainStartTime Maintenance start time in seconds. For example, 3:00 is 10800.
                      * 
                      */
                     void SetMaintainStartTime(const int64_t& _maintainStartTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MaintainStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance duration in seconds. For example, one hour is represented by 3600
-                     * @return MaintainDuration Maintenance duration in seconds. For example, one hour is represented by 3600
+                     * 获取Maintenance duration in seconds. For example, 1 hour is 3600.
+                     * @return MaintainDuration Maintenance duration in seconds. For example, 1 hour is 3600.
                      * 
                      */
                     int64_t GetMaintainDuration() const;
 
                     /**
-                     * 设置Maintenance duration in seconds. For example, one hour is represented by 3600
-                     * @param _maintainDuration Maintenance duration in seconds. For example, one hour is represented by 3600
+                     * 设置Maintenance duration in seconds. For example, 1 hour is 3600.
+                     * @param _maintainDuration Maintenance duration in seconds. For example, 1 hour is 3600.
                      * 
                      */
                     void SetMaintainDuration(const int64_t& _maintainDuration);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MaintainDurationHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
-                     * @return MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+                     * 获取Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
+                     * @return MaintainWeekDays Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
-                     * 设置Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
-                     * @param _maintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+                     * 设置Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
+                     * @param _maintainWeekDays Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
                      * 
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+                     * Maintenance start time in seconds. For example, 3:00 is 10800.
                      */
                     int64_t m_maintainStartTime;
                     bool m_maintainStartTimeHasBeenSet;
 
                     /**
-                     * Maintenance duration in seconds. For example, one hour is represented by 3600
+                     * Maintenance duration in seconds. For example, 1 hour is 3600.
                      */
                     int64_t m_maintainDuration;
                     bool m_maintainDurationHasBeenSet;
 
                     /**
-                     * Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+                     * Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;

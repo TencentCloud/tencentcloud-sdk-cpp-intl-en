@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Exported error log content.
-                     * @return ErrorLogItems Exported error log content.
+                     * 获取Exported content of the error log
+                     * @return ErrorLogItems Exported content of the error log
                      * 
                      */
                     std::vector<ErrorLogItemExport> GetErrorLogItems() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ErrorLogItemsHasBeenSet() const;
 
                     /**
-                     * 获取Error log string.
-                     * @return FileContent Error log string.
+                     * 获取Error log string
+                     * @return FileContent Error log string
                      * 
                      */
                     std::string GetFileContent() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Exported error log content.
+                     * Exported content of the error log
                      */
                     std::vector<ErrorLogItemExport> m_errorLogItems;
                     bool m_errorLogItemsHasBeenSet;
 
                     /**
-                     * Error log string.
+                     * Error log string
                      */
                     std::string m_fileContent;
                     bool m_fileContentHasBeenSet;

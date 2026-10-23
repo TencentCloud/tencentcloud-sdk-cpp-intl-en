@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rollback instance information.
+                * Rollback instance information
                 */
                 class RollbackInstanceInfo : public AbstractModel
                 {
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取vip information.
-                     * @return Vip vip information.
+                     * 获取VIP information.
+                     * @return Vip VIP information.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置vip information.
-                     * @param _vip vip information.
+                     * 设置VIP information.
+                     * @param _vip VIP information.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the vport information.
-                     * @return Vport Specifies the vport information.
+                     * 获取Virtual port information.
+                     * @return Vport Virtual port information.
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Specifies the vport information.
-                     * @param _vport Specifies the vport information.
+                     * 设置Virtual port information.
+                     * @param _vport Virtual port information.
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取CPU Size.
-                     * @return Cpu CPU Size.
+                     * 获取CPU Size
+                     * @return Cpu CPU Size
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置CPU Size.
-                     * @param _cpu CPU Size.
+                     * 设置CPU Size
+                     * @param _cpu CPU Size
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory Size.
-                     * @return Mem Memory Size.
+                     * 获取Memory size.
+                     * @return Mem Memory size.
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Memory Size.
-                     * @param _mem Memory Size.
+                     * 设置Memory size.
+                     * @param _mem Memory size.
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Storage size.
-                     * @return StorageLimit Storage size.
+                     * 获取Storage size
+                     * @return StorageLimit Storage size
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage size.
-                     * @param _storageLimit Storage size.
+                     * 设置Storage size
+                     * @param _storageLimit Storage size
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -325,13 +325,13 @@ namespace TencentCloud
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * vip information.
+                     * VIP information.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Specifies the vport information.
+                     * Virtual port information.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
@@ -355,19 +355,19 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * CPU Size.
+                     * CPU Size
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory Size.
+                     * Memory size.
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Storage size.
+                     * Storage size
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;

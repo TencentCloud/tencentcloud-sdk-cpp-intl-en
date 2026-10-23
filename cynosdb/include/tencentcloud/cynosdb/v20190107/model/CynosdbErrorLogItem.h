@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Types of the returned error logs for an instance
+                * Return type of the instance error log
                 */
                 class CynosdbErrorLogItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log timestamp.
-                     * @return Timestamp Log timestamp.
+                     * 获取Log timestamp
+                     * @return Timestamp Log timestamp
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置Log timestamp.
-                     * @param _timestamp Log timestamp.
+                     * 设置Log timestamp
+                     * @param _timestamp Log timestamp
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Log content.
-                     * @return Content Log content.
+                     * 获取Log content
+                     * @return Content Log content
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Log content.
-                     * @param _content Log content.
+                     * 设置Log content
+                     * @param _content Log content
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log timestamp.
+                     * Log timestamp
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Log content.
+                     * Log content
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

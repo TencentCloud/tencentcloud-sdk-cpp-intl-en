@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the backup download cluster restrictions parameter.
+                * Backup download cluster limit parameter
                 */
                 class BackupLimitClusterRestriction : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Download limit configuration.
-                     * @return BackupLimitRestriction Download limit configuration.
+                     * 获取Download limit configuration
+                     * @return BackupLimitRestriction Download limit configuration
                      * 
                      */
                     BackupLimitRestriction GetBackupLimitRestriction() const;
 
                     /**
-                     * 设置Download limit configuration.
-                     * @param _backupLimitRestriction Download limit configuration.
+                     * 设置Download limit configuration
+                     * @param _backupLimitRestriction Download limit configuration
                      * 
                      */
                     void SetBackupLimitRestriction(const BackupLimitRestriction& _backupLimitRestriction);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Download limit configuration.
+                     * Download limit configuration
                      */
                     BackupLimitRestriction m_backupLimitRestriction;
                     bool m_backupLimitRestrictionHasBeenSet;

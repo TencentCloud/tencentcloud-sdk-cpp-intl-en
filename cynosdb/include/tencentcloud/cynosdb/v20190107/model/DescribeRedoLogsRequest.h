@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log file name.
-                     * @return FileNames Log file name.
+                     * 获取redolog file name
+                     * @return FileNames redolog file name
                      * 
                      */
                     std::vector<std::string> GetFileNames() const;
 
                     /**
-                     * 设置Log file name.
-                     * @param _fileNames Log file name.
+                     * 设置redolog file name
+                     * @param _fileNames redolog file name
                      * 
                      */
                     void SetFileNames(const std::vector<std::string>& _fileNames);
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Log file name.
+                     * redolog file name
                      */
                     std::vector<std::string> m_fileNames;
                     bool m_fileNamesHasBeenSet;

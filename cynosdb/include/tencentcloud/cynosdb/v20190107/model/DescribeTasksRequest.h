@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Starting value of the task start time.
-                     * @return StartTimeBegin Starting value of the task start time.
+                     * 获取Starting value of task start time
+                     * @return StartTimeBegin Starting value of task start time
                      * 
                      */
                     std::string GetStartTimeBegin() const;
 
                     /**
-                     * 设置Starting value of the task start time.
-                     * @param _startTimeBegin Starting value of the task start time.
+                     * 设置Starting value of task start time
+                     * @param _startTimeBegin Starting value of task start time
                      * 
                      */
                     void SetStartTimeBegin(const std::string& _startTimeBegin);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool StartTimeBeginHasBeenSet() const;
 
                     /**
-                     * 获取End value of the task start time.
-                     * @return StartTimeEnd End value of the task start time.
+                     * 获取End value of the task start time
+                     * @return StartTimeEnd End value of the task start time
                      * 
                      */
                     std::string GetStartTimeEnd() const;
 
                     /**
-                     * 设置End value of the task start time.
-                     * @param _startTimeEnd End value of the task start time.
+                     * 设置End value of the task start time
+                     * @param _startTimeEnd End value of the task start time
                      * 
                      */
                     void SetStartTimeEnd(const std::string& _startTimeEnd);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StartTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
-                     * @return Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+                     * 获取Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
+                     * @return Filters Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
                      * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
-                     * 设置Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
-                     * @param _filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+                     * 设置Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
+                     * @param _filters Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
                      * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Length of the list to be queried.
-                     * @return Limit Length of the list to be queried.
+                     * 获取Query the list length
+                     * @return Limit Query the list length
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Length of the list to be queried.
-                     * @param _limit Length of the list to be queried.
+                     * 设置Query the list length
+                     * @param _limit Query the list length
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the list to be queried.
-                     * @return Offset Offset of the list to be queried.
+                     * 获取List offset for queries
+                     * @return Offset List offset for queries
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset of the list to be queried.
-                     * @param _offset Offset of the list to be queried.
+                     * 设置List offset for queries
+                     * @param _offset List offset for queries
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -151,31 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Starting value of the task start time.
+                     * Starting value of task start time
                      */
                     std::string m_startTimeBegin;
                     bool m_startTimeBeginHasBeenSet;
 
                     /**
-                     * End value of the task start time.
+                     * End value of the task start time
                      */
                     std::string m_startTimeEnd;
                     bool m_startTimeEndHasBeenSet;
 
                     /**
-                     * Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+                     * Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
                      */
                     std::vector<QueryFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Length of the list to be queried.
+                     * Query the list length
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset of the list to be queried.
+                     * List offset for queries
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

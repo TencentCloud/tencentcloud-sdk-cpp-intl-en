@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the product price.
-                     * @return GoodsPrice Specifies the product price.
+                     * 获取Item price
+                     * @return GoodsPrice Item price
                      * 
                      */
                     std::vector<GoodsPrice> GetGoodsPrice() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the product price.
+                     * Item price
                      */
                     std::vector<GoodsPrice> m_goodsPrice;
                     bool m_goodsPriceHasBeenSet;

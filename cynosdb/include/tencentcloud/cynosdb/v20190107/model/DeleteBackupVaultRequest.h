@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup file ID list to be deleted, cannot be empty
-                     * @return BackupIds Backup file ID list to be deleted, cannot be empty
+                     * 获取List of backup file IDs to be deleted. Values cannot be empty.
+                     * @return BackupIds List of backup file IDs to be deleted. Values cannot be empty.
                      * 
                      */
                     std::vector<int64_t> GetBackupIds() const;
 
                     /**
-                     * 设置Backup file ID list to be deleted, cannot be empty
-                     * @param _backupIds Backup file ID list to be deleted, cannot be empty
+                     * 设置List of backup file IDs to be deleted. Values cannot be empty.
+                     * @param _backupIds List of backup file IDs to be deleted. Values cannot be empty.
                      * 
                      */
                     void SetBackupIds(const std::vector<int64_t>& _backupIds);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_vaultIdHasBeenSet;
 
                     /**
-                     * Backup file ID list to be deleted, cannot be empty
+                     * List of backup file IDs to be deleted. Values cannot be empty.
                      */
                     std::vector<int64_t> m_backupIds;
                     bool m_backupIdsHasBeenSet;

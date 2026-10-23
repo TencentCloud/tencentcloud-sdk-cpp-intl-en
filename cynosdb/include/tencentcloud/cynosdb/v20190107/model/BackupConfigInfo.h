@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Backup setting.
+                * Backup setting
                 */
                 class BackupConfigInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BackupCustomAutoTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-                     * @return BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * 获取<p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+                     * @return BackupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
                      * 
                      */
                     uint64_t GetBackupTimeBeg() const;
 
                     /**
-                     * 设置<p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-                     * @param _backupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * 设置<p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+                     * @param _backupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
                      * 
                      */
                     void SetBackupTimeBeg(const uint64_t& _backupTimeBeg);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool BackupTimeBegHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-                     * @return BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * 获取<p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+                     * @return BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
                      * 
                      */
                     uint64_t GetBackupTimeEnd() const;
 
                     /**
-                     * 设置<p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-                     * @param _backupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * 设置<p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+                     * @param _backupTimeEnd <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
                      * 
                      */
                     void SetBackupTimeEnd(const uint64_t& _backupTimeEnd);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool BackupIntervalTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
-                     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+                     * 获取<p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
+                     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
                      * 
                      */
                     uint64_t GetReserveDuration() const;
 
                     /**
-                     * 设置<p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
-                     * @param _reserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+                     * 设置<p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
+                     * @param _reserveDuration <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
                      * 
                      */
                     void SetReserveDuration(const uint64_t& _reserveDuration);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
-                     * @return CrossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+                     * 获取<p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
+                     * @return CrossRegionsEnable <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
                      * 
                      */
                     std::string GetCrossRegionsEnable() const;
 
                     /**
-                     * 设置<p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
-                     * @param _crossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+                     * 设置<p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
+                     * @param _crossRegionsEnable <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
                      * 
                      */
                     void SetCrossRegionsEnable(const std::string& _crossRegionsEnable);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool CrossRegionsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cross-region backup retention period</p><p>Unit: Day</p>
-                     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 获取<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
                      * 
                      */
                     int64_t GetCrossRegionSaveDays() const;
 
                     /**
-                     * 设置<p>Cross-region backup retention period</p><p>Unit: Day</p>
-                     * @param _crossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 设置<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @param _crossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
                      * 
                      */
                     void SetCrossRegionSaveDays(const int64_t& _crossRegionSaveDays);
@@ -287,13 +287,13 @@ namespace TencentCloud
                     bool m_backupCustomAutoTimeHasBeenSet;
 
                     /**
-                     * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
                      */
                     uint64_t m_backupTimeBeg;
                     bool m_backupTimeBegHasBeenSet;
 
                     /**
-                     * <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
                      */
                     uint64_t m_backupTimeEnd;
                     bool m_backupTimeEndHasBeenSet;
@@ -311,13 +311,13 @@ namespace TencentCloud
                     bool m_backupIntervalTimeHasBeenSet;
 
                     /**
-                     * <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+                     * <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
                      */
                     uint64_t m_reserveDuration;
                     bool m_reserveDurationHasBeenSet;
 
                     /**
-                     * <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+                     * <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
                      */
                     std::string m_crossRegionsEnable;
                     bool m_crossRegionsEnableHasBeenSet;
@@ -329,7 +329,7 @@ namespace TencentCloud
                     bool m_crossRegionsHasBeenSet;
 
                     /**
-                     * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * <p>Cross-region backup retention period</p><p>Unit: day</p>
                      */
                     int64_t m_crossRegionSaveDays;
                     bool m_crossRegionSaveDaysHasBeenSet;

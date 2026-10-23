@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool BackupLogicVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Total Log Capacity
-                     * @return LogTotalVolume Total Log Capacity
+                     * 获取Total log capacity
+                     * @return LogTotalVolume Total log capacity
                      * 
                      */
                     double GetLogTotalVolume() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool LogBinlogVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Redo log capacity
-                     * @return LogRedoLogVolume Redo log capacity
+                     * 获取redolog capacity
+                     * @return LogRedoLogVolume redolog capacity
                      * 
                      */
                     double GetLogRedoLogVolume() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool LogRedoLogVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Total Cross-Region Backup Capacity
-                     * @return CrossTotalVolume Total Cross-Region Backup Capacity
+                     * 获取Total cross-region backup capacity
+                     * @return CrossTotalVolume Total cross-region backup capacity
                      * 
                      */
                     double GetCrossTotalVolume() const;
@@ -143,8 +143,8 @@ namespace TencentCloud
                     bool CrossTotalVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Cross-Region Backup Capacity
-                     * @return CrossRegionBackupVolume Cross-Region Backup Capacity
+                     * 获取Cross-region backup capacity.
+                     * @return CrossRegionBackupVolume Cross-region backup capacity.
                      * 
                      */
                     double GetCrossRegionBackupVolume() const;
@@ -233,7 +233,7 @@ namespace TencentCloud
                     bool m_backupLogicVolumeHasBeenSet;
 
                     /**
-                     * Total Log Capacity
+                     * Total log capacity
                      */
                     double m_logTotalVolume;
                     bool m_logTotalVolumeHasBeenSet;
@@ -245,19 +245,19 @@ namespace TencentCloud
                     bool m_logBinlogVolumeHasBeenSet;
 
                     /**
-                     * Redo log capacity
+                     * redolog capacity
                      */
                     double m_logRedoLogVolume;
                     bool m_logRedoLogVolumeHasBeenSet;
 
                     /**
-                     * Total Cross-Region Backup Capacity
+                     * Total cross-region backup capacity
                      */
                     double m_crossTotalVolume;
                     bool m_crossTotalVolumeHasBeenSet;
 
                     /**
-                     * Cross-Region Backup Capacity
+                     * Cross-region backup capacity.
                      */
                     double m_crossRegionBackupVolume;
                     bool m_crossRegionBackupVolumeHasBeenSet;

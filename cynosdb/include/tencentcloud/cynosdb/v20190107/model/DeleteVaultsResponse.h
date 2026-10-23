@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Delete task list. Each safe corresponds to a task.
-                     * @return VaultTask Delete task list. Each safe corresponds to a task.
+                     * 获取Task deletion list. Each safe corresponds to a task.
+                     * @return VaultTask Task deletion list. Each safe corresponds to a task.
                      * 
                      */
                     std::vector<DeleteVaultTask> GetVaultTask() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Delete task list. Each safe corresponds to a task.
+                     * Task deletion list. Each safe corresponds to a task.
                      */
                     std::vector<DeleteVaultTask> m_vaultTask;
                     bool m_vaultTaskHasBeenSet;

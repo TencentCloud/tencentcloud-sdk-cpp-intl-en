@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * redo log details.
+                * redo log details
                 */
                 class RedoLogItem : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filename.
-                     * @return FileName Filename.
+                     * 获取<p>File name.</p>
+                     * @return FileName <p>File name.</p>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename.
-                     * @param _fileName Filename.
+                     * 设置<p>File name.</p>
+                     * @param _fileName <p>File name.</p>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取File size
-                     * @return FileSize File size
+                     * 获取<p>File size</p>
+                     * @return FileSize <p>File size</p>
                      * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
-                     * 设置File size
-                     * @param _fileSize File size
+                     * 设置<p>File size</p>
+                     * @param _fileSize <p>File size</p>
                      * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Backup time
-                     * @return BackupTime Backup time
+                     * 获取<p>Backup time</p>
+                     * @return BackupTime <p>Backup time</p>
                      * 
                      */
                     std::string GetBackupTime() const;
 
                     /**
-                     * 设置Backup time
-                     * @param _backupTime Backup time
+                     * 设置<p>Backup time</p>
+                     * @param _backupTime <p>Backup time</p>
                      * 
                      */
                     void SetBackupTime(const std::string& _backupTime);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool BackupTimeHasBeenSet() const;
 
                     /**
-                     * 获取redoLogId
-                     * @return RedoLogId redoLogId
+                     * 获取<p>redoLogId</p>
+                     * @return RedoLogId <p>redoLogId</p>
                      * 
                      */
                     int64_t GetRedoLogId() const;
 
                     /**
-                     * 设置redoLogId
-                     * @param _redoLogId redoLogId
+                     * 设置<p>redoLogId</p>
+                     * @param _redoLogId <p>redoLogId</p>
                      * 
                      */
                     void SetRedoLogId(const int64_t& _redoLogId);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool RedoLogIdHasBeenSet() const;
 
                     /**
-                     * 获取Cross-Region information.
-                     * @return RedoCrossRegions Cross-Region information.
+                     * 获取<p>Cross-regional information</p>
+                     * @return RedoCrossRegions <p>Cross-regional information</p>
                      * 
                      */
                     std::vector<BackupRegionAndIds> GetRedoCrossRegions() const;
 
                     /**
-                     * 设置Cross-Region information.
-                     * @param _redoCrossRegions Cross-Region information.
+                     * 设置<p>Cross-regional information</p>
+                     * @param _redoCrossRegions <p>Cross-regional information</p>
                      * 
                      */
                     void SetRedoCrossRegions(const std::vector<BackupRegionAndIds>& _redoCrossRegions);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool RedoCrossRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Status.
-                     * @return Status Status.
+                     * 获取<p>Status.</p>
+                     * @return Status <p>Status.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status.
-                     * @param _status Status.
+                     * 设置<p>Status.</p>
+                     * @param _status <p>Status.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Start time.
-                     * @return StartTime Start time.
+                     * 获取<p>Start time.</p>
+                     * @return StartTime <p>Start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time.
-                     * @param _startTime Start time.
+                     * 设置<p>Start time.</p>
+                     * @param _startTime <p>Start time.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Completion time.
-                     * @return FinishTime Completion time.
+                     * 获取<p>Completion time</p>
+                     * @return FinishTime <p>Completion time</p>
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Completion time.
-                     * @param _finishTime Completion time.
+                     * 设置<p>Completion time</p>
+                     * @param _finishTime <p>Completion time</p>
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Safe info
-                     * @return VaultInfos Safe info
+                     * 获取<p>Safe information.</p>
+                     * @return VaultInfos <p>Safe information.</p>
                      * 
                      */
                     std::vector<VaultInfo> GetVaultInfos() const;
 
                     /**
-                     * 设置Safe info
-                     * @param _vaultInfos Safe info
+                     * 设置<p>Safe information.</p>
+                     * @param _vaultInfos <p>Safe information.</p>
                      * 
                      */
                     void SetVaultInfos(const std::vector<VaultInfo>& _vaultInfos);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool VaultInfosHasBeenSet() const;
 
                     /**
-                     * 获取Backup delivery status
-                     * @return CopyStatus Backup delivery status
+                     * 获取<p>Backup delivery status</p>
+                     * @return CopyStatus <p>Backup delivery status</p>
                      * 
                      */
                     std::string GetCopyStatus() const;
 
                     /**
-                     * 设置Backup delivery status
-                     * @param _copyStatus Backup delivery status
+                     * 设置<p>Backup delivery status</p>
+                     * @param _copyStatus <p>Backup delivery status</p>
                      * 
                      */
                     void SetCopyStatus(const std::string& _copyStatus);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool CopyStatusHasBeenSet() const;
 
                     /**
-                     * 获取Encryption key
-                     * @return EncryptKeyId Encryption key
+                     * 获取<p>Encryption key.</p>
+                     * @return EncryptKeyId <p>Encryption key.</p>
                      * 
                      */
                     std::string GetEncryptKeyId() const;
 
                     /**
-                     * 设置Encryption key
-                     * @param _encryptKeyId Encryption key
+                     * 设置<p>Encryption key.</p>
+                     * @param _encryptKeyId <p>Encryption key.</p>
                      * 
                      */
                     void SetEncryptKeyId(const std::string& _encryptKeyId);
@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool EncryptKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Key region for encryption
-                     * @return EncryptRegion Key region for encryption
+                     * 获取<p>Encryption key region</p>
+                     * @return EncryptRegion <p>Encryption key region</p>
                      * 
                      */
                     std::string GetEncryptRegion() const;
 
                     /**
-                     * 设置Key region for encryption
-                     * @param _encryptRegion Key region for encryption
+                     * 设置<p>Encryption key region</p>
+                     * @param _encryptRegion <p>Encryption key region</p>
                      * 
                      */
                     void SetEncryptRegion(const std::string& _encryptRegion);
@@ -303,73 +303,73 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filename.
+                     * <p>File name.</p>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * File size
+                     * <p>File size</p>
                      */
                     int64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * Backup time
+                     * <p>Backup time</p>
                      */
                     std::string m_backupTime;
                     bool m_backupTimeHasBeenSet;
 
                     /**
-                     * redoLogId
+                     * <p>redoLogId</p>
                      */
                     int64_t m_redoLogId;
                     bool m_redoLogIdHasBeenSet;
 
                     /**
-                     * Cross-Region information.
+                     * <p>Cross-regional information</p>
                      */
                     std::vector<BackupRegionAndIds> m_redoCrossRegions;
                     bool m_redoCrossRegionsHasBeenSet;
 
                     /**
-                     * Status.
+                     * <p>Status.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Start time.
+                     * <p>Start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Completion time.
+                     * <p>Completion time</p>
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Safe info
+                     * <p>Safe information.</p>
                      */
                     std::vector<VaultInfo> m_vaultInfos;
                     bool m_vaultInfosHasBeenSet;
 
                     /**
-                     * Backup delivery status
+                     * <p>Backup delivery status</p>
                      */
                     std::string m_copyStatus;
                     bool m_copyStatusHasBeenSet;
 
                     /**
-                     * Encryption key
+                     * <p>Encryption key.</p>
                      */
                     std::string m_encryptKeyId;
                     bool m_encryptKeyIdHasBeenSet;
 
                     /**
-                     * Key region for encryption
+                     * <p>Encryption key region</p>
                      */
                     std::string m_encryptRegion;
                     bool m_encryptRegionHasBeenSet;

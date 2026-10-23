@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of an audit rule template
+                * Details of an audit rule template.
                 */
                 class AuditRuleTemplateInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule template ID
-                     * @return RuleTemplateId Rule template ID
+                     * 获取Rule template ID.
+                     * @return RuleTemplateId Rule template ID.
                      * 
                      */
                     std::string GetRuleTemplateId() const;
 
                     /**
-                     * 设置Rule template ID
-                     * @param _ruleTemplateId Rule template ID
+                     * 设置Rule template ID.
+                     * @param _ruleTemplateId Rule template ID.
                      * 
                      */
                     void SetRuleTemplateId(const std::string& _ruleTemplateId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RuleTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule template name
-                     * @return RuleTemplateName Rule template name
+                     * 获取Rule template name.
+                     * @return RuleTemplateName Rule template name.
                      * 
                      */
                     std::string GetRuleTemplateName() const;
 
                     /**
-                     * 设置Rule template name
-                     * @param _ruleTemplateName Rule template name
+                     * 设置Rule template name.
+                     * @param _ruleTemplateName Rule template name.
                      * 
                      */
                     void SetRuleTemplateName(const std::string& _ruleTemplateName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RuleTemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Filter of the rule template
-                     * @return RuleFilters Filter of the rule template
+                     * 获取Filter criteria of the rule template
+                     * @return RuleFilters Filter criteria of the rule template
                      * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
-                     * 设置Filter of the rule template
-                     * @param _ruleFilters Filter of the rule template
+                     * 设置Filter criteria of the rule template
+                     * @param _ruleFilters Filter criteria of the rule template
                      * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of a rule template
-                     * @return CreateAt Creation time of a rule template
+                     * 获取Rule template creation time.
+                     * @return CreateAt Rule template creation time.
                      * 
                      */
                     std::string GetCreateAt() const;
 
                     /**
-                     * 设置Creation time of a rule template
-                     * @param _createAt Creation time of a rule template
+                     * 设置Rule template creation time.
+                     * @param _createAt Rule template creation time.
                      * 
                      */
                     void SetCreateAt(const std::string& _createAt);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool UpdateAtHasBeenSet() const;
 
                     /**
-                     * 获取Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-                     * @return AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * 获取Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-                     * @param _alarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * 设置Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @param _alarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy. 0 - no alert, 1 - alert.
-                     * @return AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+                     * 获取Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      * 
                      */
                     uint64_t GetAlarmPolicy() const;
 
                     /**
-                     * 设置Alarm policy. 0 - no alert, 1 - alert.
-                     * @param _alarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+                     * 设置Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @param _alarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      * 
                      */
                     void SetAlarmPolicy(const uint64_t& _alarmPolicy);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool AlarmPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Template status. 0 - no task, 1 - modifying.
-                     * @return Status Template status. 0 - no task, 1 - modifying.
+                     * 获取Template status. Valid values: 0 - No task, 1 - modifying.
+                     * @return Status Template status. Valid values: 0 - No task, 1 - modifying.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Template status. 0 - no task, 1 - modifying.
-                     * @param _status Template status. 0 - no task, 1 - modifying.
+                     * 设置Template status. Valid values: 0 - No task, 1 - modifying.
+                     * @param _status Template status. Valid values: 0 - No task, 1 - modifying.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Template application is used in which instances.
-                     * @return AffectedInstances Template application is used in which instances.
+                     * 获取Instances to which this rule template is applied.
+                     * @return AffectedInstances Instances to which this rule template is applied.
                      * 
                      */
                     std::vector<std::string> GetAffectedInstances() const;
 
                     /**
-                     * 设置Template application is used in which instances.
-                     * @param _affectedInstances Template application is used in which instances.
+                     * 设置Instances to which this rule template is applied.
+                     * @param _affectedInstances Instances to which this rule template is applied.
                      * 
                      */
                     void SetAffectedInstances(const std::vector<std::string>& _affectedInstances);
@@ -260,19 +260,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule template ID
+                     * Rule template ID.
                      */
                     std::string m_ruleTemplateId;
                     bool m_ruleTemplateIdHasBeenSet;
 
                     /**
-                     * Rule template name
+                     * Rule template name.
                      */
                     std::string m_ruleTemplateName;
                     bool m_ruleTemplateNameHasBeenSet;
 
                     /**
-                     * Filter of the rule template
+                     * Filter criteria of the rule template
                      */
                     std::vector<RuleFilters> m_ruleFilters;
                     bool m_ruleFiltersHasBeenSet;
@@ -284,7 +284,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Creation time of a rule template
+                     * Rule template creation time.
                      */
                     std::string m_createAt;
                     bool m_createAtHasBeenSet;
@@ -296,25 +296,25 @@ namespace TencentCloud
                     bool m_updateAtHasBeenSet;
 
                     /**
-                     * Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Alarm policy. 0 - no alert, 1 - alert.
+                     * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      */
                     uint64_t m_alarmPolicy;
                     bool m_alarmPolicyHasBeenSet;
 
                     /**
-                     * Template status. 0 - no task, 1 - modifying.
+                     * Template status. Valid values: 0 - No task, 1 - modifying.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Template application is used in which instances.
+                     * Instances to which this rule template is applied.
                      */
                     std::vector<std::string> m_affectedInstances;
                     bool m_affectedInstancesHasBeenSet;

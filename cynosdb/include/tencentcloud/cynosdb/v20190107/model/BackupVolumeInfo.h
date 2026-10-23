@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Backup Usage Info
+                * Backup usage information
                 */
                 class BackupVolumeInfo : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup method
-                     * @return BackupMethod Backup method
+                     * 获取Backup method.
+                     * @return BackupMethod Backup method.
                      * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置Backup method
-                     * @param _backupMethod Backup method
+                     * 设置Backup method.
+                     * @param _backupMethod Backup method.
                      * 
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup method
+                     * Backup method.
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return Vport Port
+                     * 获取Port.
+                     * @return Vport Port.
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Port
-                     * @param _vport Port
+                     * 设置Port.
+                     * @param _vport Port.
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Expect recycle time.
-                     * @return ReturnTime Expect recycle time.
+                     * 获取Expected recycle time
+                     * @return ReturnTime Expected recycle time
                      * 
                      */
                     std::string GetReturnTime() const;
 
                     /**
-                     * 设置Expect recycle time.
-                     * @param _returnTime Expect recycle time.
+                     * 设置Expected recycle time
+                     * @param _returnTime Expected recycle time
                      * 
                      */
                     void SetReturnTime(const std::string& _returnTime);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Port
+                     * Port.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Expect recycle time.
+                     * Expected recycle time
                      */
                     std::string m_returnTime;
                     bool m_returnTimeHasBeenSet;

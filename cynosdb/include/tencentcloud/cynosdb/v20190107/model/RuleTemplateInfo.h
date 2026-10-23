@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RuleTemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取The rule content.
-                     * @return RuleFilters The rule content.
+                     * 获取Rule content.
+                     * @return RuleFilters Rule content.
                      * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
-                     * 设置The rule content.
-                     * @param _ruleFilters The rule content.
+                     * 设置Rule content.
+                     * @param _ruleFilters Rule content.
                      * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RuleFiltersHasBeenSet() const;
 
                     /**
-                     * 获取Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-                     * @return AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * 获取Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     int64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-                     * @param _alarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * 设置Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @param _alarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     void SetAlarmLevel(const int64_t& _alarmLevel);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy. 0 - no alert, 1 - alert.
-                     * @return AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+                     * 获取Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      * 
                      */
                     int64_t GetAlarmPolicy() const;
 
                     /**
-                     * 设置Alarm policy. 0 - no alert, 1 - alert.
-                     * @param _alarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+                     * 设置Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+                     * @param _alarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      * 
                      */
                     void SetAlarmPolicy(const int64_t& _alarmPolicy);
@@ -188,19 +188,19 @@ namespace TencentCloud
                     bool m_ruleTemplateNameHasBeenSet;
 
                     /**
-                     * The rule content.
+                     * Rule content.
                      */
                     std::vector<RuleFilters> m_ruleFilters;
                     bool m_ruleFiltersHasBeenSet;
 
                     /**
-                     * Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      */
                     int64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Alarm policy. 0 - no alert, 1 - alert.
+                     * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
                      */
                     int64_t m_alarmPolicy;
                     bool m_alarmPolicyHasBeenSet;

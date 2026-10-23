@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Execution start time (seconds from 0 o'clock).
-                     * @return MaintainStartTime Execution start time (seconds from 0 o'clock).
+                     * 获取Execution start time (seconds from 00:00:00)
+                     * @return MaintainStartTime Execution start time (seconds from 00:00:00)
                      * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
-                     * 设置Execution start time (seconds from 0 o'clock).
-                     * @param _maintainStartTime Execution start time (seconds from 0 o'clock).
+                     * 设置Execution start time (seconds from 00:00:00)
+                     * @param _maintainStartTime Execution start time (seconds from 00:00:00)
                      * 
                      */
                     void SetMaintainStartTime(const int64_t& _maintainStartTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaintainStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the continuous time. the unit is second.
-                     * @return MaintainDuration Specifies the continuous time. the unit is second.
+                     * 获取Continuous time (unit: second)
+                     * @return MaintainDuration Continuous time (unit: second)
                      * 
                      */
                     int64_t GetMaintainDuration() const;
 
                     /**
-                     * 设置Specifies the continuous time. the unit is second.
-                     * @param _maintainDuration Specifies the continuous time. the unit is second.
+                     * 设置Continuous time (unit: second)
+                     * @param _maintainDuration Continuous time (unit: second)
                      * 
                      */
                     void SetMaintainDuration(const int64_t& _maintainDuration);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MaintainDurationHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-                     * @return MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * 获取The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+                     * @return MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
-                     * 设置Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-                     * @param _maintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * 设置The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+                     * @param _maintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
                      * 
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Execution start time (seconds from 0 o'clock).
+                     * Execution start time (seconds from 00:00:00)
                      */
                     int64_t m_maintainStartTime;
                     bool m_maintainStartTimeHasBeenSet;
 
                     /**
-                     * Specifies the continuous time. the unit is second.
+                     * Continuous time (unit: second)
                      */
                     int64_t m_maintainDuration;
                     bool m_maintainDurationHasBeenSet;
 
                     /**
-                     * Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;

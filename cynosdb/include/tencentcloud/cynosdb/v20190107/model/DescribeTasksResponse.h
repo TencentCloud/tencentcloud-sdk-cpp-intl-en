@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries in the task list.
-                     * @return TotalCount Total number of entries in the task list.
+                     * 获取Total number of items in the task list
+                     * @return TotalCount Total number of items in the task list
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Task list.
-                     * @return TaskList Task list.
+                     * 获取Task list
+                     * @return TaskList Task list
                      * 
                      */
                     std::vector<BizTaskInfo> GetTaskList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries in the task list.
+                     * Total number of items in the task list
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Task list.
+                     * Task list
                      */
                     std::vector<BizTaskInfo> m_taskList;
                     bool m_taskListHasBeenSet;

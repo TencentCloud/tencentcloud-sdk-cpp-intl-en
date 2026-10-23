@@ -83,19 +83,15 @@ namespace TencentCloud
                     bool FullURLCacheHasBeenSet() const;
 
                     /**
-                     * 获取Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return QueryString Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+                     * @return QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
                      * 
                      */
                     CacheKeyQueryString GetQueryString() const;
 
                     /**
-                     * 设置Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _queryString Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+                     * @param _queryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
                      * 
                      */
                     void SetQueryString(const CacheKeyQueryString& _queryString);
@@ -141,19 +137,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool IgnoreCaseHasBeenSet() const;
 
                     /**
-                     * 获取HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Header HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @return Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     CacheKeyHeader GetHeader() const;
 
                     /**
-                     * 设置HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _header HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @param _header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     void SetHeader(const CacheKeyHeader& _header);
@@ -199,19 +191,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Cookie Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @return Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     CacheKeyCookie GetCookie() const;
 
                     /**
-                     * 设置Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cookie Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @param _cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     void SetCookie(const CacheKeyCookie& _cookie);
@@ -235,8 +223,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_fullURLCacheHasBeenSet;
 
                     /**
-                     * Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
                      */
                     CacheKeyQueryString m_queryString;
                     bool m_queryStringHasBeenSet;
@@ -251,8 +238,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_ignoreCaseHasBeenSet;
 
                     /**
-                     * HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      */
                     CacheKeyHeader m_header;
                     bool m_headerHasBeenSet;
@@ -267,8 +253,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      */
                     CacheKeyCookie m_cookie;
                     bool m_cookieHasBeenSet;

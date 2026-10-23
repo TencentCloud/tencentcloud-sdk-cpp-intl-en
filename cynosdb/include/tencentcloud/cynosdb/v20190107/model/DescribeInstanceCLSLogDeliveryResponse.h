@@ -46,7 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Total number.
+
                      * @return TotalCount Total number.
+
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +61,10 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance shipping information.
-                     * @return InstanceCLSDeliveryInfos Instance shipping information.
+                     * 获取Instance Delivery Information
+
+                     * @return InstanceCLSDeliveryInfos Instance Delivery Information
+
                      * 
                      */
                     std::vector<InstanceCLSDeliveryInfo> GetInstanceCLSDeliveryInfos() const;
@@ -76,12 +80,14 @@ namespace TencentCloud
 
                     /**
                      * Total number.
+
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Instance shipping information.
+                     * Instance Delivery Information
+
                      */
                     std::vector<InstanceCLSDeliveryInfo> m_instanceCLSDeliveryInfos;
                     bool m_instanceCLSDeliveryInfosHasBeenSet;

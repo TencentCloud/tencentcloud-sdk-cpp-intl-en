@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Safe ID, length must be greater than 0
-                     * @return VaultId Safe ID, length must be greater than 0
+                     * 获取Safe ID. Its length must be greater than 0.
+                     * @return VaultId Safe ID. Its length must be greater than 0.
                      * 
                      */
                     std::string GetVaultId() const;
 
                     /**
-                     * 设置Safe ID, length must be greater than 0
-                     * @param _vaultId Safe ID, length must be greater than 0
+                     * 设置Safe ID. Its length must be greater than 0.
+                     * @param _vaultId Safe ID. Its length must be greater than 0.
                      * 
                      */
                     void SetVaultId(const std::string& _vaultId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup file ID list for filtering specific backups
-                     * @return BackupIds Backup file ID list for filtering specific backups
+                     * 获取List of the backup file IDs for filtering specific backups.
+                     * @return BackupIds List of the backup file IDs for filtering specific backups.
                      * 
                      */
                     std::vector<int64_t> GetBackupIds() const;
 
                     /**
-                     * 设置Backup file ID list for filtering specific backups
-                     * @param _backupIds Backup file ID list for filtering specific backups
+                     * 设置List of the backup file IDs for filtering specific backups.
+                     * @param _backupIds List of the backup file IDs for filtering specific backups.
                      * 
                      */
                     void SetBackupIds(const std::vector<int64_t>& _backupIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BackupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID for filtering backups of a specific cluster
-                     * @return ClusterId Cluster ID for filtering backups of a specific cluster
+                     * 获取Cluster ID, for filtering backups of a specific cluster
+                     * @return ClusterId Cluster ID, for filtering backups of a specific cluster
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID for filtering backups of a specific cluster
-                     * @param _clusterId Cluster ID for filtering backups of a specific cluster
+                     * 设置Cluster ID, for filtering backups of a specific cluster
+                     * @param _clusterId Cluster ID, for filtering backups of a specific cluster
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup name list for exact matching filter criteria
-                     * @return BackupNames Backup name list for exact matching filter criteria
+                     * 获取List of backup names for exact matching filter criteria
+                     * @return BackupNames List of backup names for exact matching filter criteria
                      * 
                      */
                     std::vector<std::string> GetBackupNames() const;
 
                     /**
-                     * 设置Backup name list for exact matching filter criteria
-                     * @param _backupNames Backup name list for exact matching filter criteria
+                     * 设置List of backup names for exact matching filter criteria
+                     * @param _backupNames List of backup names for exact matching filter criteria
                      * 
                      */
                     void SetBackupNames(const std::vector<std::string>& _backupNames);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BackupNamesHasBeenSet() const;
 
                     /**
-                     * 获取Filename list for exact matching filter
-                     * @return FileNames Filename list for exact matching filter
+                     * 获取Filename list for exact matching filter criteria
+                     * @return FileNames Filename list for exact matching filter criteria
                      * 
                      */
                     std::vector<std::string> GetFileNames() const;
 
                     /**
-                     * 设置Filename list for exact matching filter
-                     * @param _fileNames Filename list for exact matching filter
+                     * 设置Filename list for exact matching filter criteria
+                     * @param _fileNames Filename list for exact matching filter criteria
                      * 
                      */
                     void SetFileNames(const std::vector<std::string>& _fileNames);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool FileNamesHasBeenSet() const;
 
                     /**
-                     * 获取Number of pages, range (0,100], default 100
-                     * @return Limit Number of pages, range (0,100], default 100
+                     * 获取Pagination quantity. Value range: (0, 100]. Default value: 100.
+                     * @return Limit Pagination quantity. Value range: (0, 100]. Default value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of pages, range (0,100], default 100
-                     * @param _limit Number of pages, range (0,100], default 100
+                     * 设置Pagination quantity. Value range: (0, 100]. Default value: 100.
+                     * @param _limit Pagination quantity. Value range: (0, 100]. Default value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Range: [0, INF). Default is 0.
-                     * @return Offset Pagination offset. Range: [0, INF). Default is 0.
+                     * 获取Pagination offset. Value range: [0, INF). Default value: 0.
+                     * @return Offset Pagination offset. Value range: [0, INF). Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Range: [0, INF). Default is 0.
-                     * @param _offset Pagination offset. Range: [0, INF). Default is 0.
+                     * 设置Pagination offset. Value range: [0, INF). Default value: 0.
+                     * @param _offset Pagination offset. Value range: [0, INF). Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
-                     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+                     * 获取Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+                     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
-                     * @param _orderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+                     * 设置Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+                     * @param _orderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method, available values: desc, asc, DESC, ASC, default desc
-                     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+                     * 获取Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+                     * @return OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting method, available values: desc, asc, DESC, ASC, default desc
-                     * @param _orderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+                     * 设置Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+                     * @param _orderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -255,55 +255,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Safe ID, length must be greater than 0
+                     * Safe ID. Its length must be greater than 0.
                      */
                     std::string m_vaultId;
                     bool m_vaultIdHasBeenSet;
 
                     /**
-                     * Backup file ID list for filtering specific backups
+                     * List of the backup file IDs for filtering specific backups.
                      */
                     std::vector<int64_t> m_backupIds;
                     bool m_backupIdsHasBeenSet;
 
                     /**
-                     * Cluster ID for filtering backups of a specific cluster
+                     * Cluster ID, for filtering backups of a specific cluster
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Backup name list for exact matching filter criteria
+                     * List of backup names for exact matching filter criteria
                      */
                     std::vector<std::string> m_backupNames;
                     bool m_backupNamesHasBeenSet;
 
                     /**
-                     * Filename list for exact matching filter
+                     * Filename list for exact matching filter criteria
                      */
                     std::vector<std::string> m_fileNames;
                     bool m_fileNamesHasBeenSet;
 
                     /**
-                     * Number of pages, range (0,100], default 100
+                     * Pagination quantity. Value range: (0, 100]. Default value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset. Range: [0, INF). Default is 0.
+                     * Pagination offset. Value range: [0, INF). Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+                     * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method, available values: desc, asc, DESC, ASC, default desc
+                     * Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

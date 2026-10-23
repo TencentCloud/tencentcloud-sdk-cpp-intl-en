@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Version tag
-                     * @return Tag Version tag
+                     * 获取Version tag.
+                     * @return Tag Version tag.
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Version tag
-                     * @param _tag Version tag
+                     * 设置Version tag.
+                     * @param _tag Version tag.
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Can be used this version
-                     * @return HasPermission Can be used this version
+                     * 获取Whether this version can be used
+                     * @return HasPermission Whether this version can be used
                      * 
                      */
                     bool GetHasPermission() const;
 
                     /**
-                     * 设置Can be used this version
-                     * @param _hasPermission Can be used this version
+                     * 设置Whether this version can be used
+                     * @param _hasPermission Whether this version can be used
                      * 
                      */
                     void SetHasPermission(const bool& _hasPermission);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Version tag
+                     * Version tag.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Can be used this version
+                     * Whether this version can be used
                      */
                     bool m_hasPermission;
                     bool m_hasPermissionHasBeenSet;

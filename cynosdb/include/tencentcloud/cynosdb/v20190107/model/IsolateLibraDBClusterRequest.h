@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool IsolateReasonTypesHasBeenSet() const;
 
                     /**
-                     * 获取Cause of isolation
-                     * @return IsolateReason Cause of isolation
+                     * 获取Isolation reason
+                     * @return IsolateReason Isolation reason
                      * 
                      */
                     std::string GetIsolateReason() const;
 
                     /**
-                     * 设置Cause of isolation
-                     * @param _isolateReason Cause of isolation
+                     * 设置Isolation reason
+                     * @param _isolateReason Isolation reason
                      * 
                      */
                     void SetIsolateReason(const std::string& _isolateReason);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_isolateReasonTypesHasBeenSet;
 
                     /**
-                     * Cause of isolation
+                     * Isolation reason
                      */
                     std::string m_isolateReason;
                     bool m_isolateReasonHasBeenSet;

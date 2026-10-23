@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance price.
-                     * @return InstancePrice Instance price.
+                     * 获取Instance price
+                     * @return InstancePrice Instance price
                      * 
                      */
                     TradePrice GetInstancePrice() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool InstancePriceHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage price.
-                     * @return StoragePrice Specifies the storage price.
+                     * 获取Storage price
+                     * @return StoragePrice Storage price
                      * 
                      */
                     TradePrice GetStoragePrice() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance price.
+                     * Instance price
                      */
                     TradePrice m_instancePrice;
                     bool m_instancePriceHasBeenSet;
 
                     /**
-                     * Specifies the storage price.
+                     * Storage price
                      */
                     TradePrice m_storagePrice;
                     bool m_storagePriceHasBeenSet;

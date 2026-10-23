@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the Binlog configuration message.
-                     * @return BinlogConfig Specifies the Binlog configuration message.
+                     * 获取Binlog configuration message
+                     * @return BinlogConfig Binlog configuration message
                      * 
                      */
                     BinlogConfigInfo GetBinlogConfig() const;
 
                     /**
-                     * 设置Specifies the Binlog configuration message.
-                     * @param _binlogConfig Specifies the Binlog configuration message.
+                     * 设置Binlog configuration message
+                     * @param _binlogConfig Binlog configuration message
                      * 
                      */
                     void SetBinlogConfig(const BinlogConfigInfo& _binlogConfig);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Specifies the Binlog configuration message.
+                     * Binlog configuration message
                      */
                     BinlogConfigInfo m_binlogConfig;
                     bool m_binlogConfigHasBeenSet;

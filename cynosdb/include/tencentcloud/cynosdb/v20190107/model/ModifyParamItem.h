@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the modified instance parameter
+                * Modified instance parameter information
                 */
                 class ModifyParamItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Old parameter value (useful only in output parameters).
-                     * @return OldValue Old parameter value (useful only in output parameters).
+                     * 获取Old parameter value (only useful for output parameters)
+                     * @return OldValue Old parameter value (only useful for output parameters)
                      * 
                      */
                     std::string GetOldValue() const;
 
                     /**
-                     * 设置Old parameter value (useful only in output parameters).
-                     * @param _oldValue Old parameter value (useful only in output parameters).
+                     * 设置Old parameter value (only useful for output parameters)
+                     * @param _oldValue Old parameter value (only useful for output parameters)
                      * 
                      */
                     void SetOldValue(const std::string& _oldValue);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OldValueHasBeenSet() const;
 
                     /**
-                     * 获取libra component type.
-                     * @return Component libra component type.
+                     * 获取libra component type
+                     * @return Component libra component type
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置libra component type.
-                     * @param _component libra component type.
+                     * 设置libra component type
+                     * @param _component libra component type
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Old parameter value (useful only in output parameters).
+                     * Old parameter value (only useful for output parameters)
                      */
                     std::string m_oldValue;
                     bool m_oldValueHasBeenSet;
 
                     /**
-                     * libra component type.
+                     * libra component type
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;

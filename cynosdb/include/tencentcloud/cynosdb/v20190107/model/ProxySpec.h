@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Database proxy specifications
+                * Database proxy specification
                 */
                 class ProxySpec : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of database proxy CPU cores
-                     * @return Cpu Number of database proxy CPU cores
+                     * 获取Number of cpu cores for the database proxy
+                     * @return Cpu Number of cpu cores for the database proxy
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of database proxy CPU cores
-                     * @param _cpu Number of database proxy CPU cores
+                     * 设置Number of cpu cores for the database proxy
+                     * @param _cpu Number of cpu cores for the database proxy
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of database proxy CPU cores
+                     * Number of cpu cores for the database proxy
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;

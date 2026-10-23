@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Safe ID list for precise filtering
-                     * @return VaultIds Safe ID list for precise filtering
+                     * 获取List of safe IDs for precise filtering
+                     * @return VaultIds List of safe IDs for precise filtering
                      * 
                      */
                     std::vector<std::string> GetVaultIds() const;
 
                     /**
-                     * 设置Safe ID list for precise filtering
-                     * @param _vaultIds Safe ID list for precise filtering
+                     * 设置List of safe IDs for precise filtering
+                     * @param _vaultIds List of safe IDs for precise filtering
                      * 
                      */
                     void SetVaultIds(const std::vector<std::string>& _vaultIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VaultIdsHasBeenSet() const;
 
                     /**
-                     * 获取Safe name, used for fuzzy filtering
-                     * @return VaultName Safe name, used for fuzzy filtering
+                     * 获取Safe name, used for blurry filtering
+                     * @return VaultName Safe name, used for blurry filtering
                      * 
                      */
                     std::string GetVaultName() const;
 
                     /**
-                     * 设置Safe name, used for fuzzy filtering
-                     * @param _vaultName Safe name, used for fuzzy filtering
+                     * 设置Safe name, used for blurry filtering
+                     * @param _vaultName Safe name, used for blurry filtering
                      * 
                      */
                     void SetVaultName(const std::string& _vaultName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VaultNameHasBeenSet() const;
 
                     /**
-                     * 获取Status list of safe for filtering
-                     * @return Status Status list of safe for filtering
+                     * 获取Safe status list for filtering
+                     * @return Status Safe status list for filtering
                      * 
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
-                     * 设置Status list of safe for filtering
-                     * @param _status Status list of safe for filtering
+                     * 设置Safe status list for filtering
+                     * @param _status Safe status list for filtering
                      * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Number of items per page, range (0,100], default 100
-                     * @return Limit Number of items per page, range (0,100], default 100
+                     * 获取Number of items per page. Value range: (0,100]. Default: 100
+                     * @return Limit Number of items per page. Value range: (0,100]. Default: 100
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items per page, range (0,100], default 100
-                     * @param _limit Number of items per page, range (0,100], default 100
+                     * 设置Number of items per page. Value range: (0,100]. Default: 100
+                     * @param _limit Number of items per page. Value range: (0,100]. Default: 100
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Range: [0,+∞). Default is 0
-                     * @return Offset Offset. Range: [0,+∞). Default is 0
+                     * 获取Offset. Value range: [0, +∞). Default: 0
+                     * @return Offset Offset. Value range: [0, +∞). Default: 0
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Range: [0,+∞). Default is 0
-                     * @param _offset Offset. Range: [0,+∞). Default is 0
+                     * 设置Offset. Value range: [0, +∞). Default: 0
+                     * @param _offset Offset. Value range: [0, +∞). Default: 0
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method, available values: desc, asc, DESC, ASC
-                     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC
+                     * 获取Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
+                     * @return OrderByType Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting method, available values: desc, asc, DESC, ASC
-                     * @param _orderByType Sorting method, available values: desc, asc, DESC, ASC
+                     * 设置Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
+                     * @param _orderByType Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -192,31 +192,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Safe ID list for precise filtering
+                     * List of safe IDs for precise filtering
                      */
                     std::vector<std::string> m_vaultIds;
                     bool m_vaultIdsHasBeenSet;
 
                     /**
-                     * Safe name, used for fuzzy filtering
+                     * Safe name, used for blurry filtering
                      */
                     std::string m_vaultName;
                     bool m_vaultNameHasBeenSet;
 
                     /**
-                     * Status list of safe for filtering
+                     * Safe status list for filtering
                      */
                     std::vector<std::string> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Number of items per page, range (0,100], default 100
+                     * Number of items per page. Value range: (0,100]. Default: 100
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Range: [0,+∞). Default is 0
+                     * Offset. Value range: [0, +∞). Default: 0
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method, available values: desc, asc, DESC, ASC
+                     * Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of instance parameters
-                     * @return ParamsItems List of instance parameters
+                     * 获取Instance parameter list
+                     * @return ParamsItems Instance parameter list
                      * 
                      */
                     std::vector<ParamItemDetail> GetParamsItems() const;
 
                     /**
-                     * 设置List of instance parameters
-                     * @param _paramsItems List of instance parameters
+                     * 设置Instance parameter list
+                     * @param _paramsItems Instance parameter list
                      * 
                      */
                     void SetParamsItems(const std::vector<ParamItemDetail>& _paramsItems);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * List of instance parameters
+                     * Instance parameter list
                      */
                     std::vector<ParamItemDetail> m_paramsItems;
                     bool m_paramsItemsHasBeenSet;

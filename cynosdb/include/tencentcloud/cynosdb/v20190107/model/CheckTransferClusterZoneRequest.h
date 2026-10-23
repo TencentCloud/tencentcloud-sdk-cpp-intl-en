@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source Cluster Id
-                     * @return ClusterId Source Cluster Id
+                     * 获取Source cluster Id
+                     * @return ClusterId Source cluster Id
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Source Cluster Id
-                     * @param _clusterId Source Cluster Id
+                     * 设置Source cluster Id
+                     * @param _clusterId Source cluster Id
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Target availability zone
-                     * @return DstZone Target availability zone
+                     * 获取Target zone
+                     * @return DstZone Target zone
                      * 
                      */
                     std::string GetDstZone() const;
 
                     /**
-                     * 设置Target availability zone
-                     * @param _dstZone Target availability zone
+                     * 设置Target zone
+                     * @param _dstZone Target zone
                      * 
                      */
                     void SetDstZone(const std::string& _dstZone);
@@ -109,13 +109,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source Cluster Id
+                     * Source cluster Id
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Target availability zone
+                     * Target zone
                      */
                     std::string m_dstZone;
                     bool m_dstZoneHasBeenSet;

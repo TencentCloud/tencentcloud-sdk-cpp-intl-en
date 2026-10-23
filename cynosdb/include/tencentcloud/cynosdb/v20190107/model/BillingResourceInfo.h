@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Billable resource information
+                * Billing resource information
                 */
                 class BillingResourceInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID list
-                     * @return InstanceIds Instance ID list
+                     * 获取Instance ID list.
+                     * @return InstanceIds Instance ID list.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list
-                     * @param _instanceIds Instance ID list
+                     * 设置Instance ID list.
+                     * @param _instanceIds Instance ID list.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -118,7 +118,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance ID list
+                     * Instance ID list.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

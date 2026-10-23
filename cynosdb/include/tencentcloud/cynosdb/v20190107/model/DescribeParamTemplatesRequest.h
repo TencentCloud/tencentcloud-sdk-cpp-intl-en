@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database engine version number
-                     * @return EngineVersions Database engine version number
+                     * 获取Database engine version
+                     * @return EngineVersions Database engine version
                      * 
                      */
                     std::vector<std::string> GetEngineVersions() const;
 
                     /**
-                     * 设置Database engine version number
-                     * @param _engineVersions Database engine version number
+                     * 设置Database engine version
+                     * @param _engineVersions Database engine version
                      * 
                      */
                     void SetEngineVersions(const std::vector<std::string>& _engineVersions);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取Template ID
-                     * @return TemplateIds Template ID
+                     * 获取Template ID.
+                     * @return TemplateIds Template ID.
                      * 
                      */
                     std::vector<int64_t> GetTemplateIds() const;
 
                     /**
-                     * 设置Template ID
-                     * @param _templateIds Template ID
+                     * 设置Template ID.
+                     * @param _templateIds Template ID.
                      * 
                      */
                     void SetTemplateIds(const std::vector<int64_t>& _templateIds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TemplateIdsHasBeenSet() const;
 
                     /**
-                     * 获取Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-                     * @return DbModes Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * 获取Database type. Available values: NORMAL, SERVERLESS
+                     * @return DbModes Database type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     std::vector<std::string> GetDbModes() const;
 
                     /**
-                     * 设置Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-                     * @param _dbModes Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * 设置Database type. Available values: NORMAL, SERVERLESS
+                     * @param _dbModes Database type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     void SetDbModes(const std::vector<std::string>& _dbModes);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DbModesHasBeenSet() const;
 
                     /**
-                     * 获取Offset for query
-                     * @return Offset Offset for query
+                     * 获取Query offset
+                     * @return Offset Query offset
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for query
-                     * @param _offset Offset for query
+                     * 设置Query offset
+                     * @param _offset Query offset
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on queries
-                     * @return Limit Limit on queries
+                     * 获取Query limit count
+                     * @return Limit Query limit count
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on queries
-                     * @param _limit Limit on queries
+                     * 设置Query limit count
+                     * @param _limit Query limit count
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Product type of the queried template
-                     * @return Products Product type of the queried template
+                     * 获取Product type corresponding to the queried template.
+                     * @return Products Product type corresponding to the queried template.
                      * 
                      */
                     std::vector<std::string> GetProducts() const;
 
                     /**
-                     * 设置Product type of the queried template
-                     * @param _products Product type of the queried template
+                     * 设置Product type corresponding to the queried template.
+                     * @param _products Product type corresponding to the queried template.
                      * 
                      */
                     void SetProducts(const std::vector<std::string>& _products);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool EngineTypesHasBeenSet() const;
 
                     /**
-                     * 获取The sorting order of the returned results
-                     * @return OrderBy The sorting order of the returned results
+                     * 获取Sorting field of returned results
+                     * @return OrderBy Sorting field of returned results
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置The sorting order of the returned results
-                     * @param _orderBy The sorting order of the returned results
+                     * 设置Sorting field of returned results
+                     * @param _orderBy Sorting field of returned results
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `desc`, `asc `.
-                     * @return OrderDirection Sorting order. Valid values: `desc`, `asc `.
+                     * 获取Sorting method (asc, desc)
+                     * @return OrderDirection Sorting method (asc, desc)
                      * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `desc`, `asc `.
-                     * @param _orderDirection Sorting order. Valid values: `desc`, `asc `.
+                     * 设置Sorting method (asc, desc)
+                     * @param _orderDirection Sorting method (asc, desc)
                      * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
@@ -276,7 +276,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database engine version number
+                     * Database engine version
                      */
                     std::vector<std::string> m_engineVersions;
                     bool m_engineVersionsHasBeenSet;
@@ -288,31 +288,31 @@ namespace TencentCloud
                     bool m_templateNamesHasBeenSet;
 
                     /**
-                     * Template ID
+                     * Template ID.
                      */
                     std::vector<int64_t> m_templateIds;
                     bool m_templateIdsHasBeenSet;
 
                     /**
-                     * Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * Database type. Available values: NORMAL, SERVERLESS
                      */
                     std::vector<std::string> m_dbModes;
                     bool m_dbModesHasBeenSet;
 
                     /**
-                     * Offset for query
+                     * Query offset
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on queries
+                     * Query limit count
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Product type of the queried template
+                     * Product type corresponding to the queried template.
                      */
                     std::vector<std::string> m_products;
                     bool m_productsHasBeenSet;
@@ -330,13 +330,13 @@ namespace TencentCloud
                     bool m_engineTypesHasBeenSet;
 
                     /**
-                     * The sorting order of the returned results
+                     * Sorting field of returned results
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `desc`, `asc `.
+                     * Sorting method (asc, desc)
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;

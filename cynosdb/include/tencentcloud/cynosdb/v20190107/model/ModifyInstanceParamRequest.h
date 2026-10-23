@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceIds Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceIds Instance ID.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceIds Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceIds Instance ID.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster parameters
-                     * @return ClusterParamList List of cluster parameters
+                     * 获取Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+                     * @return ClusterParamList Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
                      * 
                      */
                     std::vector<ModifyParamItem> GetClusterParamList() const;
 
                     /**
-                     * 设置List of cluster parameters
-                     * @param _clusterParamList List of cluster parameters
+                     * 设置Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+                     * @param _clusterParamList Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
                      * 
                      */
                     void SetClusterParamList(const std::vector<ModifyParamItem>& _clusterParamList);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ClusterParamListHasBeenSet() const;
 
                     /**
-                     * 获取List of the instance parameters
-                     * @return InstanceParamList List of the instance parameters
+                     * 获取Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+                     * @return InstanceParamList Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
                      * 
                      */
                     std::vector<ModifyParamItem> GetInstanceParamList() const;
 
                     /**
-                     * 设置List of the instance parameters
-                     * @param _instanceParamList List of the instance parameters
+                     * 设置Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+                     * @param _instanceParamList Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
                      * 
                      */
                     void SetInstanceParamList(const std::vector<ModifyParamItem>& _instanceParamList);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool InstanceParamListHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
-                     * @return IsInMaintainPeriod Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+                     * 获取yes: modify within the Ops time window. no: immediately execute (default value).
+                     * @return IsInMaintainPeriod yes: modify within the Ops time window. no: immediately execute (default value).
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
-                     * @param _isInMaintainPeriod Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+                     * 设置yes: modify within the Ops time window. no: immediately execute (default value).
+                     * @param _isInMaintainPeriod yes: modify within the Ops time window. no: immediately execute (default value).
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -157,25 +157,25 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * List of cluster parameters
+                     * Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
                      */
                     std::vector<ModifyParamItem> m_clusterParamList;
                     bool m_clusterParamListHasBeenSet;
 
                     /**
-                     * List of the instance parameters
+                     * Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
                      */
                     std::vector<ModifyParamItem> m_instanceParamList;
                     bool m_instanceParamListHasBeenSet;
 
                     /**
-                     * Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+                     * yes: modify within the Ops time window. no: immediately execute (default value).
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

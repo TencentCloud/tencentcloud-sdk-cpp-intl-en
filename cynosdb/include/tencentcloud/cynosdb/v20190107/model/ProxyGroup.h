@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Proxy group
+                * proxy group
                 */
                 class ProxyGroup : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Database Proxy Group ID.</p>
-                     * @return ProxyGroupId <p>Database Proxy Group ID.</p>
+                     * 获取<p>Database Proxy Group ID</p>
+                     * @return ProxyGroupId <p>Database Proxy Group ID</p>
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置<p>Database Proxy Group ID.</p>
-                     * @param _proxyGroupId <p>Database Proxy Group ID.</p>
+                     * 设置<p>Database Proxy Group ID</p>
+                     * @param _proxyGroupId <p>Database Proxy Group ID</p>
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Activate database proxy for RWNode</p>
-                     * @return OpenRw <p>Activate database proxy for RWNode</p>
+                     * 获取<p>Activate database proxy on the read-write node</p>
+                     * @return OpenRw <p>Activate database proxy on the read-write node</p>
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
-                     * 设置<p>Activate database proxy for RWNode</p>
-                     * @param _openRw <p>Activate database proxy for RWNode</p>
+                     * 设置<p>Activate database proxy on the read-write node</p>
+                     * @param _openRw <p>Activate database proxy on the read-write node</p>
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -280,7 +280,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Database Proxy Group ID.</p>
+                     * <p>Database Proxy Group ID</p>
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
@@ -328,7 +328,7 @@ namespace TencentCloud
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * <p>Activate database proxy for RWNode</p>
+                     * <p>Activate database proxy on the read-write node</p>
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;

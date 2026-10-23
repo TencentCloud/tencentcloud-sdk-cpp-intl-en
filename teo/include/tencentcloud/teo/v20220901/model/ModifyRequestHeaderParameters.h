@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return HeaderActions List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取HTTP header setting rule list.
+                     * @return HeaderActions HTTP header setting rule list.
                      * 
                      */
                     std::vector<HeaderAction> GetHeaderActions() const;
 
                     /**
-                     * 设置List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _headerActions List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置HTTP header setting rule list.
+                     * @param _headerActions HTTP header setting rule list.
                      * 
                      */
                     void SetHeaderActions(const std::vector<HeaderAction>& _headerActions);
@@ -75,8 +71,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * HTTP header setting rule list.
                      */
                     std::vector<HeaderAction> m_headerActions;
                     bool m_headerActionsHasBeenSet;

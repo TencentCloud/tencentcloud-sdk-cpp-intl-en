@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log items per page limit: 0-200.
-                     * @return Limit Log items per page limit: 0-200.
+                     * 获取Limit on number of log entries per page: 0-200.
+                     * @return Limit Limit on number of log entries per page: 0-200.
                      * 
                      */
                     std::string GetLimit() const;
 
                     /**
-                     * 设置Log items per page limit: 0-200.
-                     * @param _limit Log items per page limit: 0-200.
+                     * 设置Limit on number of log entries per page: 0-200.
+                     * @param _limit Limit on number of log entries per page: 0-200.
                      * 
                      */
                     void SetLimit(const std::string& _limit);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Log paginate, more than 0.
-                     * @return Offset Log paginate, more than 0.
+                     * 获取Log pagination. The value must be greater than 0.
+                     * @return Offset Log pagination. The value must be greater than 0.
                      * 
                      */
                     std::string GetOffset() const;
 
                     /**
-                     * 设置Log paginate, more than 0.
-                     * @param _offset Log paginate, more than 0.
+                     * 设置Log pagination. The value must be greater than 0.
+                     * @param _offset Log pagination. The value must be greater than 0.
                      * 
                      */
                     void SetOffset(const std::string& _offset);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Log sorting method, DESC - descending order, ASC - ascending order.
-                     * @return Order Log sorting method, DESC - descending order, ASC - ascending order.
+                     * 获取Log sorting method. `DESC`: descending order. `ASC`: ascending order.
+                     * @return Order Log sorting method. `DESC`: descending order. `ASC`: ascending order.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Log sorting method, DESC - descending order, ASC - ascending order.
-                     * @param _order Log sorting method, DESC - descending order, ASC - ascending order.
+                     * 设置Log sorting method. `DESC`: descending order. `ASC`: ascending order.
+                     * @param _order Log sorting method. `DESC`: descending order. `ASC`: ascending order.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -232,19 +232,19 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Log items per page limit: 0-200.
+                     * Limit on number of log entries per page: 0-200.
                      */
                     std::string m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Log paginate, more than 0.
+                     * Log pagination. The value must be greater than 0.
                      */
                     std::string m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Log sorting method, DESC - descending order, ASC - ascending order.
+                     * Log sorting method. `DESC`: descending order. `ASC`: ascending order.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

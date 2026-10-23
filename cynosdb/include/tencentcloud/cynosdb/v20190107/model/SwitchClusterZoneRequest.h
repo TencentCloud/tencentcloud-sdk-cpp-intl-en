@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Cluster Id</p>
-                     * @return ClusterId <p>Cluster Id</p>
+                     * 获取<p>Cluster Id.</p>
+                     * @return ClusterId <p>Cluster Id.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置<p>Cluster Id</p>
-                     * @param _clusterId <p>Cluster Id</p>
+                     * 设置<p>Cluster Id.</p>
+                     * @param _clusterId <p>Cluster Id.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NewZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Execute during maintenance period - yes, immediately execute - no</p>
-                     * @return IsInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
+                     * 获取<p>Execute during the maintenance period - yes, immediate execution - no</p>
+                     * @return IsInMaintainPeriod <p>Execute during the maintenance period - yes, immediate execution - no</p>
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置<p>Execute during maintenance period - yes, immediately execute - no</p>
-                     * @param _isInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
+                     * 设置<p>Execute during the maintenance period - yes, immediate execution - no</p>
+                     * @param _isInMaintainPeriod <p>Execute during the maintenance period - yes, immediate execution - no</p>
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Cluster Id</p>
+                     * <p>Cluster Id.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_newZoneHasBeenSet;
 
                     /**
-                     * <p>Execute during maintenance period - yes, immediately execute - no</p>
+                     * <p>Execute during the maintenance period - yes, immediate execution - no</p>
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

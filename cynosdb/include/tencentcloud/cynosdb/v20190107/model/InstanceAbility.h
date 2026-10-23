@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of allowed operations for the instance.
+                * Operation list allowed for the instance
                 */
                 class InstanceAbility : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
-                     * @return IsSupportForceRestart Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+                     * 获取Whether the instance supports forced reboot. Available values: yes: support, no: no support
+                     * @return IsSupportForceRestart Whether the instance supports forced reboot. Available values: yes: support, no: no support
                      * 
                      */
                     std::string GetIsSupportForceRestart() const;
 
                     /**
-                     * 设置Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
-                     * @param _isSupportForceRestart Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+                     * 设置Whether the instance supports forced reboot. Available values: yes: support, no: no support
+                     * @param _isSupportForceRestart Whether the instance supports forced reboot. Available values: yes: support, no: no support
                      * 
                      */
                     void SetIsSupportForceRestart(const std::string& _isSupportForceRestart);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IsSupportForceRestartHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the causes for not supporting forced reboot.
-                     * @return NonsupportForceRestartReason Specifies the causes for not supporting forced reboot.
+                     * 获取The causes for not supporting forced reboot
+                     * @return NonsupportForceRestartReason The causes for not supporting forced reboot
                      * 
                      */
                     std::string GetNonsupportForceRestartReason() const;
 
                     /**
-                     * 设置Specifies the causes for not supporting forced reboot.
-                     * @param _nonsupportForceRestartReason Specifies the causes for not supporting forced reboot.
+                     * 设置The causes for not supporting forced reboot
+                     * @param _nonsupportForceRestartReason The causes for not supporting forced reboot
                      * 
                      */
                     void SetNonsupportForceRestartReason(const std::string& _nonsupportForceRestartReason);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+                     * Whether the instance supports forced reboot. Available values: yes: support, no: no support
                      */
                     std::string m_isSupportForceRestart;
                     bool m_isSupportForceRestartHasBeenSet;
 
                     /**
-                     * Specifies the causes for not supporting forced reboot.
+                     * The causes for not supporting forced reboot
                      */
                     std::string m_nonsupportForceRestartReason;
                     bool m_nonsupportForceRestartReasonHasBeenSet;

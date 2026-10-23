@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
-                     * @return VaultIds List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+                     * 获取List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
+                     * @return VaultIds List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
                      * 
                      */
                     std::vector<std::string> GetVaultIds() const;
 
                     /**
-                     * 设置List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
-                     * @param _vaultIds List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+                     * 设置List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
+                     * @param _vaultIds List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
                      * 
                      */
                     void SetVaultIds(const std::vector<std::string>& _vaultIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+                     * List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
                      */
                     std::vector<std::string> m_vaultIds;
                     bool m_vaultIdsHasBeenSet;

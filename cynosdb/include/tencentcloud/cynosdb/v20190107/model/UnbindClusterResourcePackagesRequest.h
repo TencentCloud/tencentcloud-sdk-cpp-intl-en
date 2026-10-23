@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
-                     * @return PackageIds The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+                     * 获取Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
+                     * @return PackageIds Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
                      * 
                      */
                     std::vector<std::string> GetPackageIds() const;
 
                     /**
-                     * 设置The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
-                     * @param _packageIds The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+                     * 设置Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
+                     * @param _packageIds Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
                      * 
                      */
                     void SetPackageIds(const std::vector<std::string>& _packageIds);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+                     * Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
                      */
                     std::vector<std::string> m_packageIds;
                     bool m_packageIdsHasBeenSet;

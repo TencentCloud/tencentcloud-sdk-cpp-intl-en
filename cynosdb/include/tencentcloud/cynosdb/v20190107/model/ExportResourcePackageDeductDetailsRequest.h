@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource package ID to be exported.
-                     * @return PackageId Resource package ID to be exported.
+                     * 获取Resource package ID to be exported
+                     * @return PackageId Resource package ID to be exported
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置Resource package ID to be exported.
-                     * @param _packageId Resource package ID to be exported.
+                     * 设置Resource package ID to be exported
+                     * @param _packageId Resource package ID to be exported
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
-                     * @return ClusterIds Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
+                     * 获取cynos cluster ID that uses the resource pack capacity
+                     * @return ClusterIds cynos cluster ID that uses the resource pack capacity
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
-                     * @param _clusterIds Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
+                     * 设置cynos cluster ID that uses the resource pack capacity
+                     * @param _clusterIds cynos cluster ID that uses the resource pack capacity
                      * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
-                     * @return OrderBy Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
+                     * 获取Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
+                     * @return OrderBy Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
-                     * @param _orderBy Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
+                     * 设置Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
+                     * @param _orderBy Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting type. supports ASC, DESC, ASC, DESC.
-                     * @return OrderByType Sorting type. supports ASC, DESC, ASC, DESC.
+                     * 获取Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
+                     * @return OrderByType Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting type. supports ASC, DESC, ASC, DESC.
-                     * @param _orderByType Sorting type. supports ASC, DESC, ASC, DESC.
+                     * 设置Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
+                     * @param _orderByType Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
-                     * @return Limit A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
+                     * 获取A maximum of 2000 rows of data can be exported at a time.
+                     * @return Limit A maximum of 2000 rows of data can be exported at a time.
                      * 
                      */
                     std::string GetLimit() const;
 
                     /**
-                     * 设置A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
-                     * @param _limit A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
+                     * 设置A maximum of 2000 rows of data can be exported at a time.
+                     * @param _limit A maximum of 2000 rows of data can be exported at a time.
                      * 
                      */
                     void SetLimit(const std::string& _limit);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset and page number.
-                     * @return Offset Offset and page number.
+                     * 获取Offset and page number
+                     * @return Offset Offset and page number
                      * 
                      */
                     std::string GetOffset() const;
 
                     /**
-                     * 设置Offset and page number.
-                     * @param _offset Offset and page number.
+                     * 设置Offset and page number
+                     * @param _offset Offset and page number
                      * 
                      */
                     void SetOffset(const std::string& _offset);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
-                     * @return FileType Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+                     * 获取Data export format. Currently only csv format is supported. Reserved for extension.
+                     * @return FileType Data export format. Currently only csv format is supported. Reserved for extension.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
-                     * @param _fileType Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+                     * 设置Data export format. Currently only csv format is supported. Reserved for extension.
+                     * @param _fileType Data export format. Currently only csv format is supported. Reserved for extension.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -234,25 +234,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Resource package ID to be exported.
+                     * Resource package ID to be exported
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
+                     * cynos cluster ID that uses the resource pack capacity
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
+                     * Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting type. supports ASC, DESC, ASC, DESC.
+                     * Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
@@ -270,19 +270,19 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
+                     * A maximum of 2000 rows of data can be exported at a time.
                      */
                     std::string m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset and page number.
+                     * Offset and page number
                      */
                     std::string m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+                     * Data export format. Currently only csv format is supported. Reserved for extension.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;

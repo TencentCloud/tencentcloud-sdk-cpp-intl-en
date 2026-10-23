@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of a resource pack
-                     * @return PackageId The unique ID of a resource pack
+                     * 获取Unique ID of the resource package
+                     * @return PackageId Unique ID of the resource package
                      * 
                      */
                     std::vector<std::string> GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack
-                     * @param _packageId The unique ID of a resource pack
+                     * 设置Unique ID of the resource package
+                     * @param _packageId Unique ID of the resource package
                      * 
                      */
                     void SetPackageId(const std::vector<std::string>& _packageId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack name
-                     * @return PackageName Resource pack name
+                     * 获取Resource package name.
+                     * @return PackageName Resource package name.
                      * 
                      */
                     std::vector<std::string> GetPackageName() const;
 
                     /**
-                     * 设置Resource pack name
-                     * @param _packageName Resource pack name
+                     * 设置Resource package name.
+                     * @param _packageName Resource package name.
                      * 
                      */
                     void SetPackageName(const std::vector<std::string>& _packageName);
@@ -85,15 +85,19 @@ namespace TencentCloud
                     bool PackageNameHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-                     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * 获取Resource package type
+CCU: compute resource package. DISK: storage resource package.
+                     * @return PackageType Resource package type
+CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     std::vector<std::string> GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-                     * @param _packageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * 设置Resource package type
+CCU: compute resource package. DISK: storage resource package.
+                     * @param _packageType Resource package type
+CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     void SetPackageType(const std::vector<std::string>& _packageType);
@@ -106,15 +110,19 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-                     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * 获取Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+                     * @return PackageRegion Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
                      * 
                      */
                     std::vector<std::string> GetPackageRegion() const;
 
                     /**
-                     * 设置Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-                     * @param _packageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * 设置Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+                     * @param _packageRegion Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
                      * 
                      */
                     void SetPackageRegion(const std::vector<std::string>& _packageRegion);
@@ -127,15 +135,39 @@ namespace TencentCloud
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
-                     * @return Status Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+                     * 获取Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
+                     * @return Status Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
                      * 
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
-                     * 设置Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
-                     * @param _status Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+                     * 设置Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
+                     * @param _status Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
                      * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
@@ -148,19 +180,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
-                     * @return OrderBy Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+                     * 获取Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
+                     * @return OrderBy Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
                      * 
                      */
                     std::vector<std::string> GetOrderBy() const;
 
                     /**
-                     * 设置Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
-                     * @param _orderBy Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+                     * 设置Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
+                     * @param _orderBy Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
                      * 
                      */
                     void SetOrderBy(const std::vector<std::string>& _orderBy);
@@ -173,15 +209,15 @@ Sorting by array order
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
-                     * @return OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+                     * 获取Sorting method. `DESC`: descending order. `ASC`: ascending order.
+                     * @return OrderDirection Sorting method. `DESC`: descending order. `ASC`: ascending order.
                      * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
-                     * @param _orderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+                     * 设置Sorting method. `DESC`: descending order. `ASC`: ascending order.
+                     * @param _orderDirection Sorting method. `DESC`: descending order. `ASC`: ascending order.
                      * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
@@ -194,15 +230,15 @@ Sorting by array order
                     bool OrderDirectionHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -238,50 +274,59 @@ Sorting by array order
                 private:
 
                     /**
-                     * The unique ID of a resource pack
+                     * Unique ID of the resource package
                      */
                     std::vector<std::string> m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Resource pack name
+                     * Resource package name.
                      */
                     std::vector<std::string> m_packageName;
                     bool m_packageNameHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * Resource package type
+CCU: compute resource package. DISK: storage resource package.
                      */
                     std::vector<std::string> m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
                      */
                     std::vector<std::string> m_packageRegion;
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+                     * Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
                      */
                     std::vector<std::string> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+                     * Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
                      */
                     std::vector<std::string> m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+                     * Sorting method. `DESC`: descending order. `ASC`: ascending order.
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool AccountHasBeenSet() const;
 
                     /**
-                     * 获取Array of table permission codes
-                     * @return DbTablePrivileges Array of table permission codes
+                     * 获取Array of database table permission codes
+                     * @return DbTablePrivileges Array of database table permission codes
                      * 
                      */
                     std::vector<std::string> GetDbTablePrivileges() const;
 
                     /**
-                     * 设置Array of table permission codes
-                     * @param _dbTablePrivileges Array of table permission codes
+                     * 设置Array of database table permission codes
+                     * @param _dbTablePrivileges Array of database table permission codes
                      * 
                      */
                     void SetDbTablePrivileges(const std::vector<std::string>& _dbTablePrivileges);
@@ -143,7 +143,7 @@ namespace TencentCloud
                     bool m_accountHasBeenSet;
 
                     /**
-                     * Array of table permission codes
+                     * Array of database table permission codes
                      */
                     std::vector<std::string> m_dbTablePrivileges;
                     bool m_dbTablePrivilegesHasBeenSet;

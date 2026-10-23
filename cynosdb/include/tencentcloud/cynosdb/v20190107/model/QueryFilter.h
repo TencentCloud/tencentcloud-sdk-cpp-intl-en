@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
-                     * @return Values Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+                     * 获取Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
+                     * @return Values Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
-                     * @param _values Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+                     * 设置Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
+                     * @param _values Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
-                     * @return Names Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+                     * 获取List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
+                     * @return Names List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
-                     * @param _names Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+                     * 设置List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
+                     * @param _names List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
-                     * @return ExactMatch Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+                     * 获取Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
+                     * @return ExactMatch Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
                      * 
                      */
                     bool GetExactMatch() const;
 
                     /**
-                     * 设置Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
-                     * @param _exactMatch Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+                     * 设置Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
+                     * @param _exactMatch Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
                      * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ExactMatchHasBeenSet() const;
 
                     /**
-                     * 获取Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
-                     * @return Name Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+                     * 获取Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
+                     * @return Name Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
-                     * @param _name Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+                     * 设置Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
+                     * @param _name Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -154,25 +154,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+                     * Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+                     * List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+                     * Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
                      */
                     bool m_exactMatch;
                     bool m_exactMatchHasBeenSet;
 
                     /**
-                     * Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+                     * Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

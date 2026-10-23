@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取LibraDB Node ID
-                     * @return NodeId LibraDB Node ID
+                     * 获取LibraDB node ID
+                     * @return NodeId LibraDB node ID
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
-                     * 设置LibraDB Node ID
-                     * @param _nodeId LibraDB Node ID
+                     * 设置LibraDB node ID
+                     * @param _nodeId LibraDB node ID
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取syncing data
-                     * @return DataStatus syncing data
+                     * 获取Syncing data
+                     * @return DataStatus Syncing data
                      * 
                      */
                     std::string GetDataStatus() const;
 
                     /**
-                     * 设置syncing data
-                     * @param _dataStatus syncing data
+                     * 设置Syncing data
+                     * @param _dataStatus Syncing data
                      * 
                      */
                     void SetDataStatus(const std::string& _dataStatus);
@@ -196,7 +196,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * LibraDB Node ID
+                     * LibraDB node ID
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
@@ -208,7 +208,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * syncing data
+                     * Syncing data
                      */
                     std::string m_dataStatus;
                     bool m_dataStatusHasBeenSet;

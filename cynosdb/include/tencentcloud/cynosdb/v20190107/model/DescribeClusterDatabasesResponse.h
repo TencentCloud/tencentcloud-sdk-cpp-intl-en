@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset.
-                     * @return Offset Pagination offset.
+                     * 获取Pagination Offset
+                     * @return Offset Pagination Offset
                      * 
                      */
                     int64_t GetOffset() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool DatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Pagination number limit.
-                     * @return Limit Pagination number limit.
+                     * 获取Pagination limit
+                     * @return Limit Pagination limit
                      * 
                      */
                     int64_t GetLimit() const;
@@ -108,7 +108,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Pagination offset.
+                     * Pagination Offset
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_databasesHasBeenSet;
 
                     /**
-                     * Pagination number limit.
+                     * Pagination limit
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

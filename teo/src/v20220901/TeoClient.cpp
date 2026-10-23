@@ -4090,6 +4090,56 @@ TeoClient::DescribeApplicationProxiesOutcomeCallable TeoClient::DescribeApplicat
     return prom->get_future();
 }
 
+TeoClient::DescribeAvailableCustomActionsForRuleEngineOutcome TeoClient::DescribeAvailableCustomActionsForRuleEngine(const DescribeAvailableCustomActionsForRuleEngineRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAvailableCustomActionsForRuleEngine");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAvailableCustomActionsForRuleEngineResponse rsp = DescribeAvailableCustomActionsForRuleEngineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAvailableCustomActionsForRuleEngineOutcome(rsp);
+        else
+            return DescribeAvailableCustomActionsForRuleEngineOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAvailableCustomActionsForRuleEngineOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeAvailableCustomActionsForRuleEngineAsync(const DescribeAvailableCustomActionsForRuleEngineRequest& request, const DescribeAvailableCustomActionsForRuleEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAvailableCustomActionsForRuleEngineRequest&;
+    using Resp = DescribeAvailableCustomActionsForRuleEngineResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAvailableCustomActionsForRuleEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeAvailableCustomActionsForRuleEngineOutcomeCallable TeoClient::DescribeAvailableCustomActionsForRuleEngineCallable(const DescribeAvailableCustomActionsForRuleEngineRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAvailableCustomActionsForRuleEngineOutcome>>();
+    DescribeAvailableCustomActionsForRuleEngineAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeAvailableCustomActionsForRuleEngineRequest&,
+        DescribeAvailableCustomActionsForRuleEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::DescribeAvailablePlansOutcome TeoClient::DescribeAvailablePlans(const DescribeAvailablePlansRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAvailablePlans");
@@ -5940,6 +5990,106 @@ TeoClient::DescribeLoadBalancerListOutcomeCallable TeoClient::DescribeLoadBalanc
     return prom->get_future();
 }
 
+TeoClient::DescribeLogAnalysisDetailOutcome TeoClient::DescribeLogAnalysisDetail(const DescribeLogAnalysisDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLogAnalysisDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLogAnalysisDetailResponse rsp = DescribeLogAnalysisDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLogAnalysisDetailOutcome(rsp);
+        else
+            return DescribeLogAnalysisDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLogAnalysisDetailOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeLogAnalysisDetailAsync(const DescribeLogAnalysisDetailRequest& request, const DescribeLogAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLogAnalysisDetailRequest&;
+    using Resp = DescribeLogAnalysisDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLogAnalysisDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeLogAnalysisDetailOutcomeCallable TeoClient::DescribeLogAnalysisDetailCallable(const DescribeLogAnalysisDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLogAnalysisDetailOutcome>>();
+    DescribeLogAnalysisDetailAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeLogAnalysisDetailRequest&,
+        DescribeLogAnalysisDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::DescribeLogAnalysisDownloadTasksOutcome TeoClient::DescribeLogAnalysisDownloadTasks(const DescribeLogAnalysisDownloadTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLogAnalysisDownloadTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLogAnalysisDownloadTasksResponse rsp = DescribeLogAnalysisDownloadTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLogAnalysisDownloadTasksOutcome(rsp);
+        else
+            return DescribeLogAnalysisDownloadTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLogAnalysisDownloadTasksOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeLogAnalysisDownloadTasksAsync(const DescribeLogAnalysisDownloadTasksRequest& request, const DescribeLogAnalysisDownloadTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLogAnalysisDownloadTasksRequest&;
+    using Resp = DescribeLogAnalysisDownloadTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLogAnalysisDownloadTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeLogAnalysisDownloadTasksOutcomeCallable TeoClient::DescribeLogAnalysisDownloadTasksCallable(const DescribeLogAnalysisDownloadTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLogAnalysisDownloadTasksOutcome>>();
+    DescribeLogAnalysisDownloadTasksAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeLogAnalysisDownloadTasksRequest&,
+        DescribeLogAnalysisDownloadTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::DescribeMultiPathGatewayOutcome TeoClient::DescribeMultiPathGateway(const DescribeMultiPathGatewayRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMultiPathGateway");
@@ -7782,6 +7932,56 @@ TeoClient::DescribeZoneConfigImportResultOutcomeCallable TeoClient::DescribeZone
         const TeoClient*,
         const DescribeZoneConfigImportResultRequest&,
         DescribeZoneConfigImportResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::DescribeZoneCustomVariablesOutcome TeoClient::DescribeZoneCustomVariables(const DescribeZoneCustomVariablesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeZoneCustomVariables");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeZoneCustomVariablesResponse rsp = DescribeZoneCustomVariablesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeZoneCustomVariablesOutcome(rsp);
+        else
+            return DescribeZoneCustomVariablesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeZoneCustomVariablesOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeZoneCustomVariablesAsync(const DescribeZoneCustomVariablesRequest& request, const DescribeZoneCustomVariablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeZoneCustomVariablesRequest&;
+    using Resp = DescribeZoneCustomVariablesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeZoneCustomVariables", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeZoneCustomVariablesOutcomeCallable TeoClient::DescribeZoneCustomVariablesCallable(const DescribeZoneCustomVariablesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeZoneCustomVariablesOutcome>>();
+    DescribeZoneCustomVariablesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeZoneCustomVariablesRequest&,
+        DescribeZoneCustomVariablesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -10982,6 +11182,56 @@ TeoClient::ModifyZoneOutcomeCallable TeoClient::ModifyZoneCallable(const ModifyZ
         const TeoClient*,
         const ModifyZoneRequest&,
         ModifyZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::ModifyZoneCustomVariablesOutcome TeoClient::ModifyZoneCustomVariables(const ModifyZoneCustomVariablesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyZoneCustomVariables");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyZoneCustomVariablesResponse rsp = ModifyZoneCustomVariablesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyZoneCustomVariablesOutcome(rsp);
+        else
+            return ModifyZoneCustomVariablesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyZoneCustomVariablesOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::ModifyZoneCustomVariablesAsync(const ModifyZoneCustomVariablesRequest& request, const ModifyZoneCustomVariablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyZoneCustomVariablesRequest&;
+    using Resp = ModifyZoneCustomVariablesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyZoneCustomVariables", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::ModifyZoneCustomVariablesOutcomeCallable TeoClient::ModifyZoneCustomVariablesCallable(const ModifyZoneCustomVariablesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyZoneCustomVariablesOutcome>>();
+    ModifyZoneCustomVariablesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyZoneCustomVariablesRequest&,
+        ModifyZoneCustomVariablesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

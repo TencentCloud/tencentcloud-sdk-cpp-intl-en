@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template ID
-                     * @return TemplateId Parameter template ID
+                     * 获取Parameter template ID.
+                     * @return TemplateId Parameter template ID.
                      * 
                      */
                     int64_t GetTemplateId() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Total number of parameters
-                     * @return TotalCount Total number of parameters
+                     * 获取Total number of parameters.
+                     * @return TotalCount Total number of parameters.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of parameters
-                     * @return Items List of parameters
+                     * 获取Parameter list
+                     * @return Items Parameter list
                      * 
                      */
                     std::vector<ParamDetail> GetItems() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool ItemsHasBeenSet() const;
 
                     /**
-                     * 获取Database type. Valid values:  `NORMAL`, `SERVERLESS`.
-                     * @return DbMode Database type. Valid values:  `NORMAL`, `SERVERLESS`.
+                     * 获取Database type. Available values: NORMAL, SERVERLESS
+                     * @return DbMode Database type. Available values: NORMAL, SERVERLESS
                      * 
                      */
                     std::string GetDbMode() const;
@@ -145,7 +145,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template ID
+                     * Parameter template ID.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
@@ -169,19 +169,19 @@ namespace TencentCloud
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Total number of parameters
+                     * Total number of parameters.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of parameters
+                     * Parameter list
                      */
                     std::vector<ParamDetail> m_items;
                     bool m_itemsHasBeenSet;
 
                     /**
-                     * Database type. Valid values:  `NORMAL`, `SERVERLESS`.
+                     * Database type. Available values: NORMAL, SERVERLESS
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
