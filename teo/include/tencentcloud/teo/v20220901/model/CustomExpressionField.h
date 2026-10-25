@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom log fields in a real-time log delivery task are customizable and support value expression configurations. For usage details, see [Custom Log Field Expression]().
+                * Custom log field in a real-time log delivery task. You can define a custom field name and configure a value expression for it. For details, see [Custom Log Field Expressions](https://www.tencentcloud.com/document/product/1145/61302).
                 */
                 class CustomExpressionField : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
-                     * @return Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+                     * 获取<p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
+                     * @return Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
                      * 
                      */
                     std::string GetExpression() const;
 
                     /**
-                     * 设置<p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
-                     * @param _expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+                     * 设置<p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
+                     * @param _expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
                      * 
                      */
                     void SetExpression(const std::string& _expression);
@@ -118,7 +118,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+                     * <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
                      */
                     std::string m_expression;
                     bool m_expressionHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The configuration information of real-time log delivery to Tencent Cloud CLS
+                * Configuration information of real-time log delivery to Tencent Cloud CLS.
                 */
                 class CLSTopic : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the Tencent Cloud CLS log set.
-                     * @return LogSetId The ID of the Tencent Cloud CLS log set.
+                     * 获取Tencent Cloud CLS log set ID.	
+                     * @return LogSetId Tencent Cloud CLS log set ID.	
                      * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
-                     * 设置The ID of the Tencent Cloud CLS log set.
-                     * @param _logSetId The ID of the Tencent Cloud CLS log set.
+                     * 设置Tencent Cloud CLS log set ID.	
+                     * @param _logSetId Tencent Cloud CLS log set ID.	
                      * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LogSetIdHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the Tencent Cloud CLS log topic.
-                     * @return TopicId The ID of the Tencent Cloud CLS log topic.
+                     * 获取Tencent Cloud CLS log topic ID.
+                     * @return TopicId Tencent Cloud CLS log topic ID.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置The ID of the Tencent Cloud CLS log topic.
-                     * @param _topicId The ID of the Tencent Cloud CLS log topic.
+                     * 设置Tencent Cloud CLS log topic ID.
+                     * @param _topicId Tencent Cloud CLS log topic ID.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取The region of the Tencent Cloud CLS log set.
-                     * @return LogSetRegion The region of the Tencent Cloud CLS log set.
+                     * 获取Region of the Tencent Cloud CLS log set.
+                     * @return LogSetRegion Region of the Tencent Cloud CLS log set.
                      * 
                      */
                     std::string GetLogSetRegion() const;
 
                     /**
-                     * 设置The region of the Tencent Cloud CLS log set.
-                     * @param _logSetRegion The region of the Tencent Cloud CLS log set.
+                     * 设置Region of the Tencent Cloud CLS log set.
+                     * @param _logSetRegion Region of the Tencent Cloud CLS log set.
                      * 
                      */
                     void SetLogSetRegion(const std::string& _logSetRegion);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the Tencent Cloud CLS log set.
+                     * Tencent Cloud CLS log set ID.	
                      */
                     std::string m_logSetId;
                     bool m_logSetIdHasBeenSet;
 
                     /**
-                     * The ID of the Tencent Cloud CLS log topic.
+                     * Tencent Cloud CLS log topic ID.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * The region of the Tencent Cloud CLS log set.
+                     * Region of the Tencent Cloud CLS log set.
                      */
                     std::string m_logSetRegion;
                     bool m_logSetRegionHasBeenSet;

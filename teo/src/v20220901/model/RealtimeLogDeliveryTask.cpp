@@ -30,12 +30,14 @@ RealtimeLogDeliveryTask::RealtimeLogDeliveryTask() :
     m_areaHasBeenSet(false),
     m_fieldsHasBeenSet(false),
     m_customFieldsHasBeenSet(false),
+    m_customExpressionFieldsHasBeenSet(false),
     m_deliveryConditionsHasBeenSet(false),
     m_sampleHasBeenSet(false),
     m_logFormatHasBeenSet(false),
     m_cLSHasBeenSet(false),
     m_customEndpointHasBeenSet(false),
     m_s3HasBeenSet(false),
+    m_aWSS3HasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_updateTimeHasBeenSet(false)
 {
@@ -152,6 +154,26 @@ CoreInternalOutcome RealtimeLogDeliveryTask::Deserialize(const rapidjson::Value 
         m_customFieldsHasBeenSet = true;
     }
 
+    if (value.HasMember("CustomExpressionFields") && !value["CustomExpressionFields"].IsNull())
+    {
+        if (!value["CustomExpressionFields"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `RealtimeLogDeliveryTask.CustomExpressionFields` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CustomExpressionFields"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            CustomExpressionField item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_customExpressionFields.push_back(item);
+        }
+        m_customExpressionFieldsHasBeenSet = true;
+    }
+
     if (value.HasMember("DeliveryConditions") && !value["DeliveryConditions"].IsNull())
     {
         if (!value["DeliveryConditions"].IsArray())
@@ -248,6 +270,23 @@ CoreInternalOutcome RealtimeLogDeliveryTask::Deserialize(const rapidjson::Value 
         }
 
         m_s3HasBeenSet = true;
+    }
+
+    if (value.HasMember("AWSS3") && !value["AWSS3"].IsNull())
+    {
+        if (!value["AWSS3"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RealtimeLogDeliveryTask.AWSS3` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_aWSS3.Deserialize(value["AWSS3"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_aWSS3HasBeenSet = true;
     }
 
     if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
@@ -366,6 +405,21 @@ void RealtimeLogDeliveryTask::ToJsonObject(rapidjson::Value &value, rapidjson::D
         }
     }
 
+    if (m_customExpressionFieldsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomExpressionFields";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_customExpressionFields.begin(); itr != m_customExpressionFields.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
     if (m_deliveryConditionsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -423,6 +477,15 @@ void RealtimeLogDeliveryTask::ToJsonObject(rapidjson::Value &value, rapidjson::D
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_s3.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aWSS3HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AWSS3";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aWSS3.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_createTimeHasBeenSet)
@@ -588,6 +651,22 @@ bool RealtimeLogDeliveryTask::CustomFieldsHasBeenSet() const
     return m_customFieldsHasBeenSet;
 }
 
+vector<CustomExpressionField> RealtimeLogDeliveryTask::GetCustomExpressionFields() const
+{
+    return m_customExpressionFields;
+}
+
+void RealtimeLogDeliveryTask::SetCustomExpressionFields(const vector<CustomExpressionField>& _customExpressionFields)
+{
+    m_customExpressionFields = _customExpressionFields;
+    m_customExpressionFieldsHasBeenSet = true;
+}
+
+bool RealtimeLogDeliveryTask::CustomExpressionFieldsHasBeenSet() const
+{
+    return m_customExpressionFieldsHasBeenSet;
+}
+
 vector<DeliveryCondition> RealtimeLogDeliveryTask::GetDeliveryConditions() const
 {
     return m_deliveryConditions;
@@ -682,6 +761,22 @@ void RealtimeLogDeliveryTask::SetS3(const S3& _s3)
 bool RealtimeLogDeliveryTask::S3HasBeenSet() const
 {
     return m_s3HasBeenSet;
+}
+
+AWSS3 RealtimeLogDeliveryTask::GetAWSS3() const
+{
+    return m_aWSS3;
+}
+
+void RealtimeLogDeliveryTask::SetAWSS3(const AWSS3& _aWSS3)
+{
+    m_aWSS3 = _aWSS3;
+    m_aWSS3HasBeenSet = true;
+}
+
+bool RealtimeLogDeliveryTask::AWSS3HasBeenSet() const
+{
+    return m_aWSS3HasBeenSet;
 }
 
 string RealtimeLogDeliveryTask::GetCreateTime() const

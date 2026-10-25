@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output format for real-time log delivery. You can directly use the specified predefined log output format (JSON Lines / csv) through the FormatType parameter, or define a variant output format through additional parameters based on the predefined log output format. For usage details, see Custom Log Output Format (https://www.tencentcloud.com/document/product/1552/110448?from_cn_redirect=1).
+                * Output format for real-time log delivery. You can directly use the specified predefined log output format (JSON Lines / csv) through the FormatType parameter, or define a variant output format through additional parameters based on the predefined log output format. For usage details, see [Custom Log Output Format](https://www.tencentcloud.com/document/product/1552/110448?from_cn_redirect=1).
                 */
                 class LogFormat : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
-                     * @return FormatType <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+                     * 获取<p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
+                     * @return FormatType <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
                      * 
                      */
                     std::string GetFormatType() const;
 
                     /**
-                     * 设置<p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
-                     * @param _formatType <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+                     * 设置<p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
+                     * @param _formatType <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
                      * 
                      */
                     void SetFormatType(const std::string& _formatType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BatchSuffixHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log prefix, a string added before each log record.</p>
-                     * @return RecordPrefix <p>Log prefix, a string added before each log record.</p>
+                     * 获取<p>Prefix of a single log entry. String added before each log record.</p>
+                     * @return RecordPrefix <p>Prefix of a single log entry. String added before each log record.</p>
                      * 
                      */
                     std::string GetRecordPrefix() const;
 
                     /**
-                     * 设置<p>Log prefix, a string added before each log record.</p>
-                     * @param _recordPrefix <p>Log prefix, a string added before each log record.</p>
+                     * 设置<p>Prefix of a single log entry. String added before each log record.</p>
+                     * @param _recordPrefix <p>Prefix of a single log entry. String added before each log record.</p>
                      * 
                      */
                     void SetRecordPrefix(const std::string& _recordPrefix);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RecordPrefixHasBeenSet() const;
 
                     /**
-                     * 获取<p>Single-line log suffix, a string appended after each log record.</p>
-                     * @return RecordSuffix <p>Single-line log suffix, a string appended after each log record.</p>
+                     * 获取<p>Suffix of a single log entry. String appended after each log record.</p>
+                     * @return RecordSuffix <p>Suffix of a single log entry. String appended after each log record.</p>
                      * 
                      */
                     std::string GetRecordSuffix() const;
 
                     /**
-                     * 设置<p>Single-line log suffix, a string appended after each log record.</p>
-                     * @param _recordSuffix <p>Single-line log suffix, a string appended after each log record.</p>
+                     * 设置<p>Suffix of a single log entry. String appended after each log record.</p>
+                     * @param _recordSuffix <p>Suffix of a single log entry. String appended after each log record.</p>
                      * 
                      */
                     void SetRecordSuffix(const std::string& _recordSuffix);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RecordSuffixHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
-                     * @return RecordDelimiter <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
+                     * 获取<p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
+                     * @return RecordDelimiter <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
                      * 
                      */
                     std::string GetRecordDelimiter() const;
 
                     /**
-                     * 设置<p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
-                     * @param _recordDelimiter <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
+                     * 设置<p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
+                     * @param _recordDelimiter <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
                      * 
                      */
                     void SetRecordDelimiter(const std::string& _recordDelimiter);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RecordDelimiterHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
-                     * @return RecordTemplate <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+                     * 获取<p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
+                     * @return RecordTemplate <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
                      * 
                      */
                     std::string GetRecordTemplate() const;
 
                     /**
-                     * 设置<p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
-                     * @param _recordTemplate <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+                     * 设置<p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
+                     * @param _recordTemplate <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
                      * 
                      */
                     void SetRecordTemplate(const std::string& _recordTemplate);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool RecordTemplateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
-                     * @return FieldDelimiter <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+                     * 获取<p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
+                     * @return FieldDelimiter <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
                      * 
                      */
                     std::string GetFieldDelimiter() const;
 
                     /**
-                     * 设置<p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
-                     * @param _fieldDelimiter <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+                     * 设置<p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
+                     * @param _fieldDelimiter <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
                      * 
                      */
                     void SetFieldDelimiter(const std::string& _fieldDelimiter);
@@ -217,7 +217,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+                     * <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
                      */
                     std::string m_formatType;
                     bool m_formatTypeHasBeenSet;
@@ -235,31 +235,31 @@ namespace TencentCloud
                     bool m_batchSuffixHasBeenSet;
 
                     /**
-                     * <p>Log prefix, a string added before each log record.</p>
+                     * <p>Prefix of a single log entry. String added before each log record.</p>
                      */
                     std::string m_recordPrefix;
                     bool m_recordPrefixHasBeenSet;
 
                     /**
-                     * <p>Single-line log suffix, a string appended after each log record.</p>
+                     * <p>Suffix of a single log entry. String appended after each log record.</p>
                      */
                     std::string m_recordSuffix;
                     bool m_recordSuffixHasBeenSet;
 
                     /**
-                     * <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
+                     * <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
                      */
                     std::string m_recordDelimiter;
                     bool m_recordDelimiterHasBeenSet;
 
                     /**
-                     * <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+                     * <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
                      */
                     std::string m_recordTemplate;
                     bool m_recordTemplateHasBeenSet;
 
                     /**
-                     * <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+                     * <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
                      */
                     std::string m_fieldDelimiter;
                     bool m_fieldDelimiterHasBeenSet;

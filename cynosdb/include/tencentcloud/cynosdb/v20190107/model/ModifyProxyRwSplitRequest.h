@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ConsistencyTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
-                     * @return ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+                     * 获取<p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
+                     * @return ConsistencyTimeOut <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
                      * 
                      */
                     std::string GetConsistencyTimeOut() const;
 
                     /**
-                     * 设置<p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
-                     * @param _consistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+                     * 设置<p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
+                     * @param _consistencyTimeOut <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
                      * 
                      */
                     void SetConsistencyTimeOut(const std::string& _consistencyTimeOut);
@@ -463,7 +463,7 @@ namespace TencentCloud
                     bool m_consistencyTypeHasBeenSet;
 
                     /**
-                     * <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+                     * <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
                      */
                     std::string m_consistencyTimeOut;
                     bool m_consistencyTimeOutHasBeenSet;

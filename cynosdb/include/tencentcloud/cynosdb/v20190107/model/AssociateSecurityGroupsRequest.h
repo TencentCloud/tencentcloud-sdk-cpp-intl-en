@@ -43,19 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-                     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * 获取Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-                     * @param _instanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * 设置Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * @param _instanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -112,8 +112,8 @@ Description: To get the instance group ID of a cluster, perform [Query cluster i
                 private:
 
                     /**
-                     * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+                     * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
