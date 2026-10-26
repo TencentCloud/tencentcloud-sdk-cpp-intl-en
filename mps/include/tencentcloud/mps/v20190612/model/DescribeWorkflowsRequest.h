@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Workflow ID filter. Array length limit: 100.
-                     * @return WorkflowIds Workflow ID filter. Array length limit: 100.
+                     * 获取<p>Workflow ID filter condition, with an array length limit of 100.</p>
+                     * @return WorkflowIds <p>Workflow ID filter condition, with an array length limit of 100.</p>
                      * 
                      */
                     std::vector<int64_t> GetWorkflowIds() const;
 
                     /**
-                     * 设置Workflow ID filter. Array length limit: 100.
-                     * @param _workflowIds Workflow ID filter. Array length limit: 100.
+                     * 设置<p>Workflow ID filter condition, with an array length limit of 100.</p>
+                     * @param _workflowIds <p>Workflow ID filter condition, with an array length limit of 100.</p>
                      * 
                      */
                     void SetWorkflowIds(const std::vector<int64_t>& _workflowIds);
@@ -64,27 +64,15 @@ namespace TencentCloud
                     bool WorkflowIdsHasBeenSet() const;
 
                     /**
-                     * 获取Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
-                     * @return Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+                     * 获取<p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
+                     * @return Status <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
-                     * @param _status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+                     * 设置<p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
+                     * @param _status <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -97,15 +85,15 @@ If this parameter is left empty, the workflow status will not be distinguished.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset. Default value: 0.
-                     * @return Offset Paging offset. Default value: 0.
+                     * 获取<p>Paging offset. Default value: 0.</p>
+                     * @return Offset <p>Paging offset. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Paging offset. Default value: 0.
-                     * @param _offset Paging offset. Default value: 0.
+                     * 设置<p>Paging offset. Default value: 0.</p>
+                     * @param _offset <p>Paging offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -118,15 +106,15 @@ If this parameter is left empty, the workflow status will not be distinguished.
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 获取<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 设置<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * @param _limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -141,28 +129,25 @@ If this parameter is left empty, the workflow status will not be distinguished.
                 private:
 
                     /**
-                     * Workflow ID filter. Array length limit: 100.
+                     * <p>Workflow ID filter condition, with an array length limit of 100.</p>
                      */
                     std::vector<int64_t> m_workflowIds;
                     bool m_workflowIdsHasBeenSet;
 
                     /**
-                     * Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+                     * <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Paging offset. Default value: 0.
+                     * <p>Paging offset. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. Default value: 10. Maximum value: 100.
+                     * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

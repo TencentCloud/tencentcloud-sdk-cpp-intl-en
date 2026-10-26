@@ -1,0 +1,1353 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_ISS_V20230517_ISSCLIENT_H_
+#define TENCENTCLOUD_ISS_V20230517_ISSCLIENT_H_
+
+#include <functional>
+#include <future>
+#include <tencentcloud/core/AbstractClient.h>
+#include <tencentcloud/core/Credential.h>
+#include <tencentcloud/core/profile/ClientProfile.h>
+#include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/iss/v20230517/model/AddOrganizationRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddOrganizationResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordBackupPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordBackupPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordBackupTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordBackupTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordRetrieveTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordRetrieveTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddRecordTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddStreamAuthRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddStreamAuthResponse.h>
+#include <tencentcloud/iss/v20230517/model/AddUserDeviceRequest.h>
+#include <tencentcloud/iss/v20230517/model/AddUserDeviceResponse.h>
+#include <tencentcloud/iss/v20230517/model/BatchAddVideoSnapshotConfigChannelRequest.h>
+#include <tencentcloud/iss/v20230517/model/BatchAddVideoSnapshotConfigChannelResponse.h>
+#include <tencentcloud/iss/v20230517/model/BatchAssignVLPlanChannelsRequest.h>
+#include <tencentcloud/iss/v20230517/model/BatchAssignVLPlanChannelsResponse.h>
+#include <tencentcloud/iss/v20230517/model/BatchDeleteVideoDownloadTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/BatchDeleteVideoDownloadTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/BatchGetVLPlanSourceFileURLRequest.h>
+#include <tencentcloud/iss/v20230517/model/BatchGetVLPlanSourceFileURLResponse.h>
+#include <tencentcloud/iss/v20230517/model/BatchGetVideoSnapshotImageUrlRequest.h>
+#include <tencentcloud/iss/v20230517/model/BatchGetVideoSnapshotImageUrlResponse.h>
+#include <tencentcloud/iss/v20230517/model/BatchOperateDeviceRequest.h>
+#include <tencentcloud/iss/v20230517/model/BatchOperateDeviceResponse.h>
+#include <tencentcloud/iss/v20230517/model/CallISAPIRequest.h>
+#include <tencentcloud/iss/v20230517/model/CallISAPIResponse.h>
+#include <tencentcloud/iss/v20230517/model/ControlDevicePTZRequest.h>
+#include <tencentcloud/iss/v20230517/model/ControlDevicePTZResponse.h>
+#include <tencentcloud/iss/v20230517/model/ControlDevicePresetRequest.h>
+#include <tencentcloud/iss/v20230517/model/ControlDevicePresetResponse.h>
+#include <tencentcloud/iss/v20230517/model/ControlDeviceSnapshotRequest.h>
+#include <tencentcloud/iss/v20230517/model/ControlDeviceSnapshotResponse.h>
+#include <tencentcloud/iss/v20230517/model/ControlDeviceStreamRequest.h>
+#include <tencentcloud/iss/v20230517/model/ControlDeviceStreamResponse.h>
+#include <tencentcloud/iss/v20230517/model/ControlRecordTimelineRequest.h>
+#include <tencentcloud/iss/v20230517/model/ControlRecordTimelineResponse.h>
+#include <tencentcloud/iss/v20230517/model/CreateVLPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/CreateVLPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/CreateVLTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/CreateVLTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/CreateVideoDownloadTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/CreateVideoDownloadTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/CreateVideoSnapshotConfigRequest.h>
+#include <tencentcloud/iss/v20230517/model/CreateVideoSnapshotConfigResponse.h>
+#include <tencentcloud/iss/v20230517/model/CreateVideoSnapshotTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/CreateVideoSnapshotTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteDomainRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteDomainResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteOrganizationRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteOrganizationResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordBackupPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordBackupPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordBackupTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordBackupTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordRetrieveTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordRetrieveTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteRecordTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteUserDeviceRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteUserDeviceResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVLPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVLPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVLTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVLTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVideoSnapshotConfigRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVideoSnapshotConfigResponse.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVideoSnapshotTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DeleteVideoSnapshotTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeCNAMERequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeCNAMEResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDeviceChannelRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDeviceChannelResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDevicePresetRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDevicePresetResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDomainRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDomainResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDomainRegionRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeDomainRegionResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeGBDeviceAddrRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeGBDeviceAddrResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeOrganizationRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeOrganizationResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordBackupPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordBackupPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordBackupTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordBackupTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordFileRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordFileResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordPlaybackUrlRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordPlaybackUrlResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordRetrieveTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordRetrieveTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeRecordTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeStreamAuthRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeStreamAuthResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeUserDeviceRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeUserDeviceResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeUserDeviceListRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeUserDeviceListResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVLPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVLPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVLPlanResultRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVLPlanResultResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVLTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVLTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoBitRateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoBitRateResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoDownloadUrlRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoDownloadUrlResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoSnapshotConfigRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoSnapshotConfigResponse.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoSnapshotTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/DescribeVideoSnapshotTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListDeviceSnapshotsRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListDeviceSnapshotsResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListDevicesRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListDevicesResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListOrganizationChannelsRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListOrganizationChannelsResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordBackupPlanDevicesRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordBackupPlanDevicesResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordBackupPlansRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordBackupPlansResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordBackupTemplatesRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordBackupTemplatesResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordPlanDevicesRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordPlanDevicesResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordPlansRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordPlansResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordRetrieveTasksRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordRetrieveTasksResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordTemplatesRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListRecordTemplatesResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListSubTasksRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListSubTasksResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListTasksRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListTasksResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListVLPlansRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListVLPlansResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListVLTemplatesRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListVLTemplatesResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListVideoDownloadTaskRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListVideoDownloadTaskResponse.h>
+#include <tencentcloud/iss/v20230517/model/ListVideoSnapshotTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/ListVideoSnapshotTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/ModifyVLPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/ModifyVLPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/ModifyVideoSnapshotConfigRequest.h>
+#include <tencentcloud/iss/v20230517/model/ModifyVideoSnapshotConfigResponse.h>
+#include <tencentcloud/iss/v20230517/model/PlayRecordRequest.h>
+#include <tencentcloud/iss/v20230517/model/PlayRecordResponse.h>
+#include <tencentcloud/iss/v20230517/model/QueryForbidPlayChannelListRequest.h>
+#include <tencentcloud/iss/v20230517/model/QueryForbidPlayChannelListResponse.h>
+#include <tencentcloud/iss/v20230517/model/RefreshDeviceChannelRequest.h>
+#include <tencentcloud/iss/v20230517/model/RefreshDeviceChannelResponse.h>
+#include <tencentcloud/iss/v20230517/model/SetForbidPlayChannelsRequest.h>
+#include <tencentcloud/iss/v20230517/model/SetForbidPlayChannelsResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateDeviceOrganizationRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateDeviceOrganizationResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateDeviceStatusRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateDeviceStatusResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateOrganizationRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateOrganizationResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordBackupPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordBackupPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordBackupTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordBackupTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordPlanRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordPlanResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordTemplateRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateRecordTemplateResponse.h>
+#include <tencentcloud/iss/v20230517/model/UpdateUserDeviceRequest.h>
+#include <tencentcloud/iss/v20230517/model/UpdateUserDeviceResponse.h>
+
+
+namespace TencentCloud
+{
+    namespace Iss
+    {
+        namespace V20230517
+        {
+            class IssClient : public AbstractClient
+            {
+            public:
+                IssClient(const Credential &credential, const std::string &region);
+                IssClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
+
+                typedef Outcome<Core::Error, Model::AddOrganizationResponse> AddOrganizationOutcome;
+                typedef std::future<AddOrganizationOutcome> AddOrganizationOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddOrganizationRequest&, AddOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddRecordBackupPlanResponse> AddRecordBackupPlanOutcome;
+                typedef std::future<AddRecordBackupPlanOutcome> AddRecordBackupPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddRecordBackupPlanRequest&, AddRecordBackupPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddRecordBackupPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddRecordBackupTemplateResponse> AddRecordBackupTemplateOutcome;
+                typedef std::future<AddRecordBackupTemplateOutcome> AddRecordBackupTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddRecordBackupTemplateRequest&, AddRecordBackupTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddRecordBackupTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddRecordPlanResponse> AddRecordPlanOutcome;
+                typedef std::future<AddRecordPlanOutcome> AddRecordPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddRecordPlanRequest&, AddRecordPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddRecordPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddRecordRetrieveTaskResponse> AddRecordRetrieveTaskOutcome;
+                typedef std::future<AddRecordRetrieveTaskOutcome> AddRecordRetrieveTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddRecordRetrieveTaskRequest&, AddRecordRetrieveTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddRecordRetrieveTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddRecordTemplateResponse> AddRecordTemplateOutcome;
+                typedef std::future<AddRecordTemplateOutcome> AddRecordTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddRecordTemplateRequest&, AddRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddRecordTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddStreamAuthResponse> AddStreamAuthOutcome;
+                typedef std::future<AddStreamAuthOutcome> AddStreamAuthOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddStreamAuthRequest&, AddStreamAuthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddStreamAuthAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddUserDeviceResponse> AddUserDeviceOutcome;
+                typedef std::future<AddUserDeviceOutcome> AddUserDeviceOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::AddUserDeviceRequest&, AddUserDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddUserDeviceAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchAddVideoSnapshotConfigChannelResponse> BatchAddVideoSnapshotConfigChannelOutcome;
+                typedef std::future<BatchAddVideoSnapshotConfigChannelOutcome> BatchAddVideoSnapshotConfigChannelOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::BatchAddVideoSnapshotConfigChannelRequest&, BatchAddVideoSnapshotConfigChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchAddVideoSnapshotConfigChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchAssignVLPlanChannelsResponse> BatchAssignVLPlanChannelsOutcome;
+                typedef std::future<BatchAssignVLPlanChannelsOutcome> BatchAssignVLPlanChannelsOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::BatchAssignVLPlanChannelsRequest&, BatchAssignVLPlanChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchAssignVLPlanChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchDeleteVideoDownloadTaskResponse> BatchDeleteVideoDownloadTaskOutcome;
+                typedef std::future<BatchDeleteVideoDownloadTaskOutcome> BatchDeleteVideoDownloadTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::BatchDeleteVideoDownloadTaskRequest&, BatchDeleteVideoDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchDeleteVideoDownloadTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchGetVLPlanSourceFileURLResponse> BatchGetVLPlanSourceFileURLOutcome;
+                typedef std::future<BatchGetVLPlanSourceFileURLOutcome> BatchGetVLPlanSourceFileURLOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::BatchGetVLPlanSourceFileURLRequest&, BatchGetVLPlanSourceFileURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchGetVLPlanSourceFileURLAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchGetVideoSnapshotImageUrlResponse> BatchGetVideoSnapshotImageUrlOutcome;
+                typedef std::future<BatchGetVideoSnapshotImageUrlOutcome> BatchGetVideoSnapshotImageUrlOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::BatchGetVideoSnapshotImageUrlRequest&, BatchGetVideoSnapshotImageUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchGetVideoSnapshotImageUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchOperateDeviceResponse> BatchOperateDeviceOutcome;
+                typedef std::future<BatchOperateDeviceOutcome> BatchOperateDeviceOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::BatchOperateDeviceRequest&, BatchOperateDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchOperateDeviceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CallISAPIResponse> CallISAPIOutcome;
+                typedef std::future<CallISAPIOutcome> CallISAPIOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::CallISAPIRequest&, CallISAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CallISAPIAsyncHandler;
+                typedef Outcome<Core::Error, Model::ControlDevicePTZResponse> ControlDevicePTZOutcome;
+                typedef std::future<ControlDevicePTZOutcome> ControlDevicePTZOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ControlDevicePTZRequest&, ControlDevicePTZOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlDevicePTZAsyncHandler;
+                typedef Outcome<Core::Error, Model::ControlDevicePresetResponse> ControlDevicePresetOutcome;
+                typedef std::future<ControlDevicePresetOutcome> ControlDevicePresetOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ControlDevicePresetRequest&, ControlDevicePresetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlDevicePresetAsyncHandler;
+                typedef Outcome<Core::Error, Model::ControlDeviceSnapshotResponse> ControlDeviceSnapshotOutcome;
+                typedef std::future<ControlDeviceSnapshotOutcome> ControlDeviceSnapshotOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ControlDeviceSnapshotRequest&, ControlDeviceSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlDeviceSnapshotAsyncHandler;
+                typedef Outcome<Core::Error, Model::ControlDeviceStreamResponse> ControlDeviceStreamOutcome;
+                typedef std::future<ControlDeviceStreamOutcome> ControlDeviceStreamOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ControlDeviceStreamRequest&, ControlDeviceStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlDeviceStreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::ControlRecordTimelineResponse> ControlRecordTimelineOutcome;
+                typedef std::future<ControlRecordTimelineOutcome> ControlRecordTimelineOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ControlRecordTimelineRequest&, ControlRecordTimelineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlRecordTimelineAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVLPlanResponse> CreateVLPlanOutcome;
+                typedef std::future<CreateVLPlanOutcome> CreateVLPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::CreateVLPlanRequest&, CreateVLPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVLPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVLTemplateResponse> CreateVLTemplateOutcome;
+                typedef std::future<CreateVLTemplateOutcome> CreateVLTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::CreateVLTemplateRequest&, CreateVLTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVLTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVideoDownloadTaskResponse> CreateVideoDownloadTaskOutcome;
+                typedef std::future<CreateVideoDownloadTaskOutcome> CreateVideoDownloadTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::CreateVideoDownloadTaskRequest&, CreateVideoDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVideoDownloadTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVideoSnapshotConfigResponse> CreateVideoSnapshotConfigOutcome;
+                typedef std::future<CreateVideoSnapshotConfigOutcome> CreateVideoSnapshotConfigOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::CreateVideoSnapshotConfigRequest&, CreateVideoSnapshotConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVideoSnapshotConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVideoSnapshotTemplateResponse> CreateVideoSnapshotTemplateOutcome;
+                typedef std::future<CreateVideoSnapshotTemplateOutcome> CreateVideoSnapshotTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::CreateVideoSnapshotTemplateRequest&, CreateVideoSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVideoSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDomainResponse> DeleteDomainOutcome;
+                typedef std::future<DeleteDomainOutcome> DeleteDomainOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteDomainRequest&, DeleteDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteOrganizationResponse> DeleteOrganizationOutcome;
+                typedef std::future<DeleteOrganizationOutcome> DeleteOrganizationOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteOrganizationRequest&, DeleteOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRecordBackupPlanResponse> DeleteRecordBackupPlanOutcome;
+                typedef std::future<DeleteRecordBackupPlanOutcome> DeleteRecordBackupPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteRecordBackupPlanRequest&, DeleteRecordBackupPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordBackupPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRecordBackupTemplateResponse> DeleteRecordBackupTemplateOutcome;
+                typedef std::future<DeleteRecordBackupTemplateOutcome> DeleteRecordBackupTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteRecordBackupTemplateRequest&, DeleteRecordBackupTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordBackupTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRecordPlanResponse> DeleteRecordPlanOutcome;
+                typedef std::future<DeleteRecordPlanOutcome> DeleteRecordPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteRecordPlanRequest&, DeleteRecordPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRecordRetrieveTaskResponse> DeleteRecordRetrieveTaskOutcome;
+                typedef std::future<DeleteRecordRetrieveTaskOutcome> DeleteRecordRetrieveTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteRecordRetrieveTaskRequest&, DeleteRecordRetrieveTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordRetrieveTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRecordTemplateResponse> DeleteRecordTemplateOutcome;
+                typedef std::future<DeleteRecordTemplateOutcome> DeleteRecordTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteRecordTemplateRequest&, DeleteRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTaskResponse> DeleteTaskOutcome;
+                typedef std::future<DeleteTaskOutcome> DeleteTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteTaskRequest&, DeleteTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteUserDeviceResponse> DeleteUserDeviceOutcome;
+                typedef std::future<DeleteUserDeviceOutcome> DeleteUserDeviceOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteUserDeviceRequest&, DeleteUserDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUserDeviceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVLPlanResponse> DeleteVLPlanOutcome;
+                typedef std::future<DeleteVLPlanOutcome> DeleteVLPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteVLPlanRequest&, DeleteVLPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVLPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVLTemplateResponse> DeleteVLTemplateOutcome;
+                typedef std::future<DeleteVLTemplateOutcome> DeleteVLTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteVLTemplateRequest&, DeleteVLTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVLTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVideoSnapshotConfigResponse> DeleteVideoSnapshotConfigOutcome;
+                typedef std::future<DeleteVideoSnapshotConfigOutcome> DeleteVideoSnapshotConfigOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteVideoSnapshotConfigRequest&, DeleteVideoSnapshotConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVideoSnapshotConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVideoSnapshotTemplateResponse> DeleteVideoSnapshotTemplateOutcome;
+                typedef std::future<DeleteVideoSnapshotTemplateOutcome> DeleteVideoSnapshotTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DeleteVideoSnapshotTemplateRequest&, DeleteVideoSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVideoSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCNAMEResponse> DescribeCNAMEOutcome;
+                typedef std::future<DescribeCNAMEOutcome> DescribeCNAMEOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeCNAMERequest&, DescribeCNAMEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCNAMEAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeviceChannelResponse> DescribeDeviceChannelOutcome;
+                typedef std::future<DescribeDeviceChannelOutcome> DescribeDeviceChannelOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeDeviceChannelRequest&, DescribeDeviceChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDevicePresetResponse> DescribeDevicePresetOutcome;
+                typedef std::future<DescribeDevicePresetOutcome> DescribeDevicePresetOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeDevicePresetRequest&, DescribeDevicePresetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDevicePresetAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDomainResponse> DescribeDomainOutcome;
+                typedef std::future<DescribeDomainOutcome> DescribeDomainOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeDomainRequest&, DescribeDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDomainRegionResponse> DescribeDomainRegionOutcome;
+                typedef std::future<DescribeDomainRegionOutcome> DescribeDomainRegionOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeDomainRegionRequest&, DescribeDomainRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainRegionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGBDeviceAddrResponse> DescribeGBDeviceAddrOutcome;
+                typedef std::future<DescribeGBDeviceAddrOutcome> DescribeGBDeviceAddrOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeGBDeviceAddrRequest&, DescribeGBDeviceAddrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGBDeviceAddrAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrganizationResponse> DescribeOrganizationOutcome;
+                typedef std::future<DescribeOrganizationOutcome> DescribeOrganizationOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeOrganizationRequest&, DescribeOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordBackupPlanResponse> DescribeRecordBackupPlanOutcome;
+                typedef std::future<DescribeRecordBackupPlanOutcome> DescribeRecordBackupPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordBackupPlanRequest&, DescribeRecordBackupPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordBackupPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordBackupTemplateResponse> DescribeRecordBackupTemplateOutcome;
+                typedef std::future<DescribeRecordBackupTemplateOutcome> DescribeRecordBackupTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordBackupTemplateRequest&, DescribeRecordBackupTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordBackupTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordFileResponse> DescribeRecordFileOutcome;
+                typedef std::future<DescribeRecordFileOutcome> DescribeRecordFileOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordFileRequest&, DescribeRecordFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordPlanResponse> DescribeRecordPlanOutcome;
+                typedef std::future<DescribeRecordPlanOutcome> DescribeRecordPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordPlanRequest&, DescribeRecordPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordPlaybackUrlResponse> DescribeRecordPlaybackUrlOutcome;
+                typedef std::future<DescribeRecordPlaybackUrlOutcome> DescribeRecordPlaybackUrlOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordPlaybackUrlRequest&, DescribeRecordPlaybackUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordPlaybackUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordRetrieveTaskResponse> DescribeRecordRetrieveTaskOutcome;
+                typedef std::future<DescribeRecordRetrieveTaskOutcome> DescribeRecordRetrieveTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordRetrieveTaskRequest&, DescribeRecordRetrieveTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordRetrieveTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordTemplateResponse> DescribeRecordTemplateOutcome;
+                typedef std::future<DescribeRecordTemplateOutcome> DescribeRecordTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeRecordTemplateRequest&, DescribeRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamAuthResponse> DescribeStreamAuthOutcome;
+                typedef std::future<DescribeStreamAuthOutcome> DescribeStreamAuthOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeStreamAuthRequest&, DescribeStreamAuthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamAuthAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTaskResponse> DescribeTaskOutcome;
+                typedef std::future<DescribeTaskOutcome> DescribeTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeTaskRequest&, DescribeTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserDeviceResponse> DescribeUserDeviceOutcome;
+                typedef std::future<DescribeUserDeviceOutcome> DescribeUserDeviceOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeUserDeviceRequest&, DescribeUserDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserDeviceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserDeviceListResponse> DescribeUserDeviceListOutcome;
+                typedef std::future<DescribeUserDeviceListOutcome> DescribeUserDeviceListOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeUserDeviceListRequest&, DescribeUserDeviceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserDeviceListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVLPlanResponse> DescribeVLPlanOutcome;
+                typedef std::future<DescribeVLPlanOutcome> DescribeVLPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVLPlanRequest&, DescribeVLPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVLPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVLPlanResultResponse> DescribeVLPlanResultOutcome;
+                typedef std::future<DescribeVLPlanResultOutcome> DescribeVLPlanResultOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVLPlanResultRequest&, DescribeVLPlanResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVLPlanResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVLTemplateResponse> DescribeVLTemplateOutcome;
+                typedef std::future<DescribeVLTemplateOutcome> DescribeVLTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVLTemplateRequest&, DescribeVLTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVLTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVideoBitRateResponse> DescribeVideoBitRateOutcome;
+                typedef std::future<DescribeVideoBitRateOutcome> DescribeVideoBitRateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVideoBitRateRequest&, DescribeVideoBitRateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVideoBitRateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVideoDownloadUrlResponse> DescribeVideoDownloadUrlOutcome;
+                typedef std::future<DescribeVideoDownloadUrlOutcome> DescribeVideoDownloadUrlOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVideoDownloadUrlRequest&, DescribeVideoDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVideoDownloadUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVideoSnapshotConfigResponse> DescribeVideoSnapshotConfigOutcome;
+                typedef std::future<DescribeVideoSnapshotConfigOutcome> DescribeVideoSnapshotConfigOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVideoSnapshotConfigRequest&, DescribeVideoSnapshotConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVideoSnapshotConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVideoSnapshotTemplateResponse> DescribeVideoSnapshotTemplateOutcome;
+                typedef std::future<DescribeVideoSnapshotTemplateOutcome> DescribeVideoSnapshotTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::DescribeVideoSnapshotTemplateRequest&, DescribeVideoSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVideoSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDeviceSnapshotsResponse> ListDeviceSnapshotsOutcome;
+                typedef std::future<ListDeviceSnapshotsOutcome> ListDeviceSnapshotsOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListDeviceSnapshotsRequest&, ListDeviceSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDeviceSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDevicesResponse> ListDevicesOutcome;
+                typedef std::future<ListDevicesOutcome> ListDevicesOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListDevicesRequest&, ListDevicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDevicesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListOrganizationChannelsResponse> ListOrganizationChannelsOutcome;
+                typedef std::future<ListOrganizationChannelsOutcome> ListOrganizationChannelsOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListOrganizationChannelsRequest&, ListOrganizationChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOrganizationChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordBackupPlanDevicesResponse> ListRecordBackupPlanDevicesOutcome;
+                typedef std::future<ListRecordBackupPlanDevicesOutcome> ListRecordBackupPlanDevicesOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordBackupPlanDevicesRequest&, ListRecordBackupPlanDevicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordBackupPlanDevicesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordBackupPlansResponse> ListRecordBackupPlansOutcome;
+                typedef std::future<ListRecordBackupPlansOutcome> ListRecordBackupPlansOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordBackupPlansRequest&, ListRecordBackupPlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordBackupPlansAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordBackupTemplatesResponse> ListRecordBackupTemplatesOutcome;
+                typedef std::future<ListRecordBackupTemplatesOutcome> ListRecordBackupTemplatesOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordBackupTemplatesRequest&, ListRecordBackupTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordBackupTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordPlanDevicesResponse> ListRecordPlanDevicesOutcome;
+                typedef std::future<ListRecordPlanDevicesOutcome> ListRecordPlanDevicesOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordPlanDevicesRequest&, ListRecordPlanDevicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordPlanDevicesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordPlansResponse> ListRecordPlansOutcome;
+                typedef std::future<ListRecordPlansOutcome> ListRecordPlansOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordPlansRequest&, ListRecordPlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordPlansAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordRetrieveTasksResponse> ListRecordRetrieveTasksOutcome;
+                typedef std::future<ListRecordRetrieveTasksOutcome> ListRecordRetrieveTasksOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordRetrieveTasksRequest&, ListRecordRetrieveTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordRetrieveTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRecordTemplatesResponse> ListRecordTemplatesOutcome;
+                typedef std::future<ListRecordTemplatesOutcome> ListRecordTemplatesOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListRecordTemplatesRequest&, ListRecordTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRecordTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListSubTasksResponse> ListSubTasksOutcome;
+                typedef std::future<ListSubTasksOutcome> ListSubTasksOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListSubTasksRequest&, ListSubTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListSubTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListTasksResponse> ListTasksOutcome;
+                typedef std::future<ListTasksOutcome> ListTasksOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListTasksRequest&, ListTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListVLPlansResponse> ListVLPlansOutcome;
+                typedef std::future<ListVLPlansOutcome> ListVLPlansOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListVLPlansRequest&, ListVLPlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListVLPlansAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListVLTemplatesResponse> ListVLTemplatesOutcome;
+                typedef std::future<ListVLTemplatesOutcome> ListVLTemplatesOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListVLTemplatesRequest&, ListVLTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListVLTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListVideoDownloadTaskResponse> ListVideoDownloadTaskOutcome;
+                typedef std::future<ListVideoDownloadTaskOutcome> ListVideoDownloadTaskOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListVideoDownloadTaskRequest&, ListVideoDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListVideoDownloadTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListVideoSnapshotTemplateResponse> ListVideoSnapshotTemplateOutcome;
+                typedef std::future<ListVideoSnapshotTemplateOutcome> ListVideoSnapshotTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ListVideoSnapshotTemplateRequest&, ListVideoSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListVideoSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVLPlanResponse> ModifyVLPlanOutcome;
+                typedef std::future<ModifyVLPlanOutcome> ModifyVLPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ModifyVLPlanRequest&, ModifyVLPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVLPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVideoSnapshotConfigResponse> ModifyVideoSnapshotConfigOutcome;
+                typedef std::future<ModifyVideoSnapshotConfigOutcome> ModifyVideoSnapshotConfigOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::ModifyVideoSnapshotConfigRequest&, ModifyVideoSnapshotConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVideoSnapshotConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::PlayRecordResponse> PlayRecordOutcome;
+                typedef std::future<PlayRecordOutcome> PlayRecordOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::PlayRecordRequest&, PlayRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PlayRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryForbidPlayChannelListResponse> QueryForbidPlayChannelListOutcome;
+                typedef std::future<QueryForbidPlayChannelListOutcome> QueryForbidPlayChannelListOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::QueryForbidPlayChannelListRequest&, QueryForbidPlayChannelListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryForbidPlayChannelListAsyncHandler;
+                typedef Outcome<Core::Error, Model::RefreshDeviceChannelResponse> RefreshDeviceChannelOutcome;
+                typedef std::future<RefreshDeviceChannelOutcome> RefreshDeviceChannelOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::RefreshDeviceChannelRequest&, RefreshDeviceChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshDeviceChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetForbidPlayChannelsResponse> SetForbidPlayChannelsOutcome;
+                typedef std::future<SetForbidPlayChannelsOutcome> SetForbidPlayChannelsOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::SetForbidPlayChannelsRequest&, SetForbidPlayChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetForbidPlayChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateDeviceOrganizationResponse> UpdateDeviceOrganizationOutcome;
+                typedef std::future<UpdateDeviceOrganizationOutcome> UpdateDeviceOrganizationOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateDeviceOrganizationRequest&, UpdateDeviceOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDeviceOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateDeviceStatusResponse> UpdateDeviceStatusOutcome;
+                typedef std::future<UpdateDeviceStatusOutcome> UpdateDeviceStatusOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateDeviceStatusRequest&, UpdateDeviceStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDeviceStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateOrganizationResponse> UpdateOrganizationOutcome;
+                typedef std::future<UpdateOrganizationOutcome> UpdateOrganizationOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateOrganizationRequest&, UpdateOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateRecordBackupPlanResponse> UpdateRecordBackupPlanOutcome;
+                typedef std::future<UpdateRecordBackupPlanOutcome> UpdateRecordBackupPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateRecordBackupPlanRequest&, UpdateRecordBackupPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRecordBackupPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateRecordBackupTemplateResponse> UpdateRecordBackupTemplateOutcome;
+                typedef std::future<UpdateRecordBackupTemplateOutcome> UpdateRecordBackupTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateRecordBackupTemplateRequest&, UpdateRecordBackupTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRecordBackupTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateRecordPlanResponse> UpdateRecordPlanOutcome;
+                typedef std::future<UpdateRecordPlanOutcome> UpdateRecordPlanOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateRecordPlanRequest&, UpdateRecordPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRecordPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateRecordTemplateResponse> UpdateRecordTemplateOutcome;
+                typedef std::future<UpdateRecordTemplateOutcome> UpdateRecordTemplateOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateRecordTemplateRequest&, UpdateRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRecordTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateUserDeviceResponse> UpdateUserDeviceOutcome;
+                typedef std::future<UpdateUserDeviceOutcome> UpdateUserDeviceOutcomeCallable;
+                typedef std::function<void(const IssClient*, const Model::UpdateUserDeviceRequest&, UpdateUserDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateUserDeviceAsyncHandler;
+
+
+
+                /**
+                 *Used to add an organization.
+                 * @param req AddOrganizationRequest
+                 * @return AddOrganizationOutcome
+                 */
+                AddOrganizationOutcome AddOrganization(const Model::AddOrganizationRequest &request);
+                void AddOrganizationAsync(const Model::AddOrganizationRequest& request, const AddOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddOrganizationOutcomeCallable AddOrganizationCallable(const Model::AddOrganizationRequest& request);
+
+                /**
+                 *Used to add a recording cloud migration plan (currently applicable only to devices/video channels connected via the GB28181 protocol and gateway).
+                 * @param req AddRecordBackupPlanRequest
+                 * @return AddRecordBackupPlanOutcome
+                 */
+                AddRecordBackupPlanOutcome AddRecordBackupPlan(const Model::AddRecordBackupPlanRequest &request);
+                void AddRecordBackupPlanAsync(const Model::AddRecordBackupPlanRequest& request, const AddRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddRecordBackupPlanOutcomeCallable AddRecordBackupPlanCallable(const Model::AddRecordBackupPlanRequest& request);
+
+                /**
+                 *This API is used to create a video recording cloud template.
+> The feature essentially pulls local device recording data to the cloud (i.e., recordings stored in the IPC camera memory card or NVR hard disk). When operating, first set the recording time period (i.e., the local device recording you want to upload to the cloud), then set the Cloud Upload Time Period and upload speed. The platform will pull the previous day's Time Period Data from the device at the specified speed during the Cloud Upload Time Period.
+
+> Set the Cloud Upload Time Period to at least meet (Cloud Upload Time Period = previous day's recording time period / cloud upload speed multiplication). It is advisable to set about 10% more time for the Cloud Upload Time Period to avoid incomplete data retrieval due to network fluctuations.
+                 * @param req AddRecordBackupTemplateRequest
+                 * @return AddRecordBackupTemplateOutcome
+                 */
+                AddRecordBackupTemplateOutcome AddRecordBackupTemplate(const Model::AddRecordBackupTemplateRequest &request);
+                void AddRecordBackupTemplateAsync(const Model::AddRecordBackupTemplateRequest& request, const AddRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddRecordBackupTemplateOutcomeCallable AddRecordBackupTemplateCallable(const Model::AddRecordBackupTemplateRequest& request);
+
+                /**
+                 *This API is used to create a real-time cloud migration plan.
+                 * @param req AddRecordPlanRequest
+                 * @return AddRecordPlanOutcome
+                 */
+                AddRecordPlanOutcome AddRecordPlan(const Model::AddRecordPlanRequest &request);
+                void AddRecordPlanAsync(const Model::AddRecordPlanRequest& request, const AddRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddRecordPlanOutcomeCallable AddRecordPlanCallable(const Model::AddRecordPlanRequest& request);
+
+                /**
+                 *This API is used to create a retrieval task.
+                 * @param req AddRecordRetrieveTaskRequest
+                 * @return AddRecordRetrieveTaskOutcome
+                 */
+                AddRecordRetrieveTaskOutcome AddRecordRetrieveTask(const Model::AddRecordRetrieveTaskRequest &request);
+                void AddRecordRetrieveTaskAsync(const Model::AddRecordRetrieveTaskRequest& request, const AddRecordRetrieveTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddRecordRetrieveTaskOutcomeCallable AddRecordRetrieveTaskCallable(const Model::AddRecordRetrieveTaskRequest& request);
+
+                /**
+                 *Used to add a real-time cloud template.
+                 * @param req AddRecordTemplateRequest
+                 * @return AddRecordTemplateOutcome
+                 */
+                AddRecordTemplateOutcome AddRecordTemplate(const Model::AddRecordTemplateRequest &request);
+                void AddRecordTemplateAsync(const Model::AddRecordTemplateRequest& request, const AddRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddRecordTemplateOutcomeCallable AddRecordTemplateCallable(const Model::AddRecordTemplateRequest& request);
+
+                /**
+                 *Used to set push/pull stream authentication configuration.
+                 * @param req AddStreamAuthRequest
+                 * @return AddStreamAuthOutcome
+                 */
+                AddStreamAuthOutcome AddStreamAuth(const Model::AddStreamAuthRequest &request);
+                void AddStreamAuthAsync(const Model::AddStreamAuthRequest& request, const AddStreamAuthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddStreamAuthOutcomeCallable AddStreamAuthCallable(const Model::AddStreamAuthRequest& request);
+
+                /**
+                 *This API is used to add a single device. After the device is added, configure it based on the returned results, then wait for device registration or stream pushing.
+                 * @param req AddUserDeviceRequest
+                 * @return AddUserDeviceOutcome
+                 */
+                AddUserDeviceOutcome AddUserDevice(const Model::AddUserDeviceRequest &request);
+                void AddUserDeviceAsync(const Model::AddUserDeviceRequest& request, const AddUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddUserDeviceOutcomeCallable AddUserDeviceCallable(const Model::AddUserDeviceRequest& request);
+
+                /**
+                 *Add channels for screenshot configuration in batches.
+                 * @param req BatchAddVideoSnapshotConfigChannelRequest
+                 * @return BatchAddVideoSnapshotConfigChannelOutcome
+                 */
+                BatchAddVideoSnapshotConfigChannelOutcome BatchAddVideoSnapshotConfigChannel(const Model::BatchAddVideoSnapshotConfigChannelRequest &request);
+                void BatchAddVideoSnapshotConfigChannelAsync(const Model::BatchAddVideoSnapshotConfigChannelRequest& request, const BatchAddVideoSnapshotConfigChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchAddVideoSnapshotConfigChannelOutcomeCallable BatchAddVideoSnapshotConfigChannelCallable(const Model::BatchAddVideoSnapshotConfigChannelRequest& request);
+
+                /**
+                 *Batch associate visual understanding plan channels
+                 * @param req BatchAssignVLPlanChannelsRequest
+                 * @return BatchAssignVLPlanChannelsOutcome
+                 */
+                BatchAssignVLPlanChannelsOutcome BatchAssignVLPlanChannels(const Model::BatchAssignVLPlanChannelsRequest &request);
+                void BatchAssignVLPlanChannelsAsync(const Model::BatchAssignVLPlanChannelsRequest& request, const BatchAssignVLPlanChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchAssignVLPlanChannelsOutcomeCallable BatchAssignVLPlanChannelsCallable(const Model::BatchAssignVLPlanChannelsRequest& request);
+
+                /**
+                 *This API is used to delete failed local recording download tasks in batches.
+                 * @param req BatchDeleteVideoDownloadTaskRequest
+                 * @return BatchDeleteVideoDownloadTaskOutcome
+                 */
+                BatchDeleteVideoDownloadTaskOutcome BatchDeleteVideoDownloadTask(const Model::BatchDeleteVideoDownloadTaskRequest &request);
+                void BatchDeleteVideoDownloadTaskAsync(const Model::BatchDeleteVideoDownloadTaskRequest& request, const BatchDeleteVideoDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchDeleteVideoDownloadTaskOutcomeCallable BatchDeleteVideoDownloadTaskCallable(const Model::BatchDeleteVideoDownloadTaskRequest& request);
+
+                /**
+                 *This API is used to batch obtain source material URLs for visual understanding plans.
+                 * @param req BatchGetVLPlanSourceFileURLRequest
+                 * @return BatchGetVLPlanSourceFileURLOutcome
+                 */
+                BatchGetVLPlanSourceFileURLOutcome BatchGetVLPlanSourceFileURL(const Model::BatchGetVLPlanSourceFileURLRequest &request);
+                void BatchGetVLPlanSourceFileURLAsync(const Model::BatchGetVLPlanSourceFileURLRequest& request, const BatchGetVLPlanSourceFileURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchGetVLPlanSourceFileURLOutcomeCallable BatchGetVLPlanSourceFileURLCallable(const Model::BatchGetVLPlanSourceFileURLRequest& request);
+
+                /**
+                 *Bulk gets screenshot image URLs
+                 * @param req BatchGetVideoSnapshotImageUrlRequest
+                 * @return BatchGetVideoSnapshotImageUrlOutcome
+                 */
+                BatchGetVideoSnapshotImageUrlOutcome BatchGetVideoSnapshotImageUrl(const Model::BatchGetVideoSnapshotImageUrlRequest &request);
+                void BatchGetVideoSnapshotImageUrlAsync(const Model::BatchGetVideoSnapshotImageUrlRequest& request, const BatchGetVideoSnapshotImageUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchGetVideoSnapshotImageUrlOutcomeCallable BatchGetVideoSnapshotImageUrlCallable(const Model::BatchGetVideoSnapshotImageUrlRequest& request);
+
+                /**
+                 *Used for batch operations (enable, disable, delete) on devices.
+                 * @param req BatchOperateDeviceRequest
+                 * @return BatchOperateDeviceOutcome
+                 */
+                BatchOperateDeviceOutcome BatchOperateDevice(const Model::BatchOperateDeviceRequest &request);
+                void BatchOperateDeviceAsync(const Model::BatchOperateDeviceRequest& request, const BatchOperateDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchOperateDeviceOutcomeCallable BatchOperateDeviceCallable(const Model::BatchOperateDeviceRequest& request);
+
+                /**
+                 *This API can be based on the Hikvision ISUP 5.0 protocol to pass through ISAPI request data. Before calling the API, ensure the device has successfully registered to this platform using the ISUP protocol.
+                 * @param req CallISAPIRequest
+                 * @return CallISAPIOutcome
+                 */
+                CallISAPIOutcome CallISAPI(const Model::CallISAPIRequest &request);
+                void CallISAPIAsync(const Model::CallISAPIRequest& request, const CallISAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CallISAPIOutcomeCallable CallISAPICallable(const Model::CallISAPIRequest& request);
+
+                /**
+                 *Used for device channel panning control, including turn, zoom scale, zoom, and aperture.
+                 * @param req ControlDevicePTZRequest
+                 * @return ControlDevicePTZOutcome
+                 */
+                ControlDevicePTZOutcome ControlDevicePTZ(const Model::ControlDevicePTZRequest &request);
+                void ControlDevicePTZAsync(const Model::ControlDevicePTZRequest& request, const ControlDevicePTZAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlDevicePTZOutcomeCallable ControlDevicePTZCallable(const Model::ControlDevicePTZRequest& request);
+
+                /**
+                 *Used to operate device preset positions, including settings, deletion, and calls.
+                 * @param req ControlDevicePresetRequest
+                 * @return ControlDevicePresetOutcome
+                 */
+                ControlDevicePresetOutcome ControlDevicePreset(const Model::ControlDevicePresetRequest &request);
+                void ControlDevicePresetAsync(const Model::ControlDevicePresetRequest& request, const ControlDevicePresetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlDevicePresetOutcomeCallable ControlDevicePresetCallable(const Model::ControlDevicePresetRequest& request);
+
+                /**
+                 *Control device capture (single). Currently only support national standard devices.
+                 * @param req ControlDeviceSnapshotRequest
+                 * @return ControlDeviceSnapshotOutcome
+                 */
+                ControlDeviceSnapshotOutcome ControlDeviceSnapshot(const Model::ControlDeviceSnapshotRequest &request);
+                void ControlDeviceSnapshotAsync(const Model::ControlDeviceSnapshotRequest& request, const ControlDeviceSnapshotAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlDeviceSnapshotOutcomeCallable ControlDeviceSnapshotCallable(const Model::ControlDeviceSnapshotRequest& request);
+
+                /**
+                 *This API is used to obtain the real-time streaming address of a device.
+                 * @param req ControlDeviceStreamRequest
+                 * @return ControlDeviceStreamOutcome
+                 */
+                ControlDeviceStreamOutcome ControlDeviceStream(const Model::ControlDeviceStreamRequest &request);
+                void ControlDeviceStreamAsync(const Model::ControlDeviceStreamRequest& request, const ControlDeviceStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlDeviceStreamOutcomeCallable ControlDeviceStreamCallable(const Model::ControlDeviceStreamRequest& request);
+
+                /**
+                 *This API is used to query the local recording timeline info of a device, which is stored locally on the NVR/IPC.
+                 * @param req ControlRecordTimelineRequest
+                 * @return ControlRecordTimelineOutcome
+                 */
+                ControlRecordTimelineOutcome ControlRecordTimeline(const Model::ControlRecordTimelineRequest &request);
+                void ControlRecordTimelineAsync(const Model::ControlRecordTimelineRequest& request, const ControlRecordTimelineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlRecordTimelineOutcomeCallable ControlRecordTimelineCallable(const Model::ControlRecordTimelineRequest& request);
+
+                /**
+                 *Creates a vision understanding plan
+                 * @param req CreateVLPlanRequest
+                 * @return CreateVLPlanOutcome
+                 */
+                CreateVLPlanOutcome CreateVLPlan(const Model::CreateVLPlanRequest &request);
+                void CreateVLPlanAsync(const Model::CreateVLPlanRequest& request, const CreateVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVLPlanOutcomeCallable CreateVLPlanCallable(const Model::CreateVLPlanRequest& request);
+
+                /**
+                 *Create a visual understanding template.
+                 * @param req CreateVLTemplateRequest
+                 * @return CreateVLTemplateOutcome
+                 */
+                CreateVLTemplateOutcome CreateVLTemplate(const Model::CreateVLTemplateRequest &request);
+                void CreateVLTemplateAsync(const Model::CreateVLTemplateRequest& request, const CreateVLTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVLTemplateOutcomeCallable CreateVLTemplateCallable(const Model::CreateVLTemplateRequest& request);
+
+                /**
+                 *This API is used to create a local recording download task.
+                 * @param req CreateVideoDownloadTaskRequest
+                 * @return CreateVideoDownloadTaskOutcome
+                 */
+                CreateVideoDownloadTaskOutcome CreateVideoDownloadTask(const Model::CreateVideoDownloadTaskRequest &request);
+                void CreateVideoDownloadTaskAsync(const Model::CreateVideoDownloadTaskRequest& request, const CreateVideoDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVideoDownloadTaskOutcomeCallable CreateVideoDownloadTaskCallable(const Model::CreateVideoDownloadTaskRequest& request);
+
+                /**
+                 *This API is used to create a screenshot configuration.
+                 * @param req CreateVideoSnapshotConfigRequest
+                 * @return CreateVideoSnapshotConfigOutcome
+                 */
+                CreateVideoSnapshotConfigOutcome CreateVideoSnapshotConfig(const Model::CreateVideoSnapshotConfigRequest &request);
+                void CreateVideoSnapshotConfigAsync(const Model::CreateVideoSnapshotConfigRequest& request, const CreateVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVideoSnapshotConfigOutcomeCallable CreateVideoSnapshotConfigCallable(const Model::CreateVideoSnapshotConfigRequest& request);
+
+                /**
+                 *Create a screenshot template.
+                 * @param req CreateVideoSnapshotTemplateRequest
+                 * @return CreateVideoSnapshotTemplateOutcome
+                 */
+                CreateVideoSnapshotTemplateOutcome CreateVideoSnapshotTemplate(const Model::CreateVideoSnapshotTemplateRequest &request);
+                void CreateVideoSnapshotTemplateAsync(const Model::CreateVideoSnapshotTemplateRequest& request, const CreateVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVideoSnapshotTemplateOutcomeCallable CreateVideoSnapshotTemplateCallable(const Model::CreateVideoSnapshotTemplateRequest& request);
+
+                /**
+                 *This API is used to delete domain names.
+                 * @param req DeleteDomainRequest
+                 * @return DeleteDomainOutcome
+                 */
+                DeleteDomainOutcome DeleteDomain(const Model::DeleteDomainRequest &request);
+                void DeleteDomainAsync(const Model::DeleteDomainRequest& request, const DeleteDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDomainOutcomeCallable DeleteDomainCallable(const Model::DeleteDomainRequest& request);
+
+                /**
+                 *This API is used to delete an organization.
+                 * @param req DeleteOrganizationRequest
+                 * @return DeleteOrganizationOutcome
+                 */
+                DeleteOrganizationOutcome DeleteOrganization(const Model::DeleteOrganizationRequest &request);
+                void DeleteOrganizationAsync(const Model::DeleteOrganizationRequest& request, const DeleteOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteOrganizationOutcomeCallable DeleteOrganizationCallable(const Model::DeleteOrganizationRequest& request);
+
+                /**
+                 *Used to delete a video recording cloud template.
+                 * @param req DeleteRecordBackupPlanRequest
+                 * @return DeleteRecordBackupPlanOutcome
+                 */
+                DeleteRecordBackupPlanOutcome DeleteRecordBackupPlan(const Model::DeleteRecordBackupPlanRequest &request);
+                void DeleteRecordBackupPlanAsync(const Model::DeleteRecordBackupPlanRequest& request, const DeleteRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRecordBackupPlanOutcomeCallable DeleteRecordBackupPlanCallable(const Model::DeleteRecordBackupPlanRequest& request);
+
+                /**
+                 *This API is used to delete a video recording cloud template.
+                 * @param req DeleteRecordBackupTemplateRequest
+                 * @return DeleteRecordBackupTemplateOutcome
+                 */
+                DeleteRecordBackupTemplateOutcome DeleteRecordBackupTemplate(const Model::DeleteRecordBackupTemplateRequest &request);
+                void DeleteRecordBackupTemplateAsync(const Model::DeleteRecordBackupTemplateRequest& request, const DeleteRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRecordBackupTemplateOutcomeCallable DeleteRecordBackupTemplateCallable(const Model::DeleteRecordBackupTemplateRequest& request);
+
+                /**
+                 *This API is used to delete a real-time cloud migration plan.
+                 * @param req DeleteRecordPlanRequest
+                 * @return DeleteRecordPlanOutcome
+                 */
+                DeleteRecordPlanOutcome DeleteRecordPlan(const Model::DeleteRecordPlanRequest &request);
+                void DeleteRecordPlanAsync(const Model::DeleteRecordPlanRequest& request, const DeleteRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRecordPlanOutcomeCallable DeleteRecordPlanCallable(const Model::DeleteRecordPlanRequest& request);
+
+                /**
+                 *This API is used to delete a retrieval task.
+                 * @param req DeleteRecordRetrieveTaskRequest
+                 * @return DeleteRecordRetrieveTaskOutcome
+                 */
+                DeleteRecordRetrieveTaskOutcome DeleteRecordRetrieveTask(const Model::DeleteRecordRetrieveTaskRequest &request);
+                void DeleteRecordRetrieveTaskAsync(const Model::DeleteRecordRetrieveTaskRequest& request, const DeleteRecordRetrieveTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRecordRetrieveTaskOutcomeCallable DeleteRecordRetrieveTaskCallable(const Model::DeleteRecordRetrieveTaskRequest& request);
+
+                /**
+                 *Used to delete a real-time cloud template.
+                 * @param req DeleteRecordTemplateRequest
+                 * @return DeleteRecordTemplateOutcome
+                 */
+                DeleteRecordTemplateOutcome DeleteRecordTemplate(const Model::DeleteRecordTemplateRequest &request);
+                void DeleteRecordTemplateAsync(const Model::DeleteRecordTemplateRequest& request, const DeleteRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRecordTemplateOutcomeCallable DeleteRecordTemplateCallable(const Model::DeleteRecordTemplateRequest& request);
+
+                /**
+                 *Used to delete completed tasks.
+                 * @param req DeleteTaskRequest
+                 * @return DeleteTaskOutcome
+                 */
+                DeleteTaskOutcome DeleteTask(const Model::DeleteTaskRequest &request);
+                void DeleteTaskAsync(const Model::DeleteTaskRequest& request, const DeleteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTaskOutcomeCallable DeleteTaskCallable(const Model::DeleteTaskRequest& request);
+
+                /**
+                 *This API is used to delete added devices.
+                 * @param req DeleteUserDeviceRequest
+                 * @return DeleteUserDeviceOutcome
+                 */
+                DeleteUserDeviceOutcome DeleteUserDevice(const Model::DeleteUserDeviceRequest &request);
+                void DeleteUserDeviceAsync(const Model::DeleteUserDeviceRequest& request, const DeleteUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteUserDeviceOutcomeCallable DeleteUserDeviceCallable(const Model::DeleteUserDeviceRequest& request);
+
+                /**
+                 *Delete a vision understanding plan
+                 * @param req DeleteVLPlanRequest
+                 * @return DeleteVLPlanOutcome
+                 */
+                DeleteVLPlanOutcome DeleteVLPlan(const Model::DeleteVLPlanRequest &request);
+                void DeleteVLPlanAsync(const Model::DeleteVLPlanRequest& request, const DeleteVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVLPlanOutcomeCallable DeleteVLPlanCallable(const Model::DeleteVLPlanRequest& request);
+
+                /**
+                 *Delete a visual understanding template.
+                 * @param req DeleteVLTemplateRequest
+                 * @return DeleteVLTemplateOutcome
+                 */
+                DeleteVLTemplateOutcome DeleteVLTemplate(const Model::DeleteVLTemplateRequest &request);
+                void DeleteVLTemplateAsync(const Model::DeleteVLTemplateRequest& request, const DeleteVLTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVLTemplateOutcomeCallable DeleteVLTemplateCallable(const Model::DeleteVLTemplateRequest& request);
+
+                /**
+                 *Deletes screenshot configuration
+                 * @param req DeleteVideoSnapshotConfigRequest
+                 * @return DeleteVideoSnapshotConfigOutcome
+                 */
+                DeleteVideoSnapshotConfigOutcome DeleteVideoSnapshotConfig(const Model::DeleteVideoSnapshotConfigRequest &request);
+                void DeleteVideoSnapshotConfigAsync(const Model::DeleteVideoSnapshotConfigRequest& request, const DeleteVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVideoSnapshotConfigOutcomeCallable DeleteVideoSnapshotConfigCallable(const Model::DeleteVideoSnapshotConfigRequest& request);
+
+                /**
+                 *This API is used to delete a screenshot template.
+                 * @param req DeleteVideoSnapshotTemplateRequest
+                 * @return DeleteVideoSnapshotTemplateOutcome
+                 */
+                DeleteVideoSnapshotTemplateOutcome DeleteVideoSnapshotTemplate(const Model::DeleteVideoSnapshotTemplateRequest &request);
+                void DeleteVideoSnapshotTemplateAsync(const Model::DeleteVideoSnapshotTemplateRequest& request, const DeleteVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVideoSnapshotTemplateOutcomeCallable DeleteVideoSnapshotTemplateCallable(const Model::DeleteVideoSnapshotTemplateRequest& request);
+
+                /**
+                 *This API is used to get the CNAME value based on the service node.
+                 * @param req DescribeCNAMERequest
+                 * @return DescribeCNAMEOutcome
+                 */
+                DescribeCNAMEOutcome DescribeCNAME(const Model::DescribeCNAMERequest &request);
+                void DescribeCNAMEAsync(const Model::DescribeCNAMERequest& request, const DescribeCNAMEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCNAMEOutcomeCallable DescribeCNAMECallable(const Model::DescribeCNAMERequest& request);
+
+                /**
+                 *This API is used to query the channels of a device.
+                 * @param req DescribeDeviceChannelRequest
+                 * @return DescribeDeviceChannelOutcome
+                 */
+                DescribeDeviceChannelOutcome DescribeDeviceChannel(const Model::DescribeDeviceChannelRequest &request);
+                void DescribeDeviceChannelAsync(const Model::DescribeDeviceChannelRequest& request, const DescribeDeviceChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeviceChannelOutcomeCallable DescribeDeviceChannelCallable(const Model::DescribeDeviceChannelRequest& request);
+
+                /**
+                 *This API is used to query preset position information of device channels.
+                 * @param req DescribeDevicePresetRequest
+                 * @return DescribeDevicePresetOutcome
+                 */
+                DescribeDevicePresetOutcome DescribeDevicePreset(const Model::DescribeDevicePresetRequest &request);
+                void DescribeDevicePresetAsync(const Model::DescribeDevicePresetRequest& request, const DescribeDevicePresetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDevicePresetOutcomeCallable DescribeDevicePresetCallable(const Model::DescribeDevicePresetRequest& request);
+
+                /**
+                 *This API is used to query the list of added domains.
+                 * @param req DescribeDomainRequest
+                 * @return DescribeDomainOutcome
+                 */
+                DescribeDomainOutcome DescribeDomain(const Model::DescribeDomainRequest &request);
+                void DescribeDomainAsync(const Model::DescribeDomainRequest& request, const DescribeDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDomainOutcomeCallable DescribeDomainCallable(const Model::DescribeDomainRequest& request);
+
+                /**
+                 *This API is used to query the service nodes that can be bound when a user adds a domain name. The result is all service nodes supported by the platform. Each service node can only be bound to one domain name.
+                 * @param req DescribeDomainRegionRequest
+                 * @return DescribeDomainRegionOutcome
+                 */
+                DescribeDomainRegionOutcome DescribeDomainRegion(const Model::DescribeDomainRegionRequest &request);
+                void DescribeDomainRegionAsync(const Model::DescribeDomainRegionRequest& request, const DescribeDomainRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDomainRegionOutcomeCallable DescribeDomainRegionCallable(const Model::DescribeDomainRegionRequest& request);
+
+                /**
+                 *This API is used to obtain the public network address of a national standard device.
+                 * @param req DescribeGBDeviceAddrRequest
+                 * @return DescribeGBDeviceAddrOutcome
+                 */
+                DescribeGBDeviceAddrOutcome DescribeGBDeviceAddr(const Model::DescribeGBDeviceAddrRequest &request);
+                void DescribeGBDeviceAddrAsync(const Model::DescribeGBDeviceAddrRequest& request, const DescribeGBDeviceAddrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGBDeviceAddrOutcomeCallable DescribeGBDeviceAddrCallable(const Model::DescribeGBDeviceAddrRequest& request);
+
+                /**
+                 *Used for querying organizations.
+                 * @param req DescribeOrganizationRequest
+                 * @return DescribeOrganizationOutcome
+                 */
+                DescribeOrganizationOutcome DescribeOrganization(const Model::DescribeOrganizationRequest &request);
+                void DescribeOrganizationAsync(const Model::DescribeOrganizationRequest& request, const DescribeOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrganizationOutcomeCallable DescribeOrganizationCallable(const Model::DescribeOrganizationRequest& request);
+
+                /**
+                 *This API is used to query recording cloud migration plan details.
+                 * @param req DescribeRecordBackupPlanRequest
+                 * @return DescribeRecordBackupPlanOutcome
+                 */
+                DescribeRecordBackupPlanOutcome DescribeRecordBackupPlan(const Model::DescribeRecordBackupPlanRequest &request);
+                void DescribeRecordBackupPlanAsync(const Model::DescribeRecordBackupPlanRequest& request, const DescribeRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordBackupPlanOutcomeCallable DescribeRecordBackupPlanCallable(const Model::DescribeRecordBackupPlanRequest& request);
+
+                /**
+                 *This API is used to query video recording cloud template details.
+                 * @param req DescribeRecordBackupTemplateRequest
+                 * @return DescribeRecordBackupTemplateOutcome
+                 */
+                DescribeRecordBackupTemplateOutcome DescribeRecordBackupTemplate(const Model::DescribeRecordBackupTemplateRequest &request);
+                void DescribeRecordBackupTemplateAsync(const Model::DescribeRecordBackupTemplateRequest& request, const DescribeRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordBackupTemplateOutcomeCallable DescribeRecordBackupTemplateCallable(const Model::DescribeRecordBackupTemplateRequest& request);
+
+                /**
+                 *This API is used to query the device cloud recording timeline information, which is the cloud storage video recording after setting a recording schedule for video upload to cloud.
+                 * @param req DescribeRecordFileRequest
+                 * @return DescribeRecordFileOutcome
+                 */
+                DescribeRecordFileOutcome DescribeRecordFile(const Model::DescribeRecordFileRequest &request);
+                void DescribeRecordFileAsync(const Model::DescribeRecordFileRequest& request, const DescribeRecordFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordFileOutcomeCallable DescribeRecordFileCallable(const Model::DescribeRecordFileRequest& request);
+
+                /**
+                 *This API is used to query real-time cloud migration plan details.
+                 * @param req DescribeRecordPlanRequest
+                 * @return DescribeRecordPlanOutcome
+                 */
+                DescribeRecordPlanOutcome DescribeRecordPlan(const Model::DescribeRecordPlanRequest &request);
+                void DescribeRecordPlanAsync(const Model::DescribeRecordPlanRequest& request, const DescribeRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordPlanOutcomeCallable DescribeRecordPlanCallable(const Model::DescribeRecordPlanRequest& request);
+
+                /**
+                 *This API is used to obtain the cloud recording playback url address.
+                 * @param req DescribeRecordPlaybackUrlRequest
+                 * @return DescribeRecordPlaybackUrlOutcome
+                 */
+                DescribeRecordPlaybackUrlOutcome DescribeRecordPlaybackUrl(const Model::DescribeRecordPlaybackUrlRequest &request);
+                void DescribeRecordPlaybackUrlAsync(const Model::DescribeRecordPlaybackUrlRequest& request, const DescribeRecordPlaybackUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordPlaybackUrlOutcomeCallable DescribeRecordPlaybackUrlCallable(const Model::DescribeRecordPlaybackUrlRequest& request);
+
+                /**
+                 *Used to query the details of a cloud recording retrieval task.
+                 * @param req DescribeRecordRetrieveTaskRequest
+                 * @return DescribeRecordRetrieveTaskOutcome
+                 */
+                DescribeRecordRetrieveTaskOutcome DescribeRecordRetrieveTask(const Model::DescribeRecordRetrieveTaskRequest &request);
+                void DescribeRecordRetrieveTaskAsync(const Model::DescribeRecordRetrieveTaskRequest& request, const DescribeRecordRetrieveTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordRetrieveTaskOutcomeCallable DescribeRecordRetrieveTaskCallable(const Model::DescribeRecordRetrieveTaskRequest& request);
+
+                /**
+                 *This API is used to query real-time cloud migration template details.
+                 * @param req DescribeRecordTemplateRequest
+                 * @return DescribeRecordTemplateOutcome
+                 */
+                DescribeRecordTemplateOutcome DescribeRecordTemplate(const Model::DescribeRecordTemplateRequest &request);
+                void DescribeRecordTemplateAsync(const Model::DescribeRecordTemplateRequest& request, const DescribeRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordTemplateOutcomeCallable DescribeRecordTemplateCallable(const Model::DescribeRecordTemplateRequest& request);
+
+                /**
+                 *Used to query push/pull stream authentication configuration.
+                 * @param req DescribeStreamAuthRequest
+                 * @return DescribeStreamAuthOutcome
+                 */
+                DescribeStreamAuthOutcome DescribeStreamAuth(const Model::DescribeStreamAuthRequest &request);
+                void DescribeStreamAuthAsync(const Model::DescribeStreamAuthRequest& request, const DescribeStreamAuthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamAuthOutcomeCallable DescribeStreamAuthCallable(const Model::DescribeStreamAuthRequest& request);
+
+                /**
+                 *This API is used to query task details.
+                 * @param req DescribeTaskRequest
+                 * @return DescribeTaskOutcome
+                 */
+                DescribeTaskOutcome DescribeTask(const Model::DescribeTaskRequest &request);
+                void DescribeTaskAsync(const Model::DescribeTaskRequest& request, const DescribeTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTaskOutcomeCallable DescribeTaskCallable(const Model::DescribeTaskRequest& request);
+
+                /**
+                 *This API is used to query detailed information of a device.
+                 * @param req DescribeUserDeviceRequest
+                 * @return DescribeUserDeviceOutcome
+                 */
+                DescribeUserDeviceOutcome DescribeUserDevice(const Model::DescribeUserDeviceRequest &request);
+                void DescribeUserDeviceAsync(const Model::DescribeUserDeviceRequest& request, const DescribeUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserDeviceOutcomeCallable DescribeUserDeviceCallable(const Model::DescribeUserDeviceRequest& request);
+
+                /**
+                 *This API is used to query device details in batches.
+                 * @param req DescribeUserDeviceListRequest
+                 * @return DescribeUserDeviceListOutcome
+                 */
+                DescribeUserDeviceListOutcome DescribeUserDeviceList(const Model::DescribeUserDeviceListRequest &request);
+                void DescribeUserDeviceListAsync(const Model::DescribeUserDeviceListRequest& request, const DescribeUserDeviceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserDeviceListOutcomeCallable DescribeUserDeviceListCallable(const Model::DescribeUserDeviceListRequest& request);
+
+                /**
+                 *Query the plan details of visual understanding.
+                 * @param req DescribeVLPlanRequest
+                 * @return DescribeVLPlanOutcome
+                 */
+                DescribeVLPlanOutcome DescribeVLPlan(const Model::DescribeVLPlanRequest &request);
+                void DescribeVLPlanAsync(const Model::DescribeVLPlanRequest& request, const DescribeVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVLPlanOutcomeCallable DescribeVLPlanCallable(const Model::DescribeVLPlanRequest& request);
+
+                /**
+                 *Query the result details of a vision understanding plan
+                 * @param req DescribeVLPlanResultRequest
+                 * @return DescribeVLPlanResultOutcome
+                 */
+                DescribeVLPlanResultOutcome DescribeVLPlanResult(const Model::DescribeVLPlanResultRequest &request);
+                void DescribeVLPlanResultAsync(const Model::DescribeVLPlanResultRequest& request, const DescribeVLPlanResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVLPlanResultOutcomeCallable DescribeVLPlanResultCallable(const Model::DescribeVLPlanResultRequest& request);
+
+                /**
+                 *Query the details of a visual understanding template.
+                 * @param req DescribeVLTemplateRequest
+                 * @return DescribeVLTemplateOutcome
+                 */
+                DescribeVLTemplateOutcome DescribeVLTemplate(const Model::DescribeVLTemplateRequest &request);
+                void DescribeVLTemplateAsync(const Model::DescribeVLTemplateRequest& request, const DescribeVLTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVLTemplateOutcomeCallable DescribeVLTemplateCallable(const Model::DescribeVLTemplateRequest& request);
+
+                /**
+                 *This API is used to obtain the bitrate info of a video channel.
+                 * @param req DescribeVideoBitRateRequest
+                 * @return DescribeVideoBitRateOutcome
+                 */
+                DescribeVideoBitRateOutcome DescribeVideoBitRate(const Model::DescribeVideoBitRateRequest &request);
+                void DescribeVideoBitRateAsync(const Model::DescribeVideoBitRateRequest& request, const DescribeVideoBitRateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVideoBitRateOutcomeCallable DescribeVideoBitRateCallable(const Model::DescribeVideoBitRateRequest& request);
+
+                /**
+                 *This API is used to obtain the download url of cloud recordings.
+                 * @param req DescribeVideoDownloadUrlRequest
+                 * @return DescribeVideoDownloadUrlOutcome
+                 */
+                DescribeVideoDownloadUrlOutcome DescribeVideoDownloadUrl(const Model::DescribeVideoDownloadUrlRequest &request);
+                void DescribeVideoDownloadUrlAsync(const Model::DescribeVideoDownloadUrlRequest& request, const DescribeVideoDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVideoDownloadUrlOutcomeCallable DescribeVideoDownloadUrlCallable(const Model::DescribeVideoDownloadUrlRequest& request);
+
+                /**
+                 *Queries screenshot configuration details
+                 * @param req DescribeVideoSnapshotConfigRequest
+                 * @return DescribeVideoSnapshotConfigOutcome
+                 */
+                DescribeVideoSnapshotConfigOutcome DescribeVideoSnapshotConfig(const Model::DescribeVideoSnapshotConfigRequest &request);
+                void DescribeVideoSnapshotConfigAsync(const Model::DescribeVideoSnapshotConfigRequest& request, const DescribeVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVideoSnapshotConfigOutcomeCallable DescribeVideoSnapshotConfigCallable(const Model::DescribeVideoSnapshotConfigRequest& request);
+
+                /**
+                 *Get screenshot template details.
+                 * @param req DescribeVideoSnapshotTemplateRequest
+                 * @return DescribeVideoSnapshotTemplateOutcome
+                 */
+                DescribeVideoSnapshotTemplateOutcome DescribeVideoSnapshotTemplate(const Model::DescribeVideoSnapshotTemplateRequest &request);
+                void DescribeVideoSnapshotTemplateAsync(const Model::DescribeVideoSnapshotTemplateRequest& request, const DescribeVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVideoSnapshotTemplateOutcomeCallable DescribeVideoSnapshotTemplateCallable(const Model::DescribeVideoSnapshotTemplateRequest& request);
+
+                /**
+                 *Get device capture result list
+                 * @param req ListDeviceSnapshotsRequest
+                 * @return ListDeviceSnapshotsOutcome
+                 */
+                ListDeviceSnapshotsOutcome ListDeviceSnapshots(const Model::ListDeviceSnapshotsRequest &request);
+                void ListDeviceSnapshotsAsync(const Model::ListDeviceSnapshotsRequest& request, const ListDeviceSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDeviceSnapshotsOutcomeCallable ListDeviceSnapshotsCallable(const Model::ListDeviceSnapshotsRequest& request);
+
+                /**
+                 *This API is used to obtain the device list under the corresponding organization.
+                 * @param req ListDevicesRequest
+                 * @return ListDevicesOutcome
+                 */
+                ListDevicesOutcome ListDevices(const Model::ListDevicesRequest &request);
+                void ListDevicesAsync(const Model::ListDevicesRequest& request, const ListDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDevicesOutcomeCallable ListDevicesCallable(const Model::ListDevicesRequest& request);
+
+                /**
+                 *This API is used to query the channel list under the organizational unit directory.
+                 * @param req ListOrganizationChannelsRequest
+                 * @return ListOrganizationChannelsOutcome
+                 */
+                ListOrganizationChannelsOutcome ListOrganizationChannels(const Model::ListOrganizationChannelsRequest &request);
+                void ListOrganizationChannelsAsync(const Model::ListOrganizationChannelsRequest& request, const ListOrganizationChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListOrganizationChannelsOutcomeCallable ListOrganizationChannelsCallable(const Model::ListOrganizationChannelsRequest& request);
+
+                /**
+                 *This API is used to query the device channel list under a recording cloud migration plan.
+                 * @param req ListRecordBackupPlanDevicesRequest
+                 * @return ListRecordBackupPlanDevicesOutcome
+                 */
+                ListRecordBackupPlanDevicesOutcome ListRecordBackupPlanDevices(const Model::ListRecordBackupPlanDevicesRequest &request);
+                void ListRecordBackupPlanDevicesAsync(const Model::ListRecordBackupPlanDevicesRequest& request, const ListRecordBackupPlanDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordBackupPlanDevicesOutcomeCallable ListRecordBackupPlanDevicesCallable(const Model::ListRecordBackupPlanDevicesRequest& request);
+
+                /**
+                 *This API is used to query the recording cloud migration plan list.
+                 * @param req ListRecordBackupPlansRequest
+                 * @return ListRecordBackupPlansOutcome
+                 */
+                ListRecordBackupPlansOutcome ListRecordBackupPlans(const Model::ListRecordBackupPlansRequest &request);
+                void ListRecordBackupPlansAsync(const Model::ListRecordBackupPlansRequest& request, const ListRecordBackupPlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordBackupPlansOutcomeCallable ListRecordBackupPlansCallable(const Model::ListRecordBackupPlansRequest& request);
+
+                /**
+                 *This API is used to query the video recording cloud template list.
+                 * @param req ListRecordBackupTemplatesRequest
+                 * @return ListRecordBackupTemplatesOutcome
+                 */
+                ListRecordBackupTemplatesOutcome ListRecordBackupTemplates(const Model::ListRecordBackupTemplatesRequest &request);
+                void ListRecordBackupTemplatesAsync(const Model::ListRecordBackupTemplatesRequest& request, const ListRecordBackupTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordBackupTemplatesOutcomeCallable ListRecordBackupTemplatesCallable(const Model::ListRecordBackupTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the device channel list under a real-time cloud migration plan.
+                 * @param req ListRecordPlanDevicesRequest
+                 * @return ListRecordPlanDevicesOutcome
+                 */
+                ListRecordPlanDevicesOutcome ListRecordPlanDevices(const Model::ListRecordPlanDevicesRequest &request);
+                void ListRecordPlanDevicesAsync(const Model::ListRecordPlanDevicesRequest& request, const ListRecordPlanDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordPlanDevicesOutcomeCallable ListRecordPlanDevicesCallable(const Model::ListRecordPlanDevicesRequest& request);
+
+                /**
+                 *This API is used to query the real-time cloud migration plan list.
+                 * @param req ListRecordPlansRequest
+                 * @return ListRecordPlansOutcome
+                 */
+                ListRecordPlansOutcome ListRecordPlans(const Model::ListRecordPlansRequest &request);
+                void ListRecordPlansAsync(const Model::ListRecordPlansRequest& request, const ListRecordPlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordPlansOutcomeCallable ListRecordPlansCallable(const Model::ListRecordPlansRequest& request);
+
+                /**
+                 *This API is used to query the retrieval task list.
+                 * @param req ListRecordRetrieveTasksRequest
+                 * @return ListRecordRetrieveTasksOutcome
+                 */
+                ListRecordRetrieveTasksOutcome ListRecordRetrieveTasks(const Model::ListRecordRetrieveTasksRequest &request);
+                void ListRecordRetrieveTasksAsync(const Model::ListRecordRetrieveTasksRequest& request, const ListRecordRetrieveTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordRetrieveTasksOutcomeCallable ListRecordRetrieveTasksCallable(const Model::ListRecordRetrieveTasksRequest& request);
+
+                /**
+                 *This API is used to query the real-time cloud migration template list.
+                 * @param req ListRecordTemplatesRequest
+                 * @return ListRecordTemplatesOutcome
+                 */
+                ListRecordTemplatesOutcome ListRecordTemplates(const Model::ListRecordTemplatesRequest &request);
+                void ListRecordTemplatesAsync(const Model::ListRecordTemplatesRequest& request, const ListRecordTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRecordTemplatesOutcomeCallable ListRecordTemplatesCallable(const Model::ListRecordTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the subtask list of a query task.
+                 * @param req ListSubTasksRequest
+                 * @return ListSubTasksOutcome
+                 */
+                ListSubTasksOutcome ListSubTasks(const Model::ListSubTasksRequest &request);
+                void ListSubTasksAsync(const Model::ListSubTasksRequest& request, const ListSubTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListSubTasksOutcomeCallable ListSubTasksCallable(const Model::ListSubTasksRequest& request);
+
+                /**
+                 *This API is used to query the batch task and simple task list.
+                 * @param req ListTasksRequest
+                 * @return ListTasksOutcome
+                 */
+                ListTasksOutcome ListTasks(const Model::ListTasksRequest &request);
+                void ListTasksAsync(const Model::ListTasksRequest& request, const ListTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListTasksOutcomeCallable ListTasksCallable(const Model::ListTasksRequest& request);
+
+                /**
+                 *Get the visual understanding plan list.
+                 * @param req ListVLPlansRequest
+                 * @return ListVLPlansOutcome
+                 */
+                ListVLPlansOutcome ListVLPlans(const Model::ListVLPlansRequest &request);
+                void ListVLPlansAsync(const Model::ListVLPlansRequest& request, const ListVLPlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListVLPlansOutcomeCallable ListVLPlansCallable(const Model::ListVLPlansRequest& request);
+
+                /**
+                 *Get a list of visual understanding templates.
+                 * @param req ListVLTemplatesRequest
+                 * @return ListVLTemplatesOutcome
+                 */
+                ListVLTemplatesOutcome ListVLTemplates(const Model::ListVLTemplatesRequest &request);
+                void ListVLTemplatesAsync(const Model::ListVLTemplatesRequest& request, const ListVLTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListVLTemplatesOutcomeCallable ListVLTemplatesCallable(const Model::ListVLTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the recording download task list in this store.
+                 * @param req ListVideoDownloadTaskRequest
+                 * @return ListVideoDownloadTaskOutcome
+                 */
+                ListVideoDownloadTaskOutcome ListVideoDownloadTask(const Model::ListVideoDownloadTaskRequest &request);
+                void ListVideoDownloadTaskAsync(const Model::ListVideoDownloadTaskRequest& request, const ListVideoDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListVideoDownloadTaskOutcomeCallable ListVideoDownloadTaskCallable(const Model::ListVideoDownloadTaskRequest& request);
+
+                /**
+                 *This API is used to search the screenshot template details list.
+                 * @param req ListVideoSnapshotTemplateRequest
+                 * @return ListVideoSnapshotTemplateOutcome
+                 */
+                ListVideoSnapshotTemplateOutcome ListVideoSnapshotTemplate(const Model::ListVideoSnapshotTemplateRequest &request);
+                void ListVideoSnapshotTemplateAsync(const Model::ListVideoSnapshotTemplateRequest& request, const ListVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListVideoSnapshotTemplateOutcomeCallable ListVideoSnapshotTemplateCallable(const Model::ListVideoSnapshotTemplateRequest& request);
+
+                /**
+                 *Modify a vision understanding plan
+                 * @param req ModifyVLPlanRequest
+                 * @return ModifyVLPlanOutcome
+                 */
+                ModifyVLPlanOutcome ModifyVLPlan(const Model::ModifyVLPlanRequest &request);
+                void ModifyVLPlanAsync(const Model::ModifyVLPlanRequest& request, const ModifyVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVLPlanOutcomeCallable ModifyVLPlanCallable(const Model::ModifyVLPlanRequest& request);
+
+                /**
+                 *Update screenshot configuration
+                 * @param req ModifyVideoSnapshotConfigRequest
+                 * @return ModifyVideoSnapshotConfigOutcome
+                 */
+                ModifyVideoSnapshotConfigOutcome ModifyVideoSnapshotConfig(const Model::ModifyVideoSnapshotConfigRequest &request);
+                void ModifyVideoSnapshotConfigAsync(const Model::ModifyVideoSnapshotConfigRequest& request, const ModifyVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVideoSnapshotConfigOutcomeCallable ModifyVideoSnapshotConfigCallable(const Model::ModifyVideoSnapshotConfigRequest& request);
+
+                /**
+                 *This API is used to obtain the local device recording URL address.
+                 * @param req PlayRecordRequest
+                 * @return PlayRecordOutcome
+                 */
+                PlayRecordOutcome PlayRecord(const Model::PlayRecordRequest &request);
+                void PlayRecordAsync(const Model::PlayRecordRequest& request, const PlayRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PlayRecordOutcomeCallable PlayRecordCallable(const Model::PlayRecordRequest& request);
+
+                /**
+                 *Query the disabled channel list
+                 * @param req QueryForbidPlayChannelListRequest
+                 * @return QueryForbidPlayChannelListOutcome
+                 */
+                QueryForbidPlayChannelListOutcome QueryForbidPlayChannelList(const Model::QueryForbidPlayChannelListRequest &request);
+                void QueryForbidPlayChannelListAsync(const Model::QueryForbidPlayChannelListRequest& request, const QueryForbidPlayChannelListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryForbidPlayChannelListOutcomeCallable QueryForbidPlayChannelListCallable(const Model::QueryForbidPlayChannelListRequest& request);
+
+                /**
+                 *This API is used to synchronize channels of national standard devices. After the API is called, a request is triggered to get the channel list from devices. Newly-added channels are stored, and channels deleted on devices need to be deleted manually and are not automatically deleted in the backend.
+                 * @param req RefreshDeviceChannelRequest
+                 * @return RefreshDeviceChannelOutcome
+                 */
+                RefreshDeviceChannelOutcome RefreshDeviceChannel(const Model::RefreshDeviceChannelRequest &request);
+                void RefreshDeviceChannelAsync(const Model::RefreshDeviceChannelRequest& request, const RefreshDeviceChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RefreshDeviceChannelOutcomeCallable RefreshDeviceChannelCallable(const Model::RefreshDeviceChannelRequest& request);
+
+                /**
+                 *Forbid the live preview of video channels for root accounts and sub-accounts.
+                 * @param req SetForbidPlayChannelsRequest
+                 * @return SetForbidPlayChannelsOutcome
+                 */
+                SetForbidPlayChannelsOutcome SetForbidPlayChannels(const Model::SetForbidPlayChannelsRequest &request);
+                void SetForbidPlayChannelsAsync(const Model::SetForbidPlayChannelsRequest& request, const SetForbidPlayChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetForbidPlayChannelsOutcomeCallable SetForbidPlayChannelsCallable(const Model::SetForbidPlayChannelsRequest& request);
+
+                /**
+                 *Used to change the organization of devices in batches.
+                 * @param req UpdateDeviceOrganizationRequest
+                 * @return UpdateDeviceOrganizationOutcome
+                 */
+                UpdateDeviceOrganizationOutcome UpdateDeviceOrganization(const Model::UpdateDeviceOrganizationRequest &request);
+                void UpdateDeviceOrganizationAsync(const Model::UpdateDeviceOrganizationRequest& request, const UpdateDeviceOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateDeviceOrganizationOutcomeCallable UpdateDeviceOrganizationCallable(const Model::UpdateDeviceOrganizationRequest& request);
+
+                /**
+                 *Used to enable or disable a device. After it is disabled, device registration is denied.
+                 * @param req UpdateDeviceStatusRequest
+                 * @return UpdateDeviceStatusOutcome
+                 */
+                UpdateDeviceStatusOutcome UpdateDeviceStatus(const Model::UpdateDeviceStatusRequest &request);
+                void UpdateDeviceStatusAsync(const Model::UpdateDeviceStatusRequest& request, const UpdateDeviceStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateDeviceStatusOutcomeCallable UpdateDeviceStatusCallable(const Model::UpdateDeviceStatusRequest& request);
+
+                /**
+                 *Used to modify an organization.
+                 * @param req UpdateOrganizationRequest
+                 * @return UpdateOrganizationOutcome
+                 */
+                UpdateOrganizationOutcome UpdateOrganization(const Model::UpdateOrganizationRequest &request);
+                void UpdateOrganizationAsync(const Model::UpdateOrganizationRequest& request, const UpdateOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateOrganizationOutcomeCallable UpdateOrganizationCallable(const Model::UpdateOrganizationRequest& request);
+
+                /**
+                 *Used to modify the recording cloud migration plan.
+                 * @param req UpdateRecordBackupPlanRequest
+                 * @return UpdateRecordBackupPlanOutcome
+                 */
+                UpdateRecordBackupPlanOutcome UpdateRecordBackupPlan(const Model::UpdateRecordBackupPlanRequest &request);
+                void UpdateRecordBackupPlanAsync(const Model::UpdateRecordBackupPlanRequest& request, const UpdateRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateRecordBackupPlanOutcomeCallable UpdateRecordBackupPlanCallable(const Model::UpdateRecordBackupPlanRequest& request);
+
+                /**
+                 *Used to modify a video recording cloud template.
+                 * @param req UpdateRecordBackupTemplateRequest
+                 * @return UpdateRecordBackupTemplateOutcome
+                 */
+                UpdateRecordBackupTemplateOutcome UpdateRecordBackupTemplate(const Model::UpdateRecordBackupTemplateRequest &request);
+                void UpdateRecordBackupTemplateAsync(const Model::UpdateRecordBackupTemplateRequest& request, const UpdateRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateRecordBackupTemplateOutcomeCallable UpdateRecordBackupTemplateCallable(const Model::UpdateRecordBackupTemplateRequest& request);
+
+                /**
+                 *This API is used to modify a real-time cloud migration plan.
+                 * @param req UpdateRecordPlanRequest
+                 * @return UpdateRecordPlanOutcome
+                 */
+                UpdateRecordPlanOutcome UpdateRecordPlan(const Model::UpdateRecordPlanRequest &request);
+                void UpdateRecordPlanAsync(const Model::UpdateRecordPlanRequest& request, const UpdateRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateRecordPlanOutcomeCallable UpdateRecordPlanCallable(const Model::UpdateRecordPlanRequest& request);
+
+                /**
+                 *Used to modify a real-time cloud template.
+                 * @param req UpdateRecordTemplateRequest
+                 * @return UpdateRecordTemplateOutcome
+                 */
+                UpdateRecordTemplateOutcome UpdateRecordTemplate(const Model::UpdateRecordTemplateRequest &request);
+                void UpdateRecordTemplateAsync(const Model::UpdateRecordTemplateRequest& request, const UpdateRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateRecordTemplateOutcomeCallable UpdateRecordTemplateCallable(const Model::UpdateRecordTemplateRequest& request);
+
+                /**
+                 *This API is used to modify device configuration information.
+                 * @param req UpdateUserDeviceRequest
+                 * @return UpdateUserDeviceOutcome
+                 */
+                UpdateUserDeviceOutcome UpdateUserDevice(const Model::UpdateUserDeviceRequest &request);
+                void UpdateUserDeviceAsync(const Model::UpdateUserDeviceRequest& request, const UpdateUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateUserDeviceOutcomeCallable UpdateUserDeviceCallable(const Model::UpdateUserDeviceRequest& request);
+
+            };
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_ISS_V20230517_ISSCLIENT_H_

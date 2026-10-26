@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/ViewImage.h>
+#include <tencentcloud/mps/v20190612/model/AigcStoreCosParam.h>
 
 
 namespace TencentCloud
@@ -274,6 +275,27 @@ namespace TencentCloud
                      */
                     bool StyleHasBeenSet() const;
 
+                    /**
+                     * 获取<p>COS bucket that the customer applies to create</p>
+                     * @return StoreCosParam <p>COS bucket that the customer applies to create</p>
+                     * 
+                     */
+                    AigcStoreCosParam GetStoreCosParam() const;
+
+                    /**
+                     * 设置<p>COS bucket that the customer applies to create</p>
+                     * @param _storeCosParam <p>COS bucket that the customer applies to create</p>
+                     * 
+                     */
+                    void SetStoreCosParam(const AigcStoreCosParam& _storeCosParam);
+
+                    /**
+                     * 判断参数 StoreCosParam 是否已赋值
+                     * @return StoreCosParam 是否已赋值
+                     * 
+                     */
+                    bool StoreCosParamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -341,6 +363,12 @@ namespace TencentCloud
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;
+
+                    /**
+                     * <p>COS bucket that the customer applies to create</p>
+                     */
+                    AigcStoreCosParam m_storeCosParam;
+                    bool m_storeCosParamHasBeenSet;
 
                 };
             }

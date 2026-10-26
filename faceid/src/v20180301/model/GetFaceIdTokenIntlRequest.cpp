@@ -30,7 +30,8 @@ GetFaceIdTokenIntlRequest::GetFaceIdTokenIntlRequest() :
     m_actionListHasBeenSet(false),
     m_sdkVersionHasBeenSet(false),
     m_retryLimitHasBeenSet(false),
-    m_enableBotBgDetectionHasBeenSet(false)
+    m_enableBotBgDetectionHasBeenSet(false),
+    m_metaDataHasBeenSet(false)
 {
 }
 
@@ -103,6 +104,14 @@ string GetFaceIdTokenIntlRequest::ToJsonString() const
         string key = "EnableBotBgDetection";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableBotBgDetection, allocator);
+    }
+
+    if (m_metaDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetaData";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_metaData.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -239,6 +248,22 @@ void GetFaceIdTokenIntlRequest::SetEnableBotBgDetection(const bool& _enableBotBg
 bool GetFaceIdTokenIntlRequest::EnableBotBgDetectionHasBeenSet() const
 {
     return m_enableBotBgDetectionHasBeenSet;
+}
+
+string GetFaceIdTokenIntlRequest::GetMetaData() const
+{
+    return m_metaData;
+}
+
+void GetFaceIdTokenIntlRequest::SetMetaData(const string& _metaData)
+{
+    m_metaData = _metaData;
+    m_metaDataHasBeenSet = true;
+}
+
+bool GetFaceIdTokenIntlRequest::MetaDataHasBeenSet() const
+{
+    return m_metaDataHasBeenSet;
 }
 
 

@@ -91,36 +91,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Document-to-video model name</p><p>Default value: Wand</p>
-                     * @return ModelName <p>Document-to-video model name</p><p>Default value: Wand</p>
-                     * 
-                     */
-                    std::string GetModelName() const;
-
-                    /**
-                     * 设置<p>Document-to-video model name</p><p>Default value: Wand</p>
-                     * @param _modelName <p>Document-to-video model name</p><p>Default value: Wand</p>
-                     * 
-                     */
-                    void SetModelName(const std::string& _modelName);
-
-                    /**
-                     * 判断参数 ModelName 是否已赋值
-                     * @return ModelName 是否已赋值
-                     * 
-                     */
-                    bool ModelNameHasBeenSet() const;
-
-                    /**
-                     * 获取<p>Document-to-video model version number</p><p>Default value: 1.0</p>
-                     * @return ModelVersion <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+                     * 获取<p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
+                     * @return ModelVersion <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置<p>Document-to-video model version number</p><p>Default value: 1.0</p>
-                     * @param _modelVersion <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+                     * 设置<p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
+                     * @param _modelVersion <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -131,6 +110,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ModelVersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+                     * @return ModelName <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+                     * 
+                     */
+                    std::string GetModelName() const;
+
+                    /**
+                     * 设置<p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+                     * @param _modelName <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+                     * 
+                     */
+                    void SetModelName(const std::string& _modelName);
+
+                    /**
+                     * 判断参数 ModelName 是否已赋值
+                     * @return ModelName 是否已赋值
+                     * 
+                     */
+                    bool ModelNameHasBeenSet() const;
 
                     /**
                      * 获取<p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
@@ -357,16 +357,16 @@ namespace TencentCloud
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>Document-to-video model name</p><p>Default value: Wand</p>
-                     */
-                    std::string m_modelName;
-                    bool m_modelNameHasBeenSet;
-
-                    /**
-                     * <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+                     * <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
+
+                    /**
+                     * <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+                     */
+                    std::string m_modelName;
+                    bool m_modelNameHasBeenSet;
 
                     /**
                      * <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>

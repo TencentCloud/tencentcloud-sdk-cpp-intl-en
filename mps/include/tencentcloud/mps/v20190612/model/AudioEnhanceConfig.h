@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool VolumeBalanceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio beautification configurations.</p>
-                     * @return Beautify <p>Audio beautification configurations.</p>
+                     * 获取<p>Audio improvement configuration.</p>
+                     * @return Beautify <p>Audio improvement configuration.</p>
                      * 
                      */
                     AudioBeautifyConfig GetBeautify() const;
 
                     /**
-                     * 设置<p>Audio beautification configurations.</p>
-                     * @param _beautify <p>Audio beautification configurations.</p>
+                     * 设置<p>Audio improvement configuration.</p>
+                     * @param _beautify <p>Audio improvement configuration.</p>
                      * 
                      */
                     void SetBeautify(const AudioBeautifyConfig& _beautify);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_volumeBalanceHasBeenSet;
 
                     /**
-                     * <p>Audio beautification configurations.</p>
+                     * <p>Audio improvement configuration.</p>
                      */
                     AudioBeautifyConfig m_beautify;
                     bool m_beautifyHasBeenSet;

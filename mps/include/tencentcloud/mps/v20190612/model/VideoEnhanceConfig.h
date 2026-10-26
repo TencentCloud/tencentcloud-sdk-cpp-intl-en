@@ -333,15 +333,15 @@ namespace TencentCloud
                     bool AiRestorationHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
-                     * @return DiffusionEnhanceV2 <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+                     * 获取<p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
+                     * @return DiffusionEnhanceV2 <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
                      * 
                      */
                     DiffusionEnhanceV2Config GetDiffusionEnhanceV2() const;
 
                     /**
-                     * 设置<p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
-                     * @param _diffusionEnhanceV2 <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+                     * 设置<p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
+                     * @param _diffusionEnhanceV2 <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
                      * 
                      */
                     void SetDiffusionEnhanceV2(const DiffusionEnhanceV2Config& _diffusionEnhanceV2);
@@ -434,7 +434,7 @@ namespace TencentCloud
                     bool m_aiRestorationHasBeenSet;
 
                     /**
-                     * <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+                     * <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
                      */
                     DiffusionEnhanceV2Config m_diffusionEnhanceV2;
                     bool m_diffusionEnhanceV2HasBeenSet;

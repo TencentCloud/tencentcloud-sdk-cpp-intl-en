@@ -69,15 +69,19 @@ namespace TencentCloud
                     bool S3BucketHasBeenSet() const;
 
                     /**
-                     * 获取The region of the AWS S3 bucket.
-                     * @return S3Region The region of the AWS S3 bucket.
+                     * 获取The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
+                     * @return S3Region The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
                      * 
                      */
                     std::string GetS3Region() const;
 
                     /**
-                     * 设置The region of the AWS S3 bucket.
-                     * @param _s3Region The region of the AWS S3 bucket.
+                     * 设置The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
+                     * @param _s3Region The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
                      * 
                      */
                     void SetS3Region(const std::string& _s3Region);
@@ -207,7 +211,8 @@ Note: The queue and bucket need to be in the same region.
                     bool m_s3BucketHasBeenSet;
 
                     /**
-                     * The region of the AWS S3 bucket.
+                     * The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
                      */
                     std::string m_s3Region;
                     bool m_s3RegionHasBeenSet;

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/File3D.h>
+#include <tencentcloud/mps/v20190612/model/ViewImage.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,146 @@ namespace TencentCloud
                      */
                     bool ResultFile3DsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Task ID</p>
+                     * @return TaskId <p>Task ID</p>
+                     * 
+                     */
+                    std::string GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     * 
+                     */
+                    bool TaskIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task type</p><p>Enumeration values:</p><ul><li>text_to_3d: Text to 3D</li><li>image_to_3d: Image to 3D</li><li>multiview_to_3d: Multi-view to 3D</li><li>mesh_to_texture: Mesh to texture</li><li>mesh_to_geometry: Mesh to geometry</li></ul>
+                     * @return TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>text_to_3d: Text to 3D</li><li>image_to_3d: Image to 3D</li><li>multiview_to_3d: Multi-view to 3D</li><li>mesh_to_texture: Mesh to texture</li><li>mesh_to_geometry: Mesh to geometry</li></ul>
+                     * 
+                     */
+                    std::string GetTaskType() const;
+
+                    /**
+                     * 判断参数 TaskType 是否已赋值
+                     * @return TaskType 是否已赋值
+                     * 
+                     */
+                    bool TaskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Input prompt</p>
+                     * @return Prompt <p>Input prompt</p>
+                     * 
+                     */
+                    std::string GetPrompt() const;
+
+                    /**
+                     * 判断参数 Prompt 是否已赋值
+                     * @return Prompt 是否已赋值
+                     * 
+                     */
+                    bool PromptHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Image URL input in image-to-3D scenarios</p>
+                     * @return RefImage <p>Image URL input in image-to-3D scenarios</p>
+                     * 
+                     */
+                    std::string GetRefImage() const;
+
+                    /**
+                     * 判断参数 RefImage 是否已赋值
+                     * @return RefImage 是否已赋值
+                     * 
+                     */
+                    bool RefImageHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Image information input in multi-image to 3D scenarios</p>
+                     * @return MultiViewImages <p>Image information input in multi-image to 3D scenarios</p>
+                     * 
+                     */
+                    std::vector<ViewImage> GetMultiViewImages() const;
+
+                    /**
+                     * 判断参数 MultiViewImages 是否已赋值
+                     * @return MultiViewImages 是否已赋值
+                     * 
+                     */
+                    bool MultiViewImagesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task creation time</p>
+                     * @return CreateTime <p>Task creation time</p>
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task update time</p>
+                     * @return UpdateTime <p>Task update time</p>
+                     * 
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     * 
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The target face count for the submitted task</p>
+                     * @return FaceCount <p>The target face count for the submitted task</p>
+                     * 
+                     */
+                    uint64_t GetFaceCount() const;
+
+                    /**
+                     * 判断参数 FaceCount 是否已赋值
+                     * @return FaceCount 是否已赋值
+                     * 
+                     */
+                    bool FaceCountHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Generation type</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture)</li><li>Geometry: Generate only geometry (no texture, faster output speed)</li><li>Texture: Generate only texture (MeshUrl is required)</li></ul><p>Default value: Normal</p>
+                     * @return GenerateType <p>Generation type</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture)</li><li>Geometry: Generate only geometry (no texture, faster output speed)</li><li>Texture: Generate only texture (MeshUrl is required)</li></ul><p>Default value: Normal</p>
+                     * 
+                     */
+                    std::string GetGenerateType() const;
+
+                    /**
+                     * 判断参数 GenerateType 是否已赋值
+                     * @return GenerateType 是否已赋值
+                     * 
+                     */
+                    bool GenerateTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task position in the queue; the smaller the value, the higher the priority.</p>
+                     * @return QueuePosition <p>Task position in the queue; the smaller the value, the higher the priority.</p>
+                     * 
+                     */
+                    int64_t GetQueuePosition() const;
+
+                    /**
+                     * 判断参数 QueuePosition 是否已赋值
+                     * @return QueuePosition 是否已赋值
+                     * 
+                     */
+                    bool QueuePositionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -145,6 +286,66 @@ namespace TencentCloud
                      */
                     std::vector<File3D> m_resultFile3Ds;
                     bool m_resultFile3DsHasBeenSet;
+
+                    /**
+                     * <p>Task ID</p>
+                     */
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
+
+                    /**
+                     * <p>Task type</p><p>Enumeration values:</p><ul><li>text_to_3d: Text to 3D</li><li>image_to_3d: Image to 3D</li><li>multiview_to_3d: Multi-view to 3D</li><li>mesh_to_texture: Mesh to texture</li><li>mesh_to_geometry: Mesh to geometry</li></ul>
+                     */
+                    std::string m_taskType;
+                    bool m_taskTypeHasBeenSet;
+
+                    /**
+                     * <p>Input prompt</p>
+                     */
+                    std::string m_prompt;
+                    bool m_promptHasBeenSet;
+
+                    /**
+                     * <p>Image URL input in image-to-3D scenarios</p>
+                     */
+                    std::string m_refImage;
+                    bool m_refImageHasBeenSet;
+
+                    /**
+                     * <p>Image information input in multi-image to 3D scenarios</p>
+                     */
+                    std::vector<ViewImage> m_multiViewImages;
+                    bool m_multiViewImagesHasBeenSet;
+
+                    /**
+                     * <p>Task creation time</p>
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * <p>Task update time</p>
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * <p>The target face count for the submitted task</p>
+                     */
+                    uint64_t m_faceCount;
+                    bool m_faceCountHasBeenSet;
+
+                    /**
+                     * <p>Generation type</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture)</li><li>Geometry: Generate only geometry (no texture, faster output speed)</li><li>Texture: Generate only texture (MeshUrl is required)</li></ul><p>Default value: Normal</p>
+                     */
+                    std::string m_generateType;
+                    bool m_generateTypeHasBeenSet;
+
+                    /**
+                     * <p>Task position in the queue; the smaller the value, the higher the priority.</p>
+                     */
+                    int64_t m_queuePosition;
+                    bool m_queuePositionHasBeenSet;
 
                 };
             }

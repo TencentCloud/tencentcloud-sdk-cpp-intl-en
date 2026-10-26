@@ -232,6 +232,48 @@ namespace TencentCloud
                     bool ScenesHasBeenSet() const;
 
                     /**
+                     * 获取<p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+                     * @return PageNum <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+                     * 
+                     */
+                    int64_t GetPageNum() const;
+
+                    /**
+                     * 设置<p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+                     * @param _pageNum <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+                     * 
+                     */
+                    void SetPageNum(const int64_t& _pageNum);
+
+                    /**
+                     * 判断参数 PageNum 是否已赋值
+                     * @return PageNum 是否已赋值
+                     * 
+                     */
+                    bool PageNumHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+                     * @return PageSize <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+                     * 
+                     */
+                    int64_t GetPageSize() const;
+
+                    /**
+                     * 设置<p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+                     * @param _pageSize <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+                     * 
+                     */
+                    void SetPageSize(const int64_t& _pageSize);
+
+                    /**
+                     * 判断参数 PageSize 是否已赋值
+                     * @return PageSize 是否已赋值
+                     * 
+                     */
+                    bool PageSizeHasBeenSet() const;
+
+                    /**
                      * 获取<p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
 voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
                      * @return ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
@@ -311,6 +353,18 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
                      */
                     std::vector<std::string> m_scenes;
                     bool m_scenesHasBeenSet;
+
+                    /**
+                     * <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+                     */
+                    int64_t m_pageNum;
+                    bool m_pageNumHasBeenSet;
+
+                    /**
+                     * <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+                     */
+                    int64_t m_pageSize;
+                    bool m_pageSizeHasBeenSet;
 
                     /**
                      * <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:

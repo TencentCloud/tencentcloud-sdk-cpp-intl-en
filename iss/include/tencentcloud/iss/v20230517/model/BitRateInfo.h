@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_ISS_V20230517_MODEL_BITRATEINFO_H_
+#define TENCENTCLOUD_ISS_V20230517_MODEL_BITRATEINFO_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Iss
+    {
+        namespace V20230517
+        {
+            namespace Model
+            {
+                /**
+                * Video channel bitrate returned results
+                */
+                class BitRateInfo : public AbstractModel
+                {
+                public:
+                    BitRateInfo();
+                    ~BitRateInfo() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Channel Id
+                     * @return ChannelId Channel Id
+                     * 
+                     */
+                    std::string GetChannelId() const;
+
+                    /**
+                     * 设置Channel Id
+                     * @param _channelId Channel Id
+                     * 
+                     */
+                    void SetChannelId(const std::string& _channelId);
+
+                    /**
+                     * 判断参数 ChannelId 是否已赋值
+                     * @return ChannelId 是否已赋值
+                     * 
+                     */
+                    bool ChannelIdHasBeenSet() const;
+
+                    /**
+                     * 获取Bitrate, in kbps.
+                     * @return Bitrate Bitrate, in kbps.
+                     * 
+                     */
+                    double GetBitrate() const;
+
+                    /**
+                     * 设置Bitrate, in kbps.
+                     * @param _bitrate Bitrate, in kbps.
+                     * 
+                     */
+                    void SetBitrate(const double& _bitrate);
+
+                    /**
+                     * 判断参数 Bitrate 是否已赋值
+                     * @return Bitrate 是否已赋值
+                     * 
+                     */
+                    bool BitrateHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Channel Id
+                     */
+                    std::string m_channelId;
+                    bool m_channelIdHasBeenSet;
+
+                    /**
+                     * Bitrate, in kbps.
+                     */
+                    double m_bitrate;
+                    bool m_bitrateHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_ISS_V20230517_MODEL_BITRATEINFO_H_

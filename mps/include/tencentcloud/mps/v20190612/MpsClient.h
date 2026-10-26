@@ -1687,7 +1687,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeWordSamplesOutcomeCallable DescribeWordSamplesCallable(const Model::DescribeWordSamplesRequest& request);
 
                 /**
-                 *This API is used to get the list of workflow details by workflow ID.
+                 *Based on the workflow ID, get the workflow details list.
                  * @param req DescribeWorkflowsRequest
                  * @return DescribeWorkflowsOutcome
                  */

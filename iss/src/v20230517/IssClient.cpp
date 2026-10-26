@@ -1,0 +1,4692 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/iss/v20230517/IssClient.h>
+#include <tencentcloud/core/Executor.h>
+#include <tencentcloud/core/Runnable.h>
+
+using namespace TencentCloud;
+using namespace TencentCloud::Iss::V20230517;
+using namespace TencentCloud::Iss::V20230517::Model;
+using namespace std;
+
+namespace
+{
+    const string VERSION = "2023-05-17";
+    const string ENDPOINT = "iss.intl.tencentcloudapi.com";
+}
+
+IssClient::IssClient(const Credential &credential, const string &region) :
+    IssClient(credential, region, ClientProfile())
+{
+}
+
+IssClient::IssClient(const Credential &credential, const string &region, const ClientProfile &profile) :
+    AbstractClient(ENDPOINT, VERSION, credential, region, profile)
+{
+}
+
+
+IssClient::AddOrganizationOutcome IssClient::AddOrganization(const AddOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddOrganizationResponse rsp = AddOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddOrganizationOutcome(rsp);
+        else
+            return AddOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return AddOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddOrganizationAsync(const AddOrganizationRequest& request, const AddOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddOrganizationRequest&;
+    using Resp = AddOrganizationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddOrganization", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddOrganizationOutcomeCallable IssClient::AddOrganizationCallable(const AddOrganizationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddOrganizationOutcome>>();
+    AddOrganizationAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddOrganizationRequest&,
+        AddOrganizationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddRecordBackupPlanOutcome IssClient::AddRecordBackupPlan(const AddRecordBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddRecordBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddRecordBackupPlanResponse rsp = AddRecordBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddRecordBackupPlanOutcome(rsp);
+        else
+            return AddRecordBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return AddRecordBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddRecordBackupPlanAsync(const AddRecordBackupPlanRequest& request, const AddRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddRecordBackupPlanRequest&;
+    using Resp = AddRecordBackupPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddRecordBackupPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddRecordBackupPlanOutcomeCallable IssClient::AddRecordBackupPlanCallable(const AddRecordBackupPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddRecordBackupPlanOutcome>>();
+    AddRecordBackupPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddRecordBackupPlanRequest&,
+        AddRecordBackupPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddRecordBackupTemplateOutcome IssClient::AddRecordBackupTemplate(const AddRecordBackupTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddRecordBackupTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddRecordBackupTemplateResponse rsp = AddRecordBackupTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddRecordBackupTemplateOutcome(rsp);
+        else
+            return AddRecordBackupTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return AddRecordBackupTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddRecordBackupTemplateAsync(const AddRecordBackupTemplateRequest& request, const AddRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddRecordBackupTemplateRequest&;
+    using Resp = AddRecordBackupTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddRecordBackupTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddRecordBackupTemplateOutcomeCallable IssClient::AddRecordBackupTemplateCallable(const AddRecordBackupTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddRecordBackupTemplateOutcome>>();
+    AddRecordBackupTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddRecordBackupTemplateRequest&,
+        AddRecordBackupTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddRecordPlanOutcome IssClient::AddRecordPlan(const AddRecordPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddRecordPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddRecordPlanResponse rsp = AddRecordPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddRecordPlanOutcome(rsp);
+        else
+            return AddRecordPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return AddRecordPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddRecordPlanAsync(const AddRecordPlanRequest& request, const AddRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddRecordPlanRequest&;
+    using Resp = AddRecordPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddRecordPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddRecordPlanOutcomeCallable IssClient::AddRecordPlanCallable(const AddRecordPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddRecordPlanOutcome>>();
+    AddRecordPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddRecordPlanRequest&,
+        AddRecordPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddRecordRetrieveTaskOutcome IssClient::AddRecordRetrieveTask(const AddRecordRetrieveTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddRecordRetrieveTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddRecordRetrieveTaskResponse rsp = AddRecordRetrieveTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddRecordRetrieveTaskOutcome(rsp);
+        else
+            return AddRecordRetrieveTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return AddRecordRetrieveTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddRecordRetrieveTaskAsync(const AddRecordRetrieveTaskRequest& request, const AddRecordRetrieveTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddRecordRetrieveTaskRequest&;
+    using Resp = AddRecordRetrieveTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddRecordRetrieveTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddRecordRetrieveTaskOutcomeCallable IssClient::AddRecordRetrieveTaskCallable(const AddRecordRetrieveTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddRecordRetrieveTaskOutcome>>();
+    AddRecordRetrieveTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddRecordRetrieveTaskRequest&,
+        AddRecordRetrieveTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddRecordTemplateOutcome IssClient::AddRecordTemplate(const AddRecordTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddRecordTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddRecordTemplateResponse rsp = AddRecordTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddRecordTemplateOutcome(rsp);
+        else
+            return AddRecordTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return AddRecordTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddRecordTemplateAsync(const AddRecordTemplateRequest& request, const AddRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddRecordTemplateRequest&;
+    using Resp = AddRecordTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddRecordTemplateOutcomeCallable IssClient::AddRecordTemplateCallable(const AddRecordTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddRecordTemplateOutcome>>();
+    AddRecordTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddRecordTemplateRequest&,
+        AddRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddStreamAuthOutcome IssClient::AddStreamAuth(const AddStreamAuthRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddStreamAuth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddStreamAuthResponse rsp = AddStreamAuthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddStreamAuthOutcome(rsp);
+        else
+            return AddStreamAuthOutcome(o.GetError());
+    }
+    else
+    {
+        return AddStreamAuthOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddStreamAuthAsync(const AddStreamAuthRequest& request, const AddStreamAuthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddStreamAuthRequest&;
+    using Resp = AddStreamAuthResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddStreamAuth", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddStreamAuthOutcomeCallable IssClient::AddStreamAuthCallable(const AddStreamAuthRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddStreamAuthOutcome>>();
+    AddStreamAuthAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddStreamAuthRequest&,
+        AddStreamAuthOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::AddUserDeviceOutcome IssClient::AddUserDevice(const AddUserDeviceRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddUserDevice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddUserDeviceResponse rsp = AddUserDeviceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddUserDeviceOutcome(rsp);
+        else
+            return AddUserDeviceOutcome(o.GetError());
+    }
+    else
+    {
+        return AddUserDeviceOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::AddUserDeviceAsync(const AddUserDeviceRequest& request, const AddUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddUserDeviceRequest&;
+    using Resp = AddUserDeviceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddUserDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::AddUserDeviceOutcomeCallable IssClient::AddUserDeviceCallable(const AddUserDeviceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddUserDeviceOutcome>>();
+    AddUserDeviceAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const AddUserDeviceRequest&,
+        AddUserDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::BatchAddVideoSnapshotConfigChannelOutcome IssClient::BatchAddVideoSnapshotConfigChannel(const BatchAddVideoSnapshotConfigChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchAddVideoSnapshotConfigChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchAddVideoSnapshotConfigChannelResponse rsp = BatchAddVideoSnapshotConfigChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchAddVideoSnapshotConfigChannelOutcome(rsp);
+        else
+            return BatchAddVideoSnapshotConfigChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchAddVideoSnapshotConfigChannelOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::BatchAddVideoSnapshotConfigChannelAsync(const BatchAddVideoSnapshotConfigChannelRequest& request, const BatchAddVideoSnapshotConfigChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BatchAddVideoSnapshotConfigChannelRequest&;
+    using Resp = BatchAddVideoSnapshotConfigChannelResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BatchAddVideoSnapshotConfigChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::BatchAddVideoSnapshotConfigChannelOutcomeCallable IssClient::BatchAddVideoSnapshotConfigChannelCallable(const BatchAddVideoSnapshotConfigChannelRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BatchAddVideoSnapshotConfigChannelOutcome>>();
+    BatchAddVideoSnapshotConfigChannelAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const BatchAddVideoSnapshotConfigChannelRequest&,
+        BatchAddVideoSnapshotConfigChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::BatchAssignVLPlanChannelsOutcome IssClient::BatchAssignVLPlanChannels(const BatchAssignVLPlanChannelsRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchAssignVLPlanChannels");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchAssignVLPlanChannelsResponse rsp = BatchAssignVLPlanChannelsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchAssignVLPlanChannelsOutcome(rsp);
+        else
+            return BatchAssignVLPlanChannelsOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchAssignVLPlanChannelsOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::BatchAssignVLPlanChannelsAsync(const BatchAssignVLPlanChannelsRequest& request, const BatchAssignVLPlanChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BatchAssignVLPlanChannelsRequest&;
+    using Resp = BatchAssignVLPlanChannelsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BatchAssignVLPlanChannels", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::BatchAssignVLPlanChannelsOutcomeCallable IssClient::BatchAssignVLPlanChannelsCallable(const BatchAssignVLPlanChannelsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BatchAssignVLPlanChannelsOutcome>>();
+    BatchAssignVLPlanChannelsAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const BatchAssignVLPlanChannelsRequest&,
+        BatchAssignVLPlanChannelsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::BatchDeleteVideoDownloadTaskOutcome IssClient::BatchDeleteVideoDownloadTask(const BatchDeleteVideoDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchDeleteVideoDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchDeleteVideoDownloadTaskResponse rsp = BatchDeleteVideoDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchDeleteVideoDownloadTaskOutcome(rsp);
+        else
+            return BatchDeleteVideoDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchDeleteVideoDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::BatchDeleteVideoDownloadTaskAsync(const BatchDeleteVideoDownloadTaskRequest& request, const BatchDeleteVideoDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BatchDeleteVideoDownloadTaskRequest&;
+    using Resp = BatchDeleteVideoDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BatchDeleteVideoDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::BatchDeleteVideoDownloadTaskOutcomeCallable IssClient::BatchDeleteVideoDownloadTaskCallable(const BatchDeleteVideoDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BatchDeleteVideoDownloadTaskOutcome>>();
+    BatchDeleteVideoDownloadTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const BatchDeleteVideoDownloadTaskRequest&,
+        BatchDeleteVideoDownloadTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::BatchGetVLPlanSourceFileURLOutcome IssClient::BatchGetVLPlanSourceFileURL(const BatchGetVLPlanSourceFileURLRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchGetVLPlanSourceFileURL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchGetVLPlanSourceFileURLResponse rsp = BatchGetVLPlanSourceFileURLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchGetVLPlanSourceFileURLOutcome(rsp);
+        else
+            return BatchGetVLPlanSourceFileURLOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchGetVLPlanSourceFileURLOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::BatchGetVLPlanSourceFileURLAsync(const BatchGetVLPlanSourceFileURLRequest& request, const BatchGetVLPlanSourceFileURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BatchGetVLPlanSourceFileURLRequest&;
+    using Resp = BatchGetVLPlanSourceFileURLResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BatchGetVLPlanSourceFileURL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::BatchGetVLPlanSourceFileURLOutcomeCallable IssClient::BatchGetVLPlanSourceFileURLCallable(const BatchGetVLPlanSourceFileURLRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BatchGetVLPlanSourceFileURLOutcome>>();
+    BatchGetVLPlanSourceFileURLAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const BatchGetVLPlanSourceFileURLRequest&,
+        BatchGetVLPlanSourceFileURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::BatchGetVideoSnapshotImageUrlOutcome IssClient::BatchGetVideoSnapshotImageUrl(const BatchGetVideoSnapshotImageUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchGetVideoSnapshotImageUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchGetVideoSnapshotImageUrlResponse rsp = BatchGetVideoSnapshotImageUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchGetVideoSnapshotImageUrlOutcome(rsp);
+        else
+            return BatchGetVideoSnapshotImageUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchGetVideoSnapshotImageUrlOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::BatchGetVideoSnapshotImageUrlAsync(const BatchGetVideoSnapshotImageUrlRequest& request, const BatchGetVideoSnapshotImageUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BatchGetVideoSnapshotImageUrlRequest&;
+    using Resp = BatchGetVideoSnapshotImageUrlResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BatchGetVideoSnapshotImageUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::BatchGetVideoSnapshotImageUrlOutcomeCallable IssClient::BatchGetVideoSnapshotImageUrlCallable(const BatchGetVideoSnapshotImageUrlRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BatchGetVideoSnapshotImageUrlOutcome>>();
+    BatchGetVideoSnapshotImageUrlAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const BatchGetVideoSnapshotImageUrlRequest&,
+        BatchGetVideoSnapshotImageUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::BatchOperateDeviceOutcome IssClient::BatchOperateDevice(const BatchOperateDeviceRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchOperateDevice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchOperateDeviceResponse rsp = BatchOperateDeviceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchOperateDeviceOutcome(rsp);
+        else
+            return BatchOperateDeviceOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchOperateDeviceOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::BatchOperateDeviceAsync(const BatchOperateDeviceRequest& request, const BatchOperateDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const BatchOperateDeviceRequest&;
+    using Resp = BatchOperateDeviceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "BatchOperateDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::BatchOperateDeviceOutcomeCallable IssClient::BatchOperateDeviceCallable(const BatchOperateDeviceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<BatchOperateDeviceOutcome>>();
+    BatchOperateDeviceAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const BatchOperateDeviceRequest&,
+        BatchOperateDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::CallISAPIOutcome IssClient::CallISAPI(const CallISAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "CallISAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CallISAPIResponse rsp = CallISAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CallISAPIOutcome(rsp);
+        else
+            return CallISAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return CallISAPIOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::CallISAPIAsync(const CallISAPIRequest& request, const CallISAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CallISAPIRequest&;
+    using Resp = CallISAPIResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CallISAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::CallISAPIOutcomeCallable IssClient::CallISAPICallable(const CallISAPIRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CallISAPIOutcome>>();
+    CallISAPIAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const CallISAPIRequest&,
+        CallISAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ControlDevicePTZOutcome IssClient::ControlDevicePTZ(const ControlDevicePTZRequest &request)
+{
+    auto outcome = MakeRequest(request, "ControlDevicePTZ");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ControlDevicePTZResponse rsp = ControlDevicePTZResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ControlDevicePTZOutcome(rsp);
+        else
+            return ControlDevicePTZOutcome(o.GetError());
+    }
+    else
+    {
+        return ControlDevicePTZOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ControlDevicePTZAsync(const ControlDevicePTZRequest& request, const ControlDevicePTZAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ControlDevicePTZRequest&;
+    using Resp = ControlDevicePTZResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ControlDevicePTZ", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ControlDevicePTZOutcomeCallable IssClient::ControlDevicePTZCallable(const ControlDevicePTZRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ControlDevicePTZOutcome>>();
+    ControlDevicePTZAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ControlDevicePTZRequest&,
+        ControlDevicePTZOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ControlDevicePresetOutcome IssClient::ControlDevicePreset(const ControlDevicePresetRequest &request)
+{
+    auto outcome = MakeRequest(request, "ControlDevicePreset");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ControlDevicePresetResponse rsp = ControlDevicePresetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ControlDevicePresetOutcome(rsp);
+        else
+            return ControlDevicePresetOutcome(o.GetError());
+    }
+    else
+    {
+        return ControlDevicePresetOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ControlDevicePresetAsync(const ControlDevicePresetRequest& request, const ControlDevicePresetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ControlDevicePresetRequest&;
+    using Resp = ControlDevicePresetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ControlDevicePreset", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ControlDevicePresetOutcomeCallable IssClient::ControlDevicePresetCallable(const ControlDevicePresetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ControlDevicePresetOutcome>>();
+    ControlDevicePresetAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ControlDevicePresetRequest&,
+        ControlDevicePresetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ControlDeviceSnapshotOutcome IssClient::ControlDeviceSnapshot(const ControlDeviceSnapshotRequest &request)
+{
+    auto outcome = MakeRequest(request, "ControlDeviceSnapshot");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ControlDeviceSnapshotResponse rsp = ControlDeviceSnapshotResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ControlDeviceSnapshotOutcome(rsp);
+        else
+            return ControlDeviceSnapshotOutcome(o.GetError());
+    }
+    else
+    {
+        return ControlDeviceSnapshotOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ControlDeviceSnapshotAsync(const ControlDeviceSnapshotRequest& request, const ControlDeviceSnapshotAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ControlDeviceSnapshotRequest&;
+    using Resp = ControlDeviceSnapshotResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ControlDeviceSnapshot", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ControlDeviceSnapshotOutcomeCallable IssClient::ControlDeviceSnapshotCallable(const ControlDeviceSnapshotRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ControlDeviceSnapshotOutcome>>();
+    ControlDeviceSnapshotAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ControlDeviceSnapshotRequest&,
+        ControlDeviceSnapshotOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ControlDeviceStreamOutcome IssClient::ControlDeviceStream(const ControlDeviceStreamRequest &request)
+{
+    auto outcome = MakeRequest(request, "ControlDeviceStream");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ControlDeviceStreamResponse rsp = ControlDeviceStreamResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ControlDeviceStreamOutcome(rsp);
+        else
+            return ControlDeviceStreamOutcome(o.GetError());
+    }
+    else
+    {
+        return ControlDeviceStreamOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ControlDeviceStreamAsync(const ControlDeviceStreamRequest& request, const ControlDeviceStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ControlDeviceStreamRequest&;
+    using Resp = ControlDeviceStreamResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ControlDeviceStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ControlDeviceStreamOutcomeCallable IssClient::ControlDeviceStreamCallable(const ControlDeviceStreamRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ControlDeviceStreamOutcome>>();
+    ControlDeviceStreamAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ControlDeviceStreamRequest&,
+        ControlDeviceStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ControlRecordTimelineOutcome IssClient::ControlRecordTimeline(const ControlRecordTimelineRequest &request)
+{
+    auto outcome = MakeRequest(request, "ControlRecordTimeline");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ControlRecordTimelineResponse rsp = ControlRecordTimelineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ControlRecordTimelineOutcome(rsp);
+        else
+            return ControlRecordTimelineOutcome(o.GetError());
+    }
+    else
+    {
+        return ControlRecordTimelineOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ControlRecordTimelineAsync(const ControlRecordTimelineRequest& request, const ControlRecordTimelineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ControlRecordTimelineRequest&;
+    using Resp = ControlRecordTimelineResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ControlRecordTimeline", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ControlRecordTimelineOutcomeCallable IssClient::ControlRecordTimelineCallable(const ControlRecordTimelineRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ControlRecordTimelineOutcome>>();
+    ControlRecordTimelineAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ControlRecordTimelineRequest&,
+        ControlRecordTimelineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::CreateVLPlanOutcome IssClient::CreateVLPlan(const CreateVLPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVLPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVLPlanResponse rsp = CreateVLPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVLPlanOutcome(rsp);
+        else
+            return CreateVLPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVLPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::CreateVLPlanAsync(const CreateVLPlanRequest& request, const CreateVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVLPlanRequest&;
+    using Resp = CreateVLPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVLPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::CreateVLPlanOutcomeCallable IssClient::CreateVLPlanCallable(const CreateVLPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVLPlanOutcome>>();
+    CreateVLPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const CreateVLPlanRequest&,
+        CreateVLPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::CreateVLTemplateOutcome IssClient::CreateVLTemplate(const CreateVLTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVLTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVLTemplateResponse rsp = CreateVLTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVLTemplateOutcome(rsp);
+        else
+            return CreateVLTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVLTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::CreateVLTemplateAsync(const CreateVLTemplateRequest& request, const CreateVLTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVLTemplateRequest&;
+    using Resp = CreateVLTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVLTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::CreateVLTemplateOutcomeCallable IssClient::CreateVLTemplateCallable(const CreateVLTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVLTemplateOutcome>>();
+    CreateVLTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const CreateVLTemplateRequest&,
+        CreateVLTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::CreateVideoDownloadTaskOutcome IssClient::CreateVideoDownloadTask(const CreateVideoDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVideoDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVideoDownloadTaskResponse rsp = CreateVideoDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVideoDownloadTaskOutcome(rsp);
+        else
+            return CreateVideoDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVideoDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::CreateVideoDownloadTaskAsync(const CreateVideoDownloadTaskRequest& request, const CreateVideoDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVideoDownloadTaskRequest&;
+    using Resp = CreateVideoDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVideoDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::CreateVideoDownloadTaskOutcomeCallable IssClient::CreateVideoDownloadTaskCallable(const CreateVideoDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVideoDownloadTaskOutcome>>();
+    CreateVideoDownloadTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const CreateVideoDownloadTaskRequest&,
+        CreateVideoDownloadTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::CreateVideoSnapshotConfigOutcome IssClient::CreateVideoSnapshotConfig(const CreateVideoSnapshotConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVideoSnapshotConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVideoSnapshotConfigResponse rsp = CreateVideoSnapshotConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVideoSnapshotConfigOutcome(rsp);
+        else
+            return CreateVideoSnapshotConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVideoSnapshotConfigOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::CreateVideoSnapshotConfigAsync(const CreateVideoSnapshotConfigRequest& request, const CreateVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVideoSnapshotConfigRequest&;
+    using Resp = CreateVideoSnapshotConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVideoSnapshotConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::CreateVideoSnapshotConfigOutcomeCallable IssClient::CreateVideoSnapshotConfigCallable(const CreateVideoSnapshotConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVideoSnapshotConfigOutcome>>();
+    CreateVideoSnapshotConfigAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const CreateVideoSnapshotConfigRequest&,
+        CreateVideoSnapshotConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::CreateVideoSnapshotTemplateOutcome IssClient::CreateVideoSnapshotTemplate(const CreateVideoSnapshotTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVideoSnapshotTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVideoSnapshotTemplateResponse rsp = CreateVideoSnapshotTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVideoSnapshotTemplateOutcome(rsp);
+        else
+            return CreateVideoSnapshotTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVideoSnapshotTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::CreateVideoSnapshotTemplateAsync(const CreateVideoSnapshotTemplateRequest& request, const CreateVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVideoSnapshotTemplateRequest&;
+    using Resp = CreateVideoSnapshotTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVideoSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::CreateVideoSnapshotTemplateOutcomeCallable IssClient::CreateVideoSnapshotTemplateCallable(const CreateVideoSnapshotTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVideoSnapshotTemplateOutcome>>();
+    CreateVideoSnapshotTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const CreateVideoSnapshotTemplateRequest&,
+        CreateVideoSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteDomainOutcome IssClient::DeleteDomain(const DeleteDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDomainResponse rsp = DeleteDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDomainOutcome(rsp);
+        else
+            return DeleteDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDomainOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteDomainAsync(const DeleteDomainRequest& request, const DeleteDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDomainRequest&;
+    using Resp = DeleteDomainResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteDomainOutcomeCallable IssClient::DeleteDomainCallable(const DeleteDomainRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDomainOutcome>>();
+    DeleteDomainAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteDomainRequest&,
+        DeleteDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteOrganizationOutcome IssClient::DeleteOrganization(const DeleteOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteOrganizationResponse rsp = DeleteOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteOrganizationOutcome(rsp);
+        else
+            return DeleteOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteOrganizationAsync(const DeleteOrganizationRequest& request, const DeleteOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteOrganizationRequest&;
+    using Resp = DeleteOrganizationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteOrganization", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteOrganizationOutcomeCallable IssClient::DeleteOrganizationCallable(const DeleteOrganizationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteOrganizationOutcome>>();
+    DeleteOrganizationAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteOrganizationRequest&,
+        DeleteOrganizationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteRecordBackupPlanOutcome IssClient::DeleteRecordBackupPlan(const DeleteRecordBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordBackupPlanResponse rsp = DeleteRecordBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordBackupPlanOutcome(rsp);
+        else
+            return DeleteRecordBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteRecordBackupPlanAsync(const DeleteRecordBackupPlanRequest& request, const DeleteRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordBackupPlanRequest&;
+    using Resp = DeleteRecordBackupPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordBackupPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteRecordBackupPlanOutcomeCallable IssClient::DeleteRecordBackupPlanCallable(const DeleteRecordBackupPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordBackupPlanOutcome>>();
+    DeleteRecordBackupPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteRecordBackupPlanRequest&,
+        DeleteRecordBackupPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteRecordBackupTemplateOutcome IssClient::DeleteRecordBackupTemplate(const DeleteRecordBackupTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordBackupTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordBackupTemplateResponse rsp = DeleteRecordBackupTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordBackupTemplateOutcome(rsp);
+        else
+            return DeleteRecordBackupTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordBackupTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteRecordBackupTemplateAsync(const DeleteRecordBackupTemplateRequest& request, const DeleteRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordBackupTemplateRequest&;
+    using Resp = DeleteRecordBackupTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordBackupTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteRecordBackupTemplateOutcomeCallable IssClient::DeleteRecordBackupTemplateCallable(const DeleteRecordBackupTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordBackupTemplateOutcome>>();
+    DeleteRecordBackupTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteRecordBackupTemplateRequest&,
+        DeleteRecordBackupTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteRecordPlanOutcome IssClient::DeleteRecordPlan(const DeleteRecordPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordPlanResponse rsp = DeleteRecordPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordPlanOutcome(rsp);
+        else
+            return DeleteRecordPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteRecordPlanAsync(const DeleteRecordPlanRequest& request, const DeleteRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordPlanRequest&;
+    using Resp = DeleteRecordPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteRecordPlanOutcomeCallable IssClient::DeleteRecordPlanCallable(const DeleteRecordPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordPlanOutcome>>();
+    DeleteRecordPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteRecordPlanRequest&,
+        DeleteRecordPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteRecordRetrieveTaskOutcome IssClient::DeleteRecordRetrieveTask(const DeleteRecordRetrieveTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordRetrieveTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordRetrieveTaskResponse rsp = DeleteRecordRetrieveTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordRetrieveTaskOutcome(rsp);
+        else
+            return DeleteRecordRetrieveTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordRetrieveTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteRecordRetrieveTaskAsync(const DeleteRecordRetrieveTaskRequest& request, const DeleteRecordRetrieveTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordRetrieveTaskRequest&;
+    using Resp = DeleteRecordRetrieveTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordRetrieveTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteRecordRetrieveTaskOutcomeCallable IssClient::DeleteRecordRetrieveTaskCallable(const DeleteRecordRetrieveTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordRetrieveTaskOutcome>>();
+    DeleteRecordRetrieveTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteRecordRetrieveTaskRequest&,
+        DeleteRecordRetrieveTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteRecordTemplateOutcome IssClient::DeleteRecordTemplate(const DeleteRecordTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordTemplateResponse rsp = DeleteRecordTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordTemplateOutcome(rsp);
+        else
+            return DeleteRecordTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteRecordTemplateAsync(const DeleteRecordTemplateRequest& request, const DeleteRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordTemplateRequest&;
+    using Resp = DeleteRecordTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteRecordTemplateOutcomeCallable IssClient::DeleteRecordTemplateCallable(const DeleteRecordTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordTemplateOutcome>>();
+    DeleteRecordTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteRecordTemplateRequest&,
+        DeleteRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteTaskOutcome IssClient::DeleteTask(const DeleteTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteTaskResponse rsp = DeleteTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteTaskOutcome(rsp);
+        else
+            return DeleteTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteTaskAsync(const DeleteTaskRequest& request, const DeleteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteTaskRequest&;
+    using Resp = DeleteTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteTaskOutcomeCallable IssClient::DeleteTaskCallable(const DeleteTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteTaskOutcome>>();
+    DeleteTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteTaskRequest&,
+        DeleteTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteUserDeviceOutcome IssClient::DeleteUserDevice(const DeleteUserDeviceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteUserDevice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteUserDeviceResponse rsp = DeleteUserDeviceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteUserDeviceOutcome(rsp);
+        else
+            return DeleteUserDeviceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteUserDeviceOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteUserDeviceAsync(const DeleteUserDeviceRequest& request, const DeleteUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteUserDeviceRequest&;
+    using Resp = DeleteUserDeviceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteUserDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteUserDeviceOutcomeCallable IssClient::DeleteUserDeviceCallable(const DeleteUserDeviceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteUserDeviceOutcome>>();
+    DeleteUserDeviceAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteUserDeviceRequest&,
+        DeleteUserDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteVLPlanOutcome IssClient::DeleteVLPlan(const DeleteVLPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVLPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVLPlanResponse rsp = DeleteVLPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVLPlanOutcome(rsp);
+        else
+            return DeleteVLPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVLPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteVLPlanAsync(const DeleteVLPlanRequest& request, const DeleteVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVLPlanRequest&;
+    using Resp = DeleteVLPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVLPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteVLPlanOutcomeCallable IssClient::DeleteVLPlanCallable(const DeleteVLPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVLPlanOutcome>>();
+    DeleteVLPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteVLPlanRequest&,
+        DeleteVLPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteVLTemplateOutcome IssClient::DeleteVLTemplate(const DeleteVLTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVLTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVLTemplateResponse rsp = DeleteVLTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVLTemplateOutcome(rsp);
+        else
+            return DeleteVLTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVLTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteVLTemplateAsync(const DeleteVLTemplateRequest& request, const DeleteVLTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVLTemplateRequest&;
+    using Resp = DeleteVLTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVLTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteVLTemplateOutcomeCallable IssClient::DeleteVLTemplateCallable(const DeleteVLTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVLTemplateOutcome>>();
+    DeleteVLTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteVLTemplateRequest&,
+        DeleteVLTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteVideoSnapshotConfigOutcome IssClient::DeleteVideoSnapshotConfig(const DeleteVideoSnapshotConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVideoSnapshotConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVideoSnapshotConfigResponse rsp = DeleteVideoSnapshotConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVideoSnapshotConfigOutcome(rsp);
+        else
+            return DeleteVideoSnapshotConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVideoSnapshotConfigOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteVideoSnapshotConfigAsync(const DeleteVideoSnapshotConfigRequest& request, const DeleteVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVideoSnapshotConfigRequest&;
+    using Resp = DeleteVideoSnapshotConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVideoSnapshotConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteVideoSnapshotConfigOutcomeCallable IssClient::DeleteVideoSnapshotConfigCallable(const DeleteVideoSnapshotConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVideoSnapshotConfigOutcome>>();
+    DeleteVideoSnapshotConfigAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteVideoSnapshotConfigRequest&,
+        DeleteVideoSnapshotConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DeleteVideoSnapshotTemplateOutcome IssClient::DeleteVideoSnapshotTemplate(const DeleteVideoSnapshotTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVideoSnapshotTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVideoSnapshotTemplateResponse rsp = DeleteVideoSnapshotTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVideoSnapshotTemplateOutcome(rsp);
+        else
+            return DeleteVideoSnapshotTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVideoSnapshotTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DeleteVideoSnapshotTemplateAsync(const DeleteVideoSnapshotTemplateRequest& request, const DeleteVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVideoSnapshotTemplateRequest&;
+    using Resp = DeleteVideoSnapshotTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVideoSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DeleteVideoSnapshotTemplateOutcomeCallable IssClient::DeleteVideoSnapshotTemplateCallable(const DeleteVideoSnapshotTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVideoSnapshotTemplateOutcome>>();
+    DeleteVideoSnapshotTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DeleteVideoSnapshotTemplateRequest&,
+        DeleteVideoSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeCNAMEOutcome IssClient::DescribeCNAME(const DescribeCNAMERequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCNAME");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCNAMEResponse rsp = DescribeCNAMEResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCNAMEOutcome(rsp);
+        else
+            return DescribeCNAMEOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCNAMEOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeCNAMEAsync(const DescribeCNAMERequest& request, const DescribeCNAMEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCNAMERequest&;
+    using Resp = DescribeCNAMEResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCNAME", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeCNAMEOutcomeCallable IssClient::DescribeCNAMECallable(const DescribeCNAMERequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCNAMEOutcome>>();
+    DescribeCNAMEAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeCNAMERequest&,
+        DescribeCNAMEOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeDeviceChannelOutcome IssClient::DescribeDeviceChannel(const DescribeDeviceChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeviceChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeviceChannelResponse rsp = DescribeDeviceChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeviceChannelOutcome(rsp);
+        else
+            return DescribeDeviceChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeviceChannelOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeDeviceChannelAsync(const DescribeDeviceChannelRequest& request, const DescribeDeviceChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDeviceChannelRequest&;
+    using Resp = DescribeDeviceChannelResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeDeviceChannelOutcomeCallable IssClient::DescribeDeviceChannelCallable(const DescribeDeviceChannelRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDeviceChannelOutcome>>();
+    DescribeDeviceChannelAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeDeviceChannelRequest&,
+        DescribeDeviceChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeDevicePresetOutcome IssClient::DescribeDevicePreset(const DescribeDevicePresetRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDevicePreset");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDevicePresetResponse rsp = DescribeDevicePresetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDevicePresetOutcome(rsp);
+        else
+            return DescribeDevicePresetOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDevicePresetOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeDevicePresetAsync(const DescribeDevicePresetRequest& request, const DescribeDevicePresetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDevicePresetRequest&;
+    using Resp = DescribeDevicePresetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDevicePreset", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeDevicePresetOutcomeCallable IssClient::DescribeDevicePresetCallable(const DescribeDevicePresetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDevicePresetOutcome>>();
+    DescribeDevicePresetAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeDevicePresetRequest&,
+        DescribeDevicePresetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeDomainOutcome IssClient::DescribeDomain(const DescribeDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainResponse rsp = DescribeDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainOutcome(rsp);
+        else
+            return DescribeDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeDomainAsync(const DescribeDomainRequest& request, const DescribeDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDomainRequest&;
+    using Resp = DescribeDomainResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeDomainOutcomeCallable IssClient::DescribeDomainCallable(const DescribeDomainRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDomainOutcome>>();
+    DescribeDomainAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeDomainRequest&,
+        DescribeDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeDomainRegionOutcome IssClient::DescribeDomainRegion(const DescribeDomainRegionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainRegion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainRegionResponse rsp = DescribeDomainRegionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainRegionOutcome(rsp);
+        else
+            return DescribeDomainRegionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainRegionOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeDomainRegionAsync(const DescribeDomainRegionRequest& request, const DescribeDomainRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDomainRegionRequest&;
+    using Resp = DescribeDomainRegionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDomainRegion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeDomainRegionOutcomeCallable IssClient::DescribeDomainRegionCallable(const DescribeDomainRegionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDomainRegionOutcome>>();
+    DescribeDomainRegionAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeDomainRegionRequest&,
+        DescribeDomainRegionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeGBDeviceAddrOutcome IssClient::DescribeGBDeviceAddr(const DescribeGBDeviceAddrRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGBDeviceAddr");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGBDeviceAddrResponse rsp = DescribeGBDeviceAddrResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGBDeviceAddrOutcome(rsp);
+        else
+            return DescribeGBDeviceAddrOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGBDeviceAddrOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeGBDeviceAddrAsync(const DescribeGBDeviceAddrRequest& request, const DescribeGBDeviceAddrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeGBDeviceAddrRequest&;
+    using Resp = DescribeGBDeviceAddrResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeGBDeviceAddr", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeGBDeviceAddrOutcomeCallable IssClient::DescribeGBDeviceAddrCallable(const DescribeGBDeviceAddrRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeGBDeviceAddrOutcome>>();
+    DescribeGBDeviceAddrAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeGBDeviceAddrRequest&,
+        DescribeGBDeviceAddrOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeOrganizationOutcome IssClient::DescribeOrganization(const DescribeOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOrganizationResponse rsp = DescribeOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOrganizationOutcome(rsp);
+        else
+            return DescribeOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeOrganizationAsync(const DescribeOrganizationRequest& request, const DescribeOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeOrganizationRequest&;
+    using Resp = DescribeOrganizationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeOrganization", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeOrganizationOutcomeCallable IssClient::DescribeOrganizationCallable(const DescribeOrganizationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeOrganizationOutcome>>();
+    DescribeOrganizationAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeOrganizationRequest&,
+        DescribeOrganizationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordBackupPlanOutcome IssClient::DescribeRecordBackupPlan(const DescribeRecordBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordBackupPlanResponse rsp = DescribeRecordBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordBackupPlanOutcome(rsp);
+        else
+            return DescribeRecordBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordBackupPlanAsync(const DescribeRecordBackupPlanRequest& request, const DescribeRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordBackupPlanRequest&;
+    using Resp = DescribeRecordBackupPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordBackupPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordBackupPlanOutcomeCallable IssClient::DescribeRecordBackupPlanCallable(const DescribeRecordBackupPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordBackupPlanOutcome>>();
+    DescribeRecordBackupPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordBackupPlanRequest&,
+        DescribeRecordBackupPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordBackupTemplateOutcome IssClient::DescribeRecordBackupTemplate(const DescribeRecordBackupTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordBackupTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordBackupTemplateResponse rsp = DescribeRecordBackupTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordBackupTemplateOutcome(rsp);
+        else
+            return DescribeRecordBackupTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordBackupTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordBackupTemplateAsync(const DescribeRecordBackupTemplateRequest& request, const DescribeRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordBackupTemplateRequest&;
+    using Resp = DescribeRecordBackupTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordBackupTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordBackupTemplateOutcomeCallable IssClient::DescribeRecordBackupTemplateCallable(const DescribeRecordBackupTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordBackupTemplateOutcome>>();
+    DescribeRecordBackupTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordBackupTemplateRequest&,
+        DescribeRecordBackupTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordFileOutcome IssClient::DescribeRecordFile(const DescribeRecordFileRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordFile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordFileResponse rsp = DescribeRecordFileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordFileOutcome(rsp);
+        else
+            return DescribeRecordFileOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordFileOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordFileAsync(const DescribeRecordFileRequest& request, const DescribeRecordFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordFileRequest&;
+    using Resp = DescribeRecordFileResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordFileOutcomeCallable IssClient::DescribeRecordFileCallable(const DescribeRecordFileRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordFileOutcome>>();
+    DescribeRecordFileAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordFileRequest&,
+        DescribeRecordFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordPlanOutcome IssClient::DescribeRecordPlan(const DescribeRecordPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordPlanResponse rsp = DescribeRecordPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordPlanOutcome(rsp);
+        else
+            return DescribeRecordPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordPlanAsync(const DescribeRecordPlanRequest& request, const DescribeRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordPlanRequest&;
+    using Resp = DescribeRecordPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordPlanOutcomeCallable IssClient::DescribeRecordPlanCallable(const DescribeRecordPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordPlanOutcome>>();
+    DescribeRecordPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordPlanRequest&,
+        DescribeRecordPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordPlaybackUrlOutcome IssClient::DescribeRecordPlaybackUrl(const DescribeRecordPlaybackUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordPlaybackUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordPlaybackUrlResponse rsp = DescribeRecordPlaybackUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordPlaybackUrlOutcome(rsp);
+        else
+            return DescribeRecordPlaybackUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordPlaybackUrlOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordPlaybackUrlAsync(const DescribeRecordPlaybackUrlRequest& request, const DescribeRecordPlaybackUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordPlaybackUrlRequest&;
+    using Resp = DescribeRecordPlaybackUrlResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordPlaybackUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordPlaybackUrlOutcomeCallable IssClient::DescribeRecordPlaybackUrlCallable(const DescribeRecordPlaybackUrlRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordPlaybackUrlOutcome>>();
+    DescribeRecordPlaybackUrlAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordPlaybackUrlRequest&,
+        DescribeRecordPlaybackUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordRetrieveTaskOutcome IssClient::DescribeRecordRetrieveTask(const DescribeRecordRetrieveTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordRetrieveTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordRetrieveTaskResponse rsp = DescribeRecordRetrieveTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordRetrieveTaskOutcome(rsp);
+        else
+            return DescribeRecordRetrieveTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordRetrieveTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordRetrieveTaskAsync(const DescribeRecordRetrieveTaskRequest& request, const DescribeRecordRetrieveTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordRetrieveTaskRequest&;
+    using Resp = DescribeRecordRetrieveTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordRetrieveTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordRetrieveTaskOutcomeCallable IssClient::DescribeRecordRetrieveTaskCallable(const DescribeRecordRetrieveTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordRetrieveTaskOutcome>>();
+    DescribeRecordRetrieveTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordRetrieveTaskRequest&,
+        DescribeRecordRetrieveTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeRecordTemplateOutcome IssClient::DescribeRecordTemplate(const DescribeRecordTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordTemplateResponse rsp = DescribeRecordTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordTemplateOutcome(rsp);
+        else
+            return DescribeRecordTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeRecordTemplateAsync(const DescribeRecordTemplateRequest& request, const DescribeRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordTemplateRequest&;
+    using Resp = DescribeRecordTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeRecordTemplateOutcomeCallable IssClient::DescribeRecordTemplateCallable(const DescribeRecordTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordTemplateOutcome>>();
+    DescribeRecordTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeRecordTemplateRequest&,
+        DescribeRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeStreamAuthOutcome IssClient::DescribeStreamAuth(const DescribeStreamAuthRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamAuth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamAuthResponse rsp = DescribeStreamAuthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamAuthOutcome(rsp);
+        else
+            return DescribeStreamAuthOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamAuthOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeStreamAuthAsync(const DescribeStreamAuthRequest& request, const DescribeStreamAuthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeStreamAuthRequest&;
+    using Resp = DescribeStreamAuthResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamAuth", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeStreamAuthOutcomeCallable IssClient::DescribeStreamAuthCallable(const DescribeStreamAuthRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeStreamAuthOutcome>>();
+    DescribeStreamAuthAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeStreamAuthRequest&,
+        DescribeStreamAuthOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeTaskOutcome IssClient::DescribeTask(const DescribeTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTaskResponse rsp = DescribeTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTaskOutcome(rsp);
+        else
+            return DescribeTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeTaskAsync(const DescribeTaskRequest& request, const DescribeTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTaskRequest&;
+    using Resp = DescribeTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeTaskOutcomeCallable IssClient::DescribeTaskCallable(const DescribeTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTaskOutcome>>();
+    DescribeTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeTaskRequest&,
+        DescribeTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeUserDeviceOutcome IssClient::DescribeUserDevice(const DescribeUserDeviceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUserDevice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUserDeviceResponse rsp = DescribeUserDeviceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUserDeviceOutcome(rsp);
+        else
+            return DescribeUserDeviceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUserDeviceOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeUserDeviceAsync(const DescribeUserDeviceRequest& request, const DescribeUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeUserDeviceRequest&;
+    using Resp = DescribeUserDeviceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeUserDeviceOutcomeCallable IssClient::DescribeUserDeviceCallable(const DescribeUserDeviceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeUserDeviceOutcome>>();
+    DescribeUserDeviceAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeUserDeviceRequest&,
+        DescribeUserDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeUserDeviceListOutcome IssClient::DescribeUserDeviceList(const DescribeUserDeviceListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUserDeviceList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUserDeviceListResponse rsp = DescribeUserDeviceListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUserDeviceListOutcome(rsp);
+        else
+            return DescribeUserDeviceListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUserDeviceListOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeUserDeviceListAsync(const DescribeUserDeviceListRequest& request, const DescribeUserDeviceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeUserDeviceListRequest&;
+    using Resp = DescribeUserDeviceListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserDeviceList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeUserDeviceListOutcomeCallable IssClient::DescribeUserDeviceListCallable(const DescribeUserDeviceListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeUserDeviceListOutcome>>();
+    DescribeUserDeviceListAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeUserDeviceListRequest&,
+        DescribeUserDeviceListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVLPlanOutcome IssClient::DescribeVLPlan(const DescribeVLPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVLPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVLPlanResponse rsp = DescribeVLPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVLPlanOutcome(rsp);
+        else
+            return DescribeVLPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVLPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVLPlanAsync(const DescribeVLPlanRequest& request, const DescribeVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVLPlanRequest&;
+    using Resp = DescribeVLPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVLPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVLPlanOutcomeCallable IssClient::DescribeVLPlanCallable(const DescribeVLPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVLPlanOutcome>>();
+    DescribeVLPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVLPlanRequest&,
+        DescribeVLPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVLPlanResultOutcome IssClient::DescribeVLPlanResult(const DescribeVLPlanResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVLPlanResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVLPlanResultResponse rsp = DescribeVLPlanResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVLPlanResultOutcome(rsp);
+        else
+            return DescribeVLPlanResultOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVLPlanResultOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVLPlanResultAsync(const DescribeVLPlanResultRequest& request, const DescribeVLPlanResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVLPlanResultRequest&;
+    using Resp = DescribeVLPlanResultResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVLPlanResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVLPlanResultOutcomeCallable IssClient::DescribeVLPlanResultCallable(const DescribeVLPlanResultRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVLPlanResultOutcome>>();
+    DescribeVLPlanResultAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVLPlanResultRequest&,
+        DescribeVLPlanResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVLTemplateOutcome IssClient::DescribeVLTemplate(const DescribeVLTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVLTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVLTemplateResponse rsp = DescribeVLTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVLTemplateOutcome(rsp);
+        else
+            return DescribeVLTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVLTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVLTemplateAsync(const DescribeVLTemplateRequest& request, const DescribeVLTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVLTemplateRequest&;
+    using Resp = DescribeVLTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVLTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVLTemplateOutcomeCallable IssClient::DescribeVLTemplateCallable(const DescribeVLTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVLTemplateOutcome>>();
+    DescribeVLTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVLTemplateRequest&,
+        DescribeVLTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVideoBitRateOutcome IssClient::DescribeVideoBitRate(const DescribeVideoBitRateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVideoBitRate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVideoBitRateResponse rsp = DescribeVideoBitRateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVideoBitRateOutcome(rsp);
+        else
+            return DescribeVideoBitRateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVideoBitRateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVideoBitRateAsync(const DescribeVideoBitRateRequest& request, const DescribeVideoBitRateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVideoBitRateRequest&;
+    using Resp = DescribeVideoBitRateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVideoBitRate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVideoBitRateOutcomeCallable IssClient::DescribeVideoBitRateCallable(const DescribeVideoBitRateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVideoBitRateOutcome>>();
+    DescribeVideoBitRateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVideoBitRateRequest&,
+        DescribeVideoBitRateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVideoDownloadUrlOutcome IssClient::DescribeVideoDownloadUrl(const DescribeVideoDownloadUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVideoDownloadUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVideoDownloadUrlResponse rsp = DescribeVideoDownloadUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVideoDownloadUrlOutcome(rsp);
+        else
+            return DescribeVideoDownloadUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVideoDownloadUrlOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVideoDownloadUrlAsync(const DescribeVideoDownloadUrlRequest& request, const DescribeVideoDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVideoDownloadUrlRequest&;
+    using Resp = DescribeVideoDownloadUrlResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVideoDownloadUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVideoDownloadUrlOutcomeCallable IssClient::DescribeVideoDownloadUrlCallable(const DescribeVideoDownloadUrlRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVideoDownloadUrlOutcome>>();
+    DescribeVideoDownloadUrlAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVideoDownloadUrlRequest&,
+        DescribeVideoDownloadUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVideoSnapshotConfigOutcome IssClient::DescribeVideoSnapshotConfig(const DescribeVideoSnapshotConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVideoSnapshotConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVideoSnapshotConfigResponse rsp = DescribeVideoSnapshotConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVideoSnapshotConfigOutcome(rsp);
+        else
+            return DescribeVideoSnapshotConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVideoSnapshotConfigOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVideoSnapshotConfigAsync(const DescribeVideoSnapshotConfigRequest& request, const DescribeVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVideoSnapshotConfigRequest&;
+    using Resp = DescribeVideoSnapshotConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVideoSnapshotConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVideoSnapshotConfigOutcomeCallable IssClient::DescribeVideoSnapshotConfigCallable(const DescribeVideoSnapshotConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVideoSnapshotConfigOutcome>>();
+    DescribeVideoSnapshotConfigAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVideoSnapshotConfigRequest&,
+        DescribeVideoSnapshotConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::DescribeVideoSnapshotTemplateOutcome IssClient::DescribeVideoSnapshotTemplate(const DescribeVideoSnapshotTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVideoSnapshotTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVideoSnapshotTemplateResponse rsp = DescribeVideoSnapshotTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVideoSnapshotTemplateOutcome(rsp);
+        else
+            return DescribeVideoSnapshotTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVideoSnapshotTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::DescribeVideoSnapshotTemplateAsync(const DescribeVideoSnapshotTemplateRequest& request, const DescribeVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVideoSnapshotTemplateRequest&;
+    using Resp = DescribeVideoSnapshotTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVideoSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::DescribeVideoSnapshotTemplateOutcomeCallable IssClient::DescribeVideoSnapshotTemplateCallable(const DescribeVideoSnapshotTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVideoSnapshotTemplateOutcome>>();
+    DescribeVideoSnapshotTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const DescribeVideoSnapshotTemplateRequest&,
+        DescribeVideoSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListDeviceSnapshotsOutcome IssClient::ListDeviceSnapshots(const ListDeviceSnapshotsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListDeviceSnapshots");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListDeviceSnapshotsResponse rsp = ListDeviceSnapshotsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListDeviceSnapshotsOutcome(rsp);
+        else
+            return ListDeviceSnapshotsOutcome(o.GetError());
+    }
+    else
+    {
+        return ListDeviceSnapshotsOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListDeviceSnapshotsAsync(const ListDeviceSnapshotsRequest& request, const ListDeviceSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListDeviceSnapshotsRequest&;
+    using Resp = ListDeviceSnapshotsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListDeviceSnapshots", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListDeviceSnapshotsOutcomeCallable IssClient::ListDeviceSnapshotsCallable(const ListDeviceSnapshotsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListDeviceSnapshotsOutcome>>();
+    ListDeviceSnapshotsAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListDeviceSnapshotsRequest&,
+        ListDeviceSnapshotsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListDevicesOutcome IssClient::ListDevices(const ListDevicesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListDevices");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListDevicesResponse rsp = ListDevicesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListDevicesOutcome(rsp);
+        else
+            return ListDevicesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListDevicesOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListDevicesAsync(const ListDevicesRequest& request, const ListDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListDevicesRequest&;
+    using Resp = ListDevicesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListDevices", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListDevicesOutcomeCallable IssClient::ListDevicesCallable(const ListDevicesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListDevicesOutcome>>();
+    ListDevicesAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListDevicesRequest&,
+        ListDevicesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListOrganizationChannelsOutcome IssClient::ListOrganizationChannels(const ListOrganizationChannelsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListOrganizationChannels");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListOrganizationChannelsResponse rsp = ListOrganizationChannelsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListOrganizationChannelsOutcome(rsp);
+        else
+            return ListOrganizationChannelsOutcome(o.GetError());
+    }
+    else
+    {
+        return ListOrganizationChannelsOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListOrganizationChannelsAsync(const ListOrganizationChannelsRequest& request, const ListOrganizationChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListOrganizationChannelsRequest&;
+    using Resp = ListOrganizationChannelsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListOrganizationChannels", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListOrganizationChannelsOutcomeCallable IssClient::ListOrganizationChannelsCallable(const ListOrganizationChannelsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListOrganizationChannelsOutcome>>();
+    ListOrganizationChannelsAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListOrganizationChannelsRequest&,
+        ListOrganizationChannelsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordBackupPlanDevicesOutcome IssClient::ListRecordBackupPlanDevices(const ListRecordBackupPlanDevicesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordBackupPlanDevices");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordBackupPlanDevicesResponse rsp = ListRecordBackupPlanDevicesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordBackupPlanDevicesOutcome(rsp);
+        else
+            return ListRecordBackupPlanDevicesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordBackupPlanDevicesOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordBackupPlanDevicesAsync(const ListRecordBackupPlanDevicesRequest& request, const ListRecordBackupPlanDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordBackupPlanDevicesRequest&;
+    using Resp = ListRecordBackupPlanDevicesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordBackupPlanDevices", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordBackupPlanDevicesOutcomeCallable IssClient::ListRecordBackupPlanDevicesCallable(const ListRecordBackupPlanDevicesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordBackupPlanDevicesOutcome>>();
+    ListRecordBackupPlanDevicesAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordBackupPlanDevicesRequest&,
+        ListRecordBackupPlanDevicesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordBackupPlansOutcome IssClient::ListRecordBackupPlans(const ListRecordBackupPlansRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordBackupPlans");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordBackupPlansResponse rsp = ListRecordBackupPlansResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordBackupPlansOutcome(rsp);
+        else
+            return ListRecordBackupPlansOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordBackupPlansOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordBackupPlansAsync(const ListRecordBackupPlansRequest& request, const ListRecordBackupPlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordBackupPlansRequest&;
+    using Resp = ListRecordBackupPlansResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordBackupPlans", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordBackupPlansOutcomeCallable IssClient::ListRecordBackupPlansCallable(const ListRecordBackupPlansRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordBackupPlansOutcome>>();
+    ListRecordBackupPlansAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordBackupPlansRequest&,
+        ListRecordBackupPlansOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordBackupTemplatesOutcome IssClient::ListRecordBackupTemplates(const ListRecordBackupTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordBackupTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordBackupTemplatesResponse rsp = ListRecordBackupTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordBackupTemplatesOutcome(rsp);
+        else
+            return ListRecordBackupTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordBackupTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordBackupTemplatesAsync(const ListRecordBackupTemplatesRequest& request, const ListRecordBackupTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordBackupTemplatesRequest&;
+    using Resp = ListRecordBackupTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordBackupTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordBackupTemplatesOutcomeCallable IssClient::ListRecordBackupTemplatesCallable(const ListRecordBackupTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordBackupTemplatesOutcome>>();
+    ListRecordBackupTemplatesAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordBackupTemplatesRequest&,
+        ListRecordBackupTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordPlanDevicesOutcome IssClient::ListRecordPlanDevices(const ListRecordPlanDevicesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordPlanDevices");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordPlanDevicesResponse rsp = ListRecordPlanDevicesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordPlanDevicesOutcome(rsp);
+        else
+            return ListRecordPlanDevicesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordPlanDevicesOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordPlanDevicesAsync(const ListRecordPlanDevicesRequest& request, const ListRecordPlanDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordPlanDevicesRequest&;
+    using Resp = ListRecordPlanDevicesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordPlanDevices", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordPlanDevicesOutcomeCallable IssClient::ListRecordPlanDevicesCallable(const ListRecordPlanDevicesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordPlanDevicesOutcome>>();
+    ListRecordPlanDevicesAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordPlanDevicesRequest&,
+        ListRecordPlanDevicesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordPlansOutcome IssClient::ListRecordPlans(const ListRecordPlansRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordPlans");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordPlansResponse rsp = ListRecordPlansResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordPlansOutcome(rsp);
+        else
+            return ListRecordPlansOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordPlansOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordPlansAsync(const ListRecordPlansRequest& request, const ListRecordPlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordPlansRequest&;
+    using Resp = ListRecordPlansResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordPlans", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordPlansOutcomeCallable IssClient::ListRecordPlansCallable(const ListRecordPlansRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordPlansOutcome>>();
+    ListRecordPlansAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordPlansRequest&,
+        ListRecordPlansOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordRetrieveTasksOutcome IssClient::ListRecordRetrieveTasks(const ListRecordRetrieveTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordRetrieveTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordRetrieveTasksResponse rsp = ListRecordRetrieveTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordRetrieveTasksOutcome(rsp);
+        else
+            return ListRecordRetrieveTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordRetrieveTasksOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordRetrieveTasksAsync(const ListRecordRetrieveTasksRequest& request, const ListRecordRetrieveTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordRetrieveTasksRequest&;
+    using Resp = ListRecordRetrieveTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordRetrieveTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordRetrieveTasksOutcomeCallable IssClient::ListRecordRetrieveTasksCallable(const ListRecordRetrieveTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordRetrieveTasksOutcome>>();
+    ListRecordRetrieveTasksAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordRetrieveTasksRequest&,
+        ListRecordRetrieveTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListRecordTemplatesOutcome IssClient::ListRecordTemplates(const ListRecordTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListRecordTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListRecordTemplatesResponse rsp = ListRecordTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListRecordTemplatesOutcome(rsp);
+        else
+            return ListRecordTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListRecordTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListRecordTemplatesAsync(const ListRecordTemplatesRequest& request, const ListRecordTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListRecordTemplatesRequest&;
+    using Resp = ListRecordTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListRecordTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListRecordTemplatesOutcomeCallable IssClient::ListRecordTemplatesCallable(const ListRecordTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListRecordTemplatesOutcome>>();
+    ListRecordTemplatesAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListRecordTemplatesRequest&,
+        ListRecordTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListSubTasksOutcome IssClient::ListSubTasks(const ListSubTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListSubTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListSubTasksResponse rsp = ListSubTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListSubTasksOutcome(rsp);
+        else
+            return ListSubTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return ListSubTasksOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListSubTasksAsync(const ListSubTasksRequest& request, const ListSubTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListSubTasksRequest&;
+    using Resp = ListSubTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListSubTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListSubTasksOutcomeCallable IssClient::ListSubTasksCallable(const ListSubTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListSubTasksOutcome>>();
+    ListSubTasksAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListSubTasksRequest&,
+        ListSubTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListTasksOutcome IssClient::ListTasks(const ListTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListTasksResponse rsp = ListTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListTasksOutcome(rsp);
+        else
+            return ListTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return ListTasksOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListTasksAsync(const ListTasksRequest& request, const ListTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListTasksRequest&;
+    using Resp = ListTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListTasksOutcomeCallable IssClient::ListTasksCallable(const ListTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListTasksOutcome>>();
+    ListTasksAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListTasksRequest&,
+        ListTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListVLPlansOutcome IssClient::ListVLPlans(const ListVLPlansRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListVLPlans");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListVLPlansResponse rsp = ListVLPlansResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListVLPlansOutcome(rsp);
+        else
+            return ListVLPlansOutcome(o.GetError());
+    }
+    else
+    {
+        return ListVLPlansOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListVLPlansAsync(const ListVLPlansRequest& request, const ListVLPlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListVLPlansRequest&;
+    using Resp = ListVLPlansResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListVLPlans", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListVLPlansOutcomeCallable IssClient::ListVLPlansCallable(const ListVLPlansRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListVLPlansOutcome>>();
+    ListVLPlansAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListVLPlansRequest&,
+        ListVLPlansOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListVLTemplatesOutcome IssClient::ListVLTemplates(const ListVLTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListVLTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListVLTemplatesResponse rsp = ListVLTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListVLTemplatesOutcome(rsp);
+        else
+            return ListVLTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListVLTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListVLTemplatesAsync(const ListVLTemplatesRequest& request, const ListVLTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListVLTemplatesRequest&;
+    using Resp = ListVLTemplatesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListVLTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListVLTemplatesOutcomeCallable IssClient::ListVLTemplatesCallable(const ListVLTemplatesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListVLTemplatesOutcome>>();
+    ListVLTemplatesAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListVLTemplatesRequest&,
+        ListVLTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListVideoDownloadTaskOutcome IssClient::ListVideoDownloadTask(const ListVideoDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListVideoDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListVideoDownloadTaskResponse rsp = ListVideoDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListVideoDownloadTaskOutcome(rsp);
+        else
+            return ListVideoDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ListVideoDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListVideoDownloadTaskAsync(const ListVideoDownloadTaskRequest& request, const ListVideoDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListVideoDownloadTaskRequest&;
+    using Resp = ListVideoDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListVideoDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListVideoDownloadTaskOutcomeCallable IssClient::ListVideoDownloadTaskCallable(const ListVideoDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListVideoDownloadTaskOutcome>>();
+    ListVideoDownloadTaskAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListVideoDownloadTaskRequest&,
+        ListVideoDownloadTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ListVideoSnapshotTemplateOutcome IssClient::ListVideoSnapshotTemplate(const ListVideoSnapshotTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListVideoSnapshotTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListVideoSnapshotTemplateResponse rsp = ListVideoSnapshotTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListVideoSnapshotTemplateOutcome(rsp);
+        else
+            return ListVideoSnapshotTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return ListVideoSnapshotTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ListVideoSnapshotTemplateAsync(const ListVideoSnapshotTemplateRequest& request, const ListVideoSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListVideoSnapshotTemplateRequest&;
+    using Resp = ListVideoSnapshotTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListVideoSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ListVideoSnapshotTemplateOutcomeCallable IssClient::ListVideoSnapshotTemplateCallable(const ListVideoSnapshotTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListVideoSnapshotTemplateOutcome>>();
+    ListVideoSnapshotTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ListVideoSnapshotTemplateRequest&,
+        ListVideoSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ModifyVLPlanOutcome IssClient::ModifyVLPlan(const ModifyVLPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVLPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVLPlanResponse rsp = ModifyVLPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVLPlanOutcome(rsp);
+        else
+            return ModifyVLPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVLPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ModifyVLPlanAsync(const ModifyVLPlanRequest& request, const ModifyVLPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyVLPlanRequest&;
+    using Resp = ModifyVLPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyVLPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ModifyVLPlanOutcomeCallable IssClient::ModifyVLPlanCallable(const ModifyVLPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyVLPlanOutcome>>();
+    ModifyVLPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ModifyVLPlanRequest&,
+        ModifyVLPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::ModifyVideoSnapshotConfigOutcome IssClient::ModifyVideoSnapshotConfig(const ModifyVideoSnapshotConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVideoSnapshotConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVideoSnapshotConfigResponse rsp = ModifyVideoSnapshotConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVideoSnapshotConfigOutcome(rsp);
+        else
+            return ModifyVideoSnapshotConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVideoSnapshotConfigOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::ModifyVideoSnapshotConfigAsync(const ModifyVideoSnapshotConfigRequest& request, const ModifyVideoSnapshotConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyVideoSnapshotConfigRequest&;
+    using Resp = ModifyVideoSnapshotConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyVideoSnapshotConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::ModifyVideoSnapshotConfigOutcomeCallable IssClient::ModifyVideoSnapshotConfigCallable(const ModifyVideoSnapshotConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyVideoSnapshotConfigOutcome>>();
+    ModifyVideoSnapshotConfigAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const ModifyVideoSnapshotConfigRequest&,
+        ModifyVideoSnapshotConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::PlayRecordOutcome IssClient::PlayRecord(const PlayRecordRequest &request)
+{
+    auto outcome = MakeRequest(request, "PlayRecord");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PlayRecordResponse rsp = PlayRecordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PlayRecordOutcome(rsp);
+        else
+            return PlayRecordOutcome(o.GetError());
+    }
+    else
+    {
+        return PlayRecordOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::PlayRecordAsync(const PlayRecordRequest& request, const PlayRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const PlayRecordRequest&;
+    using Resp = PlayRecordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "PlayRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::PlayRecordOutcomeCallable IssClient::PlayRecordCallable(const PlayRecordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<PlayRecordOutcome>>();
+    PlayRecordAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const PlayRecordRequest&,
+        PlayRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::QueryForbidPlayChannelListOutcome IssClient::QueryForbidPlayChannelList(const QueryForbidPlayChannelListRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryForbidPlayChannelList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryForbidPlayChannelListResponse rsp = QueryForbidPlayChannelListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryForbidPlayChannelListOutcome(rsp);
+        else
+            return QueryForbidPlayChannelListOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryForbidPlayChannelListOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::QueryForbidPlayChannelListAsync(const QueryForbidPlayChannelListRequest& request, const QueryForbidPlayChannelListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const QueryForbidPlayChannelListRequest&;
+    using Resp = QueryForbidPlayChannelListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "QueryForbidPlayChannelList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::QueryForbidPlayChannelListOutcomeCallable IssClient::QueryForbidPlayChannelListCallable(const QueryForbidPlayChannelListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<QueryForbidPlayChannelListOutcome>>();
+    QueryForbidPlayChannelListAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const QueryForbidPlayChannelListRequest&,
+        QueryForbidPlayChannelListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::RefreshDeviceChannelOutcome IssClient::RefreshDeviceChannel(const RefreshDeviceChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "RefreshDeviceChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RefreshDeviceChannelResponse rsp = RefreshDeviceChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RefreshDeviceChannelOutcome(rsp);
+        else
+            return RefreshDeviceChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return RefreshDeviceChannelOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::RefreshDeviceChannelAsync(const RefreshDeviceChannelRequest& request, const RefreshDeviceChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RefreshDeviceChannelRequest&;
+    using Resp = RefreshDeviceChannelResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RefreshDeviceChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::RefreshDeviceChannelOutcomeCallable IssClient::RefreshDeviceChannelCallable(const RefreshDeviceChannelRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RefreshDeviceChannelOutcome>>();
+    RefreshDeviceChannelAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const RefreshDeviceChannelRequest&,
+        RefreshDeviceChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::SetForbidPlayChannelsOutcome IssClient::SetForbidPlayChannels(const SetForbidPlayChannelsRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetForbidPlayChannels");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetForbidPlayChannelsResponse rsp = SetForbidPlayChannelsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetForbidPlayChannelsOutcome(rsp);
+        else
+            return SetForbidPlayChannelsOutcome(o.GetError());
+    }
+    else
+    {
+        return SetForbidPlayChannelsOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::SetForbidPlayChannelsAsync(const SetForbidPlayChannelsRequest& request, const SetForbidPlayChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SetForbidPlayChannelsRequest&;
+    using Resp = SetForbidPlayChannelsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SetForbidPlayChannels", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::SetForbidPlayChannelsOutcomeCallable IssClient::SetForbidPlayChannelsCallable(const SetForbidPlayChannelsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SetForbidPlayChannelsOutcome>>();
+    SetForbidPlayChannelsAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const SetForbidPlayChannelsRequest&,
+        SetForbidPlayChannelsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateDeviceOrganizationOutcome IssClient::UpdateDeviceOrganization(const UpdateDeviceOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateDeviceOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateDeviceOrganizationResponse rsp = UpdateDeviceOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateDeviceOrganizationOutcome(rsp);
+        else
+            return UpdateDeviceOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateDeviceOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateDeviceOrganizationAsync(const UpdateDeviceOrganizationRequest& request, const UpdateDeviceOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateDeviceOrganizationRequest&;
+    using Resp = UpdateDeviceOrganizationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateDeviceOrganization", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateDeviceOrganizationOutcomeCallable IssClient::UpdateDeviceOrganizationCallable(const UpdateDeviceOrganizationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateDeviceOrganizationOutcome>>();
+    UpdateDeviceOrganizationAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateDeviceOrganizationRequest&,
+        UpdateDeviceOrganizationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateDeviceStatusOutcome IssClient::UpdateDeviceStatus(const UpdateDeviceStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateDeviceStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateDeviceStatusResponse rsp = UpdateDeviceStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateDeviceStatusOutcome(rsp);
+        else
+            return UpdateDeviceStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateDeviceStatusOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateDeviceStatusAsync(const UpdateDeviceStatusRequest& request, const UpdateDeviceStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateDeviceStatusRequest&;
+    using Resp = UpdateDeviceStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateDeviceStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateDeviceStatusOutcomeCallable IssClient::UpdateDeviceStatusCallable(const UpdateDeviceStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateDeviceStatusOutcome>>();
+    UpdateDeviceStatusAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateDeviceStatusRequest&,
+        UpdateDeviceStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateOrganizationOutcome IssClient::UpdateOrganization(const UpdateOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateOrganizationResponse rsp = UpdateOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateOrganizationOutcome(rsp);
+        else
+            return UpdateOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateOrganizationAsync(const UpdateOrganizationRequest& request, const UpdateOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateOrganizationRequest&;
+    using Resp = UpdateOrganizationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateOrganization", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateOrganizationOutcomeCallable IssClient::UpdateOrganizationCallable(const UpdateOrganizationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateOrganizationOutcome>>();
+    UpdateOrganizationAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateOrganizationRequest&,
+        UpdateOrganizationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateRecordBackupPlanOutcome IssClient::UpdateRecordBackupPlan(const UpdateRecordBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateRecordBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateRecordBackupPlanResponse rsp = UpdateRecordBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateRecordBackupPlanOutcome(rsp);
+        else
+            return UpdateRecordBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateRecordBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateRecordBackupPlanAsync(const UpdateRecordBackupPlanRequest& request, const UpdateRecordBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateRecordBackupPlanRequest&;
+    using Resp = UpdateRecordBackupPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateRecordBackupPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateRecordBackupPlanOutcomeCallable IssClient::UpdateRecordBackupPlanCallable(const UpdateRecordBackupPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateRecordBackupPlanOutcome>>();
+    UpdateRecordBackupPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateRecordBackupPlanRequest&,
+        UpdateRecordBackupPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateRecordBackupTemplateOutcome IssClient::UpdateRecordBackupTemplate(const UpdateRecordBackupTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateRecordBackupTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateRecordBackupTemplateResponse rsp = UpdateRecordBackupTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateRecordBackupTemplateOutcome(rsp);
+        else
+            return UpdateRecordBackupTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateRecordBackupTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateRecordBackupTemplateAsync(const UpdateRecordBackupTemplateRequest& request, const UpdateRecordBackupTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateRecordBackupTemplateRequest&;
+    using Resp = UpdateRecordBackupTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateRecordBackupTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateRecordBackupTemplateOutcomeCallable IssClient::UpdateRecordBackupTemplateCallable(const UpdateRecordBackupTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateRecordBackupTemplateOutcome>>();
+    UpdateRecordBackupTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateRecordBackupTemplateRequest&,
+        UpdateRecordBackupTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateRecordPlanOutcome IssClient::UpdateRecordPlan(const UpdateRecordPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateRecordPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateRecordPlanResponse rsp = UpdateRecordPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateRecordPlanOutcome(rsp);
+        else
+            return UpdateRecordPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateRecordPlanOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateRecordPlanAsync(const UpdateRecordPlanRequest& request, const UpdateRecordPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateRecordPlanRequest&;
+    using Resp = UpdateRecordPlanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateRecordPlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateRecordPlanOutcomeCallable IssClient::UpdateRecordPlanCallable(const UpdateRecordPlanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateRecordPlanOutcome>>();
+    UpdateRecordPlanAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateRecordPlanRequest&,
+        UpdateRecordPlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateRecordTemplateOutcome IssClient::UpdateRecordTemplate(const UpdateRecordTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateRecordTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateRecordTemplateResponse rsp = UpdateRecordTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateRecordTemplateOutcome(rsp);
+        else
+            return UpdateRecordTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateRecordTemplateOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateRecordTemplateAsync(const UpdateRecordTemplateRequest& request, const UpdateRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateRecordTemplateRequest&;
+    using Resp = UpdateRecordTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateRecordTemplateOutcomeCallable IssClient::UpdateRecordTemplateCallable(const UpdateRecordTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateRecordTemplateOutcome>>();
+    UpdateRecordTemplateAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateRecordTemplateRequest&,
+        UpdateRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+IssClient::UpdateUserDeviceOutcome IssClient::UpdateUserDevice(const UpdateUserDeviceRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateUserDevice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateUserDeviceResponse rsp = UpdateUserDeviceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateUserDeviceOutcome(rsp);
+        else
+            return UpdateUserDeviceOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateUserDeviceOutcome(outcome.GetError());
+    }
+}
+
+void IssClient::UpdateUserDeviceAsync(const UpdateUserDeviceRequest& request, const UpdateUserDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateUserDeviceRequest&;
+    using Resp = UpdateUserDeviceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateUserDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IssClient::UpdateUserDeviceOutcomeCallable IssClient::UpdateUserDeviceCallable(const UpdateUserDeviceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateUserDeviceOutcome>>();
+    UpdateUserDeviceAsync(
+    request,
+    [prom](
+        const IssClient*,
+        const UpdateUserDeviceRequest&,
+        UpdateUserDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
