@@ -67,7 +67,6 @@ The names of availability zones across the network are as follows:.
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
-<li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
@@ -110,7 +109,6 @@ The names of availability zones across the network are as follows:.
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
-<li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
@@ -158,7 +156,6 @@ The names of availability zones across the network are as follows:.
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
-<li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
@@ -201,7 +198,6 @@ The names of availability zones across the network are as follows:.
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
-<li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
@@ -471,7 +467,6 @@ The names of availability zones across the network are as follows:.
 <li> ap-tokyo-1 </li>
 <li> ap-singapore-1 </li>
 <li> ap-singapore-2 </li>
-<li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
