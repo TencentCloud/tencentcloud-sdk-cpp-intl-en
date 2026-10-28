@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content management task result
+                * Content management task result.
                 */
                 class Task : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the task.
-                     * @return JobId ID of the task.
+                     * 获取Task ID.
+                     * @return JobId Task ID.
                      * 
                      */
                     std::string GetJobId() const;
 
                     /**
-                     * 设置ID of the task.
-                     * @param _jobId ID of the task.
+                     * 设置Task ID.
+                     * @param _jobId Task ID.
                      * 
                      */
                     void SetJobId(const std::string& _jobId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TargetHasBeenSet() const;
 
                     /**
-                     * 获取Type of the task.
-                     * @return Type Type of the task.
+                     * 获取Task type.
+                     * @return Type Task type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of the task.
-                     * @param _type Type of the task.
+                     * 设置Task type.
+                     * @param _type Task type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -110,23 +110,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
-                     * @return Method Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+                     * 获取Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+                     * @return Method Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
                      * 
                      */
                     std::string GetMethod() const;
 
                     /**
-                     * 设置Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
-                     * @param _method Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+                     * 设置Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+                     * @param _method Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
                      * 
                      */
                     void SetMethod(const std::string& _method);
@@ -139,35 +139,35 @@ namespace TencentCloud
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
-                     * @return Status Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
+                     * 获取Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
+                     * @return Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
-                     * @param _status Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
+                     * 设置Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
+                     * @param _status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the task.
-                     * @return CreateTime Creation time of the task.
+                     * 获取Task creation time.
+                     * @return CreateTime Task creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of the task.
-                     * @param _createTime Creation time of the task.
+                     * 设置Task creation time.
+                     * @param _createTime Task creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -201,15 +201,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Completion time of the task.
-                     * @return UpdateTime Completion time of the task.
+                     * 获取Task completion time.
+                     * @return UpdateTime Task completion time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Completion time of the task.
-                     * @param _updateTime Completion time of the task.
+                     * 设置Task completion time.
+                     * @param _updateTime Task completion time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -222,35 +222,35 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
-                     * @return FailType Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * 获取Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
+                     * @return FailType Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
                      * 
                      */
                     std::string GetFailType() const;
 
                     /**
-                     * 设置Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
-                     * @param _failType Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * 设置Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
+                     * @param _failType Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
                      * 
                      */
                     void SetFailType(const std::string& _failType);
@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool FailTypeHasBeenSet() const;
 
                     /**
-                     * 获取Description of the reason for cache purge or warm cache failure.
-                     * @return FailMessage Description of the reason for cache purge or warm cache failure.
+                     * 获取Failure reason description for cache purge and cache pre-warming.
+                     * @return FailMessage Failure reason description for cache purge and cache pre-warming.
                      * 
                      */
                     std::string GetFailMessage() const;
 
                     /**
-                     * 设置Description of the reason for cache purge or warm cache failure.
-                     * @param _failMessage Description of the reason for cache purge or warm cache failure.
+                     * 设置Failure reason description for cache purge and cache pre-warming.
+                     * @param _failMessage Failure reason description for cache purge and cache pre-warming.
                      * 
                      */
                     void SetFailMessage(const std::string& _failMessage);
@@ -286,7 +286,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the task.
+                     * Task ID.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;
@@ -298,55 +298,55 @@ namespace TencentCloud
                     bool m_targetHasBeenSet;
 
                     /**
-                     * Type of the task.
+                     * Task type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+                     * Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
+                     * Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time of the task.
+                     * Task creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Completion time of the task.
+                     * Task completion time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
                      */
                     std::string m_failType;
                     bool m_failTypeHasBeenSet;
 
                     /**
-                     * Description of the reason for cache purge or warm cache failure.
+                     * Failure reason description for cache purge and cache pre-warming.
                      */
                     std::string m_failMessage;
                     bool m_failMessageHasBeenSet;

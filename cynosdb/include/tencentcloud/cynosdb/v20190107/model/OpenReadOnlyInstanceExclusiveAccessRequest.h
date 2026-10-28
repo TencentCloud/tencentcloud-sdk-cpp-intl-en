@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
-                     * @return ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+                     * 获取Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
+                     * @return ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
-                     * @param _clusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+                     * 设置Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
+                     * @param _clusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
-                     * @return InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+                     * 获取Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
+                     * @return InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
-                     * @param _instanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+                     * 设置Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
+                     * @param _instanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -171,13 +171,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+                     * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+                     * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

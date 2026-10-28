@@ -57,6 +57,48 @@ namespace TencentCloud
                      */
                     bool FlowIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Order ID</p>
+                     * @return BigDealIds <p>Order ID</p>
+                     * 
+                     */
+                    std::vector<std::string> GetBigDealIds() const;
+
+                    /**
+                     * 判断参数 BigDealIds 是否已赋值
+                     * @return BigDealIds 是否已赋值
+                     * 
+                     */
+                    bool BigDealIdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Order name</p>
+                     * @return DealNames <p>Order name</p>
+                     * 
+                     */
+                    std::vector<std::string> GetDealNames() const;
+
+                    /**
+                     * 判断参数 DealNames 是否已赋值
+                     * @return DealNames 是否已赋值
+                     * 
+                     */
+                    bool DealNamesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Transaction ID</p>
+                     * @return TranId <p>Transaction ID</p>
+                     * 
+                     */
+                    std::string GetTranId() const;
+
+                    /**
+                     * 判断参数 TranId 是否已赋值
+                     * @return TranId 是否已赋值
+                     * 
+                     */
+                    bool TranIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +106,24 @@ namespace TencentCloud
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
+
+                    /**
+                     * <p>Order ID</p>
+                     */
+                    std::vector<std::string> m_bigDealIds;
+                    bool m_bigDealIdsHasBeenSet;
+
+                    /**
+                     * <p>Order name</p>
+                     */
+                    std::vector<std::string> m_dealNames;
+                    bool m_dealNamesHasBeenSet;
+
+                    /**
+                     * <p>Transaction ID</p>
+                     */
+                    std::string m_tranId;
+                    bool m_tranIdHasBeenSet;
 
                 };
             }

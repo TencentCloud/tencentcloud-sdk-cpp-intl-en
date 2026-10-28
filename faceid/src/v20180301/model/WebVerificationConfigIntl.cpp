@@ -37,7 +37,9 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_livenessTimeoutHasBeenSet(false),
     m_selectedWarningCodesHasBeenSet(false),
     m_allowExpiredDocumentHasBeenSet(false),
-    m_versionHasBeenSet(false)
+    m_versionHasBeenSet(false),
+    m_ocrWaitPolicyHasBeenSet(false),
+    m_webhookUrlHasBeenSet(false)
 {
 }
 
@@ -216,6 +218,26 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_versionHasBeenSet = true;
     }
 
+    if (value.HasMember("OcrWaitPolicy") && !value["OcrWaitPolicy"].IsNull())
+    {
+        if (!value["OcrWaitPolicy"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.OcrWaitPolicy` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_ocrWaitPolicy = string(value["OcrWaitPolicy"].GetString());
+        m_ocrWaitPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("WebhookUrl") && !value["WebhookUrl"].IsNull())
+    {
+        if (!value["WebhookUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.WebhookUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_webhookUrl = string(value["WebhookUrl"].GetString());
+        m_webhookUrlHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -357,6 +379,22 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "Version";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_version.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ocrWaitPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OcrWaitPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ocrWaitPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_webhookUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebhookUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_webhookUrl.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -632,5 +670,37 @@ void WebVerificationConfigIntl::SetVersion(const string& _version)
 bool WebVerificationConfigIntl::VersionHasBeenSet() const
 {
     return m_versionHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetOcrWaitPolicy() const
+{
+    return m_ocrWaitPolicy;
+}
+
+void WebVerificationConfigIntl::SetOcrWaitPolicy(const string& _ocrWaitPolicy)
+{
+    m_ocrWaitPolicy = _ocrWaitPolicy;
+    m_ocrWaitPolicyHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::OcrWaitPolicyHasBeenSet() const
+{
+    return m_ocrWaitPolicyHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetWebhookUrl() const
+{
+    return m_webhookUrl;
+}
+
+void WebVerificationConfigIntl::SetWebhookUrl(const string& _webhookUrl)
+{
+    m_webhookUrl = _webhookUrl;
+    m_webhookUrlHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::WebhookUrlHasBeenSet() const
+{
+    return m_webhookUrlHasBeenSet;
 }
 

@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
-                     * @return DealNames <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
+                     * 获取<p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/api/1098/40735">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
+                     * @return DealNames <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/api/1098/40735">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -108,7 +108,7 @@ namespace TencentCloud
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
+                     * <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/api/1098/40735">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
