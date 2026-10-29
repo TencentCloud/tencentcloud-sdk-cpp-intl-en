@@ -279,6 +279,39 @@ namespace TencentCloud
                      */
                     bool CardBackImageBase64HasBeenSet() const;
 
+                    /**
+                     * 获取Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+                     * @return CardResultStatus Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+                     * 
+                     */
+                    std::string GetCardResultStatus() const;
+
+                    /**
+                     * 设置Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+                     * @param _cardResultStatus Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+                     * 
+                     */
+                    void SetCardResultStatus(const std::string& _cardResultStatus);
+
+                    /**
+                     * 判断参数 CardResultStatus 是否已赋值
+                     * @return CardResultStatus 是否已赋值
+                     * 
+                     */
+                    bool CardResultStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -346,6 +379,15 @@ namespace TencentCloud
                      */
                     std::string m_cardBackImageBase64;
                     bool m_cardBackImageBase64HasBeenSet;
+
+                    /**
+                     * Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+                     */
+                    std::string m_cardResultStatus;
+                    bool m_cardResultStatusHasBeenSet;
 
                 };
             }

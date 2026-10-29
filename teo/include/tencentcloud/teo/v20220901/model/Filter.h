@@ -35,9 +35,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
+                * Description key-value pair filter, which is used for conditional filtering queries. For example, filter by ID, name, and status.
+If there are multiple Filters, the logical relationship between them is AND.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
                 */
                 class Filter : public AbstractModel
                 {
@@ -70,15 +70,15 @@ If multiple values exist in one filter, the logical relationship between these v
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Value of the filtered field.
-                     * @return Values Value of the filtered field.
+                     * 获取Filter value of the field.
+                     * @return Values Filter value of the field.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Value of the filtered field.
-                     * @param _values Value of the filtered field.
+                     * 设置Filter value of the field.
+                     * @param _values Filter value of the field.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -99,7 +99,7 @@ If multiple values exist in one filter, the logical relationship between these v
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Value of the filtered field.
+                     * Filter value of the field.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

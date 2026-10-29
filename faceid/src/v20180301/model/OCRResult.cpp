@@ -31,7 +31,8 @@ OCRResult::OCRResult() :
     m_warnCardInfosHasBeenSet(false),
     m_originalCardInfoHasBeenSet(false),
     m_headImageBase64HasBeenSet(false),
-    m_cardBackImageBase64HasBeenSet(false)
+    m_cardBackImageBase64HasBeenSet(false),
+    m_cardResultStatusHasBeenSet(false)
 {
 }
 
@@ -167,6 +168,16 @@ CoreInternalOutcome OCRResult::Deserialize(const rapidjson::Value &value)
         m_cardBackImageBase64HasBeenSet = true;
     }
 
+    if (value.HasMember("CardResultStatus") && !value["CardResultStatus"].IsNull())
+    {
+        if (!value["CardResultStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `OCRResult.CardResultStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cardResultStatus = string(value["CardResultStatus"].GetString());
+        m_cardResultStatusHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -267,6 +278,14 @@ void OCRResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "CardBackImageBase64";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_cardBackImageBase64.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cardResultStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardResultStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cardResultStatus.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -446,5 +465,21 @@ void OCRResult::SetCardBackImageBase64(const string& _cardBackImageBase64)
 bool OCRResult::CardBackImageBase64HasBeenSet() const
 {
     return m_cardBackImageBase64HasBeenSet;
+}
+
+string OCRResult::GetCardResultStatus() const
+{
+    return m_cardResultStatus;
+}
+
+void OCRResult::SetCardResultStatus(const string& _cardResultStatus)
+{
+    m_cardResultStatus = _cardResultStatus;
+    m_cardResultStatusHasBeenSet = true;
+}
+
+bool OCRResult::CardResultStatusHasBeenSet() const
+{
+    return m_cardResultStatusHasBeenSet;
 }
 

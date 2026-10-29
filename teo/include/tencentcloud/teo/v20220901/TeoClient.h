@@ -187,6 +187,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeApplicationProxiesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailableCustomActionsForRuleEngineRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailableCustomActionsForRuleEngineResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeAvailableOriginACLFamilyRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeAvailableOriginACLFamilyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeBillingDataRequest.h>
@@ -747,6 +749,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAvailableCustomActionsForRuleEngineResponse> DescribeAvailableCustomActionsForRuleEngineOutcome;
                 typedef std::future<DescribeAvailableCustomActionsForRuleEngineOutcome> DescribeAvailableCustomActionsForRuleEngineOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAvailableCustomActionsForRuleEngineRequest&, DescribeAvailableCustomActionsForRuleEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableCustomActionsForRuleEngineAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAvailableOriginACLFamilyResponse> DescribeAvailableOriginACLFamilyOutcome;
+                typedef std::future<DescribeAvailableOriginACLFamilyOutcome> DescribeAvailableOriginACLFamilyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeAvailableOriginACLFamilyRequest&, DescribeAvailableOriginACLFamilyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableOriginACLFamilyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAvailablePlansResponse> DescribeAvailablePlansOutcome;
                 typedef std::future<DescribeAvailablePlansOutcome> DescribeAvailablePlansOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAvailablePlansRequest&, DescribeAvailablePlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailablePlansAsyncHandler;
@@ -1982,6 +1987,31 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 DescribeAvailableCustomActionsForRuleEngineOutcome DescribeAvailableCustomActionsForRuleEngine(const Model::DescribeAvailableCustomActionsForRuleEngineRequest &request);
                 void DescribeAvailableCustomActionsForRuleEngineAsync(const Model::DescribeAvailableCustomActionsForRuleEngineRequest& request, const DescribeAvailableCustomActionsForRuleEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAvailableCustomActionsForRuleEngineOutcomeCallable DescribeAvailableCustomActionsForRuleEngineCallable(const Model::DescribeAvailableCustomActionsForRuleEngineRequest& request);
+
+                /**
+                 *This API is used to query detailed information about the origin protection IP range control domain, including the version number and specific IP range information.
+The main difference between standard control domain and streamlined control domain is the number of IP ranges provided. The latter has fewer IP ranges, but has some usage restrictions. For specific restrictions, consult the product. The format description is as follows:
+Standard control domain:
+<li>gaz: standard global control domain;</li>
+<li>mlc: Standard China control domain;</li>
+<li>emc: standard overseas (worldwide excluding China) control domain;</li>
+Streamline the control domain.
+<li>plat-gaz: simplified global control domain;</li>
+<li>plat-mlc: Simplified China control domain;</li>
+<li>plat-emc: Simplified overseas (global excluding China) control domain;</li>
+<li>plat-specific-gaz: custom edition global availability zone control domain;</li>
+<li>plat-specific-mlc: custom edition for controlling the Chinese mainland availability zone control domain;</li>
+<li>plat-specific-emc: custom edition control domain for availability zones worldwide (excluding Chinese mainland);</li>
+Abbreviation description:
+<li>gaz:Global AZ Availability Zone;</li>
+<li>mlc:mainlandChina;</li>
+<li>emc:Exclude mainlandChina.</li>
+                 * @param req DescribeAvailableOriginACLFamilyRequest
+                 * @return DescribeAvailableOriginACLFamilyOutcome
+                 */
+                DescribeAvailableOriginACLFamilyOutcome DescribeAvailableOriginACLFamily(const Model::DescribeAvailableOriginACLFamilyRequest &request);
+                void DescribeAvailableOriginACLFamilyAsync(const Model::DescribeAvailableOriginACLFamilyRequest& request, const DescribeAvailableOriginACLFamilyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAvailableOriginACLFamilyOutcomeCallable DescribeAvailableOriginACLFamilyCallable(const Model::DescribeAvailableOriginACLFamilyRequest& request);
 
                 /**
                  *This API is used to query plan options available for purchase.

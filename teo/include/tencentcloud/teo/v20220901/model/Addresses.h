@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IPv4 subnet.
-                     * @return IPv4 IPv4 subnet.
+                     * 获取IPv4 IP range list.
+                     * @return IPv4 IPv4 IP range list.
                      * 
                      */
                     std::vector<std::string> GetIPv4() const;
 
                     /**
-                     * 设置IPv4 subnet.
-                     * @param _iPv4 IPv4 subnet.
+                     * 设置IPv4 IP range list.
+                     * @param _iPv4 IPv4 IP range list.
                      * 
                      */
                     void SetIPv4(const std::vector<std::string>& _iPv4);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IPv4HasBeenSet() const;
 
                     /**
-                     * 获取IPv6 subnet.
-                     * @return IPv6 IPv6 subnet.
+                     * 获取IPv6 IP range list.
+                     * @return IPv6 IPv6 IP range list.
                      * 
                      */
                     std::vector<std::string> GetIPv6() const;
 
                     /**
-                     * 设置IPv6 subnet.
-                     * @param _iPv6 IPv6 subnet.
+                     * 设置IPv6 IP range list.
+                     * @param _iPv6 IPv6 IP range list.
                      * 
                      */
                     void SetIPv6(const std::vector<std::string>& _iPv6);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IPv4 subnet.
+                     * IPv4 IP range list.
                      */
                     std::vector<std::string> m_iPv4;
                     bool m_iPv4HasBeenSet;
 
                     /**
-                     * IPv6 subnet.
+                     * IPv6 IP range list.
                      */
                     std::vector<std::string> m_iPv6;
                     bool m_iPv6HasBeenSet;
