@@ -51,12 +51,10 @@ namespace TencentCloud
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Mask Permission information of the current account.
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMask() const;
@@ -66,12 +64,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mask Permission information of the current account.
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMask(const int64_t& _mask);
@@ -87,11 +83,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NameSpace Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNameSpace() const;
@@ -100,11 +94,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nameSpace Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNameSpace(const std::string& _nameSpace);
@@ -123,7 +115,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_mask;
                     bool m_maskHasBeenSet;
@@ -132,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nameSpace;
                     bool m_nameSpaceHasBeenSet;
