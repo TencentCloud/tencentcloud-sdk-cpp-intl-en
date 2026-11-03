@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Web security BOT managed rules architecture.
+                * BOT rule structure for Web security.
                 */
                 class BotManagement : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-                     * @return Enabled Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+                     * 获取Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @return Enabled Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-                     * @param _enabled Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+                     * 设置Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @param _enabled Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
-                     * @return CustomRules Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+                     * 获取Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
+                     * @return CustomRules Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
                      * 
                      */
                     BotManagementCustomRules GetCustomRules() const;
 
                     /**
-                     * 设置Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
-                     * @param _customRules Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+                     * 设置Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
+                     * @param _customRules Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
                      * 
                      */
                     void SetCustomRules(const BotManagementCustomRules& _customRules);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool CustomRulesHasBeenSet() const;
 
                     /**
-                     * 获取Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
-                     * @return BasicBotSettings Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+                     * 获取Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
+                     * @return BasicBotSettings Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
                      * 
                      */
                     BasicBotSettings GetBasicBotSettings() const;
 
                     /**
-                     * 设置Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
-                     * @param _basicBotSettings Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+                     * 设置Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
+                     * @param _basicBotSettings Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
                      * 
                      */
                     void SetBasicBotSettings(const BasicBotSettings& _basicBotSettings);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool BasicBotSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
-                     * @return ClientAttestationRules Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+                     * 获取Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
+                     * @return ClientAttestationRules Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
                      * 
                      */
                     ClientAttestationRules GetClientAttestationRules() const;
 
                     /**
-                     * 设置Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
-                     * @param _clientAttestationRules Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+                     * 设置Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
+                     * @param _clientAttestationRules Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
                      * 
                      */
                     void SetClientAttestationRules(const ClientAttestationRules& _clientAttestationRules);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool ClientAttestationRulesHasBeenSet() const;
 
                     /**
-                     * 获取Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
-                     * @return BrowserImpersonationDetection Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+                     * 获取Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+                     * @return BrowserImpersonationDetection Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
                      * 
                      */
                     BrowserImpersonationDetection GetBrowserImpersonationDetection() const;
 
                     /**
-                     * 设置Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
-                     * @param _browserImpersonationDetection Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+                     * 设置Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+                     * @param _browserImpersonationDetection Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
                      * 
                      */
                     void SetBrowserImpersonationDetection(const BrowserImpersonationDetection& _browserImpersonationDetection);
@@ -158,31 +158,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+                     * Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+                     * Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
                      */
                     BotManagementCustomRules m_customRules;
                     bool m_customRulesHasBeenSet;
 
                     /**
-                     * Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+                     * Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
                      */
                     BasicBotSettings m_basicBotSettings;
                     bool m_basicBotSettingsHasBeenSet;
 
                     /**
-                     * Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+                     * Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
                      */
                     ClientAttestationRules m_clientAttestationRules;
                     bool m_clientAttestationRulesHasBeenSet;
 
                     /**
-                     * Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+                     * Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
                      */
                     BrowserImpersonationDetection m_browserImpersonationDetection;
                     bool m_browserImpersonationDetectionHasBeenSet;

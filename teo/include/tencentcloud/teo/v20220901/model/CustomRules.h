@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom rules configuration.
+                * Custom rule structure for Web security
                 */
                 class CustomRules : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The custom rule. <br>when modifying the Web protection configuration using ModifySecurityPolicy: <br> - if the Rules parameter is not specified or the parameter length of Rules is zero: clear all custom rule configurations. <br> - if the Rules parameter is not specified: keep the existing custom rule configuration without modification.
-                     * @return Rules The custom rule. <br>when modifying the Web protection configuration using ModifySecurityPolicy: <br> - if the Rules parameter is not specified or the parameter length of Rules is zero: clear all custom rule configurations. <br> - if the Rules parameter is not specified: keep the existing custom rule configuration without modification.
+                     * 获取Definition list of custom rules.<br>When using ModifySecurityPolicy to modify Web protection configuration: <br> - If the Rules parameter is not specified, or the parameter length of Rules is zero: clear ALL custom rule configurations.<br> - If the CustomRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration and do not modify it.
+                     * @return Rules Definition list of custom rules.<br>When using ModifySecurityPolicy to modify Web protection configuration: <br> - If the Rules parameter is not specified, or the parameter length of Rules is zero: clear ALL custom rule configurations.<br> - If the CustomRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration and do not modify it.
                      * 
                      */
                     std::vector<CustomRule> GetRules() const;
 
                     /**
-                     * 设置The custom rule. <br>when modifying the Web protection configuration using ModifySecurityPolicy: <br> - if the Rules parameter is not specified or the parameter length of Rules is zero: clear all custom rule configurations. <br> - if the Rules parameter is not specified: keep the existing custom rule configuration without modification.
-                     * @param _rules The custom rule. <br>when modifying the Web protection configuration using ModifySecurityPolicy: <br> - if the Rules parameter is not specified or the parameter length of Rules is zero: clear all custom rule configurations. <br> - if the Rules parameter is not specified: keep the existing custom rule configuration without modification.
+                     * 设置Definition list of custom rules.<br>When using ModifySecurityPolicy to modify Web protection configuration: <br> - If the Rules parameter is not specified, or the parameter length of Rules is zero: clear ALL custom rule configurations.<br> - If the CustomRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration and do not modify it.
+                     * @param _rules Definition list of custom rules.<br>When using ModifySecurityPolicy to modify Web protection configuration: <br> - If the Rules parameter is not specified, or the parameter length of Rules is zero: clear ALL custom rule configurations.<br> - If the CustomRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration and do not modify it.
                      * 
                      */
                     void SetRules(const std::vector<CustomRule>& _rules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The custom rule. <br>when modifying the Web protection configuration using ModifySecurityPolicy: <br> - if the Rules parameter is not specified or the parameter length of Rules is zero: clear all custom rule configurations. <br> - if the Rules parameter is not specified: keep the existing custom rule configuration without modification.
+                     * Definition list of custom rules.<br>When using ModifySecurityPolicy to modify Web protection configuration: <br> - If the Rules parameter is not specified, or the parameter length of Rules is zero: clear ALL custom rule configurations.<br> - If the CustomRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration and do not modify it.
                      */
                     std::vector<CustomRule> m_rules;
                     bool m_rulesHasBeenSet;

@@ -36,9 +36,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Default interception action configuration. When security rules are hit and trigger intercept handling actions, if SecurityAction only specifies Name as Deny and DenyActionParameters is not specified, match by feature module dimension and use the default parameter configuration defined here:
-<li>Default disposition action configuration for managed rules in ManagedRules.</li>
-<li>OtherModules Security protection rules (custom rule, rate limit, and Bot management function) except managed rules have default block disposition action configuration.</li>
+                * Default block action configuration. When a security rule is hit and triggers a block action, if SecurityAction specifies only Name as Deny and DenyActionParameters is not specified, the default parameter configuration defined here is matched by feature module dimension and used:
+<li>Default interception disposition action configuration for ManagedRules.</li>
+<li>OtherModules: default block disposition action configuration for security protection rules other than managed rules (custom rules, rate limit, and Bot management function).</li>
                 */
                 class DefaultDenySecurityActionParameters : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The managed rule uses the default disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use a custom page.</li><li>ResponseCode: Status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
-                     * @return ManagedRules The managed rule uses the default disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use a custom page.</li><li>ResponseCode: Status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * 获取Default interception disposition action configuration for managed rules. Supported configuration parameters of DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * @return ManagedRules Default interception disposition action configuration for managed rules. Supported configuration parameters of DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
                      * 
                      */
                     DenyActionParameters GetManagedRules() const;
 
                     /**
-                     * 设置The managed rule uses the default disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use a custom page.</li><li>ResponseCode: Status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
-                     * @param _managedRules The managed rule uses the default disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use a custom page.</li><li>ResponseCode: Status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * 设置Default interception disposition action configuration for managed rules. Supported configuration parameters of DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * @param _managedRules Default interception disposition action configuration for managed rules. Supported configuration parameters of DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
                      * 
                      */
                     void SetManagedRules(const DenyActionParameters& _managedRules);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ManagedRulesHasBeenSet() const;
 
                     /**
-                     * 获取Security protection rules other than managed rules (custom rule, rate limit, and Bot management function) default to disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use custom page.</li> <li>ResponseCode: Status code of custom pages.</li> <li>ErrorPageId: PageId of custom pages.</li>
-                     * @return OtherModules Security protection rules other than managed rules (custom rule, rate limit, and Bot management function) default to disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use custom page.</li> <li>ResponseCode: Status code of custom pages.</li> <li>ErrorPageId: PageId of custom pages.</li>
+                     * 获取Security protection rules other than managed rules (custom rules, rate limit, and Bot management function) default interception disposition action configuration. Configuration parameters supported by DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * @return OtherModules Security protection rules other than managed rules (custom rules, rate limit, and Bot management function) default interception disposition action configuration. Configuration parameters supported by DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
                      * 
                      */
                     DenyActionParameters GetOtherModules() const;
 
                     /**
-                     * 设置Security protection rules other than managed rules (custom rule, rate limit, and Bot management function) default to disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use custom page.</li> <li>ResponseCode: Status code of custom pages.</li> <li>ErrorPageId: PageId of custom pages.</li>
-                     * @param _otherModules Security protection rules other than managed rules (custom rule, rate limit, and Bot management function) default to disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use custom page.</li> <li>ResponseCode: Status code of custom pages.</li> <li>ErrorPageId: PageId of custom pages.</li>
+                     * 设置Security protection rules other than managed rules (custom rules, rate limit, and Bot management function) default interception disposition action configuration. Configuration parameters supported by DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * @param _otherModules Security protection rules other than managed rules (custom rules, rate limit, and Bot management function) default interception disposition action configuration. Configuration parameters supported by DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
                      * 
                      */
                     void SetOtherModules(const DenyActionParameters& _otherModules);
@@ -94,13 +94,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The managed rule uses the default disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use a custom page.</li><li>ResponseCode: Status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+                     * Default interception disposition action configuration for managed rules. Supported configuration parameters of DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
                      */
                     DenyActionParameters m_managedRules;
                     bool m_managedRulesHasBeenSet;
 
                     /**
-                     * Security protection rules other than managed rules (custom rule, rate limit, and Bot management function) default to disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use custom page.</li> <li>ResponseCode: Status code of custom pages.</li> <li>ErrorPageId: PageId of custom pages.</li>
+                     * Security protection rules other than managed rules (custom rules, rate limit, and Bot management function) default interception disposition action configuration. Configuration parameters supported by DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
                      */
                     DenyActionParameters m_otherModules;
                     bool m_otherModulesHasBeenSet;

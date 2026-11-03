@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Managed rule group meta information.
+                * Managed rule group information
                 */
                 class ManagedRuleGroupMeta : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ManagedRuleGroup detailed information, output parameter only.
-                     * @return GroupDetail ManagedRuleGroup detailed information, output parameter only.
+                     * 获取Managed rule group description. For output usage only.
+                     * @return GroupDetail Managed rule group description. For output usage only.
                      * 
                      */
                     std::string GetGroupDetail() const;
 
                     /**
-                     * 设置ManagedRuleGroup detailed information, output parameter only.
-                     * @param _groupDetail ManagedRuleGroup detailed information, output parameter only.
+                     * 设置Managed rule group description. For output usage only.
+                     * @param _groupDetail Managed rule group description. For output usage only.
                      * 
                      */
                     void SetGroupDetail(const std::string& _groupDetail);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool GroupDetailHasBeenSet() const;
 
                     /**
-                     * 获取ManagedRuleGroup name, output parameter only.
-                     * @return GroupName ManagedRuleGroup name, output parameter only.
+                     * 获取Managed rule group name. Output parameter only.
+                     * @return GroupName Managed rule group name. Output parameter only.
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置ManagedRuleGroup name, output parameter only.
-                     * @param _groupName ManagedRuleGroup name, output parameter only.
+                     * 设置Managed rule group name. Output parameter only.
+                     * @param _groupName Managed rule group name. Output parameter only.
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取All sub-rules information under current ManagedRuleGroup, output parameter only.
-                     * @return RuleDetails All sub-rules information under current ManagedRuleGroup, output parameter only.
+                     * 获取Rule information of all sub-rules in the current managed rule group. Output parameter only.
+                     * @return RuleDetails Rule information of all sub-rules in the current managed rule group. Output parameter only.
                      * 
                      */
                     std::vector<ManagedRuleDetail> GetRuleDetails() const;
 
                     /**
-                     * 设置All sub-rules information under current ManagedRuleGroup, output parameter only.
-                     * @param _ruleDetails All sub-rules information under current ManagedRuleGroup, output parameter only.
+                     * 设置Rule information of all sub-rules in the current managed rule group. Output parameter only.
+                     * @param _ruleDetails Rule information of all sub-rules in the current managed rule group. Output parameter only.
                      * 
                      */
                     void SetRuleDetails(const std::vector<ManagedRuleDetail>& _ruleDetails);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ManagedRuleGroup detailed information, output parameter only.
+                     * Managed rule group description. For output usage only.
                      */
                     std::string m_groupDetail;
                     bool m_groupDetailHasBeenSet;
 
                     /**
-                     * ManagedRuleGroup name, output parameter only.
+                     * Managed rule group name. Output parameter only.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * All sub-rules information under current ManagedRuleGroup, output parameter only.
+                     * Rule information of all sub-rules in the current managed rule group. Output parameter only.
                      */
                     std::vector<ManagedRuleDetail> m_ruleDetails;
                     bool m_ruleDetailsHasBeenSet;

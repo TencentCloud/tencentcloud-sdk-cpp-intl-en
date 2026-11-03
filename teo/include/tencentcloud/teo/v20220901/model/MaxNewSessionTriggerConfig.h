@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Trigger threshold for verification in Bot management.
+                * Trigger threshold of verification in Bot management.
                 */
                 class MaxNewSessionTriggerConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
-                     * @return MaxNewSessionCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+                     * 获取Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+                     * @return MaxNewSessionCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
                      * 
                      */
                     std::string GetMaxNewSessionCountInterval() const;
 
                     /**
-                     * 设置Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
-                     * @param _maxNewSessionCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+                     * 设置Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+                     * @param _maxNewSessionCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
                      * 
                      */
                     void SetMaxNewSessionCountInterval(const std::string& _maxNewSessionCountInterval);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaxNewSessionCountIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Trigger threshold cumulative count. value range: 1-100000000.
-                     * @return MaxNewSessionCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+                     * 获取Cumulative count of trigger threshold statistics. Value range: 1-100000000.
+                     * @return MaxNewSessionCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
                      * 
                      */
                     int64_t GetMaxNewSessionCountThreshold() const;
 
                     /**
-                     * 设置Trigger threshold cumulative count. value range: 1-100000000.
-                     * @param _maxNewSessionCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+                     * 设置Cumulative count of trigger threshold statistics. Value range: 1-100000000.
+                     * @param _maxNewSessionCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
                      * 
                      */
                     void SetMaxNewSessionCountThreshold(const int64_t& _maxNewSessionCountThreshold);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+                     * Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
                      */
                     std::string m_maxNewSessionCountInterval;
                     bool m_maxNewSessionCountIntervalHasBeenSet;
 
                     /**
-                     * Trigger threshold cumulative count. value range: 1-100000000.
+                     * Cumulative count of trigger threshold statistics. Value range: 1-100000000.
                      */
                     int64_t m_maxNewSessionCountThreshold;
                     bool m_maxNewSessionCountThresholdHasBeenSet;

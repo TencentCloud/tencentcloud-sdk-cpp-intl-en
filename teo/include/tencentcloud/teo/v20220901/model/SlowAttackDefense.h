@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Slow attack protection configuration.
+                * Specific configuration for slow attack protection.
                 */
                 class SlowAttackDefense : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-                     * @return Enabled Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * 获取Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @return Enabled Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-                     * @param _enabled Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * 设置Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @param _enabled Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID of slow attack protection, returned as an output parameter.
-                     * @return Id Rule ID of slow attack protection, returned as an output parameter.
+                     * 获取Rule ID of slow attack protection, returned only as an output parameter.
+                     * @return Id Rule ID of slow attack protection, returned only as an output parameter.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Rule ID of slow attack protection, returned as an output parameter.
-                     * @param _id Rule ID of slow attack protection, returned as an output parameter.
+                     * 设置Rule ID of slow attack protection, returned only as an output parameter.
+                     * @param _id Rule ID of slow attack protection, returned only as an output parameter.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
-                     * @return Action Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+                     * 获取Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
+                     * @return Action Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
                      * 
                      */
                     SecurityAction GetAction() const;
 
                     /**
-                     * 设置Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
-                     * @param _action Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+                     * 设置Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
+                     * @param _action Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
                      * 
                      */
                     void SetAction(const SecurityAction& _action);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
-                     * @return MinimalRequestBodyTransferRate The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+                     * 获取Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
+                     * @return MinimalRequestBodyTransferRate Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
                      * 
                      */
                     MinimalRequestBodyTransferRate GetMinimalRequestBodyTransferRate() const;
 
                     /**
-                     * 设置The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
-                     * @param _minimalRequestBodyTransferRate The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+                     * 设置Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
+                     * @param _minimalRequestBodyTransferRate Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
                      * 
                      */
                     void SetMinimalRequestBodyTransferRate(const MinimalRequestBodyTransferRate& _minimalRequestBodyTransferRate);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool MinimalRequestBodyTransferRateHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
-                     * @return RequestBodyTransferTimeout Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+                     * 获取Specific configuration of the body transfer timeout duration. Required if Enabled is on.
+                     * @return RequestBodyTransferTimeout Specific configuration of the body transfer timeout duration. Required if Enabled is on.
                      * 
                      */
                     RequestBodyTransferTimeout GetRequestBodyTransferTimeout() const;
 
                     /**
-                     * 设置Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
-                     * @param _requestBodyTransferTimeout Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+                     * 设置Specific configuration of the body transfer timeout duration. Required if Enabled is on.
+                     * @param _requestBodyTransferTimeout Specific configuration of the body transfer timeout duration. Required if Enabled is on.
                      * 
                      */
                     void SetRequestBodyTransferTimeout(const RequestBodyTransferTimeout& _requestBodyTransferTimeout);
@@ -157,31 +157,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Rule ID of slow attack protection, returned as an output parameter.
+                     * Rule ID of slow attack protection, returned only as an output parameter.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+                     * Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
                      */
                     SecurityAction m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+                     * Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
                      */
                     MinimalRequestBodyTransferRate m_minimalRequestBodyTransferRate;
                     bool m_minimalRequestBodyTransferRateHasBeenSet;
 
                     /**
-                     * Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+                     * Specific configuration of the body transfer timeout duration. Required if Enabled is on.
                      */
                     RequestBodyTransferTimeout m_requestBodyTransferTimeout;
                     bool m_requestBodyTransferTimeoutHasBeenSet;

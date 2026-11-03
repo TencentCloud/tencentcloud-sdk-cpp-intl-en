@@ -84,12 +84,12 @@ namespace TencentCloud
                      * 获取Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      * @return Action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
@@ -99,12 +99,12 @@ namespace TencentCloud
                      * 设置Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      * @param _action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
@@ -132,7 +132,7 @@ namespace TencentCloud
                      * Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
 <li>Deny: block;</li>
 <li>Monitor: observation;</li>
-<li>Allow: allow;</li>
+<li>Allow: Allow access;</li>
 <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      */
                     SecurityAction m_action;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive frequency control.
+                * Adaptive frequency control
                 */
                 class AdaptiveFrequencyControl : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @return Enabled Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 获取Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @return Enabled Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @param _enabled Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 设置Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @param _enabled Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID of adaptive frequency control, returned as an output parameter.
-                     * @return Id Rule ID of adaptive frequency control, returned as an output parameter.
+                     * 获取Rule ID of adaptive frequency control, returned only as an output parameter.
+                     * @return Id Rule ID of adaptive frequency control, returned only as an output parameter.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Rule ID of adaptive frequency control, returned as an output parameter.
-                     * @param _id Rule ID of adaptive frequency control, returned as an output parameter.
+                     * 设置Rule ID of adaptive frequency control, returned only as an output parameter.
+                     * @param _id Rule ID of adaptive frequency control, returned only as an output parameter.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
-                     * @return Sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+                     * 获取The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
+                     * @return Sensitivity The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
                      * 
                      */
                     std::string GetSensitivity() const;
 
                     /**
-                     * 设置The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
-                     * @param _sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+                     * 设置The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
+                     * @param _sensitivity The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
                      * 
                      */
                     void SetSensitivity(const std::string& _sensitivity);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SensitivityHasBeenSet() const;
 
                     /**
-                     * 获取The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-                     * @return Action The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+                     * 获取Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
+                     * @return Action Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
                      * 
                      */
                     SecurityAction GetAction() const;
 
                     /**
-                     * 设置The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-                     * @param _action The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+                     * 设置Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
+                     * @param _action Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
                      * 
                      */
                     void SetAction(const SecurityAction& _action);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Rule ID of adaptive frequency control, returned as an output parameter.
+                     * Rule ID of adaptive frequency control, returned only as an output parameter.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+                     * The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
                      */
                     std::string m_sensitivity;
                     bool m_sensitivityHasBeenSet;
 
                     /**
-                     * The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+                     * Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
                      */
                     SecurityAction m_action;
                     bool m_actionHasBeenSet;

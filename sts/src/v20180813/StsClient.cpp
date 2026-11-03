@@ -290,3 +290,53 @@ StsClient::GetFederationTokenOutcomeCallable StsClient::GetFederationTokenCallab
     return prom->get_future();
 }
 
+StsClient::GetSessionTokenOutcome StsClient::GetSessionToken(const GetSessionTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetSessionToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetSessionTokenResponse rsp = GetSessionTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetSessionTokenOutcome(rsp);
+        else
+            return GetSessionTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return GetSessionTokenOutcome(outcome.GetError());
+    }
+}
+
+void StsClient::GetSessionTokenAsync(const GetSessionTokenRequest& request, const GetSessionTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GetSessionTokenRequest&;
+    using Resp = GetSessionTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GetSessionToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+StsClient::GetSessionTokenOutcomeCallable StsClient::GetSessionTokenCallable(const GetSessionTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GetSessionTokenOutcome>>();
+    GetSessionTokenAsync(
+    request,
+    [prom](
+        const StsClient*,
+        const GetSessionTokenRequest&,
+        GetSessionTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+

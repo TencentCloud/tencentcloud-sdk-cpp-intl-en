@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Precision rate limiting configuration.
+                * Configuration of precise rate limiting
                 */
                 class RateLimitingRules : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
-                     * @return Rules Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+                     * 获取Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
+                     * @return Rules Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
                      * 
                      */
                     std::vector<RateLimitingRule> GetRules() const;
 
                     /**
-                     * 设置Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
-                     * @param _rules Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+                     * 设置Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
+                     * @param _rules Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
                      * 
                      */
                     void SetRules(const std::vector<RateLimitingRule>& _rules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+                     * Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
                      */
                     std::vector<RateLimitingRule> m_rules;
                     bool m_rulesHasBeenSet;

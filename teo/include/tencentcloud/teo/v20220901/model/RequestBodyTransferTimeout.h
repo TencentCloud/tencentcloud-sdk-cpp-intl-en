@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Body transfer timeout duration configuration.
+                * Specific configuration of the body transfer timeout duration.
                 */
                 class RequestBodyTransferTimeout : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
-                     * @return IdleTimeout Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+                     * 获取Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
+                     * @return IdleTimeout Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
                      * 
                      */
                     std::string GetIdleTimeout() const;
 
                     /**
-                     * 设置Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
-                     * @param _idleTimeout Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+                     * 设置Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
+                     * @param _idleTimeout Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
                      * 
                      */
                     void SetIdleTimeout(const std::string& _idleTimeout);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdleTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-                     * @return Enabled Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * 获取Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @return Enabled Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-                     * @param _enabled Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * 设置Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @param _enabled Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+                     * Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
                      */
                     std::string m_idleTimeout;
                     bool m_idleTimeoutHasBeenSet;
 
                     /**
-                     * Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;

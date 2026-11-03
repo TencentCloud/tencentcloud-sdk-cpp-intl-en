@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Based on client and request features, the request source is divided into human request, valid Bot request, suspected Bot request, and high-risk Bot request, with request handling options provided.
+                * Based on client and request features, request sources are divided into human requests, legal Bot requests, suspected Bot requests, and high-risk Bot requests, with request handling options provided.
                 */
                 class BotRatings : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Execution action for malicious Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
-                     * @return HighRiskBotRequestsAction Execution action for malicious Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * 获取Execution action for malicious Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
+                     * @return HighRiskBotRequestsAction Execution action for malicious Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     SecurityAction GetHighRiskBotRequestsAction() const;
 
                     /**
-                     * 设置Execution action for malicious Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
-                     * @param _highRiskBotRequestsAction Execution action for malicious Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * 设置Execution action for malicious Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
+                     * @param _highRiskBotRequestsAction Execution action for malicious Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     void SetHighRiskBotRequestsAction(const SecurityAction& _highRiskBotRequestsAction);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool HighRiskBotRequestsActionHasBeenSet() const;
 
                     /**
-                     * 获取The execution action for suspected Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
-                     * @return LikelyBotRequestsAction The execution action for suspected Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * 获取Execution action for suspected Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
+                     * @return LikelyBotRequestsAction Execution action for suspected Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     SecurityAction GetLikelyBotRequestsAction() const;
 
                     /**
-                     * 设置The execution action for suspected Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
-                     * @param _likelyBotRequestsAction The execution action for suspected Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * 设置Execution action for suspected Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
+                     * @param _likelyBotRequestsAction Execution action for suspected Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     void SetLikelyBotRequestsAction(const SecurityAction& _likelyBotRequestsAction);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool LikelyBotRequestsActionHasBeenSet() const;
 
                     /**
-                     * 获取Execution action for friendly Bot request. SecurityAction Name parameter supports: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: pass;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
-                     * @return VerifiedBotRequestsAction Execution action for friendly Bot request. SecurityAction Name parameter supports: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: pass;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * 获取Execution action of friendly Bot requests. The Name parameter of SecurityAction supports the following values: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
+                     * @return VerifiedBotRequestsAction Execution action of friendly Bot requests. The Name parameter of SecurityAction supports the following values: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     SecurityAction GetVerifiedBotRequestsAction() const;
 
                     /**
-                     * 设置Execution action for friendly Bot request. SecurityAction Name parameter supports: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: pass;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
-                     * @param _verifiedBotRequestsAction Execution action for friendly Bot request. SecurityAction Name parameter supports: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: pass;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * 设置Execution action of friendly Bot requests. The Name parameter of SecurityAction supports the following values: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
+                     * @param _verifiedBotRequestsAction Execution action of friendly Bot requests. The Name parameter of SecurityAction supports the following values: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     void SetVerifiedBotRequestsAction(const SecurityAction& _verifiedBotRequestsAction);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool VerifiedBotRequestsActionHasBeenSet() const;
 
                     /**
-                     * 获取Execution action for a normal Bot request. valid values for the Name parameter in SecurityAction: <li>Allow: pass.</li>.
-                     * @return HumanRequestsAction Execution action for a normal Bot request. valid values for the Name parameter in SecurityAction: <li>Allow: pass.</li>.
+                     * 获取Execution action for normal Bot requests. Valid values of SecurityAction Name: <li>Allow: Allow.</li>
+                     * @return HumanRequestsAction Execution action for normal Bot requests. Valid values of SecurityAction Name: <li>Allow: Allow.</li>
                      * 
                      */
                     SecurityAction GetHumanRequestsAction() const;
 
                     /**
-                     * 设置Execution action for a normal Bot request. valid values for the Name parameter in SecurityAction: <li>Allow: pass.</li>.
-                     * @param _humanRequestsAction Execution action for a normal Bot request. valid values for the Name parameter in SecurityAction: <li>Allow: pass.</li>.
+                     * 设置Execution action for normal Bot requests. Valid values of SecurityAction Name: <li>Allow: Allow.</li>
+                     * @param _humanRequestsAction Execution action for normal Bot requests. Valid values of SecurityAction Name: <li>Allow: Allow.</li>
                      * 
                      */
                     void SetHumanRequestsAction(const SecurityAction& _humanRequestsAction);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Execution action for malicious Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * Execution action for malicious Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      */
                     SecurityAction m_highRiskBotRequestsAction;
                     bool m_highRiskBotRequestsActionHasBeenSet;
 
                     /**
-                     * The execution action for suspected Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * Execution action for suspected Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      */
                     SecurityAction m_likelyBotRequestsAction;
                     bool m_likelyBotRequestsActionHasBeenSet;
 
                     /**
-                     * Execution action for friendly Bot request. SecurityAction Name parameter supports: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: pass;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+                     * Execution action of friendly Bot requests. The Name parameter of SecurityAction supports the following values: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
                      */
                     SecurityAction m_verifiedBotRequestsAction;
                     bool m_verifiedBotRequestsActionHasBeenSet;
 
                     /**
-                     * Execution action for a normal Bot request. valid values for the Name parameter in SecurityAction: <li>Allow: pass.</li>.
+                     * Execution action for normal Bot requests. Valid values of SecurityAction Name: <li>Allow: Allow.</li>
                      */
                     SecurityAction m_humanRequestsAction;
                     bool m_humanRequestsActionHasBeenSet;

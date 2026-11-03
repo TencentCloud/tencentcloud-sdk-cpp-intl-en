@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot intelligent analysis configuration.
+                * Specific configuration for Bot intelligent analysis.
                 */
                 class BotIntelligence : public AbstractModel
                 {
@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the switch for Bot intelligent analysis configuration. valid values:.
+                     * 获取Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
-                     * @return Enabled Specifies the switch for Bot intelligent analysis configuration. valid values:.
+on: enable;
+off: Disable.
+                     * @return Enabled Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Specifies the switch for Bot intelligent analysis configuration. valid values:.
+                     * 设置Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
-                     * @param _enabled Specifies the switch for Bot intelligent analysis configuration. valid values:.
+on: enable;
+off: Disable.
+                     * @param _enabled Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -81,15 +81,15 @@ off: disabled.
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID of Bot intelligent analysis, returned as an output parameter.
-                     * @return Id Rule ID of Bot intelligent analysis, returned as an output parameter.
+                     * 获取Rule ID of Bot intelligent analysis, returned only as an output parameter.
+                     * @return Id Rule ID of Bot intelligent analysis, returned only as an output parameter.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Rule ID of Bot intelligent analysis, returned as an output parameter.
-                     * @param _id Rule ID of Bot intelligent analysis, returned as an output parameter.
+                     * 设置Rule ID of Bot intelligent analysis, returned only as an output parameter.
+                     * @param _id Rule ID of Bot intelligent analysis, returned only as an output parameter.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -102,15 +102,15 @@ off: disabled.
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-                     * @return BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+                     * 获取Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
+                     * @return BotRatings Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
                      * 
                      */
                     BotRatings GetBotRatings() const;
 
                     /**
-                     * 设置Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-                     * @param _botRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+                     * 设置Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
+                     * @param _botRatings Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
                      * 
                      */
                     void SetBotRatings(const BotRatings& _botRatings);
@@ -125,22 +125,22 @@ off: disabled.
                 private:
 
                     /**
-                     * Specifies the switch for Bot intelligent analysis configuration. valid values:.
+                     * Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Rule ID of Bot intelligent analysis, returned as an output parameter.
+                     * Rule ID of Bot intelligent analysis, returned only as an output parameter.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+                     * Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
                      */
                     BotRatings m_botRatings;
                     bool m_botRatingsHasBeenSet;

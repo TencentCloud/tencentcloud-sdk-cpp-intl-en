@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Minimum minimum body transfer rate threshold configuration.
+                * Configuration of the minimum body transfer rate threshold.
                 */
                 class MinimalRequestBodyTransferRate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Minimum body transfer rate threshold, the measurement unit is only supported in bps.
-                     * @return MinimalAvgTransferRateThreshold Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+                     * 获取Minimum body transfer rate threshold. The measurement unit only supports bps.
+                     * @return MinimalAvgTransferRateThreshold Minimum body transfer rate threshold. The measurement unit only supports bps.
                      * 
                      */
                     std::string GetMinimalAvgTransferRateThreshold() const;
 
                     /**
-                     * 设置Minimum body transfer rate threshold, the measurement unit is only supported in bps.
-                     * @param _minimalAvgTransferRateThreshold Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+                     * 设置Minimum body transfer rate threshold. The measurement unit only supports bps.
+                     * @param _minimalAvgTransferRateThreshold Minimum body transfer rate threshold. The measurement unit only supports bps.
                      * 
                      */
                     void SetMinimalAvgTransferRateThreshold(const std::string& _minimalAvgTransferRateThreshold);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MinimalAvgTransferRateThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
-                     * @return CountingPeriod Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+                     * 获取Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
+                     * @return CountingPeriod Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
                      * 
                      */
                     std::string GetCountingPeriod() const;
 
                     /**
-                     * 设置Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
-                     * @param _countingPeriod Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+                     * 设置Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
+                     * @param _countingPeriod Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
                      * 
                      */
                     void SetCountingPeriod(const std::string& _countingPeriod);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CountingPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @return Enabled Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 获取Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @return Enabled Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @param _enabled Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 设置Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @param _enabled Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+                     * Minimum body transfer rate threshold. The measurement unit only supports bps.
                      */
                     std::string m_minimalAvgTransferRateThreshold;
                     bool m_minimalAvgTransferRateThresholdHasBeenSet;
 
                     /**
-                     * Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+                     * Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
                      */
                     std::string m_countingPeriod;
                     bool m_countingPeriodHasBeenSet;
 
                     /**
-                     * Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;

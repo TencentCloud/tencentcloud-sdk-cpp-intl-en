@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Foundation of Web security BOT rule architecture.
+                * Structure of BOT rules for Web security.
                 */
                 class BotManagementLite : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration of the human-machine verification page.
-                     * @return CAPTCHAPageChallenge Configuration of the human-machine verification page.
+                     * 获取Configuration of the CAPTCHA page.
+                     * @return CAPTCHAPageChallenge Configuration of the CAPTCHA page.
                      * 
                      */
                     CAPTCHAPageChallenge GetCAPTCHAPageChallenge() const;
 
                     /**
-                     * 设置Configuration of the human-machine verification page.
-                     * @param _cAPTCHAPageChallenge Configuration of the human-machine verification page.
+                     * 设置Configuration of the CAPTCHA page.
+                     * @param _cAPTCHAPageChallenge Configuration of the CAPTCHA page.
                      * 
                      */
                     void SetCAPTCHAPageChallenge(const CAPTCHAPageChallenge& _cAPTCHAPageChallenge);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool CAPTCHAPageChallengeHasBeenSet() const;
 
                     /**
-                     * 获取AI crawler detection configuration.
-                     * @return AICrawlerDetection AI crawler detection configuration.
+                     * 获取Specific configuration for AI crawler detection.
+                     * @return AICrawlerDetection Specific configuration for AI crawler detection.
                      * 
                      */
                     AICrawlerDetection GetAICrawlerDetection() const;
 
                     /**
-                     * 设置AI crawler detection configuration.
-                     * @param _aICrawlerDetection AI crawler detection configuration.
+                     * 设置Specific configuration for AI crawler detection.
+                     * @param _aICrawlerDetection Specific configuration for AI crawler detection.
                      * 
                      */
                     void SetAICrawlerDetection(const AICrawlerDetection& _aICrawlerDetection);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration of the human-machine verification page.
+                     * Configuration of the CAPTCHA page.
                      */
                     CAPTCHAPageChallenge m_cAPTCHAPageChallenge;
                     bool m_cAPTCHAPageChallengeHasBeenSet;
 
                     /**
-                     * AI crawler detection configuration.
+                     * Specific configuration for AI crawler detection.
                      */
                     AICrawlerDetection m_aICrawlerDetection;
                     bool m_aICrawlerDetectionHasBeenSet;

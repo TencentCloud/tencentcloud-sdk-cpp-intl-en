@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Human-Machine verification page configuration.
+                * Specific configuration of the CAPTCHA page.
                 */
                 class CAPTCHAPageChallenge : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-                     * @return Enabled Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * 获取Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @return Enabled Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-                     * @param _enabled Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * 设置Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+                     * @param _enabled Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the human-machine verification page is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * Whether human-machine verification is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;

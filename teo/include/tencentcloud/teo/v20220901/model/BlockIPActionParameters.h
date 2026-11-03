@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional parameter for SecurityAction `BlockIP`.
+                * Additional parameter for IP blocking in Web Security
                 */
                 class BlockIPActionParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
-                     * @return Duration Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+                     * 获取Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
+                     * @return Duration Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
                      * 
                      */
                     std::string GetDuration() const;
 
                     /**
-                     * 设置Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
-                     * @param _duration Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+                     * 设置Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
+                     * @param _duration Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
                      * 
                      */
                     void SetDuration(const std::string& _duration);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+                     * Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
                      */
                     std::string m_duration;
                     bool m_durationHasBeenSet;

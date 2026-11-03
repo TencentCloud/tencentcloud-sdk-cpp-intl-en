@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
-                     * @return Id Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+                     * 获取ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
+                     * @return Id ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
-                     * @param _id Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+                     * 设置ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
+                     * @param _id ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the name of the browser spoofing identification rule.
-                     * @return Name Specifies the name of the browser spoofing identification rule.
+                     * 获取Name of the browser spoofing identification rule.
+                     * @return Name Name of the browser spoofing identification rule.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the name of the browser spoofing identification rule.
-                     * @param _name Specifies the name of the browser spoofing identification rule.
+                     * 设置Name of the browser spoofing identification rule.
+                     * @param _name Name of the browser spoofing identification rule.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-                     * @return Enabled Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+                     * 获取Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
+                     * @return Enabled Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-                     * @param _enabled Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+                     * 设置Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
+                     * @param _enabled Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
-                     * @return Condition Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+                     * 获取Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
+                     * @return Condition Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
-                     * @param _condition Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+                     * 设置Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
+                     * @param _condition Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
-                     * @return Action Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+                     * 获取Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+                     * @return Action Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
                      * 
                      */
                     BrowserImpersonationDetectionAction GetAction() const;
 
                     /**
-                     * 设置Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
-                     * @param _action Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+                     * 设置Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+                     * @param _action Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
                      * 
                      */
                     void SetAction(const BrowserImpersonationDetectionAction& _action);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+                     * ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Specifies the name of the browser spoofing identification rule.
+                     * Name of the browser spoofing identification rule.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+                     * Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+                     * Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+                     * Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
                      */
                     BrowserImpersonationDetectionAction m_action;
                     bool m_actionHasBeenSet;

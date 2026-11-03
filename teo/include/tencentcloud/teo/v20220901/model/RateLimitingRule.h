@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the rate limit configuration.
+                * Specific configuration of the rate limit.
                 */
                 class RateLimitingRule : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
-                     * @return Id The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+                     * 获取<p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
+                     * @return Id <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
-                     * @param _id The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+                     * 设置<p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
+                     * @param _id <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the name of the precise rate limit.
-                     * @return Name Specifies the name of the precise rate limit.
+                     * 获取<p>Name of the precise rate limit.</p>
+                     * @return Name <p>Name of the precise rate limit.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the name of the precise rate limit.
-                     * @param _name Specifies the name of the precise rate limit.
+                     * 设置<p>Name of the precise rate limit.</p>
+                     * @param _name <p>Name of the precise rate limit.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
-                     * @return Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+                     * 获取<p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+                     * @return Condition <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
-                     * @param _condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+                     * 设置<p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+                     * @param _condition <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
-                     * @return Mode Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+                     * 获取<p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
+                     * @return Mode <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
-                     * @param _mode Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+                     * 设置<p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
+                     * @param _mode <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
-                     * @return CountBy The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+                     * 获取<p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
+                     * @return CountBy <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
                      * 
                      */
                     std::vector<std::string> GetCountBy() const;
 
                     /**
-                     * 设置The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
-                     * @param _countBy The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+                     * 设置<p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
+                     * @param _countBy <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
                      * 
                      */
                     void SetCountBy(const std::vector<std::string>& _countBy);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool CountByHasBeenSet() const;
 
                     /**
-                     * 获取Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
-                     * @return MaxRequestThreshold Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+                     * 获取<p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
+                     * @return MaxRequestThreshold <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
                      * 
                      */
                     int64_t GetMaxRequestThreshold() const;
 
                     /**
-                     * 设置Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
-                     * @param _maxRequestThreshold Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+                     * 设置<p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
+                     * @param _maxRequestThreshold <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
                      * 
                      */
                     void SetMaxRequestThreshold(const int64_t& _maxRequestThreshold);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool MaxRequestThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
-                     * @return CountingPeriod Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+                     * 获取<p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
+                     * @return CountingPeriod <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
                      * 
                      */
                     std::string GetCountingPeriod() const;
 
                     /**
-                     * 设置Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
-                     * @param _countingPeriod Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+                     * 设置<p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
+                     * @param _countingPeriod <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
                      * 
                      */
                     void SetCountingPeriod(const std::string& _countingPeriod);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool CountingPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
-                     * @return ActionDuration Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+                     * 获取<p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
+                     * @return ActionDuration <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
                      * 
                      */
                     std::string GetActionDuration() const;
 
                     /**
-                     * 设置Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
-                     * @param _actionDuration Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+                     * 设置<p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
+                     * @param _actionDuration <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
                      * 
                      */
                     void SetActionDuration(const std::string& _actionDuration);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool ActionDurationHasBeenSet() const;
 
                     /**
-                     * 获取Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
-                     * @return Action Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+                     * 获取<p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     * @return Action <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
                      * 
                      */
                     SecurityAction GetAction() const;
 
                     /**
-                     * 设置Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
-                     * @param _action Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+                     * 设置<p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     * @param _action <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
                      * 
                      */
                     void SetAction(const SecurityAction& _action);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
-                     * @return Priority Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+                     * 获取<p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
+                     * @return Priority <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
-                     * @param _priority Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+                     * 设置<p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
+                     * @param _priority <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-                     * @return Enabled Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * 获取<p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+                     * @return Enabled <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-                     * @param _enabled Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * 设置<p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+                     * @param _enabled <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -281,67 +281,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+                     * <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Specifies the name of the precise rate limit.
+                     * <p>Name of the precise rate limit.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+                     * <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+                     * <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+                     * <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
                      */
                     std::vector<std::string> m_countBy;
                     bool m_countByHasBeenSet;
 
                     /**
-                     * Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+                     * <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
                      */
                     int64_t m_maxRequestThreshold;
                     bool m_maxRequestThresholdHasBeenSet;
 
                     /**
-                     * Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+                     * <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
                      */
                     std::string m_countingPeriod;
                     bool m_countingPeriodHasBeenSet;
 
                     /**
-                     * Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+                     * <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
                      */
                     std::string m_actionDuration;
                     bool m_actionDurationHasBeenSet;
 
                     /**
-                     * Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+                     * <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
                      */
                     SecurityAction m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+                     * <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+                     * <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;

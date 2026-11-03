@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Managed rule automatic update option.
+                * Automatic update options for managed rules
                 */
                 class ManagedRuleAutoUpdate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
-                     * @return AutoUpdateToLatestVersion Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+                     * 获取Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+                     * @return AutoUpdateToLatestVersion Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
                      * 
                      */
                     std::string GetAutoUpdateToLatestVersion() const;
 
                     /**
-                     * 设置Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
-                     * @param _autoUpdateToLatestVersion Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+                     * 设置Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+                     * @param _autoUpdateToLatestVersion Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
                      * 
                      */
                     void SetAutoUpdateToLatestVersion(const std::string& _autoUpdateToLatestVersion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AutoUpdateToLatestVersionHasBeenSet() const;
 
                     /**
-                     * 获取Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
-                     * @return RulesetVersion Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+                     * 获取Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
+                     * @return RulesetVersion Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
                      * 
                      */
                     std::string GetRulesetVersion() const;
 
                     /**
-                     * 设置Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
-                     * @param _rulesetVersion Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+                     * 设置Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
+                     * @param _rulesetVersion Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
                      * 
                      */
                     void SetRulesetVersion(const std::string& _rulesetVersion);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+                     * Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
                      */
                     std::string m_autoUpdateToLatestVersion;
                     bool m_autoUpdateToLatestVersionHasBeenSet;
 
                     /**
-                     * Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+                     * Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
                      */
                     std::string m_rulesetVersion;
                     bool m_rulesetVersionHasBeenSet;

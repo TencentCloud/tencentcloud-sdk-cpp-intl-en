@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the client device configuration.
+                * Client device configuration
                 */
                 class DeviceProfile : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
-                     * @return ClientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+                     * 获取<p>Client device type. Valid values: <li>iOS;</li><li>Android;</li><li>WebView;</li><li>WeChatMiniProgram.</li></p>
+                     * @return ClientType <p>Client device type. Valid values: <li>iOS;</li><li>Android;</li><li>WebView;</li><li>WeChatMiniProgram.</li></p>
                      * 
                      */
                     std::string GetClientType() const;
 
                     /**
-                     * 设置Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
-                     * @param _clientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+                     * 设置<p>Client device type. Valid values: <li>iOS;</li><li>Android;</li><li>WebView;</li><li>WeChatMiniProgram.</li></p>
+                     * @param _clientType <p>Client device type. Valid values: <li>iOS;</li><li>Android;</li><li>WebView;</li><li>WeChatMiniProgram.</li></p>
                      * 
                      */
                     void SetClientType(const std::string& _clientType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ClientTypeHasBeenSet() const;
 
                     /**
-                     * 获取The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
-                     * @return HighRiskMinScore The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
+                     * 获取<p>Minimum risk score for high-risk requests. A request is considered high-risk when its score is equal to or greater than this value.</p><p>Value range: [2, 99]</p><p>Default value: 50</p>
+                     * @return HighRiskMinScore <p>Minimum risk score for high-risk requests. A request is considered high-risk when its score is equal to or greater than this value.</p><p>Value range: [2, 99]</p><p>Default value: 50</p>
                      * 
                      */
                     uint64_t GetHighRiskMinScore() const;
 
                     /**
-                     * 设置The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
-                     * @param _highRiskMinScore The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
+                     * 设置<p>Minimum risk score for high-risk requests. A request is considered high-risk when its score is equal to or greater than this value.</p><p>Value range: [2, 99]</p><p>Default value: 50</p>
+                     * @param _highRiskMinScore <p>Minimum risk score for high-risk requests. A request is considered high-risk when its score is equal to or greater than this value.</p><p>Value range: [2, 99]</p><p>Default value: 50</p>
                      * 
                      */
                     void SetHighRiskMinScore(const uint64_t& _highRiskMinScore);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool HighRiskMinScoreHasBeenSet() const;
 
                     /**
-                     * 获取Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
-                     * @return HighRiskRequestAction Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+                     * 获取<p>Handling method for high-risk requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Redirect: Redirection;</li><li>Challenge: Challenge.</li>Default value: Monitor.</p>
+                     * @return HighRiskRequestAction <p>Handling method for high-risk requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Redirect: Redirection;</li><li>Challenge: Challenge.</li>Default value: Monitor.</p>
                      * 
                      */
                     SecurityAction GetHighRiskRequestAction() const;
 
                     /**
-                     * 设置Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
-                     * @param _highRiskRequestAction Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+                     * 设置<p>Handling method for high-risk requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Redirect: Redirection;</li><li>Challenge: Challenge.</li>Default value: Monitor.</p>
+                     * @param _highRiskRequestAction <p>Handling method for high-risk requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Redirect: Redirection;</li><li>Challenge: Challenge.</li>Default value: Monitor.</p>
                      * 
                      */
                     void SetHighRiskRequestAction(const SecurityAction& _highRiskRequestAction);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool HighRiskRequestActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.
-                     * @return MediumRiskMinScore Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.
+                     * 获取<p>The minimum risk score for a medium-risk request. When the score is equal to or greater than this value and less than HighRiskMinScore, it is determined as medium-risk. When it is below this value, it is determined as low risk.</p><p>Value range: [1, 98]</p><p>Default value: 15</p>
+                     * @return MediumRiskMinScore <p>The minimum risk score for a medium-risk request. When the score is equal to or greater than this value and less than HighRiskMinScore, it is determined as medium-risk. When it is below this value, it is determined as low risk.</p><p>Value range: [1, 98]</p><p>Default value: 15</p>
                      * 
                      */
                     uint64_t GetMediumRiskMinScore() const;
 
                     /**
-                     * 设置Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.
-                     * @param _mediumRiskMinScore Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.
+                     * 设置<p>The minimum risk score for a medium-risk request. When the score is equal to or greater than this value and less than HighRiskMinScore, it is determined as medium-risk. When it is below this value, it is determined as low risk.</p><p>Value range: [1, 98]</p><p>Default value: 15</p>
+                     * @param _mediumRiskMinScore <p>The minimum risk score for a medium-risk request. When the score is equal to or greater than this value and less than HighRiskMinScore, it is determined as medium-risk. When it is below this value, it is determined as low risk.</p><p>Value range: [1, 98]</p><p>Default value: 15</p>
                      * 
                      */
                     void SetMediumRiskMinScore(const uint64_t& _mediumRiskMinScore);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MediumRiskMinScoreHasBeenSet() const;
 
                     /**
-                     * 获取Handling method for medium-risk requests. SecurityAction Name parameter supports: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Redirect: Redirect;</li> <li>Challenge: Challenge.</li> default value is Monitor.
-                     * @return MediumRiskRequestAction Handling method for medium-risk requests. SecurityAction Name parameter supports: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Redirect: Redirect;</li> <li>Challenge: Challenge.</li> default value is Monitor.
+                     * 获取<p>Handling method for medium risk requests. Supported values for the Name of SecurityAction: <li>Deny: block;</li><li>Monitor: monitor;</li><li>Redirect: redirect;</li><li>Challenge: challenge.</li>Default value: Monitor.</p>
+                     * @return MediumRiskRequestAction <p>Handling method for medium risk requests. Supported values for the Name of SecurityAction: <li>Deny: block;</li><li>Monitor: monitor;</li><li>Redirect: redirect;</li><li>Challenge: challenge.</li>Default value: Monitor.</p>
                      * 
                      */
                     SecurityAction GetMediumRiskRequestAction() const;
 
                     /**
-                     * 设置Handling method for medium-risk requests. SecurityAction Name parameter supports: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Redirect: Redirect;</li> <li>Challenge: Challenge.</li> default value is Monitor.
-                     * @param _mediumRiskRequestAction Handling method for medium-risk requests. SecurityAction Name parameter supports: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Redirect: Redirect;</li> <li>Challenge: Challenge.</li> default value is Monitor.
+                     * 设置<p>Handling method for medium risk requests. Supported values for the Name of SecurityAction: <li>Deny: block;</li><li>Monitor: monitor;</li><li>Redirect: redirect;</li><li>Challenge: challenge.</li>Default value: Monitor.</p>
+                     * @param _mediumRiskRequestAction <p>Handling method for medium risk requests. Supported values for the Name of SecurityAction: <li>Deny: block;</li><li>Monitor: monitor;</li><li>Redirect: redirect;</li><li>Challenge: challenge.</li>Default value: Monitor.</p>
                      * 
                      */
                     void SetMediumRiskRequestAction(const SecurityAction& _mediumRiskRequestAction);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+                     * <p>Client device type. Valid values: <li>iOS;</li><li>Android;</li><li>WebView;</li><li>WeChatMiniProgram.</li></p>
                      */
                     std::string m_clientType;
                     bool m_clientTypeHasBeenSet;
 
                     /**
-                     * The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
+                     * <p>Minimum risk score for high-risk requests. A request is considered high-risk when its score is equal to or greater than this value.</p><p>Value range: [2, 99]</p><p>Default value: 50</p>
                      */
                     uint64_t m_highRiskMinScore;
                     bool m_highRiskMinScoreHasBeenSet;
 
                     /**
-                     * Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+                     * <p>Handling method for high-risk requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Redirect: Redirection;</li><li>Challenge: Challenge.</li>Default value: Monitor.</p>
                      */
                     SecurityAction m_highRiskRequestAction;
                     bool m_highRiskRequestActionHasBeenSet;
 
                     /**
-                     * Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.
+                     * <p>The minimum risk score for a medium-risk request. When the score is equal to or greater than this value and less than HighRiskMinScore, it is determined as medium-risk. When it is below this value, it is determined as low risk.</p><p>Value range: [1, 98]</p><p>Default value: 15</p>
                      */
                     uint64_t m_mediumRiskMinScore;
                     bool m_mediumRiskMinScoreHasBeenSet;
 
                     /**
-                     * Handling method for medium-risk requests. SecurityAction Name parameter supports: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Redirect: Redirect;</li> <li>Challenge: Challenge.</li> default value is Monitor.
+                     * <p>Handling method for medium risk requests. Supported values for the Name of SecurityAction: <li>Deny: block;</li><li>Monitor: monitor;</li><li>Redirect: redirect;</li><li>Challenge: challenge.</li>Default value: Monitor.</p>
                      */
                     SecurityAction m_mediumRiskRequestAction;
                     bool m_mediumRiskRequestActionHasBeenSet;

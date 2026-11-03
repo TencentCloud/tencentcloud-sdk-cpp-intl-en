@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access key.
-                     * @return SecretKey Access key.
+                     * 获取<p>Access key.</p>
+                     * @return SecretKey <p>Access key.</p>
                      * 
                      */
                     std::string GetSecretKey() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access key.
+                     * <p>Access key.</p>
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

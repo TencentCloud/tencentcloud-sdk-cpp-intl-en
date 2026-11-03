@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/SemanticAnalysisRules.h>
 #include <tencentcloud/teo/v20220901/model/ManagedRuleAutoUpdate.h>
 #include <tencentcloud/teo/v20220901/model/ManagedRuleGroup.h>
 #include <tencentcloud/teo/v20220901/model/FrequentScanningProtection.h>
@@ -38,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Managed rules configuration.
+                * Managed rules for Web security
                 */
                 class ManagedRules : public AbstractModel
                 {
@@ -50,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
-                     * @return Enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+                     * 获取<p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
+                     * @return Enabled <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
-                     * @param _enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+                     * 设置<p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
+                     * @param _enabled <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -71,15 +72,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
-                     * @return DetectionOnly Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+                     * 获取<p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
+                     * @return DetectionOnly <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
                      * 
                      */
                     std::string GetDetectionOnly() const;
 
                     /**
-                     * 设置Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
-                     * @param _detectionOnly Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+                     * 设置<p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
+                     * @param _detectionOnly <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
                      * 
                      */
                     void SetDetectionOnly(const std::string& _detectionOnly);
@@ -92,15 +93,15 @@ namespace TencentCloud
                     bool DetectionOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
-                     * @return SemanticAnalysis Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+                     * 获取<p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
+                     * @return SemanticAnalysis <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
                      * 
                      */
                     std::string GetSemanticAnalysis() const;
 
                     /**
-                     * 设置Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
-                     * @param _semanticAnalysis Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+                     * 设置<p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
+                     * @param _semanticAnalysis <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
                      * 
                      */
                     void SetSemanticAnalysis(const std::string& _semanticAnalysis);
@@ -113,15 +114,36 @@ namespace TencentCloud
                     bool SemanticAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Managed rule automatic update option.
-                     * @return AutoUpdate Managed rule automatic update option.
+                     * 获取<p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+                     * @return SemanticAnalysisRules <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+                     * 
+                     */
+                    SemanticAnalysisRules GetSemanticAnalysisRules() const;
+
+                    /**
+                     * 设置<p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+                     * @param _semanticAnalysisRules <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+                     * 
+                     */
+                    void SetSemanticAnalysisRules(const SemanticAnalysisRules& _semanticAnalysisRules);
+
+                    /**
+                     * 判断参数 SemanticAnalysisRules 是否已赋值
+                     * @return SemanticAnalysisRules 是否已赋值
+                     * 
+                     */
+                    bool SemanticAnalysisRulesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Auto-update option for managed rules.</p>
+                     * @return AutoUpdate <p>Auto-update option for managed rules.</p>
                      * 
                      */
                     ManagedRuleAutoUpdate GetAutoUpdate() const;
 
                     /**
-                     * 设置Managed rule automatic update option.
-                     * @param _autoUpdate Managed rule automatic update option.
+                     * 设置<p>Auto-update option for managed rules.</p>
+                     * @param _autoUpdate <p>Auto-update option for managed rules.</p>
                      * 
                      */
                     void SetAutoUpdate(const ManagedRuleAutoUpdate& _autoUpdate);
@@ -134,15 +156,15 @@ namespace TencentCloud
                     bool AutoUpdateHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
-                     * @return ManagedRuleGroups Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+                     * 获取<p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
+                     * @return ManagedRuleGroups <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
                      * 
                      */
                     std::vector<ManagedRuleGroup> GetManagedRuleGroups() const;
 
                     /**
-                     * 设置Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
-                     * @param _managedRuleGroups Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+                     * 设置<p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
+                     * @param _managedRuleGroups <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
                      * 
                      */
                     void SetManagedRuleGroups(const std::vector<ManagedRuleGroup>& _managedRuleGroups);
@@ -155,15 +177,15 @@ namespace TencentCloud
                     bool ManagedRuleGroupsHasBeenSet() const;
 
                     /**
-                     * 获取High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
-                     * @return FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * 获取<p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
+                     * @return FrequentScanningProtection <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
                      * 
                      */
                     FrequentScanningProtection GetFrequentScanningProtection() const;
 
                     /**
-                     * 设置High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
-                     * @param _frequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * 设置<p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
+                     * @param _frequentScanningProtection <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
                      * 
                      */
                     void SetFrequentScanningProtection(const FrequentScanningProtection& _frequentScanningProtection);
@@ -178,37 +200,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+                     * <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+                     * <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
                      */
                     std::string m_detectionOnly;
                     bool m_detectionOnlyHasBeenSet;
 
                     /**
-                     * Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+                     * <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
                      */
                     std::string m_semanticAnalysis;
                     bool m_semanticAnalysisHasBeenSet;
 
                     /**
-                     * Managed rule automatic update option.
+                     * <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+                     */
+                    SemanticAnalysisRules m_semanticAnalysisRules;
+                    bool m_semanticAnalysisRulesHasBeenSet;
+
+                    /**
+                     * <p>Auto-update option for managed rules.</p>
                      */
                     ManagedRuleAutoUpdate m_autoUpdate;
                     bool m_autoUpdateHasBeenSet;
 
                     /**
-                     * Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+                     * <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
                      */
                     std::vector<ManagedRuleGroup> m_managedRuleGroups;
                     bool m_managedRuleGroupsHasBeenSet;
 
                     /**
-                     * High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+                     * <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
                      */
                     FrequentScanningProtection m_frequentScanningProtection;
                     bool m_frequentScanningProtectionHasBeenSet;

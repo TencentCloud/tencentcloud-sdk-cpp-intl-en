@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the Action of the Bot browser verification rule (formerly active feature detection rule).
+                * Action of the Bot browser verification rule (formerly active feature detection rule).
                 */
                 class BrowserImpersonationDetectionAction : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configures Cookie verification and session tracking.
-                     * @return BotSessionValidation Configures Cookie verification and session tracking.
+                     * 获取Cookie verification and session tracking configuration.
+                     * @return BotSessionValidation Cookie verification and session tracking configuration.
                      * 
                      */
                     BotSessionValidation GetBotSessionValidation() const;
 
                     /**
-                     * 设置Configures Cookie verification and session tracking.
-                     * @param _botSessionValidation Configures Cookie verification and session tracking.
+                     * 设置Cookie verification and session tracking configuration.
+                     * @param _botSessionValidation Cookie verification and session tracking configuration.
                      * 
                      */
                     void SetBotSessionValidation(const BotSessionValidation& _botSessionValidation);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool BotSessionValidationHasBeenSet() const;
 
                     /**
-                     * 获取Configures client behavior validation.
-                     * @return ClientBehaviorDetection Configures client behavior validation.
+                     * 获取Client behavior validation configuration.
+                     * @return ClientBehaviorDetection Client behavior validation configuration.
                      * 
                      */
                     ClientBehaviorDetection GetClientBehaviorDetection() const;
 
                     /**
-                     * 设置Configures client behavior validation.
-                     * @param _clientBehaviorDetection Configures client behavior validation.
+                     * 设置Client behavior validation configuration.
+                     * @param _clientBehaviorDetection Client behavior validation configuration.
                      * 
                      */
                     void SetClientBehaviorDetection(const ClientBehaviorDetection& _clientBehaviorDetection);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configures Cookie verification and session tracking.
+                     * Cookie verification and session tracking configuration.
                      */
                     BotSessionValidation m_botSessionValidation;
                     bool m_botSessionValidationHasBeenSet;
 
                     /**
-                     * Configures client behavior validation.
+                     * Client behavior validation configuration.
                      */
                     ClientBehaviorDetection m_clientBehaviorDetection;
                     bool m_clientBehaviorDetectionHasBeenSet;

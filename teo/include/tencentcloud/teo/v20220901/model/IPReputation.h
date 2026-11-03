@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP intelligence library (formerly client profile analysis) configuration.
+                * IP Intelligence Library (formerly client profile analysis) configuration.
                 */
                 class IPReputation : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @return Enabled IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 获取IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
+                     * @return Enabled IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @param _enabled IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 设置IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
+                     * @param _enabled IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取IP intelligence library (formerly client profile analysis) configuration content.
-                     * @return IPReputationGroup IP intelligence library (formerly client profile analysis) configuration content.
+                     * 获取Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
+                     * @return IPReputationGroup Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
                      * 
                      */
                     IPReputationGroup GetIPReputationGroup() const;
 
                     /**
-                     * 设置IP intelligence library (formerly client profile analysis) configuration content.
-                     * @param _iPReputationGroup IP intelligence library (formerly client profile analysis) configuration content.
+                     * 设置Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
+                     * @param _iPReputationGroup Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
                      * 
                      */
                     void SetIPReputationGroup(const IPReputationGroup& _iPReputationGroup);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * IP intelligence library (formerly client profile analysis) configuration content.
+                     * Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
                      */
                     IPReputationGroup m_iPReputationGroup;
                     bool m_iPReputationGroupHasBeenSet;

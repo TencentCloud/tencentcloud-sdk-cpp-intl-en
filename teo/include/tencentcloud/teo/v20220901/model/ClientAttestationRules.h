@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the client authentication configuration.
+                * Client authentication configuration.
                 */
                 class ClientAttestationRules : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of client authentication. when using ModifySecurityPolicy to modify Web protection configuration: <li> if Rules in SecurityPolicy.BotManagement.ClientAttestationRules is not specified or the parameter length of Rules is zero: clear all client authentication rule configuration. </li> <li> if ClientAttestationRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing client authentication rule configuration and do not modify. </li>.
-                     * @return Rules List of client authentication. when using ModifySecurityPolicy to modify Web protection configuration: <li> if Rules in SecurityPolicy.BotManagement.ClientAttestationRules is not specified or the parameter length of Rules is zero: clear all client authentication rule configuration. </li> <li> if ClientAttestationRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing client authentication rule configuration and do not modify. </li>.
+                     * 获取List of client authentication. When using ModifySecurityPolicy to modify Web protection configuration: <li> If the Rules parameter in SecurityPolicy.BotManagement.ClientAttestationRules is not specified, or the Rules parameter length is zero: clear all client authentication rule configurations.</li> <li> If the ClientAttestationRules parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing client authentication rule configuration without modification.</li>
+                     * @return Rules List of client authentication. When using ModifySecurityPolicy to modify Web protection configuration: <li> If the Rules parameter in SecurityPolicy.BotManagement.ClientAttestationRules is not specified, or the Rules parameter length is zero: clear all client authentication rule configurations.</li> <li> If the ClientAttestationRules parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing client authentication rule configuration without modification.</li>
                      * 
                      */
                     std::vector<ClientAttestationRule> GetRules() const;
 
                     /**
-                     * 设置List of client authentication. when using ModifySecurityPolicy to modify Web protection configuration: <li> if Rules in SecurityPolicy.BotManagement.ClientAttestationRules is not specified or the parameter length of Rules is zero: clear all client authentication rule configuration. </li> <li> if ClientAttestationRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing client authentication rule configuration and do not modify. </li>.
-                     * @param _rules List of client authentication. when using ModifySecurityPolicy to modify Web protection configuration: <li> if Rules in SecurityPolicy.BotManagement.ClientAttestationRules is not specified or the parameter length of Rules is zero: clear all client authentication rule configuration. </li> <li> if ClientAttestationRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing client authentication rule configuration and do not modify. </li>.
+                     * 设置List of client authentication. When using ModifySecurityPolicy to modify Web protection configuration: <li> If the Rules parameter in SecurityPolicy.BotManagement.ClientAttestationRules is not specified, or the Rules parameter length is zero: clear all client authentication rule configurations.</li> <li> If the ClientAttestationRules parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing client authentication rule configuration without modification.</li>
+                     * @param _rules List of client authentication. When using ModifySecurityPolicy to modify Web protection configuration: <li> If the Rules parameter in SecurityPolicy.BotManagement.ClientAttestationRules is not specified, or the Rules parameter length is zero: clear all client authentication rule configurations.</li> <li> If the ClientAttestationRules parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing client authentication rule configuration without modification.</li>
                      * 
                      */
                     void SetRules(const std::vector<ClientAttestationRule>& _rules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of client authentication. when using ModifySecurityPolicy to modify Web protection configuration: <li> if Rules in SecurityPolicy.BotManagement.ClientAttestationRules is not specified or the parameter length of Rules is zero: clear all client authentication rule configuration. </li> <li> if ClientAttestationRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing client authentication rule configuration and do not modify. </li>.
+                     * List of client authentication. When using ModifySecurityPolicy to modify Web protection configuration: <li> If the Rules parameter in SecurityPolicy.BotManagement.ClientAttestationRules is not specified, or the Rules parameter length is zero: clear all client authentication rule configurations.</li> <li> If the ClientAttestationRules parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing client authentication rule configuration without modification.</li>
                      */
                     std::vector<ClientAttestationRule> m_rules;
                     bool m_rulesHasBeenSet;

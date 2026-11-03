@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Action for specific RuleId.
+                * Item configuration of a managed rule
                 */
                 class ManagedRuleAction : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specific items under ManagedRuleGroup, used to rewrite the configuration of this individual rule item, refer to product documentation for details.	
-                     * @return RuleId Specific items under ManagedRuleGroup, used to rewrite the configuration of this individual rule item, refer to product documentation for details.	
+                     * 获取Specific item under the managed rule group, used for rewriting the configuration content of this individual rule. For details, refer to the product documentation.	
+                     * @return RuleId Specific item under the managed rule group, used for rewriting the configuration content of this individual rule. For details, refer to the product documentation.	
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Specific items under ManagedRuleGroup, used to rewrite the configuration of this individual rule item, refer to product documentation for details.	
-                     * @param _ruleId Specific items under ManagedRuleGroup, used to rewrite the configuration of this individual rule item, refer to product documentation for details.	
+                     * 设置Specific item under the managed rule group, used for rewriting the configuration content of this individual rule. For details, refer to the product documentation.	
+                     * @param _ruleId Specific item under the managed rule group, used for rewriting the configuration content of this individual rule. For details, refer to the product documentation.	
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Action for the managed rule item specified by RuleId, the SecurityAction Name parameter supports: <li>`Deny`: block and respond with an block page;</li> <li>`Monitor`: observe, do not process the request and record the security event in logs;</li> <li>`Disabled`: disabled, do not scan the request and skip this rule.</li>.
-                     * @return Action Action for the managed rule item specified by RuleId, the SecurityAction Name parameter supports: <li>`Deny`: block and respond with an block page;</li> <li>`Monitor`: observe, do not process the request and record the security event in logs;</li> <li>`Disabled`: disabled, do not scan the request and skip this rule.</li>.
+                     * 获取Specifies the handling action for the managed rule item in RuleId. Supported values for SecurityAction Name: <li>Deny: Block. Responds with an interception page.</li><li>Monitor: Observe. Does not process the request but records security events in logs.</li><li>Disabled: Not enabled. Skips the rule without scanning requests.</li>
+                     * @return Action Specifies the handling action for the managed rule item in RuleId. Supported values for SecurityAction Name: <li>Deny: Block. Responds with an interception page.</li><li>Monitor: Observe. Does not process the request but records security events in logs.</li><li>Disabled: Not enabled. Skips the rule without scanning requests.</li>
                      * 
                      */
                     SecurityAction GetAction() const;
 
                     /**
-                     * 设置Action for the managed rule item specified by RuleId, the SecurityAction Name parameter supports: <li>`Deny`: block and respond with an block page;</li> <li>`Monitor`: observe, do not process the request and record the security event in logs;</li> <li>`Disabled`: disabled, do not scan the request and skip this rule.</li>.
-                     * @param _action Action for the managed rule item specified by RuleId, the SecurityAction Name parameter supports: <li>`Deny`: block and respond with an block page;</li> <li>`Monitor`: observe, do not process the request and record the security event in logs;</li> <li>`Disabled`: disabled, do not scan the request and skip this rule.</li>.
+                     * 设置Specifies the handling action for the managed rule item in RuleId. Supported values for SecurityAction Name: <li>Deny: Block. Responds with an interception page.</li><li>Monitor: Observe. Does not process the request but records security events in logs.</li><li>Disabled: Not enabled. Skips the rule without scanning requests.</li>
+                     * @param _action Specifies the handling action for the managed rule item in RuleId. Supported values for SecurityAction Name: <li>Deny: Block. Responds with an interception page.</li><li>Monitor: Observe. Does not process the request but records security events in logs.</li><li>Disabled: Not enabled. Skips the rule without scanning requests.</li>
                      * 
                      */
                     void SetAction(const SecurityAction& _action);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specific items under ManagedRuleGroup, used to rewrite the configuration of this individual rule item, refer to product documentation for details.	
+                     * Specific item under the managed rule group, used for rewriting the configuration content of this individual rule. For details, refer to the product documentation.	
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Action for the managed rule item specified by RuleId, the SecurityAction Name parameter supports: <li>`Deny`: block and respond with an block page;</li> <li>`Monitor`: observe, do not process the request and record the security event in logs;</li> <li>`Disabled`: disabled, do not scan the request and skip this rule.</li>.
+                     * Specifies the handling action for the managed rule item in RuleId. Supported values for SecurityAction Name: <li>Deny: Block. Responds with an interception page.</li><li>Monitor: Observe. Does not process the request but records security events in logs.</li><li>Disabled: Not enabled. Skips the rule without scanning requests.</li>
                      */
                     SecurityAction m_action;
                     bool m_actionHasBeenSet;

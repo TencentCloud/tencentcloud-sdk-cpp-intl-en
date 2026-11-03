@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Skipped fields configuration in exception rules.
+                * Skipped field configuration in the exception rule
                 */
                 class RequestFieldsForException : public AbstractModel
                 {
@@ -47,39 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Skip specific field. supported values:.
-<li>body.json: parameter content in json requests. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "body.json", "Condition": "", "TargetField": "key" }, which means all parameters in json requests skip WAF scan.</li>.
-<li style="margin-top:5px">cookie: cookie; at this point Condition supports key, value, TargetField supports key, value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>.
-<li style="margin-top:5px">header: HTTP header parameters. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" }, which means header parameter name wildcard match x-auth-* skips WAF scan.</li>.
-<li style="margin-top:5px">uri.query: URL encoding content/query parameter. at this point, Condition supports key and value, TargetField supports key and value. example: { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" }. indicates URL encoding content/query parameter name equal to action and parameter value equal to upload or delete skips WAF scan.</li>.
-<li style="margin-top:5px">uri: specifies the request path uri. at this point, Condition must be empty. TargetField supports query, path, fullpath, such as {"Scope": "uri", "Condition": "", "TargetField": "query"}, indicates the request path uri skips WAF scan for query parameters.</li>.
-<li style="margin-top:5px">body: request body content. at this point Condition must be empty, TargetField supports fullbody, multipart, such as { "Scope": "body", "Condition": "", "TargetField": "fullbody" }, which means the request body content skips WAF scan as a full request.</li>.
-                     * @return Scope Skip specific field. supported values:.
-<li>body.json: parameter content in json requests. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "body.json", "Condition": "", "TargetField": "key" }, which means all parameters in json requests skip WAF scan.</li>.
-<li style="margin-top:5px">cookie: cookie; at this point Condition supports key, value, TargetField supports key, value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>.
-<li style="margin-top:5px">header: HTTP header parameters. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" }, which means header parameter name wildcard match x-auth-* skips WAF scan.</li>.
-<li style="margin-top:5px">uri.query: URL encoding content/query parameter. at this point, Condition supports key and value, TargetField supports key and value. example: { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" }. indicates URL encoding content/query parameter name equal to action and parameter value equal to upload or delete skips WAF scan.</li>.
-<li style="margin-top:5px">uri: specifies the request path uri. at this point, Condition must be empty. TargetField supports query, path, fullpath, such as {"Scope": "uri", "Condition": "", "TargetField": "query"}, indicates the request path uri skips WAF scan for query parameters.</li>.
-<li style="margin-top:5px">body: request body content. at this point Condition must be empty, TargetField supports fullbody, multipart, such as { "Scope": "body", "Condition": "", "TargetField": "fullbody" }, which means the request body content skips WAF scan as a full request.</li>.
+                     * 获取Specific fields to skip. Supported values: <br/>
+<li>body.json: parameter content in JSON requests. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "body.json", "Condition": "", "TargetField": "key" } means ALL parameters in the JSON request content skip WAF scan.</li>
+<li style="margin-top:5px">cookie: Cookie; at this point, Condition supports key and value, and TargetField supports key and value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>
+<li style="margin-top:5px">header: HTTP header parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" } means the header parameter name wildcard match x-auth-* skips WAF scan.</li>
+<li style="margin-top:5px">uri.query: URL-encoded content/query parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" } means the parameter name of the URL-encoded content/query parameters is equal to action and the parameter value is equal to upload or delete, skip WAF scan;</li>
+<li style="margin-top:5px">uri: request path URI. At this point, Condition must be empty, and TargetField supports query, path, and fullpath. For example, { "Scope": "uri", "Condition": "", "TargetField": "query" } means only query parameters in the request path URI skip WAF scan.</li>
+<li style="margin-top:5px">body: request body content. At this point, Condition must be empty, and TargetField supports fullbody and multipart, for example { "Scope": "body",  "Condition": "", "TargetField": "fullbody" }, which means the request body content is the complete request body and skips WAF scan;</li>
+                     * @return Scope Specific fields to skip. Supported values: <br/>
+<li>body.json: parameter content in JSON requests. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "body.json", "Condition": "", "TargetField": "key" } means ALL parameters in the JSON request content skip WAF scan.</li>
+<li style="margin-top:5px">cookie: Cookie; at this point, Condition supports key and value, and TargetField supports key and value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>
+<li style="margin-top:5px">header: HTTP header parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" } means the header parameter name wildcard match x-auth-* skips WAF scan.</li>
+<li style="margin-top:5px">uri.query: URL-encoded content/query parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" } means the parameter name of the URL-encoded content/query parameters is equal to action and the parameter value is equal to upload or delete, skip WAF scan;</li>
+<li style="margin-top:5px">uri: request path URI. At this point, Condition must be empty, and TargetField supports query, path, and fullpath. For example, { "Scope": "uri", "Condition": "", "TargetField": "query" } means only query parameters in the request path URI skip WAF scan.</li>
+<li style="margin-top:5px">body: request body content. At this point, Condition must be empty, and TargetField supports fullbody and multipart, for example { "Scope": "body",  "Condition": "", "TargetField": "fullbody" }, which means the request body content is the complete request body and skips WAF scan;</li>
                      * 
                      */
                     std::string GetScope() const;
 
                     /**
-                     * 设置Skip specific field. supported values:.
-<li>body.json: parameter content in json requests. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "body.json", "Condition": "", "TargetField": "key" }, which means all parameters in json requests skip WAF scan.</li>.
-<li style="margin-top:5px">cookie: cookie; at this point Condition supports key, value, TargetField supports key, value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>.
-<li style="margin-top:5px">header: HTTP header parameters. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" }, which means header parameter name wildcard match x-auth-* skips WAF scan.</li>.
-<li style="margin-top:5px">uri.query: URL encoding content/query parameter. at this point, Condition supports key and value, TargetField supports key and value. example: { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" }. indicates URL encoding content/query parameter name equal to action and parameter value equal to upload or delete skips WAF scan.</li>.
-<li style="margin-top:5px">uri: specifies the request path uri. at this point, Condition must be empty. TargetField supports query, path, fullpath, such as {"Scope": "uri", "Condition": "", "TargetField": "query"}, indicates the request path uri skips WAF scan for query parameters.</li>.
-<li style="margin-top:5px">body: request body content. at this point Condition must be empty, TargetField supports fullbody, multipart, such as { "Scope": "body", "Condition": "", "TargetField": "fullbody" }, which means the request body content skips WAF scan as a full request.</li>.
-                     * @param _scope Skip specific field. supported values:.
-<li>body.json: parameter content in json requests. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "body.json", "Condition": "", "TargetField": "key" }, which means all parameters in json requests skip WAF scan.</li>.
-<li style="margin-top:5px">cookie: cookie; at this point Condition supports key, value, TargetField supports key, value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>.
-<li style="margin-top:5px">header: HTTP header parameters. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" }, which means header parameter name wildcard match x-auth-* skips WAF scan.</li>.
-<li style="margin-top:5px">uri.query: URL encoding content/query parameter. at this point, Condition supports key and value, TargetField supports key and value. example: { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" }. indicates URL encoding content/query parameter name equal to action and parameter value equal to upload or delete skips WAF scan.</li>.
-<li style="margin-top:5px">uri: specifies the request path uri. at this point, Condition must be empty. TargetField supports query, path, fullpath, such as {"Scope": "uri", "Condition": "", "TargetField": "query"}, indicates the request path uri skips WAF scan for query parameters.</li>.
-<li style="margin-top:5px">body: request body content. at this point Condition must be empty, TargetField supports fullbody, multipart, such as { "Scope": "body", "Condition": "", "TargetField": "fullbody" }, which means the request body content skips WAF scan as a full request.</li>.
+                     * 设置Specific fields to skip. Supported values: <br/>
+<li>body.json: parameter content in JSON requests. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "body.json", "Condition": "", "TargetField": "key" } means ALL parameters in the JSON request content skip WAF scan.</li>
+<li style="margin-top:5px">cookie: Cookie; at this point, Condition supports key and value, and TargetField supports key and value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>
+<li style="margin-top:5px">header: HTTP header parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" } means the header parameter name wildcard match x-auth-* skips WAF scan.</li>
+<li style="margin-top:5px">uri.query: URL-encoded content/query parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" } means the parameter name of the URL-encoded content/query parameters is equal to action and the parameter value is equal to upload or delete, skip WAF scan;</li>
+<li style="margin-top:5px">uri: request path URI. At this point, Condition must be empty, and TargetField supports query, path, and fullpath. For example, { "Scope": "uri", "Condition": "", "TargetField": "query" } means only query parameters in the request path URI skip WAF scan.</li>
+<li style="margin-top:5px">body: request body content. At this point, Condition must be empty, and TargetField supports fullbody and multipart, for example { "Scope": "body",  "Condition": "", "TargetField": "fullbody" }, which means the request body content is the complete request body and skips WAF scan;</li>
+                     * @param _scope Specific fields to skip. Supported values: <br/>
+<li>body.json: parameter content in JSON requests. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "body.json", "Condition": "", "TargetField": "key" } means ALL parameters in the JSON request content skip WAF scan.</li>
+<li style="margin-top:5px">cookie: Cookie; at this point, Condition supports key and value, and TargetField supports key and value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>
+<li style="margin-top:5px">header: HTTP header parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" } means the header parameter name wildcard match x-auth-* skips WAF scan.</li>
+<li style="margin-top:5px">uri.query: URL-encoded content/query parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" } means the parameter name of the URL-encoded content/query parameters is equal to action and the parameter value is equal to upload or delete, skip WAF scan;</li>
+<li style="margin-top:5px">uri: request path URI. At this point, Condition must be empty, and TargetField supports query, path, and fullpath. For example, { "Scope": "uri", "Condition": "", "TargetField": "query" } means only query parameters in the request path URI skip WAF scan.</li>
+<li style="margin-top:5px">body: request body content. At this point, Condition must be empty, and TargetField supports fullbody and multipart, for example { "Scope": "body",  "Condition": "", "TargetField": "fullbody" }, which means the request body content is the complete request body and skips WAF scan;</li>
                      * 
                      */
                     void SetScope(const std::string& _scope);
@@ -92,23 +92,23 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取Skip specific field expression must comply with expression grammar.
-Condition supports expression configuration syntax: <li> write according to the matching conditional expression syntax of rules, with support for referencing key and value.</li> <li> supports in, like operators, and logical combination with and.</li>.
-For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.</li> <li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: the parameter name equals x-trace-id and the parameter value wildcard matches Bearer *.</li>.
-                     * @return Condition Skip specific field expression must comply with expression grammar.
-Condition supports expression configuration syntax: <li> write according to the matching conditional expression syntax of rules, with support for referencing key and value.</li> <li> supports in, like operators, and logical combination with and.</li>.
-For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.</li> <li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: the parameter name equals x-trace-id and the parameter value wildcard matches Bearer *.</li>.
+                     * 获取Expression of the specific field to skip, which must comply with the expression grammar.<br />
+Condition supports expression configuration syntax: <li> Write the filter condition expression syntax based on the rule, with support for referencing key and value.</li><li> Support in and like operators, and logical combination with and.</li>
+For example: <li>${key} in ['x-trace-id']: The parameter name is equal to x-trace-id.</li><li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: The parameter name is equal to x-trace-id and the parameter value wildcard matches Bearer *.</li>
+                     * @return Condition Expression of the specific field to skip, which must comply with the expression grammar.<br />
+Condition supports expression configuration syntax: <li> Write the filter condition expression syntax based on the rule, with support for referencing key and value.</li><li> Support in and like operators, and logical combination with and.</li>
+For example: <li>${key} in ['x-trace-id']: The parameter name is equal to x-trace-id.</li><li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: The parameter name is equal to x-trace-id and the parameter value wildcard matches Bearer *.</li>
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Skip specific field expression must comply with expression grammar.
-Condition supports expression configuration syntax: <li> write according to the matching conditional expression syntax of rules, with support for referencing key and value.</li> <li> supports in, like operators, and logical combination with and.</li>.
-For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.</li> <li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: the parameter name equals x-trace-id and the parameter value wildcard matches Bearer *.</li>.
-                     * @param _condition Skip specific field expression must comply with expression grammar.
-Condition supports expression configuration syntax: <li> write according to the matching conditional expression syntax of rules, with support for referencing key and value.</li> <li> supports in, like operators, and logical combination with and.</li>.
-For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.</li> <li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: the parameter name equals x-trace-id and the parameter value wildcard matches Bearer *.</li>.
+                     * 设置Expression of the specific field to skip, which must comply with the expression grammar.<br />
+Condition supports expression configuration syntax: <li> Write the filter condition expression syntax based on the rule, with support for referencing key and value.</li><li> Support in and like operators, and logical combination with and.</li>
+For example: <li>${key} in ['x-trace-id']: The parameter name is equal to x-trace-id.</li><li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: The parameter name is equal to x-trace-id and the parameter value wildcard matches Bearer *.</li>
+                     * @param _condition Expression of the specific field to skip, which must comply with the expression grammar.<br />
+Condition supports expression configuration syntax: <li> Write the filter condition expression syntax based on the rule, with support for referencing key and value.</li><li> Support in and like operators, and logical combination with and.</li>
+For example: <li>${key} in ['x-trace-id']: The parameter name is equal to x-trace-id.</li><li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: The parameter name is equal to x-trace-id and the parameter value wildcard matches Bearer *.</li>
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -121,39 +121,39 @@ For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取The Scope parameter takes different values. the TargetField expression supports the following values:.
-<Li> body.json: supports key, value.</li>.
-<li>cookie: supports key and value.</li>.
-<li>header: supports key, value</li>.
-<Li> uri.query: supports key and value</li>.
-<li>uri. specifies path, query, or fullpath.</li>.
-<Li>Body: supports fullbody and multipart.</li>.
-                     * @return TargetField The Scope parameter takes different values. the TargetField expression supports the following values:.
-<Li> body.json: supports key, value.</li>.
-<li>cookie: supports key and value.</li>.
-<li>header: supports key, value</li>.
-<Li> uri.query: supports key and value</li>.
-<li>uri. specifies path, query, or fullpath.</li>.
-<Li>Body: supports fullbody and multipart.</li>.
+                     * 获取When the Scope parameter takes different values, the supported values in the TargetField expression are as follows:
+<li> body.json: supports key and value</li>
+<li> cookie: supports key and value</li>
+<li> header: supports key and value</li>
+<li> uri.query: supports key and value</li>
+<li> uri: supports path, query, and fullpath</li>
+<li> body: supports fullbody and multipart</li>
+                     * @return TargetField When the Scope parameter takes different values, the supported values in the TargetField expression are as follows:
+<li> body.json: supports key and value</li>
+<li> cookie: supports key and value</li>
+<li> header: supports key and value</li>
+<li> uri.query: supports key and value</li>
+<li> uri: supports path, query, and fullpath</li>
+<li> body: supports fullbody and multipart</li>
                      * 
                      */
                     std::string GetTargetField() const;
 
                     /**
-                     * 设置The Scope parameter takes different values. the TargetField expression supports the following values:.
-<Li> body.json: supports key, value.</li>.
-<li>cookie: supports key and value.</li>.
-<li>header: supports key, value</li>.
-<Li> uri.query: supports key and value</li>.
-<li>uri. specifies path, query, or fullpath.</li>.
-<Li>Body: supports fullbody and multipart.</li>.
-                     * @param _targetField The Scope parameter takes different values. the TargetField expression supports the following values:.
-<Li> body.json: supports key, value.</li>.
-<li>cookie: supports key and value.</li>.
-<li>header: supports key, value</li>.
-<Li> uri.query: supports key and value</li>.
-<li>uri. specifies path, query, or fullpath.</li>.
-<Li>Body: supports fullbody and multipart.</li>.
+                     * 设置When the Scope parameter takes different values, the supported values in the TargetField expression are as follows:
+<li> body.json: supports key and value</li>
+<li> cookie: supports key and value</li>
+<li> header: supports key and value</li>
+<li> uri.query: supports key and value</li>
+<li> uri: supports path, query, and fullpath</li>
+<li> body: supports fullbody and multipart</li>
+                     * @param _targetField When the Scope parameter takes different values, the supported values in the TargetField expression are as follows:
+<li> body.json: supports key and value</li>
+<li> cookie: supports key and value</li>
+<li> header: supports key and value</li>
+<li> uri.query: supports key and value</li>
+<li> uri: supports path, query, and fullpath</li>
+<li> body: supports fullbody and multipart</li>
                      * 
                      */
                     void SetTargetField(const std::string& _targetField);
@@ -168,33 +168,33 @@ For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.
                 private:
 
                     /**
-                     * Skip specific field. supported values:.
-<li>body.json: parameter content in json requests. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "body.json", "Condition": "", "TargetField": "key" }, which means all parameters in json requests skip WAF scan.</li>.
-<li style="margin-top:5px">cookie: cookie; at this point Condition supports key, value, TargetField supports key, value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>.
-<li style="margin-top:5px">header: HTTP header parameters. at this point, Condition supports key and value, TargetField supports key and value, for example { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" }, which means header parameter name wildcard match x-auth-* skips WAF scan.</li>.
-<li style="margin-top:5px">uri.query: URL encoding content/query parameter. at this point, Condition supports key and value, TargetField supports key and value. example: { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" }. indicates URL encoding content/query parameter name equal to action and parameter value equal to upload or delete skips WAF scan.</li>.
-<li style="margin-top:5px">uri: specifies the request path uri. at this point, Condition must be empty. TargetField supports query, path, fullpath, such as {"Scope": "uri", "Condition": "", "TargetField": "query"}, indicates the request path uri skips WAF scan for query parameters.</li>.
-<li style="margin-top:5px">body: request body content. at this point Condition must be empty, TargetField supports fullbody, multipart, such as { "Scope": "body", "Condition": "", "TargetField": "fullbody" }, which means the request body content skips WAF scan as a full request.</li>.
+                     * Specific fields to skip. Supported values: <br/>
+<li>body.json: parameter content in JSON requests. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "body.json", "Condition": "", "TargetField": "key" } means ALL parameters in the JSON request content skip WAF scan.</li>
+<li style="margin-top:5px">cookie: Cookie; at this point, Condition supports key and value, and TargetField supports key and value, for example { "Scope": "cookie", "Condition": "${key} in ['account-id'] and ${value} like ['prefix-*']", "TargetField": "value" }, which means the cookie parameter name equals account-id and the parameter value wildcard matches prefix-* to skip WAF scan;</li>
+<li style="margin-top:5px">header: HTTP header parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "header", "Condition": "${key} like ['x-auth-*']", "TargetField": "value" } means the header parameter name wildcard match x-auth-* skips WAF scan.</li>
+<li style="margin-top:5px">uri.query: URL-encoded content/query parameters. At this point, Condition supports key and value, and TargetField supports key and value. For example, { "Scope": "uri.query", "Condition": "${key} in ['action'] and ${value} in ['upload', 'delete']", "TargetField": "value" } means the parameter name of the URL-encoded content/query parameters is equal to action and the parameter value is equal to upload or delete, skip WAF scan;</li>
+<li style="margin-top:5px">uri: request path URI. At this point, Condition must be empty, and TargetField supports query, path, and fullpath. For example, { "Scope": "uri", "Condition": "", "TargetField": "query" } means only query parameters in the request path URI skip WAF scan.</li>
+<li style="margin-top:5px">body: request body content. At this point, Condition must be empty, and TargetField supports fullbody and multipart, for example { "Scope": "body",  "Condition": "", "TargetField": "fullbody" }, which means the request body content is the complete request body and skips WAF scan;</li>
                      */
                     std::string m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * Skip specific field expression must comply with expression grammar.
-Condition supports expression configuration syntax: <li> write according to the matching conditional expression syntax of rules, with support for referencing key and value.</li> <li> supports in, like operators, and logical combination with and.</li>.
-For example: <li>${key} in ['x-trace-id']: the parameter name equals x-trace-id.</li> <li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: the parameter name equals x-trace-id and the parameter value wildcard matches Bearer *.</li>.
+                     * Expression of the specific field to skip, which must comply with the expression grammar.<br />
+Condition supports expression configuration syntax: <li> Write the filter condition expression syntax based on the rule, with support for referencing key and value.</li><li> Support in and like operators, and logical combination with and.</li>
+For example: <li>${key} in ['x-trace-id']: The parameter name is equal to x-trace-id.</li><li>${key} in ['x-trace-id'] and ${value} like ['Bearer *']: The parameter name is equal to x-trace-id and the parameter value wildcard matches Bearer *.</li>
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * The Scope parameter takes different values. the TargetField expression supports the following values:.
-<Li> body.json: supports key, value.</li>.
-<li>cookie: supports key and value.</li>.
-<li>header: supports key, value</li>.
-<Li> uri.query: supports key and value</li>.
-<li>uri. specifies path, query, or fullpath.</li>.
-<Li>Body: supports fullbody and multipart.</li>.
+                     * When the Scope parameter takes different values, the supported values in the TargetField expression are as follows:
+<li> body.json: supports key and value</li>
+<li> cookie: supports key and value</li>
+<li> header: supports key and value</li>
+<li> uri.query: supports key and value</li>
+<li> uri: supports path, query, and fullpath</li>
+<li> body: supports fullbody and multipart</li>
                      */
                     std::string m_targetField;
                     bool m_targetFieldHasBeenSet;

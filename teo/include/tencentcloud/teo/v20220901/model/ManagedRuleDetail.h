@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Managed rule detail.
+                * Details of managed rules
                 */
                 class ManagedRuleDetail : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
-                     * @return RiskLevel Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
+                     * 获取Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
+                     * @return RiskLevel Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
-                     * @param _riskLevel Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
+                     * 设置Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
+                     * @param _riskLevel Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Protection level of managed rules. Values: <li>`low`: low risk, this rule has a relatively low risk and is applicable to very strict access scenarios, this level of rule may generate considerable false alarms.</li> <li>`medium`: medium risk, this means the risk of this rule is normal and is suitable for protection scenarios with stricter requirements.</li> <li>`high`: high risk, this indicates that the risk of this rule is relatively high and will not generate false alarms in most scenarios.</li> <li>`extreme`: ultra-high risk. this represents that the risk of this rule is extremely high and will not generate false alarms basically.</li>.
+                     * Protection level of the managed rule. Valid values: <li>low: low risk. This rule has lower risk and is suitable for access scenarios in very strict control environments. Rules at this level may cause considerable false alarms;</li><li>medium: medium-risk. This rule has normal risk and is suitable for strict protection scenarios;</li><li>high: high-risk. This rule has relatively high risk and will not generate false alarms in most scenarios;</li><li>extreme: ultra-high risk. This rule has extremely high risk and basically will not generate false alarms;</li>
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;

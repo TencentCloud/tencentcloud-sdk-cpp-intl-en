@@ -24,8 +24,9 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/DeviceProfile.h>
 #include <tencentcloud/teo/v20220901/model/SecurityAction.h>
+#include <tencentcloud/teo/v20220901/model/DeviceProfile.h>
+#include <tencentcloud/teo/v20220901/model/AccountProtectionSettings.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Client authentication rule.
+                * Client authentication rules
                 */
                 class ClientAttestationRule : public AbstractModel
                 {
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
-                     * @return Id Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+                     * 获取<p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
+                     * @return Id <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
-                     * @param _id Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+                     * 设置<p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
+                     * @param _id <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -70,15 +71,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the name of the client authentication rule.
-                     * @return Name Specifies the name of the client authentication rule.
+                     * 获取<p>Name of the client authentication rule.</p>
+                     * @return Name <p>Name of the client authentication rule.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the name of the client authentication rule.
-                     * @param _name Specifies the name of the client authentication rule.
+                     * 设置<p>Name of the client authentication rule.</p>
+                     * @param _name <p>Name of the client authentication rule.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,15 +92,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-                     * @return Enabled Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * 获取<p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+                     * @return Enabled <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-                     * @param _enabled Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * 设置<p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+                     * @param _enabled <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -112,15 +113,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
-                     * @return Priority Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+                     * 获取<p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
+                     * @return Priority <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetPriority() const;
 
                     /**
-                     * 设置Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
-                     * @param _priority Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+                     * 设置<p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
+                     * @param _priority <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
                      * 
                      */
                     void SetPriority(const uint64_t& _priority);
@@ -133,15 +134,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取The rule content must comply with expression grammar. for details, see the product document.
-                     * @return Condition The rule content must comply with expression grammar. for details, see the product document.
+                     * 获取<p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
+                     * @return Condition <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置The rule content must comply with expression grammar. for details, see the product document.
-                     * @param _condition The rule content must comply with expression grammar. for details, see the product document.
+                     * 设置<p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
+                     * @param _condition <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -154,15 +155,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the client authentication option ID.
-                     * @return AttesterId Specifies the client authentication option ID.
+                     * 获取<p>Client authentication option ID.</p>
+                     * @return AttesterId <p>Client authentication option ID.</p>
                      * 
                      */
                     std::string GetAttesterId() const;
 
                     /**
-                     * 设置Specifies the client authentication option ID.
-                     * @param _attesterId Specifies the client authentication option ID.
+                     * 设置<p>Client authentication option ID.</p>
+                     * @param _attesterId <p>Client authentication option ID.</p>
                      * 
                      */
                     void SetAttesterId(const std::string& _attesterId);
@@ -175,15 +176,36 @@ namespace TencentCloud
                     bool AttesterIdHasBeenSet() const;
 
                     /**
-                     * 获取Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-                     * @return DeviceProfiles Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
+                     * 获取<p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     * @return InvalidAttestationAction <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     * 
+                     */
+                    SecurityAction GetInvalidAttestationAction() const;
+
+                    /**
+                     * 设置<p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     * @param _invalidAttestationAction <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     * 
+                     */
+                    void SetInvalidAttestationAction(const SecurityAction& _invalidAttestationAction);
+
+                    /**
+                     * 判断参数 InvalidAttestationAction 是否已赋值
+                     * @return InvalidAttestationAction 是否已赋值
+                     * 
+                     */
+                    bool InvalidAttestationActionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+                     * @return DeviceProfiles <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
                      * 
                      */
                     std::vector<DeviceProfile> GetDeviceProfiles() const;
 
                     /**
-                     * 设置Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-                     * @param _deviceProfiles Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
+                     * 设置<p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+                     * @param _deviceProfiles <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
                      * 
                      */
                     void SetDeviceProfiles(const std::vector<DeviceProfile>& _deviceProfiles);
@@ -196,75 +218,81 @@ namespace TencentCloud
                     bool DeviceProfilesHasBeenSet() const;
 
                     /**
-                     * 获取Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
-                     * @return InvalidAttestationAction Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+                     * 获取<p>Account protection configuration.</p>
+                     * @return AccountProtectionSettings <p>Account protection configuration.</p>
                      * 
                      */
-                    SecurityAction GetInvalidAttestationAction() const;
+                    AccountProtectionSettings GetAccountProtectionSettings() const;
 
                     /**
-                     * 设置Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
-                     * @param _invalidAttestationAction Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+                     * 设置<p>Account protection configuration.</p>
+                     * @param _accountProtectionSettings <p>Account protection configuration.</p>
                      * 
                      */
-                    void SetInvalidAttestationAction(const SecurityAction& _invalidAttestationAction);
+                    void SetAccountProtectionSettings(const AccountProtectionSettings& _accountProtectionSettings);
 
                     /**
-                     * 判断参数 InvalidAttestationAction 是否已赋值
-                     * @return InvalidAttestationAction 是否已赋值
+                     * 判断参数 AccountProtectionSettings 是否已赋值
+                     * @return AccountProtectionSettings 是否已赋值
                      * 
                      */
-                    bool InvalidAttestationActionHasBeenSet() const;
+                    bool AccountProtectionSettingsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+                     * <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Specifies the name of the client authentication rule.
+                     * <p>Name of the client authentication rule.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+                     * <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
                      */
                     uint64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * The rule content must comply with expression grammar. for details, see the product document.
+                     * <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * Specifies the client authentication option ID.
+                     * <p>Client authentication option ID.</p>
                      */
                     std::string m_attesterId;
                     bool m_attesterIdHasBeenSet;
 
                     /**
-                     * Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
+                     * <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+                     */
+                    SecurityAction m_invalidAttestationAction;
+                    bool m_invalidAttestationActionHasBeenSet;
+
+                    /**
+                     * <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
                      */
                     std::vector<DeviceProfile> m_deviceProfiles;
                     bool m_deviceProfilesHasBeenSet;
 
                     /**
-                     * Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+                     * <p>Account protection configuration.</p>
                      */
-                    SecurityAction m_invalidAttestationAction;
-                    bool m_invalidAttestationActionHasBeenSet;
+                    AccountProtectionSettings m_accountProtectionSettings;
+                    bool m_accountProtectionSettingsHasBeenSet;
 
                 };
             }

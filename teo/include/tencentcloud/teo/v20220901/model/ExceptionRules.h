@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Web security exception rules.
+                * Exception rule for Web security
                 */
                 class ExceptionRules : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
-                     * @return Rules Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+                     * 获取Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
+                     * @return Rules Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
                      * 
                      */
                     std::vector<ExceptionRule> GetRules() const;
 
                     /**
-                     * 设置Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
-                     * @param _rules Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+                     * 设置Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
+                     * @param _rules Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
                      * 
                      */
                     void SetRules(const std::vector<ExceptionRule>& _rules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+                     * Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
                      */
                     std::vector<ExceptionRule> m_rules;
                     bool m_rulesHasBeenSet;

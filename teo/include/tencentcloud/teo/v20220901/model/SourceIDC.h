@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the specific content of IDC rule configuration.
+                * Specific content of the IDC rule configuration.
                 */
                 class SourceIDC : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-                     * @return BaseAction Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * 获取Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+                     * @return BaseAction Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
                      * 
                      */
                     SecurityAction GetBaseAction() const;
 
                     /**
-                     * 设置Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-                     * @param _baseAction Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * 设置Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+                     * @param _baseAction Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
                      * 
                      */
                     void SetBaseAction(const SecurityAction& _baseAction);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool BaseActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the handling method for the specified id request.
-                     * @return BotManagementActionOverrides Specifies the handling method for the specified id request.
+                     * 获取Handling method for the request from the specified IDC.
+                     * @return BotManagementActionOverrides Handling method for the request from the specified IDC.
                      * 
                      */
                     std::vector<BotManagementActionOverrides> GetBotManagementActionOverrides() const;
 
                     /**
-                     * 设置Specifies the handling method for the specified id request.
-                     * @param _botManagementActionOverrides Specifies the handling method for the specified id request.
+                     * 设置Handling method for the request from the specified IDC.
+                     * @param _botManagementActionOverrides Handling method for the request from the specified IDC.
                      * 
                      */
                     void SetBotManagementActionOverrides(const std::vector<BotManagementActionOverrides>& _botManagementActionOverrides);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
                      */
                     SecurityAction m_baseAction;
                     bool m_baseActionHasBeenSet;
 
                     /**
-                     * Specifies the handling method for the specified id request.
+                     * Handling method for the request from the specified IDC.
                      */
                     std::vector<BotManagementActionOverrides> m_botManagementActionOverrides;
                     bool m_botManagementActionOverridesHasBeenSet;

@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the specific configuration of adaptive frequency control.
-                     * @return AdaptiveFrequencyControl Specifies the specific configuration of adaptive frequency control.
+                     * 获取Specific configuration of adaptive frequency control.
+                     * @return AdaptiveFrequencyControl Specific configuration of adaptive frequency control.
                      * 
                      */
                     AdaptiveFrequencyControl GetAdaptiveFrequencyControl() const;
 
                     /**
-                     * 设置Specifies the specific configuration of adaptive frequency control.
-                     * @param _adaptiveFrequencyControl Specifies the specific configuration of adaptive frequency control.
+                     * 设置Specific configuration of adaptive frequency control.
+                     * @param _adaptiveFrequencyControl Specific configuration of adaptive frequency control.
                      * 
                      */
                     void SetAdaptiveFrequencyControl(const AdaptiveFrequencyControl& _adaptiveFrequencyControl);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool AdaptiveFrequencyControlHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the intelligent client filter configuration.
-                     * @return ClientFiltering Specifies the intelligent client filter configuration.
+                     * 获取Specific configuration for intelligent client filtering.
+                     * @return ClientFiltering Specific configuration for intelligent client filtering.
                      * 
                      */
                     ClientFiltering GetClientFiltering() const;
 
                     /**
-                     * 设置Specifies the intelligent client filter configuration.
-                     * @param _clientFiltering Specifies the intelligent client filter configuration.
+                     * 设置Specific configuration for intelligent client filtering.
+                     * @param _clientFiltering Specific configuration for intelligent client filtering.
                      * 
                      */
                     void SetClientFiltering(const ClientFiltering& _clientFiltering);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool ClientFilteringHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the specific configuration for bandwidth abuse protection.
-                     * @return BandwidthAbuseDefense Specifies the specific configuration for bandwidth abuse protection.
+                     * 获取Bandwidth abuse protection configuration.
+                     * @return BandwidthAbuseDefense Bandwidth abuse protection configuration.
                      * 
                      */
                     BandwidthAbuseDefense GetBandwidthAbuseDefense() const;
 
                     /**
-                     * 设置Specifies the specific configuration for bandwidth abuse protection.
-                     * @param _bandwidthAbuseDefense Specifies the specific configuration for bandwidth abuse protection.
+                     * 设置Bandwidth abuse protection configuration.
+                     * @param _bandwidthAbuseDefense Bandwidth abuse protection configuration.
                      * 
                      */
                     void SetBandwidthAbuseDefense(const BandwidthAbuseDefense& _bandwidthAbuseDefense);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool BandwidthAbuseDefenseHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the configuration of slow attack protection.
-                     * @return SlowAttackDefense Specifies the configuration of slow attack protection.
+                     * 获取Specific configuration of slow attack protection.
+                     * @return SlowAttackDefense Specific configuration of slow attack protection.
                      * 
                      */
                     SlowAttackDefense GetSlowAttackDefense() const;
 
                     /**
-                     * 设置Specifies the configuration of slow attack protection.
-                     * @param _slowAttackDefense Specifies the configuration of slow attack protection.
+                     * 设置Specific configuration of slow attack protection.
+                     * @param _slowAttackDefense Specific configuration of slow attack protection.
                      * 
                      */
                     void SetSlowAttackDefense(const SlowAttackDefense& _slowAttackDefense);
@@ -137,25 +137,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the specific configuration of adaptive frequency control.
+                     * Specific configuration of adaptive frequency control.
                      */
                     AdaptiveFrequencyControl m_adaptiveFrequencyControl;
                     bool m_adaptiveFrequencyControlHasBeenSet;
 
                     /**
-                     * Specifies the intelligent client filter configuration.
+                     * Specific configuration for intelligent client filtering.
                      */
                     ClientFiltering m_clientFiltering;
                     bool m_clientFilteringHasBeenSet;
 
                     /**
-                     * Specifies the specific configuration for bandwidth abuse protection.
+                     * Bandwidth abuse protection configuration.
                      */
                     BandwidthAbuseDefense m_bandwidthAbuseDefense;
                     bool m_bandwidthAbuseDefenseHasBeenSet;
 
                     /**
-                     * Specifies the configuration of slow attack protection.
+                     * Specific configuration of slow attack protection.
                      */
                     SlowAttackDefense m_slowAttackDefense;
                     bool m_slowAttackDefenseHasBeenSet;

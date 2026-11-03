@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Client behavior validation.
+                * Client behavior validation
                 */
                 class ClientBehaviorDetection : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the proof-of-work strength. valid values: <li>low: low;</li><li>medium: medium;</li><li>high: high.</li>.
-                     * @return CryptoChallengeIntensity Specifies the proof-of-work strength. valid values: <li>low: low;</li><li>medium: medium;</li><li>high: high.</li>.
+                     * 获取Proof-of-work strength. Valid values: <li>low: Low;</li><li>medium: Medium;</li><li>high: High.</li>
+                     * @return CryptoChallengeIntensity Proof-of-work strength. Valid values: <li>low: Low;</li><li>medium: Medium;</li><li>high: High.</li>
                      * 
                      */
                     std::string GetCryptoChallengeIntensity() const;
 
                     /**
-                     * 设置Specifies the proof-of-work strength. valid values: <li>low: low;</li><li>medium: medium;</li><li>high: high.</li>.
-                     * @param _cryptoChallengeIntensity Specifies the proof-of-work strength. valid values: <li>low: low;</li><li>medium: medium;</li><li>high: high.</li>.
+                     * 设置Proof-of-work strength. Valid values: <li>low: Low;</li><li>medium: Medium;</li><li>high: High.</li>
+                     * @param _cryptoChallengeIntensity Proof-of-work strength. Valid values: <li>low: Low;</li><li>medium: Medium;</li><li>high: High.</li>
                      * 
                      */
                     void SetCryptoChallengeIntensity(const std::string& _cryptoChallengeIntensity);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool CryptoChallengeIntensityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the execution mode for client behavior verification. valid values: <li>0ms: immediate execution;</li> <li>100ms: delay 100ms execution;</li> <li>200ms: delay 200ms execution;</li> <li>300ms: delay 300ms execution;</li> <li>400ms: delay 400ms execution;</li> <li>500ms: delay 500ms execution;</li> <li>600ms: delay 600ms execution;</li> <li>700ms: delay 700ms execution;</li> <li>800ms: delay 800ms execution;</li> <li>900ms: delay 900ms execution;</li> <li>1000ms: delay 1000ms execution.</li>.
-                     * @return CryptoChallengeDelayBefore Specifies the execution mode for client behavior verification. valid values: <li>0ms: immediate execution;</li> <li>100ms: delay 100ms execution;</li> <li>200ms: delay 200ms execution;</li> <li>300ms: delay 300ms execution;</li> <li>400ms: delay 400ms execution;</li> <li>500ms: delay 500ms execution;</li> <li>600ms: delay 600ms execution;</li> <li>700ms: delay 700ms execution;</li> <li>800ms: delay 800ms execution;</li> <li>900ms: delay 900ms execution;</li> <li>1000ms: delay 1000ms execution.</li>.
+                     * 获取Execution mode of client behavior validation. Valid values: <li>0ms: immediately execute;</li><li>100ms: execute after a 100ms delay;</li><li>200ms: execute after a 200ms delay;</li><li>300ms: execute after a 300ms delay;</li><li>400ms: execute after a 400ms delay;</li><li>500ms: execute after a 500ms delay;</li><li>600ms: execute after a 600ms delay;</li><li>700ms: execute after a 700ms delay;</li><li>800ms: execute after an 800ms delay;</li><li>900ms: execute after a 900ms delay;</li><li>1000ms: execute after a 1000ms delay.</li>
+                     * @return CryptoChallengeDelayBefore Execution mode of client behavior validation. Valid values: <li>0ms: immediately execute;</li><li>100ms: execute after a 100ms delay;</li><li>200ms: execute after a 200ms delay;</li><li>300ms: execute after a 300ms delay;</li><li>400ms: execute after a 400ms delay;</li><li>500ms: execute after a 500ms delay;</li><li>600ms: execute after a 600ms delay;</li><li>700ms: execute after a 700ms delay;</li><li>800ms: execute after an 800ms delay;</li><li>900ms: execute after a 900ms delay;</li><li>1000ms: execute after a 1000ms delay.</li>
                      * 
                      */
                     std::string GetCryptoChallengeDelayBefore() const;
 
                     /**
-                     * 设置Specifies the execution mode for client behavior verification. valid values: <li>0ms: immediate execution;</li> <li>100ms: delay 100ms execution;</li> <li>200ms: delay 200ms execution;</li> <li>300ms: delay 300ms execution;</li> <li>400ms: delay 400ms execution;</li> <li>500ms: delay 500ms execution;</li> <li>600ms: delay 600ms execution;</li> <li>700ms: delay 700ms execution;</li> <li>800ms: delay 800ms execution;</li> <li>900ms: delay 900ms execution;</li> <li>1000ms: delay 1000ms execution.</li>.
-                     * @param _cryptoChallengeDelayBefore Specifies the execution mode for client behavior verification. valid values: <li>0ms: immediate execution;</li> <li>100ms: delay 100ms execution;</li> <li>200ms: delay 200ms execution;</li> <li>300ms: delay 300ms execution;</li> <li>400ms: delay 400ms execution;</li> <li>500ms: delay 500ms execution;</li> <li>600ms: delay 600ms execution;</li> <li>700ms: delay 700ms execution;</li> <li>800ms: delay 800ms execution;</li> <li>900ms: delay 900ms execution;</li> <li>1000ms: delay 1000ms execution.</li>.
+                     * 设置Execution mode of client behavior validation. Valid values: <li>0ms: immediately execute;</li><li>100ms: execute after a 100ms delay;</li><li>200ms: execute after a 200ms delay;</li><li>300ms: execute after a 300ms delay;</li><li>400ms: execute after a 400ms delay;</li><li>500ms: execute after a 500ms delay;</li><li>600ms: execute after a 600ms delay;</li><li>700ms: execute after a 700ms delay;</li><li>800ms: execute after an 800ms delay;</li><li>900ms: execute after a 900ms delay;</li><li>1000ms: execute after a 1000ms delay.</li>
+                     * @param _cryptoChallengeDelayBefore Execution mode of client behavior validation. Valid values: <li>0ms: immediately execute;</li><li>100ms: execute after a 100ms delay;</li><li>200ms: execute after a 200ms delay;</li><li>300ms: execute after a 300ms delay;</li><li>400ms: execute after a 400ms delay;</li><li>500ms: execute after a 500ms delay;</li><li>600ms: execute after a 600ms delay;</li><li>700ms: execute after a 700ms delay;</li><li>800ms: execute after an 800ms delay;</li><li>900ms: execute after a 900ms delay;</li><li>1000ms: execute after a 1000ms delay.</li>
                      * 
                      */
                     void SetCryptoChallengeDelayBefore(const std::string& _cryptoChallengeDelayBefore);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CryptoChallengeDelayBeforeHasBeenSet() const;
 
                     /**
-                     * 获取Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
-                     * @return MaxChallengeCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+                     * 获取Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+                     * @return MaxChallengeCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
                      * 
                      */
                     std::string GetMaxChallengeCountInterval() const;
 
                     /**
-                     * 设置Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
-                     * @param _maxChallengeCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+                     * 设置Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+                     * @param _maxChallengeCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
                      * 
                      */
                     void SetMaxChallengeCountInterval(const std::string& _maxChallengeCountInterval);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MaxChallengeCountIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Trigger threshold cumulative count. value range: 1-100000000.
-                     * @return MaxChallengeCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+                     * 获取Cumulative count of trigger threshold statistics. Value range: 1-100000000.
+                     * @return MaxChallengeCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
                      * 
                      */
                     int64_t GetMaxChallengeCountThreshold() const;
 
                     /**
-                     * 设置Trigger threshold cumulative count. value range: 1-100000000.
-                     * @param _maxChallengeCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+                     * 设置Cumulative count of trigger threshold statistics. Value range: 1-100000000.
+                     * @param _maxChallengeCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
                      * 
                      */
                     void SetMaxChallengeCountThreshold(const int64_t& _maxChallengeCountThreshold);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MaxChallengeCountThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Execution action when client-side javascript is not enabled (test not completed). valid values for SecurityAction Name: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>.
-                     * @return ChallengeNotFinishedAction Execution action when client-side javascript is not enabled (test not completed). valid values for SecurityAction Name: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>.
+                     * 获取Execution action when client-side JavaScript is not enabled (test not completed). Supported values for SecurityAction Name: <li>Deny: block. DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+                     * @return ChallengeNotFinishedAction Execution action when client-side JavaScript is not enabled (test not completed). Supported values for SecurityAction Name: <li>Deny: block. DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      * 
                      */
                     SecurityAction GetChallengeNotFinishedAction() const;
 
                     /**
-                     * 设置Execution action when client-side javascript is not enabled (test not completed). valid values for SecurityAction Name: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>.
-                     * @param _challengeNotFinishedAction Execution action when client-side javascript is not enabled (test not completed). valid values for SecurityAction Name: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>.
+                     * 设置Execution action when client-side JavaScript is not enabled (test not completed). Supported values for SecurityAction Name: <li>Deny: block. DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+                     * @param _challengeNotFinishedAction Execution action when client-side JavaScript is not enabled (test not completed). Supported values for SecurityAction Name: <li>Deny: block. DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      * 
                      */
                     void SetChallengeNotFinishedAction(const SecurityAction& _challengeNotFinishedAction);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ChallengeNotFinishedActionHasBeenSet() const;
 
                     /**
-                     * 获取The execution action for client-side detection timeout. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li> <li>Monitor: observe;</li> <li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
-                     * @return ChallengeTimeoutAction The execution action for client-side detection timeout. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li> <li>Monitor: observe;</li> <li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+                     * 获取Execution action for client-side detection timeout. Supported values of SecurityAction Name: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+                     * @return ChallengeTimeoutAction Execution action for client-side detection timeout. Supported values of SecurityAction Name: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      * 
                      */
                     SecurityAction GetChallengeTimeoutAction() const;
 
                     /**
-                     * 设置The execution action for client-side detection timeout. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li> <li>Monitor: observe;</li> <li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
-                     * @param _challengeTimeoutAction The execution action for client-side detection timeout. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li> <li>Monitor: observe;</li> <li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+                     * 设置Execution action for client-side detection timeout. Supported values of SecurityAction Name: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+                     * @param _challengeTimeoutAction Execution action for client-side detection timeout. Supported values of SecurityAction Name: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      * 
                      */
                     void SetChallengeTimeoutAction(const SecurityAction& _challengeTimeoutAction);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ChallengeTimeoutActionHasBeenSet() const;
 
                     /**
-                     * 获取The execution action of the Bot client. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observation;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime configurations are required in AllowActionParameters.</li>.
-                     * @return BotClientAction The execution action of the Bot client. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observation;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime configurations are required in AllowActionParameters.</li>.
+                     * 获取Execution action of the Bot client. Supported values of Name in SecurityAction: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>
+                     * @return BotClientAction Execution action of the Bot client. Supported values of Name in SecurityAction: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>
                      * 
                      */
                     SecurityAction GetBotClientAction() const;
 
                     /**
-                     * 设置The execution action of the Bot client. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observation;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime configurations are required in AllowActionParameters.</li>.
-                     * @param _botClientAction The execution action of the Bot client. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observation;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime configurations are required in AllowActionParameters.</li>.
+                     * 设置Execution action of the Bot client. Supported values of Name in SecurityAction: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>
+                     * @param _botClientAction Execution action of the Bot client. Supported values of Name in SecurityAction: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>
                      * 
                      */
                     void SetBotClientAction(const SecurityAction& _botClientAction);
@@ -197,43 +197,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the proof-of-work strength. valid values: <li>low: low;</li><li>medium: medium;</li><li>high: high.</li>.
+                     * Proof-of-work strength. Valid values: <li>low: Low;</li><li>medium: Medium;</li><li>high: High.</li>
                      */
                     std::string m_cryptoChallengeIntensity;
                     bool m_cryptoChallengeIntensityHasBeenSet;
 
                     /**
-                     * Specifies the execution mode for client behavior verification. valid values: <li>0ms: immediate execution;</li> <li>100ms: delay 100ms execution;</li> <li>200ms: delay 200ms execution;</li> <li>300ms: delay 300ms execution;</li> <li>400ms: delay 400ms execution;</li> <li>500ms: delay 500ms execution;</li> <li>600ms: delay 600ms execution;</li> <li>700ms: delay 700ms execution;</li> <li>800ms: delay 800ms execution;</li> <li>900ms: delay 900ms execution;</li> <li>1000ms: delay 1000ms execution.</li>.
+                     * Execution mode of client behavior validation. Valid values: <li>0ms: immediately execute;</li><li>100ms: execute after a 100ms delay;</li><li>200ms: execute after a 200ms delay;</li><li>300ms: execute after a 300ms delay;</li><li>400ms: execute after a 400ms delay;</li><li>500ms: execute after a 500ms delay;</li><li>600ms: execute after a 600ms delay;</li><li>700ms: execute after a 700ms delay;</li><li>800ms: execute after an 800ms delay;</li><li>900ms: execute after a 900ms delay;</li><li>1000ms: execute after a 1000ms delay.</li>
                      */
                     std::string m_cryptoChallengeDelayBefore;
                     bool m_cryptoChallengeDelayBeforeHasBeenSet;
 
                     /**
-                     * Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+                     * Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
                      */
                     std::string m_maxChallengeCountInterval;
                     bool m_maxChallengeCountIntervalHasBeenSet;
 
                     /**
-                     * Trigger threshold cumulative count. value range: 1-100000000.
+                     * Cumulative count of trigger threshold statistics. Value range: 1-100000000.
                      */
                     int64_t m_maxChallengeCountThreshold;
                     bool m_maxChallengeCountThresholdHasBeenSet;
 
                     /**
-                     * Execution action when client-side javascript is not enabled (test not completed). valid values for SecurityAction Name: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>.
+                     * Execution action when client-side JavaScript is not enabled (test not completed). Supported values for SecurityAction Name: <li>Deny: block. DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      */
                     SecurityAction m_challengeNotFinishedAction;
                     bool m_challengeNotFinishedActionHasBeenSet;
 
                     /**
-                     * The execution action for client-side detection timeout. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li> <li>Monitor: observe;</li> <li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+                     * Execution action for client-side detection timeout. Supported values of SecurityAction Name: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      */
                     SecurityAction m_challengeTimeoutAction;
                     bool m_challengeTimeoutActionHasBeenSet;
 
                     /**
-                     * The execution action of the Bot client. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observation;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime configurations are required in AllowActionParameters.</li>.
+                     * Execution action of the Bot client. Supported values of Name in SecurityAction: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>
                      */
                     SecurityAction m_botClientAction;
                     bool m_botClientActionHasBeenSet;

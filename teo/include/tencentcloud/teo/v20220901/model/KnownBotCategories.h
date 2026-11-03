@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Commercial or open-source tool UA feature configuration (formerly UA feature rule).
+                * UA feature configuration for commercial or open-source tools (formerly UA feature rule).
                 */
                 class KnownBotCategories : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-                     * @return BaseAction Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * 获取Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
+                     * @return BaseAction Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
                      * 
                      */
                     SecurityAction GetBaseAction() const;
 
                     /**
-                     * 设置Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-                     * @param _baseAction Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * 设置Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
+                     * @param _baseAction Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
                      * 
                      */
                     void SetBaseAction(const SecurityAction& _baseAction);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool BaseActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the handling method for access requests from known commercial tools or open-source tools.
-                     * @return BotManagementActionOverrides Specifies the handling method for access requests from known commercial tools or open-source tools.
+                     * 获取Specify the handling method for access requests from known commercial or open-source tools.
+                     * @return BotManagementActionOverrides Specify the handling method for access requests from known commercial or open-source tools.
                      * 
                      */
                     std::vector<BotManagementActionOverrides> GetBotManagementActionOverrides() const;
 
                     /**
-                     * 设置Specifies the handling method for access requests from known commercial tools or open-source tools.
-                     * @param _botManagementActionOverrides Specifies the handling method for access requests from known commercial tools or open-source tools.
+                     * 设置Specify the handling method for access requests from known commercial or open-source tools.
+                     * @param _botManagementActionOverrides Specify the handling method for access requests from known commercial or open-source tools.
                      * 
                      */
                     void SetBotManagementActionOverrides(const std::vector<BotManagementActionOverrides>& _botManagementActionOverrides);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
                      */
                     SecurityAction m_baseAction;
                     bool m_baseActionHasBeenSet;
 
                     /**
-                     * Specifies the handling method for access requests from known commercial tools or open-source tools.
+                     * Specify the handling method for access requests from known commercial or open-source tools.
                      */
                     std::vector<BotManagementActionOverrides> m_botManagementActionOverrides;
                     bool m_botManagementActionOverridesHasBeenSet;

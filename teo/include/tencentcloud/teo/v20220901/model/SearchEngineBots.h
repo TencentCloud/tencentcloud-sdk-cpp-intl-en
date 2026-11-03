@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configures rules for the search engine.
+                * Search engine rule configuration.
                 */
                 class SearchEngineBots : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-                     * @return BaseAction Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * 获取Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+                     * @return BaseAction Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
                      * 
                      */
                     SecurityAction GetBaseAction() const;
 
                     /**
-                     * 设置Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-                     * @param _baseAction Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * 设置Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+                     * @param _baseAction Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
                      * 
                      */
                     void SetBaseAction(const SecurityAction& _baseAction);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool BaseActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the handling method for search engine crawler requests.
-                     * @return BotManagementActionOverrides Specifies the handling method for search engine crawler requests.
+                     * 获取Specify the handling method for search engine crawler requests.
+                     * @return BotManagementActionOverrides Specify the handling method for search engine crawler requests.
                      * 
                      */
                     std::vector<BotManagementActionOverrides> GetBotManagementActionOverrides() const;
 
                     /**
-                     * 设置Specifies the handling method for search engine crawler requests.
-                     * @param _botManagementActionOverrides Specifies the handling method for search engine crawler requests.
+                     * 设置Specify the handling method for search engine crawler requests.
+                     * @param _botManagementActionOverrides Specify the handling method for search engine crawler requests.
                      * 
                      */
                     void SetBotManagementActionOverrides(const std::vector<BotManagementActionOverrides>& _botManagementActionOverrides);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+                     * Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
                      */
                     SecurityAction m_baseAction;
                     bool m_baseActionHasBeenSet;
 
                     /**
-                     * Specifies the handling method for search engine crawler requests.
+                     * Specify the handling method for search engine crawler requests.
                      */
                     std::vector<BotManagementActionOverrides> m_botManagementActionOverrides;
                     bool m_botManagementActionOverridesHasBeenSet;

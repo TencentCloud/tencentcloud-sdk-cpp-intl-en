@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the configuration for Cookie verification and session tracking behavior.
+                * Cookie verification and session tracking behavior configuration.
                 */
                 class BotSessionValidation : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
-                     * @return IssueNewBotSessionCookie Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
+                     * 获取Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
+                     * @return IssueNewBotSessionCookie Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
                      * 
                      */
                     std::string GetIssueNewBotSessionCookie() const;
 
                     /**
-                     * 设置Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
-                     * @param _issueNewBotSessionCookie Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
+                     * 设置Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
+                     * @param _issueNewBotSessionCookie Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
                      * 
                      */
                     void SetIssueNewBotSessionCookie(const std::string& _issueNewBotSessionCookie);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool IssueNewBotSessionCookieHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
-                     * @return MaxNewSessionTriggerConfig Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
+                     * 获取Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
+                     * @return MaxNewSessionTriggerConfig Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
                      * 
                      */
                     MaxNewSessionTriggerConfig GetMaxNewSessionTriggerConfig() const;
 
                     /**
-                     * 设置Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
-                     * @param _maxNewSessionTriggerConfig Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
+                     * 设置Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
+                     * @param _maxNewSessionTriggerConfig Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
                      * 
                      */
                     void SetMaxNewSessionTriggerConfig(const MaxNewSessionTriggerConfig& _maxNewSessionTriggerConfig);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool MaxNewSessionTriggerConfigHasBeenSet() const;
 
                     /**
-                     * 获取Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
-                     * @return SessionExpiredAction Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+                     * 获取Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+                     * @return SessionExpiredAction Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      * 
                      */
                     SecurityAction GetSessionExpiredAction() const;
 
                     /**
-                     * 设置Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
-                     * @param _sessionExpiredAction Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+                     * 设置Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
+                     * @param _sessionExpiredAction Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      * 
                      */
                     void SetSessionExpiredAction(const SecurityAction& _sessionExpiredAction);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool SessionExpiredActionHasBeenSet() const;
 
                     /**
-                     * 获取Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
-                     * @return SessionInvalidAction Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+                     * 获取Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
+                     * @return SessionInvalidAction Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
                      * 
                      */
                     SecurityAction GetSessionInvalidAction() const;
 
                     /**
-                     * 设置Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
-                     * @param _sessionInvalidAction Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+                     * 设置Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
+                     * @param _sessionInvalidAction Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
                      * 
                      */
                     void SetSessionInvalidAction(const SecurityAction& _sessionInvalidAction);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool SessionInvalidActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the session rate and periodic feature verification configuration.
-                     * @return SessionRateControl Specifies the session rate and periodic feature verification configuration.
+                     * 获取Specific configuration for session rate and periodic feature verification.
+                     * @return SessionRateControl Specific configuration for session rate and periodic feature verification.
                      * 
                      */
                     SessionRateControl GetSessionRateControl() const;
 
                     /**
-                     * 设置Specifies the session rate and periodic feature verification configuration.
-                     * @param _sessionRateControl Specifies the session rate and periodic feature verification configuration.
+                     * 设置Specific configuration for session rate and periodic feature verification.
+                     * @param _sessionRateControl Specific configuration for session rate and periodic feature verification.
                      * 
                      */
                     void SetSessionRateControl(const SessionRateControl& _sessionRateControl);
@@ -157,31 +157,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
+                     * Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
                      */
                     std::string m_issueNewBotSessionCookie;
                     bool m_issueNewBotSessionCookieHasBeenSet;
 
                     /**
-                     * Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
+                     * Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
                      */
                     MaxNewSessionTriggerConfig m_maxNewSessionTriggerConfig;
                     bool m_maxNewSessionTriggerConfigHasBeenSet;
 
                     /**
-                     * Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+                     * Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
                      */
                     SecurityAction m_sessionExpiredAction;
                     bool m_sessionExpiredActionHasBeenSet;
 
                     /**
-                     * Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+                     * Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
                      */
                     SecurityAction m_sessionInvalidAction;
                     bool m_sessionInvalidActionHasBeenSet;
 
                     /**
-                     * Specifies the session rate and periodic feature verification configuration.
+                     * Specific configuration for session rate and periodic feature verification.
                      */
                     SessionRateControl m_sessionRateControl;
                     bool m_sessionRateControlHasBeenSet;

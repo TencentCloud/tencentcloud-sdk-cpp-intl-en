@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent client filtering.
+                * Intelligent client filtering
                 */
                 class ClientFiltering : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @return Enabled Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 获取Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
+                     * @return Enabled Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @param _enabled Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 设置Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
+                     * @param _enabled Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID of intelligent client filtering, returned as an output parameter.
-                     * @return Id Rule ID of intelligent client filtering, returned as an output parameter.
+                     * 获取Rule ID of intelligent client filtering. Output only.
+                     * @return Id Rule ID of intelligent client filtering. Output only.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Rule ID of intelligent client filtering, returned as an output parameter.
-                     * @param _id Rule ID of intelligent client filtering, returned as an output parameter.
+                     * 设置Rule ID of intelligent client filtering. Output only.
+                     * @param _id Rule ID of intelligent client filtering. Output only.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-                     * @return Action The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+                     * 获取Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
+                     * @return Action Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
                      * 
                      */
                     SecurityAction GetAction() const;
 
                     /**
-                     * 设置The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-                     * @param _action The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+                     * 设置Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
+                     * @param _action Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
                      * 
                      */
                     void SetAction(const SecurityAction& _action);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Rule ID of intelligent client filtering, returned as an output parameter.
+                     * Rule ID of intelligent client filtering. Output only.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+                     * Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
                      */
                     SecurityAction m_action;
                     bool m_actionHasBeenSet;

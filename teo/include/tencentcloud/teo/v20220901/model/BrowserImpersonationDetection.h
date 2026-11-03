@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Browser spoofing identification rule (formerly active feature detection rule) configuration.
+                * Configuration of browser spoofing identification rules (formerly active feature detection rules).
                 */
                 class BrowserImpersonationDetection : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of browser spoofing identification Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li>if Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified or parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li>if BrowserImpersonationDetection parameter value is unspecified in SecurityPolicy.BotManagement parameters: keep existing browser spoofing identification rule configurations without modification.</li>.
-                     * @return Rules List of browser spoofing identification Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li>if Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified or parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li>if BrowserImpersonationDetection parameter value is unspecified in SecurityPolicy.BotManagement parameters: keep existing browser spoofing identification rule configurations without modification.</li>.
+                     * 获取List of browser spoofing identification rules. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified, or the parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li> If the BrowserImpersonationDetection parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing browser spoofing identification rule configuration without modification.</li>
+                     * @return Rules List of browser spoofing identification rules. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified, or the parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li> If the BrowserImpersonationDetection parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing browser spoofing identification rule configuration without modification.</li>
                      * 
                      */
                     std::vector<BrowserImpersonationDetectionRule> GetRules() const;
 
                     /**
-                     * 设置List of browser spoofing identification Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li>if Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified or parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li>if BrowserImpersonationDetection parameter value is unspecified in SecurityPolicy.BotManagement parameters: keep existing browser spoofing identification rule configurations without modification.</li>.
-                     * @param _rules List of browser spoofing identification Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li>if Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified or parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li>if BrowserImpersonationDetection parameter value is unspecified in SecurityPolicy.BotManagement parameters: keep existing browser spoofing identification rule configurations without modification.</li>.
+                     * 设置List of browser spoofing identification rules. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified, or the parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li> If the BrowserImpersonationDetection parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing browser spoofing identification rule configuration without modification.</li>
+                     * @param _rules List of browser spoofing identification rules. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified, or the parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li> If the BrowserImpersonationDetection parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing browser spoofing identification rule configuration without modification.</li>
                      * 
                      */
                     void SetRules(const std::vector<BrowserImpersonationDetectionRule>& _rules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of browser spoofing identification Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li>if Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified or parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li>if BrowserImpersonationDetection parameter value is unspecified in SecurityPolicy.BotManagement parameters: keep existing browser spoofing identification rule configurations without modification.</li>.
+                     * List of browser spoofing identification rules. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified, or the parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li> If the BrowserImpersonationDetection parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing browser spoofing identification rule configuration without modification.</li>
                      */
                     std::vector<BrowserImpersonationDetectionRule> m_rules;
                     bool m_rulesHasBeenSet;

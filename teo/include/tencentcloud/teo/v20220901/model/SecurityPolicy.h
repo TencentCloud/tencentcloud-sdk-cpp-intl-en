@@ -32,6 +32,7 @@
 #include <tencentcloud/teo/v20220901/model/BotManagement.h>
 #include <tencentcloud/teo/v20220901/model/BotManagementLite.h>
 #include <tencentcloud/teo/v20220901/model/DefaultDenySecurityActionParameters.h>
+#include <tencentcloud/teo/v20220901/model/SecurityHeadersToOrigin.h>
 
 
 namespace TencentCloud
@@ -43,7 +44,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Web security policy.
+                * Security policy configuration.
                 */
                 class SecurityPolicy : public AbstractModel
                 {
@@ -55,19 +56,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Custom rule configuration.</p>
+                     * @return CustomRules <p>Custom rule configuration.</p>
                      * 
                      */
                     CustomRules GetCustomRules() const;
 
                     /**
-                     * 设置Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _customRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Custom rule configuration.</p>
+                     * @param _customRules <p>Custom rule configuration.</p>
                      * 
                      */
                     void SetCustomRules(const CustomRules& _customRules);
@@ -80,19 +77,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CustomRulesHasBeenSet() const;
 
                     /**
-                     * 获取Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Managed rule configuration.</p>
+                     * @return ManagedRules <p>Managed rule configuration.</p>
                      * 
                      */
                     ManagedRules GetManagedRules() const;
 
                     /**
-                     * 设置Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _managedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Managed rule configuration.</p>
+                     * @param _managedRules <p>Managed rule configuration.</p>
                      * 
                      */
                     void SetManagedRules(const ManagedRules& _managedRules);
@@ -105,15 +98,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ManagedRulesHasBeenSet() const;
 
                     /**
-                     * 获取HTTP DDOS protection configuration.
-                     * @return HttpDDoSProtection HTTP DDOS protection configuration.
+                     * 获取<p>HTTP DDoS protection configuration.</p>
+                     * @return HttpDDoSProtection <p>HTTP DDoS protection configuration.</p>
                      * 
                      */
                     HttpDDoSProtection GetHttpDDoSProtection() const;
 
                     /**
-                     * 设置HTTP DDOS protection configuration.
-                     * @param _httpDDoSProtection HTTP DDOS protection configuration.
+                     * 设置<p>HTTP DDoS protection configuration.</p>
+                     * @param _httpDDoSProtection <p>HTTP DDoS protection configuration.</p>
                      * 
                      */
                     void SetHttpDDoSProtection(const HttpDDoSProtection& _httpDDoSProtection);
@@ -126,15 +119,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool HttpDDoSProtectionHasBeenSet() const;
 
                     /**
-                     * 获取Configures the rate limiting rule.
-                     * @return RateLimitingRules Configures the rate limiting rule.
+                     * 获取<p>Rate limiting rule configuration.</p>
+                     * @return RateLimitingRules <p>Rate limiting rule configuration.</p>
                      * 
                      */
                     RateLimitingRules GetRateLimitingRules() const;
 
                     /**
-                     * 设置Configures the rate limiting rule.
-                     * @param _rateLimitingRules Configures the rate limiting rule.
+                     * 设置<p>Rate limiting rule configuration.</p>
+                     * @param _rateLimitingRules <p>Rate limiting rule configuration.</p>
                      * 
                      */
                     void SetRateLimitingRules(const RateLimitingRules& _rateLimitingRules);
@@ -147,15 +140,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RateLimitingRulesHasBeenSet() const;
 
                     /**
-                     * 获取Exception rule configuration.
-                     * @return ExceptionRules Exception rule configuration.
+                     * 获取<p>Exception rule configuration.</p>
+                     * @return ExceptionRules <p>Exception rule configuration.</p>
                      * 
                      */
                     ExceptionRules GetExceptionRules() const;
 
                     /**
-                     * 设置Exception rule configuration.
-                     * @param _exceptionRules Exception rule configuration.
+                     * 设置<p>Exception rule configuration.</p>
+                     * @param _exceptionRules <p>Exception rule configuration.</p>
                      * 
                      */
                     void SetExceptionRules(const ExceptionRules& _exceptionRules);
@@ -168,15 +161,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ExceptionRulesHasBeenSet() const;
 
                     /**
-                     * 获取Bot management configuration.
-                     * @return BotManagement Bot management configuration.
+                     * 获取<p>Bot management configuration.</p>
+                     * @return BotManagement <p>Bot management configuration.</p>
                      * 
                      */
                     BotManagement GetBotManagement() const;
 
                     /**
-                     * 设置Bot management configuration.
-                     * @param _botManagement Bot management configuration.
+                     * 设置<p>Bot management configuration.</p>
+                     * @param _botManagement <p>Bot management configuration.</p>
                      * 
                      */
                     void SetBotManagement(const BotManagement& _botManagement);
@@ -189,15 +182,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool BotManagementHasBeenSet() const;
 
                     /**
-                     * 获取Basic Bot management configuration.
-                     * @return BotManagementLite Basic Bot management configuration.
+                     * 获取<p>Basic Bot management configuration.</p>
+                     * @return BotManagementLite <p>Basic Bot management configuration.</p>
                      * 
                      */
                     BotManagementLite GetBotManagementLite() const;
 
                     /**
-                     * 设置Basic Bot management configuration.
-                     * @param _botManagementLite Basic Bot management configuration.
+                     * 设置<p>Basic Bot management configuration.</p>
+                     * @param _botManagementLite <p>Basic Bot management configuration.</p>
                      * 
                      */
                     void SetBotManagementLite(const BotManagementLite& _botManagementLite);
@@ -210,15 +203,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool BotManagementLiteHasBeenSet() const;
 
                     /**
-                     * 获取Default intercept action configuration.
-                     * @return DefaultDenySecurityActionParameters Default intercept action configuration.
+                     * 获取<p>Default block action configuration.</p>
+                     * @return DefaultDenySecurityActionParameters <p>Default block action configuration.</p>
                      * 
                      */
                     DefaultDenySecurityActionParameters GetDefaultDenySecurityActionParameters() const;
 
                     /**
-                     * 设置Default intercept action configuration.
-                     * @param _defaultDenySecurityActionParameters Default intercept action configuration.
+                     * 设置<p>Default block action configuration.</p>
+                     * @param _defaultDenySecurityActionParameters <p>Default block action configuration.</p>
                      * 
                      */
                     void SetDefaultDenySecurityActionParameters(const DefaultDenySecurityActionParameters& _defaultDenySecurityActionParameters);
@@ -230,57 +223,82 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool DefaultDenySecurityActionParametersHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+                     * @return SecurityHeadersToOrigin <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+                     * 
+                     */
+                    SecurityHeadersToOrigin GetSecurityHeadersToOrigin() const;
+
+                    /**
+                     * 设置<p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+                     * @param _securityHeadersToOrigin <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+                     * 
+                     */
+                    void SetSecurityHeadersToOrigin(const SecurityHeadersToOrigin& _securityHeadersToOrigin);
+
+                    /**
+                     * 判断参数 SecurityHeadersToOrigin 是否已赋值
+                     * @return SecurityHeadersToOrigin 是否已赋值
+                     * 
+                     */
+                    bool SecurityHeadersToOriginHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Custom rule configuration.</p>
                      */
                     CustomRules m_customRules;
                     bool m_customRulesHasBeenSet;
 
                     /**
-                     * Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Managed rule configuration.</p>
                      */
                     ManagedRules m_managedRules;
                     bool m_managedRulesHasBeenSet;
 
                     /**
-                     * HTTP DDOS protection configuration.
+                     * <p>HTTP DDoS protection configuration.</p>
                      */
                     HttpDDoSProtection m_httpDDoSProtection;
                     bool m_httpDDoSProtectionHasBeenSet;
 
                     /**
-                     * Configures the rate limiting rule.
+                     * <p>Rate limiting rule configuration.</p>
                      */
                     RateLimitingRules m_rateLimitingRules;
                     bool m_rateLimitingRulesHasBeenSet;
 
                     /**
-                     * Exception rule configuration.
+                     * <p>Exception rule configuration.</p>
                      */
                     ExceptionRules m_exceptionRules;
                     bool m_exceptionRulesHasBeenSet;
 
                     /**
-                     * Bot management configuration.
+                     * <p>Bot management configuration.</p>
                      */
                     BotManagement m_botManagement;
                     bool m_botManagementHasBeenSet;
 
                     /**
-                     * Basic Bot management configuration.
+                     * <p>Basic Bot management configuration.</p>
                      */
                     BotManagementLite m_botManagementLite;
                     bool m_botManagementLiteHasBeenSet;
 
                     /**
-                     * Default intercept action configuration.
+                     * <p>Default block action configuration.</p>
                      */
                     DefaultDenySecurityActionParameters m_defaultDenySecurityActionParameters;
                     bool m_defaultDenySecurityActionParametersHasBeenSet;
+
+                    /**
+                     * <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+                     */
+                    SecurityHeadersToOrigin m_securityHeadersToOrigin;
+                    bool m_securityHeadersToOriginHasBeenSet;
 
                 };
             }

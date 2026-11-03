@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional parameter for SecurityAction `ReturnCustomPage`.
+                * Additional parameter of the custom page for Web security
                 */
                 class ReturnCustomPageActionParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response custom status code.
-                     * @return ResponseCode Response custom status code.
+                     * 获取status code.
+                     * @return ResponseCode status code.
                      * 
                      */
                     std::string GetResponseCode() const;
 
                     /**
-                     * 设置Response custom status code.
-                     * @param _responseCode Response custom status code.
+                     * 设置status code.
+                     * @param _responseCode status code.
                      * 
                      */
                     void SetResponseCode(const std::string& _responseCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ResponseCodeHasBeenSet() const;
 
                     /**
-                     * 获取Response custom page ID.
-                     * @return ErrorPageId Response custom page ID.
+                     * 获取ID of the custom page in the response.
+                     * @return ErrorPageId ID of the custom page in the response.
                      * 
                      */
                     std::string GetErrorPageId() const;
 
                     /**
-                     * 设置Response custom page ID.
-                     * @param _errorPageId Response custom page ID.
+                     * 设置ID of the custom page in the response.
+                     * @param _errorPageId ID of the custom page in the response.
                      * 
                      */
                     void SetErrorPageId(const std::string& _errorPageId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response custom status code.
+                     * status code.
                      */
                     std::string m_responseCode;
                     bool m_responseCodeHasBeenSet;
 
                     /**
-                     * Response custom page ID.
+                     * ID of the custom page in the response.
                      */
                     std::string m_errorPageId;
                     bool m_errorPageIdHasBeenSet;

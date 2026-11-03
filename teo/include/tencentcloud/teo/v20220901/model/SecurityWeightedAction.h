@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the SecurityAction with weight allocation.
+                * SecurityAction with weight assignment.
                 */
                 class SecurityWeightedAction : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The handling method of the Bot custom rule. valid values: <li>Allow: pass, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li> <li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li> <li>Monitor: observation;</li> <li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL.</li>.
-                     * @return SecurityAction The handling method of the Bot custom rule. valid values: <li>Allow: pass, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li> <li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li> <li>Monitor: observation;</li> <li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL.</li>.
+                     * 获取Handling method of the Bot custom rule. Valid values: <li>Allow: Allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: Monitor;</li><li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to a URL.</li>
+                     * @return SecurityAction Handling method of the Bot custom rule. Valid values: <li>Allow: Allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: Monitor;</li><li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to a URL.</li>
                      * 
                      */
                     SecurityAction GetSecurityAction() const;
 
                     /**
-                     * 设置The handling method of the Bot custom rule. valid values: <li>Allow: pass, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li> <li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li> <li>Monitor: observation;</li> <li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL.</li>.
-                     * @param _securityAction The handling method of the Bot custom rule. valid values: <li>Allow: pass, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li> <li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li> <li>Monitor: observation;</li> <li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL.</li>.
+                     * 设置Handling method of the Bot custom rule. Valid values: <li>Allow: Allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: Monitor;</li><li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to a URL.</li>
+                     * @param _securityAction Handling method of the Bot custom rule. Valid values: <li>Allow: Allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: Monitor;</li><li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to a URL.</li>
                      * 
                      */
                     void SetSecurityAction(const SecurityAction& _securityAction);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SecurityActionHasBeenSet() const;
 
                     /**
-                     * 获取The Weight of the current SecurityAction, only supported between 10 and 100 and must be a multiple of 10. the total of all Weight parameters must equal 100.
-                     * @return Weight The Weight of the current SecurityAction, only supported between 10 and 100 and must be a multiple of 10. the total of all Weight parameters must equal 100.
+                     * 获取Weight of the current SecurityAction. Only multiples of 10 from 10 to 100 are supported. The sum of all Weight parameters must equal 100.
+                     * @return Weight Weight of the current SecurityAction. Only multiples of 10 from 10 to 100 are supported. The sum of all Weight parameters must equal 100.
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置The Weight of the current SecurityAction, only supported between 10 and 100 and must be a multiple of 10. the total of all Weight parameters must equal 100.
-                     * @param _weight The Weight of the current SecurityAction, only supported between 10 and 100 and must be a multiple of 10. the total of all Weight parameters must equal 100.
+                     * 设置Weight of the current SecurityAction. Only multiples of 10 from 10 to 100 are supported. The sum of all Weight parameters must equal 100.
+                     * @param _weight Weight of the current SecurityAction. Only multiples of 10 from 10 to 100 are supported. The sum of all Weight parameters must equal 100.
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The handling method of the Bot custom rule. valid values: <li>Allow: pass, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li> <li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li> <li>Monitor: observation;</li> <li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL.</li>.
+                     * Handling method of the Bot custom rule. Valid values: <li>Allow: Allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: Monitor;</li><li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to a URL.</li>
                      */
                     SecurityAction m_securityAction;
                     bool m_securityActionHasBeenSet;
 
                     /**
-                     * The Weight of the current SecurityAction, only supported between 10 and 100 and must be a multiple of 10. the total of all Weight parameters must equal 100.
+                     * Weight of the current SecurityAction. Only multiples of 10 from 10 to 100 are supported. The sum of all Weight parameters must equal 100.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;

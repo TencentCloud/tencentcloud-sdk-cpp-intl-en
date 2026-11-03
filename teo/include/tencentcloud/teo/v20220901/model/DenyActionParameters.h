@@ -35,12 +35,12 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional parameter when the executed action is interception.
+                * Additional parameter for the safe execution action when it is interception.
 
-This parameter is used for specifying the extra handling action taken by the system when a security rule is hit and an intercept action is executed.
-Different disposal actions are configured with different fixed parameter combinations. The system will determine the actually effective disposal action type according to the configured parameter combination.
-During the same interception execution, only one handling action can be configured and made effective. Parameters for multiple handling actions cannot appear at the same time. Otherwise, it is deemed an invalid configuration. If empty, the default block handling action is used.
-DenyActionParameters supports the following additional handling actions: <li>Default: When DenyActionParameters is empty or no additional handling action is enabled, the system will perform the default block, responding with an interception page.</li><li>IP block: Continuously block the client source IP that triggers the rule. Corresponding parameters: BlockIp, BlockIpDuration.</li><li>Custom page interception: Use the designated custom page content to respond to requests. Corresponding parameters: ReturnCustomPage, ResponseCode, ErrorPageId.</li><li>Silence: Accept client requests but do not return. Corresponding parameter: Stall.</li>
+This parameter is used to specify the extra handling action taken by the system when a security rule is hit and an intercept action is executed.
+Different handling actions are configured with different fixed parameter combinations. The system will determine the actually effective handling action type according to the configured parameter combination.
+Only one handling action can be configured and made effective during the same block execution. Parameters corresponding to multiple handling actions cannot appear simultaneously, otherwise the configuration is deemed invalid. If empty, the default block handling action is used.
+DenyActionParameters supports the following extra handling actions: <li>Default: When DenyActionParameters is empty or no extra handling action is enabled, the system will perform the default block, responding with an interception page.</li><li>IP blocking: Continuously block the client source IP that triggers the rule. Corresponding parameters: BlockIp, BlockIpDuration.</li><li>Custom page interception: Use the specified custom page content to respond to requests. Corresponding parameters: ReturnCustomPage, ResponseCode, ErrorPageId.</li><li>Silence: Accept client requests but do not return. Corresponding parameter: Stall.</li>
                 */
                 class DenyActionParameters : public AbstractModel
                 {
@@ -52,39 +52,31 @@ DenyActionParameters supports the following additional handling actions: <li>Def
 
 
                     /**
-                     * 获取Specifies whether to extend the ban on the source IP. valid values.
+                     * 获取Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
-                     * @return BlockIp Specifies whether to extend the ban on the source IP. valid values.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
+                     * @return BlockIp Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
                      * 
                      */
                     std::string GetBlockIp() const;
 
                     /**
-                     * 设置Specifies whether to extend the ban on the source IP. valid values.
+                     * 设置Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
-                     * @param _blockIp Specifies whether to extend the ban on the source IP. valid values.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
+                     * @param _blockIp Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
                      * 
                      */
                     void SetBlockIp(const std::string& _blockIp);
@@ -97,15 +89,15 @@ Note: this option cannot intersect with ReturnCustomPage or Stall.
                     bool BlockIpHasBeenSet() const;
 
                     /**
-                     * 获取The ban duration when BlockIP is on.
-                     * @return BlockIpDuration The ban duration when BlockIP is on.
+                     * 获取IP ban duration when BlockIP is on.
+                     * @return BlockIpDuration IP ban duration when BlockIP is on.
                      * 
                      */
                     std::string GetBlockIpDuration() const;
 
                     /**
-                     * 设置The ban duration when BlockIP is on.
-                     * @param _blockIpDuration The ban duration when BlockIP is on.
+                     * 设置IP ban duration when BlockIP is on.
+                     * @param _blockIpDuration IP ban duration when BlockIP is on.
                      * 
                      */
                     void SetBlockIpDuration(const std::string& _blockIpDuration);
@@ -118,42 +110,34 @@ Note: this option cannot intersect with ReturnCustomPage or Stall.
                     bool BlockIpDurationHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to use a custom page. valid values:.
+                     * 获取Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
-
-                     * @return ReturnCustomPage Specifies whether to use a custom page. valid values:.
+                     * @return ReturnCustomPage Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
                      * 
                      */
                     std::string GetReturnCustomPage() const;
 
                     /**
-                     * 设置Specifies whether to use a custom page. valid values:.
+                     * 设置Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
-
-                     * @param _returnCustomPage Specifies whether to use a custom page. valid values:.
+                     * @param _returnCustomPage Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
                      * 
                      */
@@ -188,15 +172,15 @@ Note: this option cannot intersect with the BlockIp or Stall option.
                     bool ResponseCodeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the page id of the custom page.
-                     * @return ErrorPageId Specifies the page id of the custom page.
+                     * 获取PageId of the custom page.
+                     * @return ErrorPageId PageId of the custom page.
                      * 
                      */
                     std::string GetErrorPageId() const;
 
                     /**
-                     * 设置Specifies the page id of the custom page.
-                     * @param _errorPageId Specifies the page id of the custom page.
+                     * 设置PageId of the custom page.
+                     * @param _errorPageId PageId of the custom page.
                      * 
                      */
                     void SetErrorPageId(const std::string& _errorPageId);
@@ -209,39 +193,31 @@ Note: this option cannot intersect with the BlockIp or Stall option.
                     bool ErrorPageIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to suspend the request source without processing. valid values:.
+                     * 获取Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
-                     * @return Stall Specifies whether to suspend the request source without processing. valid values:.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
+                     * @return Stall Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
                      * 
                      */
                     std::string GetStall() const;
 
                     /**
-                     * 设置Specifies whether to suspend the request source without processing. valid values:.
+                     * 设置Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
-                     * @param _stall Specifies whether to suspend the request source without processing. valid values:.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
+                     * @param _stall Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
                      * 
                      */
                     void SetStall(const std::string& _stall);
@@ -256,31 +232,27 @@ Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
                 private:
 
                     /**
-                     * Specifies whether to extend the ban on the source IP. valid values.
+                     * Whether to extend the block on the source IP. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-Note: this option cannot intersect with ReturnCustomPage or Stall.
+After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+Note: This option cannot intersect with ReturnCustomPage or Stall.
                      */
                     std::string m_blockIp;
                     bool m_blockIpHasBeenSet;
 
                     /**
-                     * The ban duration when BlockIP is on.
+                     * IP ban duration when BlockIP is on.
                      */
                     std::string m_blockIpDuration;
                     bool m_blockIpDurationHasBeenSet;
 
                     /**
-                     * Specifies whether to use a custom page. valid values:.
+                     * Whether to use custom pages. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-Note: this option cannot intersect with the BlockIp or Stall option.
+Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+Note: This option cannot intersect with BlockIp or Stall.
 
                      */
                     std::string m_returnCustomPage;
@@ -293,19 +265,17 @@ Note: this option cannot intersect with the BlockIp or Stall option.
                     bool m_responseCodeHasBeenSet;
 
                     /**
-                     * Specifies the page id of the custom page.
+                     * PageId of the custom page.
                      */
                     std::string m_errorPageId;
                     bool m_errorPageIdHasBeenSet;
 
                     /**
-                     * Specifies whether to suspend the request source without processing. valid values:.
+                     * Whether to suspend requests from the request source without processing. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-
-Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+Note: This option cannot intersect with BlockIp or ReturnCustomPage.
                      */
                     std::string m_stall;
                     bool m_stallHasBeenSet;

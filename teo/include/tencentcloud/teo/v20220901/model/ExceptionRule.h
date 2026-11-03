@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Web security exception rule.
+                * Exception rule for Web security
                 */
                 class ExceptionRule : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the exception rule. different rule configuration operations are supported by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list under the ExceptionRules parameter will be deleted.</li>.
-                     * @return Id The ID of the exception rule. different rule configuration operations are supported by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list under the ExceptionRules parameter will be deleted.</li>.
+                     * 获取ID of the exception rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the Rules list in the ExceptionRules parameter will be deleted.</li>
+                     * @return Id ID of the exception rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the Rules list in the ExceptionRules parameter will be deleted.</li>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置The ID of the exception rule. different rule configuration operations are supported by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list under the ExceptionRules parameter will be deleted.</li>.
-                     * @param _id The ID of the exception rule. different rule configuration operations are supported by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list under the ExceptionRules parameter will be deleted.</li>.
+                     * 设置ID of the exception rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the Rules list in the ExceptionRules parameter will be deleted.</li>
+                     * @param _id ID of the exception rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the Rules list in the ExceptionRules parameter will be deleted.</li>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the exception rule.
-                     * @return Name The name of the exception rule.
+                     * 获取Name of the exception rule.
+                     * @return Name Name of the exception rule.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of the exception rule.
-                     * @param _name The name of the exception rule.
+                     * 设置Name of the exception rule.
+                     * @param _name Name of the exception rule.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Describes the specific content of the exception rule, which must comply with the expression grammar. for details, please refer to the product document.
-                     * @return Condition Describes the specific content of the exception rule, which must comply with the expression grammar. for details, please refer to the product document.
+                     * 获取Specific content of the exception rule must comply with the expression grammar. For detailed specifications, please refer to the product document.
+                     * @return Condition Specific content of the exception rule must comply with the expression grammar. For detailed specifications, please refer to the product document.
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Describes the specific content of the exception rule, which must comply with the expression grammar. for details, please refer to the product document.
-                     * @param _condition Describes the specific content of the exception rule, which must comply with the expression grammar. for details, please refer to the product document.
+                     * 设置Specific content of the exception rule must comply with the expression grammar. For detailed specifications, please refer to the product document.
+                     * @param _condition Specific content of the exception rule must comply with the expression grammar. For detailed specifications, please refer to the product document.
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取Exception rule execution options, valid values: <li>WebSecurityModules: designate the security protection module for the exception rule.</li> <li>ManagedRules: designate the managed rule.</li>.
-                     * @return SkipScope Exception rule execution options, valid values: <li>WebSecurityModules: designate the security protection module for the exception rule.</li> <li>ManagedRules: designate the managed rule.</li>.
+                     * 获取Exception rule execution options. Valid values: <li>WebSecurityModules: assigns the security protection module for the exception rule. Use in conjunction with WebSecurityModulesForException.</li><li>WebSecuritySubmodules: assigns the security protection submodule for the exception rule. Use in conjunction with WebSecuritySubmodulesForException.</li><li>ManagedRules: assigns the specific managed rule for the exception rule. Use in conjunction with ManagedRulesForException.</li><li>ManagedRuleGroups: assigns the managed rule group for the exception rule. Use in conjunction with ManagedRuleGroupsForException.</li>
+                     * @return SkipScope Exception rule execution options. Valid values: <li>WebSecurityModules: assigns the security protection module for the exception rule. Use in conjunction with WebSecurityModulesForException.</li><li>WebSecuritySubmodules: assigns the security protection submodule for the exception rule. Use in conjunction with WebSecuritySubmodulesForException.</li><li>ManagedRules: assigns the specific managed rule for the exception rule. Use in conjunction with ManagedRulesForException.</li><li>ManagedRuleGroups: assigns the managed rule group for the exception rule. Use in conjunction with ManagedRuleGroupsForException.</li>
                      * 
                      */
                     std::string GetSkipScope() const;
 
                     /**
-                     * 设置Exception rule execution options, valid values: <li>WebSecurityModules: designate the security protection module for the exception rule.</li> <li>ManagedRules: designate the managed rule.</li>.
-                     * @param _skipScope Exception rule execution options, valid values: <li>WebSecurityModules: designate the security protection module for the exception rule.</li> <li>ManagedRules: designate the managed rule.</li>.
+                     * 设置Exception rule execution options. Valid values: <li>WebSecurityModules: assigns the security protection module for the exception rule. Use in conjunction with WebSecurityModulesForException.</li><li>WebSecuritySubmodules: assigns the security protection submodule for the exception rule. Use in conjunction with WebSecuritySubmodulesForException.</li><li>ManagedRules: assigns the specific managed rule for the exception rule. Use in conjunction with ManagedRulesForException.</li><li>ManagedRuleGroups: assigns the managed rule group for the exception rule. Use in conjunction with ManagedRuleGroupsForException.</li>
+                     * @param _skipScope Exception rule execution options. Valid values: <li>WebSecurityModules: assigns the security protection module for the exception rule. Use in conjunction with WebSecurityModulesForException.</li><li>WebSecuritySubmodules: assigns the security protection submodule for the exception rule. Use in conjunction with WebSecuritySubmodulesForException.</li><li>ManagedRules: assigns the specific managed rule for the exception rule. Use in conjunction with ManagedRulesForException.</li><li>ManagedRuleGroups: assigns the managed rule group for the exception rule. Use in conjunction with ManagedRuleGroupsForException.</li>
                      * 
                      */
                     void SetSkipScope(const std::string& _skipScope);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool SkipScopeHasBeenSet() const;
 
                     /**
-                     * 获取Skip the specific type of request. valid values: <li>SkipOnAllRequestFields: skip all requests;</li> <li>SkipOnSpecifiedRequestFields: skip specified request fields.</li> valid only when SkipScope is ManagedRules.
-                     * @return SkipOption Skip the specific type of request. valid values: <li>SkipOnAllRequestFields: skip all requests;</li> <li>SkipOnSpecifiedRequestFields: skip specified request fields.</li> valid only when SkipScope is ManagedRules.
+                     * 获取Skip the specific type of request. Valid values: <li>SkipOnAllRequestFields: skip all requests;</li><li>SkipOnSpecifiedRequestFields: skip specified request fields.</li>Valid only when SkipScope is ManagedRules or ManagedRuleGroups.
+                     * @return SkipOption Skip the specific type of request. Valid values: <li>SkipOnAllRequestFields: skip all requests;</li><li>SkipOnSpecifiedRequestFields: skip specified request fields.</li>Valid only when SkipScope is ManagedRules or ManagedRuleGroups.
                      * 
                      */
                     std::string GetSkipOption() const;
 
                     /**
-                     * 设置Skip the specific type of request. valid values: <li>SkipOnAllRequestFields: skip all requests;</li> <li>SkipOnSpecifiedRequestFields: skip specified request fields.</li> valid only when SkipScope is ManagedRules.
-                     * @param _skipOption Skip the specific type of request. valid values: <li>SkipOnAllRequestFields: skip all requests;</li> <li>SkipOnSpecifiedRequestFields: skip specified request fields.</li> valid only when SkipScope is ManagedRules.
+                     * 设置Skip the specific type of request. Valid values: <li>SkipOnAllRequestFields: skip all requests;</li><li>SkipOnSpecifiedRequestFields: skip specified request fields.</li>Valid only when SkipScope is ManagedRules or ManagedRuleGroups.
+                     * @param _skipOption Skip the specific type of request. Valid values: <li>SkipOnAllRequestFields: skip all requests;</li><li>SkipOnSpecifiedRequestFields: skip specified request fields.</li>Valid only when SkipScope is ManagedRules or ManagedRuleGroups.
                      * 
                      */
                     void SetSkipOption(const std::string& _skipOption);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool SkipOptionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the security protection module for exception rules. valid only when SkipScope is WebSecurityModules. valid values: <li>websec-mod-managed-rules: managed rule.</li><li>websec-mod-rate-limiting: rate limit.</li><li>websec-mod-custom-rules: custom rule.</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection.</li><li>websec-mod-bot: bot management.</li>.
-                     * @return WebSecurityModulesForException Specifies the security protection module for exception rules. valid only when SkipScope is WebSecurityModules. valid values: <li>websec-mod-managed-rules: managed rule.</li><li>websec-mod-rate-limiting: rate limit.</li><li>websec-mod-custom-rules: custom rule.</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection.</li><li>websec-mod-bot: bot management.</li>.
+                     * 获取Security protection module for the exception rule. Valid only when SkipScope is WebSecurityModules. Valid values: <li>websec-mod-managed-rules: managed rule</li><li>websec-mod-rate-limiting: rate limit</li><li>websec-mod-custom-rules: custom rule</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection</li><li>websec-mod-bot: bot management</li>
+                     * @return WebSecurityModulesForException Security protection module for the exception rule. Valid only when SkipScope is WebSecurityModules. Valid values: <li>websec-mod-managed-rules: managed rule</li><li>websec-mod-rate-limiting: rate limit</li><li>websec-mod-custom-rules: custom rule</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection</li><li>websec-mod-bot: bot management</li>
                      * 
                      */
                     std::vector<std::string> GetWebSecurityModulesForException() const;
 
                     /**
-                     * 设置Specifies the security protection module for exception rules. valid only when SkipScope is WebSecurityModules. valid values: <li>websec-mod-managed-rules: managed rule.</li><li>websec-mod-rate-limiting: rate limit.</li><li>websec-mod-custom-rules: custom rule.</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection.</li><li>websec-mod-bot: bot management.</li>.
-                     * @param _webSecurityModulesForException Specifies the security protection module for exception rules. valid only when SkipScope is WebSecurityModules. valid values: <li>websec-mod-managed-rules: managed rule.</li><li>websec-mod-rate-limiting: rate limit.</li><li>websec-mod-custom-rules: custom rule.</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection.</li><li>websec-mod-bot: bot management.</li>.
+                     * 设置Security protection module for the exception rule. Valid only when SkipScope is WebSecurityModules. Valid values: <li>websec-mod-managed-rules: managed rule</li><li>websec-mod-rate-limiting: rate limit</li><li>websec-mod-custom-rules: custom rule</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection</li><li>websec-mod-bot: bot management</li>
+                     * @param _webSecurityModulesForException Security protection module for the exception rule. Valid only when SkipScope is WebSecurityModules. Valid values: <li>websec-mod-managed-rules: managed rule</li><li>websec-mod-rate-limiting: rate limit</li><li>websec-mod-custom-rules: custom rule</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection</li><li>websec-mod-bot: bot management</li>
                      * 
                      */
                     void SetWebSecurityModulesForException(const std::vector<std::string>& _webSecurityModulesForException);
@@ -174,15 +174,36 @@ namespace TencentCloud
                     bool WebSecurityModulesForExceptionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the managed rule for the exception rule. valid only when SkipScope is ManagedRules. cannot specify ManagedRuleGroupsForException at this time.
-                     * @return ManagedRulesForException Specifies the managed rule for the exception rule. valid only when SkipScope is ManagedRules. cannot specify ManagedRuleGroupsForException at this time.
+                     * 获取Specifies the security protection submodule for the exception rule. Valid only when SkipScope is WebSecuritySubmodules. Valid values: <ul><li>ManagedRules module features: <ul><li>websec-mod-managed-rules/managed-rule-groups: rule set;</li><li>websec-mod-managed-rules/frequent-scanning-protection: high frequency scan protection;</li></ul></li><li>RateLimitingRules module features: <ul><li>websec-mod-rate-limiting-rules: rate limiting rule;</li></ul></li><li>CustomRules module features: <ul><li>websec-mod-custom-rules: custom rule;</li></ul></li><li>HttpDDoSProtection module features: <ul><li>websec-mod-HTTP-DDoS-protection/adaptive-frequency-control: adaptive frequency control;</li><li>websec-mod-HTTP-DDoS-protection/client-filtering: intelligent client filtering;</li><li>websec-mod-HTTP-DDoS-protection/bandwidth-abuse-defense: traffic fraud protection;</li></ul></li><li>BotManagement module features: <ul><li>websec-mod-Bot-management/basic-feature: basic feature management;</li><li>websec-mod-Bot-management/ip-reputation: client profile analysis;</li><li>websec-mod-Bot-management/Bot-intelligence: intelligent Bot analysis;</li><li>websec-mod-Bot-management/custom-rules: custom rule;</li><li>websec-mod-Bot-management/browser-impersonation-detection: proactive feature recognition;</li><li>websec-mod-Bot-management/client-attestation-rules: client authentication;</li></ul></li><li>BotManagementLite module features: <ul><li>websec-mod-Bot-management-lite/ai-crawler-detection: ai crawler disposal;</li><li>websec-mod-Bot-management-lite/captcha-page-challenge: captcha page challenge.</li></ul></li></ul>
+                     * @return WebSecuritySubmodulesForException Specifies the security protection submodule for the exception rule. Valid only when SkipScope is WebSecuritySubmodules. Valid values: <ul><li>ManagedRules module features: <ul><li>websec-mod-managed-rules/managed-rule-groups: rule set;</li><li>websec-mod-managed-rules/frequent-scanning-protection: high frequency scan protection;</li></ul></li><li>RateLimitingRules module features: <ul><li>websec-mod-rate-limiting-rules: rate limiting rule;</li></ul></li><li>CustomRules module features: <ul><li>websec-mod-custom-rules: custom rule;</li></ul></li><li>HttpDDoSProtection module features: <ul><li>websec-mod-HTTP-DDoS-protection/adaptive-frequency-control: adaptive frequency control;</li><li>websec-mod-HTTP-DDoS-protection/client-filtering: intelligent client filtering;</li><li>websec-mod-HTTP-DDoS-protection/bandwidth-abuse-defense: traffic fraud protection;</li></ul></li><li>BotManagement module features: <ul><li>websec-mod-Bot-management/basic-feature: basic feature management;</li><li>websec-mod-Bot-management/ip-reputation: client profile analysis;</li><li>websec-mod-Bot-management/Bot-intelligence: intelligent Bot analysis;</li><li>websec-mod-Bot-management/custom-rules: custom rule;</li><li>websec-mod-Bot-management/browser-impersonation-detection: proactive feature recognition;</li><li>websec-mod-Bot-management/client-attestation-rules: client authentication;</li></ul></li><li>BotManagementLite module features: <ul><li>websec-mod-Bot-management-lite/ai-crawler-detection: ai crawler disposal;</li><li>websec-mod-Bot-management-lite/captcha-page-challenge: captcha page challenge.</li></ul></li></ul>
+                     * 
+                     */
+                    std::vector<std::string> GetWebSecuritySubmodulesForException() const;
+
+                    /**
+                     * 设置Specifies the security protection submodule for the exception rule. Valid only when SkipScope is WebSecuritySubmodules. Valid values: <ul><li>ManagedRules module features: <ul><li>websec-mod-managed-rules/managed-rule-groups: rule set;</li><li>websec-mod-managed-rules/frequent-scanning-protection: high frequency scan protection;</li></ul></li><li>RateLimitingRules module features: <ul><li>websec-mod-rate-limiting-rules: rate limiting rule;</li></ul></li><li>CustomRules module features: <ul><li>websec-mod-custom-rules: custom rule;</li></ul></li><li>HttpDDoSProtection module features: <ul><li>websec-mod-HTTP-DDoS-protection/adaptive-frequency-control: adaptive frequency control;</li><li>websec-mod-HTTP-DDoS-protection/client-filtering: intelligent client filtering;</li><li>websec-mod-HTTP-DDoS-protection/bandwidth-abuse-defense: traffic fraud protection;</li></ul></li><li>BotManagement module features: <ul><li>websec-mod-Bot-management/basic-feature: basic feature management;</li><li>websec-mod-Bot-management/ip-reputation: client profile analysis;</li><li>websec-mod-Bot-management/Bot-intelligence: intelligent Bot analysis;</li><li>websec-mod-Bot-management/custom-rules: custom rule;</li><li>websec-mod-Bot-management/browser-impersonation-detection: proactive feature recognition;</li><li>websec-mod-Bot-management/client-attestation-rules: client authentication;</li></ul></li><li>BotManagementLite module features: <ul><li>websec-mod-Bot-management-lite/ai-crawler-detection: ai crawler disposal;</li><li>websec-mod-Bot-management-lite/captcha-page-challenge: captcha page challenge.</li></ul></li></ul>
+                     * @param _webSecuritySubmodulesForException Specifies the security protection submodule for the exception rule. Valid only when SkipScope is WebSecuritySubmodules. Valid values: <ul><li>ManagedRules module features: <ul><li>websec-mod-managed-rules/managed-rule-groups: rule set;</li><li>websec-mod-managed-rules/frequent-scanning-protection: high frequency scan protection;</li></ul></li><li>RateLimitingRules module features: <ul><li>websec-mod-rate-limiting-rules: rate limiting rule;</li></ul></li><li>CustomRules module features: <ul><li>websec-mod-custom-rules: custom rule;</li></ul></li><li>HttpDDoSProtection module features: <ul><li>websec-mod-HTTP-DDoS-protection/adaptive-frequency-control: adaptive frequency control;</li><li>websec-mod-HTTP-DDoS-protection/client-filtering: intelligent client filtering;</li><li>websec-mod-HTTP-DDoS-protection/bandwidth-abuse-defense: traffic fraud protection;</li></ul></li><li>BotManagement module features: <ul><li>websec-mod-Bot-management/basic-feature: basic feature management;</li><li>websec-mod-Bot-management/ip-reputation: client profile analysis;</li><li>websec-mod-Bot-management/Bot-intelligence: intelligent Bot analysis;</li><li>websec-mod-Bot-management/custom-rules: custom rule;</li><li>websec-mod-Bot-management/browser-impersonation-detection: proactive feature recognition;</li><li>websec-mod-Bot-management/client-attestation-rules: client authentication;</li></ul></li><li>BotManagementLite module features: <ul><li>websec-mod-Bot-management-lite/ai-crawler-detection: ai crawler disposal;</li><li>websec-mod-Bot-management-lite/captcha-page-challenge: captcha page challenge.</li></ul></li></ul>
+                     * 
+                     */
+                    void SetWebSecuritySubmodulesForException(const std::vector<std::string>& _webSecuritySubmodulesForException);
+
+                    /**
+                     * 判断参数 WebSecuritySubmodulesForException 是否已赋值
+                     * @return WebSecuritySubmodulesForException 是否已赋值
+                     * 
+                     */
+                    bool WebSecuritySubmodulesForExceptionHasBeenSet() const;
+
+                    /**
+                     * 获取Specify the specific managed rule for the exception rule. This parameter is valid only when SkipScope is ManagedRules.
+                     * @return ManagedRulesForException Specify the specific managed rule for the exception rule. This parameter is valid only when SkipScope is ManagedRules.
                      * 
                      */
                     std::vector<std::string> GetManagedRulesForException() const;
 
                     /**
-                     * 设置Specifies the managed rule for the exception rule. valid only when SkipScope is ManagedRules. cannot specify ManagedRuleGroupsForException at this time.
-                     * @param _managedRulesForException Specifies the managed rule for the exception rule. valid only when SkipScope is ManagedRules. cannot specify ManagedRuleGroupsForException at this time.
+                     * 设置Specify the specific managed rule for the exception rule. This parameter is valid only when SkipScope is ManagedRules.
+                     * @param _managedRulesForException Specify the specific managed rule for the exception rule. This parameter is valid only when SkipScope is ManagedRules.
                      * 
                      */
                     void SetManagedRulesForException(const std::vector<std::string>& _managedRulesForException);
@@ -195,15 +216,15 @@ namespace TencentCloud
                     bool ManagedRulesForExceptionHasBeenSet() const;
 
                     /**
-                     * 获取A managed rule group with designated exception rules is valid only when SkipScope is ManagedRules, and at this point you cannot specify ManagedRulesForException.
-                     * @return ManagedRuleGroupsForException A managed rule group with designated exception rules is valid only when SkipScope is ManagedRules, and at this point you cannot specify ManagedRulesForException.
+                     * 获取Managed rule group with specified exception rules. This parameter is valid only when SkipScope is ManagedRuleGroups.
+                     * @return ManagedRuleGroupsForException Managed rule group with specified exception rules. This parameter is valid only when SkipScope is ManagedRuleGroups.
                      * 
                      */
                     std::vector<std::string> GetManagedRuleGroupsForException() const;
 
                     /**
-                     * 设置A managed rule group with designated exception rules is valid only when SkipScope is ManagedRules, and at this point you cannot specify ManagedRulesForException.
-                     * @param _managedRuleGroupsForException A managed rule group with designated exception rules is valid only when SkipScope is ManagedRules, and at this point you cannot specify ManagedRulesForException.
+                     * 设置Managed rule group with specified exception rules. This parameter is valid only when SkipScope is ManagedRuleGroups.
+                     * @param _managedRuleGroupsForException Managed rule group with specified exception rules. This parameter is valid only when SkipScope is ManagedRuleGroups.
                      * 
                      */
                     void SetManagedRuleGroupsForException(const std::vector<std::string>& _managedRuleGroupsForException);
@@ -216,15 +237,15 @@ namespace TencentCloud
                     bool ManagedRuleGroupsForExceptionHasBeenSet() const;
 
                     /**
-                     * 获取Specify exception rules to skip request fields. valid only when SkipScope is ManagedRules and SkipOption is SkipOnSpecifiedRequestFields.
-                     * @return RequestFieldsForException Specify exception rules to skip request fields. valid only when SkipScope is ManagedRules and SkipOption is SkipOnSpecifiedRequestFields.
+                     * 获取Configuration for specifying exception rules to skip specified request fields. This is valid only when SkipScope is ManagedRules or ManagedRuleGroups and SkipOption is SkipOnSpecifiedRequestFields.
+                     * @return RequestFieldsForException Configuration for specifying exception rules to skip specified request fields. This is valid only when SkipScope is ManagedRules or ManagedRuleGroups and SkipOption is SkipOnSpecifiedRequestFields.
                      * 
                      */
                     std::vector<RequestFieldsForException> GetRequestFieldsForException() const;
 
                     /**
-                     * 设置Specify exception rules to skip request fields. valid only when SkipScope is ManagedRules and SkipOption is SkipOnSpecifiedRequestFields.
-                     * @param _requestFieldsForException Specify exception rules to skip request fields. valid only when SkipScope is ManagedRules and SkipOption is SkipOnSpecifiedRequestFields.
+                     * 设置Configuration for specifying exception rules to skip specified request fields. This is valid only when SkipScope is ManagedRules or ManagedRuleGroups and SkipOption is SkipOnSpecifiedRequestFields.
+                     * @param _requestFieldsForException Configuration for specifying exception rules to skip specified request fields. This is valid only when SkipScope is ManagedRules or ManagedRuleGroups and SkipOption is SkipOnSpecifiedRequestFields.
                      * 
                      */
                     void SetRequestFieldsForException(const std::vector<RequestFieldsForException>& _requestFieldsForException);
@@ -237,15 +258,15 @@ namespace TencentCloud
                     bool RequestFieldsForExceptionHasBeenSet() const;
 
                     /**
-                     * 获取Whether the exception rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-                     * @return Enabled Whether the exception rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * 获取Whether the exception rule is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+                     * @return Enabled Whether the exception rule is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
                      * 
                      */
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether the exception rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-                     * @param _enabled Whether the exception rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * 设置Whether the exception rule is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+                     * @param _enabled Whether the exception rule is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
                      * 
                      */
                     void SetEnabled(const std::string& _enabled);
@@ -260,61 +281,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the exception rule. different rule configuration operations are supported by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list under the ExceptionRules parameter will be deleted.</li>.
+                     * ID of the exception rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the Rules list in the ExceptionRules parameter will be deleted.</li>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * The name of the exception rule.
+                     * Name of the exception rule.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Describes the specific content of the exception rule, which must comply with the expression grammar. for details, please refer to the product document.
+                     * Specific content of the exception rule must comply with the expression grammar. For detailed specifications, please refer to the product document.
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * Exception rule execution options, valid values: <li>WebSecurityModules: designate the security protection module for the exception rule.</li> <li>ManagedRules: designate the managed rule.</li>.
+                     * Exception rule execution options. Valid values: <li>WebSecurityModules: assigns the security protection module for the exception rule. Use in conjunction with WebSecurityModulesForException.</li><li>WebSecuritySubmodules: assigns the security protection submodule for the exception rule. Use in conjunction with WebSecuritySubmodulesForException.</li><li>ManagedRules: assigns the specific managed rule for the exception rule. Use in conjunction with ManagedRulesForException.</li><li>ManagedRuleGroups: assigns the managed rule group for the exception rule. Use in conjunction with ManagedRuleGroupsForException.</li>
                      */
                     std::string m_skipScope;
                     bool m_skipScopeHasBeenSet;
 
                     /**
-                     * Skip the specific type of request. valid values: <li>SkipOnAllRequestFields: skip all requests;</li> <li>SkipOnSpecifiedRequestFields: skip specified request fields.</li> valid only when SkipScope is ManagedRules.
+                     * Skip the specific type of request. Valid values: <li>SkipOnAllRequestFields: skip all requests;</li><li>SkipOnSpecifiedRequestFields: skip specified request fields.</li>Valid only when SkipScope is ManagedRules or ManagedRuleGroups.
                      */
                     std::string m_skipOption;
                     bool m_skipOptionHasBeenSet;
 
                     /**
-                     * Specifies the security protection module for exception rules. valid only when SkipScope is WebSecurityModules. valid values: <li>websec-mod-managed-rules: managed rule.</li><li>websec-mod-rate-limiting: rate limit.</li><li>websec-mod-custom-rules: custom rule.</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection.</li><li>websec-mod-bot: bot management.</li>.
+                     * Security protection module for the exception rule. Valid only when SkipScope is WebSecurityModules. Valid values: <li>websec-mod-managed-rules: managed rule</li><li>websec-mod-rate-limiting: rate limit</li><li>websec-mod-custom-rules: custom rule</li><li>websec-mod-adaptive-control: adaptive frequency control, intelligent client filtering, slow attack protection, traffic theft protection</li><li>websec-mod-bot: bot management</li>
                      */
                     std::vector<std::string> m_webSecurityModulesForException;
                     bool m_webSecurityModulesForExceptionHasBeenSet;
 
                     /**
-                     * Specifies the managed rule for the exception rule. valid only when SkipScope is ManagedRules. cannot specify ManagedRuleGroupsForException at this time.
+                     * Specifies the security protection submodule for the exception rule. Valid only when SkipScope is WebSecuritySubmodules. Valid values: <ul><li>ManagedRules module features: <ul><li>websec-mod-managed-rules/managed-rule-groups: rule set;</li><li>websec-mod-managed-rules/frequent-scanning-protection: high frequency scan protection;</li></ul></li><li>RateLimitingRules module features: <ul><li>websec-mod-rate-limiting-rules: rate limiting rule;</li></ul></li><li>CustomRules module features: <ul><li>websec-mod-custom-rules: custom rule;</li></ul></li><li>HttpDDoSProtection module features: <ul><li>websec-mod-HTTP-DDoS-protection/adaptive-frequency-control: adaptive frequency control;</li><li>websec-mod-HTTP-DDoS-protection/client-filtering: intelligent client filtering;</li><li>websec-mod-HTTP-DDoS-protection/bandwidth-abuse-defense: traffic fraud protection;</li></ul></li><li>BotManagement module features: <ul><li>websec-mod-Bot-management/basic-feature: basic feature management;</li><li>websec-mod-Bot-management/ip-reputation: client profile analysis;</li><li>websec-mod-Bot-management/Bot-intelligence: intelligent Bot analysis;</li><li>websec-mod-Bot-management/custom-rules: custom rule;</li><li>websec-mod-Bot-management/browser-impersonation-detection: proactive feature recognition;</li><li>websec-mod-Bot-management/client-attestation-rules: client authentication;</li></ul></li><li>BotManagementLite module features: <ul><li>websec-mod-Bot-management-lite/ai-crawler-detection: ai crawler disposal;</li><li>websec-mod-Bot-management-lite/captcha-page-challenge: captcha page challenge.</li></ul></li></ul>
+                     */
+                    std::vector<std::string> m_webSecuritySubmodulesForException;
+                    bool m_webSecuritySubmodulesForExceptionHasBeenSet;
+
+                    /**
+                     * Specify the specific managed rule for the exception rule. This parameter is valid only when SkipScope is ManagedRules.
                      */
                     std::vector<std::string> m_managedRulesForException;
                     bool m_managedRulesForExceptionHasBeenSet;
 
                     /**
-                     * A managed rule group with designated exception rules is valid only when SkipScope is ManagedRules, and at this point you cannot specify ManagedRulesForException.
+                     * Managed rule group with specified exception rules. This parameter is valid only when SkipScope is ManagedRuleGroups.
                      */
                     std::vector<std::string> m_managedRuleGroupsForException;
                     bool m_managedRuleGroupsForExceptionHasBeenSet;
 
                     /**
-                     * Specify exception rules to skip request fields. valid only when SkipScope is ManagedRules and SkipOption is SkipOnSpecifiedRequestFields.
+                     * Configuration for specifying exception rules to skip specified request fields. This is valid only when SkipScope is ManagedRules or ManagedRuleGroups and SkipOption is SkipOnSpecifiedRequestFields.
                      */
                     std::vector<RequestFieldsForException> m_requestFieldsForException;
                     bool m_requestFieldsForExceptionHasBeenSet;
 
                     /**
-                     * Whether the exception rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+                     * Whether the exception rule is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
