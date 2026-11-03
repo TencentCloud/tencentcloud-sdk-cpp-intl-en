@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scheduled task ID, optional. If empty, a full query is performed.</p>
-                     * @return ScheduleId <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+                     * 获取<p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
+                     * @return ScheduleId <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
                      * 
                      */
                     std::string GetScheduleId() const;
 
                     /**
-                     * 设置<p>Scheduled task ID, optional. If empty, a full query is performed.</p>
-                     * @param _scheduleId <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+                     * 设置<p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
+                     * @param _scheduleId <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
                      * 
                      */
                     void SetScheduleId(const std::string& _scheduleId);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+                     * <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
                      */
                     std::string m_scheduleId;
                     bool m_scheduleIdHasBeenSet;

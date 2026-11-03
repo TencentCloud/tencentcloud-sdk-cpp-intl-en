@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User identity information of the AI assistant
+                * User identity information for the AI assistant
                 */
                 class AIScheduleUserIdentity : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account Uin</p>
-                     * @return Uin <p>Account Uin</p>
+                     * 获取<p>Account UIN.</p>
+                     * @return Uin <p>Account UIN.</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置<p>Account Uin</p>
-                     * @param _uin <p>Account Uin</p>
+                     * 设置<p>Account UIN.</p>
+                     * @param _uin <p>Account UIN.</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ChatIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
-                     * @return Channel <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+                     * 获取<p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
+                     * @return Channel <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
                      * 
                      */
                     std::string GetChannel() const;
 
                     /**
-                     * 设置<p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
-                     * @param _channel <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+                     * 设置<p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
+                     * @param _channel <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
                      * 
                      */
                     void SetChannel(const std::string& _channel);
@@ -202,7 +202,7 @@ namespace TencentCloud
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * <p>Account Uin</p>
+                     * <p>Account UIN.</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_chatIdHasBeenSet;
 
                     /**
-                     * <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+                     * <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
                      */
                     std::string m_channel;
                     bool m_channelHasBeenSet;

@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>ID of the AI scheduled task.</p>
-                     * @return ScheduleId <p>ID of the AI scheduled task.</p>
+                     * 获取<p>AI scheduled task ID.</p>
+                     * @return ScheduleId <p>AI scheduled task ID.</p>
                      * 
                      */
                     std::string GetScheduleId() const;
 
                     /**
-                     * 设置<p>ID of the AI scheduled task.</p>
-                     * @param _scheduleId <p>ID of the AI scheduled task.</p>
+                     * 设置<p>AI scheduled task ID.</p>
+                     * @param _scheduleId <p>AI scheduled task ID.</p>
                      * 
                      */
                     void SetScheduleId(const std::string& _scheduleId);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool PromptsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
-                     * @return Status <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+                     * 获取<p>Status. Value: 1 (enabled), 2 (disabled).</p>
+                     * @return Status <p>Status. Value: 1 (enabled), 2 (disabled).</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
-                     * @param _status <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+                     * 设置<p>Status. Value: 1 (enabled), 2 (disabled).</p>
+                     * @param _status <p>Status. Value: 1 (enabled), 2 (disabled).</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -303,7 +303,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>ID of the AI scheduled task.</p>
+                     * <p>AI scheduled task ID.</p>
                      */
                     std::string m_scheduleId;
                     bool m_scheduleIdHasBeenSet;
@@ -321,7 +321,7 @@ namespace TencentCloud
                     bool m_promptsHasBeenSet;
 
                     /**
-                     * <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+                     * <p>Status. Value: 1 (enabled), 2 (disabled).</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

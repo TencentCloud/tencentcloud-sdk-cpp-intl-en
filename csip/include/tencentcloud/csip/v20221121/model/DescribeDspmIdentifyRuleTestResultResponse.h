@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
-                     * @return IsMatch <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+                     * 获取<p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+                     * @return IsMatch <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
                      * 
                      */
                     bool GetIsMatch() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+                     * <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
                      */
                     bool m_isMatch;
                     bool m_isMatchHasBeenSet;

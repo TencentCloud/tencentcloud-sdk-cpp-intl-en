@@ -406,13 +406,13 @@ namespace TencentCloud
                     /**
                      * 获取When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
                      * @return OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
                      * 
                      */
@@ -421,13 +421,13 @@ Default value: required.
                     /**
                      * 设置When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
                      * @param _ocrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
                      * 
                      */
@@ -568,8 +568,8 @@ Default value: required.
                     /**
                      * When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
                      */
                     std::string m_ocrWaitPolicy;

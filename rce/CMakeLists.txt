@@ -15,17 +15,11 @@
 #
 
 set(rce_public_header
-  include/tencentcloud/rce/v20201103/RceClient.h
   include/tencentcloud/rce/v20260130/RceClient.h
+  include/tencentcloud/rce/v20201103/RceClient.h
   )
 
 set(rce_public_header_model
-  include/tencentcloud/rce/v20201103/model/DescribeRiskAssessmentRequest.h
-  include/tencentcloud/rce/v20201103/model/OutputRiskAssessmentExtraInfoPair.h
-  include/tencentcloud/rce/v20201103/model/OutputRiskAssessment.h
-  include/tencentcloud/rce/v20201103/model/InputBizCryptoData.h
-  include/tencentcloud/rce/v20201103/model/OutputRiskAssessmentInfo.h
-  include/tencentcloud/rce/v20201103/model/DescribeRiskAssessmentResponse.h
   include/tencentcloud/rce/v20260130/model/TaskEvent.h
   include/tencentcloud/rce/v20260130/model/DigitalOrder.h
   include/tencentcloud/rce/v20260130/model/Billing.h
@@ -92,17 +86,17 @@ set(rce_public_header_model
   include/tencentcloud/rce/v20260130/model/InvitationEvent.h
   include/tencentcloud/rce/v20260130/model/AssessRiskRequest.h
   include/tencentcloud/rce/v20260130/model/ScanCodeEvent.h
+  include/tencentcloud/rce/v20201103/model/DescribeRiskAssessmentRequest.h
+  include/tencentcloud/rce/v20201103/model/OutputRiskAssessmentExtraInfoPair.h
+  include/tencentcloud/rce/v20201103/model/OutputRiskAssessment.h
+  include/tencentcloud/rce/v20201103/model/InputBizCryptoData.h
+  include/tencentcloud/rce/v20201103/model/OutputRiskAssessmentInfo.h
+  include/tencentcloud/rce/v20201103/model/DescribeRiskAssessmentResponse.h
   )
 
 set(rce_src
-  src/v20201103/RceClient.cpp
   src/v20260130/RceClient.cpp
-  src/v20201103/model/DescribeRiskAssessmentRequest.cpp
-  src/v20201103/model/OutputRiskAssessmentExtraInfoPair.cpp
-  src/v20201103/model/OutputRiskAssessment.cpp
-  src/v20201103/model/InputBizCryptoData.cpp
-  src/v20201103/model/OutputRiskAssessmentInfo.cpp
-  src/v20201103/model/DescribeRiskAssessmentResponse.cpp
+  src/v20201103/RceClient.cpp
   src/v20260130/model/TaskEvent.cpp
   src/v20260130/model/DigitalOrder.cpp
   src/v20260130/model/Billing.cpp
@@ -169,6 +163,12 @@ set(rce_src
   src/v20260130/model/InvitationEvent.cpp
   src/v20260130/model/AssessRiskRequest.cpp
   src/v20260130/model/ScanCodeEvent.cpp
+  src/v20201103/model/DescribeRiskAssessmentRequest.cpp
+  src/v20201103/model/OutputRiskAssessmentExtraInfoPair.cpp
+  src/v20201103/model/OutputRiskAssessment.cpp
+  src/v20201103/model/InputBizCryptoData.cpp
+  src/v20201103/model/OutputRiskAssessmentInfo.cpp
+  src/v20201103/model/DescribeRiskAssessmentResponse.cpp
   )
 
 set(rce_include
@@ -197,9 +197,9 @@ target_link_libraries(rce
   core)
 
 #install(FILES ${rce_public_header}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/rce/v20260130)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/rce/v20201103)
 #install(FILES ${rce_public_header_model}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/rce/v20260130/model)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/rce/v20201103/model)
 install(DIRECTORY ${rce_include}
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
 
