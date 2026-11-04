@@ -125,6 +125,8 @@
 #include <tencentcloud/cam/v20190116/model/GetUserAppIdResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListAccessKeysRequest.h>
 #include <tencentcloud/cam/v20190116/model/ListAccessKeysResponse.h>
+#include <tencentcloud/cam/v20190116/model/ListAccountsRequest.h>
+#include <tencentcloud/cam/v20190116/model/ListAccountsResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedGroupPoliciesRequest.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedGroupPoliciesResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedRolePoliciesRequest.h>
@@ -356,6 +358,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListAccessKeysResponse> ListAccessKeysOutcome;
                 typedef std::future<ListAccessKeysOutcome> ListAccessKeysOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListAccessKeysRequest&, ListAccessKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAccessKeysAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListAccountsResponse> ListAccountsOutcome;
+                typedef std::future<ListAccountsOutcome> ListAccountsOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::ListAccountsRequest&, ListAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListAttachedGroupPoliciesResponse> ListAttachedGroupPoliciesOutcome;
                 typedef std::future<ListAttachedGroupPoliciesOutcome> ListAttachedGroupPoliciesOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListAttachedGroupPoliciesRequest&, ListAttachedGroupPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAttachedGroupPoliciesAsyncHandler;
@@ -914,6 +919,15 @@ Calling this API is a high-risk operation because the key cannot be recovered on
                 ListAccessKeysOutcome ListAccessKeys(const Model::ListAccessKeysRequest &request);
                 void ListAccessKeysAsync(const Model::ListAccessKeysRequest& request, const ListAccessKeysAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListAccessKeysOutcomeCallable ListAccessKeysCallable(const Model::ListAccessKeysRequest& request);
+
+                /**
+                 *Query all account lists.
+                 * @param req ListAccountsRequest
+                 * @return ListAccountsOutcome
+                 */
+                ListAccountsOutcome ListAccounts(const Model::ListAccountsRequest &request);
+                void ListAccountsAsync(const Model::ListAccountsRequest& request, const ListAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListAccountsOutcomeCallable ListAccountsCallable(const Model::ListAccountsRequest& request);
 
                 /**
                  *This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.

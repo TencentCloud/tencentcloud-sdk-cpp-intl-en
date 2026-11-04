@@ -1,0 +1,252 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/adp/v20260520/model/CreateReleaseRequest.h>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+
+using namespace TencentCloud::Adp::V20260520::Model;
+using namespace std;
+
+CreateReleaseRequest::CreateReleaseRequest() :
+    m_appIdHasBeenSet(false),
+    m_appShareAccessControlHasBeenSet(false),
+    m_channelIdListHasBeenSet(false),
+    m_corpShareConfigHasBeenSet(false),
+    m_descriptionHasBeenSet(false),
+    m_isDevToReleaseHasBeenSet(false),
+    m_isPublishAsTemplateHasBeenSet(false),
+    m_portalShareConfigHasBeenSet(false)
+{
+}
+
+string CreateReleaseRequest::ToJsonString() const
+{
+    rapidjson::Document d;
+    d.SetObject();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
+
+
+    if (m_appIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_appId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_appShareAccessControlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppShareAccessControl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_appShareAccessControl.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_channelIdListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ChannelIdList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_channelIdList.begin(); itr != m_channelIdList.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_corpShareConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CorpShareConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_corpShareConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isDevToReleaseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDevToRelease";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isDevToRelease, allocator);
+    }
+
+    if (m_isPublishAsTemplateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsPublishAsTemplate";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isPublishAsTemplate, allocator);
+    }
+
+    if (m_portalShareConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PortalShareConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_portalShareConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    d.Accept(writer);
+    return buffer.GetString();
+}
+
+
+string CreateReleaseRequest::GetAppId() const
+{
+    return m_appId;
+}
+
+void CreateReleaseRequest::SetAppId(const string& _appId)
+{
+    m_appId = _appId;
+    m_appIdHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::AppIdHasBeenSet() const
+{
+    return m_appIdHasBeenSet;
+}
+
+AppShareAccessControl CreateReleaseRequest::GetAppShareAccessControl() const
+{
+    return m_appShareAccessControl;
+}
+
+void CreateReleaseRequest::SetAppShareAccessControl(const AppShareAccessControl& _appShareAccessControl)
+{
+    m_appShareAccessControl = _appShareAccessControl;
+    m_appShareAccessControlHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::AppShareAccessControlHasBeenSet() const
+{
+    return m_appShareAccessControlHasBeenSet;
+}
+
+vector<string> CreateReleaseRequest::GetChannelIdList() const
+{
+    return m_channelIdList;
+}
+
+void CreateReleaseRequest::SetChannelIdList(const vector<string>& _channelIdList)
+{
+    m_channelIdList = _channelIdList;
+    m_channelIdListHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::ChannelIdListHasBeenSet() const
+{
+    return m_channelIdListHasBeenSet;
+}
+
+CorpShareConfig CreateReleaseRequest::GetCorpShareConfig() const
+{
+    return m_corpShareConfig;
+}
+
+void CreateReleaseRequest::SetCorpShareConfig(const CorpShareConfig& _corpShareConfig)
+{
+    m_corpShareConfig = _corpShareConfig;
+    m_corpShareConfigHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::CorpShareConfigHasBeenSet() const
+{
+    return m_corpShareConfigHasBeenSet;
+}
+
+string CreateReleaseRequest::GetDescription() const
+{
+    return m_description;
+}
+
+void CreateReleaseRequest::SetDescription(const string& _description)
+{
+    m_description = _description;
+    m_descriptionHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::DescriptionHasBeenSet() const
+{
+    return m_descriptionHasBeenSet;
+}
+
+bool CreateReleaseRequest::GetIsDevToRelease() const
+{
+    return m_isDevToRelease;
+}
+
+void CreateReleaseRequest::SetIsDevToRelease(const bool& _isDevToRelease)
+{
+    m_isDevToRelease = _isDevToRelease;
+    m_isDevToReleaseHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::IsDevToReleaseHasBeenSet() const
+{
+    return m_isDevToReleaseHasBeenSet;
+}
+
+bool CreateReleaseRequest::GetIsPublishAsTemplate() const
+{
+    return m_isPublishAsTemplate;
+}
+
+void CreateReleaseRequest::SetIsPublishAsTemplate(const bool& _isPublishAsTemplate)
+{
+    m_isPublishAsTemplate = _isPublishAsTemplate;
+    m_isPublishAsTemplateHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::IsPublishAsTemplateHasBeenSet() const
+{
+    return m_isPublishAsTemplateHasBeenSet;
+}
+
+PortalShareConfig CreateReleaseRequest::GetPortalShareConfig() const
+{
+    return m_portalShareConfig;
+}
+
+void CreateReleaseRequest::SetPortalShareConfig(const PortalShareConfig& _portalShareConfig)
+{
+    m_portalShareConfig = _portalShareConfig;
+    m_portalShareConfigHasBeenSet = true;
+}
+
+bool CreateReleaseRequest::PortalShareConfigHasBeenSet() const
+{
+    return m_portalShareConfigHasBeenSet;
+}
+
+

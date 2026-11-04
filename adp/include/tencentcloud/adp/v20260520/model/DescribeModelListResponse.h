@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_ADP_V20260520_MODEL_DESCRIBEMODELLISTRESPONSE_H_
+#define TENCENTCLOUD_ADP_V20260520_MODEL_DESCRIBEMODELLISTRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/adp/v20260520/model/Model.h>
+
+
+namespace TencentCloud
+{
+    namespace Adp
+    {
+        namespace V20260520
+        {
+            namespace Model
+            {
+                /**
+                * DescribeModelList response structure.
+                */
+                class DescribeModelListResponse : public AbstractModel
+                {
+                public:
+                    DescribeModelListResponse();
+                    ~DescribeModelListResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取<p>Model list</p>
+                     * @return ModelList <p>Model list</p>
+                     * 
+                     */
+                    std::vector<Model> GetModelList() const;
+
+                    /**
+                     * 判断参数 ModelList 是否已赋值
+                     * @return ModelList 是否已赋值
+                     * 
+                     */
+                    bool ModelListHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Total number of models</p>
+                     * @return TotalCount <p>Total number of models</p>
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Model list</p>
+                     */
+                    std::vector<Model> m_modelList;
+                    bool m_modelListHasBeenSet;
+
+                    /**
+                     * <p>Total number of models</p>
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_ADP_V20260520_MODEL_DESCRIBEMODELLISTRESPONSE_H_

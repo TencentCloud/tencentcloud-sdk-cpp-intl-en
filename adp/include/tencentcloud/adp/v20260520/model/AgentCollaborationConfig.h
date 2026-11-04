@@ -1,0 +1,138 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_ADP_V20260520_MODEL_AGENTCOLLABORATIONCONFIG_H_
+#define TENCENTCLOUD_ADP_V20260520_MODEL_AGENTCOLLABORATIONCONFIG_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Adp
+    {
+        namespace V20260520
+        {
+            namespace Model
+            {
+                /**
+                * Agent collaboration configuration
+                */
+                class AgentCollaborationConfig : public AbstractModel
+                {
+                public:
+                    AgentCollaborationConfig();
+                    ~AgentCollaborationConfig() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Collaboration mode. Enumeration values: 1: Free transfer: Agents can freely transmit tasks with each other. 2: Workflow orchestration: Collaboration based on predefined processes. 3: Plan-and-Execute: A collaboration mode with separate planning and execution.
+                     * @return AgentCollaborationMode Collaboration mode. Enumeration values: 1: Free transfer: Agents can freely transmit tasks with each other. 2: Workflow orchestration: Collaboration based on predefined processes. 3: Plan-and-Execute: A collaboration mode with separate planning and execution.
+                     * 
+                     */
+                    int64_t GetAgentCollaborationMode() const;
+
+                    /**
+                     * 设置Collaboration mode. Enumeration values: 1: Free transfer: Agents can freely transmit tasks with each other. 2: Workflow orchestration: Collaboration based on predefined processes. 3: Plan-and-Execute: A collaboration mode with separate planning and execution.
+                     * @param _agentCollaborationMode Collaboration mode. Enumeration values: 1: Free transfer: Agents can freely transmit tasks with each other. 2: Workflow orchestration: Collaboration based on predefined processes. 3: Plan-and-Execute: A collaboration mode with separate planning and execution.
+                     * 
+                     */
+                    void SetAgentCollaborationMode(const int64_t& _agentCollaborationMode);
+
+                    /**
+                     * 判断参数 AgentCollaborationMode 是否已赋值
+                     * @return AgentCollaborationMode 是否已赋值
+                     * 
+                     */
+                    bool AgentCollaborationModeHasBeenSet() const;
+
+                    /**
+                     * 获取Workflow ID.
+                     * @return WorkflowId Workflow ID.
+                     * 
+                     */
+                    std::string GetWorkflowId() const;
+
+                    /**
+                     * 设置Workflow ID.
+                     * @param _workflowId Workflow ID.
+                     * 
+                     */
+                    void SetWorkflowId(const std::string& _workflowId);
+
+                    /**
+                     * 判断参数 WorkflowId 是否已赋值
+                     * @return WorkflowId 是否已赋值
+                     * 
+                     */
+                    bool WorkflowIdHasBeenSet() const;
+
+                    /**
+                     * 获取Workflow name.
+                     * @return WorkflowName Workflow name.
+                     * 
+                     */
+                    std::string GetWorkflowName() const;
+
+                    /**
+                     * 设置Workflow name.
+                     * @param _workflowName Workflow name.
+                     * 
+                     */
+                    void SetWorkflowName(const std::string& _workflowName);
+
+                    /**
+                     * 判断参数 WorkflowName 是否已赋值
+                     * @return WorkflowName 是否已赋值
+                     * 
+                     */
+                    bool WorkflowNameHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Collaboration mode. Enumeration values: 1: Free transfer: Agents can freely transmit tasks with each other. 2: Workflow orchestration: Collaboration based on predefined processes. 3: Plan-and-Execute: A collaboration mode with separate planning and execution.
+                     */
+                    int64_t m_agentCollaborationMode;
+                    bool m_agentCollaborationModeHasBeenSet;
+
+                    /**
+                     * Workflow ID.
+                     */
+                    std::string m_workflowId;
+                    bool m_workflowIdHasBeenSet;
+
+                    /**
+                     * Workflow name.
+                     */
+                    std::string m_workflowName;
+                    bool m_workflowNameHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_ADP_V20260520_MODEL_AGENTCOLLABORATIONCONFIG_H_

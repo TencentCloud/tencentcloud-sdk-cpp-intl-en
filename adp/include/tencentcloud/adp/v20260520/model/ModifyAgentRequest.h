@@ -1,0 +1,163 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_ADP_V20260520_MODEL_MODIFYAGENTREQUEST_H_
+#define TENCENTCLOUD_ADP_V20260520_MODEL_MODIFYAGENTREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/adp/v20260520/model/AgentSpec.h>
+#include <tencentcloud/adp/v20260520/model/FieldMask.h>
+
+
+namespace TencentCloud
+{
+    namespace Adp
+    {
+        namespace V20260520
+        {
+            namespace Model
+            {
+                /**
+                * ModifyAgent request structure.
+                */
+                class ModifyAgentRequest : public AbstractModel
+                {
+                public:
+                    ModifyAgentRequest();
+                    ~ModifyAgentRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取<p>Application ID.</p>
+                     * @return AppId <p>Application ID.</p>
+                     * 
+                     */
+                    std::string GetAppId() const;
+
+                    /**
+                     * 设置<p>Application ID.</p>
+                     * @param _appId <p>Application ID.</p>
+                     * 
+                     */
+                    void SetAppId(const std::string& _appId);
+
+                    /**
+                     * 判断参数 AppId 是否已赋值
+                     * @return AppId 是否已赋值
+                     * 
+                     */
+                    bool AppIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Agent Id</p>
+                     * @return AgentId <p>Agent Id</p>
+                     * 
+                     */
+                    std::string GetAgentId() const;
+
+                    /**
+                     * 设置<p>Agent Id</p>
+                     * @param _agentId <p>Agent Id</p>
+                     * 
+                     */
+                    void SetAgentId(const std::string& _agentId);
+
+                    /**
+                     * 判断参数 AgentId 是否已赋值
+                     * @return AgentId 是否已赋值
+                     * 
+                     */
+                    bool AgentIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Information of the Agent after modification</p>
+                     * @return Agent <p>Information of the Agent after modification</p>
+                     * 
+                     */
+                    AgentSpec GetAgent() const;
+
+                    /**
+                     * 设置<p>Information of the Agent after modification</p>
+                     * @param _agent <p>Information of the Agent after modification</p>
+                     * 
+                     */
+                    void SetAgent(const AgentSpec& _agent);
+
+                    /**
+                     * 判断参数 Agent 是否已赋值
+                     * @return Agent 是否已赋值
+                     * 
+                     */
+                    bool AgentHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Field path that needs to be updated, for example ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
+                     * @return UpdateMask <p>Field path that needs to be updated, for example ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
+                     * 
+                     */
+                    FieldMask GetUpdateMask() const;
+
+                    /**
+                     * 设置<p>Field path that needs to be updated, for example ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
+                     * @param _updateMask <p>Field path that needs to be updated, for example ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
+                     * 
+                     */
+                    void SetUpdateMask(const FieldMask& _updateMask);
+
+                    /**
+                     * 判断参数 UpdateMask 是否已赋值
+                     * @return UpdateMask 是否已赋值
+                     * 
+                     */
+                    bool UpdateMaskHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Application ID.</p>
+                     */
+                    std::string m_appId;
+                    bool m_appIdHasBeenSet;
+
+                    /**
+                     * <p>Agent Id</p>
+                     */
+                    std::string m_agentId;
+                    bool m_agentIdHasBeenSet;
+
+                    /**
+                     * <p>Information of the Agent after modification</p>
+                     */
+                    AgentSpec m_agent;
+                    bool m_agentHasBeenSet;
+
+                    /**
+                     * <p>Field path that needs to be updated, for example ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
+                     */
+                    FieldMask m_updateMask;
+                    bool m_updateMaskHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_ADP_V20260520_MODEL_MODIFYAGENTREQUEST_H_

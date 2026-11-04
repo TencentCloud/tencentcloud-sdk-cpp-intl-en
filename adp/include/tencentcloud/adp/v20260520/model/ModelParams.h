@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Whether deep thinking is enabled</p>
-                     * @return DeepThinking <p>Whether deep thinking is enabled</p>
+                     * 获取<p>Whether to enable deep thinking</p>
+                     * @return DeepThinking <p>Whether to enable deep thinking</p>
                      * 
                      */
                     std::string GetDeepThinking() const;
 
                     /**
-                     * 设置<p>Whether deep thinking is enabled</p>
-                     * @param _deepThinking <p>Whether deep thinking is enabled</p>
+                     * 设置<p>Whether to enable deep thinking</p>
+                     * @param _deepThinking <p>Whether to enable deep thinking</p>
                      * 
                      */
                     void SetDeepThinking(const std::string& _deepThinking);
@@ -301,7 +301,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Whether deep thinking is enabled</p>
+                     * <p>Whether to enable deep thinking</p>
                      */
                     std::string m_deepThinking;
                     bool m_deepThinkingHasBeenSet;

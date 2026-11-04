@@ -101,8 +101,10 @@ namespace TencentCloud
                     bool PdfPageSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Angle 
+                     * 获取Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
+                     * @return Angle Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
                      * 
                      */
                     double GetAngle() const;
@@ -141,7 +143,8 @@ namespace TencentCloud
                     bool m_pdfPageSizeHasBeenSet;
 
                     /**
-                     * 
+                     * Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
                      */
                     double m_angle;
                     bool m_angleHasBeenSet;

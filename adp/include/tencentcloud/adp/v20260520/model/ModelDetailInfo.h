@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Model alias.
-                     * @return Alias Model alias.
+                     * 获取Model alias
+                     * @return Alias Model alias
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Model alias.
-                     * @param _alias Model alias.
+                     * 设置Model alias
+                     * @param _alias Model alias
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -134,7 +134,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Model alias.
+                     * Model alias
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;

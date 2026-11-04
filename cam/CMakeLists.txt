@@ -102,6 +102,7 @@ set(cam_public_header_model
   include/tencentcloud/cam/v20190116/model/AddUserRequest.h
   include/tencentcloud/cam/v20190116/model/UpdateAssumeRolePolicyRequest.h
   include/tencentcloud/cam/v20190116/model/LoginActionFlag.h
+  include/tencentcloud/cam/v20190116/model/ListAccountsResponse.h
   include/tencentcloud/cam/v20190116/model/DeleteRoleRequest.h
   include/tencentcloud/cam/v20190116/model/UpdateRoleConsoleLoginRequest.h
   include/tencentcloud/cam/v20190116/model/UpdateUserResponse.h
@@ -118,6 +119,7 @@ set(cam_public_header_model
   include/tencentcloud/cam/v20190116/model/UpdateSAMLProviderResponse.h
   include/tencentcloud/cam/v20190116/model/UpdateAccessKeyRequest.h
   include/tencentcloud/cam/v20190116/model/UpdateUserRequest.h
+  include/tencentcloud/cam/v20190116/model/ListAllUser.h
   include/tencentcloud/cam/v20190116/model/CreateSAMLProviderRequest.h
   include/tencentcloud/cam/v20190116/model/AttachPolicyInfo.h
   include/tencentcloud/cam/v20190116/model/ConsumeCustomMFATokenRequest.h
@@ -203,6 +205,7 @@ set(cam_public_header_model
   include/tencentcloud/cam/v20190116/model/PutRolePermissionsBoundaryResponse.h
   include/tencentcloud/cam/v20190116/model/SetMfaFlagRequest.h
   include/tencentcloud/cam/v20190116/model/ListCollaboratorsResponse.h
+  include/tencentcloud/cam/v20190116/model/ListAccountsRequest.h
   include/tencentcloud/cam/v20190116/model/ListAccessKeysResponse.h
   include/tencentcloud/cam/v20190116/model/GetSecurityLastUsedResponse.h
   include/tencentcloud/cam/v20190116/model/ListAttachedUserPoliciesRequest.h
@@ -297,6 +300,7 @@ set(cam_src
   src/v20190116/model/AddUserRequest.cpp
   src/v20190116/model/UpdateAssumeRolePolicyRequest.cpp
   src/v20190116/model/LoginActionFlag.cpp
+  src/v20190116/model/ListAccountsResponse.cpp
   src/v20190116/model/DeleteRoleRequest.cpp
   src/v20190116/model/UpdateRoleConsoleLoginRequest.cpp
   src/v20190116/model/UpdateUserResponse.cpp
@@ -313,6 +317,7 @@ set(cam_src
   src/v20190116/model/UpdateSAMLProviderResponse.cpp
   src/v20190116/model/UpdateAccessKeyRequest.cpp
   src/v20190116/model/UpdateUserRequest.cpp
+  src/v20190116/model/ListAllUser.cpp
   src/v20190116/model/CreateSAMLProviderRequest.cpp
   src/v20190116/model/AttachPolicyInfo.cpp
   src/v20190116/model/ConsumeCustomMFATokenRequest.cpp
@@ -398,6 +403,7 @@ set(cam_src
   src/v20190116/model/PutRolePermissionsBoundaryResponse.cpp
   src/v20190116/model/SetMfaFlagRequest.cpp
   src/v20190116/model/ListCollaboratorsResponse.cpp
+  src/v20190116/model/ListAccountsRequest.cpp
   src/v20190116/model/ListAccessKeysResponse.cpp
   src/v20190116/model/GetSecurityLastUsedResponse.cpp
   src/v20190116/model/ListAttachedUserPoliciesRequest.cpp

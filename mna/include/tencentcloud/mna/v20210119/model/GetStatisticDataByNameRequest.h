@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Device name. If not specified, pass "-1".
-                     * @return DeviceName Device name. If not specified, pass "-1".
+                     * 获取<p>Device name. If no device is specified, you can pass "-1"</p>
+                     * @return DeviceName <p>Device name. If no device is specified, you can pass "-1"</p>
                      * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
-                     * 设置Device name. If not specified, pass "-1".
-                     * @param _deviceName Device name. If not specified, pass "-1".
+                     * 设置<p>Device name. If no device is specified, you can pass "-1"</p>
+                     * @param _deviceName <p>Device name. If no device is specified, you can pass "-1"</p>
                      * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DeviceNameHasBeenSet() const;
 
                     /**
-                     * 获取Start time of statistics (seconds).
-                     * @return BeginTime Start time of statistics (seconds).
+                     * 获取<p>Start time of statistics, unit: s</p>
+                     * @return BeginTime <p>Start time of statistics, unit: s</p>
                      * 
                      */
                     int64_t GetBeginTime() const;
 
                     /**
-                     * 设置Start time of statistics (seconds).
-                     * @param _beginTime Start time of statistics (seconds).
+                     * 设置<p>Start time of statistics, unit: s</p>
+                     * @param _beginTime <p>Start time of statistics, unit: s</p>
                      * 
                      */
                     void SetBeginTime(const int64_t& _beginTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Statistics end time (s).
-                     * @return EndTime Statistics end time (s).
+                     * 获取<p>Statistics end time, unit: s</p>
+                     * @return EndTime <p>Statistics end time, unit: s</p>
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置Statistics end time (s).
-                     * @param _endTime Statistics end time (s).
+                     * 设置<p>Statistics end time, unit: s</p>
+                     * @param _endTime <p>Statistics end time, unit: s</p>
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -106,23 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Aggregation granularity:
-Hourly statistics
-2: Daily statistics
-                     * @return TimeGranularity Aggregation granularity:
-Hourly statistics
-2: Daily statistics
+                     * 获取<p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
+                     * @return TimeGranularity <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
                      * 
                      */
                     int64_t GetTimeGranularity() const;
 
                     /**
-                     * 设置Aggregation granularity:
-Hourly statistics
-2: Daily statistics
-                     * @param _timeGranularity Aggregation granularity:
-Hourly statistics
-2: Daily statistics
+                     * 设置<p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
+                     * @param _timeGranularity <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
                      * 
                      */
                     void SetTimeGranularity(const int64_t& _timeGranularity);
@@ -135,15 +127,15 @@ Hourly statistics
                     bool TimeGranularityHasBeenSet() const;
 
                     /**
-                     * 获取Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
-                     * @return AccessRegion Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
+                     * 获取<p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
+                     * @return AccessRegion <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
                      * 
                      */
                     std::string GetAccessRegion() const;
 
                     /**
-                     * 设置Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
-                     * @param _accessRegion Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
+                     * 设置<p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
+                     * @param _accessRegion <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
                      * 
                      */
                     void SetAccessRegion(const std::string& _accessRegion);
@@ -156,15 +148,15 @@ Hourly statistics
                     bool AccessRegionHasBeenSet() const;
 
                     /**
-                     * 获取Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
-                     * @return GatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+                     * 获取<p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
+                     * @return GatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
                      * 
                      */
                     int64_t GetGatewayType() const;
 
                     /**
-                     * 设置Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
-                     * @param _gatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+                     * 设置<p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
+                     * @param _gatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
                      * 
                      */
                     void SetGatewayType(const int64_t& _gatewayType);
@@ -177,15 +169,15 @@ Hourly statistics
                     bool GatewayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
-                     * @return DeviceList Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
+                     * 获取<p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
+                     * @return DeviceList <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
                      * 
                      */
                     std::vector<std::string> GetDeviceList() const;
 
                     /**
-                     * 设置Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
-                     * @param _deviceList Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
+                     * 设置<p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
+                     * @param _deviceList <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
                      * 
                      */
                     void SetDeviceList(const std::vector<std::string>& _deviceList);
@@ -198,15 +190,15 @@ Hourly statistics
                     bool DeviceListHasBeenSet() const;
 
                     /**
-                     * 获取Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
-                     * @return GroupId Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
+                     * 获取<p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
+                     * @return GroupId <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
-                     * @param _groupId Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
+                     * 设置<p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
+                     * @param _groupId <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -219,15 +211,15 @@ Hourly statistics
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
-                     * @return MpApplicationId Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+                     * 获取<p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
+                     * @return MpApplicationId <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
                      * 
                      */
                     std::string GetMpApplicationId() const;
 
                     /**
-                     * 设置Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
-                     * @param _mpApplicationId Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+                     * 设置<p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
+                     * @param _mpApplicationId <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
                      * 
                      */
                     void SetMpApplicationId(const std::string& _mpApplicationId);
@@ -242,57 +234,55 @@ Hourly statistics
                 private:
 
                     /**
-                     * Device name. If not specified, pass "-1".
+                     * <p>Device name. If no device is specified, you can pass "-1"</p>
                      */
                     std::string m_deviceName;
                     bool m_deviceNameHasBeenSet;
 
                     /**
-                     * Start time of statistics (seconds).
+                     * <p>Start time of statistics, unit: s</p>
                      */
                     int64_t m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * Statistics end time (s).
+                     * <p>Statistics end time, unit: s</p>
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Aggregation granularity:
-Hourly statistics
-2: Daily statistics
+                     * <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
                      */
                     int64_t m_timeGranularity;
                     bool m_timeGranularityHasBeenSet;
 
                     /**
-                     * Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
+                     * <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
                      */
                     std::string m_accessRegion;
                     bool m_accessRegionHasBeenSet;
 
                     /**
-                     * Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+                     * <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
                      */
                     int64_t m_gatewayType;
                     bool m_gatewayTypeHasBeenSet;
 
                     /**
-                     * Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
+                     * <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
                      */
                     std::vector<std::string> m_deviceList;
                     bool m_deviceListHasBeenSet;
 
                     /**
-                     * Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
+                     * <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+                     * <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
                      */
                     std::string m_mpApplicationId;
                     bool m_mpApplicationIdHasBeenSet;
