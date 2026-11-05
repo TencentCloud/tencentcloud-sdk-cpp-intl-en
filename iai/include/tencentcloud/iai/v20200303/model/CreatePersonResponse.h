@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of face image.
-                     * @return FaceId Unique ID of face image.
+                     * 获取<p>Unique ID of the face image.</p>
+                     * @return FaceId <p>Unique ID of the face image.</p>
                      * 
                      */
                     std::string GetFaceId() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool FaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Position of detected face frame.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FaceRect Position of detected face frame.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Position of the detected face frame.</p>
+                     * @return FaceRect <p>Position of the detected face frame.</p>
                      * 
                      */
                     FaceRect GetFaceRect() const;
@@ -75,10 +73,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FaceRectHasBeenSet() const;
 
                     /**
-                     * 获取`PersonId` of suspected duplicate person. 
-This parameter is meaningful only if the `UniquePersonControl` parameter is not 0 and there is a suspected duplicate person in the group.
-                     * @return SimilarPersonId `PersonId` of suspected duplicate person. 
-This parameter is meaningful only if the `UniquePersonControl` parameter is not 0 and there is a suspected duplicate person in the group.
+                     * 获取<p>PersonId of the suspected duplicate person. </p><ul><li>This parameter is meaningful only when the UniquePersonControl parameter is not 0 and there is a suspected duplicate person in the person library.</li></ul>
+                     * @return SimilarPersonId <p>PersonId of the suspected duplicate person. </p><ul><li>This parameter is meaningful only when the UniquePersonControl parameter is not 0 and there is a suspected duplicate person in the person library.</li></ul>
                      * 
                      */
                     std::string GetSimilarPersonId() const;
@@ -91,8 +87,8 @@ This parameter is meaningful only if the `UniquePersonControl` parameter is not 
                     bool SimilarPersonIdHasBeenSet() const;
 
                     /**
-                     * 获取Algorithm model version used for face recognition.
-                     * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 获取<p>Algorithm model version used for face recognition.</p>
+                     * @return FaceModelVersion <p>Algorithm model version used for face recognition.</p>
                      * 
                      */
                     std::string GetFaceModelVersion() const;
@@ -107,27 +103,25 @@ This parameter is meaningful only if the `UniquePersonControl` parameter is not 
                 private:
 
                     /**
-                     * Unique ID of face image.
+                     * <p>Unique ID of the face image.</p>
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;
 
                     /**
-                     * Position of detected face frame.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Position of the detected face frame.</p>
                      */
                     FaceRect m_faceRect;
                     bool m_faceRectHasBeenSet;
 
                     /**
-                     * `PersonId` of suspected duplicate person. 
-This parameter is meaningful only if the `UniquePersonControl` parameter is not 0 and there is a suspected duplicate person in the group.
+                     * <p>PersonId of the suspected duplicate person. </p><ul><li>This parameter is meaningful only when the UniquePersonControl parameter is not 0 and there is a suspected duplicate person in the person library.</li></ul>
                      */
                     std::string m_similarPersonId;
                     bool m_similarPersonIdHasBeenSet;
 
                     /**
-                     * Algorithm model version used for face recognition.
+                     * <p>Algorithm model version used for face recognition.</p>
                      */
                     std::string m_faceModelVersion;
                     bool m_faceModelVersionHasBeenSet;

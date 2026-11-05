@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recognition result.
-                     * @return Results Recognition result.
+                     * 获取<p>Recognition result.</p>
+                     * @return Results <p>Recognition result.</p>
                      * 
                      */
                     std::vector<Result> GetResults() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ResultsHasBeenSet() const;
 
                     /**
-                     * 获取Number of faces included in searched groups.
-                     * @return FaceNum Number of faces included in searched groups.
+                     * 获取<p>Number of faces in the searched group.</p>
+                     * @return FaceNum <p>Number of faces in the searched group.</p>
                      * 
                      */
                     uint64_t GetFaceNum() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool FaceNumHasBeenSet() const;
 
                     /**
-                     * 获取Algorithm model version used for face recognition.
-                     * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 获取<p>Algorithm model version used for face recognition.</p>
+                     * @return FaceModelVersion <p>Algorithm model version used for face recognition.</p>
                      * 
                      */
                     std::string GetFaceModelVersion() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Recognition result.
+                     * <p>Recognition result.</p>
                      */
                     std::vector<Result> m_results;
                     bool m_resultsHasBeenSet;
 
                     /**
-                     * Number of faces included in searched groups.
+                     * <p>Number of faces in the searched group.</p>
                      */
                     uint64_t m_faceNum;
                     bool m_faceNumHasBeenSet;
 
                     /**
-                     * Algorithm model version used for face recognition.
+                     * <p>Algorithm model version used for face recognition.</p>
                      */
                     std::string m_faceModelVersion;
                     bool m_faceModelVersionHasBeenSet;

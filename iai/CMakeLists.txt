@@ -23,7 +23,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/Eye.h
   include/tencentcloud/iai/v20200303/model/Candidate.h
   include/tencentcloud/iai/v20200303/model/SearchFacesReturnsByGroupRequest.h
-  include/tencentcloud/iai/v20200303/model/GetGroupInfoResponse.h
+  include/tencentcloud/iai/v20200303/model/Encryption.h
   include/tencentcloud/iai/v20200303/model/DeletePersonRequest.h
   include/tencentcloud/iai/v20200303/model/ModifyGroupResponse.h
   include/tencentcloud/iai/v20200303/model/SearchPersonsReturnsByGroupResponse.h
@@ -33,7 +33,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/ModifyPersonGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/GetGroupListResponse.h
   include/tencentcloud/iai/v20200303/model/GroupInfo.h
-  include/tencentcloud/iai/v20200303/model/GetPersonListResponse.h
+  include/tencentcloud/iai/v20200303/model/GetGroupInfoResponse.h
   include/tencentcloud/iai/v20200303/model/Hat.h
   include/tencentcloud/iai/v20200303/model/FaceQualityCompleteness.h
   include/tencentcloud/iai/v20200303/model/FaceAttributesInfo.h
@@ -79,6 +79,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/GetGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/FaceDetailInfo.h
   include/tencentcloud/iai/v20200303/model/FaceHairAttributesInfo.h
+  include/tencentcloud/iai/v20200303/model/GetPersonListResponse.h
   include/tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateResponse.h
   include/tencentcloud/iai/v20200303/model/AnalyzeFaceRequest.h
   include/tencentcloud/iai/v20200303/model/Point.h
@@ -109,7 +110,7 @@ set(iai_src
   src/v20200303/model/Eye.cpp
   src/v20200303/model/Candidate.cpp
   src/v20200303/model/SearchFacesReturnsByGroupRequest.cpp
-  src/v20200303/model/GetGroupInfoResponse.cpp
+  src/v20200303/model/Encryption.cpp
   src/v20200303/model/DeletePersonRequest.cpp
   src/v20200303/model/ModifyGroupResponse.cpp
   src/v20200303/model/SearchPersonsReturnsByGroupResponse.cpp
@@ -119,7 +120,7 @@ set(iai_src
   src/v20200303/model/ModifyPersonGroupInfoRequest.cpp
   src/v20200303/model/GetGroupListResponse.cpp
   src/v20200303/model/GroupInfo.cpp
-  src/v20200303/model/GetPersonListResponse.cpp
+  src/v20200303/model/GetGroupInfoResponse.cpp
   src/v20200303/model/Hat.cpp
   src/v20200303/model/FaceQualityCompleteness.cpp
   src/v20200303/model/FaceAttributesInfo.cpp
@@ -165,6 +166,7 @@ set(iai_src
   src/v20200303/model/GetGroupInfoRequest.cpp
   src/v20200303/model/FaceDetailInfo.cpp
   src/v20200303/model/FaceHairAttributesInfo.cpp
+  src/v20200303/model/GetPersonListResponse.cpp
   src/v20200303/model/DetectLiveFaceAccurateResponse.cpp
   src/v20200303/model/AnalyzeFaceRequest.cpp
   src/v20200303/model/Point.cpp

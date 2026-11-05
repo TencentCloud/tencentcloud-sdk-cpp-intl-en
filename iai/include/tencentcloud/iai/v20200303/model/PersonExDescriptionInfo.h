@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom description field of the person to be modified, which is a `key-value` pair.
+                * Content of the person description field to be modified, key-value
                 */
                 class PersonExDescriptionInfo : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PersonExDescriptionIndex Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Person description field Index, starts from 0.
+                     * @return PersonExDescriptionIndex Person description field Index, starts from 0.
                      * 
                      */
                     uint64_t GetPersonExDescriptionIndex() const;
 
                     /**
-                     * 设置Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _personExDescriptionIndex Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Person description field Index, starts from 0.
+                     * @param _personExDescriptionIndex Person description field Index, starts from 0.
                      * 
                      */
                     void SetPersonExDescriptionIndex(const uint64_t& _personExDescriptionIndex);
@@ -72,15 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PersonExDescriptionIndexHasBeenSet() const;
 
                     /**
-                     * 获取Content of the person description field to be updated
-                     * @return PersonExDescription Content of the person description field to be updated
+                     * 获取Person description field content that needs to be updated.
+                     * @return PersonExDescription Person description field content that needs to be updated.
                      * 
                      */
                     std::string GetPersonExDescription() const;
 
                     /**
-                     * 设置Content of the person description field to be updated
-                     * @param _personExDescription Content of the person description field to be updated
+                     * 设置Person description field content that needs to be updated.
+                     * @param _personExDescription Person description field content that needs to be updated.
                      * 
                      */
                     void SetPersonExDescription(const std::string& _personExDescription);
@@ -95,14 +91,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Person description field Index, starts from 0.
                      */
                     uint64_t m_personExDescriptionIndex;
                     bool m_personExDescriptionIndexHasBeenSet;
 
                     /**
-                     * Content of the person description field to be updated
+                     * Person description field content that needs to be updated.
                      */
                     std::string m_personExDescription;
                     bool m_personExDescriptionHasBeenSet;

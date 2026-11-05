@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recognition result.
-                     * @return Results Recognition result.
+                     * 获取<p>Recognition result.</p>
+                     * @return Results <p>Recognition result.</p>
                      * 
                      */
                     std::vector<Result> GetResults() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ResultsHasBeenSet() const;
 
                     /**
-                     * 获取Number of the persons included in searched groups. If the quality of all faces in the input image does not meet the requirement, 0 will be returned.
-                     * @return PersonNum Number of the persons included in searched groups. If the quality of all faces in the input image does not meet the requirement, 0 will be returned.
+                     * 获取<p>Number of personnel included in the searched group. If all faces in the input image fail to meet the quality requirement, 0 is returned.</p>
+                     * @return PersonNum <p>Number of personnel included in the searched group. If all faces in the input image fail to meet the quality requirement, 0 is returned.</p>
                      * 
                      */
                     uint64_t GetPersonNum() const;
@@ -73,10 +73,8 @@ namespace TencentCloud
                     bool PersonNumHasBeenSet() const;
 
                     /**
-                     * 获取Algorithm model version used for face recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FaceModelVersion Algorithm model version used for face recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Algorithm model version used for face recognition.</p>
+                     * @return FaceModelVersion <p>Algorithm model version used for face recognition.</p>
                      * 
                      */
                     std::string GetFaceModelVersion() const;
@@ -91,20 +89,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Recognition result.
+                     * <p>Recognition result.</p>
                      */
                     std::vector<Result> m_results;
                     bool m_resultsHasBeenSet;
 
                     /**
-                     * Number of the persons included in searched groups. If the quality of all faces in the input image does not meet the requirement, 0 will be returned.
+                     * <p>Number of personnel included in the searched group. If all faces in the input image fail to meet the quality requirement, 0 is returned.</p>
                      */
                     uint64_t m_personNum;
                     bool m_personNumHasBeenSet;
 
                     /**
-                     * Algorithm model version used for face recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Algorithm model version used for face recognition.</p>
                      */
                     std::string m_faceModelVersion;
                     bool m_faceModelVersionHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face recognition result
+                * Recognition result of the human face
                 */
                 class Result : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Most matching candidate recognized
-                     * @return Candidates Most matching candidate recognized
+                     * 获取The most similar candidate identified.
+                     * @return Candidates The most similar candidate identified.
                      * 
                      */
                     std::vector<Candidate> GetCandidates() const;
 
                     /**
-                     * 设置Most matching candidate recognized
-                     * @param _candidates Most matching candidate recognized
+                     * 设置The most similar candidate identified.
+                     * @param _candidates The most similar candidate identified.
                      * 
                      */
                     void SetCandidates(const std::vector<Candidate>& _candidates);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool CandidatesHasBeenSet() const;
 
                     /**
-                     * 获取Position of detected face frame
-                     * @return FaceRect Position of detected face frame
+                     * 获取Face bounding box position detected.
+                     * @return FaceRect Face bounding box position detected.
                      * 
                      */
                     FaceRect GetFaceRect() const;
 
                     /**
-                     * 设置Position of detected face frame
-                     * @param _faceRect Position of detected face frame
+                     * 设置Face bounding box position detected.
+                     * @param _faceRect Face bounding box position detected.
                      * 
                      */
                     void SetFaceRect(const FaceRect& _faceRect);
@@ -91,15 +91,23 @@ namespace TencentCloud
                     bool FaceRectHasBeenSet() const;
 
                     /**
-                     * 获取The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
-                     * @return RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * 获取Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
+                     * @return RetCode Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
                      * 
                      */
                     int64_t GetRetCode() const;
 
                     /**
-                     * 设置The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
-                     * @param _retCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * 设置Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
+                     * @param _retCode Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
                      * 
                      */
                     void SetRetCode(const int64_t& _retCode);
@@ -114,19 +122,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Most matching candidate recognized
+                     * The most similar candidate identified.
                      */
                     std::vector<Candidate> m_candidates;
                     bool m_candidatesHasBeenSet;
 
                     /**
-                     * Position of detected face frame
+                     * Face bounding box position detected.
                      */
                     FaceRect m_faceRect;
                     bool m_faceRectHasBeenSet;
 
                     /**
-                     * The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
                      */
                     int64_t m_retCode;
                     bool m_retCodeHasBeenSet;

@@ -129,30 +129,50 @@
 #include <tencentcloud/adp/v20260520/model/DescribeAppTriggerSummaryListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeAuditLogListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeAuditLogListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeAuditLogMetaRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeAuditLogMetaResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeCategoryListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeCategoryListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeChannelRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeChannelResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeChannelListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeChannelListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConcurrencyLimitDetailListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConcurrencyLimitDetailListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConflictQARequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConflictQAResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConflictQASummaryListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConflictQASummaryListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeConsumptionDetailListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeConsumptionDetailListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConversationRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConversationResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConversationListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConversationListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConversationMessageListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeConversationMessageListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeDocRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeDocResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeDocSummaryListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeDocSummaryListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeKBRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeKBResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeKBSummaryListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeKBSummaryListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeLabelRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeLabelResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeLabelSummaryListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeLabelSummaryListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeLatestReleaseRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeLatestReleaseResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeMetricOverviewListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeMetricOverviewListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeModelListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeModelListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeMsgRecordCategoryListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeMsgRecordCategoryListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeMsgRecordListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeMsgRecordListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeNodeBatchRunRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeNodeBatchRunResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeNodeRunDetailRequest.h>
@@ -169,8 +189,12 @@
 #include <tencentcloud/adp/v20260520/model/DescribeReleaseListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeReleaseSummaryRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeReleaseSummaryResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeResourceSummaryRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeResourceSummaryResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSkillCategoryListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSkillCategoryListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeSkillDetailRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeSkillDetailResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSkillReferenceListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSkillReferenceListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSkillSummaryListRequest.h>
@@ -179,6 +203,8 @@
 #include <tencentcloud/adp/v20260520/model/DescribeSpaceListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSystemVariableListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeSystemVariableListResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeUsageDetailListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeUsageDetailListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeUsageSummaryListRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeUsageSummaryListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeVariableRequest.h>
@@ -187,44 +213,82 @@
 #include <tencentcloud/adp/v20260520/model/DescribeVariableListResponse.h>
 #include <tencentcloud/adp/v20260520/model/DescribeWorkflowRunRequest.h>
 #include <tencentcloud/adp/v20260520/model/DescribeWorkflowRunResponse.h>
+#include <tencentcloud/adp/v20260520/model/DescribeWorkflowRunSummaryListRequest.h>
+#include <tencentcloud/adp/v20260520/model/DescribeWorkflowRunSummaryListResponse.h>
 #include <tencentcloud/adp/v20260520/model/ExportQARequest.h>
 #include <tencentcloud/adp/v20260520/model/ExportQAResponse.h>
+#include <tencentcloud/adp/v20260520/model/FavoritePluginRequest.h>
+#include <tencentcloud/adp/v20260520/model/FavoritePluginResponse.h>
+#include <tencentcloud/adp/v20260520/model/FavoriteSkillRequest.h>
+#include <tencentcloud/adp/v20260520/model/FavoriteSkillResponse.h>
+#include <tencentcloud/adp/v20260520/model/ImportDocListRequest.h>
+#include <tencentcloud/adp/v20260520/model/ImportDocListResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyAgentRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyAgentResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyAppRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyAppResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyAppTriggerRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyAppTriggerResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifyCategoryRequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifyCategoryResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifyChannelRequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifyChannelResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifyConflictQARequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifyConflictQAResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyConversationRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyConversationResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifyDocRequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifyDocResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyDocListRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyDocListResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyKBRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyKBResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyLabelRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyLabelResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifyMsgRecordCategoryRequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifyMsgRecordCategoryResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifyPluginRequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifyPluginResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyQARequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyQAResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyQAListRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyQAListResponse.h>
+#include <tencentcloud/adp/v20260520/model/ModifySkillRequest.h>
+#include <tencentcloud/adp/v20260520/model/ModifySkillResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifySpaceRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifySpaceResponse.h>
 #include <tencentcloud/adp/v20260520/model/ModifyVariableRequest.h>
 #include <tencentcloud/adp/v20260520/model/ModifyVariableResponse.h>
 #include <tencentcloud/adp/v20260520/model/PauseAppTriggerRequest.h>
 #include <tencentcloud/adp/v20260520/model/PauseAppTriggerResponse.h>
+#include <tencentcloud/adp/v20260520/model/ReadMCPResourceRequest.h>
+#include <tencentcloud/adp/v20260520/model/ReadMCPResourceResponse.h>
 #include <tencentcloud/adp/v20260520/model/ReleaseSkillRequest.h>
 #include <tencentcloud/adp/v20260520/model/ReleaseSkillResponse.h>
 #include <tencentcloud/adp/v20260520/model/ResetConversationRequest.h>
 #include <tencentcloud/adp/v20260520/model/ResetConversationResponse.h>
+#include <tencentcloud/adp/v20260520/model/ResumeAppTriggerRequest.h>
+#include <tencentcloud/adp/v20260520/model/ResumeAppTriggerResponse.h>
+#include <tencentcloud/adp/v20260520/model/ResumeWorkflowRunRequest.h>
+#include <tencentcloud/adp/v20260520/model/ResumeWorkflowRunResponse.h>
 #include <tencentcloud/adp/v20260520/model/RetryReleaseRequest.h>
 #include <tencentcloud/adp/v20260520/model/RetryReleaseResponse.h>
 #include <tencentcloud/adp/v20260520/model/RollbackReleaseRequest.h>
 #include <tencentcloud/adp/v20260520/model/RollbackReleaseResponse.h>
 #include <tencentcloud/adp/v20260520/model/RunAppTriggerNowRequest.h>
 #include <tencentcloud/adp/v20260520/model/RunAppTriggerNowResponse.h>
+#include <tencentcloud/adp/v20260520/model/SaveWorkflowDebugContextRequest.h>
+#include <tencentcloud/adp/v20260520/model/SaveWorkflowDebugContextResponse.h>
+#include <tencentcloud/adp/v20260520/model/SaveWorkflowToolNodeOutputRequest.h>
+#include <tencentcloud/adp/v20260520/model/SaveWorkflowToolNodeOutputResponse.h>
 #include <tencentcloud/adp/v20260520/model/SearchKnowledgeRequest.h>
 #include <tencentcloud/adp/v20260520/model/SearchKnowledgeResponse.h>
+#include <tencentcloud/adp/v20260520/model/StopWorkflowRunListRequest.h>
+#include <tencentcloud/adp/v20260520/model/StopWorkflowRunListResponse.h>
+#include <tencentcloud/adp/v20260520/model/UnfavoritePluginRequest.h>
+#include <tencentcloud/adp/v20260520/model/UnfavoritePluginResponse.h>
+#include <tencentcloud/adp/v20260520/model/UnfavoriteSkillRequest.h>
+#include <tencentcloud/adp/v20260520/model/UnfavoriteSkillResponse.h>
 
 
 namespace TencentCloud
@@ -398,9 +462,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAuditLogListResponse> DescribeAuditLogListOutcome;
                 typedef std::future<DescribeAuditLogListOutcome> DescribeAuditLogListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeAuditLogListRequest&, DescribeAuditLogListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditLogListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditLogMetaResponse> DescribeAuditLogMetaOutcome;
+                typedef std::future<DescribeAuditLogMetaOutcome> DescribeAuditLogMetaOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeAuditLogMetaRequest&, DescribeAuditLogMetaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditLogMetaAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCategoryListResponse> DescribeCategoryListOutcome;
                 typedef std::future<DescribeCategoryListOutcome> DescribeCategoryListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeCategoryListRequest&, DescribeCategoryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCategoryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeChannelResponse> DescribeChannelOutcome;
+                typedef std::future<DescribeChannelOutcome> DescribeChannelOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeChannelRequest&, DescribeChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeChannelListResponse> DescribeChannelListOutcome;
+                typedef std::future<DescribeChannelListOutcome> DescribeChannelListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeChannelListRequest&, DescribeChannelListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeChannelListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConcurrencyLimitDetailListResponse> DescribeConcurrencyLimitDetailListOutcome;
                 typedef std::future<DescribeConcurrencyLimitDetailListOutcome> DescribeConcurrencyLimitDetailListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeConcurrencyLimitDetailListRequest&, DescribeConcurrencyLimitDetailListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConcurrencyLimitDetailListAsyncHandler;
@@ -410,6 +483,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConflictQASummaryListResponse> DescribeConflictQASummaryListOutcome;
                 typedef std::future<DescribeConflictQASummaryListOutcome> DescribeConflictQASummaryListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeConflictQASummaryListRequest&, DescribeConflictQASummaryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConflictQASummaryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeConsumptionDetailListResponse> DescribeConsumptionDetailListOutcome;
+                typedef std::future<DescribeConsumptionDetailListOutcome> DescribeConsumptionDetailListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeConsumptionDetailListRequest&, DescribeConsumptionDetailListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConsumptionDetailListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConversationResponse> DescribeConversationOutcome;
                 typedef std::future<DescribeConversationOutcome> DescribeConversationOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeConversationRequest&, DescribeConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConversationAsyncHandler;
@@ -419,6 +495,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConversationMessageListResponse> DescribeConversationMessageListOutcome;
                 typedef std::future<DescribeConversationMessageListOutcome> DescribeConversationMessageListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeConversationMessageListRequest&, DescribeConversationMessageListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConversationMessageListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDocResponse> DescribeDocOutcome;
+                typedef std::future<DescribeDocOutcome> DescribeDocOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeDocRequest&, DescribeDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDocSummaryListResponse> DescribeDocSummaryListOutcome;
+                typedef std::future<DescribeDocSummaryListOutcome> DescribeDocSummaryListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeDocSummaryListRequest&, DescribeDocSummaryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDocSummaryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeKBResponse> DescribeKBOutcome;
+                typedef std::future<DescribeKBOutcome> DescribeKBOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeKBRequest&, DescribeKBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKBAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeKBSummaryListResponse> DescribeKBSummaryListOutcome;
+                typedef std::future<DescribeKBSummaryListOutcome> DescribeKBSummaryListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeKBSummaryListRequest&, DescribeKBSummaryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKBSummaryListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLabelResponse> DescribeLabelOutcome;
                 typedef std::future<DescribeLabelOutcome> DescribeLabelOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeLabelRequest&, DescribeLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLabelAsyncHandler;
@@ -428,12 +516,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLatestReleaseResponse> DescribeLatestReleaseOutcome;
                 typedef std::future<DescribeLatestReleaseOutcome> DescribeLatestReleaseOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeLatestReleaseRequest&, DescribeLatestReleaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLatestReleaseAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMetricOverviewListResponse> DescribeMetricOverviewListOutcome;
+                typedef std::future<DescribeMetricOverviewListOutcome> DescribeMetricOverviewListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeMetricOverviewListRequest&, DescribeMetricOverviewListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMetricOverviewListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeModelListResponse> DescribeModelListOutcome;
                 typedef std::future<DescribeModelListOutcome> DescribeModelListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeModelListRequest&, DescribeModelListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeModelListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMsgRecordCategoryListResponse> DescribeMsgRecordCategoryListOutcome;
                 typedef std::future<DescribeMsgRecordCategoryListOutcome> DescribeMsgRecordCategoryListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeMsgRecordCategoryListRequest&, DescribeMsgRecordCategoryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMsgRecordCategoryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMsgRecordListResponse> DescribeMsgRecordListOutcome;
+                typedef std::future<DescribeMsgRecordListOutcome> DescribeMsgRecordListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeMsgRecordListRequest&, DescribeMsgRecordListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMsgRecordListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNodeBatchRunResponse> DescribeNodeBatchRunOutcome;
                 typedef std::future<DescribeNodeBatchRunOutcome> DescribeNodeBatchRunOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeNodeBatchRunRequest&, DescribeNodeBatchRunOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNodeBatchRunAsyncHandler;
@@ -458,9 +552,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeReleaseSummaryResponse> DescribeReleaseSummaryOutcome;
                 typedef std::future<DescribeReleaseSummaryOutcome> DescribeReleaseSummaryOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeReleaseSummaryRequest&, DescribeReleaseSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReleaseSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeResourceSummaryResponse> DescribeResourceSummaryOutcome;
+                typedef std::future<DescribeResourceSummaryOutcome> DescribeResourceSummaryOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeResourceSummaryRequest&, DescribeResourceSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceSummaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSkillCategoryListResponse> DescribeSkillCategoryListOutcome;
                 typedef std::future<DescribeSkillCategoryListOutcome> DescribeSkillCategoryListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeSkillCategoryListRequest&, DescribeSkillCategoryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSkillCategoryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSkillDetailResponse> DescribeSkillDetailOutcome;
+                typedef std::future<DescribeSkillDetailOutcome> DescribeSkillDetailOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeSkillDetailRequest&, DescribeSkillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSkillDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSkillReferenceListResponse> DescribeSkillReferenceListOutcome;
                 typedef std::future<DescribeSkillReferenceListOutcome> DescribeSkillReferenceListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeSkillReferenceListRequest&, DescribeSkillReferenceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSkillReferenceListAsyncHandler;
@@ -473,6 +573,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSystemVariableListResponse> DescribeSystemVariableListOutcome;
                 typedef std::future<DescribeSystemVariableListOutcome> DescribeSystemVariableListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeSystemVariableListRequest&, DescribeSystemVariableListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSystemVariableListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUsageDetailListResponse> DescribeUsageDetailListOutcome;
+                typedef std::future<DescribeUsageDetailListOutcome> DescribeUsageDetailListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeUsageDetailListRequest&, DescribeUsageDetailListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsageDetailListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUsageSummaryListResponse> DescribeUsageSummaryListOutcome;
                 typedef std::future<DescribeUsageSummaryListOutcome> DescribeUsageSummaryListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeUsageSummaryListRequest&, DescribeUsageSummaryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsageSummaryListAsyncHandler;
@@ -485,9 +588,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeWorkflowRunResponse> DescribeWorkflowRunOutcome;
                 typedef std::future<DescribeWorkflowRunOutcome> DescribeWorkflowRunOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::DescribeWorkflowRunRequest&, DescribeWorkflowRunOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWorkflowRunAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWorkflowRunSummaryListResponse> DescribeWorkflowRunSummaryListOutcome;
+                typedef std::future<DescribeWorkflowRunSummaryListOutcome> DescribeWorkflowRunSummaryListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::DescribeWorkflowRunSummaryListRequest&, DescribeWorkflowRunSummaryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWorkflowRunSummaryListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportQAResponse> ExportQAOutcome;
                 typedef std::future<ExportQAOutcome> ExportQAOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ExportQARequest&, ExportQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportQAAsyncHandler;
+                typedef Outcome<Core::Error, Model::FavoritePluginResponse> FavoritePluginOutcome;
+                typedef std::future<FavoritePluginOutcome> FavoritePluginOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::FavoritePluginRequest&, FavoritePluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FavoritePluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::FavoriteSkillResponse> FavoriteSkillOutcome;
+                typedef std::future<FavoriteSkillOutcome> FavoriteSkillOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::FavoriteSkillRequest&, FavoriteSkillOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FavoriteSkillAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImportDocListResponse> ImportDocListOutcome;
+                typedef std::future<ImportDocListOutcome> ImportDocListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ImportDocListRequest&, ImportDocListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportDocListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAgentResponse> ModifyAgentOutcome;
                 typedef std::future<ModifyAgentOutcome> ModifyAgentOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyAgentRequest&, ModifyAgentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAgentAsyncHandler;
@@ -497,9 +612,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAppTriggerResponse> ModifyAppTriggerOutcome;
                 typedef std::future<ModifyAppTriggerOutcome> ModifyAppTriggerOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyAppTriggerRequest&, ModifyAppTriggerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAppTriggerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCategoryResponse> ModifyCategoryOutcome;
+                typedef std::future<ModifyCategoryOutcome> ModifyCategoryOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifyCategoryRequest&, ModifyCategoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCategoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyChannelResponse> ModifyChannelOutcome;
+                typedef std::future<ModifyChannelOutcome> ModifyChannelOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifyChannelRequest&, ModifyChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyConflictQAResponse> ModifyConflictQAOutcome;
+                typedef std::future<ModifyConflictQAOutcome> ModifyConflictQAOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifyConflictQARequest&, ModifyConflictQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyConflictQAAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyConversationResponse> ModifyConversationOutcome;
                 typedef std::future<ModifyConversationOutcome> ModifyConversationOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyConversationRequest&, ModifyConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyConversationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDocResponse> ModifyDocOutcome;
+                typedef std::future<ModifyDocOutcome> ModifyDocOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifyDocRequest&, ModifyDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDocAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDocListResponse> ModifyDocListOutcome;
                 typedef std::future<ModifyDocListOutcome> ModifyDocListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyDocListRequest&, ModifyDocListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDocListAsyncHandler;
@@ -509,12 +636,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLabelResponse> ModifyLabelOutcome;
                 typedef std::future<ModifyLabelOutcome> ModifyLabelOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyLabelRequest&, ModifyLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLabelAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyMsgRecordCategoryResponse> ModifyMsgRecordCategoryOutcome;
+                typedef std::future<ModifyMsgRecordCategoryOutcome> ModifyMsgRecordCategoryOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifyMsgRecordCategoryRequest&, ModifyMsgRecordCategoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMsgRecordCategoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyPluginResponse> ModifyPluginOutcome;
+                typedef std::future<ModifyPluginOutcome> ModifyPluginOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifyPluginRequest&, ModifyPluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPluginAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyQAResponse> ModifyQAOutcome;
                 typedef std::future<ModifyQAOutcome> ModifyQAOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyQARequest&, ModifyQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyQAAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyQAListResponse> ModifyQAListOutcome;
                 typedef std::future<ModifyQAListOutcome> ModifyQAListOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifyQAListRequest&, ModifyQAListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyQAListAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySkillResponse> ModifySkillOutcome;
+                typedef std::future<ModifySkillOutcome> ModifySkillOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ModifySkillRequest&, ModifySkillOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySkillAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifySpaceResponse> ModifySpaceOutcome;
                 typedef std::future<ModifySpaceOutcome> ModifySpaceOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ModifySpaceRequest&, ModifySpaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySpaceAsyncHandler;
@@ -524,12 +660,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PauseAppTriggerResponse> PauseAppTriggerOutcome;
                 typedef std::future<PauseAppTriggerOutcome> PauseAppTriggerOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::PauseAppTriggerRequest&, PauseAppTriggerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PauseAppTriggerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReadMCPResourceResponse> ReadMCPResourceOutcome;
+                typedef std::future<ReadMCPResourceOutcome> ReadMCPResourceOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ReadMCPResourceRequest&, ReadMCPResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReadMCPResourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ReleaseSkillResponse> ReleaseSkillOutcome;
                 typedef std::future<ReleaseSkillOutcome> ReleaseSkillOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ReleaseSkillRequest&, ReleaseSkillOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseSkillAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetConversationResponse> ResetConversationOutcome;
                 typedef std::future<ResetConversationOutcome> ResetConversationOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::ResetConversationRequest&, ResetConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetConversationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResumeAppTriggerResponse> ResumeAppTriggerOutcome;
+                typedef std::future<ResumeAppTriggerOutcome> ResumeAppTriggerOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ResumeAppTriggerRequest&, ResumeAppTriggerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeAppTriggerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResumeWorkflowRunResponse> ResumeWorkflowRunOutcome;
+                typedef std::future<ResumeWorkflowRunOutcome> ResumeWorkflowRunOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::ResumeWorkflowRunRequest&, ResumeWorkflowRunOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeWorkflowRunAsyncHandler;
                 typedef Outcome<Core::Error, Model::RetryReleaseResponse> RetryReleaseOutcome;
                 typedef std::future<RetryReleaseOutcome> RetryReleaseOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::RetryReleaseRequest&, RetryReleaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryReleaseAsyncHandler;
@@ -539,9 +684,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RunAppTriggerNowResponse> RunAppTriggerNowOutcome;
                 typedef std::future<RunAppTriggerNowOutcome> RunAppTriggerNowOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::RunAppTriggerNowRequest&, RunAppTriggerNowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunAppTriggerNowAsyncHandler;
+                typedef Outcome<Core::Error, Model::SaveWorkflowDebugContextResponse> SaveWorkflowDebugContextOutcome;
+                typedef std::future<SaveWorkflowDebugContextOutcome> SaveWorkflowDebugContextOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::SaveWorkflowDebugContextRequest&, SaveWorkflowDebugContextOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SaveWorkflowDebugContextAsyncHandler;
+                typedef Outcome<Core::Error, Model::SaveWorkflowToolNodeOutputResponse> SaveWorkflowToolNodeOutputOutcome;
+                typedef std::future<SaveWorkflowToolNodeOutputOutcome> SaveWorkflowToolNodeOutputOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::SaveWorkflowToolNodeOutputRequest&, SaveWorkflowToolNodeOutputOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SaveWorkflowToolNodeOutputAsyncHandler;
                 typedef Outcome<Core::Error, Model::SearchKnowledgeResponse> SearchKnowledgeOutcome;
                 typedef std::future<SearchKnowledgeOutcome> SearchKnowledgeOutcomeCallable;
                 typedef std::function<void(const AdpClient*, const Model::SearchKnowledgeRequest&, SearchKnowledgeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchKnowledgeAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopWorkflowRunListResponse> StopWorkflowRunListOutcome;
+                typedef std::future<StopWorkflowRunListOutcome> StopWorkflowRunListOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::StopWorkflowRunListRequest&, StopWorkflowRunListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopWorkflowRunListAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnfavoritePluginResponse> UnfavoritePluginOutcome;
+                typedef std::future<UnfavoritePluginOutcome> UnfavoritePluginOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::UnfavoritePluginRequest&, UnfavoritePluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnfavoritePluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnfavoriteSkillResponse> UnfavoriteSkillOutcome;
+                typedef std::future<UnfavoriteSkillOutcome> UnfavoriteSkillOutcomeCallable;
+                typedef std::function<void(const AdpClient*, const Model::UnfavoriteSkillRequest&, UnfavoriteSkillOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnfavoriteSkillAsyncHandler;
 
 
 
@@ -1024,6 +1184,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeAuditLogListOutcomeCallable DescribeAuditLogListCallable(const Model::DescribeAuditLogListRequest& request);
 
                 /**
+                 *This API is used to obtain meta-information of audit logs.
+                 * @param req DescribeAuditLogMetaRequest
+                 * @return DescribeAuditLogMetaOutcome
+                 */
+                DescribeAuditLogMetaOutcome DescribeAuditLogMeta(const Model::DescribeAuditLogMetaRequest &request);
+                void DescribeAuditLogMetaAsync(const Model::DescribeAuditLogMetaRequest& request, const DescribeAuditLogMetaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditLogMetaOutcomeCallable DescribeAuditLogMetaCallable(const Model::DescribeAuditLogMetaRequest& request);
+
+                /**
                  *Query the classification list
                  * @param req DescribeCategoryListRequest
                  * @return DescribeCategoryListOutcome
@@ -1031,6 +1200,24 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeCategoryListOutcome DescribeCategoryList(const Model::DescribeCategoryListRequest &request);
                 void DescribeCategoryListAsync(const Model::DescribeCategoryListRequest& request, const DescribeCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCategoryListOutcomeCallable DescribeCategoryListCallable(const Model::DescribeCategoryListRequest& request);
+
+                /**
+                 *Query channel details (case-sensitive by scenario)
+                 * @param req DescribeChannelRequest
+                 * @return DescribeChannelOutcome
+                 */
+                DescribeChannelOutcome DescribeChannel(const Model::DescribeChannelRequest &request);
+                void DescribeChannelAsync(const Model::DescribeChannelRequest& request, const DescribeChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeChannelOutcomeCallable DescribeChannelCallable(const Model::DescribeChannelRequest& request);
+
+                /**
+                 *This API is used to obtain the channel list by scenario.
+                 * @param req DescribeChannelListRequest
+                 * @return DescribeChannelListOutcome
+                 */
+                DescribeChannelListOutcome DescribeChannelList(const Model::DescribeChannelListRequest &request);
+                void DescribeChannelListAsync(const Model::DescribeChannelListRequest& request, const DescribeChannelListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeChannelListOutcomeCallable DescribeChannelListCallable(const Model::DescribeChannelListRequest& request);
 
                 /**
                  *Query concurrency overrun details, including QPM/TPM overruns and exclusive concurrency overruns. Return the overrun time, space, app, model, and request content.
@@ -1060,6 +1247,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeConflictQASummaryListOutcomeCallable DescribeConflictQASummaryListCallable(const Model::DescribeConflictQASummaryListRequest& request);
 
                 /**
+                 *Query resource consumption details, including billing fields such as consumption type, consumption target, consumption scenario, package, and PU consumption.
+                 * @param req DescribeConsumptionDetailListRequest
+                 * @return DescribeConsumptionDetailListOutcome
+                 */
+                DescribeConsumptionDetailListOutcome DescribeConsumptionDetailList(const Model::DescribeConsumptionDetailListRequest &request);
+                void DescribeConsumptionDetailListAsync(const Model::DescribeConsumptionDetailListRequest& request, const DescribeConsumptionDetailListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeConsumptionDetailListOutcomeCallable DescribeConsumptionDetailListCallable(const Model::DescribeConsumptionDetailListRequest& request);
+
+                /**
                  *View session information.
                  * @param req DescribeConversationRequest
                  * @return DescribeConversationOutcome
@@ -1085,6 +1281,42 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeConversationMessageListOutcome DescribeConversationMessageList(const Model::DescribeConversationMessageListRequest &request);
                 void DescribeConversationMessageListAsync(const Model::DescribeConversationMessageListRequest& request, const DescribeConversationMessageListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeConversationMessageListOutcomeCallable DescribeConversationMessageListCallable(const Model::DescribeConversationMessageListRequest& request);
+
+                /**
+                 *Queries the details of a document.
+                 * @param req DescribeDocRequest
+                 * @return DescribeDocOutcome
+                 */
+                DescribeDocOutcome DescribeDoc(const Model::DescribeDocRequest &request);
+                void DescribeDocAsync(const Model::DescribeDocRequest& request, const DescribeDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDocOutcomeCallable DescribeDocCallable(const Model::DescribeDocRequest& request);
+
+                /**
+                 *Query the abstract list of a document.
+                 * @param req DescribeDocSummaryListRequest
+                 * @return DescribeDocSummaryListOutcome
+                 */
+                DescribeDocSummaryListOutcome DescribeDocSummaryList(const Model::DescribeDocSummaryListRequest &request);
+                void DescribeDocSummaryListAsync(const Model::DescribeDocSummaryListRequest& request, const DescribeDocSummaryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDocSummaryListOutcomeCallable DescribeDocSummaryListCallable(const Model::DescribeDocSummaryListRequest& request);
+
+                /**
+                 *Query knowledge base details
+                 * @param req DescribeKBRequest
+                 * @return DescribeKBOutcome
+                 */
+                DescribeKBOutcome DescribeKB(const Model::DescribeKBRequest &request);
+                void DescribeKBAsync(const Model::DescribeKBRequest& request, const DescribeKBAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeKBOutcomeCallable DescribeKBCallable(const Model::DescribeKBRequest& request);
+
+                /**
+                 *Queries the knowledge base list
+                 * @param req DescribeKBSummaryListRequest
+                 * @return DescribeKBSummaryListOutcome
+                 */
+                DescribeKBSummaryListOutcome DescribeKBSummaryList(const Model::DescribeKBSummaryListRequest &request);
+                void DescribeKBSummaryListAsync(const Model::DescribeKBSummaryListRequest& request, const DescribeKBSummaryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeKBSummaryListOutcomeCallable DescribeKBSummaryListCallable(const Model::DescribeKBSummaryListRequest& request);
 
                 /**
                  *Queries tag details.
@@ -1114,6 +1346,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeLatestReleaseOutcomeCallable DescribeLatestReleaseCallable(const Model::DescribeLatestReleaseRequest& request);
 
                 /**
+                 *Query the overview KPI card data of dashboards, distinguish resource dashboards from business dashboards by resource_type, and return the KPI metric list of each domain.
+                 * @param req DescribeMetricOverviewListRequest
+                 * @return DescribeMetricOverviewListOutcome
+                 */
+                DescribeMetricOverviewListOutcome DescribeMetricOverviewList(const Model::DescribeMetricOverviewListRequest &request);
+                void DescribeMetricOverviewListAsync(const Model::DescribeMetricOverviewListRequest& request, const DescribeMetricOverviewListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMetricOverviewListOutcomeCallable DescribeMetricOverviewListCallable(const Model::DescribeMetricOverviewListRequest& request);
+
+                /**
                  *Query the model list
                  * @param req DescribeModelListRequest
                  * @return DescribeModelListOutcome
@@ -1130,6 +1371,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeMsgRecordCategoryListOutcome DescribeMsgRecordCategoryList(const Model::DescribeMsgRecordCategoryListRequest &request);
                 void DescribeMsgRecordCategoryListAsync(const Model::DescribeMsgRecordCategoryListRequest& request, const DescribeMsgRecordCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMsgRecordCategoryListOutcomeCallable DescribeMsgRecordCategoryListCallable(const Model::DescribeMsgRecordCategoryListRequest& request);
+
+                /**
+                 *This API is used to query the dialogue message record list of an application. It supports filtering by channel type, feedback type, intent, call result, and other conditions, and supports cursor pagination and sorting by creation time.
+                 * @param req DescribeMsgRecordListRequest
+                 * @return DescribeMsgRecordListOutcome
+                 */
+                DescribeMsgRecordListOutcome DescribeMsgRecordList(const Model::DescribeMsgRecordListRequest &request);
+                void DescribeMsgRecordListAsync(const Model::DescribeMsgRecordListRequest& request, const DescribeMsgRecordListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMsgRecordListOutcomeCallable DescribeMsgRecordListCallable(const Model::DescribeMsgRecordListRequest& request);
 
                 /**
                  *DescribeNodeBatchRun
@@ -1204,6 +1454,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeReleaseSummaryOutcomeCallable DescribeReleaseSummaryCallable(const Model::DescribeReleaseSummaryRequest& request);
 
                 /**
+                 *This API is used to obtain user resource package and value-added package usage information.
+                 * @param req DescribeResourceSummaryRequest
+                 * @return DescribeResourceSummaryOutcome
+                 */
+                DescribeResourceSummaryOutcome DescribeResourceSummary(const Model::DescribeResourceSummaryRequest &request);
+                void DescribeResourceSummaryAsync(const Model::DescribeResourceSummaryRequest& request, const DescribeResourceSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeResourceSummaryOutcomeCallable DescribeResourceSummaryCallable(const Model::DescribeResourceSummaryRequest& request);
+
+                /**
                  *Query the Skill classification list
                  * @param req DescribeSkillCategoryListRequest
                  * @return DescribeSkillCategoryListOutcome
@@ -1211,6 +1470,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeSkillCategoryListOutcome DescribeSkillCategoryList(const Model::DescribeSkillCategoryListRequest &request);
                 void DescribeSkillCategoryListAsync(const Model::DescribeSkillCategoryListRequest& request, const DescribeSkillCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSkillCategoryListOutcomeCallable DescribeSkillCategoryListCallable(const Model::DescribeSkillCategoryListRequest& request);
+
+                /**
+                 *Query skill details
+                 * @param req DescribeSkillDetailRequest
+                 * @return DescribeSkillDetailOutcome
+                 */
+                DescribeSkillDetailOutcome DescribeSkillDetail(const Model::DescribeSkillDetailRequest &request);
+                void DescribeSkillDetailAsync(const Model::DescribeSkillDetailRequest& request, const DescribeSkillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSkillDetailOutcomeCallable DescribeSkillDetailCallable(const Model::DescribeSkillDetailRequest& request);
 
                 /**
                  *This API is used to query the list of details where a certain Skill is referenced, grouped by SkillRefType: OpenClaw, cloud agent, or business assistant agent. Authentication: same as DescribeSkillDetail.
@@ -1249,6 +1517,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeSystemVariableListOutcomeCallable DescribeSystemVariableListCallable(const Model::DescribeSystemVariableListRequest& request);
 
                 /**
+                 *This API is used to query time series details of resource invocations, including two types of resources: models and plug-ins. It returns detailed information of each call record in chronological order.
+                 * @param req DescribeUsageDetailListRequest
+                 * @return DescribeUsageDetailListOutcome
+                 */
+                DescribeUsageDetailListOutcome DescribeUsageDetailList(const Model::DescribeUsageDetailListRequest &request);
+                void DescribeUsageDetailListAsync(const Model::DescribeUsageDetailListRequest& request, const DescribeUsageDetailListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUsageDetailListOutcomeCallable DescribeUsageDetailListCallable(const Model::DescribeUsageDetailListRequest& request);
+
+                /**
                  *This API is used to query aggregated details of resource usage, including three types of resources: models, plug-ins, and platforms. It displays indicators such as call count and Token consumption, aggregated by space or application dimension.
                  * @param req DescribeUsageSummaryListRequest
                  * @return DescribeUsageSummaryListOutcome
@@ -1285,6 +1562,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 DescribeWorkflowRunOutcomeCallable DescribeWorkflowRunCallable(const Model::DescribeWorkflowRunRequest& request);
 
                 /**
+                 *Query the list of workflow running instances
+                 * @param req DescribeWorkflowRunSummaryListRequest
+                 * @return DescribeWorkflowRunSummaryListOutcome
+                 */
+                DescribeWorkflowRunSummaryListOutcome DescribeWorkflowRunSummaryList(const Model::DescribeWorkflowRunSummaryListRequest &request);
+                void DescribeWorkflowRunSummaryListAsync(const Model::DescribeWorkflowRunSummaryListRequest& request, const DescribeWorkflowRunSummaryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWorkflowRunSummaryListOutcomeCallable DescribeWorkflowRunSummaryListCallable(const Model::DescribeWorkflowRunSummaryListRequest& request);
+
+                /**
                  *Asynchronously export QAs.
                  * @param req ExportQARequest
                  * @return ExportQAOutcome
@@ -1292,6 +1578,33 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 ExportQAOutcome ExportQA(const Model::ExportQARequest &request);
                 void ExportQAAsync(const Model::ExportQARequest& request, const ExportQAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ExportQAOutcomeCallable ExportQACallable(const Model::ExportQARequest& request);
+
+                /**
+                 *Favorite a plug-in
+                 * @param req FavoritePluginRequest
+                 * @return FavoritePluginOutcome
+                 */
+                FavoritePluginOutcome FavoritePlugin(const Model::FavoritePluginRequest &request);
+                void FavoritePluginAsync(const Model::FavoritePluginRequest& request, const FavoritePluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                FavoritePluginOutcomeCallable FavoritePluginCallable(const Model::FavoritePluginRequest& request);
+
+                /**
+                 *Favorites a skill
+                 * @param req FavoriteSkillRequest
+                 * @return FavoriteSkillOutcome
+                 */
+                FavoriteSkillOutcome FavoriteSkill(const Model::FavoriteSkillRequest &request);
+                void FavoriteSkillAsync(const Model::FavoriteSkillRequest& request, const FavoriteSkillAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                FavoriteSkillOutcomeCallable FavoriteSkillCallable(const Model::FavoriteSkillRequest& request);
+
+                /**
+                 *Batch imports documents
+                 * @param req ImportDocListRequest
+                 * @return ImportDocListOutcome
+                 */
+                ImportDocListOutcome ImportDocList(const Model::ImportDocListRequest &request);
+                void ImportDocListAsync(const Model::ImportDocListRequest& request, const ImportDocListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImportDocListOutcomeCallable ImportDocListCallable(const Model::ImportDocListRequest& request);
 
                 /**
                  *Modify Agent configuration information
@@ -1321,6 +1634,33 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 ModifyAppTriggerOutcomeCallable ModifyAppTriggerCallable(const Model::ModifyAppTriggerRequest& request);
 
                 /**
+                 *Modify category
+                 * @param req ModifyCategoryRequest
+                 * @return ModifyCategoryOutcome
+                 */
+                ModifyCategoryOutcome ModifyCategory(const Model::ModifyCategoryRequest &request);
+                void ModifyCategoryAsync(const Model::ModifyCategoryRequest& request, const ModifyCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCategoryOutcomeCallable ModifyCategoryCallable(const Model::ModifyCategoryRequest& request);
+
+                /**
+                 *This API is used to modify a channel, including remarks and the callback robot ID of a WeCom chatbot channel.
+                 * @param req ModifyChannelRequest
+                 * @return ModifyChannelOutcome
+                 */
+                ModifyChannelOutcome ModifyChannel(const Model::ModifyChannelRequest &request);
+                void ModifyChannelAsync(const Model::ModifyChannelRequest& request, const ModifyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyChannelOutcomeCallable ModifyChannelCallable(const Model::ModifyChannelRequest& request);
+
+                /**
+                 *Modify a conflict
+                 * @param req ModifyConflictQARequest
+                 * @return ModifyConflictQAOutcome
+                 */
+                ModifyConflictQAOutcome ModifyConflictQA(const Model::ModifyConflictQARequest &request);
+                void ModifyConflictQAAsync(const Model::ModifyConflictQARequest& request, const ModifyConflictQAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyConflictQAOutcomeCallable ModifyConflictQACallable(const Model::ModifyConflictQARequest& request);
+
+                /**
                  *Modify session information.
                  * @param req ModifyConversationRequest
                  * @return ModifyConversationOutcome
@@ -1328,6 +1668,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 ModifyConversationOutcome ModifyConversation(const Model::ModifyConversationRequest &request);
                 void ModifyConversationAsync(const Model::ModifyConversationRequest& request, const ModifyConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyConversationOutcomeCallable ModifyConversationCallable(const Model::ModifyConversationRequest& request);
+
+                /**
+                 *Modify a single document
+                 * @param req ModifyDocRequest
+                 * @return ModifyDocOutcome
+                 */
+                ModifyDocOutcome ModifyDoc(const Model::ModifyDocRequest &request);
+                void ModifyDocAsync(const Model::ModifyDocRequest& request, const ModifyDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDocOutcomeCallable ModifyDocCallable(const Model::ModifyDocRequest& request);
 
                 /**
                  *Batch modify documents.
@@ -1357,6 +1706,24 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 ModifyLabelOutcomeCallable ModifyLabelCallable(const Model::ModifyLabelRequest& request);
 
                 /**
+                 *Modify the name of a specified message record category
+                 * @param req ModifyMsgRecordCategoryRequest
+                 * @return ModifyMsgRecordCategoryOutcome
+                 */
+                ModifyMsgRecordCategoryOutcome ModifyMsgRecordCategory(const Model::ModifyMsgRecordCategoryRequest &request);
+                void ModifyMsgRecordCategoryAsync(const Model::ModifyMsgRecordCategoryRequest& request, const ModifyMsgRecordCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyMsgRecordCategoryOutcomeCallable ModifyMsgRecordCategoryCallable(const Model::ModifyMsgRecordCategoryRequest& request);
+
+                /**
+                 *Modify a plug-in
+                 * @param req ModifyPluginRequest
+                 * @return ModifyPluginOutcome
+                 */
+                ModifyPluginOutcome ModifyPlugin(const Model::ModifyPluginRequest &request);
+                void ModifyPluginAsync(const Model::ModifyPluginRequest& request, const ModifyPluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyPluginOutcomeCallable ModifyPluginCallable(const Model::ModifyPluginRequest& request);
+
+                /**
                  *Modify single QA
                  * @param req ModifyQARequest
                  * @return ModifyQAOutcome
@@ -1373,6 +1740,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 ModifyQAListOutcome ModifyQAList(const Model::ModifyQAListRequest &request);
                 void ModifyQAListAsync(const Model::ModifyQAListRequest& request, const ModifyQAListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyQAListOutcomeCallable ModifyQAListCallable(const Model::ModifyQAListRequest& request);
+
+                /**
+                 *Modify a Skill
+                 * @param req ModifySkillRequest
+                 * @return ModifySkillOutcome
+                 */
+                ModifySkillOutcome ModifySkill(const Model::ModifySkillRequest &request);
+                void ModifySkillAsync(const Model::ModifySkillRequest& request, const ModifySkillAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySkillOutcomeCallable ModifySkillCallable(const Model::ModifySkillRequest& request);
 
                 /**
                  *Edit a space
@@ -1402,6 +1778,15 @@ Note: Asynchronous execution of a workflow is application-based. The correspondi
                 PauseAppTriggerOutcomeCallable PauseAppTriggerCallable(const Model::PauseAppTriggerRequest& request);
 
                 /**
+                 *This API is used to read MCP UI resources in HTML for frontend iframe to load the MCP App interface.
+                 * @param req ReadMCPResourceRequest
+                 * @return ReadMCPResourceOutcome
+                 */
+                ReadMCPResourceOutcome ReadMCPResource(const Model::ReadMCPResourceRequest &request);
+                void ReadMCPResourceAsync(const Model::ReadMCPResourceRequest& request, const ReadMCPResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReadMCPResourceOutcomeCallable ReadMCPResourceCallable(const Model::ReadMCPResourceRequest& request);
+
+                /**
                  *This API is used to list a skill.
                  * @param req ReleaseSkillRequest
                  * @return ReleaseSkillOutcome
@@ -1419,6 +1804,24 @@ Note: Resetting is not supported for the current Claw mode application session.
                 ResetConversationOutcome ResetConversation(const Model::ResetConversationRequest &request);
                 void ResetConversationAsync(const Model::ResetConversationRequest& request, const ResetConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetConversationOutcomeCallable ResetConversationCallable(const Model::ResetConversationRequest& request);
+
+                /**
+                 *ResumeAppTrigger
+                 * @param req ResumeAppTriggerRequest
+                 * @return ResumeAppTriggerOutcome
+                 */
+                ResumeAppTriggerOutcome ResumeAppTrigger(const Model::ResumeAppTriggerRequest &request);
+                void ResumeAppTriggerAsync(const Model::ResumeAppTriggerRequest& request, const ResumeAppTriggerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResumeAppTriggerOutcomeCallable ResumeAppTriggerCallable(const Model::ResumeAppTriggerRequest& request);
+
+                /**
+                 *Resume a workflow asynchronous execution instance that is waiting for input.
+                 * @param req ResumeWorkflowRunRequest
+                 * @return ResumeWorkflowRunOutcome
+                 */
+                ResumeWorkflowRunOutcome ResumeWorkflowRun(const Model::ResumeWorkflowRunRequest &request);
+                void ResumeWorkflowRunAsync(const Model::ResumeWorkflowRunRequest& request, const ResumeWorkflowRunAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResumeWorkflowRunOutcomeCallable ResumeWorkflowRunCallable(const Model::ResumeWorkflowRunRequest& request);
 
                 /**
                  *Retry publishing (republish after suspension)
@@ -1448,6 +1851,24 @@ Note: Resetting is not supported for the current Claw mode application session.
                 RunAppTriggerNowOutcomeCallable RunAppTriggerNowCallable(const Model::RunAppTriggerNowRequest& request);
 
                 /**
+                 *SaveWorkflowDebugContext
+                 * @param req SaveWorkflowDebugContextRequest
+                 * @return SaveWorkflowDebugContextOutcome
+                 */
+                SaveWorkflowDebugContextOutcome SaveWorkflowDebugContext(const Model::SaveWorkflowDebugContextRequest &request);
+                void SaveWorkflowDebugContextAsync(const Model::SaveWorkflowDebugContextRequest& request, const SaveWorkflowDebugContextAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SaveWorkflowDebugContextOutcomeCallable SaveWorkflowDebugContextCallable(const Model::SaveWorkflowDebugContextRequest& request);
+
+                /**
+                 *SaveWorkflowToolNodeOutput
+                 * @param req SaveWorkflowToolNodeOutputRequest
+                 * @return SaveWorkflowToolNodeOutputOutcome
+                 */
+                SaveWorkflowToolNodeOutputOutcome SaveWorkflowToolNodeOutput(const Model::SaveWorkflowToolNodeOutputRequest &request);
+                void SaveWorkflowToolNodeOutputAsync(const Model::SaveWorkflowToolNodeOutputRequest& request, const SaveWorkflowToolNodeOutputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SaveWorkflowToolNodeOutputOutcomeCallable SaveWorkflowToolNodeOutputCallable(const Model::SaveWorkflowToolNodeOutputRequest& request);
+
+                /**
                  *Knowledge retrieval
                  * @param req SearchKnowledgeRequest
                  * @return SearchKnowledgeOutcome
@@ -1455,6 +1876,33 @@ Note: Resetting is not supported for the current Claw mode application session.
                 SearchKnowledgeOutcome SearchKnowledge(const Model::SearchKnowledgeRequest &request);
                 void SearchKnowledgeAsync(const Model::SearchKnowledgeRequest& request, const SearchKnowledgeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SearchKnowledgeOutcomeCallable SearchKnowledgeCallable(const Model::SearchKnowledgeRequest& request);
+
+                /**
+                 *Batch stop running workflow instances.
+                 * @param req StopWorkflowRunListRequest
+                 * @return StopWorkflowRunListOutcome
+                 */
+                StopWorkflowRunListOutcome StopWorkflowRunList(const Model::StopWorkflowRunListRequest &request);
+                void StopWorkflowRunListAsync(const Model::StopWorkflowRunListRequest& request, const StopWorkflowRunListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopWorkflowRunListOutcomeCallable StopWorkflowRunListCallable(const Model::StopWorkflowRunListRequest& request);
+
+                /**
+                 *Unfavorite a plug-in
+                 * @param req UnfavoritePluginRequest
+                 * @return UnfavoritePluginOutcome
+                 */
+                UnfavoritePluginOutcome UnfavoritePlugin(const Model::UnfavoritePluginRequest &request);
+                void UnfavoritePluginAsync(const Model::UnfavoritePluginRequest& request, const UnfavoritePluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnfavoritePluginOutcomeCallable UnfavoritePluginCallable(const Model::UnfavoritePluginRequest& request);
+
+                /**
+                 *Unfavorites a skill
+                 * @param req UnfavoriteSkillRequest
+                 * @return UnfavoriteSkillOutcome
+                 */
+                UnfavoriteSkillOutcome UnfavoriteSkill(const Model::UnfavoriteSkillRequest &request);
+                void UnfavoriteSkillAsync(const Model::UnfavoriteSkillRequest& request, const UnfavoriteSkillAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnfavoriteSkillOutcomeCallable UnfavoriteSkillCallable(const Model::UnfavoriteSkillRequest& request);
 
             };
         }

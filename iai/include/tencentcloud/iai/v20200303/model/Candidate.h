@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Most matching candidate recognized
+                * The most similar candidate identified
                 */
                 class Candidate : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person ID
-                     * @return PersonId Person ID
+                     * 获取Person ID.
+                     * @return PersonId Person ID.
                      * 
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID
-                     * @param _personId Person ID
+                     * 设置Person ID.
+                     * @param _personId Person ID.
                      * 
                      */
                     void SetPersonId(const std::string& _personId);
@@ -69,15 +69,23 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
-                     * @return FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * 获取Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
+                     * @return FaceId Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
                      * 
                      */
                     std::string GetFaceId() const;
 
                     /**
-                     * 设置Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
-                     * @param _faceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * 设置Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
+                     * @param _faceId Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
                      * 
                      */
                     void SetFaceId(const std::string& _faceId);
@@ -90,39 +98,31 @@ namespace TencentCloud
                     bool FaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
-                     * @return Score Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+                     * 获取Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
+                     * @return Score Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
-                     * @param _score Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+                     * 设置Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
+                     * @param _score Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
                      * 
                      */
                     void SetScore(const double& _score);
@@ -135,19 +135,15 @@ Generally, the score of 80 is suitable for most scenarios. We recommend choosing
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取Person name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PersonName Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Person name.
+                     * @return PersonName Person name.
                      * 
                      */
                     std::string GetPersonName() const;
 
                     /**
-                     * 设置Person name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _personName Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Person name.
+                     * @param _personName Person name.
                      * 
                      */
                     void SetPersonName(const std::string& _personName);
@@ -160,19 +156,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PersonNameHasBeenSet() const;
 
                     /**
-                     * 获取Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Gender Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Gender of personnel.
+                     * @return Gender Gender of personnel.
                      * 
                      */
                     int64_t GetGender() const;
 
                     /**
-                     * 设置Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _gender Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Gender of personnel.
+                     * @param _gender Gender of personnel.
                      * 
                      */
                     void SetGender(const int64_t& _gender);
@@ -185,19 +177,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GenderHasBeenSet() const;
 
                     /**
-                     * 获取List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PersonGroupInfos List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of person libraries containing this person and the content of the description field.
+                     * @return PersonGroupInfos List of person libraries containing this person and the content of the description field.
                      * 
                      */
                     std::vector<PersonGroupInfo> GetPersonGroupInfos() const;
 
                     /**
-                     * 设置List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _personGroupInfos List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of person libraries containing this person and the content of the description field.
+                     * @param _personGroupInfos List of person libraries containing this person and the content of the description field.
                      * 
                      */
                     void SetPersonGroupInfos(const std::vector<PersonGroupInfo>& _personGroupInfos);
@@ -212,46 +200,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Person ID
+                     * Person ID.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;
 
                     /**
-                     * Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+                     * Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Person name.
                      */
                     std::string m_personName;
                     bool m_personNameHasBeenSet;
 
                     /**
-                     * Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Gender of personnel.
                      */
                     int64_t m_gender;
                     bool m_genderHasBeenSet;
 
                     /**
-                     * List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of person libraries containing this person and the content of the description field.
                      */
                     std::vector<PersonGroupInfo> m_personGroupInfos;
                     bool m_personGroupInfosHasBeenSet;

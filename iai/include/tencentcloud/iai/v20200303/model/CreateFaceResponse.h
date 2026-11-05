@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of successfully added faces
-                     * @return SucFaceNum Number of successfully added faces
+                     * 获取<p>Number of faces that joined successfully.</p>
+                     * @return SucFaceNum <p>Number of faces that joined successfully.</p>
                      * 
                      */
                     uint64_t GetSucFaceNum() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool SucFaceNumHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of successfully added faces
-                     * @return SucFaceIds List of IDs of successfully added faces
+                     * 获取<p>List of face IDs that joined successfully.</p>
+                     * @return SucFaceIds <p>List of face IDs that joined successfully.</p>
                      * 
                      */
                     std::vector<std::string> GetSucFaceIds() const;
@@ -73,14 +73,8 @@ namespace TencentCloud
                     bool SucFaceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
-                     * @return RetCode Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
+                     * 获取<p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
+                     * @return RetCode <p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
                      * 
                      */
                     std::vector<int64_t> GetRetCode() const;
@@ -93,10 +87,8 @@ The order of `RetCode` values is the same as the order of `Images` or `Urls` in 
                     bool RetCodeHasBeenSet() const;
 
                     /**
-                     * 获取Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
-                     * @return SucIndexes Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
+                     * 获取<p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
+                     * @return SucIndexes <p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
                      * 
                      */
                     std::vector<uint64_t> GetSucIndexes() const;
@@ -109,8 +101,8 @@ For example, if there are 3 URLs in `Urls`, and the second URL fails, then the v
                     bool SucIndexesHasBeenSet() const;
 
                     /**
-                     * 获取Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
-                     * @return SucFaceRects Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
+                     * 获取<p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
+                     * @return SucFaceRects <p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
                      * 
                      */
                     std::vector<FaceRect> GetSucFaceRects() const;
@@ -123,8 +115,8 @@ For example, if there are 3 URLs in `Urls`, and the second URL fails, then the v
                     bool SucFaceRectsHasBeenSet() const;
 
                     /**
-                     * 获取Algorithm model version used for face recognition.
-                     * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 获取<p>Algorithm model version used for face recognition.</p>
+                     * @return FaceModelVersion <p>Algorithm model version used for face recognition.</p>
                      * 
                      */
                     std::string GetFaceModelVersion() const;
@@ -139,41 +131,37 @@ For example, if there are 3 URLs in `Urls`, and the second URL fails, then the v
                 private:
 
                     /**
-                     * Number of successfully added faces
+                     * <p>Number of faces that joined successfully.</p>
                      */
                     uint64_t m_sucFaceNum;
                     bool m_sucFaceNumHasBeenSet;
 
                     /**
-                     * List of IDs of successfully added faces
+                     * <p>List of face IDs that joined successfully.</p>
                      */
                     std::vector<std::string> m_sucFaceIds;
                     bool m_sucFaceIdsHasBeenSet;
 
                     /**
-                     * Adding result for each face image. -1101: no face detected; -1102: image decoding failed; 
--1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
-Other non-zero values: algorithm service exception. 
-The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
+                     * <p>Addition result of each face image.</p><ul><li>Other non-zero values represent algorithm service exceptions, with the following value ranges:<br>-1101 represents no face detected.<br>-1102 represents image decoding failure.<br>-1109 represents image size too large or too small.<br>-1601 represents the image quality control requirement is not met.<br>-1604 represents face similarity does not exceed FaceMatchThreshold. </li><li>The order of RetCode is consistent with the sequence of Images or Urls in the input parameters.</li></ul>
                      */
                     std::vector<int64_t> m_retCode;
                     bool m_retCodeHasBeenSet;
 
                     /**
-                     * Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
-For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
+                     * <p>Index of successfully added faces.</p><ul><li>The index order is consistent with the sequence of Images or Urls in the input parameter.</li><li>For example, if there are 3 Urls in Urls and the second url fails, the value of SucIndexes is [0,2].</li></ul>
                      */
                     std::vector<uint64_t> m_sucIndexes;
                     bool m_sucIndexesHasBeenSet;
 
                     /**
-                     * Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
+                     * <p>Face bounding box position of successfully joined faces. The sequence is consistent with the sequence of Images or Urls in the input parameter.</p>
                      */
                     std::vector<FaceRect> m_sucFaceRects;
                     bool m_sucFaceRectsHasBeenSet;
 
                     /**
-                     * Algorithm model version used for face recognition.
+                     * <p>Algorithm model version used for face recognition.</p>
                      */
                     std::string m_faceModelVersion;
                     bool m_faceModelVersionHasBeenSet;

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/iai/v20200303/model/Encryption.h>
 
 
 namespace TencentCloud
@@ -43,19 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
-You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
-                     * @return GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
-You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
+                     * 获取<p>List of person libraries to search, with a maximum of 100.</p><ul><li>The array element value is the GroupId in the person library creation API.</li><li>You cannot search person libraries with different algorithm model versions (FaceModelVersion) at the same time.</li></ul>
+                     * @return GroupIds <p>List of person libraries to search, with a maximum of 100.</p><ul><li>The array element value is the GroupId in the person library creation API.</li><li>You cannot search person libraries with different algorithm model versions (FaceModelVersion) at the same time.</li></ul>
                      * 
                      */
                     std::vector<std::string> GetGroupIds() const;
 
                     /**
-                     * 设置List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
-You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
-                     * @param _groupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
-You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
+                     * 设置<p>List of person libraries to search, with a maximum of 100.</p><ul><li>The array element value is the GroupId in the person library creation API.</li><li>You cannot search person libraries with different algorithm model versions (FaceModelVersion) at the same time.</li></ul>
+                     * @param _groupIds <p>List of person libraries to search, with a maximum of 100.</p><ul><li>The array element value is the GroupId in the person library creation API.</li><li>You cannot search person libraries with different algorithm model versions (FaceModelVersion) at the same time.</li></ul>
                      * 
                      */
                     void SetGroupIds(const std::vector<std::string>& _groupIds);
@@ -68,23 +65,15 @@ You cannot search for groups using different algorithm model versions (`FaceMode
                     bool GroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-                     * @return Image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 获取<p>base64 data of the image.</p><ul><li>base64-encoded data must not exceed 5 MB.</li><li>For jpg images, the long side pixel cannot exceed 4000. For other formats, the long side pixel cannot exceed 2000.</li><li>The short side pixel of images in all formats must be at least 64.</li><li>PNG, jpg, JPEG, and BMP are supported. GIF images are not supported.</li></ul>
+                     * @return Image <p>base64 data of the image.</p><ul><li>base64-encoded data must not exceed 5 MB.</li><li>For jpg images, the long side pixel cannot exceed 4000. For other formats, the long side pixel cannot exceed 2000.</li><li>The short side pixel of images in all formats must be at least 64.</li><li>PNG, jpg, JPEG, and BMP are supported. GIF images are not supported.</li></ul>
                      * 
                      */
                     std::string GetImage() const;
 
                     /**
-                     * 设置Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-                     * @param _image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 设置<p>base64 data of the image.</p><ul><li>base64-encoded data must not exceed 5 MB.</li><li>For jpg images, the long side pixel cannot exceed 4000. For other formats, the long side pixel cannot exceed 2000.</li><li>The short side pixel of images in all formats must be at least 64.</li><li>PNG, jpg, JPEG, and BMP are supported. GIF images are not supported.</li></ul>
+                     * @param _image <p>base64 data of the image.</p><ul><li>base64-encoded data must not exceed 5 MB.</li><li>For jpg images, the long side pixel cannot exceed 4000. For other formats, the long side pixel cannot exceed 2000.</li><li>The short side pixel of images in all formats must be at least 64.</li><li>PNG, jpg, JPEG, and BMP are supported. GIF images are not supported.</li></ul>
                      * 
                      */
                     void SetImage(const std::string& _image);
@@ -97,35 +86,15 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-                     * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 获取<p>The Url of the Image.</p><ul><li>The size of the corresponding Image after base64 encoding must not exceed 5M.</li><li>The long side pixel of a jpg Image cannot exceed 4000, and that of other formats cannot exceed 2000.</li><li>The short side pixel of images in all formats must be not less than 64.</li><li>Either Url or Image must be provided. If both are provided, only Url is used.</li><li>An Image stored in Tencent Cloud via Url can guarantee higher download speed and stability. It is recommended to store images in Tencent Cloud.</li><li>The speed and stability of URLs not stored in Tencent Cloud may be affected to a certain extent.</li><li>PNG, jpg, JPEG, and BMP are supported, while GIF images are not supported.</li></ul>
+                     * @return Url <p>The Url of the Image.</p><ul><li>The size of the corresponding Image after base64 encoding must not exceed 5M.</li><li>The long side pixel of a jpg Image cannot exceed 4000, and that of other formats cannot exceed 2000.</li><li>The short side pixel of images in all formats must be not less than 64.</li><li>Either Url or Image must be provided. If both are provided, only Url is used.</li><li>An Image stored in Tencent Cloud via Url can guarantee higher download speed and stability. It is recommended to store images in Tencent Cloud.</li><li>The speed and stability of URLs not stored in Tencent Cloud may be affected to a certain extent.</li><li>PNG, jpg, JPEG, and BMP are supported, while GIF images are not supported.</li></ul>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-                     * @param _url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 设置<p>The Url of the Image.</p><ul><li>The size of the corresponding Image after base64 encoding must not exceed 5M.</li><li>The long side pixel of a jpg Image cannot exceed 4000, and that of other formats cannot exceed 2000.</li><li>The short side pixel of images in all formats must be not less than 64.</li><li>Either Url or Image must be provided. If both are provided, only Url is used.</li><li>An Image stored in Tencent Cloud via Url can guarantee higher download speed and stability. It is recommended to store images in Tencent Cloud.</li><li>The speed and stability of URLs not stored in Tencent Cloud may be affected to a certain extent.</li><li>PNG, jpg, JPEG, and BMP are supported, while GIF images are not supported.</li></ul>
+                     * @param _url <p>The Url of the Image.</p><ul><li>The size of the corresponding Image after base64 encoding must not exceed 5M.</li><li>The long side pixel of a jpg Image cannot exceed 4000, and that of other formats cannot exceed 2000.</li><li>The short side pixel of images in all formats must be not less than 64.</li><li>Either Url or Image must be provided. If both are provided, only Url is used.</li><li>An Image stored in Tencent Cloud via Url can guarantee higher download speed and stability. It is recommended to store images in Tencent Cloud.</li><li>The speed and stability of URLs not stored in Tencent Cloud may be affected to a certain extent.</li><li>PNG, jpg, JPEG, and BMP are supported, while GIF images are not supported.</li></ul>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -138,23 +107,15 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10. 
-`MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized. 
-For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
-                     * @return MaxFaceNum Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10. 
-`MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized. 
-For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
+                     * 获取<p>Maximum number of faces to be recognized.</p><ul><li>Default value: 1 (only the face with the maximum area in the image is detected). Maximum value: 10. </li><li>MaxFaceNum is used to set the number of faces to search when the input image to be recognized contains several faces. </li><li>For example, if the image in the input Image or Url contains several faces and MaxFaceNum is set to 5, the 5 faces with the maximum area in the image will be recognized.</li></ul>
+                     * @return MaxFaceNum <p>Maximum number of faces to be recognized.</p><ul><li>Default value: 1 (only the face with the maximum area in the image is detected). Maximum value: 10. </li><li>MaxFaceNum is used to set the number of faces to search when the input image to be recognized contains several faces. </li><li>For example, if the image in the input Image or Url contains several faces and MaxFaceNum is set to 5, the 5 faces with the maximum area in the image will be recognized.</li></ul>
                      * 
                      */
                     uint64_t GetMaxFaceNum() const;
 
                     /**
-                     * 设置Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10. 
-`MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized. 
-For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
-                     * @param _maxFaceNum Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10. 
-`MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized. 
-For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
+                     * 设置<p>Maximum number of faces to be recognized.</p><ul><li>Default value: 1 (only the face with the maximum area in the image is detected). Maximum value: 10. </li><li>MaxFaceNum is used to set the number of faces to search when the input image to be recognized contains several faces. </li><li>For example, if the image in the input Image or Url contains several faces and MaxFaceNum is set to 5, the 5 faces with the maximum area in the image will be recognized.</li></ul>
+                     * @param _maxFaceNum <p>Maximum number of faces to be recognized.</p><ul><li>Default value: 1 (only the face with the maximum area in the image is detected). Maximum value: 10. </li><li>MaxFaceNum is used to set the number of faces to search when the input image to be recognized contains several faces. </li><li>For example, if the image in the input Image or Url contains several faces and MaxFaceNum is set to 5, the 5 faces with the maximum area in the image will be recognized.</li></ul>
                      * 
                      */
                     void SetMaxFaceNum(const uint64_t& _maxFaceNum);
@@ -167,15 +128,15 @@ For example, if the input image in `Image` or `Url` contains multiple faces and 
                     bool MaxFaceNumHasBeenSet() const;
 
                     /**
-                     * 获取Minimum height and width of face in px. Default value: 34. Face images whose value is below 34 cannot be recognized. We recommend setting this parameter to 80.
-                     * @return MinFaceSize Minimum height and width of face in px. Default value: 34. Face images whose value is below 34 cannot be recognized. We recommend setting this parameter to 80.
+                     * 获取<p>Minimum size of the face length and width, unit: pixel.</p><ul><li>Default value: 34.</li><li>Face images smaller than 34 cannot be recognized.</li><li>It is recommended to set it to 80.</li></ul>
+                     * @return MinFaceSize <p>Minimum size of the face length and width, unit: pixel.</p><ul><li>Default value: 34.</li><li>Face images smaller than 34 cannot be recognized.</li><li>It is recommended to set it to 80.</li></ul>
                      * 
                      */
                     uint64_t GetMinFaceSize() const;
 
                     /**
-                     * 设置Minimum height and width of face in px. Default value: 34. Face images whose value is below 34 cannot be recognized. We recommend setting this parameter to 80.
-                     * @param _minFaceSize Minimum height and width of face in px. Default value: 34. Face images whose value is below 34 cannot be recognized. We recommend setting this parameter to 80.
+                     * 设置<p>Minimum size of the face length and width, unit: pixel.</p><ul><li>Default value: 34.</li><li>Face images smaller than 34 cannot be recognized.</li><li>It is recommended to set it to 80.</li></ul>
+                     * @param _minFaceSize <p>Minimum size of the face length and width, unit: pixel.</p><ul><li>Default value: 34.</li><li>Face images smaller than 34 cannot be recognized.</li><li>It is recommended to set it to 80.</li></ul>
                      * 
                      */
                     void SetMinFaceSize(const uint64_t& _minFaceSize);
@@ -188,23 +149,15 @@ For example, if the input image in `Image` or `Url` contains multiple faces and 
                     bool MinFaceSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100. 
-For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. We recommend setting a value below 10.
-                     * @return MaxPersonNum Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100. 
-For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. We recommend setting a value below 10.
+                     * 获取<p>Number of most similar persons returned for a single recognized human face.</p><ul><li>Default value: 5. Maximum value: 100. </li><li>For example, if MaxFaceNum is 1 and MaxPersonNum is 8, the Top 8 similar personnel information is returned.</li><li>A larger value means a longer time to process.</li><li>It is recommended not to exceed 10.</li></ul>
+                     * @return MaxPersonNum <p>Number of most similar persons returned for a single recognized human face.</p><ul><li>Default value: 5. Maximum value: 100. </li><li>For example, if MaxFaceNum is 1 and MaxPersonNum is 8, the Top 8 similar personnel information is returned.</li><li>A larger value means a longer time to process.</li><li>It is recommended not to exceed 10.</li></ul>
                      * 
                      */
                     uint64_t GetMaxPersonNum() const;
 
                     /**
-                     * 设置Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100. 
-For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. We recommend setting a value below 10.
-                     * @param _maxPersonNum Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100. 
-For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. We recommend setting a value below 10.
+                     * 设置<p>Number of most similar persons returned for a single recognized human face.</p><ul><li>Default value: 5. Maximum value: 100. </li><li>For example, if MaxFaceNum is 1 and MaxPersonNum is 8, the Top 8 similar personnel information is returned.</li><li>A larger value means a longer time to process.</li><li>It is recommended not to exceed 10.</li></ul>
+                     * @param _maxPersonNum <p>Number of most similar persons returned for a single recognized human face.</p><ul><li>Default value: 5. Maximum value: 100. </li><li>For example, if MaxFaceNum is 1 and MaxPersonNum is 8, the Top 8 similar personnel information is returned.</li><li>A larger value means a longer time to process.</li><li>It is recommended not to exceed 10.</li></ul>
                      * 
                      */
                     void SetMaxPersonNum(const uint64_t& _maxPersonNum);
@@ -217,15 +170,15 @@ The greater the value, the longer the processing time. We recommend setting a va
                     bool MaxPersonNumHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
-                     * @return NeedPersonInfo Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
+                     * 获取<p>Whether to return detailed personnel information.</p><ul><li>Value range: 0 to disable, 1 to enable.</li><li>Default value: 0.</li><li>Other values other than 0 and 1 default to 0.</li></ul>
+                     * @return NeedPersonInfo <p>Whether to return detailed personnel information.</p><ul><li>Value range: 0 to disable, 1 to enable.</li><li>Default value: 0.</li><li>Other values other than 0 and 1 default to 0.</li></ul>
                      * 
                      */
                     int64_t GetNeedPersonInfo() const;
 
                     /**
-                     * 设置Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
-                     * @param _needPersonInfo Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
+                     * 设置<p>Whether to return detailed personnel information.</p><ul><li>Value range: 0 to disable, 1 to enable.</li><li>Default value: 0.</li><li>Other values other than 0 and 1 default to 0.</li></ul>
+                     * @param _needPersonInfo <p>Whether to return detailed personnel information.</p><ul><li>Value range: 0 to disable, 1 to enable.</li><li>Default value: 0.</li><li>Other values other than 0 and 1 default to 0.</li></ul>
                      * 
                      */
                     void SetNeedPersonInfo(const int64_t& _needPersonInfo);
@@ -238,43 +191,15 @@ The greater the value, the longer the processing time. We recommend setting a va
                     bool NeedPersonInfoHasBeenSet() const;
 
                     /**
-                     * 获取Image quality control. 
-0: no control. 
-1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
-Default value: 0. 
-If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
-                     * @return QualityControl Image quality control. 
-0: no control. 
-1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
-Default value: 0. 
-If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
+                     * 获取<p>Image quality control. </p><ul><li>Value range: <br>0: No control. <br>1: Low quality requirement. The image is super blurry, with at least one or more of the following: eye, nose, or mouth occlusion. <br>2: General quality requirement. The image is bright, dark, blurry or generally blurry, with at least three of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>3: High quality requirement. The image is bright, dark, generally blurry, with one or two of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>4: Very high quality requirement. Each dimension is optimal or at most one dimension has a minor problem.</li><li>Default: 0. </li><li>If the image quality fails to satisfy the requirement, the returned result will prompt that the image quality detection does not meet the requirement.</li></ul>
+                     * @return QualityControl <p>Image quality control. </p><ul><li>Value range: <br>0: No control. <br>1: Low quality requirement. The image is super blurry, with at least one or more of the following: eye, nose, or mouth occlusion. <br>2: General quality requirement. The image is bright, dark, blurry or generally blurry, with at least three of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>3: High quality requirement. The image is bright, dark, generally blurry, with one or two of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>4: Very high quality requirement. Each dimension is optimal or at most one dimension has a minor problem.</li><li>Default: 0. </li><li>If the image quality fails to satisfy the requirement, the returned result will prompt that the image quality detection does not meet the requirement.</li></ul>
                      * 
                      */
                     uint64_t GetQualityControl() const;
 
                     /**
-                     * 设置Image quality control. 
-0: no control. 
-1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
-Default value: 0. 
-If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
-                     * @param _qualityControl Image quality control. 
-0: no control. 
-1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
-Default value: 0. 
-If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
+                     * 设置<p>Image quality control. </p><ul><li>Value range: <br>0: No control. <br>1: Low quality requirement. The image is super blurry, with at least one or more of the following: eye, nose, or mouth occlusion. <br>2: General quality requirement. The image is bright, dark, blurry or generally blurry, with at least three of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>3: High quality requirement. The image is bright, dark, generally blurry, with one or two of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>4: Very high quality requirement. Each dimension is optimal or at most one dimension has a minor problem.</li><li>Default: 0. </li><li>If the image quality fails to satisfy the requirement, the returned result will prompt that the image quality detection does not meet the requirement.</li></ul>
+                     * @param _qualityControl <p>Image quality control. </p><ul><li>Value range: <br>0: No control. <br>1: Low quality requirement. The image is super blurry, with at least one or more of the following: eye, nose, or mouth occlusion. <br>2: General quality requirement. The image is bright, dark, blurry or generally blurry, with at least three of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>3: High quality requirement. The image is bright, dark, generally blurry, with one or two of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>4: Very high quality requirement. Each dimension is optimal or at most one dimension has a minor problem.</li><li>Default: 0. </li><li>If the image quality fails to satisfy the requirement, the returned result will prompt that the image quality detection does not meet the requirement.</li></ul>
                      * 
                      */
                     void SetQualityControl(const uint64_t& _qualityControl);
@@ -287,15 +212,15 @@ If the image quality does not meet the requirement, the returned result will pro
                     bool QualityControlHasBeenSet() const;
 
                     /**
-                     * 获取In the output parameter `Score`, the result will be returned only if the result value is above the `FaceMatchThreshold` value. Default value: 0.
-                     * @return FaceMatchThreshold In the output parameter `Score`, the result will be returned only if the result value is above the `FaceMatchThreshold` value. Default value: 0.
+                     * 获取<p>In the output parameter Score, only results exceeding the FaceMatchThreshold value will be returned. The default is 0.</p>
+                     * @return FaceMatchThreshold <p>In the output parameter Score, only results exceeding the FaceMatchThreshold value will be returned. The default is 0.</p>
                      * 
                      */
                     double GetFaceMatchThreshold() const;
 
                     /**
-                     * 设置In the output parameter `Score`, the result will be returned only if the result value is above the `FaceMatchThreshold` value. Default value: 0.
-                     * @param _faceMatchThreshold In the output parameter `Score`, the result will be returned only if the result value is above the `FaceMatchThreshold` value. Default value: 0.
+                     * 设置<p>In the output parameter Score, only results exceeding the FaceMatchThreshold value will be returned. The default is 0.</p>
+                     * @param _faceMatchThreshold <p>In the output parameter Score, only results exceeding the FaceMatchThreshold value will be returned. The default is 0.</p>
                      * 
                      */
                     void SetFaceMatchThreshold(const double& _faceMatchThreshold);
@@ -308,15 +233,15 @@ If the image quality does not meet the requirement, the returned result will pro
                     bool FaceMatchThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
-                     * @return NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+                     * 获取<p>Whether to enable image rotation recognition support.</p><ul><li>Value range: 0 for not enabled, 1 for enabled.</li><li>Default value: 0.</li><li>This parameter is used to correctly detect and recognize human faces in the input image when the faces are rotated and the image has no exif information. If image rotation recognition support is not enabled, the faces cannot be detected or recognized correctly.</li><li>If you confirm that the image contains exif information or that the human faces in the input image will not be rotated, do not enable this parameter. Once enabled, the overall duration may increase by several hundred milliseconds.</li></ul>
+                     * @return NeedRotateDetection <p>Whether to enable image rotation recognition support.</p><ul><li>Value range: 0 for not enabled, 1 for enabled.</li><li>Default value: 0.</li><li>This parameter is used to correctly detect and recognize human faces in the input image when the faces are rotated and the image has no exif information. If image rotation recognition support is not enabled, the faces cannot be detected or recognized correctly.</li><li>If you confirm that the image contains exif information or that the human faces in the input image will not be rotated, do not enable this parameter. Once enabled, the overall duration may increase by several hundred milliseconds.</li></ul>
                      * 
                      */
                     uint64_t GetNeedRotateDetection() const;
 
                     /**
-                     * 设置Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
-                     * @param _needRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+                     * 设置<p>Whether to enable image rotation recognition support.</p><ul><li>Value range: 0 for not enabled, 1 for enabled.</li><li>Default value: 0.</li><li>This parameter is used to correctly detect and recognize human faces in the input image when the faces are rotated and the image has no exif information. If image rotation recognition support is not enabled, the faces cannot be detected or recognized correctly.</li><li>If you confirm that the image contains exif information or that the human faces in the input image will not be rotated, do not enable this parameter. Once enabled, the overall duration may increase by several hundred milliseconds.</li></ul>
+                     * @param _needRotateDetection <p>Whether to enable image rotation recognition support.</p><ul><li>Value range: 0 for not enabled, 1 for enabled.</li><li>Default value: 0.</li><li>This parameter is used to correctly detect and recognize human faces in the input image when the faces are rotated and the image has no exif information. If image rotation recognition support is not enabled, the faces cannot be detected or recognized correctly.</li><li>If you confirm that the image contains exif information or that the human faces in the input image will not be rotated, do not enable this parameter. Once enabled, the overall duration may increase by several hundred milliseconds.</li></ul>
                      * 
                      */
                     void SetNeedRotateDetection(const uint64_t& _needRotateDetection);
@@ -328,86 +253,121 @@ If the image quality does not meet the requirement, the returned result will pro
                      */
                     bool NeedRotateDetectionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to encrypt the entire request body. Supported encryption algorithms: AES-256-CBC. Users with encryption requirements can use this parameter.</p>
+                     * @return Encryption <p>Whether to encrypt the entire request body. Supported encryption algorithms: AES-256-CBC. Users with encryption requirements can use this parameter.</p>
+                     * 
+                     */
+                    Encryption GetEncryption() const;
+
+                    /**
+                     * 设置<p>Whether to encrypt the entire request body. Supported encryption algorithms: AES-256-CBC. Users with encryption requirements can use this parameter.</p>
+                     * @param _encryption <p>Whether to encrypt the entire request body. Supported encryption algorithms: AES-256-CBC. Users with encryption requirements can use this parameter.</p>
+                     * 
+                     */
+                    void SetEncryption(const Encryption& _encryption);
+
+                    /**
+                     * 判断参数 Encryption 是否已赋值
+                     * @return Encryption 是否已赋值
+                     * 
+                     */
+                    bool EncryptionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Encrypted ciphertext. The data format before encryption is as follows: {&quot;Url&quot;:&quot;<strong>&quot;,&quot;Image&quot;:&quot;</strong>&quot;}.</p>
+                     * @return EncryptedBody <p>Encrypted ciphertext. The data format before encryption is as follows: {&quot;Url&quot;:&quot;<strong>&quot;,&quot;Image&quot;:&quot;</strong>&quot;}.</p>
+                     * 
+                     */
+                    std::string GetEncryptedBody() const;
+
+                    /**
+                     * 设置<p>Encrypted ciphertext. The data format before encryption is as follows: {&quot;Url&quot;:&quot;<strong>&quot;,&quot;Image&quot;:&quot;</strong>&quot;}.</p>
+                     * @param _encryptedBody <p>Encrypted ciphertext. The data format before encryption is as follows: {&quot;Url&quot;:&quot;<strong>&quot;,&quot;Image&quot;:&quot;</strong>&quot;}.</p>
+                     * 
+                     */
+                    void SetEncryptedBody(const std::string& _encryptedBody);
+
+                    /**
+                     * 判断参数 EncryptedBody 是否已赋值
+                     * @return EncryptedBody 是否已赋值
+                     * 
+                     */
+                    bool EncryptedBodyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
-You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
+                     * <p>List of person libraries to search, with a maximum of 100.</p><ul><li>The array element value is the GroupId in the person library creation API.</li><li>You cannot search person libraries with different algorithm model versions (FaceModelVersion) at the same time.</li></ul>
                      */
                     std::vector<std::string> m_groupIds;
                     bool m_groupIdsHasBeenSet;
 
                     /**
-                     * Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * <p>base64 data of the image.</p><ul><li>base64-encoded data must not exceed 5 MB.</li><li>For jpg images, the long side pixel cannot exceed 4000. For other formats, the long side pixel cannot exceed 2000.</li><li>The short side pixel of images in all formats must be at least 64.</li><li>PNG, jpg, JPEG, and BMP are supported. GIF images are not supported.</li></ul>
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
-                     * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * <p>The Url of the Image.</p><ul><li>The size of the corresponding Image after base64 encoding must not exceed 5M.</li><li>The long side pixel of a jpg Image cannot exceed 4000, and that of other formats cannot exceed 2000.</li><li>The short side pixel of images in all formats must be not less than 64.</li><li>Either Url or Image must be provided. If both are provided, only Url is used.</li><li>An Image stored in Tencent Cloud via Url can guarantee higher download speed and stability. It is recommended to store images in Tencent Cloud.</li><li>The speed and stability of URLs not stored in Tencent Cloud may be affected to a certain extent.</li><li>PNG, jpg, JPEG, and BMP are supported, while GIF images are not supported.</li></ul>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Maximum number of recognizable faces. Default value: 1 (i.e., detecting only the face with the largest size in the image). Maximum value: 10. 
-`MaxFaceNum` is used to control the number of faces to be searched for if there are multiple faces in the input image to be recognized. 
-For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
+                     * <p>Maximum number of faces to be recognized.</p><ul><li>Default value: 1 (only the face with the maximum area in the image is detected). Maximum value: 10. </li><li>MaxFaceNum is used to set the number of faces to search when the input image to be recognized contains several faces. </li><li>For example, if the image in the input Image or Url contains several faces and MaxFaceNum is set to 5, the 5 faces with the maximum area in the image will be recognized.</li></ul>
                      */
                     uint64_t m_maxFaceNum;
                     bool m_maxFaceNumHasBeenSet;
 
                     /**
-                     * Minimum height and width of face in px. Default value: 34. Face images whose value is below 34 cannot be recognized. We recommend setting this parameter to 80.
+                     * <p>Minimum size of the face length and width, unit: pixel.</p><ul><li>Default value: 34.</li><li>Face images smaller than 34 cannot be recognized.</li><li>It is recommended to set it to 80.</li></ul>
                      */
                     uint64_t m_minFaceSize;
                     bool m_minFaceSizeHasBeenSet;
 
                     /**
-                     * Number of the most similar persons returned for one single recognized face image. Default value: 5. Maximum value: 100. 
-For example, if `MaxFaceNum` is 1 and `MaxPersonNum` is 8, information of the top 8 most similar persons will be returned.
-The greater the value, the longer the processing time. We recommend setting a value below 10.
+                     * <p>Number of most similar persons returned for a single recognized human face.</p><ul><li>Default value: 5. Maximum value: 100. </li><li>For example, if MaxFaceNum is 1 and MaxPersonNum is 8, the Top 8 similar personnel information is returned.</li><li>A larger value means a longer time to process.</li><li>It is recommended not to exceed 10.</li></ul>
                      */
                     uint64_t m_maxPersonNum;
                     bool m_maxPersonNumHasBeenSet;
 
                     /**
-                     * Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
+                     * <p>Whether to return detailed personnel information.</p><ul><li>Value range: 0 to disable, 1 to enable.</li><li>Default value: 0.</li><li>Other values other than 0 and 1 default to 0.</li></ul>
                      */
                     int64_t m_needPersonInfo;
                     bool m_needPersonInfoHasBeenSet;
 
                     /**
-                     * Image quality control. 
-0: no control. 
-1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
-Default value: 0. 
-If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
+                     * <p>Image quality control. </p><ul><li>Value range: <br>0: No control. <br>1: Low quality requirement. The image is super blurry, with at least one or more of the following: eye, nose, or mouth occlusion. <br>2: General quality requirement. The image is bright, dark, blurry or generally blurry, with at least three of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>3: High quality requirement. The image is bright, dark, generally blurry, with one or two of the following: eyebrow occlusion, cheek occlusion, or chin occlusion. <br>4: Very high quality requirement. Each dimension is optimal or at most one dimension has a minor problem.</li><li>Default: 0. </li><li>If the image quality fails to satisfy the requirement, the returned result will prompt that the image quality detection does not meet the requirement.</li></ul>
                      */
                     uint64_t m_qualityControl;
                     bool m_qualityControlHasBeenSet;
 
                     /**
-                     * In the output parameter `Score`, the result will be returned only if the result value is above the `FaceMatchThreshold` value. Default value: 0.
+                     * <p>In the output parameter Score, only results exceeding the FaceMatchThreshold value will be returned. The default is 0.</p>
                      */
                     double m_faceMatchThreshold;
                     bool m_faceMatchThresholdHasBeenSet;
 
                     /**
-                     * Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+                     * <p>Whether to enable image rotation recognition support.</p><ul><li>Value range: 0 for not enabled, 1 for enabled.</li><li>Default value: 0.</li><li>This parameter is used to correctly detect and recognize human faces in the input image when the faces are rotated and the image has no exif information. If image rotation recognition support is not enabled, the faces cannot be detected or recognized correctly.</li><li>If you confirm that the image contains exif information or that the human faces in the input image will not be rotated, do not enable this parameter. Once enabled, the overall duration may increase by several hundred milliseconds.</li></ul>
                      */
                     uint64_t m_needRotateDetection;
                     bool m_needRotateDetectionHasBeenSet;
+
+                    /**
+                     * <p>Whether to encrypt the entire request body. Supported encryption algorithms: AES-256-CBC. Users with encryption requirements can use this parameter.</p>
+                     */
+                    Encryption m_encryption;
+                    bool m_encryptionHasBeenSet;
+
+                    /**
+                     * <p>Encrypted ciphertext. The data format before encryption is as follows: {&quot;Url&quot;:&quot;<strong>&quot;,&quot;Image&quot;:&quot;</strong>&quot;}.</p>
+                     */
+                    std::string m_encryptedBody;
+                    bool m_encryptedBodyHasBeenSet;
 
                 };
             }

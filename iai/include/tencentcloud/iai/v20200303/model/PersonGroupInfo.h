@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of groups containing this person and their description fields
+                * List of person libraries containing this person and description field content
                 */
                 class PersonGroupInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the group that contains this person
-                     * @return GroupId ID of the group that contains this person
+                     * 获取Personnel database ID that contains this person.
+                     * @return GroupId Personnel database ID that contains this person.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置ID of the group that contains this person
-                     * @param _groupId ID of the group that contains this person
+                     * 设置Personnel database ID that contains this person.
+                     * @param _groupId Personnel database ID that contains this person.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Content of person description field
-                     * @return PersonExDescriptions Content of person description field
+                     * 获取Person description field content.
+                     * @return PersonExDescriptions Person description field content.
                      * 
                      */
                     std::vector<std::string> GetPersonExDescriptions() const;
 
                     /**
-                     * 设置Content of person description field
-                     * @param _personExDescriptions Content of person description field
+                     * 设置Person description field content.
+                     * @param _personExDescriptions Person description field content.
                      * 
                      */
                     void SetPersonExDescriptions(const std::vector<std::string>& _personExDescriptions);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the group that contains this person
+                     * Personnel database ID that contains this person.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Content of person description field
+                     * Person description field content.
                      */
                     std::vector<std::string> m_personExDescriptions;
                     bool m_personExDescriptionsHasBeenSet;
