@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the custom header Key.
-                     * @return Key Specifies the custom header Key.
+                     * 获取Custom header Key.
+                     * @return Key Custom header Key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Specifies the custom header Key.
-                     * @param _key Specifies the custom header Key.
+                     * 设置Custom header Key.
+                     * @param _key Custom header Key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Set custom headers Value.
-                     * @return Value Set custom headers Value.
+                     * 获取Value of the custom header.
+                     * @return Value Value of the custom header.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Set custom headers Value.
-                     * @param _value Set custom headers Value.
+                     * 设置Value of the custom header.
+                     * @param _value Value of the custom header.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the custom header Key.
+                     * Custom header Key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Set custom headers Value.
+                     * Value of the custom header.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

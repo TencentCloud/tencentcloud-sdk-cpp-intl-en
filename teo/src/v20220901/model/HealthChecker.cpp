@@ -28,12 +28,14 @@ HealthChecker::HealthChecker() :
     m_healthThresholdHasBeenSet(false),
     m_criticalThresholdHasBeenSet(false),
     m_pathHasBeenSet(false),
+    m_hostHeaderPolicyHasBeenSet(false),
     m_methodHasBeenSet(false),
     m_expectedCodesHasBeenSet(false),
     m_headersHasBeenSet(false),
     m_followRedirectHasBeenSet(false),
     m_sendContextHasBeenSet(false),
-    m_recvContextHasBeenSet(false)
+    m_recvContextHasBeenSet(false),
+    m_probeClusterHasBeenSet(false)
 {
 }
 
@@ -112,6 +114,16 @@ CoreInternalOutcome HealthChecker::Deserialize(const rapidjson::Value &value)
         m_pathHasBeenSet = true;
     }
 
+    if (value.HasMember("HostHeaderPolicy") && !value["HostHeaderPolicy"].IsNull())
+    {
+        if (!value["HostHeaderPolicy"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HealthChecker.HostHeaderPolicy` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_hostHeaderPolicy = string(value["HostHeaderPolicy"].GetString());
+        m_hostHeaderPolicyHasBeenSet = true;
+    }
+
     if (value.HasMember("Method") && !value["Method"].IsNull())
     {
         if (!value["Method"].IsString())
@@ -185,6 +197,16 @@ CoreInternalOutcome HealthChecker::Deserialize(const rapidjson::Value &value)
         m_recvContextHasBeenSet = true;
     }
 
+    if (value.HasMember("ProbeCluster") && !value["ProbeCluster"].IsNull())
+    {
+        if (!value["ProbeCluster"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HealthChecker.ProbeCluster` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_probeCluster = string(value["ProbeCluster"].GetString());
+        m_probeClusterHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -248,6 +270,14 @@ void HealthChecker::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_hostHeaderPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HostHeaderPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostHeaderPolicy.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_methodHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -306,6 +336,14 @@ void HealthChecker::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         string key = "RecvContext";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_recvContext.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_probeClusterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProbeCluster";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_probeCluster.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -423,6 +461,22 @@ bool HealthChecker::PathHasBeenSet() const
     return m_pathHasBeenSet;
 }
 
+string HealthChecker::GetHostHeaderPolicy() const
+{
+    return m_hostHeaderPolicy;
+}
+
+void HealthChecker::SetHostHeaderPolicy(const string& _hostHeaderPolicy)
+{
+    m_hostHeaderPolicy = _hostHeaderPolicy;
+    m_hostHeaderPolicyHasBeenSet = true;
+}
+
+bool HealthChecker::HostHeaderPolicyHasBeenSet() const
+{
+    return m_hostHeaderPolicyHasBeenSet;
+}
+
 string HealthChecker::GetMethod() const
 {
     return m_method;
@@ -517,5 +571,21 @@ void HealthChecker::SetRecvContext(const string& _recvContext)
 bool HealthChecker::RecvContextHasBeenSet() const
 {
     return m_recvContextHasBeenSet;
+}
+
+string HealthChecker::GetProbeCluster() const
+{
+    return m_probeCluster;
+}
+
+void HealthChecker::SetProbeCluster(const string& _probeCluster)
+{
+    m_probeCluster = _probeCluster;
+    m_probeClusterHasBeenSet = true;
+}
+
+bool HealthChecker::ProbeClusterHasBeenSet() const
+{
+    return m_probeClusterHasBeenSet;
 }
 
