@@ -99,6 +99,8 @@
 #include <tencentcloud/cam/v20190116/model/DetachUserPolicyResponse.h>
 #include <tencentcloud/cam/v20190116/model/DisableUserSSORequest.h>
 #include <tencentcloud/cam/v20190116/model/DisableUserSSOResponse.h>
+#include <tencentcloud/cam/v20190116/model/GenerateOIDCAccessTokenRequest.h>
+#include <tencentcloud/cam/v20190116/model/GenerateOIDCAccessTokenResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetAccountSummaryRequest.h>
 #include <tencentcloud/cam/v20190116/model/GetAccountSummaryResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetCustomMFATokenInfoRequest.h>
@@ -319,6 +321,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisableUserSSOResponse> DisableUserSSOOutcome;
                 typedef std::future<DisableUserSSOOutcome> DisableUserSSOOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DisableUserSSORequest&, DisableUserSSOOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableUserSSOAsyncHandler;
+                typedef Outcome<Core::Error, Model::GenerateOIDCAccessTokenResponse> GenerateOIDCAccessTokenOutcome;
+                typedef std::future<GenerateOIDCAccessTokenOutcome> GenerateOIDCAccessTokenOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::GenerateOIDCAccessTokenRequest&, GenerateOIDCAccessTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateOIDCAccessTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetAccountSummaryResponse> GetAccountSummaryOutcome;
                 typedef std::future<GetAccountSummaryOutcome> GetAccountSummaryOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetAccountSummaryRequest&, GetAccountSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAccountSummaryAsyncHandler;
@@ -802,6 +807,15 @@ Calling this API is a high-risk operation because the key cannot be recovered on
                 DisableUserSSOOutcome DisableUserSSO(const Model::DisableUserSSORequest &request);
                 void DisableUserSSOAsync(const Model::DisableUserSSORequest& request, const DisableUserSSOAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DisableUserSSOOutcomeCallable DisableUserSSOCallable(const Model::DisableUserSSORequest& request);
+
+                /**
+                 *Generate an OIDC access token. This feature is in grayscale stage. Contact Tencent Cloud if needed.
+                 * @param req GenerateOIDCAccessTokenRequest
+                 * @return GenerateOIDCAccessTokenOutcome
+                 */
+                GenerateOIDCAccessTokenOutcome GenerateOIDCAccessToken(const Model::GenerateOIDCAccessTokenRequest &request);
+                void GenerateOIDCAccessTokenAsync(const Model::GenerateOIDCAccessTokenRequest& request, const GenerateOIDCAccessTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GenerateOIDCAccessTokenOutcomeCallable GenerateOIDCAccessTokenCallable(const Model::GenerateOIDCAccessTokenRequest& request);
 
                 /**
                  *This API is used to query account summary. 

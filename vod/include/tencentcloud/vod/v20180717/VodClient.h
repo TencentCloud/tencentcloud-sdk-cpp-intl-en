@@ -3740,7 +3740,7 @@ The advantage of non-solidified editing is that the editing operation is Relativ
                 TextToSpeechSyncOutcomeCallable TextToSpeechSyncCallable(const Model::TextToSpeechSyncRequest& request);
 
                 /**
-                 *Creates a Token for invoking AIGC APIs. Data sync has a delay once created. It can be queried or deleted after about 30 seconds.
+                 *Update the Token for AIGC API calls. Data synchronization has a delay of about 30 seconds after the update.
                  * @param req UpdateAigcApiTokenRequest
                  * @return UpdateAigcApiTokenOutcome
                  */

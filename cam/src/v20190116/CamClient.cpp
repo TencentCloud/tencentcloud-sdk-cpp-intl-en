@@ -1940,6 +1940,56 @@ CamClient::DisableUserSSOOutcomeCallable CamClient::DisableUserSSOCallable(const
     return prom->get_future();
 }
 
+CamClient::GenerateOIDCAccessTokenOutcome CamClient::GenerateOIDCAccessToken(const GenerateOIDCAccessTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "GenerateOIDCAccessToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GenerateOIDCAccessTokenResponse rsp = GenerateOIDCAccessTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GenerateOIDCAccessTokenOutcome(rsp);
+        else
+            return GenerateOIDCAccessTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return GenerateOIDCAccessTokenOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::GenerateOIDCAccessTokenAsync(const GenerateOIDCAccessTokenRequest& request, const GenerateOIDCAccessTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GenerateOIDCAccessTokenRequest&;
+    using Resp = GenerateOIDCAccessTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GenerateOIDCAccessToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CamClient::GenerateOIDCAccessTokenOutcomeCallable CamClient::GenerateOIDCAccessTokenCallable(const GenerateOIDCAccessTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GenerateOIDCAccessTokenOutcome>>();
+    GenerateOIDCAccessTokenAsync(
+    request,
+    [prom](
+        const CamClient*,
+        const GenerateOIDCAccessTokenRequest&,
+        GenerateOIDCAccessTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CamClient::GetAccountSummaryOutcome CamClient::GetAccountSummary(const GetAccountSummaryRequest &request)
 {
     auto outcome = MakeRequest(request, "GetAccountSummary");

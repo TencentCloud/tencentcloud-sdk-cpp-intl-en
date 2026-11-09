@@ -127,6 +127,7 @@ set(cam_public_header_model
   include/tencentcloud/cam/v20190116/model/AttachRolePolicyRequest.h
   include/tencentcloud/cam/v20190116/model/GetPasswordRulesResponse.h
   include/tencentcloud/cam/v20190116/model/ConsumeCustomMFATokenResponse.h
+  include/tencentcloud/cam/v20190116/model/GenerateOIDCAccessTokenResponse.h
   include/tencentcloud/cam/v20190116/model/AttachUserPolicyRequest.h
   include/tencentcloud/cam/v20190116/model/ListAttachedGroupPoliciesResponse.h
   include/tencentcloud/cam/v20190116/model/ListAttachedUserPoliciesResponse.h
@@ -156,6 +157,7 @@ set(cam_public_header_model
   include/tencentcloud/cam/v20190116/model/DetachGroupPolicyResponse.h
   include/tencentcloud/cam/v20190116/model/GroupMemberInfo.h
   include/tencentcloud/cam/v20190116/model/CreatePolicyRequest.h
+  include/tencentcloud/cam/v20190116/model/GenerateOIDCAccessTokenRequest.h
   include/tencentcloud/cam/v20190116/model/ListAttachedUserAllPoliciesRequest.h
   include/tencentcloud/cam/v20190116/model/DeletePolicyVersionRequest.h
   include/tencentcloud/cam/v20190116/model/CreateUserSAMLConfigRequest.h
@@ -325,6 +327,7 @@ set(cam_src
   src/v20190116/model/AttachRolePolicyRequest.cpp
   src/v20190116/model/GetPasswordRulesResponse.cpp
   src/v20190116/model/ConsumeCustomMFATokenResponse.cpp
+  src/v20190116/model/GenerateOIDCAccessTokenResponse.cpp
   src/v20190116/model/AttachUserPolicyRequest.cpp
   src/v20190116/model/ListAttachedGroupPoliciesResponse.cpp
   src/v20190116/model/ListAttachedUserPoliciesResponse.cpp
@@ -354,6 +357,7 @@ set(cam_src
   src/v20190116/model/DetachGroupPolicyResponse.cpp
   src/v20190116/model/GroupMemberInfo.cpp
   src/v20190116/model/CreatePolicyRequest.cpp
+  src/v20190116/model/GenerateOIDCAccessTokenRequest.cpp
   src/v20190116/model/ListAttachedUserAllPoliciesRequest.cpp
   src/v20190116/model/DeletePolicyVersionRequest.cpp
   src/v20190116/model/CreateUserSAMLConfigRequest.cpp
