@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Globally unique CMK ID
-                     * @return KeyId Globally unique CMK ID
+                     * 获取<p>Globally unique identifier of the CMK</p>
+                     * @return KeyId <p>Globally unique identifier of the CMK</p>
                      * 
                      */
                     std::string GetKeyId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias that makes a key more recognizable and understandable
-                     * @return Alias Alias that makes a key more recognizable and understandable
+                     * 获取<p>Alias that makes the key easier to identify and understand</p>
+                     * @return Alias <p>Alias that makes the key easier to identify and understand</p>
                      * 
                      */
                     std::string GetAlias() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Key creation time in UNIX timestamp format
-                     * @return CreateTime Key creation time in UNIX timestamp format
+                     * 获取<p>Key creation time, unix timestamp</p>
+                     * @return CreateTime <p>Key creation time, unix timestamp</p>
                      * 
                      */
                     uint64_t GetCreateTime() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the description of the CMK.
-                     * @return Description Specifies the description of the CMK.
+                     * 获取<p>Description of the CMK</p>
+                     * @return Description <p>Description of the CMK</p>
                      * 
                      */
                     std::string GetDescription() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取CMK status
-                     * @return KeyState CMK status
+                     * 获取<p>Status of the CMK</p>
+                     * @return KeyState <p>Status of the CMK</p>
                      * 
                      */
                     std::string GetKeyState() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool KeyStateHasBeenSet() const;
 
                     /**
-                     * 获取CMK usage
-                     * @return KeyUsage CMK usage
+                     * 获取<p>Purpose of the CMK</p>
+                     * @return KeyUsage <p>Purpose of the CMK</p>
                      * 
                      */
                     std::string GetKeyUsage() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool KeyUsageHasBeenSet() const;
 
                     /**
-                     * 获取Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
-                     * @return TagCode Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+                     * 获取<p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
+                     * @return TagCode <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
                      * 
                      */
                     uint64_t GetTagCode() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool TagCodeHasBeenSet() const;
 
                     /**
-                     * 获取Response information of Tag operation.
-                     * @return TagMsg Response information of Tag operation.
+                     * 获取<p>Return message of the tag operation</p>
+                     * @return TagMsg <p>Return message of the tag operation</p>
                      * 
                      */
                     std::string GetTagMsg() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool TagMsgHasBeenSet() const;
 
                     /**
-                     * 获取HSM cluster ID (valid only for exclusive or managed version KMS service instances).
-                     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * 获取<p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
+                     * @return HsmClusterId <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
                      * 
                      */
                     std::string GetHsmClusterId() const;
@@ -172,55 +172,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Globally unique CMK ID
+                     * <p>Globally unique identifier of the CMK</p>
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Alias that makes a key more recognizable and understandable
+                     * <p>Alias that makes the key easier to identify and understand</p>
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Key creation time in UNIX timestamp format
+                     * <p>Key creation time, unix timestamp</p>
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Specifies the description of the CMK.
+                     * <p>Description of the CMK</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * CMK status
+                     * <p>Status of the CMK</p>
                      */
                     std::string m_keyState;
                     bool m_keyStateHasBeenSet;
 
                     /**
-                     * CMK usage
+                     * <p>Purpose of the CMK</p>
                      */
                     std::string m_keyUsage;
                     bool m_keyUsageHasBeenSet;
 
                     /**
-                     * Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+                     * <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
                      */
                     uint64_t m_tagCode;
                     bool m_tagCodeHasBeenSet;
 
                     /**
-                     * Response information of Tag operation.
+                     * <p>Return message of the tag operation</p>
                      */
                     std::string m_tagMsg;
                     bool m_tagMsgHasBeenSet;
 
                     /**
-                     * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
                      */
                     std::string m_hsmClusterId;
                     bool m_hsmClusterIdHasBeenSet;

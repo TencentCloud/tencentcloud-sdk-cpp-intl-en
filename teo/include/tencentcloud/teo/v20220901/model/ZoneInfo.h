@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the returned site information.
+                * Back to site information
                 */
                 class ZoneInfo : public AbstractModel
                 {
@@ -89,19 +89,19 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
-                     * @return Paused Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+                     * 获取Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
+                     * @return Paused Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
                      * 
                      */
                     bool GetPaused() const;
 
                     /**
-                     * 设置Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
-                     * @param _paused Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+                     * 设置Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
+                     * @param _paused Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
                      * 
                      */
                     void SetPaused(const bool& _paused);
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+                     * Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
                      */
                     bool m_paused;
                     bool m_pausedHasBeenSet;

@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
-                     * @return TaskId Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
+                     * 获取Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
+                     * @return TaskId Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
+                     * Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

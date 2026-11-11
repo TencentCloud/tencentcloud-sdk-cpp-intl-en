@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task input parameter type for screencapturing for cover image of a video
+                * Task input parameter type for screencapturing for cover image in a video
                 */
                 class CoverBySnapshotTaskInput : public AbstractModel
                 {
@@ -70,10 +70,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
                      * @return PositionType Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
                      * 
                      */
@@ -81,10 +81,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
                      * @param _positionType Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
                      * 
                      */
@@ -99,22 +99,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
                      * @return PositionValue Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
                      * 
                      */
                     double GetPositionValue() const;
 
                     /**
                      * 设置Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
                      * @param _positionValue Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
                      * 
                      */
                     void SetPositionValue(const double& _positionValue);
@@ -157,7 +157,7 @@ namespace TencentCloud
 
                     /**
                      * Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
                      */
                     std::string m_positionType;
@@ -165,8 +165,8 @@ namespace TencentCloud
 
                     /**
                      * Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
                      */
                     double m_positionValue;
                     bool m_positionValueHasBeenSet;

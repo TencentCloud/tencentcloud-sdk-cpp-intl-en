@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task input parameter type for sampling screenshot taking of a video
+                * Task input parameter type for sampling screenshot taking in a video
                 */
                 class SampleSnapshotTaskInput : public AbstractModel
                 {

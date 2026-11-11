@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
-                     * @return CheckObject <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+                     * 获取<p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
+                     * @return CheckObject <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
                      * 
                      */
                     std::vector<std::string> GetCheckObject() const;
 
                     /**
-                     * 设置<p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
-                     * @param _checkObject <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+                     * 设置<p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
+                     * @param _checkObject <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
                      * 
                      */
                     void SetCheckObject(const std::vector<std::string>& _checkObject);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
-                     * @return FixSuggestion <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+                     * 获取<p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
+                     * @return FixSuggestion <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
                      * 
                      */
                     std::string GetFixSuggestion() const;
 
                     /**
-                     * 设置<p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
-                     * @param _fixSuggestion <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+                     * 设置<p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
+                     * @param _fixSuggestion <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
                      * 
                      */
                     void SetFixSuggestion(const std::string& _fixSuggestion);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool FixSuggestionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reference link list of detection items.</p>
-                     * @return ReferenceLink <p>Reference link list of detection items.</p>
+                     * 获取<p>Detection item reference link list.</p>
+                     * @return ReferenceLink <p>Detection item reference link list.</p>
                      * 
                      */
                     std::string GetReferenceLink() const;
 
                     /**
-                     * 设置<p>Reference link list of detection items.</p>
-                     * @param _referenceLink <p>Reference link list of detection items.</p>
+                     * 设置<p>Detection item reference link list.</p>
+                     * @param _referenceLink <p>Detection item reference link list.</p>
                      * 
                      */
                     void SetReferenceLink(const std::string& _referenceLink);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool ReferenceLinkHasBeenSet() const;
 
                     /**
-                     * 获取<p>Classification information of the parent category in the associated system.</p>
-                     * @return SystemCategory <p>Classification information of the parent category in the associated system.</p>
+                     * 获取<p>Parent classification information of the associated system.</p>
+                     * @return SystemCategory <p>Parent classification information of the associated system.</p>
                      * 
                      */
                     BaselineCategory GetSystemCategory() const;
 
                     /**
-                     * 设置<p>Classification information of the parent category in the associated system.</p>
-                     * @param _systemCategory <p>Classification information of the parent category in the associated system.</p>
+                     * 设置<p>Parent classification information of the associated system.</p>
+                     * @param _systemCategory <p>Parent classification information of the associated system.</p>
                      * 
                      */
                     void SetSystemCategory(const BaselineCategory& _systemCategory);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool SystemCategoryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Classification information of the subcategory it belongs to.</p>
-                     * @return Category <p>Classification information of the subcategory it belongs to.</p>
+                     * 获取<p>Belonging subcategory information.</p>
+                     * @return Category <p>Belonging subcategory information.</p>
                      * 
                      */
                     BaselineCategory GetCategory() const;
 
                     /**
-                     * 设置<p>Classification information of the subcategory it belongs to.</p>
-                     * @param _category <p>Classification information of the subcategory it belongs to.</p>
+                     * 设置<p>Belonging subcategory information.</p>
+                     * @param _category <p>Belonging subcategory information.</p>
                      * 
                      */
                     void SetCategory(const BaselineCategory& _category);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
-                     * @return SupportFix <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+                     * 获取<p>Whether one-click repair is supported. true: support, false: no support.</p>
+                     * @return SupportFix <p>Whether one-click repair is supported. true: support, false: no support.</p>
                      * 
                      */
                     bool GetSupportFix() const;
 
                     /**
-                     * 设置<p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
-                     * @param _supportFix <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+                     * 设置<p>Whether one-click repair is supported. true: support, false: no support.</p>
+                     * @param _supportFix <p>Whether one-click repair is supported. true: support, false: no support.</p>
                      * 
                      */
                     void SetSupportFix(const bool& _supportFix);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool SupportFixHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
-                     * @return SupportCustomValue <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+                     * 获取<p>Whether to support user customization of judgment values. true: support, false: no support.</p>
+                     * @return SupportCustomValue <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
                      * 
                      */
                     bool GetSupportCustomValue() const;
 
                     /**
-                     * 设置<p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
-                     * @param _supportCustomValue <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+                     * 设置<p>Whether to support user customization of judgment values. true: support, false: no support.</p>
+                     * @param _supportCustomValue <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
                      * 
                      */
                     void SetSupportCustomValue(const bool& _supportCustomValue);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool SupportCustomValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Operating system/component version list applicable to this detection item.</p>
-                     * @return AffectedVersionList <p>Operating system/component version list applicable to this detection item.</p>
+                     * 获取<p>Applicable operating system/component version list for this detection item.</p>
+                     * @return AffectedVersionList <p>Applicable operating system/component version list for this detection item.</p>
                      * 
                      */
                     std::vector<std::string> GetAffectedVersionList() const;
 
                     /**
-                     * 设置<p>Operating system/component version list applicable to this detection item.</p>
-                     * @param _affectedVersionList <p>Operating system/component version list applicable to this detection item.</p>
+                     * 设置<p>Applicable operating system/component version list for this detection item.</p>
+                     * @param _affectedVersionList <p>Applicable operating system/component version list for this detection item.</p>
                      * 
                      */
                     void SetAffectedVersionList(const std::vector<std::string>& _affectedVersionList);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool AffectedVersionListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
-                     * @return WebEditParam <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+                     * 获取<p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
+                     * @return WebEditParam <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
                      * 
                      */
                     std::string GetWebEditParam() const;
 
                     /**
-                     * 设置<p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
-                     * @param _webEditParam <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+                     * 设置<p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
+                     * @param _webEditParam <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
                      * 
                      */
                     void SetWebEditParam(const std::string& _webEditParam);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool WebEditParamHasBeenSet() const;
 
                     /**
-                     * 获取<p>Default detection item judgment value list.</p>
-                     * @return DefaultValueList <p>Default detection item judgment value list.</p>
+                     * 获取<p>Default judgment value list of the detection item.</p>
+                     * @return DefaultValueList <p>Default judgment value list of the detection item.</p>
                      * 
                      */
                     std::vector<std::string> GetDefaultValueList() const;
 
                     /**
-                     * 设置<p>Default detection item judgment value list.</p>
-                     * @param _defaultValueList <p>Default detection item judgment value list.</p>
+                     * 设置<p>Default judgment value list of the detection item.</p>
+                     * @param _defaultValueList <p>Default judgment value list of the detection item.</p>
                      * 
                      */
                     void SetDefaultValueList(const std::vector<std::string>& _defaultValueList);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool DefaultValueListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether customized by the user. true: customized; false: use default values.</p>
-                     * @return IsCustomConf <p>Whether customized by the user. true: customized; false: use default values.</p>
+                     * 获取<p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
+                     * @return IsCustomConf <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
                      * 
                      */
                     bool GetIsCustomConf() const;
 
                     /**
-                     * 设置<p>Whether customized by the user. true: customized; false: use default values.</p>
-                     * @param _isCustomConf <p>Whether customized by the user. true: customized; false: use default values.</p>
+                     * 设置<p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
+                     * @param _isCustomConf <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
                      * 
                      */
                     void SetIsCustomConf(const bool& _isCustomConf);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool IsCustomConfHasBeenSet() const;
 
                     /**
-                     * 获取<p>User-customized configuration record ID. The value is 0 if not customized.</p>
-                     * @return CustomItemID <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+                     * 获取<p>User-customized configuration record ID. 0 if not customized.</p>
+                     * @return CustomItemID <p>User-customized configuration record ID. 0 if not customized.</p>
                      * 
                      */
                     uint64_t GetCustomItemID() const;
 
                     /**
-                     * 设置<p>User-customized configuration record ID. The value is 0 if not customized.</p>
-                     * @param _customItemID <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+                     * 设置<p>User-customized configuration record ID. 0 if not customized.</p>
+                     * @param _customItemID <p>User-customized configuration record ID. 0 if not customized.</p>
                      * 
                      */
                     void SetCustomItemID(const uint64_t& _customItemID);
@@ -419,7 +419,7 @@ namespace TencentCloud
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+                     * <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
                      */
                     std::vector<std::string> m_checkObject;
                     bool m_checkObjectHasBeenSet;
@@ -443,67 +443,67 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+                     * <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
                      */
                     std::string m_fixSuggestion;
                     bool m_fixSuggestionHasBeenSet;
 
                     /**
-                     * <p>Reference link list of detection items.</p>
+                     * <p>Detection item reference link list.</p>
                      */
                     std::string m_referenceLink;
                     bool m_referenceLinkHasBeenSet;
 
                     /**
-                     * <p>Classification information of the parent category in the associated system.</p>
+                     * <p>Parent classification information of the associated system.</p>
                      */
                     BaselineCategory m_systemCategory;
                     bool m_systemCategoryHasBeenSet;
 
                     /**
-                     * <p>Classification information of the subcategory it belongs to.</p>
+                     * <p>Belonging subcategory information.</p>
                      */
                     BaselineCategory m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+                     * <p>Whether one-click repair is supported. true: support, false: no support.</p>
                      */
                     bool m_supportFix;
                     bool m_supportFixHasBeenSet;
 
                     /**
-                     * <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+                     * <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
                      */
                     bool m_supportCustomValue;
                     bool m_supportCustomValueHasBeenSet;
 
                     /**
-                     * <p>Operating system/component version list applicable to this detection item.</p>
+                     * <p>Applicable operating system/component version list for this detection item.</p>
                      */
                     std::vector<std::string> m_affectedVersionList;
                     bool m_affectedVersionListHasBeenSet;
 
                     /**
-                     * <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+                     * <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
                      */
                     std::string m_webEditParam;
                     bool m_webEditParamHasBeenSet;
 
                     /**
-                     * <p>Default detection item judgment value list.</p>
+                     * <p>Default judgment value list of the detection item.</p>
                      */
                     std::vector<std::string> m_defaultValueList;
                     bool m_defaultValueListHasBeenSet;
 
                     /**
-                     * <p>Whether customized by the user. true: customized; false: use default values.</p>
+                     * <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
                      */
                     bool m_isCustomConf;
                     bool m_isCustomConfHasBeenSet;
 
                     /**
-                     * <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+                     * <p>User-customized configuration record ID. 0 if not customized.</p>
                      */
                     uint64_t m_customItemID;
                     bool m_customItemIDHasBeenSet;

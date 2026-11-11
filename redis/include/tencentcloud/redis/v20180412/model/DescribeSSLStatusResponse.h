@@ -141,6 +141,118 @@ namespace TencentCloud
                      */
                     bool EncryptAddressHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Key source</p><p>Enumeration values:</p><ul><li>0: Tencent Cloud provides</li><li>1: Custom certificate</li></ul>
+                     * @return CertSource <p>Key source</p><p>Enumeration values:</p><ul><li>0: Tencent Cloud provides</li><li>1: Custom certificate</li></ul>
+                     * 
+                     */
+                    uint64_t GetCertSource() const;
+
+                    /**
+                     * 判断参数 CertSource 是否已赋值
+                     * @return CertSource 是否已赋值
+                     * 
+                     */
+                    bool CertSourceHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Certificate validity</p><p>Enumeration values:</p><ul><li>0: valid</li><li>1: expiring soon (within 30 days)</li><li>2: expired</li><li>404: cert deleted</li><li>500: query exception</li></ul>
+                     * @return CertStatus <p>Certificate validity</p><p>Enumeration values:</p><ul><li>0: valid</li><li>1: expiring soon (within 30 days)</li><li>2: expired</li><li>404: cert deleted</li><li>500: query exception</li></ul>
+                     * 
+                     */
+                    uint64_t GetCertStatus() const;
+
+                    /**
+                     * 判断参数 CertStatus 是否已赋值
+                     * @return CertStatus 是否已赋值
+                     * 
+                     */
+                    bool CertStatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Certificate ID of the SSL certificate service. Required when CertSource=1</p>
+                     * @return CertId <p>Certificate ID of the SSL certificate service. Required when CertSource=1</p>
+                     * 
+                     */
+                    std::string GetCertId() const;
+
+                    /**
+                     * 判断参数 CertId 是否已赋值
+                     * @return CertId 是否已赋值
+                     * 
+                     */
+                    bool CertIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cert alias</p>
+                     * @return CertAlias <p>Cert alias</p>
+                     * 
+                     */
+                    std::string GetCertAlias() const;
+
+                    /**
+                     * 判断参数 CertAlias 是否已赋值
+                     * @return CertAlias 是否已赋值
+                     * 
+                     */
+                    bool CertAliasHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Certificate expiration time</p><p>Parameter format: time format YYYY-MM-DD hh:mm:ss</p>
+                     * @return CertExpireTime <p>Certificate expiration time</p><p>Parameter format: time format YYYY-MM-DD hh:mm:ss</p>
+                     * 
+                     */
+                    std::string GetCertExpireTime() const;
+
+                    /**
+                     * 判断参数 CertExpireTime 是否已赋值
+                     * @return CertExpireTime 是否已赋值
+                     * 
+                     */
+                    bool CertExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Certificate-associated domain name (SAN)</p><p>Includes IP</p>
+                     * @return Domain <p>Certificate-associated domain name (SAN)</p><p>Includes IP</p>
+                     * 
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     * 
+                     */
+                    bool DomainHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Minimum TLS version</p><p>Enumeration values:</p><ul><li>TLSv1.0: TLSv1.0</li><li>TLSv1.1: TLSv1.1</li><li>TLSv1.2: TLSv1.2</li></ul>
+                     * @return SSLMinVersion <p>Minimum TLS version</p><p>Enumeration values:</p><ul><li>TLSv1.0: TLSv1.0</li><li>TLSv1.1: TLSv1.1</li><li>TLSv1.2: TLSv1.2</li></ul>
+                     * 
+                     */
+                    std::string GetSSLMinVersion() const;
+
+                    /**
+                     * 判断参数 SSLMinVersion 是否已赋值
+                     * @return SSLMinVersion 是否已赋值
+                     * 
+                     */
+                    bool SSLMinVersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Current encryption mode</p><p>Enumeration values:</p><ul><li>required: Enforced encryption</li><li>flexible: Compatible mode</li></ul>
+                     * @return EncryptionMode <p>Current encryption mode</p><p>Enumeration values:</p><ul><li>required: Enforced encryption</li><li>flexible: Compatible mode</li></ul>
+                     * 
+                     */
+                    std::string GetEncryptionMode() const;
+
+                    /**
+                     * 判断参数 EncryptionMode 是否已赋值
+                     * @return EncryptionMode 是否已赋值
+                     * 
+                     */
+                    bool EncryptionModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -184,6 +296,54 @@ namespace TencentCloud
                      */
                     std::string m_encryptAddress;
                     bool m_encryptAddressHasBeenSet;
+
+                    /**
+                     * <p>Key source</p><p>Enumeration values:</p><ul><li>0: Tencent Cloud provides</li><li>1: Custom certificate</li></ul>
+                     */
+                    uint64_t m_certSource;
+                    bool m_certSourceHasBeenSet;
+
+                    /**
+                     * <p>Certificate validity</p><p>Enumeration values:</p><ul><li>0: valid</li><li>1: expiring soon (within 30 days)</li><li>2: expired</li><li>404: cert deleted</li><li>500: query exception</li></ul>
+                     */
+                    uint64_t m_certStatus;
+                    bool m_certStatusHasBeenSet;
+
+                    /**
+                     * <p>Certificate ID of the SSL certificate service. Required when CertSource=1</p>
+                     */
+                    std::string m_certId;
+                    bool m_certIdHasBeenSet;
+
+                    /**
+                     * <p>Cert alias</p>
+                     */
+                    std::string m_certAlias;
+                    bool m_certAliasHasBeenSet;
+
+                    /**
+                     * <p>Certificate expiration time</p><p>Parameter format: time format YYYY-MM-DD hh:mm:ss</p>
+                     */
+                    std::string m_certExpireTime;
+                    bool m_certExpireTimeHasBeenSet;
+
+                    /**
+                     * <p>Certificate-associated domain name (SAN)</p><p>Includes IP</p>
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
+
+                    /**
+                     * <p>Minimum TLS version</p><p>Enumeration values:</p><ul><li>TLSv1.0: TLSv1.0</li><li>TLSv1.1: TLSv1.1</li><li>TLSv1.2: TLSv1.2</li></ul>
+                     */
+                    std::string m_sSLMinVersion;
+                    bool m_sSLMinVersionHasBeenSet;
+
+                    /**
+                     * <p>Current encryption mode</p><p>Enumeration values:</p><ul><li>required: Enforced encryption</li><li>flexible: Compatible mode</li></ul>
+                     */
+                    std::string m_encryptionMode;
+                    bool m_encryptionModeHasBeenSet;
 
                 };
             }

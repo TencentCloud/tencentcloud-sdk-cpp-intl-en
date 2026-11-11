@@ -210,6 +210,48 @@ namespace TencentCloud
                      */
                     bool EncryptPasswordHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+                     * @return DisableCommands <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+                     * 
+                     */
+                    std::vector<std::string> GetDisableCommands() const;
+
+                    /**
+                     * 设置<p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+                     * @param _disableCommands <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+                     * 
+                     */
+                    void SetDisableCommands(const std::vector<std::string>& _disableCommands);
+
+                    /**
+                     * 判断参数 DisableCommands 是否已赋值
+                     * @return DisableCommands 是否已赋值
+                     * 
+                     */
+                    bool DisableCommandsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+                     * @return ModifyDisableCommands <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+                     * 
+                     */
+                    bool GetModifyDisableCommands() const;
+
+                    /**
+                     * 设置<p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+                     * @param _modifyDisableCommands <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+                     * 
+                     */
+                    void SetModifyDisableCommands(const bool& _modifyDisableCommands);
+
+                    /**
+                     * 判断参数 ModifyDisableCommands 是否已赋值
+                     * @return ModifyDisableCommands 是否已赋值
+                     * 
+                     */
+                    bool ModifyDisableCommandsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +301,18 @@ namespace TencentCloud
                      */
                     bool m_encryptPassword;
                     bool m_encryptPasswordHasBeenSet;
+
+                    /**
+                     * <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+                     */
+                    std::vector<std::string> m_disableCommands;
+                    bool m_disableCommandsHasBeenSet;
+
+                    /**
+                     * <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+                     */
+                    bool m_modifyDisableCommands;
+                    bool m_modifyDisableCommandsHasBeenSet;
 
                 };
             }

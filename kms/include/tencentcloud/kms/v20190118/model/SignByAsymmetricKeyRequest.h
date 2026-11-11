@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
-                     * @return Algorithm Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+                     * 获取<p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
+                     * @return Algorithm <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
                      * 
                      */
                     std::string GetAlgorithm() const;
 
                     /**
-                     * 设置Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
-                     * @param _algorithm Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+                     * 设置<p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
+                     * @param _algorithm <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
                      * 
                      */
                     void SetAlgorithm(const std::string& _algorithm);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
-                     * @return Message Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+                     * 获取<p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
+                     * @return Message <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
-                     * @param _message Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+                     * 设置<p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
+                     * @param _message <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of a key
-                     * @return KeyId Unique ID of a key
+                     * 获取<p>Unique identifier of the key</p>
+                     * @return KeyId <p>Unique identifier of the key</p>
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Unique ID of a key
-                     * @param _keyId Unique ID of a key
+                     * 设置<p>Unique identifier of the key</p>
+                     * @param _keyId <p>Unique identifier of the key</p>
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
-                     * @return MessageType Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+                     * 获取<p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
+                     * @return MessageType <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
                      * 
                      */
                     std::string GetMessageType() const;
 
                     /**
-                     * 设置Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
-                     * @param _messageType Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+                     * 设置<p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
+                     * @param _messageType <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
                      * 
                      */
                     void SetMessageType(const std::string& _messageType);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+                     * <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
                      */
                     std::string m_algorithm;
                     bool m_algorithmHasBeenSet;
 
                     /**
-                     * Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+                     * <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Unique ID of a key
+                     * <p>Unique identifier of the key</p>
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+                     * <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
                      */
                     std::string m_messageType;
                     bool m_messageTypeHasBeenSet;

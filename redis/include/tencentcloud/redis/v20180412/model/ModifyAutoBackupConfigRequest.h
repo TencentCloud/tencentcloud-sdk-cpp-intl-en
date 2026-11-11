@@ -43,19 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
+                     * 获取<p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID in the instance list.</p>
+                     * @return InstanceId <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID in the instance list.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
+                     * 设置<p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID in the instance list.</p>
+                     * @param _instanceId <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID in the instance list.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
-                     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * 获取<p>Set the automatic backup cycle. It can be set to Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. This parameter cannot be modified for the moment.</p>
+                     * @return WeekDays <p>Set the automatic backup cycle. It can be set to Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. This parameter cannot be modified for the moment.</p>
                      * 
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
-                     * 设置Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
-                     * @param _weekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * 设置<p>Set the automatic backup cycle. It can be set to Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. This parameter cannot be modified for the moment.</p>
+                     * @param _weekDays <p>Set the automatic backup cycle. It can be set to Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. This parameter cannot be modified for the moment.</p>
                      * 
                      */
                     void SetWeekDays(const std::vector<std::string>& _weekDays);
@@ -89,15 +85,15 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
-                     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * 获取<p>Backup time period. It can be set to every full hour. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
+                     * @return TimePeriod <p>Backup time period. It can be set to every full hour. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
                      * 
                      */
                     std::string GetTimePeriod() const;
 
                     /**
-                     * 设置Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
-                     * @param _timePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * 设置<p>Backup time period. It can be set to every full hour. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
+                     * @param _timePeriod <p>Backup time period. It can be set to every full hour. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
                      * 
                      */
                     void SetTimePeriod(const std::string& _timePeriod);
@@ -110,15 +106,15 @@ namespace TencentCloud
                     bool TimePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup type.  Valid value:  `1` (scheduled backup).
-                     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * 获取<p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
+                     * @return AutoBackupType <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
                      * 
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
-                     * 设置Automatic backup type.  Valid value:  `1` (scheduled backup).
-                     * @param _autoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * 设置<p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
+                     * @param _autoBackupType <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
                      * 
                      */
                     void SetAutoBackupType(const int64_t& _autoBackupType);
@@ -131,15 +127,15 @@ namespace TencentCloud
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
-                     * @return BackupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+                     * 获取<p>Number of days to save full backup files. Only support setting to 7, unit: days. For a longer period, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
+                     * @return BackupStorageDays <p>Number of days to save full backup files. Only support setting to 7, unit: days. For a longer period, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
                      * 
                      */
                     int64_t GetBackupStorageDays() const;
 
                     /**
-                     * 设置Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
-                     * @param _backupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+                     * 设置<p>Number of days to save full backup files. Only support setting to 7, unit: days. For a longer period, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
+                     * @param _backupStorageDays <p>Number of days to save full backup files. Only support setting to 7, unit: days. For a longer period, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
                      * 
                      */
                     void SetBackupStorageDays(const int64_t& _backupStorageDays);
@@ -154,32 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
+                     * <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID in the instance list.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * <p>Set the automatic backup cycle. It can be set to Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. This parameter cannot be modified for the moment.</p>
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * <p>Backup time period. It can be set to every full hour. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;
 
                     /**
-                     * Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
 
                     /**
-                     * Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+                     * <p>Number of days to save full backup files. Only support setting to 7, unit: days. For a longer period, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
                      */
                     int64_t m_backupStorageDays;
                     bool m_backupStorageDaysHasBeenSet;

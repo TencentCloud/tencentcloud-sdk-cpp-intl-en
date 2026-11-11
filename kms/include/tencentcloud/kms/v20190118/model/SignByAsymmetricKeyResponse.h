@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded signature
-                     * @return Signature Base64-encoded signature
+                     * 获取<p>Signature, Base64-encoded.</p>
+                     * @return Signature <p>Signature, Base64-encoded.</p>
                      * 
                      */
                     std::string GetSignature() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Base64-encoded signature
+                     * <p>Signature, Base64-encoded.</p>
                      */
                     std::string m_signature;
                     bool m_signatureHasBeenSet;

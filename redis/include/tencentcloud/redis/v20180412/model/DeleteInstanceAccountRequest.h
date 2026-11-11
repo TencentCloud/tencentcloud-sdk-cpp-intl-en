@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
-                     * @return AccountName Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+                     * 获取Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
+                     * @return AccountName Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
-                     * @param _accountName Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+                     * 设置Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
+                     * @param _accountName Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+                     * Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;

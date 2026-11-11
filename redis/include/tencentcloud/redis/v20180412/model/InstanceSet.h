@@ -995,15 +995,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
-                     * @return MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+                     * 获取<p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+                     * @return MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
                      * 
                      */
                     std::string GetMonitorVersion() const;
 
                     /**
-                     * 设置<p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
-                     * @param _monitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+                     * 设置<p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+                     * @param _monitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
                      * 
                      */
                     void SetMonitorVersion(const std::string& _monitorVersion);
@@ -1603,7 +1603,7 @@ namespace TencentCloud
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+                     * <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
                      */
                     std::string m_monitorVersion;
                     bool m_monitorVersionHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
-                     * @return TemplateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+                     * 获取Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
+                     * @return TemplateId Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
-                     * @param _templateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+                     * 设置Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
+                     * @param _templateId Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+                     * Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

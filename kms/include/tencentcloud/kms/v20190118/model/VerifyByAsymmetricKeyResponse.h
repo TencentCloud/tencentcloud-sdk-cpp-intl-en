@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
-                     * @return SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+                     * 获取<p>Whether the signature is valid. true: valid; false: invalid.</p>
+                     * @return SignatureValid <p>Whether the signature is valid. true: valid; false: invalid.</p>
                      * 
                      */
                     bool GetSignatureValid() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+                     * <p>Whether the signature is valid. true: valid; false: invalid.</p>
                      */
                     bool m_signatureValid;
                     bool m_signatureValidHasBeenSet;

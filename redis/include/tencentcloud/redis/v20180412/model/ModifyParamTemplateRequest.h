@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
-                     * @return TemplateId Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+                     * 获取Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.com/document/product/239/58748?from_cn_redirect=1).
+                     * @return TemplateId Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.com/document/product/239/58748?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
-                     * @param _templateId Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+                     * 设置Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.com/document/product/239/58748?from_cn_redirect=1).
+                     * @param _templateId Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.com/document/product/239/58748?from_cn_redirect=1).
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+                     * Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.com/document/product/239/58748?from_cn_redirect=1).
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

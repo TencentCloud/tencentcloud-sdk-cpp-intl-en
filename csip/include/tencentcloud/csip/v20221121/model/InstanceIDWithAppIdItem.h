@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Host instance location information
+                * Location information of the host instance
                 */
                 class InstanceIDWithAppIdItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AppId of the machine ownership
-                     * @return AppId AppId of the machine ownership
+                     * 获取AppId of the machine
+                     * @return AppId AppId of the machine
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置AppId of the machine ownership
-                     * @param _appId AppId of the machine ownership
+                     * 设置AppId of the machine
+                     * @param _appId AppId of the machine
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AppId of the machine ownership
+                     * AppId of the machine
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;

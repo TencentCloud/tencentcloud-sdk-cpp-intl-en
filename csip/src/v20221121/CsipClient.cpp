@@ -1090,6 +1090,56 @@ CsipClient::CreateAllAssetsExportJobOutcomeCallable CsipClient::CreateAllAssetsE
     return prom->get_future();
 }
 
+CsipClient::CreateAssetBaselineRiskExportJobOutcome CsipClient::CreateAssetBaselineRiskExportJob(const CreateAssetBaselineRiskExportJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAssetBaselineRiskExportJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAssetBaselineRiskExportJobResponse rsp = CreateAssetBaselineRiskExportJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAssetBaselineRiskExportJobOutcome(rsp);
+        else
+            return CreateAssetBaselineRiskExportJobOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAssetBaselineRiskExportJobOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateAssetBaselineRiskExportJobAsync(const CreateAssetBaselineRiskExportJobRequest& request, const CreateAssetBaselineRiskExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAssetBaselineRiskExportJobRequest&;
+    using Resp = CreateAssetBaselineRiskExportJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAssetBaselineRiskExportJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateAssetBaselineRiskExportJobOutcomeCallable CsipClient::CreateAssetBaselineRiskExportJobCallable(const CreateAssetBaselineRiskExportJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAssetBaselineRiskExportJobOutcome>>();
+    CreateAssetBaselineRiskExportJobAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateAssetBaselineRiskExportJobRequest&,
+        CreateAssetBaselineRiskExportJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::CreateAssetComponentListExportJobOutcome CsipClient::CreateAssetComponentListExportJob(const CreateAssetComponentListExportJobRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAssetComponentListExportJob");
@@ -5940,6 +5990,56 @@ CsipClient::DeleteAssetTagOutcomeCallable CsipClient::DeleteAssetTagCallable(con
     return prom->get_future();
 }
 
+CsipClient::DeleteBaselineIgnorePolicyOutcome CsipClient::DeleteBaselineIgnorePolicy(const DeleteBaselineIgnorePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBaselineIgnorePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBaselineIgnorePolicyResponse rsp = DeleteBaselineIgnorePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBaselineIgnorePolicyOutcome(rsp);
+        else
+            return DeleteBaselineIgnorePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBaselineIgnorePolicyOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DeleteBaselineIgnorePolicyAsync(const DeleteBaselineIgnorePolicyRequest& request, const DeleteBaselineIgnorePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteBaselineIgnorePolicyRequest&;
+    using Resp = DeleteBaselineIgnorePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteBaselineIgnorePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DeleteBaselineIgnorePolicyOutcomeCallable CsipClient::DeleteBaselineIgnorePolicyCallable(const DeleteBaselineIgnorePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteBaselineIgnorePolicyOutcome>>();
+    DeleteBaselineIgnorePolicyAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteBaselineIgnorePolicyRequest&,
+        DeleteBaselineIgnorePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DeleteBaselineSelfDefinedPolicyListOutcome CsipClient::DeleteBaselineSelfDefinedPolicyList(const DeleteBaselineSelfDefinedPolicyListRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteBaselineSelfDefinedPolicyList");
@@ -7682,6 +7782,106 @@ CsipClient::DeleteImageVulWhitelistOutcomeCallable CsipClient::DeleteImageVulWhi
         const CsipClient*,
         const DeleteImageVulWhitelistRequest&,
         DeleteImageVulWhitelistOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DeleteLoginWhiteCustomEDROutcome CsipClient::DeleteLoginWhiteCustomEDR(const DeleteLoginWhiteCustomEDRRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteLoginWhiteCustomEDR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteLoginWhiteCustomEDRResponse rsp = DeleteLoginWhiteCustomEDRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteLoginWhiteCustomEDROutcome(rsp);
+        else
+            return DeleteLoginWhiteCustomEDROutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteLoginWhiteCustomEDROutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DeleteLoginWhiteCustomEDRAsync(const DeleteLoginWhiteCustomEDRRequest& request, const DeleteLoginWhiteCustomEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteLoginWhiteCustomEDRRequest&;
+    using Resp = DeleteLoginWhiteCustomEDRResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteLoginWhiteCustomEDR", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DeleteLoginWhiteCustomEDROutcomeCallable CsipClient::DeleteLoginWhiteCustomEDRCallable(const DeleteLoginWhiteCustomEDRRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteLoginWhiteCustomEDROutcome>>();
+    DeleteLoginWhiteCustomEDRAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteLoginWhiteCustomEDRRequest&,
+        DeleteLoginWhiteCustomEDROutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DeleteLoginWhiteLearnEDROutcome CsipClient::DeleteLoginWhiteLearnEDR(const DeleteLoginWhiteLearnEDRRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteLoginWhiteLearnEDR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteLoginWhiteLearnEDRResponse rsp = DeleteLoginWhiteLearnEDRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteLoginWhiteLearnEDROutcome(rsp);
+        else
+            return DeleteLoginWhiteLearnEDROutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteLoginWhiteLearnEDROutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DeleteLoginWhiteLearnEDRAsync(const DeleteLoginWhiteLearnEDRRequest& request, const DeleteLoginWhiteLearnEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteLoginWhiteLearnEDRRequest&;
+    using Resp = DeleteLoginWhiteLearnEDRResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteLoginWhiteLearnEDR", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DeleteLoginWhiteLearnEDROutcomeCallable CsipClient::DeleteLoginWhiteLearnEDRCallable(const DeleteLoginWhiteLearnEDRRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteLoginWhiteLearnEDROutcome>>();
+    DeleteLoginWhiteLearnEDRAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteLoginWhiteLearnEDRRequest&,
+        DeleteLoginWhiteLearnEDROutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -9690,6 +9890,56 @@ CsipClient::DescribeAlertListOutcomeCallable CsipClient::DescribeAlertListCallab
     return prom->get_future();
 }
 
+CsipClient::DescribeAssetBaselineRiskListOutcome CsipClient::DescribeAssetBaselineRiskList(const DescribeAssetBaselineRiskListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAssetBaselineRiskList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAssetBaselineRiskListResponse rsp = DescribeAssetBaselineRiskListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAssetBaselineRiskListOutcome(rsp);
+        else
+            return DescribeAssetBaselineRiskListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAssetBaselineRiskListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeAssetBaselineRiskListAsync(const DescribeAssetBaselineRiskListRequest& request, const DescribeAssetBaselineRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAssetBaselineRiskListRequest&;
+    using Resp = DescribeAssetBaselineRiskListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAssetBaselineRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeAssetBaselineRiskListOutcomeCallable CsipClient::DescribeAssetBaselineRiskListCallable(const DescribeAssetBaselineRiskListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAssetBaselineRiskListOutcome>>();
+    DescribeAssetBaselineRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeAssetBaselineRiskListRequest&,
+        DescribeAssetBaselineRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeAssetComponentListOutcome CsipClient::DescribeAssetComponentList(const DescribeAssetComponentListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAssetComponentList");
@@ -10932,6 +11182,56 @@ CsipClient::DescribeBaselineFixRecordListOutcomeCallable CsipClient::DescribeBas
         const CsipClient*,
         const DescribeBaselineFixRecordListRequest&,
         DescribeBaselineFixRecordListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeBaselineIgnorePolicyListOutcome CsipClient::DescribeBaselineIgnorePolicyList(const DescribeBaselineIgnorePolicyListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBaselineIgnorePolicyList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBaselineIgnorePolicyListResponse rsp = DescribeBaselineIgnorePolicyListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBaselineIgnorePolicyListOutcome(rsp);
+        else
+            return DescribeBaselineIgnorePolicyListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBaselineIgnorePolicyListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeBaselineIgnorePolicyListAsync(const DescribeBaselineIgnorePolicyListRequest& request, const DescribeBaselineIgnorePolicyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBaselineIgnorePolicyListRequest&;
+    using Resp = DescribeBaselineIgnorePolicyListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBaselineIgnorePolicyList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeBaselineIgnorePolicyListOutcomeCallable CsipClient::DescribeBaselineIgnorePolicyListCallable(const DescribeBaselineIgnorePolicyListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBaselineIgnorePolicyListOutcome>>();
+    DescribeBaselineIgnorePolicyListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeBaselineIgnorePolicyListRequest&,
+        DescribeBaselineIgnorePolicyListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -13332,6 +13632,56 @@ CsipClient::DescribeClusterAssetsOutcomeCallable CsipClient::DescribeClusterAsse
         const CsipClient*,
         const DescribeClusterAssetsRequest&,
         DescribeClusterAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeClusterBaselineRiskPolicyListOutcome CsipClient::DescribeClusterBaselineRiskPolicyList(const DescribeClusterBaselineRiskPolicyListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterBaselineRiskPolicyList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterBaselineRiskPolicyListResponse rsp = DescribeClusterBaselineRiskPolicyListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterBaselineRiskPolicyListOutcome(rsp);
+        else
+            return DescribeClusterBaselineRiskPolicyListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterBaselineRiskPolicyListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeClusterBaselineRiskPolicyListAsync(const DescribeClusterBaselineRiskPolicyListRequest& request, const DescribeClusterBaselineRiskPolicyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeClusterBaselineRiskPolicyListRequest&;
+    using Resp = DescribeClusterBaselineRiskPolicyListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeClusterBaselineRiskPolicyList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeClusterBaselineRiskPolicyListOutcomeCallable CsipClient::DescribeClusterBaselineRiskPolicyListCallable(const DescribeClusterBaselineRiskPolicyListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeClusterBaselineRiskPolicyListOutcome>>();
+    DescribeClusterBaselineRiskPolicyListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeClusterBaselineRiskPolicyListRequest&,
+        DescribeClusterBaselineRiskPolicyListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -20090,6 +20440,56 @@ CsipClient::DescribeEdrLogCollectPathsOutcomeCallable CsipClient::DescribeEdrLog
     return prom->get_future();
 }
 
+CsipClient::DescribeEdrMalwareFileOutcome CsipClient::DescribeEdrMalwareFile(const DescribeEdrMalwareFileRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEdrMalwareFile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEdrMalwareFileResponse rsp = DescribeEdrMalwareFileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEdrMalwareFileOutcome(rsp);
+        else
+            return DescribeEdrMalwareFileOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEdrMalwareFileOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeEdrMalwareFileAsync(const DescribeEdrMalwareFileRequest& request, const DescribeEdrMalwareFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeEdrMalwareFileRequest&;
+    using Resp = DescribeEdrMalwareFileResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeEdrMalwareFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeEdrMalwareFileOutcomeCallable CsipClient::DescribeEdrMalwareFileCallable(const DescribeEdrMalwareFileRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeEdrMalwareFileOutcome>>();
+    DescribeEdrMalwareFileAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeEdrMalwareFileRequest&,
+        DescribeEdrMalwareFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeExportJobDownloadURLOutcome CsipClient::DescribeExportJobDownloadURL(const DescribeExportJobDownloadURLRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeExportJobDownloadURL");
@@ -20890,6 +21290,56 @@ CsipClient::DescribeHostVulOverviewOutcomeCallable CsipClient::DescribeHostVulOv
     return prom->get_future();
 }
 
+CsipClient::DescribeHostVulRiskEventListOutcome CsipClient::DescribeHostVulRiskEventList(const DescribeHostVulRiskEventListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostVulRiskEventList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostVulRiskEventListResponse rsp = DescribeHostVulRiskEventListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostVulRiskEventListOutcome(rsp);
+        else
+            return DescribeHostVulRiskEventListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostVulRiskEventListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeHostVulRiskEventListAsync(const DescribeHostVulRiskEventListRequest& request, const DescribeHostVulRiskEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHostVulRiskEventListRequest&;
+    using Resp = DescribeHostVulRiskEventListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostVulRiskEventList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeHostVulRiskEventListOutcomeCallable CsipClient::DescribeHostVulRiskEventListCallable(const DescribeHostVulRiskEventListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHostVulRiskEventListOutcome>>();
+    DescribeHostVulRiskEventListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeHostVulRiskEventListRequest&,
+        DescribeHostVulRiskEventListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeHostVulRiskListOutcome CsipClient::DescribeHostVulRiskList(const DescribeHostVulRiskListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeHostVulRiskList");
@@ -20932,6 +21382,56 @@ CsipClient::DescribeHostVulRiskListOutcomeCallable CsipClient::DescribeHostVulRi
         const CsipClient*,
         const DescribeHostVulRiskListRequest&,
         DescribeHostVulRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeHostVulScanStatusOutcome CsipClient::DescribeHostVulScanStatus(const DescribeHostVulScanStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostVulScanStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostVulScanStatusResponse rsp = DescribeHostVulScanStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostVulScanStatusOutcome(rsp);
+        else
+            return DescribeHostVulScanStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostVulScanStatusOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeHostVulScanStatusAsync(const DescribeHostVulScanStatusRequest& request, const DescribeHostVulScanStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHostVulScanStatusRequest&;
+    using Resp = DescribeHostVulScanStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostVulScanStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeHostVulScanStatusOutcomeCallable CsipClient::DescribeHostVulScanStatusCallable(const DescribeHostVulScanStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHostVulScanStatusOutcome>>();
+    DescribeHostVulScanStatusAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeHostVulScanStatusRequest&,
+        DescribeHostVulScanStatusOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -23040,6 +23540,56 @@ CsipClient::DescribeLoginWhiteCombinedListOutcomeCallable CsipClient::DescribeLo
     return prom->get_future();
 }
 
+CsipClient::DescribeLoginWhiteCustomListEDROutcome CsipClient::DescribeLoginWhiteCustomListEDR(const DescribeLoginWhiteCustomListEDRRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLoginWhiteCustomListEDR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLoginWhiteCustomListEDRResponse rsp = DescribeLoginWhiteCustomListEDRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLoginWhiteCustomListEDROutcome(rsp);
+        else
+            return DescribeLoginWhiteCustomListEDROutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLoginWhiteCustomListEDROutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeLoginWhiteCustomListEDRAsync(const DescribeLoginWhiteCustomListEDRRequest& request, const DescribeLoginWhiteCustomListEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLoginWhiteCustomListEDRRequest&;
+    using Resp = DescribeLoginWhiteCustomListEDRResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLoginWhiteCustomListEDR", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeLoginWhiteCustomListEDROutcomeCallable CsipClient::DescribeLoginWhiteCustomListEDRCallable(const DescribeLoginWhiteCustomListEDRRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLoginWhiteCustomListEDROutcome>>();
+    DescribeLoginWhiteCustomListEDRAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeLoginWhiteCustomListEDRRequest&,
+        DescribeLoginWhiteCustomListEDROutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeLoginWhiteHostListOutcome CsipClient::DescribeLoginWhiteHostList(const DescribeLoginWhiteHostListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeLoginWhiteHostList");
@@ -23082,6 +23632,56 @@ CsipClient::DescribeLoginWhiteHostListOutcomeCallable CsipClient::DescribeLoginW
         const CsipClient*,
         const DescribeLoginWhiteHostListRequest&,
         DescribeLoginWhiteHostListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeLoginWhiteLearnListEDROutcome CsipClient::DescribeLoginWhiteLearnListEDR(const DescribeLoginWhiteLearnListEDRRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLoginWhiteLearnListEDR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLoginWhiteLearnListEDRResponse rsp = DescribeLoginWhiteLearnListEDRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLoginWhiteLearnListEDROutcome(rsp);
+        else
+            return DescribeLoginWhiteLearnListEDROutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLoginWhiteLearnListEDROutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeLoginWhiteLearnListEDRAsync(const DescribeLoginWhiteLearnListEDRRequest& request, const DescribeLoginWhiteLearnListEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLoginWhiteLearnListEDRRequest&;
+    using Resp = DescribeLoginWhiteLearnListEDRResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLoginWhiteLearnListEDR", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeLoginWhiteLearnListEDROutcomeCallable CsipClient::DescribeLoginWhiteLearnListEDRCallable(const DescribeLoginWhiteLearnListEDRRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLoginWhiteLearnListEDROutcome>>();
+    DescribeLoginWhiteLearnListEDRAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeLoginWhiteLearnListEDRRequest&,
+        DescribeLoginWhiteLearnListEDROutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -30390,6 +30990,56 @@ CsipClient::ModifyBanModeOutcomeCallable CsipClient::ModifyBanModeCallable(const
     return prom->get_future();
 }
 
+CsipClient::ModifyBaselineIgnorePolicyOutcome CsipClient::ModifyBaselineIgnorePolicy(const ModifyBaselineIgnorePolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBaselineIgnorePolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBaselineIgnorePolicyResponse rsp = ModifyBaselineIgnorePolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBaselineIgnorePolicyOutcome(rsp);
+        else
+            return ModifyBaselineIgnorePolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBaselineIgnorePolicyOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyBaselineIgnorePolicyAsync(const ModifyBaselineIgnorePolicyRequest& request, const ModifyBaselineIgnorePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBaselineIgnorePolicyRequest&;
+    using Resp = ModifyBaselineIgnorePolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBaselineIgnorePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyBaselineIgnorePolicyOutcomeCallable CsipClient::ModifyBaselineIgnorePolicyCallable(const ModifyBaselineIgnorePolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBaselineIgnorePolicyOutcome>>();
+    ModifyBaselineIgnorePolicyAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyBaselineIgnorePolicyRequest&,
+        ModifyBaselineIgnorePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::ModifyBaselinePolicyOutcome CsipClient::ModifyBaselinePolicy(const ModifyBaselinePolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyBaselinePolicy");
@@ -33632,6 +34282,106 @@ CsipClient::ModifyImageVulWhitelistOutcomeCallable CsipClient::ModifyImageVulWhi
         const CsipClient*,
         const ModifyImageVulWhitelistRequest&,
         ModifyImageVulWhitelistOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::ModifyLoginWhiteCustomEDROutcome CsipClient::ModifyLoginWhiteCustomEDR(const ModifyLoginWhiteCustomEDRRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyLoginWhiteCustomEDR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyLoginWhiteCustomEDRResponse rsp = ModifyLoginWhiteCustomEDRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyLoginWhiteCustomEDROutcome(rsp);
+        else
+            return ModifyLoginWhiteCustomEDROutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyLoginWhiteCustomEDROutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyLoginWhiteCustomEDRAsync(const ModifyLoginWhiteCustomEDRRequest& request, const ModifyLoginWhiteCustomEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyLoginWhiteCustomEDRRequest&;
+    using Resp = ModifyLoginWhiteCustomEDRResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyLoginWhiteCustomEDR", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyLoginWhiteCustomEDROutcomeCallable CsipClient::ModifyLoginWhiteCustomEDRCallable(const ModifyLoginWhiteCustomEDRRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyLoginWhiteCustomEDROutcome>>();
+    ModifyLoginWhiteCustomEDRAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyLoginWhiteCustomEDRRequest&,
+        ModifyLoginWhiteCustomEDROutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::ModifyLoginWhiteLearnEDROutcome CsipClient::ModifyLoginWhiteLearnEDR(const ModifyLoginWhiteLearnEDRRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyLoginWhiteLearnEDR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyLoginWhiteLearnEDRResponse rsp = ModifyLoginWhiteLearnEDRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyLoginWhiteLearnEDROutcome(rsp);
+        else
+            return ModifyLoginWhiteLearnEDROutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyLoginWhiteLearnEDROutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyLoginWhiteLearnEDRAsync(const ModifyLoginWhiteLearnEDRRequest& request, const ModifyLoginWhiteLearnEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyLoginWhiteLearnEDRRequest&;
+    using Resp = ModifyLoginWhiteLearnEDRResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyLoginWhiteLearnEDR", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyLoginWhiteLearnEDROutcomeCallable CsipClient::ModifyLoginWhiteLearnEDRCallable(const ModifyLoginWhiteLearnEDRRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyLoginWhiteLearnEDROutcome>>();
+    ModifyLoginWhiteLearnEDRAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyLoginWhiteLearnEDRRequest&,
+        ModifyLoginWhiteLearnEDROutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

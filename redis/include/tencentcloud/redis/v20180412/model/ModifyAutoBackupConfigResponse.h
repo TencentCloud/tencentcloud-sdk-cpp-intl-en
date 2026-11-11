@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Automatic backup type.  Valid value:  `1` (scheduled backup).
-                     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * 获取<p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
+                     * @return AutoBackupType <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
                      * 
                      */
                     int64_t GetAutoBackupType() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
-                     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+                     * 获取<p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
+                     * @return WeekDays <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
                      * 
                      */
                     std::vector<std::string> GetWeekDays() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
-                     * @return TimePeriod Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+                     * 获取<p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
+                     * @return TimePeriod <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
                      * 
                      */
                     std::string GetTimePeriod() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool TimePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Retention time of full backup files in days
-                     * @return BackupStorageDays Retention time of full backup files in days
+                     * 获取<p>Number of days to save full backup files, in days.</p>
+                     * @return BackupStorageDays <p>Number of days to save full backup files, in days.</p>
                      * 
                      */
                     int64_t GetBackupStorageDays() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
 
                     /**
-                     * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+                     * <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+                     * <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;
 
                     /**
-                     * Retention time of full backup files in days
+                     * <p>Number of days to save full backup files, in days.</p>
                      */
                     int64_t m_backupStorageDays;
                     bool m_backupStorageDaysHasBeenSet;

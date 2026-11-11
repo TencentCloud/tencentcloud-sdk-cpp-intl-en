@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Text content, up to 100 characters. This field is required only when the watermark type is text.
+                     * 获取Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
-                     * @return TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
+                     * @return TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
                      * 
                      */
                     std::string GetTextContent() const;
 
                     /**
-                     * 设置Text content, up to 100 characters. This field is required only when the watermark type is text.
+                     * 设置Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
-                     * @param _textContent Text content, up to 100 characters. This field is required only when the watermark type is text.
+                     * @param _textContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
                      * 
                      */
@@ -94,18 +94,18 @@ Text watermarks do not support watermarking screenshots.
 
                     /**
                      * 获取SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
                      * @return SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
                      * 
                      */
                     std::string GetSvgContent() const;
 
                     /**
                      * 设置SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
                      * @param _svgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
                      * 
                      */
                     void SetSvgContent(const std::string& _svgContent);
@@ -154,11 +154,11 @@ SVG watermark does not support watermarking screenshots.
                      * 获取End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
                      * @return EndTimeOffset End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
                      * 
                      */
                     double GetEndTimeOffset() const;
@@ -167,11 +167,11 @@ SVG watermark does not support watermarking screenshots.
                      * 设置End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
                      * @param _endTimeOffset End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -192,7 +192,7 @@ SVG watermark does not support watermarking screenshots.
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Text content, up to 100 characters. This field is required only when the watermark type is text.
+                     * Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
                      */
                     std::string m_textContent;
@@ -200,7 +200,7 @@ Text watermarks do not support watermarking screenshots.
 
                     /**
                      * SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
                      */
                     std::string m_svgContent;
                     bool m_svgContentHasBeenSet;
@@ -218,7 +218,7 @@ SVG watermark does not support watermarking screenshots.
                      * End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

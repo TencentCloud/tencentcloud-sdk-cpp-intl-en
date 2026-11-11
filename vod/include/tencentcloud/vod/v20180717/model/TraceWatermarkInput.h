@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Watermark parameters for source tracing
+                * Traceability watermark parameters
                 */
                 class TraceWatermarkInput : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取Traceability watermark task switch. Required. Available values:
 <li>ON: enable traceability watermark</li>
-<li>OFF: disables traceability watermark.</li>
+<li>OFF: Disable traceability watermark.</li>
                      * @return Switch Traceability watermark task switch. Required. Available values:
 <li>ON: enable traceability watermark</li>
-<li>OFF: disables traceability watermark.</li>
+<li>OFF: Disable traceability watermark.</li>
                      * 
                      */
                     std::string GetSwitch() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     /**
                      * 设置Traceability watermark task switch. Required. Available values:
 <li>ON: enable traceability watermark</li>
-<li>OFF: disables traceability watermark.</li>
+<li>OFF: Disable traceability watermark.</li>
                      * @param _switch Traceability watermark task switch. Required. Available values:
 <li>ON: enable traceability watermark</li>
-<li>OFF: disables traceability watermark.</li>
+<li>OFF: Disable traceability watermark.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -101,7 +101,7 @@ namespace TencentCloud
                     /**
                      * Traceability watermark task switch. Required. Available values:
 <li>ON: enable traceability watermark</li>
-<li>OFF: disables traceability watermark.</li>
+<li>OFF: Disable traceability watermark.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

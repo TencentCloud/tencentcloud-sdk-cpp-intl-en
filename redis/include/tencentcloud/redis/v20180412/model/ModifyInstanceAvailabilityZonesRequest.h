@@ -98,19 +98,19 @@ namespace TencentCloud
                     bool SwitchOptionHasBeenSet() const;
 
                     /**
-                     * 获取Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
-                     * @return NodeSet Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+                     * 获取Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
+                     * @return NodeSet Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
                      * 
                      */
                     std::vector<RedisNodeInfo> GetNodeSet() const;
 
                     /**
-                     * 设置Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
-                     * @param _nodeSet Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+                     * 设置Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
+                     * @param _nodeSet Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
                      * 
                      */
                     void SetNodeSet(const std::vector<RedisNodeInfo>& _nodeSet);
@@ -140,8 +140,8 @@ For instances in a single availability zone, there is no need to configure the N
                     bool m_switchOptionHasBeenSet;
 
                     /**
-                     * Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+                     * Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
                      */
                     std::vector<RedisNodeInfo> m_nodeSet;
                     bool m_nodeSetHasBeenSet;

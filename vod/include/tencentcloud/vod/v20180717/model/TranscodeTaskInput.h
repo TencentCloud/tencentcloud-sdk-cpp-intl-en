@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool MosaicSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
-                     * @return HeadTailSet <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+                     * 获取<p>Opening and ending content list. Up to 10 supported.</p>
+                     * @return HeadTailSet <p>Opening and ending content list. Up to 10 supported.</p>
                      * 
                      */
                     std::vector<HeadTailTaskInput> GetHeadTailSet() const;
 
                     /**
-                     * 设置<p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
-                     * @param _headTailSet <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+                     * 设置<p>Opening and ending content list. Up to 10 supported.</p>
+                     * @param _headTailSet <p>Opening and ending content list. Up to 10 supported.</p>
                      * 
                      */
                     void SetHeadTailSet(const std::vector<HeadTailTaskInput>& _headTailSet);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool HeadTailSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
-                     * @return StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+                     * 获取<p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+                     * @return StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置<p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
-                     * @param _startTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+                     * 设置<p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+                     * @param _startTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -265,15 +265,15 @@ namespace TencentCloud
                     bool OverrideParameterHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle suppression information list. Up to 2 are supported.</p>
-                     * @return SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 are supported.</p>
+                     * 获取<p>Subtitle suppression information list. Up to 2 supported.</p>
+                     * @return SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
                      * 
                      */
                     std::vector<SubtitleInfoInput> GetSubtitleInfoSet() const;
 
                     /**
-                     * 设置<p>Subtitle suppression information list. Up to 2 are supported.</p>
-                     * @param _subtitleInfoSet <p>Subtitle suppression information list. Up to 2 are supported.</p>
+                     * 设置<p>Subtitle suppression information list. Up to 2 supported.</p>
+                     * @param _subtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
                      * 
                      */
                     void SetSubtitleInfoSet(const std::vector<SubtitleInfoInput>& _subtitleInfoSet);
@@ -324,13 +324,13 @@ namespace TencentCloud
                     bool m_mosaicSetHasBeenSet;
 
                     /**
-                     * <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+                     * <p>Opening and ending content list. Up to 10 supported.</p>
                      */
                     std::vector<HeadTailTaskInput> m_headTailSet;
                     bool m_headTailSetHasBeenSet;
 
                     /**
-                     * <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+                     * <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
@@ -348,7 +348,7 @@ namespace TencentCloud
                     bool m_overrideParameterHasBeenSet;
 
                     /**
-                     * <p>Subtitle suppression information list. Up to 2 are supported.</p>
+                     * <p>Subtitle suppression information list. Up to 2 supported.</p>
                      */
                     std::vector<SubtitleInfoInput> m_subtitleInfoSet;
                     bool m_subtitleInfoSetHasBeenSet;

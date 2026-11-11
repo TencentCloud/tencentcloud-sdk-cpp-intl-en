@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取<p>Parameter name</p>
+                     * @return ParamName <p>Parameter name</p>
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置<p>Parameter name</p>
+                     * @param _paramName <p>Parameter name</p>
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter type: Integer
-                     * @return ValueType Parameter type: Integer
+                     * 获取<p>Parameter type: integer</p>
+                     * @return ValueType <p>Parameter type: integer</p>
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置Parameter type: Integer
-                     * @param _valueType Parameter type: Integer
+                     * 设置<p>Parameter type: integer</p>
+                     * @param _valueType <p>Parameter type: integer</p>
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether restart is required after a modification is made. Valid values: true, false
-                     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+                     * 获取<p>Whether restart is required after modification: true, false</p>
+                     * @return NeedRestart <p>Whether restart is required after modification: true, false</p>
                      * 
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether restart is required after a modification is made. Valid values: true, false
-                     * @param _needRestart Whether restart is required after a modification is made. Valid values: true, false
+                     * 设置<p>Whether restart is required after modification: true, false</p>
+                     * @param _needRestart <p>Whether restart is required after modification: true, false</p>
                      * 
                      */
                     void SetNeedRestart(const std::string& _needRestart);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NeedRestartHasBeenSet() const;
 
                     /**
-                     * 获取Default value of the parameter
-                     * @return DefaultValue Default value of the parameter
+                     * 获取<p>Default parameter value</p>
+                     * @return DefaultValue <p>Default parameter value</p>
                      * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
-                     * 设置Default value of the parameter
-                     * @param _defaultValue Default value of the parameter
+                     * 设置<p>Default parameter value</p>
+                     * @param _defaultValue <p>Default parameter value</p>
                      * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Current value
-                     * @return CurrentValue Current value
+                     * 获取<p>Current running parameter value</p>
+                     * @return CurrentValue <p>Current running parameter value</p>
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value
-                     * @param _currentValue Current value
+                     * 设置<p>Current running parameter value</p>
+                     * @param _currentValue <p>Current running parameter value</p>
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description
-                     * @return Tips Parameter description
+                     * 获取<p>Parameter description</p>
+                     * @return Tips <p>Parameter description</p>
                      * 
                      */
                     std::string GetTips() const;
 
                     /**
-                     * 设置Parameter description
-                     * @param _tips Parameter description
+                     * 设置<p>Parameter description</p>
+                     * @param _tips <p>Parameter description</p>
                      * 
                      */
                     void SetTips(const std::string& _tips);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value of the parameter
-                     * @return Min Minimum value of the parameter
+                     * 获取<p>Minimum parameter value</p>
+                     * @return Min <p>Minimum parameter value</p>
                      * 
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value of the parameter
-                     * @param _min Minimum value of the parameter
+                     * 设置<p>Minimum parameter value</p>
+                     * @param _min <p>Minimum parameter value</p>
                      * 
                      */
                     void SetMin(const std::string& _min);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the parameter
-                     * @return Max Maximum value of the parameter
+                     * 获取<p>Maximum parameter value</p>
+                     * @return Max <p>Maximum parameter value</p>
                      * 
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置Maximum value of the parameter
-                     * @param _max Maximum value of the parameter
+                     * 设置<p>Maximum parameter value</p>
+                     * @param _max <p>Maximum parameter value</p>
                      * 
                      */
                     void SetMax(const std::string& _max);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Parameter status. 1: modifying; 2: modified
-                     * @return Status Parameter status. 1: modifying; 2: modified
+                     * 获取<p>Parameter status. 1: modifying, 2: modified</p>
+                     * @return Status <p>Parameter status. 1: modifying, 2: modified</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Parameter status. 1: modifying; 2: modified
-                     * @param _status Parameter status. 1: modifying; 2: modified
+                     * 设置<p>Parameter status. 1: modifying, 2: modified</p>
+                     * @param _status <p>Parameter status. 1: modifying, 2: modified</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Parameter unit.
-                     * @return Unit Parameter unit.
+                     * 获取<p>Parameter unit</p>
+                     * @return Unit <p>Parameter unit</p>
                      * 
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置Parameter unit.
-                     * @param _unit Parameter unit.
+                     * 设置<p>Parameter unit</p>
+                     * @param _unit <p>Parameter unit</p>
                      * 
                      */
                     void SetUnit(const std::string& _unit);
@@ -256,67 +256,202 @@ namespace TencentCloud
                      */
                     bool UnitHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+                     * @return ParamType <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+                     * 
+                     */
+                    std::string GetParamType() const;
+
+                    /**
+                     * 设置<p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+                     * @param _paramType <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+                     * 
+                     */
+                    void SetParamType(const std::string& _paramType);
+
+                    /**
+                     * 判断参数 ParamType 是否已赋值
+                     * @return ParamType 是否已赋值
+                     * 
+                     */
+                    bool ParamTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether the current instance supports this feature</p>
+                     * @return FeatureSupported <p>Whether the current instance supports this feature</p>
+                     * 
+                     */
+                    bool GetFeatureSupported() const;
+
+                    /**
+                     * 设置<p>Whether the current instance supports this feature</p>
+                     * @param _featureSupported <p>Whether the current instance supports this feature</p>
+                     * 
+                     */
+                    void SetFeatureSupported(const bool& _featureSupported);
+
+                    /**
+                     * 判断参数 FeatureSupported 是否已赋值
+                     * @return FeatureSupported 是否已赋值
+                     * 
+                     */
+                    bool FeatureSupportedHasBeenSet() const;
+
+                    /**
+                     * 获取<p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+                     * @return NewFeatureOnlineTime <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+                     * 
+                     */
+                    std::string GetNewFeatureOnlineTime() const;
+
+                    /**
+                     * 设置<p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+                     * @param _newFeatureOnlineTime <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+                     * 
+                     */
+                    void SetNewFeatureOnlineTime(const std::string& _newFeatureOnlineTime);
+
+                    /**
+                     * 判断参数 NewFeatureOnlineTime 是否已赋值
+                     * @return NewFeatureOnlineTime 是否已赋值
+                     * 
+                     */
+                    bool NewFeatureOnlineTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Regular expression validation rule</p>
+                     * @return Pattern <p>Regular expression validation rule</p>
+                     * 
+                     */
+                    std::string GetPattern() const;
+
+                    /**
+                     * 设置<p>Regular expression validation rule</p>
+                     * @param _pattern <p>Regular expression validation rule</p>
+                     * 
+                     */
+                    void SetPattern(const std::string& _pattern);
+
+                    /**
+                     * 判断参数 Pattern 是否已赋值
+                     * @return Pattern 是否已赋值
+                     * 
+                     */
+                    bool PatternHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Input format description</p>
+                     * @return InputDescription <p>Input format description</p>
+                     * 
+                     */
+                    std::string GetInputDescription() const;
+
+                    /**
+                     * 设置<p>Input format description</p>
+                     * @param _inputDescription <p>Input format description</p>
+                     * 
+                     */
+                    void SetInputDescription(const std::string& _inputDescription);
+
+                    /**
+                     * 判断参数 InputDescription 是否已赋值
+                     * @return InputDescription 是否已赋值
+                     * 
+                     */
+                    bool InputDescriptionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Parameter name
+                     * <p>Parameter name</p>
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Parameter type: Integer
+                     * <p>Parameter type: integer</p>
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether restart is required after a modification is made. Valid values: true, false
+                     * <p>Whether restart is required after modification: true, false</p>
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
 
                     /**
-                     * Default value of the parameter
+                     * <p>Default parameter value</p>
                      */
                     std::string m_defaultValue;
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Current value
+                     * <p>Current running parameter value</p>
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Parameter description
+                     * <p>Parameter description</p>
                      */
                     std::string m_tips;
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Minimum value of the parameter
+                     * <p>Minimum parameter value</p>
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Maximum value of the parameter
+                     * <p>Maximum parameter value</p>
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Parameter status. 1: modifying; 2: modified
+                     * <p>Parameter status. 1: modifying, 2: modified</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Parameter unit.
+                     * <p>Parameter unit</p>
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
+
+                    /**
+                     * <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+                     */
+                    std::string m_paramType;
+                    bool m_paramTypeHasBeenSet;
+
+                    /**
+                     * <p>Whether the current instance supports this feature</p>
+                     */
+                    bool m_featureSupported;
+                    bool m_featureSupportedHasBeenSet;
+
+                    /**
+                     * <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+                     */
+                    std::string m_newFeatureOnlineTime;
+                    bool m_newFeatureOnlineTimeHasBeenSet;
+
+                    /**
+                     * <p>Regular expression validation rule</p>
+                     */
+                    std::string m_pattern;
+                    bool m_patternHasBeenSet;
+
+                    /**
+                     * <p>Input format description</p>
+                     */
+                    std::string m_inputDescription;
+                    bool m_inputDescriptionHasBeenSet;
 
                 };
             }

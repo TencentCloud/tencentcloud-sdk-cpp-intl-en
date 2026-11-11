@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio stream configuration parameters
+                * Audio stream configuration parameters.
                 */
                 class AudioTemplateInfoForUpdate : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
-                     * @return Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * 获取<p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * @return Bitrate <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
                      * 
                      */
                     uint64_t GetBitrate() const;
 
                     /**
-                     * 设置<p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
-                     * @param _bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * 设置<p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * @param _bitrate <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
                      * 
                      */
                     void SetBitrate(const uint64_t& _bitrate);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SampleRateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
-                     * @return AudioChannel <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+                     * 获取<p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
+                     * @return AudioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
                      * 
                      */
                     int64_t GetAudioChannel() const;
 
                     /**
-                     * 设置<p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
-                     * @param _audioChannel <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+                     * 设置<p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
+                     * @param _audioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
                      * 
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AudioChannelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
-                     * @return StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+                     * 获取<p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
+                     * @return StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
                      * 
                      */
                     std::vector<int64_t> GetStreamSelects() const;
 
                     /**
-                     * 设置<p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
-                     * @param _streamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+                     * 设置<p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
+                     * @param _streamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
                      * 
                      */
                     void SetStreamSelects(const std::vector<int64_t>& _streamSelects);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_codecHasBeenSet;
 
                     /**
-                     * <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
                      */
                     uint64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_sampleRateHasBeenSet;
 
                     /**
-                     * <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+                     * <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
 
                     /**
-                     * <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+                     * <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
                      */
                     std::vector<int64_t> m_streamSelects;
                     bool m_streamSelectsHasBeenSet;

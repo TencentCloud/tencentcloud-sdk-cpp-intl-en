@@ -368,6 +368,34 @@ namespace TencentCloud
                      */
                     bool ResourceRegionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Multi-account activation limit</p><p>Unit: count</p>
+                     * @return MultiAccountLimit <p>Multi-account activation limit</p><p>Unit: count</p>
+                     * 
+                     */
+                    uint64_t GetMultiAccountLimit() const;
+
+                    /**
+                     * 判断参数 MultiAccountLimit 是否已赋值
+                     * @return MultiAccountLimit 是否已赋值
+                     * 
+                     */
+                    bool MultiAccountLimitHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Multi-account enablement count</p><p>Unit: count</p>
+                     * @return MultiAccountUsedCount <p>Multi-account enablement count</p><p>Unit: count</p>
+                     * 
+                     */
+                    uint64_t GetMultiAccountUsedCount() const;
+
+                    /**
+                     * 判断参数 MultiAccountUsedCount 是否已赋值
+                     * @return MultiAccountUsedCount 是否已赋值
+                     * 
+                     */
+                    bool MultiAccountUsedCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -507,6 +535,18 @@ namespace TencentCloud
                      */
                     uint64_t m_resourceRegion;
                     bool m_resourceRegionHasBeenSet;
+
+                    /**
+                     * <p>Multi-account activation limit</p><p>Unit: count</p>
+                     */
+                    uint64_t m_multiAccountLimit;
+                    bool m_multiAccountLimitHasBeenSet;
+
+                    /**
+                     * <p>Multi-account enablement count</p><p>Unit: count</p>
+                     */
+                    uint64_t m_multiAccountUsedCount;
+                    bool m_multiAccountUsedCountHasBeenSet;
 
                 };
             }

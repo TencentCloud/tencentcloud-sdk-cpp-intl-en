@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
-                     * @return LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+                     * 获取ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
+                     * @return LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
-                     * @param _logsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+                     * 设置ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
+                     * @param _logsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
-                     * @return TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+                     * 获取ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
+                     * @return TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
-                     * @param _topicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+                     * 设置ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
+                     * @param _topicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -283,13 +283,13 @@ namespace TencentCloud
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+                     * ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+                     * ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;

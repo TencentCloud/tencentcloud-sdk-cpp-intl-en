@@ -65,6 +65,8 @@
 #include <tencentcloud/csip/v20221121/model/CreateAccessKeySyncTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateAllAssetsExportJobRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateAllAssetsExportJobResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateAssetBaselineRiskExportJobRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateAssetBaselineRiskExportJobResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateAssetComponentListExportJobRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateAssetComponentListExportJobResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateAssetComponentRelatedImageListExportJobRequest.h>
@@ -259,6 +261,8 @@
 #include <tencentcloud/csip/v20221121/model/DeleteAssetFilterViewResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteAssetTagRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteAssetTagResponse.h>
+#include <tencentcloud/csip/v20221121/model/DeleteBaselineIgnorePolicyRequest.h>
+#include <tencentcloud/csip/v20221121/model/DeleteBaselineIgnorePolicyResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteBaselineSelfDefinedPolicyListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteBaselineSelfDefinedPolicyListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteCSIPMalwareScanTaskRequest.h>
@@ -329,6 +333,10 @@
 #include <tencentcloud/csip/v20221121/model/DeleteImageVirusWhitelistResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteImageVulWhitelistRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteImageVulWhitelistResponse.h>
+#include <tencentcloud/csip/v20221121/model/DeleteLoginWhiteCustomEDRRequest.h>
+#include <tencentcloud/csip/v20221121/model/DeleteLoginWhiteCustomEDRResponse.h>
+#include <tencentcloud/csip/v20221121/model/DeleteLoginWhiteLearnEDRRequest.h>
+#include <tencentcloud/csip/v20221121/model/DeleteLoginWhiteLearnEDRResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteLoginWhiteListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteLoginWhiteListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteMachineClearHistoryRequest.h>
@@ -409,6 +417,8 @@
 #include <tencentcloud/csip/v20221121/model/DescribeAgentRunPolicyResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAlertListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAlertListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAssetBaselineRiskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeAssetBaselineRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAssetComponentListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAssetComponentListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAssetComponentRelatedImageListRequest.h>
@@ -459,6 +469,8 @@
 #include <tencentcloud/csip/v20221121/model/DescribeBaselineCategoryItemListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeBaselineFixRecordListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeBaselineFixRecordListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeBaselineIgnorePolicyListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeBaselineIgnorePolicyListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeBaselineItemRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeBaselineItemRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeBaselineMainTaskItemListRequest.h>
@@ -555,6 +567,8 @@
 #include <tencentcloud/csip/v20221121/model/DescribeClusterAssetSyncTaskStatusResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterAssetsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeClusterBaselineRiskPolicyListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeClusterBaselineRiskPolicyListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterContainerAppListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterContainerAppListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeClusterContainerComponentListRequest.h>
@@ -825,6 +839,8 @@
 #include <tencentcloud/csip/v20221121/model/DescribeEdrExportJobListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeEdrLogCollectPathsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeEdrLogCollectPathsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeEdrMalwareFileRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeEdrMalwareFileResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeExportJobDownloadURLRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeExportJobDownloadURLResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeExportJobManageListRequest.h>
@@ -857,8 +873,12 @@
 #include <tencentcloud/csip/v20221121/model/DescribeHostVulItemVPRInfoResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeHostVulOverviewRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeHostVulOverviewResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulRiskEventListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulRiskEventListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeHostVulRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeHostVulRiskListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulScanStatusRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulScanStatusResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeIaCFileListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeIaCFileListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeIaCFileOverviewRequest.h>
@@ -943,8 +963,12 @@
 #include <tencentcloud/csip/v20221121/model/DescribeLoginTypeHostResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteCombinedListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteCombinedListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteCustomListEDRRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteCustomListEDRResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteHostListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteHostListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteLearnListEDRRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeLoginWhiteLearnListEDRResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeMachineClearHistoryRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeMachineClearHistoryResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeMachineGeneralRequest.h>
@@ -1237,6 +1261,8 @@
 #include <tencentcloud/csip/v20221121/model/ModifyAssetTagsByAssetInfoResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyBanModeRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyBanModeResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyBaselineIgnorePolicyRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyBaselineIgnorePolicyResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyBaselinePolicyRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyBaselinePolicyResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyBaselinePolicyEnableRequest.h>
@@ -1367,6 +1393,10 @@
 #include <tencentcloud/csip/v20221121/model/ModifyImageVirusWhitelistResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyImageVulWhitelistRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyImageVulWhitelistResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyLoginWhiteCustomEDRRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyLoginWhiteCustomEDRResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyLoginWhiteLearnEDRRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyLoginWhiteLearnEDRResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyLoginWhiteRecordRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyLoginWhiteRecordResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyMachineAutoClearConfigRequest.h>
@@ -1600,6 +1630,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAllAssetsExportJobResponse> CreateAllAssetsExportJobOutcome;
                 typedef std::future<CreateAllAssetsExportJobOutcome> CreateAllAssetsExportJobOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateAllAssetsExportJobRequest&, CreateAllAssetsExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAllAssetsExportJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAssetBaselineRiskExportJobResponse> CreateAssetBaselineRiskExportJobOutcome;
+                typedef std::future<CreateAssetBaselineRiskExportJobOutcome> CreateAssetBaselineRiskExportJobOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateAssetBaselineRiskExportJobRequest&, CreateAssetBaselineRiskExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAssetBaselineRiskExportJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAssetComponentListExportJobResponse> CreateAssetComponentListExportJobOutcome;
                 typedef std::future<CreateAssetComponentListExportJobOutcome> CreateAssetComponentListExportJobOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateAssetComponentListExportJobRequest&, CreateAssetComponentListExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAssetComponentListExportJobAsyncHandler;
@@ -1891,6 +1924,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAssetTagResponse> DeleteAssetTagOutcome;
                 typedef std::future<DeleteAssetTagOutcome> DeleteAssetTagOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteAssetTagRequest&, DeleteAssetTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAssetTagAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBaselineIgnorePolicyResponse> DeleteBaselineIgnorePolicyOutcome;
+                typedef std::future<DeleteBaselineIgnorePolicyOutcome> DeleteBaselineIgnorePolicyOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DeleteBaselineIgnorePolicyRequest&, DeleteBaselineIgnorePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselineIgnorePolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteBaselineSelfDefinedPolicyListResponse> DeleteBaselineSelfDefinedPolicyListOutcome;
                 typedef std::future<DeleteBaselineSelfDefinedPolicyListOutcome> DeleteBaselineSelfDefinedPolicyListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteBaselineSelfDefinedPolicyListRequest&, DeleteBaselineSelfDefinedPolicyListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBaselineSelfDefinedPolicyListAsyncHandler;
@@ -1996,6 +2032,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteImageVulWhitelistResponse> DeleteImageVulWhitelistOutcome;
                 typedef std::future<DeleteImageVulWhitelistOutcome> DeleteImageVulWhitelistOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteImageVulWhitelistRequest&, DeleteImageVulWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImageVulWhitelistAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLoginWhiteCustomEDRResponse> DeleteLoginWhiteCustomEDROutcome;
+                typedef std::future<DeleteLoginWhiteCustomEDROutcome> DeleteLoginWhiteCustomEDROutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DeleteLoginWhiteCustomEDRRequest&, DeleteLoginWhiteCustomEDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoginWhiteCustomEDRAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLoginWhiteLearnEDRResponse> DeleteLoginWhiteLearnEDROutcome;
+                typedef std::future<DeleteLoginWhiteLearnEDROutcome> DeleteLoginWhiteLearnEDROutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DeleteLoginWhiteLearnEDRRequest&, DeleteLoginWhiteLearnEDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoginWhiteLearnEDRAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLoginWhiteListResponse> DeleteLoginWhiteListOutcome;
                 typedef std::future<DeleteLoginWhiteListOutcome> DeleteLoginWhiteListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteLoginWhiteListRequest&, DeleteLoginWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoginWhiteListAsyncHandler;
@@ -2116,6 +2158,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAlertListResponse> DescribeAlertListOutcome;
                 typedef std::future<DescribeAlertListOutcome> DescribeAlertListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeAlertListRequest&, DescribeAlertListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlertListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAssetBaselineRiskListResponse> DescribeAssetBaselineRiskListOutcome;
+                typedef std::future<DescribeAssetBaselineRiskListOutcome> DescribeAssetBaselineRiskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeAssetBaselineRiskListRequest&, DescribeAssetBaselineRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAssetBaselineRiskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAssetComponentListResponse> DescribeAssetComponentListOutcome;
                 typedef std::future<DescribeAssetComponentListOutcome> DescribeAssetComponentListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeAssetComponentListRequest&, DescribeAssetComponentListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAssetComponentListAsyncHandler;
@@ -2191,6 +2236,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBaselineFixRecordListResponse> DescribeBaselineFixRecordListOutcome;
                 typedef std::future<DescribeBaselineFixRecordListOutcome> DescribeBaselineFixRecordListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeBaselineFixRecordListRequest&, DescribeBaselineFixRecordListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineFixRecordListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBaselineIgnorePolicyListResponse> DescribeBaselineIgnorePolicyListOutcome;
+                typedef std::future<DescribeBaselineIgnorePolicyListOutcome> DescribeBaselineIgnorePolicyListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeBaselineIgnorePolicyListRequest&, DescribeBaselineIgnorePolicyListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineIgnorePolicyListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBaselineItemRiskListResponse> DescribeBaselineItemRiskListOutcome;
                 typedef std::future<DescribeBaselineItemRiskListOutcome> DescribeBaselineItemRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeBaselineItemRiskListRequest&, DescribeBaselineItemRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBaselineItemRiskListAsyncHandler;
@@ -2335,6 +2383,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterAssetsResponse> DescribeClusterAssetsOutcome;
                 typedef std::future<DescribeClusterAssetsOutcome> DescribeClusterAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeClusterAssetsRequest&, DescribeClusterAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterAssetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterBaselineRiskPolicyListResponse> DescribeClusterBaselineRiskPolicyListOutcome;
+                typedef std::future<DescribeClusterBaselineRiskPolicyListOutcome> DescribeClusterBaselineRiskPolicyListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeClusterBaselineRiskPolicyListRequest&, DescribeClusterBaselineRiskPolicyListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterBaselineRiskPolicyListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterContainerAppListResponse> DescribeClusterContainerAppListOutcome;
                 typedef std::future<DescribeClusterContainerAppListOutcome> DescribeClusterContainerAppListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeClusterContainerAppListRequest&, DescribeClusterContainerAppListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterContainerAppListAsyncHandler;
@@ -2740,6 +2791,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEdrLogCollectPathsResponse> DescribeEdrLogCollectPathsOutcome;
                 typedef std::future<DescribeEdrLogCollectPathsOutcome> DescribeEdrLogCollectPathsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeEdrLogCollectPathsRequest&, DescribeEdrLogCollectPathsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdrLogCollectPathsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEdrMalwareFileResponse> DescribeEdrMalwareFileOutcome;
+                typedef std::future<DescribeEdrMalwareFileOutcome> DescribeEdrMalwareFileOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeEdrMalwareFileRequest&, DescribeEdrMalwareFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdrMalwareFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeExportJobDownloadURLResponse> DescribeExportJobDownloadURLOutcome;
                 typedef std::future<DescribeExportJobDownloadURLOutcome> DescribeExportJobDownloadURLOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeExportJobDownloadURLRequest&, DescribeExportJobDownloadURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExportJobDownloadURLAsyncHandler;
@@ -2788,9 +2842,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHostVulOverviewResponse> DescribeHostVulOverviewOutcome;
                 typedef std::future<DescribeHostVulOverviewOutcome> DescribeHostVulOverviewOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeHostVulOverviewRequest&, DescribeHostVulOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostVulRiskEventListResponse> DescribeHostVulRiskEventListOutcome;
+                typedef std::future<DescribeHostVulRiskEventListOutcome> DescribeHostVulRiskEventListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeHostVulRiskEventListRequest&, DescribeHostVulRiskEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulRiskEventListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHostVulRiskListResponse> DescribeHostVulRiskListOutcome;
                 typedef std::future<DescribeHostVulRiskListOutcome> DescribeHostVulRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeHostVulRiskListRequest&, DescribeHostVulRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulRiskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostVulScanStatusResponse> DescribeHostVulScanStatusOutcome;
+                typedef std::future<DescribeHostVulScanStatusOutcome> DescribeHostVulScanStatusOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeHostVulScanStatusRequest&, DescribeHostVulScanStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulScanStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIaCFileListResponse> DescribeIaCFileListOutcome;
                 typedef std::future<DescribeIaCFileListOutcome> DescribeIaCFileListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeIaCFileListRequest&, DescribeIaCFileListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIaCFileListAsyncHandler;
@@ -2917,9 +2977,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLoginWhiteCombinedListResponse> DescribeLoginWhiteCombinedListOutcome;
                 typedef std::future<DescribeLoginWhiteCombinedListOutcome> DescribeLoginWhiteCombinedListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeLoginWhiteCombinedListRequest&, DescribeLoginWhiteCombinedListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoginWhiteCombinedListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLoginWhiteCustomListEDRResponse> DescribeLoginWhiteCustomListEDROutcome;
+                typedef std::future<DescribeLoginWhiteCustomListEDROutcome> DescribeLoginWhiteCustomListEDROutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeLoginWhiteCustomListEDRRequest&, DescribeLoginWhiteCustomListEDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoginWhiteCustomListEDRAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLoginWhiteHostListResponse> DescribeLoginWhiteHostListOutcome;
                 typedef std::future<DescribeLoginWhiteHostListOutcome> DescribeLoginWhiteHostListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeLoginWhiteHostListRequest&, DescribeLoginWhiteHostListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoginWhiteHostListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLoginWhiteLearnListEDRResponse> DescribeLoginWhiteLearnListEDROutcome;
+                typedef std::future<DescribeLoginWhiteLearnListEDROutcome> DescribeLoginWhiteLearnListEDROutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeLoginWhiteLearnListEDRRequest&, DescribeLoginWhiteLearnListEDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoginWhiteLearnListEDRAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMachineClearHistoryResponse> DescribeMachineClearHistoryOutcome;
                 typedef std::future<DescribeMachineClearHistoryOutcome> DescribeMachineClearHistoryOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeMachineClearHistoryRequest&, DescribeMachineClearHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineClearHistoryAsyncHandler;
@@ -3358,6 +3424,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBanModeResponse> ModifyBanModeOutcome;
                 typedef std::future<ModifyBanModeOutcome> ModifyBanModeOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyBanModeRequest&, ModifyBanModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBanModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBaselineIgnorePolicyResponse> ModifyBaselineIgnorePolicyOutcome;
+                typedef std::future<ModifyBaselineIgnorePolicyOutcome> ModifyBaselineIgnorePolicyOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyBaselineIgnorePolicyRequest&, ModifyBaselineIgnorePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselineIgnorePolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBaselinePolicyResponse> ModifyBaselinePolicyOutcome;
                 typedef std::future<ModifyBaselinePolicyOutcome> ModifyBaselinePolicyOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyBaselinePolicyRequest&, ModifyBaselinePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaselinePolicyAsyncHandler;
@@ -3553,6 +3622,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyImageVulWhitelistResponse> ModifyImageVulWhitelistOutcome;
                 typedef std::future<ModifyImageVulWhitelistOutcome> ModifyImageVulWhitelistOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyImageVulWhitelistRequest&, ModifyImageVulWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageVulWhitelistAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLoginWhiteCustomEDRResponse> ModifyLoginWhiteCustomEDROutcome;
+                typedef std::future<ModifyLoginWhiteCustomEDROutcome> ModifyLoginWhiteCustomEDROutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyLoginWhiteCustomEDRRequest&, ModifyLoginWhiteCustomEDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoginWhiteCustomEDRAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLoginWhiteLearnEDRResponse> ModifyLoginWhiteLearnEDROutcome;
+                typedef std::future<ModifyLoginWhiteLearnEDROutcome> ModifyLoginWhiteLearnEDROutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyLoginWhiteLearnEDRRequest&, ModifyLoginWhiteLearnEDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoginWhiteLearnEDRAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLoginWhiteRecordResponse> ModifyLoginWhiteRecordOutcome;
                 typedef std::future<ModifyLoginWhiteRecordOutcome> ModifyLoginWhiteRecordOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyLoginWhiteRecordRequest&, ModifyLoginWhiteRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoginWhiteRecordAsyncHandler;
@@ -3980,6 +4055,15 @@ Create an AI scheduled task by entering the task name, prompt content, and trigg
                 CreateAllAssetsExportJobOutcome CreateAllAssetsExportJob(const Model::CreateAllAssetsExportJobRequest &request);
                 void CreateAllAssetsExportJobAsync(const Model::CreateAllAssetsExportJobRequest& request, const CreateAllAssetsExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAllAssetsExportJobOutcomeCallable CreateAllAssetsExportJobCallable(const Model::CreateAllAssetsExportJobRequest& request);
+
+                /**
+                 *This API is used to create an asset baseline risk export task.
+                 * @param req CreateAssetBaselineRiskExportJobRequest
+                 * @return CreateAssetBaselineRiskExportJobOutcome
+                 */
+                CreateAssetBaselineRiskExportJobOutcome CreateAssetBaselineRiskExportJob(const Model::CreateAssetBaselineRiskExportJobRequest &request);
+                void CreateAssetBaselineRiskExportJobAsync(const Model::CreateAssetBaselineRiskExportJobRequest& request, const CreateAssetBaselineRiskExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAssetBaselineRiskExportJobOutcomeCallable CreateAssetBaselineRiskExportJobCallable(const Model::CreateAssetBaselineRiskExportJobRequest& request);
 
                 /**
                  *Creates a component list export task for image assets.
@@ -4857,6 +4941,15 @@ This API is used to delete a scheduled task based on the specified AI scheduled 
                 DeleteAssetTagOutcomeCallable DeleteAssetTagCallable(const Model::DeleteAssetTagRequest& request);
 
                 /**
+                 *Delete baseline ignore policy
+                 * @param req DeleteBaselineIgnorePolicyRequest
+                 * @return DeleteBaselineIgnorePolicyOutcome
+                 */
+                DeleteBaselineIgnorePolicyOutcome DeleteBaselineIgnorePolicy(const Model::DeleteBaselineIgnorePolicyRequest &request);
+                void DeleteBaselineIgnorePolicyAsync(const Model::DeleteBaselineIgnorePolicyRequest& request, const DeleteBaselineIgnorePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBaselineIgnorePolicyOutcomeCallable DeleteBaselineIgnorePolicyCallable(const Model::DeleteBaselineIgnorePolicyRequest& request);
+
+                /**
                  *Delete custom baseline policies in batches. Only support deletion of policies with PolicyType=SELF. After deletion, historical risk records are retained, but no new results are generated.
                  * @param req DeleteBaselineSelfDefinedPolicyListRequest
                  * @return DeleteBaselineSelfDefinedPolicyListOutcome
@@ -5170,6 +5263,24 @@ This API is used to delete a scheduled task based on the specified AI scheduled 
                 DeleteImageVulWhitelistOutcome DeleteImageVulWhitelist(const Model::DeleteImageVulWhitelistRequest &request);
                 void DeleteImageVulWhitelistAsync(const Model::DeleteImageVulWhitelistRequest& request, const DeleteImageVulWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteImageVulWhitelistOutcomeCallable DeleteImageVulWhitelistCallable(const Model::DeleteImageVulWhitelistRequest& request);
+
+                /**
+                 *This API is used to delete CSC abnormal login custom allowlist entries in batches (soft delete, status=2), with support for cross-page select all. Either Ids or SelectAll is required. If both are empty, InvalidParameter is returned. If the total amount of cross-page select all exceeds 100,000 entries, the entire request is denied.
+                 * @param req DeleteLoginWhiteCustomEDRRequest
+                 * @return DeleteLoginWhiteCustomEDROutcome
+                 */
+                DeleteLoginWhiteCustomEDROutcome DeleteLoginWhiteCustomEDR(const Model::DeleteLoginWhiteCustomEDRRequest &request);
+                void DeleteLoginWhiteCustomEDRAsync(const Model::DeleteLoginWhiteCustomEDRRequest& request, const DeleteLoginWhiteCustomEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLoginWhiteCustomEDROutcomeCallable DeleteLoginWhiteCustomEDRCallable(const Model::DeleteLoginWhiteCustomEDRRequest& request);
+
+                /**
+                 *Delete CSC abnormal login self-learning allowlist rule groups in batches (soft delete the entire group with enable=0). Import any row ID in a group to locate the entire group. Cross-page select all is supported (cap: 100,000 rule groups). Once deleted, the groups will not be automatically re-learned. You need to toggle self-learning again to update the learning anchor. This interface does not rescan historical alarms.
+                 * @param req DeleteLoginWhiteLearnEDRRequest
+                 * @return DeleteLoginWhiteLearnEDROutcome
+                 */
+                DeleteLoginWhiteLearnEDROutcome DeleteLoginWhiteLearnEDR(const Model::DeleteLoginWhiteLearnEDRRequest &request);
+                void DeleteLoginWhiteLearnEDRAsync(const Model::DeleteLoginWhiteLearnEDRRequest& request, const DeleteLoginWhiteLearnEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLoginWhiteLearnEDROutcomeCallable DeleteLoginWhiteLearnEDRCallable(const Model::DeleteLoginWhiteLearnEDRRequest& request);
 
                 /**
                  *This API is used to delete the cross-region log-in allowlist rules.
@@ -5544,6 +5655,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeAlertListOutcomeCallable DescribeAlertListCallable(const Model::DescribeAlertListRequest& request);
 
                 /**
+                 *This API is used to obtain the asset risk list.
+                 * @param req DescribeAssetBaselineRiskListRequest
+                 * @return DescribeAssetBaselineRiskListOutcome
+                 */
+                DescribeAssetBaselineRiskListOutcome DescribeAssetBaselineRiskList(const Model::DescribeAssetBaselineRiskListRequest &request);
+                void DescribeAssetBaselineRiskListAsync(const Model::DescribeAssetBaselineRiskListRequest& request, const DescribeAssetBaselineRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAssetBaselineRiskListOutcomeCallable DescribeAssetBaselineRiskListCallable(const Model::DescribeAssetBaselineRiskListRequest& request);
+
+                /**
                  *Query the component list in an asset.
                  * @param req DescribeAssetComponentListRequest
                  * @return DescribeAssetComponentListOutcome
@@ -5767,6 +5887,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeBaselineFixRecordListOutcome DescribeBaselineFixRecordList(const Model::DescribeBaselineFixRecordListRequest &request);
                 void DescribeBaselineFixRecordListAsync(const Model::DescribeBaselineFixRecordListRequest& request, const DescribeBaselineFixRecordListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBaselineFixRecordListOutcomeCallable DescribeBaselineFixRecordListCallable(const Model::DescribeBaselineFixRecordListRequest& request);
+
+                /**
+                 *Queries the baseline ignore policy list
+                 * @param req DescribeBaselineIgnorePolicyListRequest
+                 * @return DescribeBaselineIgnorePolicyListOutcome
+                 */
+                DescribeBaselineIgnorePolicyListOutcome DescribeBaselineIgnorePolicyList(const Model::DescribeBaselineIgnorePolicyListRequest &request);
+                void DescribeBaselineIgnorePolicyListAsync(const Model::DescribeBaselineIgnorePolicyListRequest& request, const DescribeBaselineIgnorePolicyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBaselineIgnorePolicyListOutcomeCallable DescribeBaselineIgnorePolicyListCallable(const Model::DescribeBaselineIgnorePolicyListRequest& request);
 
                 /**
                  *This API is used to retrieve the risk record list of detection item dimensions.
@@ -6199,6 +6328,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeClusterAssetsOutcome DescribeClusterAssets(const Model::DescribeClusterAssetsRequest &request);
                 void DescribeClusterAssetsAsync(const Model::DescribeClusterAssetsRequest& request, const DescribeClusterAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClusterAssetsOutcomeCallable DescribeClusterAssetsCallable(const Model::DescribeClusterAssetsRequest& request);
+
+                /**
+                 *Get the cluster risk policy list.
+                 * @param req DescribeClusterBaselineRiskPolicyListRequest
+                 * @return DescribeClusterBaselineRiskPolicyListOutcome
+                 */
+                DescribeClusterBaselineRiskPolicyListOutcome DescribeClusterBaselineRiskPolicyList(const Model::DescribeClusterBaselineRiskPolicyListRequest &request);
+                void DescribeClusterBaselineRiskPolicyListAsync(const Model::DescribeClusterBaselineRiskPolicyListRequest& request, const DescribeClusterBaselineRiskPolicyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterBaselineRiskPolicyListOutcomeCallable DescribeClusterBaselineRiskPolicyListCallable(const Model::DescribeClusterBaselineRiskPolicyListRequest& request);
 
                 /**
                  *This API is used to query the associated application list of a container. It retrieves associated application service information by container ID and supports pagination.
@@ -7416,6 +7554,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeEdrLogCollectPathsOutcomeCallable DescribeEdrLogCollectPathsCallable(const Model::DescribeEdrLogCollectPathsRequest& request);
 
                 /**
+                 *Locate malicious file alarms by EDR alarm ID and return the download URL of the malicious sample. Only alarms with alert_sub_type=1 (malicious file) can be downloaded. Other sub-types are handled as resource not found. Public cloud returns a COS presigned URL (valid for 1 hour). Non-public cloud returns a base64 DataURL and FileName when the export switch is on. In cross-account scenarios, TargetAppId specifies the account that owns the alarm, and ownership verification is performed (fail-close, InvalidParameter is returned if no permission).
+                 * @param req DescribeEdrMalwareFileRequest
+                 * @return DescribeEdrMalwareFileOutcome
+                 */
+                DescribeEdrMalwareFileOutcome DescribeEdrMalwareFile(const Model::DescribeEdrMalwareFileRequest &request);
+                void DescribeEdrMalwareFileAsync(const Model::DescribeEdrMalwareFileRequest& request, const DescribeEdrMalwareFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEdrMalwareFileOutcomeCallable DescribeEdrMalwareFileCallable(const Model::DescribeEdrMalwareFileRequest& request);
+
+                /**
                  *Result download URL of an export task
                  * @param req DescribeExportJobDownloadURLRequest
                  * @return DescribeExportJobDownloadURLOutcome
@@ -7560,6 +7707,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeHostVulOverviewOutcomeCallable DescribeHostVulOverviewCallable(const Model::DescribeHostVulOverviewRequest& request);
 
                 /**
+                 *This API is used to query the host vulnerability risk event list and return basic vulnerability information, instance information, risk status, and latest scan time by risk record dimension.
+                 * @param req DescribeHostVulRiskEventListRequest
+                 * @return DescribeHostVulRiskEventListOutcome
+                 */
+                DescribeHostVulRiskEventListOutcome DescribeHostVulRiskEventList(const Model::DescribeHostVulRiskEventListRequest &request);
+                void DescribeHostVulRiskEventListAsync(const Model::DescribeHostVulRiskEventListRequest& request, const DescribeHostVulRiskEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostVulRiskEventListOutcomeCallable DescribeHostVulRiskEventListCallable(const Model::DescribeHostVulRiskEventListRequest& request);
+
+                /**
                  *This API is used to retrieve the host vulnerability risk list.
                  * @param req DescribeHostVulRiskListRequest
                  * @return DescribeHostVulRiskListOutcome
@@ -7567,6 +7723,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeHostVulRiskListOutcome DescribeHostVulRiskList(const Model::DescribeHostVulRiskListRequest &request);
                 void DescribeHostVulRiskListAsync(const Model::DescribeHostVulRiskListRequest& request, const DescribeHostVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeHostVulRiskListOutcomeCallable DescribeHostVulRiskListCallable(const Model::DescribeHostVulRiskListRequest& request);
+
+                /**
+                 *Query the host vulnerability scanning status to determine whether vulnerabilities have been scanned, whether the first vulnerability scan failed, and the fixable vulnerability status after the first scan is completed.
+                 * @param req DescribeHostVulScanStatusRequest
+                 * @return DescribeHostVulScanStatusOutcome
+                 */
+                DescribeHostVulScanStatusOutcome DescribeHostVulScanStatus(const Model::DescribeHostVulScanStatusRequest &request);
+                void DescribeHostVulScanStatusAsync(const Model::DescribeHostVulScanStatusRequest& request, const DescribeHostVulScanStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostVulScanStatusOutcomeCallable DescribeHostVulScanStatusCallable(const Model::DescribeHostVulScanStatusRequest& request);
 
                 /**
                  *Retrieve the IaC detection file list.
@@ -7947,6 +8112,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeLoginWhiteCombinedListOutcomeCallable DescribeLoginWhiteCombinedListCallable(const Model::DescribeLoginWhiteCombinedListRequest& request);
 
                 /**
+                 *This API is used to query the CSC abnormal login custom allowlist. In multi-account scenarios, parse out all member AppIds by MemberId and perform an aggregate query only once. Return in pages by ModifyTime DESC. The output slice field is always [] and never null.
+                 * @param req DescribeLoginWhiteCustomListEDRRequest
+                 * @return DescribeLoginWhiteCustomListEDROutcome
+                 */
+                DescribeLoginWhiteCustomListEDROutcome DescribeLoginWhiteCustomListEDR(const Model::DescribeLoginWhiteCustomListEDRRequest &request);
+                void DescribeLoginWhiteCustomListEDRAsync(const Model::DescribeLoginWhiteCustomListEDRRequest& request, const DescribeLoginWhiteCustomListEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLoginWhiteCustomListEDROutcomeCallable DescribeLoginWhiteCustomListEDRCallable(const Model::DescribeLoginWhiteCustomListEDRRequest& request);
+
+                /**
                  *This API is used to query the list of allowlisted machines after merge.
                  * @param req DescribeLoginWhiteHostListRequest
                  * @return DescribeLoginWhiteHostListOutcome
@@ -7954,6 +8128,15 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
                 DescribeLoginWhiteHostListOutcome DescribeLoginWhiteHostList(const Model::DescribeLoginWhiteHostListRequest &request);
                 void DescribeLoginWhiteHostListAsync(const Model::DescribeLoginWhiteHostListRequest& request, const DescribeLoginWhiteHostListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLoginWhiteHostListOutcomeCallable DescribeLoginWhiteHostListCallable(const Model::DescribeLoginWhiteHostListRequest& request);
+
+                /**
+                 *This API is used to query the CSC abnormal login self-learning allowlist (rule group). Rule groups are aggregated by (AppId, common login location), and the ID is the minimum line ID in the group. The output fields SrcIp, UserName, StartTime, and EndTime are always empty. AutoLearnEnable returns the self-learning switch state for the frontend to determine whether to redirect to enable it based on the empty state.
+                 * @param req DescribeLoginWhiteLearnListEDRRequest
+                 * @return DescribeLoginWhiteLearnListEDROutcome
+                 */
+                DescribeLoginWhiteLearnListEDROutcome DescribeLoginWhiteLearnListEDR(const Model::DescribeLoginWhiteLearnListEDRRequest &request);
+                void DescribeLoginWhiteLearnListEDRAsync(const Model::DescribeLoginWhiteLearnListEDRRequest& request, const DescribeLoginWhiteLearnListEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLoginWhiteLearnListEDROutcomeCallable DescribeLoginWhiteLearnListEDRCallable(const Model::DescribeLoginWhiteLearnListEDRRequest& request);
 
                 /**
                  *This API is used to query the clearing history records of a machine.
@@ -9282,6 +9465,15 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
                 ModifyBanModeOutcomeCallable ModifyBanModeCallable(const Model::ModifyBanModeRequest& request);
 
                 /**
+                 *Modify baseline ignore policy
+                 * @param req ModifyBaselineIgnorePolicyRequest
+                 * @return ModifyBaselineIgnorePolicyOutcome
+                 */
+                ModifyBaselineIgnorePolicyOutcome ModifyBaselineIgnorePolicy(const Model::ModifyBaselineIgnorePolicyRequest &request);
+                void ModifyBaselineIgnorePolicyAsync(const Model::ModifyBaselineIgnorePolicyRequest& request, const ModifyBaselineIgnorePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBaselineIgnorePolicyOutcomeCallable ModifyBaselineIgnorePolicyCallable(const Model::ModifyBaselineIgnorePolicyRequest& request);
+
+                /**
                  *Create or edit a baseline policy. Policy.ID 0 means create, non-zero means edit. Name is required when creating or editing. CheckAssetType and Type must comply with the CheckAssetType and PolicyType enums.
                  * @param req ModifyBaselinePolicyRequest
                  * @return ModifyBaselinePolicyOutcome
@@ -9865,6 +10057,24 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
                 ModifyImageVulWhitelistOutcome ModifyImageVulWhitelist(const Model::ModifyImageVulWhitelistRequest &request);
                 void ModifyImageVulWhitelistAsync(const Model::ModifyImageVulWhitelistRequest& request, const ModifyImageVulWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyImageVulWhitelistOutcomeCallable ModifyImageVulWhitelistCallable(const Model::ModifyImageVulWhitelistRequest& request);
+
+                /**
+                 *Modify the CSC abnormal login custom allowlist with full coverage saving (fields not passed are deemed as cleared). This API does not trigger historical alarm rescanning. Exclude itself during deduplication. If the rule does not exist, return ResourceNotFound.
+                 * @param req ModifyLoginWhiteCustomEDRRequest
+                 * @return ModifyLoginWhiteCustomEDROutcome
+                 */
+                ModifyLoginWhiteCustomEDROutcome ModifyLoginWhiteCustomEDR(const Model::ModifyLoginWhiteCustomEDRRequest &request);
+                void ModifyLoginWhiteCustomEDRAsync(const Model::ModifyLoginWhiteCustomEDRRequest& request, const ModifyLoginWhiteCustomEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLoginWhiteCustomEDROutcomeCallable ModifyLoginWhiteCustomEDRCallable(const Model::ModifyLoginWhiteCustomEDRRequest& request);
+
+                /**
+                 *This API is used to modify the CSC abnormal login self-learning allowlist rule group, locating the entire group by (AppId, common login location). Constraints: creating is not supported, and taking effect by tag is not supported (TagIDs must be empty). Only Scope=0 direct selection and Scope=1 all assets + removal are supported. Reject when the rule group row count exceeds 5000. In a single transaction, insert first and delete later. It takes effect within one cache cycle (default 120s) after editing. This API does not rescan historical alarms.
+                 * @param req ModifyLoginWhiteLearnEDRRequest
+                 * @return ModifyLoginWhiteLearnEDROutcome
+                 */
+                ModifyLoginWhiteLearnEDROutcome ModifyLoginWhiteLearnEDR(const Model::ModifyLoginWhiteLearnEDRRequest &request);
+                void ModifyLoginWhiteLearnEDRAsync(const Model::ModifyLoginWhiteLearnEDRRequest& request, const ModifyLoginWhiteLearnEDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLoginWhiteLearnEDROutcomeCallable ModifyLoginWhiteLearnEDRCallable(const Model::ModifyLoginWhiteLearnEDRRequest& request);
 
                 /**
                  *This API is used to update the log-in audit allowlist information. (The number of server lists needs to be less than 1,000.)

@@ -101,6 +101,8 @@
 #include <tencentcloud/tdmysql/v20211122/model/IsolateDBInstanceResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyAutoRenewFlagRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyAutoRenewFlagResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/ModifyDBInstanceRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/ModifyDBInstanceResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyDBInstanceSecurityGroupsRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyDBInstanceSecurityGroupsResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyDBInstanceVPortRequest.h>
@@ -262,6 +264,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAutoRenewFlagResponse> ModifyAutoRenewFlagOutcome;
                 typedef std::future<ModifyAutoRenewFlagOutcome> ModifyAutoRenewFlagOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ModifyAutoRenewFlagRequest&, ModifyAutoRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoRenewFlagAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceResponse> ModifyDBInstanceOutcome;
+                typedef std::future<ModifyDBInstanceOutcome> ModifyDBInstanceOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::ModifyDBInstanceRequest&, ModifyDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroupsOutcome;
                 typedef std::future<ModifyDBInstanceSecurityGroupsOutcome> ModifyDBInstanceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ModifyDBInstanceSecurityGroupsRequest&, ModifyDBInstanceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceSecurityGroupsAsyncHandler;
@@ -660,6 +665,15 @@ namespace TencentCloud
                 ModifyAutoRenewFlagOutcome ModifyAutoRenewFlag(const Model::ModifyAutoRenewFlagRequest &request);
                 void ModifyAutoRenewFlagAsync(const Model::ModifyAutoRenewFlagRequest& request, const ModifyAutoRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAutoRenewFlagOutcomeCallable ModifyAutoRenewFlagCallable(const Model::ModifyAutoRenewFlagRequest& request);
+
+                /**
+                 *This API is used to modify instance configurations. It combines the ability to vertically and horizontally modify instances, and supports composite modifications of CPU, memory, disk, number of nodes, availability zone, and storage type. It supports DryRun precheck mode, allowing you to obtain the modification plan without actual execution.
+                 * @param req ModifyDBInstanceRequest
+                 * @return ModifyDBInstanceOutcome
+                 */
+                ModifyDBInstanceOutcome ModifyDBInstance(const Model::ModifyDBInstanceRequest &request);
+                void ModifyDBInstanceAsync(const Model::ModifyDBInstanceRequest& request, const ModifyDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceOutcomeCallable ModifyDBInstanceCallable(const Model::ModifyDBInstanceRequest& request);
 
                 /**
                  *This API is used to modify cloud database security groups.

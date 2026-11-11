@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
-                     * @return BackupId <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+                     * 获取<p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+                     * @return BackupId <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
                      * 
                      */
                     std::string GetBackupId() const;
 
                     /**
-                     * 设置<p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
-                     * @param _backupId <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+                     * 设置<p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+                     * @param _backupId <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
                      * 
                      */
                     void SetBackupId(const std::string& _backupId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * <p>Backup ID, which can be obtained through the response parameter <strong>RedisBackupSet</strong> of the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
+                     * <p>Backup ID, which can be obtained through the <strong>RedisBackupSet</strong> parameter in the API response of <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
                      */
                     std::string m_backupId;
                     bool m_backupIdHasBeenSet;

@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
-                     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+                     * 获取<p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+                     * @return RemoveVideo <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置<p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
-                     * @param _removeVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+                     * 设置<p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+                     * @param _removeVideo <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
                      * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Top Speed Codec transcoding configuration parameters.</p>
-                     * @return TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
+                     * 获取<p>TSC transcoding configuration parameters.</p>
+                     * @return TEHDConfig <p>TSC transcoding configuration parameters.</p>
                      * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
-                     * 设置<p>Top Speed Codec transcoding configuration parameters.</p>
-                     * @param _tEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
+                     * 设置<p>TSC transcoding configuration parameters.</p>
+                     * @param _tEHDConfig <p>TSC transcoding configuration parameters.</p>
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_containerHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+                     * <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
@@ -229,7 +229,7 @@ namespace TencentCloud
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * <p>Top Speed Codec transcoding configuration parameters.</p>
+                     * <p>TSC transcoding configuration parameters.</p>
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;

@@ -54,15 +54,15 @@ If there are multiple Values in the same Filter, the logical relationship betwee
 
 
                     /**
-                     * 获取<p>Name of filter key</p>
-                     * @return Name <p>Name of filter key</p>
+                     * 获取<p>Name of filter key.</p>
+                     * @return Name <p>Name of filter key.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Name of filter key</p>
-                     * @param _name <p>Name of filter key</p>
+                     * 设置<p>Name of filter key.</p>
+                     * @param _name <p>Name of filter key.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -119,7 +119,7 @@ If there are multiple Values in the same Filter, the logical relationship betwee
                 private:
 
                     /**
-                     * <p>Name of filter key</p>
+                     * <p>Name of filter key.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

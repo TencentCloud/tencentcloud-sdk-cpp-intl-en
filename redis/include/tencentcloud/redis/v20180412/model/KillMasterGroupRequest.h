@@ -85,19 +85,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
-                     * @return ShardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+                     * 获取Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
+                     * @return ShardIds Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<int64_t> GetShardIds() const;
 
                     /**
-                     * 设置Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
-                     * @param _shardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+                     * 设置Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
+                     * @param _shardIds Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
                      * 
                      */
                     void SetShardIds(const std::vector<int64_t>& _shardIds);
@@ -124,8 +120,7 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
- **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+                     * Shard ID. Obtain it from the **ClusterId** field in the **Redis** response parameter through the [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) API.
                      */
                     std::vector<int64_t> m_shardIds;
                     bool m_shardIdsHasBeenSet;

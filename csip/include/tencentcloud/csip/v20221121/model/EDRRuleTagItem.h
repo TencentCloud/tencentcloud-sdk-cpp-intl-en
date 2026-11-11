@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TagValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Tag value in English.</p>
-                     * @return TagValueEn <p>Tag value in English.</p>
+                     * 获取<p>Tag value in English</p>
+                     * @return TagValueEn <p>Tag value in English</p>
                      * 
                      */
                     std::string GetTagValueEn() const;
 
                     /**
-                     * 设置<p>Tag value in English.</p>
-                     * @param _tagValueEn <p>Tag value in English.</p>
+                     * 设置<p>Tag value in English</p>
+                     * @param _tagValueEn <p>Tag value in English</p>
                      * 
                      */
                     void SetTagValueEn(const std::string& _tagValueEn);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TagValueEnHasBeenSet() const;
 
                     /**
-                     * 获取<p>Tag description</p>
-                     * @return Description <p>Tag description</p>
+                     * 获取<p>Tag description.</p>
+                     * @return Description <p>Tag description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置<p>Tag description</p>
-                     * @param _description <p>Tag description</p>
+                     * 设置<p>Tag description.</p>
+                     * @param _description <p>Tag description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Tag color</p>
-                     * @return Color <p>Tag color</p>
+                     * 获取<p>Tag color.</p>
+                     * @return Color <p>Tag color.</p>
                      * 
                      */
                     std::string GetColor() const;
 
                     /**
-                     * 设置<p>Tag color</p>
-                     * @param _color <p>Tag color</p>
+                     * 设置<p>Tag color.</p>
+                     * @param _color <p>Tag color.</p>
                      * 
                      */
                     void SetColor(const std::string& _color);
@@ -220,19 +220,19 @@ namespace TencentCloud
                     bool m_tagValueHasBeenSet;
 
                     /**
-                     * <p>Tag value in English.</p>
+                     * <p>Tag value in English</p>
                      */
                     std::string m_tagValueEn;
                     bool m_tagValueEnHasBeenSet;
 
                     /**
-                     * <p>Tag description</p>
+                     * <p>Tag description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Tag color</p>
+                     * <p>Tag color.</p>
                      */
                     std::string m_color;
                     bool m_colorHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Package information.
+                * Plan information
                 */
                 class Plan : public AbstractModel
                 {
@@ -48,43 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
-                     * @return PlanType Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+                     * 获取<p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
+                     * @return PlanType <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
                      * 
                      */
                     std::string GetPlanType() const;
 
                     /**
-                     * 设置Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
-                     * @param _planType Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+                     * 设置<p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
+                     * @param _planType <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
                      * 
                      */
                     void SetPlanType(const std::string& _planType);
@@ -97,15 +69,15 @@ namespace TencentCloud
                     bool PlanTypeHasBeenSet() const;
 
                     /**
-                     * 获取Package ID. such as edgeone-2y041pblwaxe.
-                     * @return PlanId Package ID. such as edgeone-2y041pblwaxe.
+                     * 获取<p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
+                     * @return PlanId <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
                      * 
                      */
                     std::string GetPlanId() const;
 
                     /**
-                     * 设置Package ID. such as edgeone-2y041pblwaxe.
-                     * @param _planId Package ID. such as edgeone-2y041pblwaxe.
+                     * 设置<p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
+                     * @param _planId <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
                      * 
                      */
                     void SetPlanId(const std::string& _planId);
@@ -118,27 +90,15 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
-                     * @return Area Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+                     * 获取<p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
+                     * @return Area <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
-                     * @param _area Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+                     * 设置<p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
+                     * @param _area <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -151,23 +111,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
-                     * @return AutoRenewal Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+                     * 获取<p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
+                     * @return AutoRenewal <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
                      * 
                      */
                     bool GetAutoRenewal() const;
 
                     /**
-                     * 设置Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
-                     * @param _autoRenewal Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+                     * 设置<p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
+                     * @param _autoRenewal <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
                      * 
                      */
                     void SetAutoRenewal(const bool& _autoRenewal);
@@ -180,35 +132,15 @@ namespace TencentCloud
                     bool AutoRenewalHasBeenSet() const;
 
                     /**
-                     * 获取Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
-                     * @return Status Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+                     * 获取<p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
+                     * @return Status <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
-                     * @param _status Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+                     * 设置<p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
+                     * @param _status <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -221,23 +153,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
-                     * @return PayMode Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+                     * 获取<p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
+                     * @return PayMode <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
-                     * @param _payMode Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+                     * 设置<p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
+                     * @param _payMode <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -250,15 +174,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Describes the site information bound to the package, including the site id, site name, and site status.
-                     * @return ZonesInfo Describes the site information bound to the package, including the site id, site name, and site status.
+                     * 获取<p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
+                     * @return ZonesInfo <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
                      * 
                      */
                     std::vector<ZoneInfo> GetZonesInfo() const;
 
                     /**
-                     * 设置Describes the site information bound to the package, including the site id, site name, and site status.
-                     * @param _zonesInfo Describes the site information bound to the package, including the site id, site name, and site status.
+                     * 设置<p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
+                     * @param _zonesInfo <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
                      * 
                      */
                     void SetZonesInfo(const std::vector<ZoneInfo>& _zonesInfo);
@@ -271,15 +195,15 @@ namespace TencentCloud
                     bool ZonesInfoHasBeenSet() const;
 
                     /**
-                     * 获取Smart acceleration request quantity in the package, unit: times.
-                     * @return SmartRequestCapacity Smart acceleration request quantity in the package, unit: times.
+                     * 获取<p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
+                     * @return SmartRequestCapacity <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
                      * 
                      */
                     int64_t GetSmartRequestCapacity() const;
 
                     /**
-                     * 设置Smart acceleration request quantity in the package, unit: times.
-                     * @param _smartRequestCapacity Smart acceleration request quantity in the package, unit: times.
+                     * 设置<p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
+                     * @param _smartRequestCapacity <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
                      * 
                      */
                     void SetSmartRequestCapacity(const int64_t& _smartRequestCapacity);
@@ -292,15 +216,15 @@ namespace TencentCloud
                     bool SmartRequestCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the VAU specification in the package. measurement unit: unit.
-                     * @return VAUCapacity Specifies the VAU specification in the package. measurement unit: unit.
+                     * 获取<p>VAU quota in the plan, in the unit of VAUs.</p>
+                     * @return VAUCapacity <p>VAU quota in the plan, in the unit of VAUs.</p>
                      * 
                      */
                     int64_t GetVAUCapacity() const;
 
                     /**
-                     * 设置Specifies the VAU specification in the package. measurement unit: unit.
-                     * @param _vAUCapacity Specifies the VAU specification in the package. measurement unit: unit.
+                     * 设置<p>VAU quota in the plan, in the unit of VAUs.</p>
+                     * @param _vAUCapacity <p>VAU quota in the plan, in the unit of VAUs.</p>
                      * 
                      */
                     void SetVAUCapacity(const int64_t& _vAUCapacity);
@@ -313,15 +237,15 @@ namespace TencentCloud
                     bool VAUCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the content acceleration traffic specification in the package, measurement unit: byte.
-                     * @return AccTrafficCapacity Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+                     * 获取<p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
+                     * @return AccTrafficCapacity <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     int64_t GetAccTrafficCapacity() const;
 
                     /**
-                     * 设置Specifies the content acceleration traffic specification in the package, measurement unit: byte.
-                     * @param _accTrafficCapacity Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+                     * 设置<p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
+                     * @param _accTrafficCapacity <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     void SetAccTrafficCapacity(const int64_t& _accTrafficCapacity);
@@ -334,15 +258,36 @@ namespace TencentCloud
                     bool AccTrafficCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
-                     * @return SmartTrafficCapacity Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+                     * 获取<p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+                     * @return ClientAuthTrafficCapacity <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+                     * 
+                     */
+                    int64_t GetClientAuthTrafficCapacity() const;
+
+                    /**
+                     * 设置<p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+                     * @param _clientAuthTrafficCapacity <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+                     * 
+                     */
+                    void SetClientAuthTrafficCapacity(const int64_t& _clientAuthTrafficCapacity);
+
+                    /**
+                     * 判断参数 ClientAuthTrafficCapacity 是否已赋值
+                     * @return ClientAuthTrafficCapacity 是否已赋值
+                     * 
+                     */
+                    bool ClientAuthTrafficCapacityHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
+                     * @return SmartTrafficCapacity <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     int64_t GetSmartTrafficCapacity() const;
 
                     /**
-                     * 设置Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
-                     * @param _smartTrafficCapacity Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+                     * 设置<p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
+                     * @param _smartTrafficCapacity <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     void SetSmartTrafficCapacity(const int64_t& _smartTrafficCapacity);
@@ -355,15 +300,15 @@ namespace TencentCloud
                     bool SmartTrafficCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
-                     * @return DDoSTrafficCapacity Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+                     * 获取<p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
+                     * @return DDoSTrafficCapacity <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     int64_t GetDDoSTrafficCapacity() const;
 
                     /**
-                     * 设置Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
-                     * @param _dDoSTrafficCapacity Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+                     * 设置<p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
+                     * @param _dDoSTrafficCapacity <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     void SetDDoSTrafficCapacity(const int64_t& _dDoSTrafficCapacity);
@@ -376,15 +321,15 @@ namespace TencentCloud
                     bool DDoSTrafficCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Security traffic specification in the package. measurement unit: byte.
-                     * @return SecTrafficCapacity Security traffic specification in the package. measurement unit: byte.
+                     * 获取<p>Quota of security traffic in the plan, in the unit of bytes.</p>
+                     * @return SecTrafficCapacity <p>Quota of security traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     int64_t GetSecTrafficCapacity() const;
 
                     /**
-                     * 设置Security traffic specification in the package. measurement unit: byte.
-                     * @param _secTrafficCapacity Security traffic specification in the package. measurement unit: byte.
+                     * 设置<p>Quota of security traffic in the plan, in the unit of bytes.</p>
+                     * @param _secTrafficCapacity <p>Quota of security traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     void SetSecTrafficCapacity(const int64_t& _secTrafficCapacity);
@@ -397,15 +342,15 @@ namespace TencentCloud
                     bool SecTrafficCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Security requests in the package, unit: times.
-                     * @return SecRequestCapacity Security requests in the package, unit: times.
+                     * 获取<p>Quota of security requests in the plan, in the unit of requests.</p>
+                     * @return SecRequestCapacity <p>Quota of security requests in the plan, in the unit of requests.</p>
                      * 
                      */
                     int64_t GetSecRequestCapacity() const;
 
                     /**
-                     * 设置Security requests in the package, unit: times.
-                     * @param _secRequestCapacity Security requests in the package, unit: times.
+                     * 设置<p>Quota of security requests in the plan, in the unit of requests.</p>
+                     * @param _secRequestCapacity <p>Quota of security requests in the plan, in the unit of requests.</p>
                      * 
                      */
                     void SetSecRequestCapacity(const int64_t& _secRequestCapacity);
@@ -418,15 +363,15 @@ namespace TencentCloud
                     bool SecRequestCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
-                     * @return L4TrafficCapacity Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+                     * 获取<p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
+                     * @return L4TrafficCapacity <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     int64_t GetL4TrafficCapacity() const;
 
                     /**
-                     * 设置Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
-                     * @param _l4TrafficCapacity Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+                     * 设置<p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
+                     * @param _l4TrafficCapacity <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
                      * 
                      */
                     void SetL4TrafficCapacity(const int64_t& _l4TrafficCapacity);
@@ -439,15 +384,15 @@ namespace TencentCloud
                     bool L4TrafficCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
-                     * @return CrossMLCTrafficCapacity Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+                     * 获取<p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
+                     * @return CrossMLCTrafficCapacity <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
                      * 
                      */
                     int64_t GetCrossMLCTrafficCapacity() const;
 
                     /**
-                     * 设置Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
-                     * @param _crossMLCTrafficCapacity Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+                     * 设置<p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
+                     * @param _crossMLCTrafficCapacity <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
                      * 
                      */
                     void SetCrossMLCTrafficCapacity(const int64_t& _crossMLCTrafficCapacity);
@@ -460,23 +405,15 @@ namespace TencentCloud
                     bool CrossMLCTrafficCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
-                     * @return Bindable Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+                     * 获取<p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
+                     * @return Bindable <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
                      * 
                      */
                     std::string GetBindable() const;
 
                     /**
-                     * 设置Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
-                     * @param _bindable Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+                     * 设置<p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
+                     * @param _bindable <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
                      * 
                      */
                     void SetBindable(const std::string& _bindable);
@@ -489,15 +426,15 @@ namespace TencentCloud
                     bool BindableHasBeenSet() const;
 
                     /**
-                     * 获取Package activation time.
-                     * @return EnabledTime Package activation time.
+                     * 获取<p>Time when the plan takes effect.</p>
+                     * @return EnabledTime <p>Time when the plan takes effect.</p>
                      * 
                      */
                     std::string GetEnabledTime() const;
 
                     /**
-                     * 设置Package activation time.
-                     * @param _enabledTime Package activation time.
+                     * 设置<p>Time when the plan takes effect.</p>
+                     * @param _enabledTime <p>Time when the plan takes effect.</p>
                      * 
                      */
                     void SetEnabledTime(const std::string& _enabledTime);
@@ -510,15 +447,15 @@ namespace TencentCloud
                     bool EnabledTimeHasBeenSet() const;
 
                     /**
-                     * 获取Plan expiration time.
-                     * @return ExpiredTime Plan expiration time.
+                     * 获取<p>Expiration time of the plan.</p>
+                     * @return ExpiredTime <p>Expiration time of the plan.</p>
                      * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Plan expiration time.
-                     * @param _expiredTime Plan expiration time.
+                     * 设置<p>Expiration time of the plan.</p>
+                     * @param _expiredTime <p>Expiration time of the plan.</p>
                      * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
@@ -531,15 +468,15 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
-                     * @return Features Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+                     * 获取<p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
+                     * @return Features <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
                      * 
                      */
                     std::vector<std::string> GetFeatures() const;
 
                     /**
-                     * 设置Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
-                     * @param _features Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+                     * 设置<p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
+                     * @param _features <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
                      * 
                      */
                     void SetFeatures(const std::vector<std::string>& _features);
@@ -554,142 +491,127 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+                     * <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
                      */
                     std::string m_planType;
                     bool m_planTypeHasBeenSet;
 
                     /**
-                     * Package ID. such as edgeone-2y041pblwaxe.
+                     * <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
                      */
                     std::string m_planId;
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+                     * <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+                     * <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
                      */
                     bool m_autoRenewal;
                     bool m_autoRenewalHasBeenSet;
 
                     /**
-                     * Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+                     * <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+                     * <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Describes the site information bound to the package, including the site id, site name, and site status.
+                     * <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
                      */
                     std::vector<ZoneInfo> m_zonesInfo;
                     bool m_zonesInfoHasBeenSet;
 
                     /**
-                     * Smart acceleration request quantity in the package, unit: times.
+                     * <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
                      */
                     int64_t m_smartRequestCapacity;
                     bool m_smartRequestCapacityHasBeenSet;
 
                     /**
-                     * Specifies the VAU specification in the package. measurement unit: unit.
+                     * <p>VAU quota in the plan, in the unit of VAUs.</p>
                      */
                     int64_t m_vAUCapacity;
                     bool m_vAUCapacityHasBeenSet;
 
                     /**
-                     * Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+                     * <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
                      */
                     int64_t m_accTrafficCapacity;
                     bool m_accTrafficCapacityHasBeenSet;
 
                     /**
-                     * Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+                     * <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+                     */
+                    int64_t m_clientAuthTrafficCapacity;
+                    bool m_clientAuthTrafficCapacityHasBeenSet;
+
+                    /**
+                     * <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
                      */
                     int64_t m_smartTrafficCapacity;
                     bool m_smartTrafficCapacityHasBeenSet;
 
                     /**
-                     * Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+                     * <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
                      */
                     int64_t m_dDoSTrafficCapacity;
                     bool m_dDoSTrafficCapacityHasBeenSet;
 
                     /**
-                     * Security traffic specification in the package. measurement unit: byte.
+                     * <p>Quota of security traffic in the plan, in the unit of bytes.</p>
                      */
                     int64_t m_secTrafficCapacity;
                     bool m_secTrafficCapacityHasBeenSet;
 
                     /**
-                     * Security requests in the package, unit: times.
+                     * <p>Quota of security requests in the plan, in the unit of requests.</p>
                      */
                     int64_t m_secRequestCapacity;
                     bool m_secRequestCapacityHasBeenSet;
 
                     /**
-                     * Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+                     * <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
                      */
                     int64_t m_l4TrafficCapacity;
                     bool m_l4TrafficCapacityHasBeenSet;
 
                     /**
-                     * Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+                     * <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
                      */
                     int64_t m_crossMLCTrafficCapacity;
                     bool m_crossMLCTrafficCapacityHasBeenSet;
 
                     /**
-                     * Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+                     * <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
                      */
                     std::string m_bindable;
                     bool m_bindableHasBeenSet;
 
                     /**
-                     * Package activation time.
+                     * <p>Time when the plan takes effect.</p>
                      */
                     std::string m_enabledTime;
                     bool m_enabledTimeHasBeenSet;
 
                     /**
-                     * Plan expiration time.
+                     * <p>Expiration time of the plan.</p>
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+                     * <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
                      */
                     std::vector<std::string> m_features;
                     bool m_featuresHasBeenSet;

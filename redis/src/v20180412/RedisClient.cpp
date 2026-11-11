@@ -5290,6 +5290,106 @@ RedisClient::ModifyReplicationGroupOutcomeCallable RedisClient::ModifyReplicatio
     return prom->get_future();
 }
 
+RedisClient::ModifySSLEncryptionModeOutcome RedisClient::ModifySSLEncryptionMode(const ModifySSLEncryptionModeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySSLEncryptionMode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySSLEncryptionModeResponse rsp = ModifySSLEncryptionModeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySSLEncryptionModeOutcome(rsp);
+        else
+            return ModifySSLEncryptionModeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySSLEncryptionModeOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ModifySSLEncryptionModeAsync(const ModifySSLEncryptionModeRequest& request, const ModifySSLEncryptionModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifySSLEncryptionModeRequest&;
+    using Resp = ModifySSLEncryptionModeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifySSLEncryptionMode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+RedisClient::ModifySSLEncryptionModeOutcomeCallable RedisClient::ModifySSLEncryptionModeCallable(const ModifySSLEncryptionModeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifySSLEncryptionModeOutcome>>();
+    ModifySSLEncryptionModeAsync(
+    request,
+    [prom](
+        const RedisClient*,
+        const ModifySSLEncryptionModeRequest&,
+        ModifySSLEncryptionModeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+RedisClient::ModifyValkeyModuleOutcome RedisClient::ModifyValkeyModule(const ModifyValkeyModuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyValkeyModule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyValkeyModuleResponse rsp = ModifyValkeyModuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyValkeyModuleOutcome(rsp);
+        else
+            return ModifyValkeyModuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyValkeyModuleOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ModifyValkeyModuleAsync(const ModifyValkeyModuleRequest& request, const ModifyValkeyModuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyValkeyModuleRequest&;
+    using Resp = ModifyValkeyModuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyValkeyModule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+RedisClient::ModifyValkeyModuleOutcomeCallable RedisClient::ModifyValkeyModuleCallable(const ModifyValkeyModuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyValkeyModuleOutcome>>();
+    ModifyValkeyModuleAsync(
+    request,
+    [prom](
+        const RedisClient*,
+        const ModifyValkeyModuleRequest&,
+        ModifyValkeyModuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 RedisClient::OpenLogOutcome RedisClient::OpenLog(const OpenLogRequest &request)
 {
     auto outcome = MakeRequest(request, "OpenLog");
@@ -5882,6 +5982,56 @@ RedisClient::SwitchProxyOutcomeCallable RedisClient::SwitchProxyCallable(const S
         const RedisClient*,
         const SwitchProxyRequest&,
         SwitchProxyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+RedisClient::UpdateSSLCertOutcome RedisClient::UpdateSSLCert(const UpdateSSLCertRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateSSLCert");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateSSLCertResponse rsp = UpdateSSLCertResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateSSLCertOutcome(rsp);
+        else
+            return UpdateSSLCertOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateSSLCertOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::UpdateSSLCertAsync(const UpdateSSLCertRequest& request, const UpdateSSLCertAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateSSLCertRequest&;
+    using Resp = UpdateSSLCertResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateSSLCert", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+RedisClient::UpdateSSLCertOutcomeCallable RedisClient::UpdateSSLCertCallable(const UpdateSSLCertRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateSSLCertOutcome>>();
+    UpdateSSLCertAsync(
+    request,
+    [prom](
+        const RedisClient*,
+        const UpdateSSLCertRequest&,
+        UpdateSSLCertOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
